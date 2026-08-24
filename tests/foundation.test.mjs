@@ -211,6 +211,7 @@ test("2026-08-22 historical web edition keeps all exact source pages addressable
 test("Preview workflow verifies pull requests but deploys only on explicit manual dispatch", async () => {
   const workflow = await readFile(path.join(repoRoot, ".github/workflows/preview.yml"), "utf8");
   assert.match(workflow, /pull_request:/);
+  assert.match(workflow, /branches: \[main, codex\/daily-automation-v1\]/);
   assert.match(workflow, /workflow_dispatch:/);
   assert.match(workflow, /if: github\.event_name == 'workflow_dispatch'/);
   assert.match(workflow, /NON-PRODUCTION|non-production/);

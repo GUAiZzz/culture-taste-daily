@@ -2,7 +2,7 @@ name: Preview build
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, codex/daily-automation-v1]
   workflow_dispatch:
 
 concurrency:
