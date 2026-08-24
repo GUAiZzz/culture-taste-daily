@@ -2,9 +2,9 @@
 
 Independent source repository for Culture & Taste Daily.
 
-Repository stage: **④A Build / QA foundation — local, non-production**
+Repository stage: **Preview Build — real site, non-production**
 
-Production Contract V3 is canonical. This branch implements only a deterministic static-build and evidence-gate foundation. It does not enable hosting, preview, deployment, Pages, workflows, or daily automation.
+Production Contract V3 is canonical. The repository now builds the real Culture & Taste homepage, archive, current issue, and three preserved historical issues into a visibly non-production Preview. Production cutover and daily automation remain disabled.
 
 ## What is available
 
@@ -14,7 +14,11 @@ Production Contract V3 is canonical. This branch implements only a deterministic
 - independent technical QA, including no-JavaScript and viewport renders;
 - a named human-review template;
 - a local fail-closed gate simulation that has no production authority;
-- deterministic regression and failure-path tests.
+- deterministic regression and failure-path tests;
+- a designed homepage and filterable archive;
+- preserved 2026-08-20 and 2026-08-21 self-contained HTML originals;
+- an honest 16-page facsimile reader for the supplied 2026-08-22 PDF;
+- manually triggered GitHub Pages Preview hosting after CI verification.
 
 Manifest `status`, generator QA fields, and scores are reporting only. They cannot approve editorial quality or authorize release.
 
@@ -39,16 +43,20 @@ Generated output is deliberately ignored by Git:
 
 See [`docs/STAGE4A_BUILD_QA.md`](docs/STAGE4A_BUILD_QA.md) for the evidence model, commands, limitations, and schema migration.
 
+See [`docs/PREVIEW_BUILD.md`](docs/PREVIEW_BUILD.md) for the real-site and historical-migration boundary.
+
 ## Repository map
 
 ```text
 src/issues/          Canonical public issue source for this repository
+src/historical/      Supplied historical originals and migration metadata
+src/site/assets/     Local publication-shell cover assets
 candidate/           Accepted local candidate snapshots; not production releases
 core/                Shared semantic renderer and product grammar
 schemas/             Public manifest and public evidence schemas
 scripts/             Deterministic local build, QA, review-template, and gate tools
 tests/               Regression and fail-closed simulations
-deployment/          Disabled production boundary
+deployment/          Preview-only hosting and disabled production boundary
 automation/          Disabled daily-automation boundary
 dependencies/        External dependency identities; never copied private source
 docs/                Product, editorial, architecture, and authority decisions
@@ -62,9 +70,10 @@ The accepted snapshot at [`candidate/2026-08-25/index.html`](candidate/2026-08-2
 
 ## Hard boundaries
 
-- GitHub Pages, preview hosting, production deployment, workflows, and daily automation remain disabled.
+- The GitHub Pages site is a non-production Preview only; every page is visibly labeled and `noindex`.
+- Production cutover and daily automation remain disabled.
 - Private research/source-ledger instances, credentials, tokens, and canonical HarryTone source remain outside this repository.
 - HarryTone is represented only by an exact dependency identity.
-- `GUAiZzz/GUAiZzz`, its `gh-pages`, the current live site, historical publication artifacts, Library V2, and canonical `GUAiZzz/harry-tone` are outside this work.
+- `GUAiZzz/GUAiZzz`, its `gh-pages`, the current live site, Library V2, and canonical `GUAiZzz/harry-tone` remain untouched.
 
 See [`docs/DATA_BOUNDARIES.md`](docs/DATA_BOUNDARIES.md).

@@ -16,22 +16,35 @@ import {
 import { assertPublicTree } from "./privacy.mjs";
 import { validateJsonFile } from "./schema.mjs";
 import { evaluateDateSemantics } from "./dates.mjs";
-import { renderArchive, renderHome, renderIssue, renderRss, renderSitemap } from "../../core/render.mjs";
+import {
+  renderArchive,
+  renderFacsimile,
+  renderHistoricalWrapper,
+  renderHome,
+  renderIssue,
+  renderRss,
+  renderSitemap,
+} from "../../core/render.mjs";
 
 const PUBLIC_MANIFEST = "issue-manifest.public.json";
+const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 
 function assertEqual(actual, expected, label) {
   if (actual !== expected) throw new Error(`${label} mismatch: expected ${expected}, received ${actual}`);
 }
 
-async function discoverIssues(sourceRoot, requestedIssue) {
-  const entries = await readdir(sourceRoot, { withFileTypes: true });
+async function discoverDateDirectories(root, requestedIssue, required = true) {
+  if (!(await exists(root))) {
+    if (required) throw new Error(`Source root does not exist: ${root}`);
+    return [];
+  }
+  const entries = await readdir(root, { withFileTypes: true });
   const issueIds = entries
-    .filter((entry) => entry.isDirectory() && /^\d{4}-\d{2}-\d{2}$/.test(entry.name))
+    .filter((entry) => entry.isDirectory() && DATE_PATTERN.test(entry.name))
     .map((entry) => entry.name)
-    .filter((issueId) => !requestedIssue || issueId === requestedIssue)
+    .filter((candidate) => !requestedIssue || candidate === requestedIssue)
     .sort();
-  if (!issueIds.length) throw new Error(`No issue source found${requestedIssue ? ` for ${requestedIssue}` : ""}`);
+  if (required && !issueIds.length) throw new Error(`No issue source found${requestedIssue ? ` for ${requestedIssue}` : ""}`);
   return issueIds;
 }
 
@@ -52,6 +65,11 @@ async function verifyDependencies(repoRoot, manifest) {
   assertEqual(manifest.harrytone.commit, harrytone.commit, "HarryTone commit");
 
   return { contract, harrytone, core };
+}
+
+function englishTitle(content) {
+  const lines = content.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+  return lines.find((line, index) => index > 0 && /^[A-Z0-9$][A-Z0-9$ &/.,'’—-]+$/.test(line)) ?? "CULTURE & TASTE DAILY";
 }
 
 async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss }) {
@@ -100,21 +118,84 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss }) {
     candidateDigest: digestMap(inputDigests),
     dateSemantics: evaluateDateSemantics(manifest),
     title: content.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? issueId,
+    titleEn: englishTitle(content),
   };
+}
+
+function validateHistoricalMeta(meta, issueId) {
+  assertEqual(meta.issue_id, issueId, "historical issue directory/id");
+  assertEqual(meta.publication_date, issueId, "historical issue date");
+  if (!meta.title || !meta.title_en || !meta.deck) throw new Error(`Historical issue ${issueId} is missing public display metadata`);
+  if (!/^[0-9a-f]{64}$/.test(meta.source_sha256)) throw new Error(`Historical issue ${issueId} has an invalid source digest`);
+  if (meta.production_eligible !== false) throw new Error(`Historical issue ${issueId} cannot be marked production eligible in Preview`);
+  if (!Array.isArray(meta.limitations) || !meta.limitations.length) throw new Error(`Historical issue ${issueId} must disclose migration limitations`);
+}
+
+async function buildHistoricalIssues({ historicalRoot, outDir, baseCss, siteCss, siteJs }) {
+  const historical = [];
+  for (const issueId of await discoverDateDirectories(historicalRoot, null, false)) {
+    const issueRoot = path.join(historicalRoot, issueId);
+    await assertPublicTree(issueRoot);
+    const meta = await readJson(path.join(issueRoot, "meta.json"));
+    validateHistoricalMeta(meta, issueId);
+    const originalPath = path.join(issueRoot, meta.original_file);
+    assertEqual(await sha256File(originalPath), meta.source_sha256, `${issueId} historical original hash`);
+
+    const issueOut = path.join(outDir, "issues", issueId);
+    await mkdir(issueOut, { recursive: true });
+    if (meta.migration_mode === "preserved_self_contained_html") {
+      await writeFile(path.join(issueOut, "index.html"), renderHistoricalWrapper({ meta, baseCss, siteCss, siteJs }), "utf8");
+      await writeFile(path.join(issueOut, "original.html"), await readFile(originalPath));
+    } else if (meta.migration_mode === "pdf_facsimile") {
+      const sourcePages = path.join(issueRoot, "pages");
+      const pageFiles = (await readdir(sourcePages)).filter((file) => /^page-\d{3}\.jpg$/.test(file)).sort();
+      assertEqual(pageFiles.length, meta.page_count, `${issueId} facsimile page count`);
+      await copyTree(sourcePages, path.join(issueOut, "pages"));
+      await writeFile(path.join(issueOut, "original.pdf"), await readFile(originalPath));
+      await writeFile(path.join(issueOut, "index.html"), renderFacsimile({ meta, pageFiles, baseCss, siteCss, siteJs }), "utf8");
+    } else {
+      throw new Error(`Unsupported historical migration mode for ${issueId}: ${meta.migration_mode}`);
+    }
+
+    const digest = await directoryDigest(issueRoot);
+    historical.push({
+      issue_id: issueId,
+      publication_date: meta.publication_date,
+      title: meta.title,
+      title_en: meta.title_en,
+      deck: meta.deck,
+      kind: "historical",
+      coverAsset: meta.cover_asset,
+      digest,
+      migration_mode: meta.migration_mode,
+      source_sha256: meta.source_sha256,
+      production_eligible: false,
+      limitations: meta.limitations,
+    });
+  }
+  return historical;
 }
 
 export async function buildSite({
   repoRoot,
   sourceRoot = path.join(repoRoot, "src/issues"),
+  historicalRoot,
   outDir = path.join(repoRoot, "dist"),
   issueId,
   baseUrl = "https://culture-taste-daily.invalid/",
 } = {}) {
   await resetDirectory(outDir, path.dirname(outDir));
-  const baseCss = await readFile(path.join(repoRoot, "core/styles/base.css"), "utf8");
+  const defaultSourceRoot = path.join(repoRoot, "src/issues");
+  const includeHistorical = historicalRoot !== null && !issueId && path.resolve(sourceRoot) === path.resolve(defaultSourceRoot);
+  const resolvedHistoricalRoot = historicalRoot ?? path.join(repoRoot, "src/historical");
+  const [baseCss, siteCss, siteJs] = await Promise.all([
+    readFile(path.join(repoRoot, "core/styles/base.css"), "utf8"),
+    readFile(path.join(repoRoot, "core/styles/site.css"), "utf8"),
+    readFile(path.join(repoRoot, "core/site.js"), "utf8"),
+  ]);
   const issues = [];
 
-  for (const id of await discoverIssues(sourceRoot, issueId)) {
+  for (const id of await discoverDateDirectories(sourceRoot, issueId)) {
     const issue = await loadIssue({ repoRoot, sourceRoot, issueId: id, baseCss });
     const issueOut = path.join(outDir, "issues", id);
     await mkdir(issueOut, { recursive: true });
@@ -136,13 +217,36 @@ export async function buildSite({
     issues.push(issue);
   }
 
-  issues.sort((a, b) => a.manifest.publication_date.localeCompare(b.manifest.publication_date));
+  const siteAssets = path.join(repoRoot, "src/site/assets");
+  if (await exists(siteAssets)) {
+    await assertPublicTree(siteAssets);
+    await copyTree(siteAssets, path.join(outDir, "assets"));
+  }
+
+  const historical = includeHistorical
+    ? await buildHistoricalIssues({ historicalRoot: resolvedHistoricalRoot, outDir, baseCss, siteCss, siteJs })
+    : [];
+  const publicationIssues = [
+    ...historical,
+    ...issues.map((issue) => ({
+      issue_id: issue.issueId,
+      publication_date: issue.manifest.publication_date,
+      title: issue.title,
+      title_en: issue.titleEn,
+      deck: issue.manifest.editorial_position,
+      kind: "current",
+      coverAsset: null,
+      digest: issue.candidateDigest,
+      production_eligible: issue.dateSemantics.production_candidate_valid,
+    })),
+  ].sort((a, b) => a.publication_date.localeCompare(b.publication_date));
+
   const archiveDir = path.join(outDir, "archive");
   await mkdir(archiveDir, { recursive: true });
-  await writeFile(path.join(outDir, "index.html"), renderHome({ issues, baseCss }), "utf8");
-  await writeFile(path.join(archiveDir, "index.html"), renderArchive({ issues, baseCss }), "utf8");
-  await writeFile(path.join(outDir, "rss.xml"), renderRss({ issues, baseUrl }), "utf8");
-  await writeFile(path.join(outDir, "sitemap.xml"), renderSitemap({ issues, baseUrl }), "utf8");
+  await writeFile(path.join(outDir, "index.html"), renderHome({ issues: publicationIssues, baseCss, siteCss, siteJs }), "utf8");
+  await writeFile(path.join(archiveDir, "index.html"), renderArchive({ issues: publicationIssues, baseCss, siteCss, siteJs }), "utf8");
+  await writeFile(path.join(outDir, "rss.xml"), renderRss({ issues: publicationIssues, baseUrl }), "utf8");
+  await writeFile(path.join(outDir, "sitemap.xml"), renderSitemap({ issues: publicationIssues, baseUrl }), "utf8");
 
   await assertPublicTree(outDir);
   const artifactFiles = await fileDigestMap(outDir, { exclude: ["build-report.json"] });
@@ -151,7 +255,7 @@ export async function buildSite({
   const report = {
     schema_version: 1,
     kind: "generator_build_report",
-    scope: "local_non_production",
+    scope: "local_non_production_preview",
     production_authority: false,
     base_url: baseUrl,
     contract: {
@@ -168,6 +272,7 @@ export async function buildSite({
       source_hashes: issue.manifest.source_hashes,
       date_semantics: issue.dateSemantics,
     })),
+    historical_issues: historical,
     artifact_digest: artifactDigest,
     artifact_files: artifactFiles,
   };

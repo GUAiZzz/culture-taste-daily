@@ -2,7 +2,7 @@
 
 ## Boundary
 
-`GUAiZzz/culture-taste-daily` is the future source of truth for Culture & Taste Daily code, public issue source, candidate artifacts, and—only after later approval—its build and deployment configuration.
+`GUAiZzz/culture-taste-daily` is the source of truth for Culture & Taste Daily code, public issue source, historical Preview objects, build configuration, and non-production Preview configuration.
 
 It has no runtime, workflow, Pages, or content dependency on `GUAiZzz/GUAiZzz`.
 
@@ -11,16 +11,16 @@ It has no runtime, workflow, Pages, or content dependency on `GUAiZzz/GUAiZzz`.
 ```text
 private research workspace (outside repository)
         ↓ selected publishable facts only
-src/issues/<date>/
-        ↓ future deterministic build
-candidate/<date>/
-        ↓ future independent CI evidence gate
-preview
+src/issues/<date>/ + reviewed historical originals
+        ↓ deterministic build
+immutable Preview artifact
+        ↓ CI verification + manual Preview dispatch
+public non-production Preview
         ↓ explicit human approval
 production release
 ```
 
-Only the first two repository layers exist today. The arrows after `candidate/` describe future stages, not active infrastructure.
+The pipeline ends at the non-production Preview today. The production arrow remains inactive and separately gated.
 
 ## Public issue source
 
@@ -34,14 +34,20 @@ Private research and private source-ledger instances never enter `src/`.
 
 ## Shared core versus issue expression
 
-Future `core/` code may own accessibility, archive navigation, source rendering, responsive primitives, and deterministic output rules. It must not flatten every issue into the same visual template.
+`core/` owns accessibility, archive navigation, source rendering, responsive primitives, and deterministic output rules. It must not flatten every issue into the same visual template.
 
 Issue-specific art direction may control composition, palette, rhythm, typography, imagery, and content-driven interaction while preserving the shared accessibility and no-JavaScript contract.
+
+The publication homepage/archive uses `core/styles/site.css`, which is never loaded into an issue page. Current issues use scoped `issue.css`; preserved historical originals keep their supplied visual systems.
+
+## Historical Preview objects
+
+`src/historical/<date>/` stores only the three explicitly supplied historical originals, public migration metadata, and required facsimile assets. Exact original hashes are verified during build. These objects are Preview-only until rights, accessibility, and historical-fidelity review is complete.
 
 ## Candidate snapshots
 
 `candidate/2026-08-25/` preserves the locally accepted static candidate and public QA evidence. It is not `dist/`, a release artifact, or a deployable branch.
 
-## Future deployment invariant
+## Deployment invariant
 
-When deployment is later implemented, it must publish a new immutable artifact only after independent deterministic evidence and explicit approval. Failure at any step must leave the previous good production release untouched.
+The current workflow may deploy only a manually requested, visibly labeled Preview after deterministic checks pass. Production remains unimplemented. Any later production deployment must use a distinct protected evidence gate and leave the previous good release untouched on failure.

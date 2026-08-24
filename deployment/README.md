@@ -1,7 +1,7 @@
-# Deployment boundary — disabled
+# Deployment boundary — Preview only
 
-GitHub Pages, preview hosting, and production deployment are not enabled.
+`.github/workflows/preview.yml` provides pull-request verification and a manually dispatched GitHub Pages Preview. It has no schedule and cannot be triggered by manifest status or generator scores.
 
-No workflow, deploy key, environment, Pages source, custom domain, or production branch is configured. Stage ④A adds only a local gate simulation; every decision it emits is schema-bound to `production_authority: false`.
+The deployed artifact is visibly marked `NON-PRODUCTION PREVIEW`, carries `noindex,nofollow`, and is rebuilt and rechecked with the repository's pinned tools before upload. GitHub's technical Pages environment name does not grant Culture & Taste production authority.
 
-Any later deployment design requires separate authorization and must consume exact artifact-bound technical evidence plus named human editorial/visual acceptance. Generator output, manifest `PASS`, scores, visual self-review, or a local gate file cannot trigger deployment.
+Production deployment, custom domains, production redirects, old-site changes, and daily automation remain disabled. Any later production design requires separate authorization and exact artifact-bound technical evidence plus named human editorial/visual acceptance.

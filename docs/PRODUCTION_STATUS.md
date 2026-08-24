@@ -2,7 +2,7 @@
 
 Status: `NOT DEPLOYED`
 
-Current stage: `④A Build / QA foundation — local, non-production`
+Current stage: `Preview Build — real site, non-production`
 
 Canonical authority:
 
@@ -17,17 +17,18 @@ Implemented in this stage:
 - named human editorial/visual review interface;
 - local non-production evidence gate;
 - fail-closed regression and negative-path tests;
-- desktop, mobile, no-JavaScript, and reduced-motion evidence renders.
+- desktop, mobile, no-JavaScript, and reduced-motion evidence renders;
+- designed homepage and interactive-enhanced archive with full no-JavaScript fallback;
+- preview-only historical preservation for 2026-08-20, 2026-08-21, and 2026-08-22;
+- pull-request CI and manually triggered GitHub Pages Preview workflow.
 
 Still not implemented or authorized:
 
-- CI or any GitHub Actions workflow;
-- preview environment;
-- production deployment or GitHub Pages;
-- historical migration;
+- production deployment or production use of GitHub Pages;
+- production acceptance of historical migrations;
 - daily automation;
 - automatic editorial, visual, HarryTone, truth, cultural, or rights approval.
 
 The `2026-08-25` source is a non-production technical sample. It cannot satisfy V3 date semantics and must remain blocked by the evidence gate.
 
-No live URL is owned by this repository. Build output, manifest `PASS`, technical QA `PASS`, and a local gate result do not themselves authorize production deployment.
+The GitHub Pages endpoint created by the Preview workflow is review infrastructure, not a production release. Build output, manifest `PASS`, technical QA `PASS`, a Preview URL, and a local gate result do not themselves authorize production deployment.

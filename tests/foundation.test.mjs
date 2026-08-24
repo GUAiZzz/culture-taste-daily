@@ -6,7 +6,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildSite } from "../scripts/lib/build.mjs";
 import { evaluateGate } from "../scripts/lib/gate.mjs";
-import { readJson, writeJson } from "../scripts/lib/files.mjs";
+import { readJson, sha256File, writeJson } from "../scripts/lib/files.mjs";
 import { runStaticChecks, runTechnicalQa } from "../scripts/lib/qa.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -18,6 +18,8 @@ let evidenceDir;
 let buildReport;
 let technicalEvidence;
 let approvedReview;
+let previewDist;
+let previewReport;
 
 function reviewFor(report, overrides = {}) {
   const issue = report.issues.find((item) => item.issue_id === issueId);
@@ -78,6 +80,8 @@ before(async () => {
     createdAt: "2026-08-20T09:15:00+08:00",
   });
   approvedReview = reviewFor(buildReport);
+  previewDist = path.join(workspace, "dist-repository-preview");
+  previewReport = await buildSite({ repoRoot, outDir: previewDist });
 });
 
 after(async () => {
@@ -127,6 +131,54 @@ test("shared core remains functional and leaves issue visual decisions to issue 
   assert.match(issueCss, /body\[data-issue="2026-08-25"\][\s\S]*background:/);
   assert.match(issueCss, /body\[data-issue="2026-08-25"\]\s+h1[\s\S]*font-size:/);
   assert.match(issueCss, /max-width:/);
+});
+
+test("repository Preview preserves all three historical originals as non-production issues", async () => {
+  assert.deepEqual(previewReport.historical_issues.map((issue) => issue.issue_id), ["2026-08-20", "2026-08-21", "2026-08-22"]);
+  assert.ok(previewReport.historical_issues.every((issue) => issue.production_eligible === false));
+  assert.equal(
+    await sha256File(path.join(previewDist, "issues/2026-08-20/original.html")),
+    "b4b42d072a36f85a5490d9f1cbc0b0c4b4d148282fe379f4022dd08fb1074fd2",
+  );
+  assert.equal(
+    await sha256File(path.join(previewDist, "issues/2026-08-21/original.html")),
+    "f85bf5678c20363df68930488e61a02b610268b67e12ce7a7e2cdd2441994041",
+  );
+  assert.equal(
+    await sha256File(path.join(previewDist, "issues/2026-08-22/original.pdf")),
+    "2c3785f03eabfa45905c5240b6961b57b7d43fb36802b1e47ba30dbc3f7b7ffe",
+  );
+});
+
+test("Preview homepage and archive expose four issues with local cover assets", async () => {
+  const home = await readFile(path.join(previewDist, "index.html"), "utf8");
+  const archive = await readFile(path.join(previewDist, "archive/index.html"), "utf8");
+  for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-25"]) {
+    assert.ok(home.includes(`issues/${date}/`));
+    assert.ok(archive.includes(`issues/${date}/`));
+  }
+  assert.match(home, /NON-PRODUCTION PREVIEW/);
+  assert.match(home, /meta name="robots" content="noindex,nofollow"/);
+  for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg"]) {
+    await readFile(path.join(previewDist, "assets/covers", cover));
+  }
+});
+
+test("independent static QA validates historical archive routes and assets", async () => {
+  const qa = await runStaticChecks({ repoRoot, distDir: previewDist, issueId: "2026-08-25" });
+  assert.equal(qa.checks.find((check) => check.id === "historical_archive").status, "PASS");
+  assert.equal(qa.checks.find((check) => check.id === "assets").status, "PASS");
+  assert.equal(qa.checks.find((check) => check.id === "internal_links").status, "PASS");
+});
+
+test("Preview workflow verifies pull requests but deploys only on explicit manual dispatch", async () => {
+  const workflow = await readFile(path.join(repoRoot, ".github/workflows/preview.yml"), "utf8");
+  assert.match(workflow, /pull_request:/);
+  assert.match(workflow, /workflow_dispatch:/);
+  assert.match(workflow, /if: github\.event_name == 'workflow_dispatch'/);
+  assert.match(workflow, /NON-PRODUCTION|non-production/);
+  assert.doesNotMatch(workflow, /schedule:/);
+  assert.doesNotMatch(workflow, /^\s+push:/m);
 });
 
 test("malformed HTML fails independent static QA", async () => {

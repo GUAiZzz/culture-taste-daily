@@ -26,12 +26,14 @@ const CHECK_IDS = [
   "no_js_reading",
   "assets",
   "internal_links",
+  "historical_archive",
   "private_material_absent",
   "accessibility_structure",
   "keyboard_focus",
   "desktop_render",
   "mobile_render",
   "reduced_motion_render",
+  "publication_shell_render",
 ];
 
 export const REQUIRED_TECHNICAL_CHECKS = Object.freeze([...CHECK_IDS]);
@@ -105,7 +107,8 @@ export async function runStaticChecks({ repoRoot, distDir, issueId }) {
     actual: currentArtifactDigest,
   }));
 
-  const htmlFiles = (await walkFiles(distDir)).filter((file) => file.endsWith(".html"));
+  const allHtmlFiles = (await walkFiles(distDir)).filter((file) => file.endsWith(".html"));
+  const htmlFiles = allHtmlFiles.filter((file) => path.basename(file) !== "original.html");
   const parseFailures = await htmlValidation(htmlFiles);
   checks.push(result("html_parse", parseFailures.length === 0, parseFailures));
 
@@ -134,12 +137,12 @@ export async function runStaticChecks({ repoRoot, distDir, issueId }) {
 
   const assetErrors = [];
   const linkErrors = [];
-  for (const htmlFile of htmlFiles) {
+  for (const htmlFile of allHtmlFiles) {
     const html = await readFile(htmlFile, "utf8");
     if (/@import\s+(?:url\()?['"]?https?:|url\(\s*['"]?https?:/i.test(html)) {
       assetErrors.push(`${toPosix(path.relative(distDir, htmlFile))}: remote display CSS dependency`);
     }
-    for (const item of htmlTags(html, ["img", "script", "link", "source", "video", "a"])) {
+    for (const item of htmlTags(html, ["img", "script", "link", "source", "video", "iframe", "a"])) {
       const src = item.attributes.src;
       const href = item.attributes.href;
       if (src === "" || href === "") assetErrors.push(`${toPosix(path.relative(distDir, htmlFile))}: empty src/href`);
@@ -173,6 +176,29 @@ export async function runStaticChecks({ repoRoot, distDir, issueId }) {
   checks.push(result("assets", assetErrors.length === 0, assetErrors));
   checks.push(result("internal_links", linkErrors.length === 0, linkErrors));
 
+  const historicalErrors = [];
+  const historicalIssues = buildReport.historical_issues ?? [];
+  if (historicalIssues.length) {
+    const archiveHtml = await readFile(path.join(distDir, "archive", "index.html"), "utf8");
+    for (const historical of historicalIssues) {
+      const issueRoot = path.join(distDir, "issues", historical.issue_id);
+      for (const requiredPath of [
+        path.join(issueRoot, "index.html"),
+        path.join(issueRoot, historical.migration_mode === "pdf_facsimile" ? "original.pdf" : "original.html"),
+        path.join(distDir, "assets", historical.coverAsset),
+      ]) {
+        try {
+          await readFile(requiredPath);
+        } catch {
+          historicalErrors.push(`missing historical artifact: ${toPosix(path.relative(distDir, requiredPath))}`);
+        }
+      }
+      if (!archiveHtml.includes(historical.issue_id)) historicalErrors.push(`archive omits historical issue ${historical.issue_id}`);
+      if (historical.production_eligible !== false) historicalErrors.push(`historical issue ${historical.issue_id} is not explicitly non-production`);
+    }
+  }
+  checks.push(result("historical_archive", historicalErrors.length === 0, historicalIssues.length ? historicalErrors : "not included in this isolated fixture build"));
+
   const privateFindings = await scanForPrivateMaterial(distDir);
   checks.push(result("private_material_absent", privateFindings.length === 0, privateFindings));
 
@@ -199,7 +225,7 @@ async function launchChromium() {
   }
 }
 
-async function captureCase({ browser, origin, issueId, evidenceDir, name, width, height, javaScriptEnabled, reducedMotion, manifest }) {
+async function captureCase({ browser, origin, issueId, evidenceDir, name, width, height, javaScriptEnabled, reducedMotion, manifest, urlPath, testArchiveFilter = false }) {
   const context = await browser.newContext({
     viewport: { width, height },
     javaScriptEnabled,
@@ -214,7 +240,7 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
     if (message.type() === "error") consoleErrors.push(message.text());
   });
   page.on("requestfailed", (request) => requestFailures.push(`${request.url()} ${request.failure()?.errorText ?? "failed"}`));
-  await page.goto(`${origin}/issues/${issueId}/`, { waitUntil: "networkidle" });
+  await page.goto(`${origin}/${urlPath ?? `issues/${issueId}/`}`, { waitUntil: "networkidle" });
 
   const facts = await page.evaluate((storyTitles) => {
     const mainText = document.querySelector("main")?.innerText ?? "";
@@ -228,6 +254,15 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
       reduced_motion_matches: matchMedia("(prefers-reduced-motion: reduce)").matches,
     };
   }, manifest.stories.map((story) => story.title));
+
+  if (testArchiveFilter) {
+    await page.locator('[data-filter="historical"]').click();
+    facts.archive_filter = await page.evaluate(() => ({
+      historical_visible: [...document.querySelectorAll('.archive-index li[data-kind="historical"]')].every((item) => !item.classList.contains("is-hidden")),
+      current_hidden: [...document.querySelectorAll('.archive-index li[data-kind="current"]')].every((item) => item.classList.contains("is-hidden")),
+    }));
+    await page.locator('[data-filter="all"]').click();
+  }
 
   if (javaScriptEnabled) {
     await page.keyboard.press("Tab");
@@ -273,6 +308,9 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
         { name: "mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false },
         { name: "no-js-390x844", width: 390, height: 844, javaScriptEnabled: false, reducedMotion: false },
         { name: "reduced-motion-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: true },
+        { name: "home-desktop-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: false, urlPath: "" },
+        { name: "home-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: "" },
+        { name: "archive-desktop-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: false, urlPath: "archive/", testArchiveFilter: true },
       ];
       const captures = {};
       for (const item of cases) {
@@ -303,12 +341,25 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
       }
       const reduced = captures["reduced-motion-1440x900"];
       checks.push(result("reduced_motion_render", reduced.facts.reduced_motion_matches && reduced.facts.horizontal_overflow === 0, reduced.facts));
+
+      const shellCaptures = [captures["home-desktop-1440x900"], captures["home-mobile-390x844"], captures["archive-desktop-1440x900"]];
+      const shellOk = shellCaptures.every((item) => item.facts.horizontal_overflow === 0
+        && item.facts.broken_images.length === 0
+        && item.consoleErrors.length === 0
+        && item.requestFailures.length === 0)
+        && captures["archive-desktop-1440x900"].facts.archive_filter?.historical_visible
+        && captures["archive-desktop-1440x900"].facts.archive_filter?.current_hidden;
+      checks.push(result("publication_shell_render", shellOk, {
+        home_desktop: captures["home-desktop-1440x900"].facts,
+        home_mobile: captures["home-mobile-390x844"].facts,
+        archive: captures["archive-desktop-1440x900"].facts,
+      }));
     } finally {
       await browser.close();
       await server.close();
     }
   } else {
-    for (const id of ["no_js_reading", "keyboard_focus", "desktop_render", "mobile_render", "reduced_motion_render"]) {
+    for (const id of ["no_js_reading", "keyboard_focus", "desktop_render", "mobile_render", "reduced_motion_render", "publication_shell_render"]) {
       checks.push(result(id, false, capture ? "render checks skipped because static QA failed" : "render checks not requested"));
     }
   }

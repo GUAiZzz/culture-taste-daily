@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "issue_id": "2026-08-22",
+  "publication_date": "2026-08-22",
+  "title": "门开了，文化才开始",
+  "title_en": "THE DOOR OPENS. CULTURE BEGINS.",
+  "deck": "一份以移动端页面截图保存下来的历史刊：空间、观看与公共界面的 16 个连续画面。",
+  "migration_mode": "pdf_facsimile",
+  "original_file": "original.pdf",
+  "cover_asset": "covers/2026-08-22.jpg",
+  "source_sha256": "2c3785f03eabfa45905c5240b6961b57b7d43fb36802b1e47ba30dbc3f7b7ffe",
+  "page_count": 16,
+  "preview_rights_status": "historical_artifact_under_human_review",
+  "production_eligible": false,
+  "limitations": [
+    "The supplied PDF contains raster screenshots rather than selectable article text.",
+    "Preview uses an honest facsimile reader and retains the original PDF; accessible source reconstruction remains blocked until original web source is recovered.",
+    "Historical media reuse basis requires human review before any production cutover."
+  ]
+}
