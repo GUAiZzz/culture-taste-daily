@@ -6,16 +6,17 @@ Read these files before changing this repository, in order:
 2. `docs/NORTH_STAR.md`
 3. `docs/PRODUCTION_STATUS.md`
 4. `docs/CONTRACT_STATUS.md`
-5. `docs/ARCHITECTURE.md`
-6. `docs/DATA_BOUNDARIES.md`
-7. `docs/HARRYTONE_DEPENDENCY.md`
-8. `docs/REFERENCE_SYSTEM.md` and `docs/CULTURE_TASTE_SOURCE_MAP.md` for editorial work
+5. `docs/PRODUCTION_CONTRACT_V3.md`
+6. `docs/ARCHITECTURE.md`
+7. `docs/DATA_BOUNDARIES.md`
+8. `docs/HARRYTONE_DEPENDENCY.md`
+9. `docs/REFERENCE_SYSTEM.md` and `docs/CULTURE_TASTE_SOURCE_MAP.md` for editorial work
 
 ## Current hard stops
 
 - Do not enable GitHub Pages, preview hosting, production deployment, or daily automation.
 - Do not create a deployment or scheduled workflow without a later explicit authorization.
-- Do not declare Production Contract V3 canonical.
+- Production Contract V3 is canonical, but implementation, preview, GitHub Pages, production deployment, historical migration, workflows, and daily automation remain separately gated and are not authorized by contract activation.
 - Do not modify or import historical publication artifacts.
 - Do not read from or write to `GUAiZzz/GUAiZzz` as part of this repository's build.
 - Do not copy canonical HarryTone private source into this repository.
