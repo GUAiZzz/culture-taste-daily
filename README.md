@@ -4,7 +4,7 @@ Independent source repository for Culture & Taste Daily.
 
 Repository stage: **Preview Build — real site, non-production**
 
-Production Contract V3 is canonical. The repository now builds the real Culture & Taste homepage, archive, the 2026-08-24 current Preview issue, the explicitly excluded 2026-08-25 future draft, and three preserved historical issues into a visibly non-production Preview. Production cutover and daily automation remain disabled.
+Production Contract V3 is canonical. The repository now builds the real Culture & Taste homepage, archive, the 2026-08-24 current Preview issue, the explicitly excluded 2026-08-25 future draft, and three preserved historical issues into a visibly non-production Preview. A daily Codex dry-run task may produce dated candidate branches and pull requests; production cutover and unattended publication remain disabled.
 
 ## What is available
 
@@ -20,6 +20,7 @@ Production Contract V3 is canonical. The repository now builds the real Culture 
 - preserved 2026-08-20 and 2026-08-21 self-contained HTML originals;
 - an honest 16-page facsimile reader for the supplied 2026-08-22 PDF;
 - manually triggered GitHub Pages Preview hosting after CI verification.
+- a fail-closed daily candidate preflight and auditable runbook with zero deployment authority.
 
 Manifest `status`, generator QA fields, and scores are reporting only. They cannot approve editorial quality or authorize release.
 
@@ -29,6 +30,7 @@ Node.js 22 or later is required.
 
 ```sh
 npm ci
+npm run daily:preflight
 npm run build
 npm run qa
 npm run review:template
@@ -74,7 +76,7 @@ The accepted snapshot at [`candidate/2026-08-25/index.html`](candidate/2026-08-2
 ## Hard boundaries
 
 - The GitHub Pages site is a non-production Preview only; every page is visibly labeled and `noindex`.
-- Production cutover and daily automation remain disabled.
+- Production cutover and unattended production automation remain disabled. The authorized daily task stops at a dated pull request.
 - Private research/source-ledger instances, credentials, tokens, and canonical HarryTone source remain outside this repository.
 - HarryTone is represented only by an exact dependency identity.
 - `GUAiZzz/GUAiZzz`, its `gh-pages`, the current live site, Library V2, and canonical `GUAiZzz/harry-tone` remain untouched.

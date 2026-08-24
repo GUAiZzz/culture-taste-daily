@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "kind": "culture_taste_daily_candidate_policy",
+  "timezone": "Asia/Shanghai",
+  "mode": "scheduled_dry_run_candidate",
+  "schedule": {
+    "start_time": "06:15",
+    "research_window_start": "06:00",
+    "research_lock_deadline": "08:30"
+  },
+  "freshness_hours": 72,
+  "dry_run_base_ref": "codex/daily-automation-v1",
+  "branch_prefix": "automation/culture-taste",
+  "output": {
+    "open_pull_request": true,
+    "merge": false,
+    "deploy_preview": false,
+    "deploy_production": false,
+    "modify_pages_settings": false,
+    "modify_legacy_repository": false
+  },
+  "failure": {
+    "status": "BLOCKED",
+    "preserve_previous_good": true,
+    "allow_partial_publish": false
+  },
+  "required_source_lanes": [
+    "mainland_china_plus_hong_kong_or_taiwan",
+    "japan_or_korea",
+    "continental_europe_or_united_kingdom",
+    "united_states_or_canada",
+    "rotating_global_lane"
+  ],
+  "standing_beats": [
+    {
+      "id": "supreme-thursday-drop",
+      "cadence": "thursday",
+      "required_check": true,
+      "publication_quota": false
+    },
+    {
+      "id": "stussy-release-radar",
+      "cadence": "daily",
+      "required_check": true,
+      "publication_quota": false
+    },
+    {
+      "id": "luxury-runway-calendar",
+      "cadence": "daily",
+      "required_check": true,
+      "publication_quota": false
+    },
+    {
+      "id": "exhibition-and-cultural-programme-radar",
+      "cadence": "daily",
+      "required_check": true,
+      "publication_quota": false
+    },
+    {
+      "id": "small-breakout-object-radar",
+      "cadence": "daily",
+      "required_check": true,
+      "publication_quota": false
+    }
+  ],
+  "required_runtime_checks": [
+    "canonical_harrytone_access_and_commit",
+    "private_ephemeral_workspace_outside_repository",
+    "required_regional_lanes",
+    "event_level_deduplication",
+    "primary_and_independent_source_evidence",
+    "image_rights_basis_separate_from_credit",
+    "detail_level_reference_recheck",
+    "seven_issue_variation_review",
+    "deterministic_build_and_independent_qa",
+    "privacy_scan",
+    "named_human_review_pending"
+  ]
+}

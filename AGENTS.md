@@ -13,11 +13,14 @@ Read these files before changing this repository, in order:
 9. `docs/HARRYTONE_DEPENDENCY.md`
 10. `docs/REFERENCE_SYSTEM.md` and `docs/CULTURE_TASTE_SOURCE_MAP.md` for editorial work
 
+For the authorized daily candidate dry run, also read `automation/DAILY_RUN.md` and `automation/daily-policy.json` before acting.
+
 ## Current hard stops
 
 - Preview hosting is authorized only through `.github/workflows/preview.yml`; it must remain visibly non-production and `noindex`.
-- Do not enable production cutover or daily automation.
-- Do not create a production or scheduled workflow without a later explicit authorization.
+- Do not enable production cutover or unattended production automation.
+- The repository owner authorized a daily dry-run candidate task on 2026-08-24. It is limited to `automation/DAILY_RUN.md`: dated candidate branch, QA, and pull request only. It cannot merge or deploy.
+- Do not create a production or scheduled GitHub workflow. The authorized schedule lives outside GitHub Actions and has zero deployment authority.
 - Production Contract V3 is canonical, but implementation, preview, GitHub Pages, production deployment, historical migration, workflows, and daily automation remain separately gated and are not authorized by contract activation.
 - The supplied 2026-08-20, 2026-08-21, and 2026-08-22 historical originals may be preserved in Preview with exact source hashes. Do not rewrite, normalize, or declare them production-ready.
 - Do not read from or write to `GUAiZzz/GUAiZzz` as part of this repository's build.

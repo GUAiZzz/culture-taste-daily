@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
+    "daily:preflight": "node scripts/daily-preflight.mjs",
     "qa": "node scripts/qa.mjs",
     "review:template": "node scripts/create-review-template.mjs",
     "gate": "node scripts/gate.mjs",

@@ -3,6 +3,7 @@
 All tools are repository-relative and non-deploying.
 
 - `npm run build` validates public source, contract/core identities, hashes, privacy boundaries, and V3 date semantics; then writes deterministic static output to ignored `dist/`.
+- `npm run daily:preflight` checks today's Shanghai date and refresh window, canonical public dependency identities, standing scan beats, and the no-merge/no-deploy dry-run boundary. A blocked preflight exits non-zero.
 - `npm run qa` independently checks the built artifact and writes technical evidence plus issue, shell, and historical renders under ignored `.stage4/evidence/<issue>/`.
 - `npm run review:template` writes a digest-bound, `PENDING` named-human review form. It does not fill, approve, or infer human judgment.
 - `npm run gate -- --previous-good <release-id>` evaluates exact evidence against the built digest. It writes a local simulation decision with `production_authority: false`.
