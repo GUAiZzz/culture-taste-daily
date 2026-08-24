@@ -22,6 +22,8 @@ production release
 
 The pipeline ends at the non-production Preview today. The production arrow remains inactive and separately gated.
 
+The daily candidate task operates before the public-source layer. It starts from an ephemeral private workspace, may promote only publishable issue source to a dated branch, and stops at a pull request. It does not call the Preview workflow or cross the production arrow.
+
 ## Public issue source
 
 Each issue source directory may contain:
@@ -51,3 +53,5 @@ The publication homepage/archive uses `core/styles/site.css`, which is never loa
 ## Deployment invariant
 
 The current workflow may deploy only a manually requested, visibly labeled Preview after deterministic checks pass. Production remains unimplemented. Any later production deployment must use a distinct protected evidence gate and leave the previous good release untouched on failure.
+
+`automation/daily-policy.json` and `automation/DAILY_RUN.md` define the externally scheduled dry-run boundary. GitHub Actions still has no cron schedule. Candidate generation, pull-request verification, Preview dispatch, and production deployment are separate authorities.

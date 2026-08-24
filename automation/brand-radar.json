@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "kind": "culture_taste_brand_and_culture_source_radar",
+  "purpose": "Maintained discovery radar for official brand, retail, creative, event, and culture-source checks.",
+  "rules": {
+    "discovery_only": true,
+    "publication_quota": false,
+    "social_following_required": false,
+    "official_detail_page_required": true,
+    "independent_context_required_for_impact_claims": true,
+    "exact_source_identity_required": true
+  },
+  "rotation": {
+    "mode": "daily_deterministic_cohort_plus_standing_beats",
+    "full_cycle_days": 7,
+    "standing_beats_source": "automation/daily-policy.json"
+  },
+  "cohorts": [
+    {
+      "id": "drop_streetwear",
+      "subjects": [
+        "Supreme",
+        "Stüssy",
+        "Palace",
+        "Brain Dead",
+        "Aimé Leon Dore",
+        "Noah",
+        "Corteiz",
+        "Denim Tears",
+        "Kith",
+        "CLOT",
+        "Gallery Dept.",
+        "Heron Preston",
+        "Praying",
+        "Youth of Paris",
+        "YZY",
+        "October's Very Own",
+        "Unavailable",
+        "Uniform Display",
+        "Unsound Rags",
+        "Prototypes"
+      ]
+    },
+    {
+      "id": "luxury_runway",
+      "subjects": [
+        "Balenciaga",
+        "Bode",
+        "Cartier",
+        "Casablanca",
+        "Chanel",
+        "Chrome Hearts",
+        "Givenchy",
+        "Goyard",
+        "Kenzo",
+        "Loro Piana",
+        "Marni",
+        "Bottega Veneta",
+        "Prada",
+        "Tiffany & Co.",
+        "Loewe",
+        "Miu Miu",
+        "Rick Owens",
+        "SKIMS",
+        "HOMME PLISSÉ ISSEY MIYAKE",
+        "Entire Studios"
+      ]
+    },
+    {
+      "id": "japan",
+      "subjects": [
+        "Human Made",
+        "Kapital",
+        "NIGO",
+        "UNDERCOVER",
+        "WTAPS",
+        "NEIGHBORHOOD",
+        "sacai",
+        "Needles",
+        "visvim",
+        "AURALEE",
+        "Hender Scheme"
+      ]
+    },
+    {
+      "id": "korea_china_taiwan",
+      "subjects": [
+        "POST ARCHIVE FACTION",
+        "ADER ERROR",
+        "thisisneverthat",
+        "Gentle Monster",
+        "KUSIKOHC",
+        "ROARINGWILD",
+        "Randomevent",
+        "STAFFONLY",
+        "SHUSHU/TONG",
+        "SANKUANZ",
+        "HAMCUS",
+        "GOOPiMADE",
+        "Guerrilla-Group",
+        "INVINCIBLE",
+        "Dingyun Zhang"
+      ]
+    },
+    {
+      "id": "european_contemporary",
+      "subjects": [
+        "Our Legacy",
+        "Stone Island",
+        "C.P. Company",
+        "Martine Rose",
+        "Wales Bonner",
+        "Dries Van Noten",
+        "Lemaire"
+      ]
+    },
+    {
+      "id": "sport_outdoor_lifestyle",
+      "subjects": [
+        "Alo",
+        "Arc'teryx",
+        "Nike",
+        "On",
+        "Salomon",
+        "ASICS SportStyle",
+        "New Balance",
+        "HOKA",
+        "Merrell 1TRL",
+        "Nike ACG",
+        "Blue Bottle Coffee"
+      ]
+    },
+    {
+      "id": "culture_retail_creative",
+      "subjects": [
+        "AWGE",
+        "Blonded",
+        "Boardroom",
+        "Coachella",
+        "Dover Street Market Los Angeles",
+        "Hidden.NY",
+        "Homer",
+        "Infinite Archives",
+        "JJJJound",
+        "KAWS",
+        "Rolling Loud",
+        "SLAM Kicks",
+        "StockX",
+        "UpscaleHype",
+        "Virgil Abloh Archive"
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "label": "Daisy",
+      "status": "blocked_pending_exact_brand_and_official_source_identity"
+    }
+  ]
+}

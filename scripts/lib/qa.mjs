@@ -265,12 +265,20 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
   const facts = await page.evaluate((storyTitles) => {
     const mainText = document.querySelector("main")?.innerText ?? "";
     const images = [...document.images];
+    const isDeferredExternalPreview = (image) => image.loading === "lazy"
+      && image.dataset.externalPreview === "true"
+      && !image.complete;
     return {
       main_text_length: mainText.length,
       missing_story_titles: storyTitles.filter((title) => !mainText.includes(title)),
       sources_and_dates: mainText.includes("Sources & Dates"),
       horizontal_overflow: Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth),
-      broken_images: images.filter((image) => !image.complete || image.naturalWidth === 0).map((image) => image.currentSrc || image.src),
+      broken_images: images
+        .filter((image) => !isDeferredExternalPreview(image) && (!image.complete || image.naturalWidth === 0))
+        .map((image) => image.currentSrc || image.src),
+      deferred_external_previews: images
+        .filter(isDeferredExternalPreview)
+        .map((image) => image.currentSrc || image.src),
       story_visual_count: document.querySelectorAll(".issue-story .story-figure").length,
       issue_index_is_native_disclosure: Boolean(document.querySelector(".issue-nav-panel > summary")),
       nested_scroll_frames: [...document.querySelectorAll("iframe[data-historical-frame]")].filter((frame) => frame.scrollHeight > frame.clientHeight + 50).length,
