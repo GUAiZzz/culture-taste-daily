@@ -2,6 +2,8 @@
 
 Status: `PUBLIC NON-PRODUCTION PREVIEW`
 
+Preview endpoint: <https://guaizzz.github.io/culture-taste-daily/>
+
 The purpose of this phase is to review a real website rather than another architecture document. It joins the publication homepage, archive, current issue, and supplied historical originals without declaring any artifact production-ready.
 
 ## What readers can inspect

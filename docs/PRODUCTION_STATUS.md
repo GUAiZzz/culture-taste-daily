@@ -1,8 +1,10 @@
 # Production status
 
-Status: `NOT DEPLOYED`
+Status: `PREVIEW DEPLOYED / PRODUCTION NOT DEPLOYED`
 
 Current stage: `Preview Build — real site, non-production`
+
+Preview endpoint: <https://guaizzz.github.io/culture-taste-daily/>
 
 Canonical authority:
 
