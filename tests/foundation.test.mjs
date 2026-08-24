@@ -153,6 +153,7 @@ test("repository Preview preserves all three historical originals as non-product
 test("Preview homepage and archive expose the current 2026-08-24 field plus historical issues", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
   const archive = await readFile(path.join(previewDist, "archive/index.html"), "utf8");
+  const current = await readFile(path.join(previewDist, "issues/2026-08-24/index.html"), "utf8");
   for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-24"]) {
     assert.ok(home.includes(`issues/${date}/`));
     assert.ok(archive.includes(`issues/${date}/`));
@@ -161,6 +162,10 @@ test("Preview homepage and archive expose the current 2026-08-24 field plus hist
   assert.doesNotMatch(archive, /issues\/2026-08-25\//);
   assert.match(home, /NON-PRODUCTION PREVIEW/);
   assert.match(home, /meta name="robots" content="noindex,nofollow"/);
+  assert.match(home, /rel="icon" type="image\/svg\+xml" href="\.\/assets\/culture-taste-mark\.svg"/);
+  assert.match(archive, /rel="icon" type="image\/svg\+xml" href="\.\.\/assets\/culture-taste-mark\.svg"/);
+  assert.match(current, /class="issue-brand"[\s\S]*culture-taste-mark\.svg/);
+  await readFile(path.join(previewDist, "assets/culture-taste-mark.svg"));
   for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg"]) {
     await readFile(path.join(previewDist, "assets/covers", cover));
   }

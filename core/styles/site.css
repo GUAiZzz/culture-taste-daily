@@ -47,6 +47,9 @@ body[data-shell="publication"] a {
 }
 
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
   width: max-content;
   color: inherit;
   font-size: clamp(1.5rem, 2.5vw, 2.8rem);
@@ -55,6 +58,15 @@ body[data-shell="publication"] a {
   line-height: 0.72;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.wordmark > .brand-mark {
+  width: clamp(2.15rem, 4vw, 3.6rem);
+  height: clamp(2.15rem, 4vw, 3.6rem);
+}
+
+.wordmark-text {
+  display: block;
 }
 
 .wordmark span {
