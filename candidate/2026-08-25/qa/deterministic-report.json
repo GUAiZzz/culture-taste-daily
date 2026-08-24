@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "issue_id": "2026-08-25",
+  "generated_at": "2026-08-24T02:56:54.107Z",
+  "status": "pass",
+  "authority": "reporting_only_no_deployment_authority",
+  "results": [
+    {
+      "name": "public_manifest_schema",
+      "status": "pass",
+      "detail": []
+    },
+    {
+      "name": "private_ledger_schema",
+      "status": "pass",
+      "detail": []
+    },
+    {
+      "name": "content_hash_lock",
+      "status": "pass",
+      "detail": {
+        "actual": "c7a484db9ca2cb5939337882ea1e0a389faef3e2533c50eafd99307ac7fad3d9",
+        "expected": "c7a484db9ca2cb5939337882ea1e0a389faef3e2533c50eafd99307ac7fad3d9"
+      }
+    },
+    {
+      "name": "candidate_files_present",
+      "status": "pass",
+      "detail": [
+        "candidate/2026-08-25/index.html",
+        "candidate/2026-08-25/archive/index.html",
+        "candidate/2026-08-25/issues/2026-08-25/index.html"
+      ]
+    },
+    {
+      "name": "no_remote_display_dependencies",
+      "status": "pass",
+      "detail": "No remote img, stylesheet, or script dependency"
+    },
+    {
+      "name": "candidate_boundary_label",
+      "status": "pass",
+      "detail": "Candidate label is visible in source"
+    },
+    {
+      "name": "desktop_1440x900",
+      "status": "pass",
+      "detail": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "javaScriptEnabled": true,
+        "reducedMotion": "no-preference",
+        "facts": {
+          "title": "场地开始说话 — Culture & Taste Daily 2026-08-25",
+          "lang": "zh-CN",
+          "h1": 1,
+          "h2": 8,
+          "navLinks": 7,
+          "sourceLinks": 9,
+          "bodyText": 3721,
+          "horizontalOverflow": 0,
+          "skipLink": true,
+          "sections": [
+            "cover-seoul",
+            "major-southbank",
+            "signal-arteen",
+            "signal-sfmoma",
+            "signal-palace",
+            "object-bape",
+            "watch-tmex",
+            "exit"
+          ],
+          "displayNoneSections": [],
+          "reducedMotionDuration": "smooth"
+        },
+        "anchorErrors": [],
+        "consoleErrors": [],
+        "requestFailures": [],
+        "screenshot": "previews/desktop_1440x900.png",
+        "foldScreenshot": "previews/desktop_1440x900-fold.png"
+      }
+    },
+    {
+      "name": "mobile_390x844",
+      "status": "pass",
+      "detail": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "javaScriptEnabled": true,
+        "reducedMotion": "no-preference",
+        "facts": {
+          "title": "场地开始说话 — Culture & Taste Daily 2026-08-25",
+          "lang": "zh-CN",
+          "h1": 1,
+          "h2": 8,
+          "navLinks": 7,
+          "sourceLinks": 9,
+          "bodyText": 3663,
+          "horizontalOverflow": 0,
+          "skipLink": true,
+          "sections": [
+            "cover-seoul",
+            "major-southbank",
+            "signal-arteen",
+            "signal-sfmoma",
+            "signal-palace",
+            "object-bape",
+            "watch-tmex",
+            "exit"
+          ],
+          "displayNoneSections": [],
+          "reducedMotionDuration": "smooth"
+        },
+        "anchorErrors": [],
+        "consoleErrors": [],
+        "requestFailures": [],
+        "screenshot": "previews/mobile_390x844.png",
+        "foldScreenshot": "previews/mobile_390x844-fold.png"
+      }
+    },
+    {
+      "name": "no_js_390x844",
+      "status": "pass",
+      "detail": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "javaScriptEnabled": false,
+        "reducedMotion": "no-preference",
+        "facts": {
+          "title": "场地开始说话 — Culture & Taste Daily 2026-08-25",
+          "lang": "zh-CN",
+          "h1": 1,
+          "h2": 8,
+          "navLinks": 7,
+          "sourceLinks": 9,
+          "bodyText": 3663,
+          "horizontalOverflow": 0,
+          "skipLink": true,
+          "sections": [
+            "cover-seoul",
+            "major-southbank",
+            "signal-arteen",
+            "signal-sfmoma",
+            "signal-palace",
+            "object-bape",
+            "watch-tmex",
+            "exit"
+          ],
+          "displayNoneSections": [],
+          "reducedMotionDuration": "smooth"
+        },
+        "anchorErrors": [],
+        "consoleErrors": [],
+        "requestFailures": [],
+        "screenshot": "previews/no_js_390x844.png",
+        "foldScreenshot": "previews/no_js_390x844-fold.png"
+      }
+    },
+    {
+      "name": "reduced_motion_1440x900",
+      "status": "pass",
+      "detail": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "javaScriptEnabled": true,
+        "reducedMotion": "reduce",
+        "facts": {
+          "title": "场地开始说话 — Culture & Taste Daily 2026-08-25",
+          "lang": "zh-CN",
+          "h1": 1,
+          "h2": 8,
+          "navLinks": 7,
+          "sourceLinks": 9,
+          "bodyText": 3721,
+          "horizontalOverflow": 0,
+          "skipLink": true,
+          "sections": [
+            "cover-seoul",
+            "major-southbank",
+            "signal-arteen",
+            "signal-sfmoma",
+            "signal-palace",
+            "object-bape",
+            "watch-tmex",
+            "exit"
+          ],
+          "displayNoneSections": [],
+          "reducedMotionDuration": "auto"
+        },
+        "anchorErrors": [],
+        "consoleErrors": [],
+        "requestFailures": [],
+        "screenshot": "previews/reduced_motion_1440x900.png",
+        "foldScreenshot": "previews/reduced_motion_1440x900-fold.png"
+      }
+    },
+    {
+      "name": "homepage_archive_internal_links",
+      "status": "pass",
+      "detail": {
+        "issueLink": "issues/2026-08-25/"
+      }
+    }
+  ]
+}

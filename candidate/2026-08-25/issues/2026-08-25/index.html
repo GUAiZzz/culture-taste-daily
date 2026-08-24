@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#101552">
+  <link rel="icon" href="data:,">
+  <meta name="description" content="场地开始说话：Culture & Taste Daily 2026-08-25 本地审阅候选。">
+  <title>场地开始说话 — Culture & Taste Daily 2026-08-25</title>
+  <style>
+:root {
+  color-scheme: dark;
+  --ink: #101552;
+  --ink-2: #171e68;
+  --lime: #d9ff43;
+  --paper: #f5f0e6;
+  --coral: #ff6b57;
+  --blue: #b7c9ff;
+  --muted: rgba(245,240,230,.68);
+  --line: rgba(217,255,67,.46);
+  --max: 1440px;
+  --gutter: clamp(20px, 4vw, 64px);
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--ink); }
+body {
+  margin: 0;
+  color: var(--paper);
+  background:
+    linear-gradient(90deg, transparent 0 49.9%, rgba(183,201,255,.055) 50%, transparent 50.1%),
+    var(--ink);
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Noto Sans CJK SC", sans-serif;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+a { color: inherit; text-underline-offset: .22em; text-decoration-thickness: 1px; }
+a:hover { color: var(--lime); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
+.skip-link { position: fixed; left: 12px; top: 12px; z-index: 50; transform: translateY(-180%); background: var(--lime); color: var(--ink); padding: 10px 14px; font-weight: 800; }
+.skip-link:focus { transform: none; }
+.candidate-bar {
+  min-height: 44px;
+  padding: 9px var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  background: var(--lime);
+  color: var(--ink);
+  font: 800 12px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.masthead {
+  width: min(100%, var(--max));
+  margin: 0 auto;
+  min-height: 72px;
+  padding: 14px var(--gutter);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-bottom: 1px solid rgba(245,240,230,.18);
+  font: 700 12px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.masthead__brand { font-weight: 900; }
+.masthead__date { color: var(--blue); }
+.masthead__state { justify-self: end; color: var(--lime); }
+.hero {
+  position: relative;
+  width: min(100%, var(--max));
+  min-height: calc(100vh - 116px);
+  margin: 0 auto;
+  padding: clamp(48px, 8vh, 110px) var(--gutter) 72px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, .75fr);
+  gap: clamp(44px, 7vw, 112px);
+  align-items: end;
+}
+.hero__text h1 {
+  max-width: 9ch;
+  margin: 0;
+  color: var(--lime);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "PingFang SC", sans-serif;
+  font-size: clamp(76px, 12.6vw, 190px);
+  font-weight: 900;
+  line-height: .82;
+  letter-spacing: -.065em;
+}
+.hero__text h1 + p {
+  margin: 26px 0 0;
+  color: var(--coral);
+  font: 900 clamp(26px, 3vw, 48px)/.95 "Arial Narrow", "Helvetica Neue", sans-serif;
+  letter-spacing: -.03em;
+}
+.hero__text h1 + p + p {
+  max-width: 34em;
+  margin: 38px 0 0;
+  font-size: clamp(20px, 2vw, 30px);
+  line-height: 1.35;
+  letter-spacing: -.02em;
+}
+.hero__text h1 + p + p + p { max-width: 42em; color: var(--blue); font-size: 15px; line-height: 1.5; }
+.hero__text strong { display: inline-block; margin-top: 26px; color: var(--lime); font: 800 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .1em; }
+.hero__text strong + br { display: none; }
+.hero__text p:nth-last-child(-n+3) { max-width: 44em; }
+.hero__text p:last-child { margin-top: 30px; color: var(--muted); font: 600 11px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.map {
+  position: relative;
+  min-height: 520px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(rgba(183,201,255,.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(183,201,255,.12) 1px, transparent 1px);
+  background-size: 42px 42px;
+  overflow: hidden;
+}
+.map::before {
+  content: "";
+  position: absolute;
+  left: 17%; top: 12%; right: 10%; bottom: 15%;
+  border: 8px solid var(--lime);
+  border-left-width: 2px;
+  border-bottom-color: var(--coral);
+  clip-path: polygon(0 0, 58% 0, 58% 24%, 100% 24%, 100% 58%, 31% 58%, 31% 100%, 0 100%);
+  opacity: .92;
+}
+.map__label { position: absolute; padding: 5px 8px; color: var(--ink); background: var(--paper); font: 900 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .08em; }
+.map__label:nth-child(1) { left: 7%; top: 8%; }
+.map__label:nth-child(2) { right: 6%; top: 29%; background: var(--lime); }
+.map__label:nth-child(3) { left: 20%; top: 50%; }
+.map__label:nth-child(4) { right: 14%; top: 63%; background: var(--blue); }
+.map__label:nth-child(5) { left: 9%; bottom: 13%; background: var(--coral); }
+.map__label:nth-child(6) { right: 9%; bottom: 6%; }
+.map__note { position: absolute; left: 24px; right: 24px; bottom: 28px; color: var(--muted); font: 600 10px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.room-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(118px, 1fr));
+  overflow-x: auto;
+  background: rgba(16,21,82,.96);
+  border-block: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+.room-nav a { min-height: 62px; padding: 10px 14px; display: flex; flex-direction: column; justify-content: center; text-decoration: none; border-right: 1px solid rgba(217,255,67,.2); }
+.room-nav span { color: var(--blue); font: 700 9px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.room-nav b { margin-top: 6px; max-width: 18ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11px; }
+.room-nav a[aria-current="true"] { background: var(--lime); color: var(--ink); }
+.room-nav a[aria-current="true"] span { color: var(--ink); }
+.issue { width: min(100%, var(--max)); margin: 0 auto; }
+.story {
+  position: relative;
+  min-height: 78vh;
+  display: grid;
+  grid-template-columns: minmax(110px, .23fr) minmax(0, 1fr);
+  border-bottom: 1px solid rgba(245,240,230,.18);
+  scroll-margin-top: 76px;
+}
+.story__route { position: relative; min-height: 100%; border-right: 1px solid var(--line); }
+.story__route::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 7px; background: var(--lime); transform: translateX(-50%); }
+.story__route span { position: sticky; top: 92px; display: grid; place-items: center; width: 52px; height: 52px; margin: 28px auto; border-radius: 50%; background: var(--ink); border: 2px solid var(--lime); color: var(--lime); font: 800 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.story__body { padding: clamp(64px, 10vw, 150px) var(--gutter); }
+.story__level { margin: 0 0 30px; color: var(--lime); font: 800 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .16em; }
+.story h2 { max-width: 14ch; margin: 0 0 clamp(42px, 7vw, 90px); font-size: clamp(48px, 7.4vw, 112px); line-height: .96; letter-spacing: -.06em; }
+.story__copy { max-width: 960px; }
+.story__copy > p { max-width: 42em; margin: 0 0 1.35em; font-size: clamp(18px, 1.45vw, 22px); }
+.story__copy > p:first-child { font-size: clamp(24px, 2.35vw, 38px); line-height: 1.35; letter-spacing: -.025em; }
+.story__copy > p:last-child { margin-top: 48px; color: var(--blue); font: 600 11px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.story__copy > p:last-child a { color: var(--blue); }
+.story--cover { background: var(--paper); color: var(--ink); }
+.story--cover .story__route { border-color: rgba(16,21,82,.3); }
+.story--cover .story__route::before { width: 28px; background: var(--coral); }
+.story--cover .story__route span { background: var(--paper); color: var(--ink); border-color: var(--coral); }
+.story--cover .story__level { color: #c83d2c; }
+.story--cover .story__copy > p:last-child, .story--cover .story__copy > p:last-child a { color: #3d4789; }
+.story--major { background: var(--ink); }
+.story--major .story__body { padding-top: 18vh; padding-bottom: 18vh; }
+.story--major h2 { color: var(--blue); }
+.story--signal:nth-of-type(even) { background: var(--ink-2); }
+.story--signal:nth-of-type(odd) .story__body { padding-left: clamp(80px, 12vw, 190px); }
+.story--signal h2 { max-width: 11ch; color: var(--paper); }
+.story--object { background: var(--lime); color: var(--ink); }
+.story--object .story__route { border-color: rgba(16,21,82,.3); }
+.story--object .story__route::before { width: 54px; background: var(--coral); }
+.story--object .story__route span { background: var(--lime); border-color: var(--ink); color: var(--ink); }
+.story--object .story__level { color: #a82f24; }
+.story--object .story__copy > p:last-child, .story--object .story__copy > p:last-child a { color: #28316c; }
+.story--watch { min-height: 64vh; background: var(--coral); color: var(--ink); }
+.story--watch .story__route { border-color: rgba(16,21,82,.3); }
+.story--watch .story__route::before { width: 3px; background: var(--ink); }
+.story--watch .story__route span { background: var(--coral); color: var(--ink); border-color: var(--ink); }
+.story--watch .story__level { color: var(--ink); }
+.story--watch .story__copy > p:last-child, .story--watch .story__copy > p:last-child a { color: #30376f; }
+.story--exit { min-height: 90vh; background: var(--ink); }
+.story--exit .story__route::before { bottom: 46%; }
+.story--exit .story__body { display: flex; flex-direction: column; justify-content: center; }
+.story--exit h2 { color: var(--lime); }
+.story--exit .story__copy::after { content: ""; display: block; width: min(520px, 82%); height: 84px; margin-top: 88px; background: var(--lime); box-shadow: 60px 32px 0 var(--coral); }
+.site-footer { width: min(100%, var(--max)); margin: 0 auto; padding: 32px var(--gutter) 58px; display: flex; justify-content: space-between; gap: 30px; color: var(--muted); font: 600 10px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; border-top: 1px solid rgba(245,240,230,.18); }
+.site-footer a { color: var(--lime); }
+@media (max-width: 800px) {
+  .candidate-bar { align-items: flex-start; flex-direction: column; gap: 2px; }
+  .masthead { grid-template-columns: 1fr auto; min-height: 64px; }
+  .masthead__date { display: none; }
+  .hero { min-height: auto; grid-template-columns: 1fr; padding-top: 60px; }
+  .hero__text h1 { font-size: clamp(70px, 24vw, 112px); }
+  .map { min-height: 390px; }
+  .room-nav { grid-template-columns: repeat(7, 142px); }
+  .story { min-height: auto; grid-template-columns: 24px minmax(0, 1fr); }
+  .story__route::before { width: 3px; left: 11px; }
+  .story__route span { display: none; }
+  .story__body, .story--signal:nth-of-type(odd) .story__body { padding: 74px 22px 82px 26px; }
+  .story h2 { font-size: clamp(46px, 15vw, 72px); margin-bottom: 48px; }
+  .story__copy > p { font-size: 18px; }
+  .story__copy > p:first-child { font-size: 23px; }
+  .story--cover .story__route::before { width: 12px; }
+  .story--object .story__route::before { width: 18px; }
+  .story--exit { min-height: 72vh; }
+  .site-footer { flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+@media print {
+  :root { color-scheme: light; }
+  body, .story, .story--cover, .story--object, .story--watch, .story--exit { background: white !important; color: black !important; }
+  .candidate-bar, .room-nav, .map, .story__route { display: none; }
+  .masthead, .hero, .story { display: block; min-height: 0; }
+  .hero, .story__body { padding: 28px; }
+  .story h2, .hero__text h1 { color: black !important; }
+}
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#issue">跳到正文</a>
+  <div class="candidate-bar"><span>LOCAL REVIEW CANDIDATE · NOT DEPLOYED</span><span>SNAPSHOT-ASSISTED HARRYTONE · CUT-OFF 2026-08-24 10:10 CST</span></div>
+  <header class="masthead">
+    <div class="masthead__brand">Culture &amp; Taste Daily</div>
+    <div class="masthead__date">25 · 08 · 2026 / ISSUE 004</div>
+    <div class="masthead__state">THE VENUE SPEAKS</div>
+  </header>
+  <section class="hero" aria-labelledby="issue-title">
+    <div class="hero__text"><h1 id="issue-title">场地开始说话</h1>
+<p>THE VENUE SPEAKS</p>
+<p>首尔时装周离开惯用的单一建筑；五位经历过父母入狱的年轻人坐上策展人的位置；酒店客房交给儿童作者；七万五千只纸鸢填满免费的美术馆大厅。场地开始参与叙事，也开始暴露权力。</p>
+<p>Fashion leaves its usual single building; lived experience enters the curatorial seat; hotel rooms become young artists’ galleries; 75,000 kites occupy a free museum floor. The venue joins the story—and reveals where power still sits.</p>
+<p><strong>本期判断</strong></p>
+<p>这几件事还不足以构成全球趋势。把它们放在一起，是因为场地都不再甘于充当背景。它们重新安排了观众的距离、作者的位置，以及文化与商业相遇的方式。</p>
+<p>门开得更大，公共性却不会自动增加。要看的是，开门之后谁得到选择、排序和署名的权力。</p>
+<p>资料核验截止：2026-08-24 10:10（Asia/Shanghai）。本期只陈述截止前可核验的信息。</p>
+</div>
+    <div class="map" role="img" aria-label="一条开放路线连接 DDP、乐天、酒店、展厅、商店与舞台">
+      <span class="map__label">DDP / INDUSTRY</span>
+      <span class="map__label">LOTTE / PUBLIC?</span>
+      <span class="map__label">HOTEL / YOUNG AUTHORS</span>
+      <span class="map__label">HALL / FREE ENTRY</span>
+      <span class="map__label">STORE / LOCAL CODE</span>
+      <span class="map__label">STAGE / TO BE TESTED</span>
+      <p class="map__note">ROUTE 2026-08-25 · THE LINE DOES NOT CLOSE</p>
+    </div>
+  </section>
+  <nav class="room-nav" aria-label="本期章节"><a href="#cover-seoul" data-room-link="cover-seoul"><span>01 / COVER</span><b>首尔把一场时装周拆成两种城市</b></a>
+<a href="#major-southbank" data-room-link="major-southbank"><span>02 / MAJOR</span><b>谁来策展，先于展了什么改变房间</b></a>
+<a href="#signal-arteen" data-room-link="signal-arteen"><span>03 / SIGNAL</span><b>酒店房间暂时不再服务住客</b></a>
+<a href="#signal-sfmoma" data-room-link="signal-sfmoma"><span>04 / SIGNAL</span><b>七万五千个小单元，让大厅失去空白</b></a>
+<a href="#signal-palace" data-room-link="signal-palace"><span>05 / SIGNAL</span><b>宗庙进入商场，先变成一张材料表</b></a>
+<a href="#object-bape" data-room-link="object-bape"><span>06 / OBJECT</span><b>旧感从 T 恤长到一张罐头凳</b></a>
+<a href="#watch-tmex" data-room-link="watch-tmex"><span>07 / WATCH</span><b>台北音乐博览会，把「舞台之外」列进日程</b></a></nav>
+  <main id="issue" class="issue">
+  <section id="cover-seoul" class="story story--cover" data-room="cover-seoul" aria-labelledby="cover-seoul-title">
+    <div class="story__route" aria-hidden="true"><span>01</span></div>
+    <div class="story__body">
+      <p class="story__level">COVER</p>
+      <h2 id="cover-seoul-title">首尔把一场时装周拆成两种城市</h2>
+      <div class="story__copy"><p>2027 春夏首尔时装周将在 9 月 1 日至 6 日横跨东大门设计广场（DDP）与蚕室乐天世界塔。DDP 继续承担设计师秀、发布与贸易；乐天一侧加入面向公众的秀场、快闪、K-culture 活动与购物。两地隔着汉江，相距超过 13 公里，主办方还安排车辆接驳买手与媒体。</p>
+<p>两套逻辑因此被摆在同一张日程上。DDP 提供行业信用，乐天提供流量、购买和城市节庆。普通人离 K-fashion 更近了，周围也同时出现 QR 即时购买、百货促销和品牌合作。</p>
+<p>把它写成「时装走向街头」会漏掉一半。首尔这次测试的是另一件事：行业事件获得更大的公众界面时，参与权和消费入口会一起长出来。</p>
+<p>9 月开场后，值得盯住两点：公众区域有没有不依赖购物的观看方式；DDP 与乐天两地是否真的各自承担清楚的内容任务。</p>
+<p>来源：<a href="https://world.seoul.go.kr/seoul-fashion-week-expands-beyond-ddp-to-lotte-world-tower-turning-seouls-iconic-landmarks-into-runways/">Seoul Metropolitan Government, 2026-08-21</a> · <a href="https://www.koreajoongangdaily.com/business/seoul-fashion-week-takes-over-lottes-world-park-lawn-in-jamsil-next-month/12820777">Korea JoongAng Daily, 2026-08-12</a></p>
+</div>
+    </div>
+  </section>
+
+  <section id="major-southbank" class="story story--major" data-room="major-southbank" aria-labelledby="major-southbank-title">
+    <div class="story__route" aria-hidden="true"><span>02</span></div>
+    <div class="story__body">
+      <p class="story__level">MAJOR</p>
+      <h2 id="major-southbank-title">谁来策展，先于展了什么改变房间</h2>
+      <div class="story__copy"><p>伦敦 Southbank Centre 将在 10 月 16 日至 11 月 29 日举办《Rock, Paper, Scissors》。展览从 2026 Koestler Awards 的 7,500 多件投稿中选择 200 多件作品。创作者来自监狱、青少年拘留机构、安全医院等刑事司法环境。</p>
+<p>今年做选择的是五位 Parental Imprisonment Collective 成员。他们年龄在 18 至 35 岁之间，都经历过父母入狱。展览沿着童年、家庭、家、禁闭、想象与风景展开。生活经验在这里不只是被展示的素材，它进入了选择作品和组织顺序的过程。</p>
+<p>权力转移到这里又停了一下。按照英国监狱与缓刑管理部门自 2023 年实施的政策，参展艺术家的名字仍不会向观众公开。保护与承认的冲突没有被展陈语言抚平，它会跟作品一起留在房间里。</p>
+<p>一次邀请可以制造「被看见」；选择、排序和署名，才决定一个人有没有真正进入作者的位置。</p>
+<p>来源：<a href="https://www.theartnewspaper.com/2026/08/21/young-adults-with-experience-of-having-parents-in-prison-to-curate-southbank-centre-exhibition">The Art Newspaper, 2026-08-21</a></p>
+</div>
+    </div>
+  </section>
+
+  <section id="signal-arteen" class="story story--signal" data-room="signal-arteen" aria-labelledby="signal-arteen-title">
+    <div class="story__route" aria-hidden="true"><span>03</span></div>
+    <div class="story__body">
+      <p class="story__level">SIGNAL</p>
+      <h2 id="signal-arteen-title">酒店房间暂时不再服务住客</h2>
+      <div class="story__copy"><p>第二届 Arteen Taipei 在 8 月 21 日至 23 日占用台北诚品行旅 8、9 层。18 岁以下的儿童与青少年参与创作、策展与成果分享；主办方称它「以展览取代竞赛」。</p>
+<p>把房间交给孩子，观看姿势随之改变。观众不再站在教室墙前浏览一排「儿童作品」，而是逐间进入年轻作者暂时接管的小空间。房门保留了每个展间的独立性，逛展更接近一次次拜访。</p>
+<p>现有报道主要沿用主办方叙述。它能确认形式、地点与公开目标，不能证明三天活动已经改变参与者的长期处境。这一格先记空间动作，不替它预支影响力。</p>
+<p>来源：<a href="https://www.verse.com.tw/article/2026-arteen-taipei">VERSE, 2026-08-13；活动 2026-08-21—23</a></p>
+</div>
+    </div>
+  </section>
+
+  <section id="signal-sfmoma" class="story story--signal" data-room="signal-sfmoma" aria-labelledby="signal-sfmoma-title">
+    <div class="story__route" aria-hidden="true"><span>04</span></div>
+    <div class="story__body">
+      <p class="story__level">SIGNAL</p>
+      <h2 id="signal-sfmoma-title">七万五千个小单元，让大厅失去空白</h2>
+      <div class="story__copy"><p>Jacob Hashimoto 的《Giant Arc》于 8 月 22 日在 SFMOMA 一层 Roberts Family Gallery 开放。美术馆称，这是艺术家目前规模最大的作品：近 75,000 个以竹与日本纸手工制作的风筝单元，从地面延伸至天花和墙面，组成覆盖整个展厅的云状结构。</p>
+<p>它落在一层，而且免费。作品没有把规模感藏进付费展厅深处，而是直接压到入口附近的日常动线上。观众还没决定要看什么，已经先走进作品制造的天气。</p>
+<p>来源：<a href="https://www.sfmoma.org/exhibition/jacob-hashimoto-giant-arc/">SFMOMA, opening 2026-08-22</a></p>
+</div>
+    </div>
+  </section>
+
+  <section id="signal-palace" class="story story--signal" data-room="signal-palace" aria-labelledby="signal-palace-title">
+    <div class="story__route" aria-hidden="true"><span>05</span></div>
+    <div class="story__body">
+      <p class="story__level">SIGNAL</p>
+      <h2 id="signal-palace-title">宗庙进入商场，先变成一张材料表</h2>
+      <div class="story__copy"><p>Palace Skateboards 8 月 22 日在首尔乐天世界购物中心开出韩国第三家门店。Hypebeast 引述的品牌资料显示，142.57 平方米的空间从宗庙建筑提取横向秩序，并使用沟槽混凝土柱、染色柚木、镜面与定制迷彩地毯；开店限定服装又借用附近奥林匹克公园与乐天世界吉祥物。</p>
+<p>这是全球零售常用的落地方式：品牌抵达一座城市，先从遗产、地标和吉祥物里拼出「在地感」。引用本身没有问题。问题是宗庙的空间关系如果最终只对应柱子和木色，文化会被压缩成一张制作精良的 moodboard。</p>
+<p>这一条只作为商业设计信号。现有信息主要来自品牌提供的图像与说明，不能代表韩国公众如何理解这家店。</p>
+<p>来源：<a href="https://hypebeast.com/2026/8/palace-skateboards-unveils-third-seoul-store-exclusive-capsule-lotte-world-collection">Hypebeast, 2026-08-22</a></p>
+</div>
+    </div>
+  </section>
+
+  <section id="object-bape" class="story story--object" data-room="object-bape" aria-labelledby="object-bape-title">
+    <div class="story__route" aria-hidden="true"><span>06</span></div>
+    <div class="story__body">
+      <p class="story__level">OBJECT</p>
+      <h2 id="object-bape-title">旧感从 T 恤长到一张罐头凳</h2>
+      <div class="story__copy"><p>BAPE 与 ©SAINT Mxxxxxx 的 2026 秋冬合作在 8 月 22 日先于 ©SAINT Mxxxxxx 经销渠道发售，8 月 23 日进入 BAPE 门店与官网。做旧图像出现在长袖 T 恤、短袖和袜子上，系列里还有一张 Can Stool。</p>
+<p>同一套旧化语言从穿着移到室内小物，那张凳子处在周边、收藏品和家具之间。它把街头图像留在房间里，也把品牌占据的范围从身体往外推了一小步。</p>
+<p>一次发售当然不能证明生活方式已经改变。先记住这个小动作：服装品牌越来越不满足于只占据衣柜。</p>
+<p>来源：<a href="https://hypebeast.com/2026/8/bape-saint-mxxxxxx-fall-winter-2026-capsule-collaboration-release-info">Hypebeast, 2026-08-21</a> · <a href="https://en.jp.bape.com/blogs/news/saintmxxxxxx-26fw">BAPE official release information</a></p>
+</div>
+    </div>
+  </section>
+
+  <section id="watch-tmex" class="story story--watch" data-room="watch-tmex" aria-labelledby="watch-tmex-title">
+    <div class="story__route" aria-hidden="true"><span>07</span></div>
+    <div class="story__body">
+      <p class="story__level">WATCH</p>
+      <h2 id="watch-tmex-title">台北音乐博览会，把「舞台之外」列进日程</h2>
+      <div class="story__copy"><p>2026 TMEX 台北音乐博览会将于 8 月 27 日至 30 日在台北流行音乐中心举行。8 月 22 日公布的议程包括五类论坛：可持续演出、国际营销、AI 进入创作流程、国际音乐节策展，以及「声音、影像与空间」中的电子音乐。官方称现场另有 68 个国内外参展品牌和一对一产业媒合。</p>
+<p>现在能确认的是议程。活动结束后再回来看：台上有没有留下具体方法，还是「AI、永续、国际化」只在论坛标题里短暂相遇。</p>
+<p>来源：<a href="https://www.tmc.taipei/tw/news/announcement/2FDb231761f9">Taipei Music Center, 2026-08-22</a></p>
+</div>
+    </div>
+  </section>
+
+  <section id="exit" class="story story--exit" data-room="exit" aria-labelledby="exit-title">
+    <div class="story__route" aria-hidden="true"><span>08</span></div>
+    <div class="story__body">
+      <p class="story__level">EXIT</p>
+      <h2 id="exit-title">门开以后</h2>
+      <div class="story__copy"><p>有的空间变大，有的空间变满，有的把位置让给从前只能被描述的人。</p>
+<p>门开了。地板中央还空着一块。谁会走过去？</p>
+</div>
+    </div>
+  </section></main>
+  <footer class="site-footer">
+    <span>Culture &amp; Taste Daily · local review candidate · no deployment authority</span>
+    <span><a href="issue-manifest.public.json">Public manifest</a> · content SHA-256 c7a484db9ca2…</span>
+  </footer>
+  <script>
+(() => {
+  const sections = [...document.querySelectorAll('[data-room]')];
+  const links = [...document.querySelectorAll('[data-room-link]')];
+  if (!('IntersectionObserver' in window)) return;
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (!visible) return;
+    const id = visible.target.id;
+    document.documentElement.dataset.currentRoom = id;
+    links.forEach((link) => {
+      if (link.dataset.roomLink === id) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
+    });
+  }, { rootMargin: '-18% 0px -60% 0px', threshold: [0, .2, .5] });
+  sections.forEach((section) => observer.observe(section));
+})();
+</script>
+</body>
+</html>

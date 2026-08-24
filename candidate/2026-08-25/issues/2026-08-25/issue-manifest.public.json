@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "issue_id": "2026-08-25",
+  "publication_date": "2026-08-25",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS",
+  "core_version": "v3",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "c7a484db9ca2cb5939337882ea1e0a389faef3e2533c50eafd99307ac7fad3d9",
+    "locked_at": "2026-08-24T10:48:15+08:00"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-08-24T10:10:18+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "Several current cultural projects use the venue to redistribute attention, access, and authorship; wider reach does not automatically create public agency.",
+  "art_direction": {
+    "dominant_mood": "night-city wayfinding crossed with a temporary cultural venue",
+    "background_logic": "one continuous route moves through open field, room, cloud, shelf, and stage states",
+    "palette_logic": "deep indigo, electric lime, warm paper, signal coral, pale blue",
+    "type_scale_logic": "oversized narrow display type, readable 18–20px body, monospaced wayfinding labels",
+    "image_behavior": "no third-party images; original CSS spatial diagrams only",
+    "page_density_and_tempo": "dense cover, extended lead, open major, alternating signals, narrowed watch, quiet exit",
+    "core_visual_action": "a route changes width and direction to show how each venue redistributes attention",
+    "cover_composition": "city-sign title beside a non-closing map linking DDP, LOTTE, HOTEL, HALL, STORE, and STAGE",
+    "desktop_interaction_mechanic": "progressive-enhancement sticky room index updates by section while anchors and all reading remain available without JavaScript",
+    "behance_viewing_arc": "position, cover conflict, authorship depth, varied signals, unverified watch item, unresolved threshold",
+    "mobile_translation": "route becomes a left rail; all grids collapse to one column; navigation becomes a horizontally scrollable top strip",
+    "mobbin_usability_constraint": "44px targets, visible focus, no hidden reading, obvious hierarchy and source labels",
+    "quiet_ending": "an unoccupied fluorescent floor and one unresolved question"
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": ["2026-08-20", "2026-08-21", "2026-08-22"],
+    "repeated_mechanisms": [],
+    "exception_reason": null
+  },
+  "stories": [
+    {
+      "id": "seoul-fashion-week-two-city-systems",
+      "level": "cover",
+      "title": "首尔把一场时装周拆成两种城市",
+      "sources": [
+        {
+          "title": "Seoul Fashion Week Expands Beyond DDP to Lotte World Tower, Turning Seoul's Iconic Landmarks into Runways",
+          "publisher": "Seoul Metropolitan Government",
+          "url": "https://world.seoul.go.kr/seoul-fashion-week-expands-beyond-ddp-to-lotte-world-tower-turning-seouls-iconic-landmarks-into-runways/",
+          "published_date": "2026-08-21",
+          "event_date": "2026-09-01/2026-09-06"
+        },
+        {
+          "title": "Seoul Fashion Week takes over Lotte's World Park lawn in Jamsil next month",
+          "publisher": "Korea JoongAng Daily",
+          "url": "https://www.koreajoongangdaily.com/business/seoul-fashion-week-takes-over-lottes-world-park-lawn-in-jamsil-next-month/12820777",
+          "published_date": "2026-08-12",
+          "event_date": "2026-09-01/2026-09-06"
+        }
+      ],
+      "image_credit": null
+    },
+    {
+      "id": "southbank-lived-experience-curation",
+      "level": "major",
+      "title": "谁来策展，先于展了什么改变房间",
+      "sources": [
+        {
+          "title": "Young adults with experience of having parents in prison to curate exhibition at London’s Southbank Centre",
+          "publisher": "The Art Newspaper",
+          "url": "https://www.theartnewspaper.com/2026/08/21/young-adults-with-experience-of-having-parents-in-prison-to-curate-southbank-centre-exhibition",
+          "published_date": "2026-08-21",
+          "event_date": "2026-10-16/2026-11-29"
+        }
+      ],
+      "image_credit": null
+    },
+    {
+      "id": "arteen-taipei-hotel-rooms",
+      "level": "signal",
+      "title": "酒店房间暂时不再服务住客",
+      "sources": [
+        {
+          "title": "孩子是明日的藝術家！2026 Arteen Taipei 兒少藝術博覽會，以展覽取代競賽登上舞台",
+          "publisher": "VERSE",
+          "url": "https://www.verse.com.tw/article/2026-arteen-taipei",
+          "published_date": "2026-08-13",
+          "event_date": "2026-08-21/2026-08-23"
+        }
+      ],
+      "image_credit": null
+    },
+    {
+      "id": "sfmoma-giant-arc",
+      "level": "signal",
+      "title": "七万五千个小单元，让大厅失去空白",
+      "sources": [
+        {
+          "title": "Jacob Hashimoto: Giant Arc",
+          "publisher": "SFMOMA",
+          "url": "https://www.sfmoma.org/exhibition/jacob-hashimoto-giant-arc/",
+          "published_date": null,
+          "event_date": "2026-08-22"
+        }
+      ],
+      "image_credit": null
+    },
+    {
+      "id": "palace-seoul-retail-heritage",
+      "level": "signal",
+      "title": "宗庙进入商场，先变成一张材料表",
+      "sources": [
+        {
+          "title": "Palace Skateboards Unveils Third Seoul Store and Exclusive Capsule Collection",
+          "publisher": "Hypebeast",
+          "url": "https://hypebeast.com/2026/8/palace-skateboards-unveils-third-seoul-store-exclusive-capsule-lotte-world-collection",
+          "published_date": "2026-08-22",
+          "event_date": "2026-08-22"
+        }
+      ],
+      "image_credit": null
+    },
+    {
+      "id": "bape-saint-mxxxxxx-can-stool",
+      "level": "signal",
+      "title": "旧感从 T 恤长到一张罐头凳",
+      "sources": [
+        {
+          "title": "BAPE and ©SAINT Mxxxxxx Serve Up Aged Streetwear and Can Stools",
+          "publisher": "Hypebeast",
+          "url": "https://hypebeast.com/2026/8/bape-saint-mxxxxxx-fall-winter-2026-capsule-collaboration-release-info",
+          "published_date": "2026-08-21",
+          "event_date": "2026-08-22/2026-08-23"
+        },
+        {
+          "title": "A BATHING APE® x ©SAINT Mxxxxxx",
+          "publisher": "BAPE",
+          "url": "https://en.jp.bape.com/blogs/news/saintmxxxxxx-26fw",
+          "published_date": null,
+          "event_date": "2026-08-22/2026-08-23"
+        }
+      ],
+      "image_credit": null
+    },
+    {
+      "id": "tmex-2026-agenda",
+      "level": "watch",
+      "title": "台北音乐博览会，把「舞台之外」列进日程",
+      "sources": [
+        {
+          "title": "2026 TMEX臺北音樂博覽會8/27登場　國際論壇匯聚全球產業觀點",
+          "publisher": "Taipei Music Center",
+          "url": "https://www.tmc.taipei/tw/news/announcement/2FDb231761f9",
+          "published_date": "2026-08-22",
+          "event_date": "2026-08-27/2026-08-30"
+        }
+      ],
+      "image_credit": null
+    }
+  ],
+  "qa": {
+    "html_parse": "pass",
+    "assets": "pass",
+    "internal_links": "pass",
+    "no_js_reading": "pass",
+    "accessibility": "pass",
+    "desktop_render": "pass",
+    "mobile_render": "pass",
+    "reduced_motion": "pass"
+  },
+  "limitations": [
+    "Local review candidate only; this manifest cannot authorize deployment.",
+    "HarryTone visual-editorial support used a user-supplied pinned snapshot and is not claimed as canonical repository state.",
+    "No third-party images are included; CSS-only graphics preserve rights separation.",
+    "Arteen Taipei and Palace Seoul are explicitly constrained by source-access and promotional-material limits."
+  ]
+}
