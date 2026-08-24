@@ -99,14 +99,14 @@ export function renderIssue({ content, manifest, baseCss, issueCss }) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <meta name="color-scheme" content="dark">
-  <link rel="icon" type="image/svg+xml" href="../../assets/culture-taste-mark.svg">
+  <link rel="icon" type="image/png" href="../../assets/culture-taste-earth.png">
   <title>${escapeHtml(title)} — Culture &amp; Taste Daily ${escapeHtml(manifest.publication_date)}</title>
   <style>${baseCss}\n${issueCss}</style>
 </head>
 <body data-issue="${escapeHtml(manifest.issue_id)}">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <p class="non-production-label">${draftLabel}</p>
-  <header class="site-header"><a class="issue-brand" href="../../"><img class="brand-mark" src="../../assets/culture-taste-mark.svg" alt=""><span>Culture &amp; Taste Daily</span></a><span>${escapeHtml(manifest.publication_date)} · Asia/Shanghai</span><a href="../../archive/">Archive</a></header>
+  <header class="site-header"><a class="issue-brand" href="../../"><img class="brand-mark" src="../../assets/culture-taste-earth.png" alt=""><span>Culture &amp; Taste Daily</span></a><span>${escapeHtml(manifest.publication_date)} · Asia/Shanghai</span><a href="../../archive/">Archive</a></header>
   <details class="issue-nav-panel" open><summary>Issue index <span aria-hidden="true">＋</span></summary><nav class="issue-nav" aria-label="Issue contents"><ul>${navigation}<li><a href="#sources"><span>index</span>Sources &amp; Dates</a></li></ul></nav></details>
   <main id="main-content">
     <article aria-labelledby="issue-title" data-content-sha256="${escapeHtml(manifest.source_hashes.content_sha256)}">${article}</article>
@@ -126,7 +126,7 @@ function shell({ title, body, baseCss, siteCss, siteJs = "", pathPrefix = "./", 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <meta name="color-scheme" content="light dark">
-  <link rel="icon" type="image/svg+xml" href="${pathPrefix}assets/culture-taste-mark.svg">
+  <link rel="icon" type="image/png" href="${pathPrefix}assets/culture-taste-earth.png">
   <title>${escapeHtml(title)}</title>
   <style>${baseCss}\n${siteCss}</style>
 </head>
@@ -134,7 +134,7 @@ function shell({ title, body, baseCss, siteCss, siteJs = "", pathPrefix = "./", 
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="preview-ribbon"><span>NON-PRODUCTION PREVIEW</span><span>SHANGHAI · 2026</span></div>
   <header class="publication-header">
-    <a class="wordmark" href="${pathPrefix}"><img class="brand-mark" src="${pathPrefix}assets/culture-taste-mark.svg" alt=""><span class="wordmark-text"><span>Culture</span><span>&amp; Taste</span><span>Daily</span></span></a>
+    <a class="wordmark" href="${pathPrefix}"><img class="brand-mark" src="${pathPrefix}assets/culture-taste-earth.png" alt=""><span class="wordmark-text"><span>Culture</span><span>&amp; Taste</span><span>Daily</span></span></a>
     <p class="publication-mode">A daily field magazine<br>关于衣服、场地、物件与正在形成的文化</p>
     <nav aria-label="Publication"><a href="${pathPrefix}">Latest</a><a href="${pathPrefix}archive/">Archive</a></nav>
   </header>

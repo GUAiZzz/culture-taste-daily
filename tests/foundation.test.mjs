@@ -162,10 +162,10 @@ test("Preview homepage and archive expose the current 2026-08-24 field plus hist
   assert.doesNotMatch(archive, /issues\/2026-08-25\//);
   assert.match(home, /NON-PRODUCTION PREVIEW/);
   assert.match(home, /meta name="robots" content="noindex,nofollow"/);
-  assert.match(home, /rel="icon" type="image\/svg\+xml" href="\.\/assets\/culture-taste-mark\.svg"/);
-  assert.match(archive, /rel="icon" type="image\/svg\+xml" href="\.\.\/assets\/culture-taste-mark\.svg"/);
-  assert.match(current, /class="issue-brand"[\s\S]*culture-taste-mark\.svg/);
-  await readFile(path.join(previewDist, "assets/culture-taste-mark.svg"));
+  assert.match(home, /rel="icon" type="image\/png" href="\.\/assets\/culture-taste-earth\.png"/);
+  assert.match(archive, /rel="icon" type="image\/png" href="\.\.\/assets\/culture-taste-earth\.png"/);
+  assert.match(current, /class="issue-brand"[\s\S]*culture-taste-earth\.png/);
+  await readFile(path.join(previewDist, "assets/culture-taste-earth.png"));
   for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg"]) {
     await readFile(path.join(previewDist, "assets/covers", cover));
   }

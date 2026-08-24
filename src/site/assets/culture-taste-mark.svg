@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
-  <title id="title">Culture &amp; Taste mark</title>
-  <desc id="desc">A compact C and T monogram in a lime, paper and orange signal palette.</desc>
-  <rect width="64" height="64" rx="12" fill="#0a0a0a"/>
-  <path d="M44.5 18.5a18.2 18.2 0 1 0 0 27" fill="none" stroke="#f0eee7" stroke-width="6" stroke-linecap="square"/>
-  <path d="M37 16h19M47 16v34" fill="none" stroke="#d9ff43" stroke-width="6" stroke-linecap="square"/>
-  <circle cx="49" cy="49" r="4" fill="#ff5a1f"/>
-</svg>
