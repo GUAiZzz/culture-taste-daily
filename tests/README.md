@@ -1,17 +1,18 @@
-# QA boundary
+# Stage ④A test boundary
 
-The accepted candidate includes its public local QA report, but repository-native tests are not implemented yet.
+`npm test` exercises a synthetic, rights-clear fixture and verifies:
 
-The future independent suite must cover at least:
+- valid deterministic build and technical evidence;
+- desktop, mobile, no-JavaScript, and reduced-motion rendering;
+- stable digests across repeated builds;
+- malformed HTML, missing assets, and JavaScript-only reading fail QA;
+- private source-ledger material is rejected before build;
+- missing, failed, or stale evidence blocks the gate;
+- any artifact mutation after evidence capture blocks the gate;
+- unknown image rights blocks the gate;
+- manifest/generator `PASS` cannot override independent technical failure;
+- a blocked candidate preserves the named previous-good release.
 
-- public manifest schema;
-- content hash lock;
-- HTML parsing and complete source rendering;
-- asset and internal-link integrity;
-- full no-JavaScript reading;
-- keyboard and accessibility basics;
-- desktop 1440×900 and mobile 390×844 rendering;
-- reduced motion;
-- artifact immutability and fail-closed release behavior.
+Fixtures are synthetic and contain no production story, private research, private HarryTone material, credential, or historical artifact.
 
-Editorial and visual review evidence must remain separate from deterministic CI evidence.
+The test suite simulates local authority only. It cannot deploy or assert that a candidate is editorially, visually, culturally, or legally suitable.

@@ -1,0 +1,9 @@
+body[data-issue="2026-08-20"] {
+  background: #f7f3ea;
+  color: #17203a;
+}
+
+body[data-issue="2026-08-20"] h2 {
+  border-top: 1px solid #17203a;
+  padding-top: 1rem;
+}

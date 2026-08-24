@@ -1,0 +1,24 @@
+{
+  "name": "culture-taste-daily",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "qa": "node scripts/qa.mjs",
+    "review:template": "node scripts/create-review-template.mjs",
+    "gate": "node scripts/gate.mjs",
+    "test": "node --test --test-concurrency=1 tests/*.test.mjs",
+    "verify": "npm run build && npm run qa && npm test"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "html-validate": "11.10.0",
+    "markdown-it": "15.0.0",
+    "playwright": "1.62.1"
+  }
+}

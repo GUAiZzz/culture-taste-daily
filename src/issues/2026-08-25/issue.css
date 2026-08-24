@@ -1,0 +1,40 @@
+body[data-issue="2026-08-25"] {
+  background:
+    linear-gradient(90deg, transparent 0 11%, rgba(217, 255, 67, 0.22) 11% 11.35%, transparent 11.35%),
+    #101552;
+  color: #f5f0e6;
+}
+
+body[data-issue="2026-08-25"] .site-header,
+body[data-issue="2026-08-25"] .issue-nav {
+  color: #d9ff43;
+}
+
+body[data-issue="2026-08-25"] article > h2 {
+  position: relative;
+  padding-top: 1rem;
+  border-top: 1px solid #b7c9ff;
+}
+
+body[data-issue="2026-08-25"] article > h2::before {
+  content: "";
+  position: absolute;
+  top: -0.45rem;
+  left: -1rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: #d9ff43;
+}
+
+body[data-issue="2026-08-25"] article a {
+  color: #d9ff43;
+}
+
+body[data-issue="2026-08-25"] .sources {
+  color: #b7c9ff;
+}
+
+body[data-issue="2026-08-25"] .site-footer {
+  color: #d9ff43;
+}

@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://guaizzz.github.io/schemas/issue-manifest.public.schema.json",
-  "title": "Culture & Taste Daily Public Issue Manifest",
-  "description": "Publishable issue metadata only. Private source-ledger notes, rejected candidates, internal scoring rationale, and unpublished editorial reasoning are forbidden here.",
+  "$id": "https://culture-taste-daily.invalid/schemas/issue-manifest.public.schema.json",
+  "title": "Culture & Taste Daily Public Issue Manifest v2",
+  "description": "Publishable metadata and generator reporting only. This manifest cannot authorize deployment and must never contain private source-ledger instances or review rationale.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -10,26 +10,56 @@
     "issue_id",
     "publication_date",
     "timezone",
+    "candidate_created_at",
+    "research_locked_at",
+    "content_locked_at",
     "status",
+    "contract",
     "core_version",
     "content_lock",
+    "source_hashes",
     "harrytone",
     "language_mode",
     "editorial_position",
     "art_direction",
+    "variation_review",
     "stories",
+    "rights_summary",
+    "artifact_digests",
+    "evidence_refs",
     "qa",
     "limitations"
   ],
   "properties": {
-    "schema_version": { "const": 1 },
+    "schema_version": { "const": 2 },
     "issue_id": {
       "type": "string",
       "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
     },
     "publication_date": { "type": "string", "format": "date" },
     "timezone": { "const": "Asia/Shanghai" },
-    "status": { "enum": ["PASS", "DEGRADED", "BLOCKED"] },
+    "candidate_created_at": {
+      "description": "Null is allowed only for disclosed pre-V3 non-production material; the evidence gate blocks it.",
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "research_locked_at": { "type": "string", "format": "date-time" },
+    "content_locked_at": { "type": "string", "format": "date-time" },
+    "status": {
+      "description": "Generator/publication reporting only; never deployment authority.",
+      "enum": ["PASS", "DEGRADED", "BLOCKED"]
+    },
+    "contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "path", "commit", "activation_commit"],
+      "properties": {
+        "repository": { "const": "GUAiZzz/culture-taste-daily" },
+        "path": { "const": "docs/PRODUCTION_CONTRACT_V3.md" },
+        "commit": { "$ref": "#/$defs/sha1" },
+        "activation_commit": { "$ref": "#/$defs/sha1" }
+      }
+    },
     "core_version": {
       "type": "string",
       "pattern": "^v[0-9]+$"
@@ -40,11 +70,25 @@
       "required": ["status", "sha256", "locked_at"],
       "properties": {
         "status": { "const": "locked" },
-        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "sha256": { "$ref": "#/$defs/sha256" },
         "locked_at": { "type": "string", "format": "date-time" }
       }
     },
-    "language_mode": { "const": "zh-CN_full__en_title_deck_abstract" },
+    "source_hashes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["content_sha256", "art_direction_sha256", "issue_style_sha256"],
+      "properties": {
+        "content_sha256": { "$ref": "#/$defs/sha256" },
+        "art_direction_sha256": { "$ref": "#/$defs/sha256" },
+        "issue_style_sha256": {
+          "oneOf": [
+            { "$ref": "#/$defs/sha256" },
+            { "type": "null" }
+          ]
+        }
+      }
+    },
     "harrytone": {
       "type": "object",
       "additionalProperties": false,
@@ -52,12 +96,116 @@
       "properties": {
         "repository": { "const": "GUAiZzz/harry-tone" },
         "branch": { "type": "string", "minLength": 1 },
-        "commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "commit": { "$ref": "#/$defs/sha1" },
         "loaded_at": { "type": "string", "format": "date-time" }
       }
     },
+    "language_mode": { "const": "zh-CN_full__en_title_deck_abstract" },
     "editorial_position": { "type": "string", "minLength": 1 },
-    "art_direction": {
+    "art_direction": { "$ref": "#/$defs/artDirection" },
+    "variation_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["comparison_mode", "compared_issue_dates", "repeated_mechanisms", "exception_reason"],
+      "properties": {
+        "comparison_mode": { "enum": ["first_issue", "prior_issues"] },
+        "compared_issue_dates": {
+          "type": "array",
+          "items": { "type": "string", "format": "date" },
+          "uniqueItems": true
+        },
+        "repeated_mechanisms": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "exception_reason": { "type": ["string", "null"] }
+      }
+    },
+    "stories": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/story" }
+    },
+    "rights_summary": {
+      "description": "Publishable summary only; private permission evidence stays outside the repository.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required_assets", "unknown_required_assets", "status"],
+      "properties": {
+        "required_assets": { "type": "integer", "minimum": 0 },
+        "unknown_required_assets": { "type": "integer", "minimum": 0 },
+        "status": { "enum": ["clear", "blocked"] }
+      }
+    },
+    "artifact_digests": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["issue_payload_sha256"],
+      "properties": {
+        "issue_payload_sha256": {
+          "oneOf": [
+            { "$ref": "#/$defs/sha256" },
+            { "type": "null" }
+          ]
+        }
+      }
+    },
+    "evidence_refs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["technical", "editorial_visual", "gate"],
+      "properties": {
+        "technical": { "$ref": "#/$defs/evidenceRefList" },
+        "editorial_visual": { "$ref": "#/$defs/evidenceRefList" },
+        "gate": { "$ref": "#/$defs/evidenceRefList" }
+      }
+    },
+    "qa": {
+      "description": "Generator reporting only.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["html_parse", "assets", "internal_links", "no_js_reading", "desktop_render", "mobile_render", "reduced_motion"],
+      "properties": {
+        "html_parse": { "$ref": "#/$defs/reportStatus" },
+        "assets": { "$ref": "#/$defs/reportStatus" },
+        "internal_links": { "$ref": "#/$defs/reportStatus" },
+        "no_js_reading": { "$ref": "#/$defs/reportStatus" },
+        "accessibility": { "$ref": "#/$defs/reportStatus" },
+        "desktop_render": { "$ref": "#/$defs/reportStatus" },
+        "mobile_render": { "$ref": "#/$defs/reportStatus" },
+        "reduced_motion": { "$ref": "#/$defs/reportStatus" }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    }
+  },
+  "$defs": {
+    "sha1": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "reportStatus": {
+      "enum": ["pass", "fail", "unavailable"]
+    },
+    "evidenceRefList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "sha256": { "$ref": "#/$defs/sha256" }
+        }
+      }
+    },
+    "artDirection": {
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -66,8 +214,11 @@
         "palette_logic",
         "type_scale_logic",
         "image_behavior",
+        "page_density_and_tempo",
         "core_visual_action",
         "cover_composition",
+        "desktop_interaction_mechanic",
+        "behance_viewing_arc",
         "mobile_translation",
         "mobbin_usability_constraint",
         "quiet_ending"
@@ -88,60 +239,32 @@
         "quiet_ending": { "type": "string" }
       }
     },
-    "variation_review": {
+    "story": {
       "type": "object",
       "additionalProperties": false,
+      "required": ["id", "level", "title", "sources", "image_credit"],
       "properties": {
-        "comparison_mode": { "enum": ["first_issue", "prior_issues"] },
-        "compared_issue_dates": { "type": "array", "items": { "type": "string", "format": "date" }, "uniqueItems": true },
-        "repeated_mechanisms": { "type": "array", "items": { "type": "string" } },
-        "exception_reason": { "type": ["string", "null"] }
-      }
-    },
-    "stories": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": ["id", "level", "title", "sources"],
-        "properties": {
-          "id": { "type": "string", "minLength": 1 },
-          "level": { "enum": ["cover", "major", "signal", "watch"] },
-          "title": { "type": "string", "minLength": 1 },
-          "sources": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": ["title", "publisher", "url"],
-              "properties": {
-                "title": { "type": "string" },
-                "publisher": { "type": "string" },
-                "url": { "type": "string", "format": "uri" },
-                "published_date": { "type": ["string", "null"] },
-                "event_date": { "type": ["string", "null"] }
-              }
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+        "level": { "enum": ["cover", "major", "signal", "watch"] },
+        "title": { "type": "string", "minLength": 1 },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["title", "publisher", "url", "published_date", "event_date"],
+            "properties": {
+              "title": { "type": "string", "minLength": 1 },
+              "publisher": { "type": "string", "minLength": 1 },
+              "url": { "type": "string", "format": "uri" },
+              "published_date": { "type": ["string", "null"] },
+              "event_date": { "type": ["string", "null"] }
             }
-          },
-          "image_credit": { "type": ["string", "null"] }
-        }
+          }
+        },
+        "image_credit": { "type": ["string", "null"] }
       }
-    },
-    "qa": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["html_parse", "assets", "internal_links", "no_js_reading", "desktop_render", "mobile_render", "reduced_motion"],
-      "properties": {
-        "html_parse": { "enum": ["pass", "fail", "unavailable"] },
-        "assets": { "enum": ["pass", "fail", "unavailable"] },
-        "internal_links": { "enum": ["pass", "fail", "unavailable"] },
-        "no_js_reading": { "enum": ["pass", "fail", "unavailable"] },
-        "accessibility": { "enum": ["pass", "fail", "unavailable"] },
-        "desktop_render": { "enum": ["pass", "fail", "unavailable"] },
-        "mobile_render": { "enum": ["pass", "fail", "unavailable"] },
-        "reduced_motion": { "enum": ["pass", "fail", "unavailable"] }
-      }
-    },
-    "limitations": { "type": "array", "items": { "type": "string" } }
+    }
   }
 }

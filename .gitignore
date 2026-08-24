@@ -1,35 +1,6 @@
-# Private research and ledgers
-private/
-research-private/
-source-ledger*.json
-*source-ledger-instance*
-rejected-candidates/
-
-# Secrets and credentials
-.env
-.env.*
-!.env.example
-*.pem
-*.key
-*.p12
-*.pfx
-credentials*.json
-secrets*.json
-tokens*.json
-
-# Canonical private dependencies must never be vendored
-vendor/harry-tone/
-harry-tone-private/
-
-# Local tooling and operating-system files
 node_modules/
-.DS_Store
-__MACOSX/
-.cache/
-tmp/
-coverage/
-
-# Generated release directories are not authorized yet
 dist/
-release/
-production/
+.stage4/
+test-results/
+playwright-report/
+.DS_Store

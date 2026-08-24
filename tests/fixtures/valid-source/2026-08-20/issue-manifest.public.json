@@ -1,0 +1,114 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-08-20",
+  "publication_date": "2026-08-20",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-08-19T18:30:00+08:00",
+  "research_locked_at": "2026-08-20T08:30:00+08:00",
+  "content_locked_at": "2026-08-20T08:45:00+08:00",
+  "status": "PASS",
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v1",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "85dab0ecf155aa9c1139b257055bd89049764f08dacc10f3c590d80114afbaa5",
+    "locked_at": "2026-08-20T08:45:00+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "85dab0ecf155aa9c1139b257055bd89049764f08dacc10f3c590d80114afbaa5",
+    "art_direction_sha256": "9a73b172120e15dd6708d639d7087fcf732b879e2449d737e4dc18f0f009403d",
+    "issue_style_sha256": "5bc2e80f7c7afdadddd851f8147894dbb00f0abd322f07012188730285ba1f69"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-08-20T07:45:00+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "Synthetic structural evidence must keep generation, independent technical QA, named review, and gate authority separate.",
+  "art_direction": {
+    "dominant_mood": "plain structural proof",
+    "background_logic": "quiet paper field",
+    "palette_logic": "ink, paper, one signal color",
+    "type_scale_logic": "large entry and readable body",
+    "image_behavior": "no images",
+    "page_density_and_tempo": "open, compact, quiet",
+    "core_visual_action": "a stable vertical path",
+    "cover_composition": "title followed by a bounded deck",
+    "desktop_interaction_mechanic": "none",
+    "behance_viewing_arc": "entry, proof, boundary, release",
+    "mobile_translation": "single column",
+    "mobbin_usability_constraint": "clear links and visible focus",
+    "quiet_ending": "previous good remains selected"
+  },
+  "variation_review": {
+    "comparison_mode": "first_issue",
+    "compared_issue_dates": [],
+    "repeated_mechanisms": [],
+    "exception_reason": null
+  },
+  "stories": [
+    {
+      "id": "synthetic-door",
+      "level": "cover",
+      "title": "一扇门只负责让读者进入",
+      "sources": [
+        {
+          "title": "Synthetic primary source",
+          "publisher": "Culture & Taste Test Fixture",
+          "url": "https://example.invalid/source-a",
+          "published_date": "2026-08-20",
+          "event_date": "2026-08-20"
+        }
+      ],
+      "image_credit": null
+    },
+    {
+      "id": "synthetic-path",
+      "level": "signal",
+      "title": "路径不能替代审阅",
+      "sources": [
+        {
+          "title": "Synthetic independent source",
+          "publisher": "Culture & Taste Test Fixture",
+          "url": "https://example.invalid/source-b",
+          "published_date": "2026-08-20",
+          "event_date": "2026-08-20"
+        }
+      ],
+      "image_credit": null
+    }
+  ],
+  "rights_summary": {
+    "required_assets": 0,
+    "unknown_required_assets": 0,
+    "status": "clear"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": null
+  },
+  "evidence_refs": {
+    "technical": [],
+    "editorial_visual": [],
+    "gate": []
+  },
+  "qa": {
+    "html_parse": "pass",
+    "assets": "pass",
+    "internal_links": "pass",
+    "no_js_reading": "pass",
+    "accessibility": "pass",
+    "desktop_render": "pass",
+    "mobile_render": "pass",
+    "reduced_motion": "pass"
+  },
+  "limitations": [
+    "Synthetic test fixture only; it contains no real news and grants no production authority."
+  ]
+}

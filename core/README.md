@@ -1,14 +1,12 @@
-# Shared core boundary
+# Shared core v1
 
-No shared renderer has been implemented yet.
+`core/` contains repository-native semantic rendering and shared product grammar. It provides:
 
-After Production Contract V3 is reconciled and explicitly approved, this directory may contain repository-native primitives for:
+- full server-rendered reading without JavaScript;
+- stable header, archive, source-list, and footer structures;
+- responsive, keyboard-visible, reduced-motion-safe foundations;
+- shared styling that an issue may extend through its own `issue.css`.
 
-- semantic issue rendering;
-- archive and navigation behavior;
-- responsive and accessibility guarantees;
-- no-JavaScript full reading;
-- asset and source-link handling;
-- deterministic content-hash verification.
+The renderer does not choose stories, judge editorial quality, infer HarryTone rules, or authorize release. Per-issue source and art direction remain independent, and issue CSS may create a distinct expression without replacing the semantic/accessibility contract.
 
-The core must provide product grammar without forcing every issue into one visual template.
+The exact core identity is recorded in `core/version.json` and every build report.
