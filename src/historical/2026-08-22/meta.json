@@ -5,7 +5,7 @@
   "title": "门开了，文化才开始",
   "title_en": "THE DOOR OPENS. CULTURE BEGINS.",
   "deck": "一份以移动端页面截图保存下来的历史刊：空间、观看与公共界面的 16 个连续画面。",
-  "migration_mode": "pdf_facsimile",
+  "migration_mode": "historical_web_edition",
   "original_file": "original.pdf",
   "cover_asset": "covers/2026-08-22.jpg",
   "source_sha256": "2c3785f03eabfa45905c5240b6961b57b7d43fb36802b1e47ba30dbc3f7b7ffe",

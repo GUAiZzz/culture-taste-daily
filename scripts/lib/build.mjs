@@ -97,6 +97,14 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss }) {
   assertEqual(actualStyleHash, manifest.source_hashes.issue_style_sha256, "issue style source hash");
   await verifyDependencies(repoRoot, manifest);
 
+  if (manifest.media_required) {
+    for (const story of manifest.stories) {
+      if (!story.media) throw new Error(`${issueId} story ${story.id} is missing required media`);
+      const mediaPath = path.join(issueRoot, story.media.asset.replace(/^assets\//, "assets/"));
+      if (!(await exists(mediaPath))) throw new Error(`${issueId} story ${story.id} media asset is missing: ${story.media.asset}`);
+    }
+  }
+
   const inputDigests = {
     "content.md": await sha256File(contentPath),
     "art-direction.json": await sha256File(artPath),
@@ -146,7 +154,7 @@ async function buildHistoricalIssues({ historicalRoot, outDir, baseCss, siteCss,
     if (meta.migration_mode === "preserved_self_contained_html") {
       await writeFile(path.join(issueOut, "index.html"), renderHistoricalWrapper({ meta, baseCss, siteCss, siteJs }), "utf8");
       await writeFile(path.join(issueOut, "original.html"), await readFile(originalPath));
-    } else if (meta.migration_mode === "pdf_facsimile") {
+    } else if (meta.migration_mode === "pdf_facsimile" || meta.migration_mode === "historical_web_edition") {
       const sourcePages = path.join(issueRoot, "pages");
       const pageFiles = (await readdir(sourcePages)).filter((file) => /^page-\d{3}\.jpg$/.test(file)).sort();
       assertEqual(pageFiles.length, meta.page_count, `${issueId} facsimile page count`);
@@ -238,7 +246,8 @@ export async function buildSite({
       coverAsset: null,
       digest: issue.candidateDigest,
       production_eligible: issue.dateSemantics.production_candidate_valid,
-    })),
+      visibility: issue.manifest.visibility,
+    })).filter((issue) => issue.visibility !== "future_draft"),
   ].sort((a, b) => a.publication_date.localeCompare(b.publication_date));
 
   const archiveDir = path.join(outDir, "archive");
@@ -247,6 +256,8 @@ export async function buildSite({
   await writeFile(path.join(archiveDir, "index.html"), renderArchive({ issues: publicationIssues, baseCss, siteCss, siteJs }), "utf8");
   await writeFile(path.join(outDir, "rss.xml"), renderRss({ issues: publicationIssues, baseUrl }), "utf8");
   await writeFile(path.join(outDir, "sitemap.xml"), renderSitemap({ issues: publicationIssues, baseUrl }), "utf8");
+  const robotsBase = new URL(baseUrl).pathname.replace(/\/$/, "");
+  await writeFile(path.join(outDir, "robots.txt"), `User-agent: *\nDisallow: ${robotsBase}/issues/*/original.html\nDisallow: ${robotsBase}/issues/*/original.pdf\nDisallow: ${robotsBase}/issues/*/pages/\n`, "utf8");
 
   await assertPublicTree(outDir);
   const artifactFiles = await fileDigestMap(outDir, { exclude: ["build-report.json"] });

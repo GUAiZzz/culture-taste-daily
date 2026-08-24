@@ -8,19 +8,20 @@ The purpose of this phase is to review a real website rather than another archit
 
 ## What readers can inspect
 
-- a designed homepage with a latest-issue entry and four distinct issue covers;
+- a designed homepage with a 2026-08-24 latest-issue entry and four historical/current archive covers;
 - a complete archive with optional JavaScript filtering and a full static fallback;
-- the scoped 2026-08-25 issue world, readable without JavaScript;
+- the scoped 2026-08-24 issue world, readable without JavaScript, with one original SVG information visual per story;
+- the retained 2026-08-25 route marked as a future draft and excluded from the normal latest/archive feed;
 - the untouched self-contained 2026-08-20 and 2026-08-21 originals inside a modern Preview context page;
-- a 16-page facsimile reader plus the untouched source PDF for 2026-08-22.
+- a 16-page historical web edition plus the untouched source PDF for 2026-08-22.
 
-Every public page is marked non-production and includes `noindex,nofollow`.
+Every generated context and issue page is marked non-production and includes `noindex,nofollow`. `robots.txt` also disallows direct historical binaries/pages as a best-effort Pages control; GitHub Pages cannot provide custom response headers, so this is not a claim of perfect crawler enforcement.
 
 ## Historical migration modes
 
 The original 2026-08-20 and 2026-08-21 HTML files are copied byte-for-byte after their supplied SHA-256 values are verified. Their context pages do not rewrite their internal layout, type, images, or editorial content.
 
-The supplied 2026-08-22 PDF contains 16 raster mobile screenshots and no selectable article text. The Preview therefore uses the exact embedded page images as an honest facsimile and preserves the original PDF. It does not invent a reconstructed source. Production eligibility remains blocked until original web source, accessible text, rights review, and human historical-fidelity review are available.
+The supplied 2026-08-22 PDF contains 16 raster mobile screenshots and no selectable article text. The Preview now gives each exact embedded page a stable web anchor and reading map while preserving the original PDF. It does not invent reconstructed source text. Production eligibility remains blocked until original web source, accessible text, rights review, and human historical-fidelity review are available.
 
 Historical embedded media is under human review and is not represented as production-cleared merely because it appears in Preview.
 
@@ -38,7 +39,8 @@ Deployment occurs only through an explicit `workflow_dispatch`. There is no push
 
 ## Production blockers intentionally retained
 
-- 2026-08-25 does not satisfy canonical V3 candidate/research timing;
+- 2026-08-24 was refreshed after the canonical same-day production window and is Preview-only;
+- 2026-08-25 does not satisfy canonical V3 candidate/research timing and is excluded as a future draft;
 - historical media rights require human review;
 - 2026-08-22 lacks selectable accessible source text;
 - named editorial/visual Preview acceptance has not occurred;

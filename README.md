@@ -4,7 +4,7 @@ Independent source repository for Culture & Taste Daily.
 
 Repository stage: **Preview Build — real site, non-production**
 
-Production Contract V3 is canonical. The repository now builds the real Culture & Taste homepage, archive, current issue, and three preserved historical issues into a visibly non-production Preview. Production cutover and daily automation remain disabled.
+Production Contract V3 is canonical. The repository now builds the real Culture & Taste homepage, archive, the 2026-08-24 current Preview issue, the explicitly excluded 2026-08-25 future draft, and three preserved historical issues into a visibly non-production Preview. Production cutover and daily automation remain disabled.
 
 ## What is available
 
@@ -16,6 +16,7 @@ Production Contract V3 is canonical. The repository now builds the real Culture 
 - a local fail-closed gate simulation that has no production authority;
 - deterministic regression and failure-path tests;
 - a designed homepage and filterable archive;
+- one original, rights-clear SVG information visual per story in the current and future-draft issue routes;
 - preserved 2026-08-20 and 2026-08-21 self-contained HTML originals;
 - an honest 16-page facsimile reader for the supplied 2026-08-22 PDF;
 - manually triggered GitHub Pages Preview hosting after CI verification.
@@ -64,7 +65,7 @@ docs/                Product, editorial, architecture, and authority decisions
 
 ## Current candidate
 
-The `2026-08-25` source can be built and technically checked, but it predates canonical V3 timing requirements. Its missing `candidate_created_at` and out-of-window research lock make it ineligible for release. The local evidence gate must return `BLOCKED` for it.
+The `2026-08-24` source is the latest Preview issue. Its refresh happened after the canonical same-day production window, so it is visibly non-production and ineligible for release. The `2026-08-25` source remains available only as a `future_draft`: its missing `candidate_created_at` and out-of-window research lock make it ineligible for release and exclude it from the normal homepage/archive feed.
 
 The accepted snapshot at [`candidate/2026-08-25/index.html`](candidate/2026-08-25/index.html) remains unchanged and has never been deployed.
 

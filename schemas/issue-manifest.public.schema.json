@@ -9,6 +9,7 @@
     "schema_version",
     "issue_id",
     "publication_date",
+    "visibility",
     "timezone",
     "candidate_created_at",
     "research_locked_at",
@@ -37,6 +38,10 @@
       "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
     },
     "publication_date": { "type": "string", "format": "date" },
+    "visibility": {
+      "description": "Publication routing only. Future drafts are excluded from the public latest/archive feed; this field never authorizes deployment.",
+      "enum": ["published_preview", "future_draft"]
+    },
     "timezone": { "const": "Asia/Shanghai" },
     "candidate_created_at": {
       "description": "Null is allowed only for disclosed pre-V3 non-production material; the evidence gate blocks it.",
@@ -179,7 +184,8 @@
     "limitations": {
       "type": "array",
       "items": { "type": "string", "minLength": 1 }
-    }
+    },
+    "media_required": { "type": "boolean" }
   },
   "$defs": {
     "sha1": {
@@ -263,7 +269,28 @@
             }
           }
         },
-        "image_credit": { "type": ["string", "null"] }
+        "image_credit": { "type": ["string", "null"] },
+        "english": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["title", "deck", "abstract"],
+          "properties": {
+            "title": { "type": "string", "minLength": 1 },
+            "deck": { "type": "string", "minLength": 1 },
+            "abstract": { "type": "string", "minLength": 1 }
+          }
+        },
+        "media": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["asset", "alt", "caption", "credit"],
+          "properties": {
+            "asset": { "type": "string", "pattern": "^assets/[A-Za-z0-9._/-]+$" },
+            "alt": { "type": "string", "minLength": 1 },
+            "caption": { "type": "string", "minLength": 1 },
+            "credit": { "type": "string", "minLength": 1 }
+          }
+        }
       }
     }
   }

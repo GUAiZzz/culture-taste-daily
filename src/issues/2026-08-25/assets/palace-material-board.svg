@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Palace Seoul material board</title>
+  <desc id="desc">An original material board showing concrete, wood, mirror and carpet as retail translation surfaces.</desc>
+  <rect width="1200" height="720" fill="#f5f0e6"/>
+  <rect x="90" y="150" width="250" height="380" fill="#90949a"/><rect x="380" y="150" width="250" height="380" fill="#9a6b48"/><rect x="670" y="150" width="250" height="380" fill="#b7c9ff"/><rect x="960" y="150" width="150" height="380" fill="#ff5a1f"/>
+  <text x="120" y="610" fill="#101552" font-family="monospace" font-size="25">CONCRETE</text><text x="410" y="610" fill="#101552" font-family="monospace" font-size="25">WOOD</text><text x="700" y="610" fill="#101552" font-family="monospace" font-size="25">MIRROR</text><text x="980" y="610" fill="#101552" font-family="monospace" font-size="25">CARPET</text>
+  <text x="90" y="90" fill="#101552" font-family="monospace" font-size="30" letter-spacing="4">SEOUL RETAIL / MATERIAL TRANSLATION</text>
+</svg>

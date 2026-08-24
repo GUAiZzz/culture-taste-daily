@@ -54,7 +54,16 @@ function wrapIssueSections(article, manifest) {
     const story = manifest.stories.find((item) => item.id === id);
     const level = story?.level ?? (id === "exit" ? "exit" : "section");
     const count = id === "exit" ? "EXIT" : String(index + 1).padStart(2, "0");
-    return `<section class="issue-story" data-story="${escapeHtml(id)}" data-level="${escapeHtml(level)}"><p class="story-marker" aria-hidden="true">${count}</p>${part}</section>`;
+    let storyPart = part;
+    if (story?.english) {
+      const english = `<div class="story-english"><strong>${escapeHtml(story.english.title)}</strong><span>${escapeHtml(story.english.deck)}</span><small>${escapeHtml(story.english.abstract)}</small></div>`;
+      storyPart = storyPart.replace("</h2>", `</h2>${english}`);
+    }
+    if (story?.media) {
+      const figure = `<figure class="story-figure"><img src="./${escapeHtml(story.media.asset)}" alt="${escapeHtml(story.media.alt)}" loading="eager" decoding="async" width="1200" height="720"><figcaption>${escapeHtml(story.media.caption)} <span>${escapeHtml(story.media.credit)}</span></figcaption></figure>`;
+      storyPart = storyPart.replace("</h2>", `</h2>${figure}`);
+    }
+    return `<section class="issue-story" data-story="${escapeHtml(id)}" data-level="${escapeHtml(level)}"><p class="story-marker" aria-hidden="true">${count}</p>${storyPart}</section>`;
   });
 
   const firstId = manifest.stories[0]?.id ?? "sources";
@@ -69,6 +78,7 @@ export function renderIssue({ content, manifest, baseCss, issueCss }) {
     .map((story) => `<li><a href="#${escapeHtml(story.id)}"><span>${escapeHtml(story.level)}</span>${escapeHtml(story.title)}</a></li>`)
     .join("");
 
+  const draftLabel = manifest.visibility === "future_draft" ? "TOMORROW DRAFT · NOT LATEST" : "PREVIEW EDITION · NOT PRODUCTION";
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -82,9 +92,9 @@ export function renderIssue({ content, manifest, baseCss, issueCss }) {
 </head>
 <body data-issue="${escapeHtml(manifest.issue_id)}">
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <p class="non-production-label">PREVIEW EDITION · NOT PRODUCTION</p>
+  <p class="non-production-label">${draftLabel}</p>
   <header class="site-header"><a href="../../">Culture &amp; Taste Daily</a><span>${escapeHtml(manifest.publication_date)} · Asia/Shanghai</span><a href="../../archive/">Archive</a></header>
-  <nav class="issue-nav" aria-label="Issue contents"><ul>${navigation}<li><a href="#sources"><span>index</span>Sources &amp; Dates</a></li></ul></nav>
+  <details class="issue-nav-panel" open><summary>Issue index <span aria-hidden="true">＋</span></summary><nav class="issue-nav" aria-label="Issue contents"><ul>${navigation}<li><a href="#sources"><span>index</span>Sources &amp; Dates</a></li></ul></nav></details>
   <main id="main-content">
     <article aria-labelledby="issue-title" data-content-sha256="${escapeHtml(manifest.source_hashes.content_sha256)}">${article}</article>
     ${sourceIndex(manifest)}
@@ -116,7 +126,7 @@ function shell({ title, body, baseCss, siteCss, siteJs = "", pathPrefix = "./", 
     <nav aria-label="Publication"><a href="${pathPrefix}">Latest</a><a href="${pathPrefix}archive/">Archive</a></nav>
   </header>
   <main id="main-content">${body}</main>
-  <footer class="publication-footer"><p>Culture &amp; Taste Daily</p><p>Four issues. Four visual worlds.<br>Preview before production.</p><a href="${pathPrefix}archive/">Open the complete archive ↗</a></footer>
+  <footer class="publication-footer"><p>Culture &amp; Taste Daily</p><p>Every issue keeps its own visual world.<br>Preview before production.</p><a href="${pathPrefix}archive/">Open the complete archive ↗</a></footer>
   ${siteJs ? `<script>${siteJs}</script>` : ""}
 </body>
 </html>
@@ -141,7 +151,7 @@ function routeMap() {
 export function renderHome({ issues, baseCss, siteCss, siteJs }) {
   const latest = [...issues].sort((a, b) => a.publication_date.localeCompare(b.publication_date)).at(-1);
   const body = `<section class="home-hero" aria-labelledby="latest-title"><div class="hero-copy"><p class="hero-kicker">ISSUE ${String(issues.length).padStart(2, "0")} / ${escapeHtml(latest.publication_date)}</p><h1 id="latest-title"><a href="./issues/${escapeHtml(latest.issue_id)}/">${escapeHtml(latest.title)}</a></h1><p class="hero-english">${escapeHtml(latest.title_en)}</p><p class="hero-deck">${escapeHtml(latest.deck)}</p><a class="hero-link" href="./issues/${escapeHtml(latest.issue_id)}/">Read the latest issue <span aria-hidden="true">↗</span></a></div><div class="hero-map">${routeMap()}</div></section>
-  <section class="issue-field" aria-labelledby="field-title"><div class="section-heading"><p>THE ISSUES / 20—25 AUG</p><h2 id="field-title">不是同一个模板。<br>是四次不同的进入。</h2><p>Each issue keeps its own visual grammar. The publication shell only helps you move between them.</p></div>${issueGrid(issues, "./")}</section>
+  <section class="issue-field" aria-labelledby="field-title"><div class="section-heading"><p>THE ISSUES / 20—24 AUG</p><h2 id="field-title">不是同一个模板。<br>是不同的进入。</h2><p>Each issue keeps its own visual grammar. The publication shell only helps you move between them.</p></div>${issueGrid(issues, "./")}</section>
   <section class="editorial-code" aria-labelledby="code-title"><p class="vertical-label">EDITORIAL CODE</p><div><h2 id="code-title">事实先站稳。<br>形式才开始冒险。</h2><p>We follow the story into its own visual world. References teach; they do not dictate. No JavaScript is required to read. No automated PASS can replace a human judgment.</p></div><dl><div><dt>01</dt><dd>TRUTH<br>可核验的事实</dd></div><div><dt>02</dt><dd>AUTHORSHIP<br>独立的表达</dd></div><div><dt>03</dt><dd>ACCESS<br>真实可用</dd></div></dl></section>`;
   return shell({ title: "Culture & Taste Daily — Preview", body, baseCss, siteCss, siteJs, page: "home" });
 }
@@ -149,19 +159,19 @@ export function renderHome({ issues, baseCss, siteCss, siteJs }) {
 export function renderArchive({ issues, baseCss, siteCss, siteJs }) {
   const sorted = [...issues].sort((a, b) => b.publication_date.localeCompare(a.publication_date));
   const rows = sorted.map((issue, index) => `<li data-kind="${escapeHtml(issue.kind)}"><a href="../issues/${escapeHtml(issue.issue_id)}/"><span>${String(index + 1).padStart(2, "0")}</span><time datetime="${escapeHtml(issue.publication_date)}">${escapeHtml(issue.publication_date)}</time><div><strong>${escapeHtml(issue.title)}</strong><small>${escapeHtml(issue.title_en)}</small></div><em>${escapeHtml(issue.kind === "current" ? "CURRENT FIELD" : "ORIGINAL")}</em><i aria-hidden="true">↗</i></a></li>`).join("");
-  const body = `<section class="archive-hero"><p>ARCHIVE / ${String(issues.length).padStart(2, "0")} ISSUES</p><h1>每一期，<br>都保留自己的天气。</h1><div class="archive-note"><p>The archive is not a template gallery. It is a record of changing editorial positions, visual systems and constraints.</p><p>历史原件优先保留；无法恢复的部分会明确标注，而不是被新系统补写。</p></div></section><section class="archive-index" aria-labelledby="archive-title"><div class="archive-controls"><h2 id="archive-title">Complete index</h2><div role="group" aria-label="Filter issues"><button type="button" data-filter="all" aria-pressed="true">All</button><button type="button" data-filter="current" aria-pressed="false">Current</button><button type="button" data-filter="historical" aria-pressed="false">Historical</button></div></div><ol>${rows}</ol></section><section class="archive-covers" aria-label="Issue covers">${issueGrid(issues, "../")}</section>`;
+  const body = `<section class="archive-hero"><p>ARCHIVE / ${String(issues.length).padStart(2, "0")} ISSUES</p><h1>ARCHIVE</h1><div class="archive-note"><p>The archive is not a template gallery. It is a record of changing editorial positions, visual systems and constraints.</p><p>历史原件优先保留；无法恢复的部分会明确标注，而不是被新系统补写。</p></div></section><section class="archive-index" aria-labelledby="archive-title"><div class="archive-controls"><h2 id="archive-title">Complete index</h2><div role="group" aria-label="Filter issues"><button type="button" data-filter="all" aria-pressed="true">All</button><button type="button" data-filter="current" aria-pressed="false">Current</button><button type="button" data-filter="historical" aria-pressed="false">Historical</button></div></div><ol>${rows}</ol></section><section class="archive-covers" aria-label="Issue covers">${issueGrid(issues, "../")}</section>`;
   return shell({ title: "Archive — Culture & Taste Daily Preview", body, baseCss, siteCss, siteJs, pathPrefix: "../", page: "archive" });
 }
 
 export function renderHistoricalWrapper({ meta, baseCss, siteCss, siteJs }) {
-  const body = `<section class="history-header"><p>${escapeHtml(meta.publication_date)} · HISTORICAL ORIGINAL</p><h1>${escapeHtml(meta.title)}</h1><strong>${escapeHtml(meta.title_en)}</strong><p>${escapeHtml(meta.deck)}</p><div class="history-actions"><a href="./original.html">Open the untouched original ↗</a><a href="../../archive/">Back to archive</a></div></section><section class="historical-frame" aria-labelledby="original-title"><div><p id="original-title">ORIGINAL SELF-CONTAINED HTML</p><span>Scroll inside the preserved issue</span></div><iframe src="./original.html" title="Preserved Culture & Taste Daily issue ${escapeHtml(meta.publication_date)}"></iframe></section><aside class="migration-note"><strong>Migration note</strong><p>${escapeHtml(meta.limitations.join(" "))}</p></aside>`;
+  const body = `<section class="history-header"><p>${escapeHtml(meta.publication_date)} · HISTORICAL ORIGINAL</p><h1>${escapeHtml(meta.title)}</h1><strong>${escapeHtml(meta.title_en)}</strong><p>${escapeHtml(meta.deck)}</p><div class="history-actions"><a href="./original.html">Open the untouched original ↗</a><a href="../../archive/">Back to archive</a></div></section><section class="historical-frame" aria-labelledby="original-title"><div><p id="original-title">ORIGINAL SELF-CONTAINED HTML</p><span>Reader height adapts when scripts are available.</span></div><iframe data-historical-frame src="./original.html" title="Preserved Culture & Taste Daily issue ${escapeHtml(meta.publication_date)}"></iframe><p class="frame-fallback">If the embedded reader is unavailable, <a href="./original.html">open the untouched original in its own tab ↗</a>.</p></section><aside class="migration-note"><strong>Migration note</strong><p>${escapeHtml(meta.limitations.join(" "))}</p></aside>`;
   return shell({ title: `${meta.title} — Historical Preview`, body, baseCss, siteCss, siteJs, pathPrefix: "../../", page: "historical" });
 }
 
 export function renderFacsimile({ meta, pageFiles, baseCss, siteCss, siteJs }) {
-  const pages = pageFiles.map((file, index) => `<li><img src="./pages/${escapeHtml(file)}" width="390" height="844" loading="${index < 2 ? "eager" : "lazy"}" alt="Historical facsimile page ${index + 1} of ${pageFiles.length}"><span>${String(index + 1).padStart(2, "0")} / ${String(pageFiles.length).padStart(2, "0")}</span></li>`).join("");
-  const body = `<section class="history-header facsimile-heading"><p>${escapeHtml(meta.publication_date)} · PDF FACSIMILE</p><h1>${escapeHtml(meta.title)}</h1><strong>${escapeHtml(meta.title_en)}</strong><p>${escapeHtml(meta.deck)}</p><div class="history-actions"><a href="./original.pdf">Download original PDF ↗</a><a href="../../archive/">Back to archive</a></div></section><aside class="migration-note"><strong>Honest limitation</strong><p>${escapeHtml(meta.limitations.join(" "))}</p></aside><ol class="facsimile-pages">${pages}</ol>`;
-  return shell({ title: `${meta.title} — PDF Facsimile Preview`, body, baseCss, siteCss, siteJs, pathPrefix: "../../", page: "facsimile" });
+  const pages = pageFiles.map((file, index) => `<li id="page-${index + 1}"><figure><img src="./pages/${escapeHtml(file)}" width="390" height="844" loading="eager" alt="Historical web edition page ${index + 1} of ${pageFiles.length}"><figcaption><span>${String(index + 1).padStart(2, "0")} / ${String(pageFiles.length).padStart(2, "0")}</span><a href="#page-${index + 1}">Permalink ↗</a></figcaption></figure></li>`).join("");
+  const body = `<section class="history-header facsimile-heading"><p>${escapeHtml(meta.publication_date)} · HISTORICAL WEB EDITION</p><h1>${escapeHtml(meta.title)}</h1><strong>${escapeHtml(meta.title_en)}</strong><p>${escapeHtml(meta.deck)}</p><div class="history-actions"><a href="./original.pdf">Download original PDF ↗</a><a href="../../archive/">Back to archive</a></div></section><section class="edition-intro"><p class="section-label">READING MAP / 16 SCREENS</p><h2>A page-by-page web edition, with the source still intact.</h2><p>The supplied artifact is a raster screenshot sequence. This reader gives each screen a stable anchor and keeps the exact PDF one click away; it does not invent missing article text.</p></section><aside class="migration-note"><strong>Honest limitation</strong><p>${escapeHtml(meta.limitations.join(" "))}</p></aside><ol class="facsimile-pages">${pages}</ol>`;
+  return shell({ title: `${meta.title} — Historical Web Edition`, body, baseCss, siteCss, siteJs, pathPrefix: "../../", page: "facsimile" });
 }
 
 function escapeXml(value) {

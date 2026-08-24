@@ -31,6 +31,6 @@ Still not implemented or authorized:
 - daily automation;
 - automatic editorial, visual, HarryTone, truth, cultural, or rights approval.
 
-The `2026-08-25` source is a non-production technical sample. It cannot satisfy V3 date semantics and must remain blocked by the evidence gate.
+The `2026-08-24` source is the current non-production Preview issue. Its research refresh happened after the V3 same-day window, so it remains blocked by the evidence gate. The `2026-08-25` source is retained as a `future_draft`, excluded from the normal latest/archive feed, and also remains blocked by missing candidate timing and out-of-window research.
 
 The GitHub Pages endpoint created by the Preview workflow is review infrastructure, not a production release. Build output, manifest `PASS`, technical QA `PASS`, a Preview URL, and a local gate result do not themselves authorize production deployment.

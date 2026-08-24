@@ -1,4 +1,4 @@
-body[data-issue="2026-08-25"] {
+body[data-issue="2026-08-24"] {
   background:
     linear-gradient(90deg, transparent 0 7%, rgba(217, 255, 67, 0.18) 7% 7.2%, transparent 7.2%),
     #101552;
@@ -9,22 +9,22 @@ body[data-issue="2026-08-25"] {
   line-height: 1.75;
 }
 
-body[data-issue="2026-08-25"] a {
+body[data-issue="2026-08-24"] a {
   color: inherit;
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.18em;
 }
 
-body[data-issue="2026-08-25"] .site-header,
-body[data-issue="2026-08-25"] .site-footer,
-body[data-issue="2026-08-25"] .issue-nav,
-body[data-issue="2026-08-25"] main {
+body[data-issue="2026-08-24"] .site-header,
+body[data-issue="2026-08-24"] .site-footer,
+body[data-issue="2026-08-24"] .issue-nav,
+body[data-issue="2026-08-24"] main {
   width: min(100% - 2rem, 90rem);
   margin-inline: auto;
 }
 
-body[data-issue="2026-08-25"] .site-header,
-body[data-issue="2026-08-25"] .site-footer {
+body[data-issue="2026-08-24"] .site-header,
+body[data-issue="2026-08-24"] .site-footer {
   padding-block: 1.25rem;
   color: #d9ff43;
   font-size: 0.75rem;
@@ -33,7 +33,7 @@ body[data-issue="2026-08-25"] .site-footer {
   text-transform: uppercase;
 }
 
-body[data-issue="2026-08-25"] .non-production-label {
+body[data-issue="2026-08-24"] .non-production-label {
   margin: 0;
   padding: 0.55rem 1rem;
   background: #d9ff43;
@@ -43,7 +43,7 @@ body[data-issue="2026-08-25"] .non-production-label {
   text-align: center;
 }
 
-body[data-issue="2026-08-25"] .issue-nav {
+body[data-issue="2026-08-24"] .issue-nav-panel {
   position: sticky;
   z-index: 10;
   top: 0;
@@ -53,12 +53,12 @@ body[data-issue="2026-08-25"] .issue-nav {
   backdrop-filter: blur(10px);
 }
 
-body[data-issue="2026-08-25"] .issue-nav ul {
+body[data-issue="2026-08-24"] .issue-nav ul {
   gap: 0.2rem;
   padding-block: 0.45rem;
 }
 
-body[data-issue="2026-08-25"] .issue-nav a {
+body[data-issue="2026-08-24"] .issue-nav a {
   max-width: 17rem;
   gap: 0.55rem;
   padding: 0.35rem 0.65rem;
@@ -69,21 +69,21 @@ body[data-issue="2026-08-25"] .issue-nav a {
   text-overflow: ellipsis;
 }
 
-body[data-issue="2026-08-25"] .issue-nav a span {
+body[data-issue="2026-08-24"] .issue-nav a span {
   color: #b7c9ff;
   font: 700 0.62rem/1 ui-monospace, monospace;
   text-transform: uppercase;
 }
 
-body[data-issue="2026-08-25"] main {
+body[data-issue="2026-08-24"] main {
   padding-bottom: clamp(3rem, 8vw, 8rem);
 }
 
-body[data-issue="2026-08-25"] article {
+body[data-issue="2026-08-24"] article {
   width: 100%;
 }
 
-body[data-issue="2026-08-25"] .issue-cover {
+body[data-issue="2026-08-24"] .issue-cover {
   position: relative;
   display: grid;
   min-height: min(54rem, 88svh);
@@ -93,19 +93,19 @@ body[data-issue="2026-08-25"] .issue-cover {
   padding-block: clamp(4rem, 8vw, 8rem);
 }
 
-body[data-issue="2026-08-25"] .issue-cover-copy {
+body[data-issue="2026-08-24"] .issue-cover-copy {
   position: relative;
   z-index: 2;
 }
 
-body[data-issue="2026-08-25"] h1,
-body[data-issue="2026-08-25"] h2,
-body[data-issue="2026-08-25"] h3 {
+body[data-issue="2026-08-24"] h1,
+body[data-issue="2026-08-24"] h2,
+body[data-issue="2026-08-24"] h3 {
   line-height: 1.03;
   text-wrap: balance;
 }
 
-body[data-issue="2026-08-25"] h1 {
+body[data-issue="2026-08-24"] h1 {
   max-width: 6ch;
   margin: 0 0 1.5rem;
   font-family: "Arial Narrow", Impact, "PingFang SC", sans-serif;
@@ -115,7 +115,7 @@ body[data-issue="2026-08-25"] h1 {
   line-height: 0.78;
 }
 
-body[data-issue="2026-08-25"] .issue-cover-copy > p:first-of-type {
+body[data-issue="2026-08-24"] .issue-cover-copy > p:first-of-type {
   margin: 0 0 1.5rem;
   color: #d9ff43;
   font-size: clamp(1.5rem, 2.8vw, 3rem);
@@ -123,16 +123,16 @@ body[data-issue="2026-08-25"] .issue-cover-copy > p:first-of-type {
   letter-spacing: -0.05em;
 }
 
-body[data-issue="2026-08-25"] .issue-cover-copy > p {
+body[data-issue="2026-08-24"] .issue-cover-copy > p {
   max-width: 44rem;
 }
 
-body[data-issue="2026-08-25"] .issue-cover-copy > p:nth-last-of-type(-n + 2) {
+body[data-issue="2026-08-24"] .issue-cover-copy > p:nth-last-of-type(-n + 2) {
   color: #b7c9ff;
   font-size: 0.9rem;
 }
 
-body[data-issue="2026-08-25"] .enter-issue {
+body[data-issue="2026-08-24"] .enter-issue {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
@@ -146,22 +146,22 @@ body[data-issue="2026-08-25"] .enter-issue {
   text-transform: uppercase;
 }
 
-body[data-issue="2026-08-25"] .enter-issue:hover,
-body[data-issue="2026-08-25"] .enter-issue:focus-visible {
+body[data-issue="2026-08-24"] .enter-issue:hover,
+body[data-issue="2026-08-24"] .enter-issue:focus-visible {
   background: #d9ff43;
   color: #101552;
 }
 
-body[data-issue="2026-08-25"] .issue-cover-visual {
+body[data-issue="2026-08-24"] .issue-cover-visual {
   position: relative;
   aspect-ratio: 1;
   border: 1px solid #b7c9ff;
   transform: rotate(2deg);
 }
 
-body[data-issue="2026-08-25"] .issue-cover-visual::before,
-body[data-issue="2026-08-25"] .issue-cover-visual::after,
-body[data-issue="2026-08-25"] .issue-cover-visual i {
+body[data-issue="2026-08-24"] .issue-cover-visual::before,
+body[data-issue="2026-08-24"] .issue-cover-visual::after,
+body[data-issue="2026-08-24"] .issue-cover-visual i {
   content: "";
   position: absolute;
   display: block;
@@ -170,22 +170,22 @@ body[data-issue="2026-08-25"] .issue-cover-visual i {
   border-bottom: 0;
 }
 
-body[data-issue="2026-08-25"] .issue-cover-visual::before {
+body[data-issue="2026-08-24"] .issue-cover-visual::before {
   inset: 10% 12% 55% 20%;
 }
 
-body[data-issue="2026-08-25"] .issue-cover-visual::after {
+body[data-issue="2026-08-24"] .issue-cover-visual::after {
   inset: 38% 28% 22% 35%;
   border-color: #ff6b57;
   transform: rotate(90deg);
 }
 
-body[data-issue="2026-08-25"] .issue-cover-visual i {
+body[data-issue="2026-08-24"] .issue-cover-visual i {
   inset: 68% 8% 7% 58%;
   border-color: #b7c9ff;
 }
 
-body[data-issue="2026-08-25"] .issue-cover-visual span {
+body[data-issue="2026-08-24"] .issue-cover-visual span {
   position: absolute;
   z-index: 2;
   padding: 0.35rem 0.45rem;
@@ -195,7 +195,7 @@ body[data-issue="2026-08-25"] .issue-cover-visual span {
   letter-spacing: 0.08em;
 }
 
-body[data-issue="2026-08-25"] .issue-cover-visual span::before {
+body[data-issue="2026-08-24"] .issue-cover-visual span::before {
   content: "";
   display: inline-block;
   width: 0.65rem;
@@ -205,27 +205,27 @@ body[data-issue="2026-08-25"] .issue-cover-visual span::before {
   background: #ff6b57;
 }
 
-body[data-issue="2026-08-25"] .issue-cover-visual [data-node="cover"] {
+body[data-issue="2026-08-24"] .issue-cover-visual [data-node="cover"] {
   top: 8%;
   left: 16%;
 }
 
-body[data-issue="2026-08-25"] .issue-cover-visual [data-node="major"] {
+body[data-issue="2026-08-24"] .issue-cover-visual [data-node="major"] {
   top: 34%;
   right: 8%;
 }
 
-body[data-issue="2026-08-25"] .issue-cover-visual [data-node="signal"] {
+body[data-issue="2026-08-24"] .issue-cover-visual [data-node="signal"] {
   bottom: 25%;
   left: 12%;
 }
 
-body[data-issue="2026-08-25"] .issue-cover-visual [data-node="watch"] {
+body[data-issue="2026-08-24"] .issue-cover-visual [data-node="watch"] {
   right: 4%;
   bottom: 4%;
 }
 
-body[data-issue="2026-08-25"] .issue-story {
+body[data-issue="2026-08-24"] .issue-story {
   position: relative;
   width: min(100%, 64rem);
   margin: 0 auto;
@@ -233,24 +233,24 @@ body[data-issue="2026-08-25"] .issue-story {
   border-top: 1px solid #b7c9ff;
 }
 
-body[data-issue="2026-08-25"] .issue-story[data-level="major"] {
+body[data-issue="2026-08-24"] .issue-story[data-level="major"] {
   width: min(100%, 76rem);
   margin-block: 2rem;
   background: #f5f0e6;
   color: #101552;
 }
 
-body[data-issue="2026-08-25"] .issue-story[data-level="signal"]:nth-of-type(even) {
+body[data-issue="2026-08-24"] .issue-story[data-level="signal"]:nth-of-type(even) {
   transform: translateX(5%);
 }
 
-body[data-issue="2026-08-25"] .issue-story[data-level="watch"] {
+body[data-issue="2026-08-24"] .issue-story[data-level="watch"] {
   width: min(90%, 52rem);
   border: 1px solid #d9ff43;
   color: #d9ff43;
 }
 
-body[data-issue="2026-08-25"] .story-marker {
+body[data-issue="2026-08-24"] .story-marker {
   position: absolute;
   top: 1rem;
   left: 0;
@@ -259,12 +259,12 @@ body[data-issue="2026-08-25"] .story-marker {
   font: 900 clamp(2rem, 5vw, 5rem)/1 ui-monospace, monospace;
 }
 
-body[data-issue="2026-08-25"] [data-level="major"] .story-marker {
+body[data-issue="2026-08-24"] [data-level="major"] .story-marker {
   left: 1rem;
   color: #ff6b57;
 }
 
-body[data-issue="2026-08-25"] .issue-story h2 {
+body[data-issue="2026-08-24"] .issue-story h2 {
   max-width: 16ch;
   margin: 0 0 2.5rem;
   font-family: "Arial Narrow", Impact, "PingFang SC", sans-serif;
@@ -273,29 +273,29 @@ body[data-issue="2026-08-25"] .issue-story h2 {
   letter-spacing: -0.075em;
 }
 
-body[data-issue="2026-08-25"] .issue-story p {
+body[data-issue="2026-08-24"] .issue-story p {
   max-width: 46rem;
 }
 
-body[data-issue="2026-08-25"] .issue-story p:last-child {
+body[data-issue="2026-08-24"] .issue-story p:last-child {
   margin-top: 2.5rem;
   color: #d9ff43;
   font-size: 0.82rem;
 }
 
-body[data-issue="2026-08-25"] [data-level="major"] p:last-child {
+body[data-issue="2026-08-24"] [data-level="major"] p:last-child {
   color: #101552;
 }
 
-body[data-issue="2026-08-25"] article a {
+body[data-issue="2026-08-24"] article a {
   color: #d9ff43;
 }
 
-body[data-issue="2026-08-25"] [data-level="major"] a {
+body[data-issue="2026-08-24"] [data-level="major"] a {
   color: #2448ff;
 }
 
-body[data-issue="2026-08-25"] .sources {
+body[data-issue="2026-08-24"] .sources {
   max-width: 64rem;
   margin: clamp(6rem, 12vw, 12rem) auto 0;
   padding: 2rem clamp(1rem, 4vw, 4rem);
@@ -303,37 +303,37 @@ body[data-issue="2026-08-25"] .sources {
   color: #b7c9ff;
 }
 
-body[data-issue="2026-08-25"] .section-label {
+body[data-issue="2026-08-24"] .section-label {
   font: 700 0.7rem/1 ui-monospace, monospace;
   letter-spacing: 0.08em;
 }
 
-body[data-issue="2026-08-25"] .sources h2 {
+body[data-issue="2026-08-24"] .sources h2 {
   margin: 0;
   color: #f5f0e6;
   font-size: clamp(2.2rem, 5vw, 5rem);
   letter-spacing: -0.06em;
 }
 
-body[data-issue="2026-08-25"] .sources li {
+body[data-issue="2026-08-24"] .sources li {
   margin-block: 1rem;
 }
 
-body[data-issue="2026-08-25"] .source-meta {
+body[data-issue="2026-08-24"] .source-meta {
   font-size: 0.76rem;
   opacity: 0.75;
 }
 
-body[data-issue="2026-08-25"] img {
+body[data-issue="2026-08-24"] img {
   display: block;
 }
 
-body[data-issue="2026-08-25"] .issue-nav-panel {
+body[data-issue="2026-08-24"] .issue-nav-panel {
   width: min(100% - 2rem, 90rem);
   margin-inline: auto;
 }
 
-body[data-issue="2026-08-25"] .issue-nav-panel {
+body[data-issue="2026-08-24"] .issue-nav-panel {
   position: sticky;
   z-index: 10;
   top: 0;
@@ -343,23 +343,23 @@ body[data-issue="2026-08-25"] .issue-nav-panel {
   backdrop-filter: blur(10px);
 }
 
-body[data-issue="2026-08-25"] .issue-nav-panel > summary {
+body[data-issue="2026-08-24"] .issue-nav-panel > summary {
   display: none;
 }
 
-body[data-issue="2026-08-25"] .story-figure {
+body[data-issue="2026-08-24"] .story-figure {
   margin: 0 0 2.4rem;
   padding: 0;
   border: 1px solid #b7c9ff;
   background: #0c1047;
 }
 
-body[data-issue="2026-08-25"] .story-figure img {
+body[data-issue="2026-08-24"] .story-figure img {
   width: 100%;
   height: auto;
 }
 
-body[data-issue="2026-08-25"] .story-figure figcaption {
+body[data-issue="2026-08-24"] .story-figure figcaption {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -368,12 +368,12 @@ body[data-issue="2026-08-25"] .story-figure figcaption {
   font: 700 0.67rem/1.35 ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
-body[data-issue="2026-08-25"] .story-figure figcaption span {
+body[data-issue="2026-08-24"] .story-figure figcaption span {
   color: #d9ff43;
   text-align: right;
 }
 
-body[data-issue="2026-08-25"] .story-english {
+body[data-issue="2026-08-24"] .story-english {
   display: grid;
   gap: 0.3rem;
   max-width: 48rem;
@@ -382,86 +382,90 @@ body[data-issue="2026-08-25"] .story-english {
   font-family: Georgia, "Songti SC", serif;
 }
 
-body[data-issue="2026-08-25"] .story-english strong {
+body[data-issue="2026-08-24"] .story-english strong {
   color: #d9ff43;
   font: 800 0.82rem/1.2 ui-monospace, monospace;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
-body[data-issue="2026-08-25"] .story-english span {
+body[data-issue="2026-08-24"] .story-english span {
   font-size: 1.08rem;
   font-weight: 700;
 }
 
-body[data-issue="2026-08-25"] .story-english small {
+body[data-issue="2026-08-24"] .story-english small {
   font-size: 0.88rem;
   line-height: 1.5;
 }
 
-body[data-issue="2026-08-25"] .issue-story h2,
-body[data-issue="2026-08-25"] .sources h2 {
+body[data-issue="2026-08-24"] .issue-story h2,
+body[data-issue="2026-08-24"] .sources h2 {
   scroll-margin-top: 6rem;
 }
 
-body[data-issue="2026-08-25"] .source-meta {
+body[data-issue="2026-08-24"] .issue-story p {
+  max-width: 46rem;
+}
+
+body[data-issue="2026-08-24"] .source-meta {
   font-size: 0.86rem;
 }
 
 @media (max-width: 58rem) {
-  body[data-issue="2026-08-25"] .issue-cover {
+  body[data-issue="2026-08-24"] .issue-cover {
     grid-template-columns: 1fr;
   }
 
-  body[data-issue="2026-08-25"] .issue-cover-visual {
+  body[data-issue="2026-08-24"] .issue-cover-visual {
     width: min(100%, 35rem);
     margin-inline: auto;
   }
 }
 
 @media (max-width: 42rem) {
-  body[data-issue="2026-08-25"] {
+  body[data-issue="2026-08-24"] {
     background:
       linear-gradient(90deg, transparent 0 1rem, rgba(217, 255, 67, 0.3) 1rem 1.08rem, transparent 1.08rem),
       #101552;
     font-size: 17px;
   }
 
-  body[data-issue="2026-08-25"] .site-header {
+  body[data-issue="2026-08-24"] .site-header {
     align-items: flex-start;
     flex-direction: column;
   }
 
-  body[data-issue="2026-08-25"] h1 {
+  body[data-issue="2026-08-24"] h1 {
     font-size: clamp(4.5rem, 23vw, 7rem);
   }
 
-  body[data-issue="2026-08-25"] .issue-cover {
+  body[data-issue="2026-08-24"] .issue-cover {
     min-height: auto;
     padding-top: 4rem;
   }
 
-  body[data-issue="2026-08-25"] .issue-story,
-  body[data-issue="2026-08-25"] .issue-story[data-level="watch"] {
+  body[data-issue="2026-08-24"] .issue-story,
+  body[data-issue="2026-08-24"] .issue-story[data-level="watch"] {
     width: 100%;
     padding-inline: 1rem;
   }
 
-  body[data-issue="2026-08-25"] .issue-story[data-level="signal"]:nth-of-type(even) {
+  body[data-issue="2026-08-24"] .issue-story[data-level="signal"]:nth-of-type(even) {
     transform: none;
   }
 
-  body[data-issue="2026-08-25"] .issue-story h2 {
+  body[data-issue="2026-08-24"] .issue-story h2 {
     max-width: 12ch;
     font-size: clamp(2.1rem, 10vw, 3.5rem);
     line-height: 1.08;
   }
 
-  body[data-issue="2026-08-25"] .sources {
+  body[data-issue="2026-08-24"] .sources {
     padding-inline: 1rem;
   }
 
-  body[data-issue="2026-08-25"] .issue-nav-panel > summary {
+  body[data-issue="2026-08-24"] .issue-nav-panel > summary {
     display: flex;
     min-height: 44px;
     align-items: center;
@@ -473,27 +477,27 @@ body[data-issue="2026-08-25"] .source-meta {
     text-transform: uppercase;
   }
 
-  body[data-issue="2026-08-25"] .issue-nav-panel:not([open]) .issue-nav {
+  body[data-issue="2026-08-24"] .issue-nav-panel:not([open]) .issue-nav {
     display: none;
   }
 
-  body[data-issue="2026-08-25"] .issue-nav ul {
+  body[data-issue="2026-08-24"] .issue-nav ul {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 0.5rem;
   }
 
-  body[data-issue="2026-08-25"] .issue-nav a {
+  body[data-issue="2026-08-24"] .issue-nav a {
     max-width: none;
     min-height: 44px;
     white-space: normal;
   }
 
-  body[data-issue="2026-08-25"] .story-figure figcaption {
+  body[data-issue="2026-08-24"] .story-figure figcaption {
     display: block;
   }
 
-  body[data-issue="2026-08-25"] .story-figure figcaption span {
+  body[data-issue="2026-08-24"] .story-figure figcaption span {
     display: block;
     margin-top: 0.3rem;
     text-align: left;

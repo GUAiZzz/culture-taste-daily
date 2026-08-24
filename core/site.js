@@ -12,3 +12,16 @@ for (const button of filters) {
     }
   });
 }
+
+for (const frame of document.querySelectorAll("iframe[data-historical-frame]")) {
+  const resize = () => {
+    try {
+      const documentHeight = frame.contentDocument?.documentElement?.scrollHeight;
+      if (documentHeight) frame.style.height = `${Math.max(documentHeight, 720)}px`;
+    } catch {
+      // Cross-origin frames keep their CSS fallback height.
+    }
+  };
+  frame.addEventListener("load", resize);
+  window.addEventListener("resize", resize, { passive: true });
+}

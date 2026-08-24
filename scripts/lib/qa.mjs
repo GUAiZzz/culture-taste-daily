@@ -23,6 +23,7 @@ const CHECK_IDS = [
   "language_and_landmarks",
   "heading_structure",
   "full_article_and_sources",
+  "story_visuals",
   "no_js_reading",
   "assets",
   "internal_links",
@@ -135,6 +136,19 @@ export async function runStaticChecks({ repoRoot, distDir, issueId }) {
     sources_and_dates: hasSources,
   }));
 
+  const storySections = [...issueHtml.matchAll(/<section class="issue-story" data-story="([^"]+)"[\s\S]*?<\/section>/g)].map((match) => match[0]);
+  const visualFailures = manifest.media_required
+    ? manifest.stories.filter((story) => {
+        const section = storySections.find((candidate) => candidate.includes(`data-story="${story.id}"`)) ?? "";
+        return !/<figure class="story-figure"[\s\S]*?<img\b[^>]*\balt="[^"]+"[\s\S]*?<figcaption>/.test(section);
+      }).map((story) => story.id)
+    : [];
+  checks.push(result("story_visuals", visualFailures.length === 0, {
+    required: Boolean(manifest.media_required),
+    story_count: manifest.stories.length,
+    visual_failures: visualFailures,
+  }));
+
   const assetErrors = [];
   const linkErrors = [];
   for (const htmlFile of allHtmlFiles) {
@@ -184,7 +198,7 @@ export async function runStaticChecks({ repoRoot, distDir, issueId }) {
       const issueRoot = path.join(distDir, "issues", historical.issue_id);
       for (const requiredPath of [
         path.join(issueRoot, "index.html"),
-        path.join(issueRoot, historical.migration_mode === "pdf_facsimile" ? "original.pdf" : "original.html"),
+        path.join(issueRoot, historical.migration_mode === "pdf_facsimile" || historical.migration_mode === "historical_web_edition" ? "original.pdf" : "original.html"),
         path.join(distDir, "assets", historical.coverAsset),
       ]) {
         try {
@@ -251,6 +265,9 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
       sources_and_dates: mainText.includes("Sources & Dates"),
       horizontal_overflow: Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth),
       broken_images: images.filter((image) => !image.complete || image.naturalWidth === 0).map((image) => image.currentSrc || image.src),
+      story_visual_count: document.querySelectorAll(".issue-story .story-figure").length,
+      issue_index_is_native_disclosure: Boolean(document.querySelector(".issue-nav-panel > summary")),
+      nested_scroll_frames: [...document.querySelectorAll("iframe[data-historical-frame]")].filter((frame) => frame.scrollHeight > frame.clientHeight + 50).length,
       reduced_motion_matches: matchMedia("(prefers-reduced-motion: reduce)").matches,
     };
   }, manifest.stories.map((story) => story.title));
@@ -311,6 +328,11 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
         { name: "home-desktop-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: false, urlPath: "" },
         { name: "home-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: "" },
         { name: "archive-desktop-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: false, urlPath: "archive/", testArchiveFilter: true },
+        ...(staticResult.buildReport.historical_issues?.length ? [
+          { name: "historical-20-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: "issues/2026-08-20/" },
+          { name: "historical-21-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: "issues/2026-08-21/" },
+          { name: "historical-22-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: "issues/2026-08-22/" },
+        ] : []),
       ];
       const captures = {};
       for (const item of cases) {
@@ -342,9 +364,10 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
       const reduced = captures["reduced-motion-1440x900"];
       checks.push(result("reduced_motion_render", reduced.facts.reduced_motion_matches && reduced.facts.horizontal_overflow === 0, reduced.facts));
 
-      const shellCaptures = [captures["home-desktop-1440x900"], captures["home-mobile-390x844"], captures["archive-desktop-1440x900"]];
+      const shellCaptures = [captures["home-desktop-1440x900"], captures["home-mobile-390x844"], captures["archive-desktop-1440x900"], captures["historical-20-mobile-390x844"], captures["historical-21-mobile-390x844"], captures["historical-22-mobile-390x844"]].filter(Boolean);
       const shellOk = shellCaptures.every((item) => item.facts.horizontal_overflow === 0
         && item.facts.broken_images.length === 0
+        && item.facts.nested_scroll_frames === 0
         && item.consoleErrors.length === 0
         && item.requestFailures.length === 0)
         && captures["archive-desktop-1440x900"].facts.archive_filter?.historical_visible

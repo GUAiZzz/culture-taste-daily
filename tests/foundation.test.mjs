@@ -150,13 +150,15 @@ test("repository Preview preserves all three historical originals as non-product
   );
 });
 
-test("Preview homepage and archive expose four issues with local cover assets", async () => {
+test("Preview homepage and archive expose the current 2026-08-24 field plus historical issues", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
   const archive = await readFile(path.join(previewDist, "archive/index.html"), "utf8");
-  for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-25"]) {
+  for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-24"]) {
     assert.ok(home.includes(`issues/${date}/`));
     assert.ok(archive.includes(`issues/${date}/`));
   }
+  assert.doesNotMatch(home, /issues\/2026-08-25\//);
+  assert.doesNotMatch(archive, /issues\/2026-08-25\//);
   assert.match(home, /NON-PRODUCTION PREVIEW/);
   assert.match(home, /meta name="robots" content="noindex,nofollow"/);
   for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg"]) {
@@ -169,6 +171,23 @@ test("independent static QA validates historical archive routes and assets", asy
   assert.equal(qa.checks.find((check) => check.id === "historical_archive").status, "PASS");
   assert.equal(qa.checks.find((check) => check.id === "assets").status, "PASS");
   assert.equal(qa.checks.find((check) => check.id === "internal_links").status, "PASS");
+});
+
+test("current Preview issue exposes one original visual per story and future draft stays out of latest feed", async () => {
+  const current = await readFile(path.join(previewDist, "issues/2026-08-24/index.html"), "utf8");
+  const future = await readFile(path.join(previewDist, "issues/2026-08-25/index.html"), "utf8");
+  assert.equal((current.match(/class="story-figure"/g) ?? []).length, 8);
+  assert.match(current, /2026-08-24/);
+  assert.match(future, /TOMORROW DRAFT · NOT LATEST/);
+  assert.doesNotMatch(await readFile(path.join(previewDist, "index.html"), "utf8"), /issues\/2026-08-25\//);
+});
+
+test("2026-08-22 historical web edition keeps all exact source pages addressable", async () => {
+  const historical = await readFile(path.join(previewDist, "issues/2026-08-22/index.html"), "utf8");
+  assert.match(historical, /HISTORICAL WEB EDITION/);
+  assert.match(historical, /Download original PDF/);
+  assert.equal((historical.match(/id="page-\d+"/g) ?? []).length, 16);
+  assert.equal((historical.match(/loading="eager"/g) ?? []).length, 16);
 });
 
 test("Preview workflow verifies pull requests but deploys only on explicit manual dispatch", async () => {

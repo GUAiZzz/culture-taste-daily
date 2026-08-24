@@ -649,6 +649,33 @@ body[data-shell="publication"] main {
   background: white;
 }
 
+.frame-fallback {
+  margin: 0.75rem 0 0;
+  font-size: 0.8rem;
+}
+
+.edition-intro {
+  max-width: 74rem;
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 7rem) 1.25rem 0;
+}
+
+.edition-intro h2 {
+  max-width: 18ch;
+  margin: 0.5rem 0 1.25rem;
+  color: var(--acid);
+  font-family: Georgia, "Songti SC", serif;
+  font-size: clamp(2.4rem, 5vw, 5.5rem);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+}
+
+.edition-intro p:last-child {
+  max-width: 42rem;
+  color: rgba(237, 244, 246, 0.78);
+}
+
 .migration-note {
   display: grid;
   grid-template-columns: 0.5fr 2fr;
@@ -701,10 +728,20 @@ body[data-page="facsimile"] .publication-footer {
 }
 
 .facsimile-pages span {
-  display: block;
+  display: inline-block;
+  font: 700 0.68rem/1 ui-monospace, monospace;
+}
+
+.facsimile-pages figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
   margin-top: 0.6rem;
   font: 700 0.68rem/1 ui-monospace, monospace;
-  text-align: right;
+}
+
+.facsimile-pages figcaption a {
+  color: inherit;
 }
 
 @media (max-width: 62rem) {

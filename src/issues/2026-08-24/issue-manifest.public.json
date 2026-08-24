@@ -1,0 +1,163 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-08-24",
+  "publication_date": "2026-08-24",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-08-24T14:20:47+08:00",
+  "research_locked_at": "2026-08-24T14:20:47+08:00",
+  "content_locked_at": "2026-08-24T14:22:00+08:00",
+  "status": "DEGRADED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "7c6182645bb289d3fa8f45c9e707a76ede4f8c6bebd04e9f0dafd9af76754177",
+    "locked_at": "2026-08-24T14:22:00+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "7c6182645bb289d3fa8f45c9e707a76ede4f8c6bebd04e9f0dafd9af76754177",
+    "art_direction_sha256": "917c7b300bd21086b31330d94e68dd872926d5eed8d1f6348038001b7fd7413f",
+    "issue_style_sha256": "f91b7b864f3ace20da61d77f8eb9f684af61fe91e9f9c2809a6834c5273e5f7f"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-08-24T14:20:47+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "The week's verified signals are not one trend; they are changes in the time, place, and distance through which culture is entered.",
+  "art_direction": {
+    "dominant_mood": "a fluorescent release board that opens into a night map",
+    "background_logic": "deep indigo holds a sequence of paper, orange, lime and blue signal fields",
+    "palette_logic": "indigo for the clock, paper for verification, orange for movement, lime for confirmed windows, blue for open questions",
+    "type_scale_logic": "compressed display titles for entry points, readable 18px body copy, monospaced timestamps and source labels",
+    "image_behavior": "one original local SVG information figure per story; no third-party editorial photography",
+    "page_density_and_tempo": "dense cover, two release-led majors, tactile signals, explicit runway gap, forward-looking watches, quiet exit",
+    "core_visual_action": "a route changes from clock to object to room to city without pretending the signals are one trend",
+    "cover_composition": "a large moving-entry title beside a route board connecting drop, release, object, gallery and runway",
+    "desktop_interaction_mechanic": "a sticky issue index remains visible on desktop; the mobile details panel opens a no-JS index without hiding the article",
+    "behance_viewing_arc": "entry window, release system, object translation, public room, curatorial power, runway gap, future watch",
+    "mobile_translation": "single-column figures, two-column index disclosure, shorter display headings, captions retained below every figure",
+    "mobbin_usability_constraint": "44px links, scroll-margin for anchored headings, readable source labels, no nested scrolling in the redesigned historical reader",
+    "quiet_ending": "an intentionally unfilled runway radar and one sentence waiting for the next verified drop"
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-25"],
+    "repeated_mechanisms": [],
+    "exception_reason": null
+  },
+  "stories": [
+    {
+      "id": "supreme-drop-window",
+      "level": "cover",
+      "title": "Supreme 把星期四变成一只公共钟表",
+      "english": {"title": "THE PUBLIC CLOCK", "deck": "A weekly drop is also a shared time zone.", "abstract": "Official store states confirm the window; cultural impact remains an open question."},
+      "sources": [
+        {"title": "Supreme official store — New", "publisher": "Supreme", "url": "https://us.supreme.com/collections/new?order=1113564120", "published_date": "2026-08-23", "event_date": "2026-08-20"},
+        {"title": "Supreme Fall/Winter 2026 collection", "publisher": "Hypebeast", "url": "https://hypebeast.com/2026/8/supreme-fall-winter-2026-collection", "published_date": "2026-08-20", "event_date": "2026-08-20"}
+      ],
+      "image_credit": "Culture & Taste original SVG / no third-party image",
+      "media": {"asset": "assets/supreme-drop-window.svg", "alt": "A clock, product card and street path diagramming a weekly Supreme drop window", "caption": "TIME → PRODUCT → STREET / an original editorial diagram", "credit": "Original Culture & Taste visual"}
+    },
+    {
+      "id": "stussy-fall-26-release",
+      "level": "major",
+      "title": "Stüssy 把同一场发售切成五个时区",
+      "english": {"title": "FIVE TENS", "deck": "One collection, split into regional now-times.", "abstract": "The official release note clarifies channels and time zones without promising inventory or impact."},
+      "sources": [
+        {"title": "Stüssy Fall '26 Collection", "publisher": "Stüssy", "url": "https://www.stussy.com/blogs/news/fall-26-collection", "published_date": "2026-08-18", "event_date": "2026-08-21"}
+      ],
+      "image_credit": "Culture & Taste original SVG / no third-party image",
+      "media": {"asset": "assets/stussy-release-grid.svg", "alt": "A typographic grid mapping Stüssy Fall 26 release times across regions", "caption": "NORTH AMERICA / UK-EUROPE / JAPAN-KOREA", "credit": "Original Culture & Taste visual"}
+    },
+    {
+      "id": "bape-can-stool",
+      "level": "signal",
+      "title": "BAPE 的旧感从 T 恤长到一张罐头凳",
+      "english": {"title": "APPAREL → INTERIOR", "deck": "A worn graphic takes one more step into the room.", "abstract": "The official release lists a Can Stool beside the apparel and socks in the first drop."},
+      "sources": [
+        {"title": "A BATHING APE® x ©SAINT Mxxxxxx", "publisher": "BAPE", "url": "https://en.jp.bape.com/blogs/news/saintmxxxxxx-26fw", "published_date": null, "event_date": "2026-08-22/2026-08-23"},
+        {"title": "BAPE × ©SAINT Mxxxxxx Fall/Winter 2026", "publisher": "Hypebeast", "url": "https://hypebeast.com/2026/8/bape-saint-mxxxxxx-fall-winter-2026-capsule-collaboration-release-info", "published_date": "2026-08-21", "event_date": "2026-08-22/2026-08-23"}
+      ],
+      "image_credit": "Culture & Taste original SVG / no third-party image",
+      "media": {"asset": "assets/bape-can-stool.svg", "alt": "A can-shaped stool diagram with a graphic language moving from apparel to interior", "caption": "A small object marks a larger boundary move", "credit": "Original Culture & Taste visual"}
+    },
+    {
+      "id": "sfmoma-giant-arc",
+      "level": "signal",
+      "title": "七万五千个小单元，让免费大厅变成一片云",
+      "english": {"title": "A CLOUD BEFORE A TICKET", "deck": "Scale changes the first step into the museum.", "abstract": "SFMOMA describes a free first-floor installation built from nearly 75,000 handmade units."},
+      "sources": [
+        {"title": "Jacob Hashimoto: Giant Arc", "publisher": "SFMOMA", "url": "https://www.sfmoma.org/exhibition/jacob-hashimoto-giant-arc/", "published_date": null, "event_date": "2026-08-22"}
+      ],
+      "image_credit": "Culture & Taste original SVG / no third-party image",
+      "media": {"asset": "assets/giant-arc-kite-field.svg", "alt": "A field of small kite units bending across a gallery diagram", "caption": "75,000 UNITS / FREE FLOOR", "credit": "Original Culture & Taste visual"}
+    },
+    {
+      "id": "southbank-curatorial-seat",
+      "level": "signal",
+      "title": "谁来策展，先于展了什么改变房间",
+      "english": {"title": "WHEN THE SEAT MOVES", "deck": "Lived experience enters selection and sequence.", "abstract": "The upcoming Southbank exhibition gives five PIC members curatorial responsibility while artist names remain undisclosed."},
+      "sources": [
+        {"title": "Young adults with experience of having parents in prison to curate exhibition", "publisher": "The Art Newspaper", "url": "https://www.theartnewspaper.com/2026/08/21/young-adults-with-experience-of-having-parents-in-prison-to-curate-southbank-centre-exhibition", "published_date": "2026-08-21", "event_date": "2026-10-16/2026-11-29"},
+        {"title": "Southbank Centre programme", "publisher": "Southbank Centre", "url": "https://www.southbankcentre.co.uk/", "published_date": null, "event_date": "2026-10-16/2026-11-29"}
+      ],
+      "image_credit": "Culture & Taste original SVG / no third-party image",
+      "media": {"asset": "assets/southbank-curatorial-seat.svg", "alt": "Three seats shifting selection, order and credit in a curatorial room diagram", "caption": "SELECTION / ORDER / CREDIT", "credit": "Original Culture & Taste visual"}
+    },
+    {
+      "id": "seoul-runway-map",
+      "level": "watch",
+      "title": "首尔把时装周从一栋楼搬成一条城市线路",
+      "english": {"title": "RUNWAY AS CITY INTERFACE", "deck": "DDP and Lotte carry different kinds of fashion access.", "abstract": "The September Seoul Fashion Week plan is a watch item, not a claim about a new luxury-house show today."},
+      "sources": [
+        {"title": "Seoul Fashion Week expands beyond DDP to Lotte World Tower", "publisher": "Seoul Metropolitan Government", "url": "https://world.seoul.go.kr/seoul-fashion-week-expands-beyond-ddp-to-lotte-world-tower-turning-seouls-iconic-landmarks-into-runways/", "published_date": "2026-08-21", "event_date": "2026-09-01/2026-09-06"}
+      ],
+      "image_credit": "Culture & Taste original SVG / no third-party image",
+      "media": {"asset": "assets/seoul-runway-map.svg", "alt": "A route connecting DDP industry programming to Lotte public programming", "caption": "DDP / INDUSTRY → LOTTE / PUBLIC", "credit": "Original Culture & Taste visual"}
+    },
+    {
+      "id": "runway-radar-clear",
+      "level": "watch",
+      "title": "奢侈品牌秀场：这一轮先不硬凑",
+      "english": {"title": "KEEP THE SLOT OPEN", "deck": "A radar gap is better than a recycled runway.", "abstract": "The latest official indexes were scanned; no single new luxury-house show met the 22–24 August threshold."},
+      "sources": [
+        {"title": "Fashion Shows index", "publisher": "Vogue", "url": "https://www.vogue.com/fashion-shows", "published_date": null, "event_date": null},
+        {"title": "Rakuten Fashion Week TOKYO official schedule", "publisher": "Japan Fashion Week Organization", "url": "https://rakutenfashionweektokyo.com/en/schedule/", "published_date": null, "event_date": "2026-08-24"}
+      ],
+      "image_credit": "Culture & Taste original SVG / no third-party image",
+      "media": {"asset": "assets/runway-radar-clear.svg", "alt": "A radar card with an open slot for a verified new luxury-house show", "caption": "NO VERIFIED NEW LUXURY-HOUSE SHOW IN THIS WINDOW", "credit": "Original Culture & Taste visual"}
+    },
+    {
+      "id": "tmex-forum-lanes",
+      "level": "watch",
+      "title": "台北音乐博览会，把“舞台之外”列进日程",
+      "english": {"title": "THE STAGE IS ALSO A SYSTEM", "deck": "Five forum lanes wait for evidence after the event.", "abstract": "TMEX publishes a programme spanning sustainability, AI, international marketing, festivals, and sound-image-space."},
+      "sources": [
+        {"title": "2026 TMEX 台北音樂博覽會 8/27 登場", "publisher": "Taipei Music Center", "url": "https://www.tmc.taipei/tw/news/announcement/2FDb231761f9", "published_date": "2026-08-22", "event_date": "2026-08-27/2026-08-30"}
+      ],
+      "image_credit": "Culture & Taste original SVG / no third-party image",
+      "media": {"asset": "assets/tmex-forum-lanes.svg", "alt": "Five lanes for TMEX forums on sound, sustainability, AI, festivals and audiovisual space", "caption": "SOUND / GREEN / AI / FEST / A/V", "credit": "Original Culture & Taste visual"}
+    }
+  ],
+  "rights_summary": {"required_assets": 8, "unknown_required_assets": 0, "status": "clear"},
+  "artifact_digests": {"issue_payload_sha256": null},
+  "evidence_refs": {"technical": [], "editorial_visual": [], "gate": []},
+  "qa": {"html_parse": "pass", "assets": "pass", "internal_links": "pass", "no_js_reading": "pass", "accessibility": "pass", "desktop_render": "pass", "mobile_render": "pass", "reduced_motion": "pass"},
+  "limitations": [
+    "This is a non-production Preview issue; manifest status and QA fields are reporting only.",
+    "Research and content were refreshed on 2026-08-24 after the canonical 06:00–08:30 production refresh window; the issue is intentionally not production-eligible.",
+    "All eight visuals are original local SVG information diagrams. No third-party editorial photography or private source-ledger instance is included.",
+    "Supreme and Stüssy release claims are limited to the official page states and release windows observed; inventory, sales and cultural impact are not inferred.",
+    "The runway radar explicitly records a missing qualifying luxury-house event rather than filling the slot with stale or unverified material."
+  ]
+}
