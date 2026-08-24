@@ -1,10 +1,19 @@
 # Production Contract V3 — Decision Log
 
-Status: `DRAFT SUPPORTING RECORD`
+Status: `ACTIVE CANONICAL SUPPORTING RECORD`
 
-This file records intentional material changes between the frozen canonical historical Library V2 (`Culture & Taste Daily — Production Prompt v2`) and the proposed `docs/PRODUCTION_CONTRACT_V3.md`. The old `GUAiZzz/GUAiZzz/docs/PRODUCTION_CONTRACT_V2.md` was consulted as a non-canonical migration adaptation; it does not supply production authority.
+This file records intentional material changes between the frozen canonical historical Library V2 (`Culture & Taste Daily — Production Prompt v2`) and canonical `docs/PRODUCTION_CONTRACT_V3.md`. The old `GUAiZzz/GUAiZzz/docs/PRODUCTION_CONTRACT_V2.md` was consulted as a non-canonical migration adaptation; it does not supply production authority.
 
-No decision below is active until V3 is explicitly approved and activated. “Preserved” means the rule's operational meaning remains; wording and repository paths may still change.
+The decisions below became active through V3 activation. Their historical `OLD ASSUMPTION` and `NEW DECISION` entries are intentionally preserved rather than rewritten. “Preserved” means the rule's operational meaning remains; wording and repository paths may still change through the canonical amendment process.
+
+## Activation record
+
+- Human approval: exact draft commit `769c47f16a183f9fd37788070a71cbeab6309b49`
+- Activation date: `2026-08-24T12:13:54+08:00` (`Asia/Shanghai`)
+- Activation commit: the commit containing this activation record; its immutable SHA is the Git identity merged through PR #1
+- Pull request: `GUAiZzz/culture-taste-daily#1`
+- Result: Production Contract V3 is the canonical Culture & Taste production contract upon merge of the activation commit to `main`
+- Boundary: activation does not authorize implementation, Pages, preview, deployment, historical migration, production cutover, or daily automation
 
 ## D01 — Canonical authority and activation
 

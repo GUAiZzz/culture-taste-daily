@@ -1,32 +1,29 @@
 # Culture & Taste Daily — Production Contract V3
 
-> [!WARNING]
-> **DRAFT — ZERO PRODUCTION AUTHORITY.** This document does not authorize a build, preview, GitHub Pages deployment, production cutover, historical migration, or daily automation. The Library document `Culture & Taste Daily — Production Prompt v2` remains the frozen canonical historical V2 until V3 is explicitly approved and activated under section 1. Merge or file presence alone does not make V3 canonical.
+> [!IMPORTANT]
+> **CANONICAL PRODUCTION CONTRACT.** Upon merge of the activation commit to `main`, this document is the canonical Culture & Taste production contract. Contract activation establishes authority only; it does not authorize implementation, preview, GitHub Pages, deployment, historical migration, production cutover, or daily automation. Each later stage remains separately gated.
 
-- Status: `DRAFT`
-- Draft branch: `contract-v3-draft`
+- Status: `CANONICAL`
+- Approved draft commit: `769c47f16a183f9fd37788070a71cbeab6309b49`
+- Activation date: `2026-08-24T12:13:54+08:00` (`Asia/Shanghai`)
+- Activation commit: the commit containing this activation record; its immutable SHA is the Git identity of this file version and PR #1
+- Activation PR: `GUAiZzz/culture-taste-daily#1`
 - Drafted: 2026-08-24, `Asia/Shanghai`
-- Intended repository: `GUAiZzz/culture-taste-daily`
+- Canonical repository: `GUAiZzz/culture-taste-daily`
 - Reconciliation record: `docs/DECISION_LOG.md`
 
 ## 1. Authority, versioning, and activation
 
-Current authority order is:
+Effective when the activation commit is merged to `main`, the authority order is:
 
-1. the Library document `Culture & Taste Daily — Production Prompt v2` is canonical historical V2;
-2. the former-repository `docs/PRODUCTION_CONTRACT_V2.md` is a reviewed, non-canonical migration adaptation;
-3. this V3 file is a draft reconciliation with no production authority;
+1. this V3 file is the single canonical Culture & Taste production contract;
+2. the Library document `Culture & Taste Daily — Production Prompt v2` is frozen historical authority for pre-V3 production;
+3. the former-repository `docs/PRODUCTION_CONTRACT_V2.md` remains a reviewed, non-canonical migration adaptation;
 4. canonical HarryTone remains independently authoritative for the surfaces named in section 8.
 
-V3 becomes canonical only when all of the following are true:
+The repository owner explicitly approved draft commit `769c47f16a183f9fd37788070a71cbeab6309b49` and authorized the activation commit and merge through PR #1. The activation changes this status, `docs/CONTRACT_STATUS.md`, `docs/DECISION_LOG.md`, and `AGENTS.md` consistently. Library V2 remains frozen historical authority for pre-V3 production; it is never overwritten, relabeled, or used to silently override V3.
 
-- a human repository owner explicitly approves the exact V3 commit as the canonical successor;
-- every unresolved question marked `BLOCKING` in `docs/DECISION_LOG.md` is closed;
-- the approved commit and approval date are recorded in an authorized activation change;
-- that activation change changes this status to `CANONICAL` and updates `docs/CONTRACT_STATUS.md` and `AGENTS.md` consistently;
-- the activation change is reviewed and merged to `main`.
-
-Merging the draft without those acts, a manifest saying `PASS`, or a successful check cannot activate V3. After activation, Library V2 remains frozen historical authority for pre-V3 production; it is never overwritten or relabeled.
+Canonical status does not grant production write authority. A manifest saying `PASS`, a successful check, or this contract's activation cannot by itself enable a later gated stage.
 
 Future material contract changes require a reviewed pull request, a version or amendment identifier, and an entry in `docs/DECISION_LOG.md`. No prompt, workflow, issue manifest, or automation may silently weaken this contract.
 
