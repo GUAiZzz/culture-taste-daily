@@ -16,7 +16,7 @@ Production Contract V3 is canonical. The repository now builds the real Culture 
 - a local fail-closed gate simulation that has no production authority;
 - deterministic regression and failure-path tests;
 - a designed homepage and filterable archive;
-- one original, rights-clear SVG information visual per story in the current and future-draft issue routes;
+- one provenance-labeled, rights-clear visual per story in the current and future-draft issue routes; source photography is preferred when its usage basis is verified;
 - preserved 2026-08-20 and 2026-08-21 self-contained HTML originals;
 - an honest 16-page facsimile reader for the supplied 2026-08-22 PDF;
 - manually triggered GitHub Pages Preview hosting after CI verification.
@@ -45,6 +45,8 @@ Generated output is deliberately ignored by Git:
 See [`docs/STAGE4A_BUILD_QA.md`](docs/STAGE4A_BUILD_QA.md) for the evidence model, commands, limitations, and schema migration.
 
 See [`docs/PREVIEW_BUILD.md`](docs/PREVIEW_BUILD.md) for the real-site and historical-migration boundary.
+
+See [`docs/IMAGE_RIGHTS_WORKFLOW.md`](docs/IMAGE_RIGHTS_WORKFLOW.md) for the source-image preference, provenance fields, and fail-closed usage-rights rule.
 
 ## Repository map
 

@@ -60,7 +60,14 @@ function wrapIssueSections(article, manifest) {
       storyPart = storyPart.replace("</h2>", `</h2>${english}`);
     }
     if (story?.media) {
-      const figure = `<figure class="story-figure"><img src="./${escapeHtml(story.media.asset)}" alt="${escapeHtml(story.media.alt)}" loading="eager" decoding="async" width="1200" height="720"><figcaption>${escapeHtml(story.media.caption)} <span>${escapeHtml(story.media.credit)}</span></figcaption></figure>`;
+      const mediaKind = story.media.kind ?? "original_illustration";
+      const mediaLabel = {
+        source_image: "SOURCE IMAGE",
+        original_illustration: "ORIGINAL EDITORIAL VISUAL",
+        data_diagram: "ORIGINAL DATA DIAGRAM",
+        historical_artifact: "HISTORICAL ARTIFACT",
+      }[mediaKind] ?? "EDITORIAL VISUAL";
+      const figure = `<figure class="story-figure" data-media-kind="${escapeHtml(mediaKind)}"><img src="./${escapeHtml(story.media.asset)}" alt="${escapeHtml(story.media.alt)}" loading="eager" decoding="async" width="1200" height="720"><figcaption><strong>${mediaLabel}</strong> ${escapeHtml(story.media.caption)} <span>${escapeHtml(story.media.credit)}</span></figcaption></figure>`;
       storyPart = storyPart.replace("</h2>", `</h2>${figure}`);
     }
     return `<section class="issue-story" data-story="${escapeHtml(id)}" data-level="${escapeHtml(level)}"><p class="story-marker" aria-hidden="true">${count}</p>${storyPart}</section>`;

@@ -10,7 +10,7 @@ The purpose of this phase is to review a real website rather than another archit
 
 - a designed homepage with a 2026-08-24 latest-issue entry and four historical/current archive covers;
 - a complete archive with optional JavaScript filtering and a full static fallback;
-- the scoped 2026-08-24 issue world, readable without JavaScript, with one original SVG information visual per story;
+- the scoped 2026-08-24 issue world, readable without JavaScript, with one provenance-labeled visual per story; source photography is used only after its rights basis is verified;
 - the retained 2026-08-25 route marked as a future draft and excluded from the normal latest/archive feed;
 - the untouched self-contained 2026-08-20 and 2026-08-21 originals inside a modern Preview context page;
 - a 16-page historical web edition plus the untouched source PDF for 2026-08-22.
@@ -42,6 +42,7 @@ Deployment occurs only through an explicit `workflow_dispatch`. There is no push
 - 2026-08-24 was refreshed after the canonical same-day production window and is Preview-only;
 - 2026-08-25 does not satisfy canonical V3 candidate/research timing and is excluded as a future draft;
 - historical media rights require human review;
+- current Preview figures are original data diagrams because inspected source pages do not yet supply a verified public image-reuse basis;
 - 2026-08-22 lacks selectable accessible source text;
 - named editorial/visual Preview acceptance has not occurred;
 - production evidence, rollback, post-deploy verification, and daily automation remain unimplemented.

@@ -24,7 +24,7 @@
   "source_hashes": {
     "content_sha256": "c7a484db9ca2cb5939337882ea1e0a389faef3e2533c50eafd99307ac7fad3d9",
     "art_direction_sha256": "9f6fef80003de2cb2c7c579c1775e33d5e9c3f0ead06453f93d5216470dfad46",
-    "issue_style_sha256": "7b35100dc988fe0d3b86ca615c485d9b943c77c768cc9ddfe4c0d2303938bfc5"
+    "issue_style_sha256": "4c3cf3f7cd6f20bd915f39692d00b8c6105e3c03481ebdb4d0a2feb2786ab67c"
   },
   "harrytone": {
     "repository": "GUAiZzz/harry-tone",
@@ -78,7 +78,7 @@
       ],
       "image_credit": "Culture & Taste original SVG / no third-party image",
       "english": {"title": "RUNWAY AS CITY INTERFACE", "deck": "Seoul puts professional and public fashion access on one route.", "abstract": "The official plan is a September watch item, not a claim about a show today."},
-      "media": {"asset": "assets/seoul-runway-map.svg", "alt": "A route connecting DDP industry programming to Lotte public programming", "caption": "DDP / INDUSTRY → LOTTE / PUBLIC", "credit": "Original Culture & Taste visual"}
+      "media": {"asset": "assets/seoul-runway-map.svg", "alt": "A route connecting DDP industry programming to Lotte public programming", "caption": "DDP / INDUSTRY → LOTTE / PUBLIC", "credit": "Original Culture & Taste visual", "kind": "data_diagram", "origin_url": null, "rights_basis": "owned_original"}
     },
     {
       "id": "southbank-lived-experience-curation",
@@ -95,7 +95,7 @@
       ],
       "image_credit": "Culture & Taste original SVG / no third-party image",
       "english": {"title": "WHEN THE SEAT MOVES", "deck": "Lived experience enters selection and sequence.", "abstract": "The upcoming exhibition gives five PIC members curatorial responsibility while artist names remain undisclosed."},
-      "media": {"asset": "assets/southbank-curatorial-seat.svg", "alt": "Three seats shifting selection, order and credit in a curatorial room diagram", "caption": "SELECTION / ORDER / CREDIT", "credit": "Original Culture & Taste visual"}
+      "media": {"asset": "assets/southbank-curatorial-seat.svg", "alt": "Three seats shifting selection, order and credit in a curatorial room diagram", "caption": "SELECTION / ORDER / CREDIT", "credit": "Original Culture & Taste visual", "kind": "data_diagram", "origin_url": null, "rights_basis": "owned_original"}
     },
     {
       "id": "arteen-taipei-hotel-rooms",
@@ -112,7 +112,7 @@
       ],
       "image_credit": "Culture & Taste original SVG / no third-party image",
       "english": {"title": "HOTEL AS GALLERY", "deck": "A room becomes a temporary author space.", "abstract": "Arteen Taipei is recorded as a spatial action, not proof of long-term impact."},
-      "media": {"asset": "assets/arteen-room-grid.svg", "alt": "A grid of hotel rooms temporarily becoming separate young artists galleries", "caption": "ARTEEN / HOTEL AS GALLERY", "credit": "Original Culture & Taste visual"}
+      "media": {"asset": "assets/arteen-room-grid.svg", "alt": "A grid of hotel rooms temporarily becoming separate young artists galleries", "caption": "ARTEEN / HOTEL AS GALLERY", "credit": "Original Culture & Taste visual", "kind": "data_diagram", "origin_url": null, "rights_basis": "owned_original"}
     },
     {
       "id": "sfmoma-giant-arc",
@@ -129,7 +129,7 @@
       ],
       "image_credit": "Culture & Taste original SVG / no third-party image",
       "english": {"title": "A CLOUD BEFORE A TICKET", "deck": "Scale changes the first step into the museum.", "abstract": "SFMOMA describes a free first-floor installation built from nearly 75,000 handmade units."},
-      "media": {"asset": "assets/giant-arc-kite-field.svg", "alt": "A field of small kite units bending across a gallery diagram", "caption": "75,000 UNITS / FREE FLOOR", "credit": "Original Culture & Taste visual"}
+      "media": {"asset": "assets/giant-arc-kite-field.svg", "alt": "A field of small kite units bending across a gallery diagram", "caption": "75,000 UNITS / FREE FLOOR", "credit": "Original Culture & Taste visual", "kind": "data_diagram", "origin_url": null, "rights_basis": "owned_original"}
     },
     {
       "id": "palace-seoul-retail-heritage",
@@ -146,7 +146,7 @@
       ],
       "image_credit": "Culture & Taste original SVG / no third-party image",
       "english": {"title": "SEOUL RETAIL / MATERIAL TRANSLATION", "deck": "Heritage becomes a palette inside a commercial room.", "abstract": "Promotional reporting supports the material description; public reception is not inferred."},
-      "media": {"asset": "assets/palace-material-board.svg", "alt": "A material board showing concrete wood mirror and carpet as retail translation surfaces", "caption": "CONCRETE / WOOD / MIRROR / CARPET", "credit": "Original Culture & Taste visual"}
+      "media": {"asset": "assets/palace-material-board.svg", "alt": "A material board showing concrete wood mirror and carpet as retail translation surfaces", "caption": "CONCRETE / WOOD / MIRROR / CARPET", "credit": "Original Culture & Taste visual", "kind": "data_diagram", "origin_url": null, "rights_basis": "owned_original"}
     },
     {
       "id": "bape-saint-mxxxxxx-can-stool",
@@ -170,7 +170,7 @@
       ],
       "image_credit": "Culture & Taste original SVG / no third-party image",
       "english": {"title": "APPAREL → INTERIOR", "deck": "A worn graphic takes one more step into the room.", "abstract": "The official release lists a Can Stool beside the apparel and socks in the first drop."},
-      "media": {"asset": "assets/bape-can-stool.svg", "alt": "A can-shaped stool diagram with a graphic language moving from apparel to interior", "caption": "A small object marks a larger boundary move", "credit": "Original Culture & Taste visual"}
+      "media": {"asset": "assets/bape-can-stool.svg", "alt": "A can-shaped stool diagram with a graphic language moving from apparel to interior", "caption": "A small object marks a larger boundary move", "credit": "Original Culture & Taste visual", "kind": "data_diagram", "origin_url": null, "rights_basis": "owned_original"}
     },
     {
       "id": "tmex-2026-agenda",
@@ -187,7 +187,7 @@
       ],
       "image_credit": "Culture & Taste original SVG / no third-party image",
       "english": {"title": "THE STAGE IS ALSO A SYSTEM", "deck": "Five forum lanes wait for evidence after the event.", "abstract": "TMEX publishes a programme spanning sustainability, AI, international marketing, festivals, and sound-image-space."},
-      "media": {"asset": "assets/tmex-forum-lanes.svg", "alt": "Five lanes for TMEX forums on sound sustainability AI festivals and audiovisual space", "caption": "SOUND / GREEN / AI / FEST / A/V", "credit": "Original Culture & Taste visual"}
+      "media": {"asset": "assets/tmex-forum-lanes.svg", "alt": "Five lanes for TMEX forums on sound sustainability AI festivals and audiovisual space", "caption": "SOUND / GREEN / AI / FEST / A/V", "credit": "Original Culture & Taste visual", "kind": "data_diagram", "origin_url": null, "rights_basis": "owned_original"}
     }
   ],
   "rights_summary": {

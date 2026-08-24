@@ -283,13 +283,55 @@
         "media": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["asset", "alt", "caption", "credit"],
+          "required": ["asset", "alt", "caption", "credit", "kind", "rights_basis"],
           "properties": {
             "asset": { "type": "string", "pattern": "^assets/[A-Za-z0-9._/-]+$" },
             "alt": { "type": "string", "minLength": 1 },
             "caption": { "type": "string", "minLength": 1 },
-            "credit": { "type": "string", "minLength": 1 }
-          }
+            "credit": { "type": "string", "minLength": 1 },
+            "kind": {
+              "description": "How the local asset relates to the source. source_image is allowed only with a separately cleared rights basis.",
+              "enum": ["source_image", "original_illustration", "data_diagram", "historical_artifact"]
+            },
+            "origin_url": {
+              "description": "Public page or image-origin URL. This is provenance, not permission, and does not create a remote display dependency.",
+              "type": ["string", "null"],
+              "format": "uri"
+            },
+            "rights_basis": {
+              "description": "Public label for the separately recorded usage-rights basis. found online, credit, or hotlink availability are not valid values.",
+              "enum": ["owned_original", "open_license", "documented_permission", "public_domain", "historical_artifact_review"]
+            }
+          },
+          "allOf": [
+            {
+              "if": { "properties": { "kind": { "const": "source_image" } } },
+              "then": {
+                "required": ["origin_url"],
+                "properties": {
+                  "origin_url": { "type": "string", "format": "uri" },
+                  "rights_basis": { "enum": ["open_license", "documented_permission", "public_domain"] }
+                }
+              }
+            },
+            {
+              "if": { "properties": { "kind": { "enum": ["original_illustration", "data_diagram"] } } },
+              "then": {
+                "properties": {
+                  "rights_basis": { "const": "owned_original" },
+                  "origin_url": { "type": "null" }
+                }
+              }
+            },
+            {
+              "if": { "properties": { "kind": { "const": "historical_artifact" } } },
+              "then": {
+                "properties": {
+                  "rights_basis": { "const": "historical_artifact_review" }
+                }
+              }
+            }
+          ]
         }
       }
     }

@@ -140,7 +140,8 @@ export async function runStaticChecks({ repoRoot, distDir, issueId }) {
   const visualFailures = manifest.media_required
     ? manifest.stories.filter((story) => {
         const section = storySections.find((candidate) => candidate.includes(`data-story="${story.id}"`)) ?? "";
-        return !/<figure class="story-figure"[\s\S]*?<img\b[^>]*\balt="[^"]+"[\s\S]*?<figcaption>/.test(section);
+        const kind = story.media?.kind ?? "original_illustration";
+        return !new RegExp(`<figure class="story-figure"[^>]*data-media-kind="${kind}"[\\s\\S]*?<img\\b[^>]*\\balt="[^"]+"[\\s\\S]*?<figcaption>`).test(section);
       }).map((story) => story.id)
     : [];
   checks.push(result("story_visuals", visualFailures.length === 0, {

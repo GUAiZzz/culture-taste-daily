@@ -173,10 +173,11 @@ test("independent static QA validates historical archive routes and assets", asy
   assert.equal(qa.checks.find((check) => check.id === "internal_links").status, "PASS");
 });
 
-test("current Preview issue exposes one original visual per story and future draft stays out of latest feed", async () => {
+test("current Preview issue exposes one provenance-labeled visual per story and future draft stays out of latest feed", async () => {
   const current = await readFile(path.join(previewDist, "issues/2026-08-24/index.html"), "utf8");
   const future = await readFile(path.join(previewDist, "issues/2026-08-25/index.html"), "utf8");
   assert.equal((current.match(/class="story-figure"/g) ?? []).length, 8);
+  assert.equal((current.match(/data-media-kind="data_diagram"/g) ?? []).length, 8);
   assert.match(current, /2026-08-24/);
   assert.match(future, /TOMORROW DRAFT · NOT LATEST/);
   assert.doesNotMatch(await readFile(path.join(previewDist, "index.html"), "utf8"), /issues\/2026-08-25\//);
@@ -226,6 +227,48 @@ test("JavaScript-only article fails the full-article/no-JS boundary", async () =
   await writeFile(htmlPath, jsOnly, "utf8");
   const qa = await runStaticChecks({ repoRoot, distDir: target, issueId });
   assert.equal(qa.checks.find((check) => check.id === "full_article_and_sources").status, "FAIL");
+});
+
+test("source image without a cleared provenance basis is rejected before build", async () => {
+  const sourceCopy = path.join(workspace, "source-source-image-without-rights");
+  await cp(validSource, sourceCopy, { recursive: true });
+  const manifestPath = path.join(sourceCopy, issueId, "issue-manifest.public.json");
+  const manifest = await readJson(manifestPath);
+  manifest.media_required = true;
+  manifest.stories[0].media = {
+    asset: "assets/fixture.svg",
+    alt: "Synthetic source image",
+    caption: "Synthetic source image",
+    credit: "Synthetic source",
+    kind: "source_image",
+  };
+  await writeJson(manifestPath, manifest);
+  await assert.rejects(
+    buildSite({ repoRoot, sourceRoot: sourceCopy, outDir: path.join(workspace, "dist-source-image-without-rights"), issueId }),
+    /failed schema validation/,
+  );
+});
+
+test("source image marked found-online is rejected as an invalid rights basis", async () => {
+  const sourceCopy = path.join(workspace, "source-source-image-found-online");
+  await cp(validSource, sourceCopy, { recursive: true });
+  const manifestPath = path.join(sourceCopy, issueId, "issue-manifest.public.json");
+  const manifest = await readJson(manifestPath);
+  manifest.media_required = true;
+  manifest.stories[0].media = {
+    asset: "assets/fixture.svg",
+    alt: "Synthetic source image",
+    caption: "Synthetic source image",
+    credit: "Synthetic source",
+    kind: "source_image",
+    origin_url: "https://example.invalid/image.svg",
+    rights_basis: "found_online",
+  };
+  await writeJson(manifestPath, manifest);
+  await assert.rejects(
+    buildSite({ repoRoot, sourceRoot: sourceCopy, outDir: path.join(workspace, "dist-source-image-found-online"), issueId }),
+    /failed schema validation/,
+  );
 });
 
 test("source-ledger.private.json fixture is rejected before build", async () => {

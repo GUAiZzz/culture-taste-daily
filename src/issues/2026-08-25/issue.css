@@ -331,6 +331,7 @@ body[data-issue="2026-08-25"] img {
 body[data-issue="2026-08-25"] .issue-nav-panel {
   width: min(100% - 2rem, 90rem);
   margin-inline: auto;
+  overflow: hidden;
 }
 
 body[data-issue="2026-08-25"] .issue-nav-panel {
