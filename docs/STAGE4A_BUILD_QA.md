@@ -23,6 +23,12 @@ Input for one issue lives under `src/issues/YYYY-MM-DD/`:
 
 All article text is present in HTML. JavaScript is not required for the cover, article, archive, Sources & Dates, navigation, or links.
 
+## Shared core and issue expression
+
+`core/styles/base.css` is deliberately functional. It owns box sizing, skip-link and focus mechanics, safe media sizing, navigation overflow/touch safety, responsive safety, reduced motion, and a homepage/archive shell scoped to `data-shell="publication"`.
+
+It does not choose an issue palette, background, typography personality or display scale, editorial width, density, image treatment, decoration, or spatial rhythm. Those choices live explicitly in each scoped `src/issues/YYYY-MM-DD/issue.css`. This is a boundary, not a configurable theme system.
+
 ## Determinism and identity
 
 The build verifies and records:
@@ -58,7 +64,7 @@ The public manifest and build report describe what the generator produced. They 
 
 ### B. Independent technical evidence
 
-`npm run qa` validates the artifact rather than trusting generator fields. It checks schema and digest integrity, HTML, landmarks/headings, full static article presence, Sources & Dates, internal links, assets, keyboard focus, basic accessibility, no-JavaScript reading, and private-material patterns. It captures:
+`npm run qa` validates the artifact rather than trusting generator fields. It checks schema and digest integrity, HTML, landmarks/headings, full static article presence, Sources & Dates, internal links, assets, keyboard focus, basic accessibility, no-JavaScript reading, and private-material patterns. Private-material rejection is layered with repository ignore rules; neither layer replaces the other. It captures:
 
 - desktop `1440×900`;
 - mobile `390×844`;
@@ -104,7 +110,7 @@ Outputs are intentionally untracked. A reviewer can inspect `.stage4/evidence/<i
 
 ## Fail-closed simulations
 
-The regression suite proves that malformed HTML, missing assets, JavaScript-only reading, prohibited private material, missing or stale evidence, post-evidence artifact mutation, failed technical evidence, unknown rights, and mismatched digests cannot authorize the local gate. It also proves that a manifest `PASS` cannot bypass independent failure and that the previous-good identifier is preserved on block.
+The regression suite proves that malformed HTML, missing assets, JavaScript-only reading, prohibited private material, missing or stale evidence, post-evidence artifact mutation, failed technical evidence, unknown rights, and mismatched digests cannot authorize the local gate. Prohibited fixtures include `.env`, credentials JSON, `private/`, `vendor/harry-tone/`, and `source-ledger.private.json`. It also proves that a manifest `PASS` cannot bypass independent failure, that the previous-good identifier is preserved on block, and that shared core CSS stays functional rather than becoming an issue template.
 
 ## Dependency rationale
 

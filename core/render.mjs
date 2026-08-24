@@ -89,7 +89,7 @@ function shell({ title, body, baseCss, pathPrefix = "./" }) {
   <title>${escapeHtml(title)}</title>
   <style>${baseCss}</style>
 </head>
-<body>
+<body data-shell="publication">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <p class="non-production-label">LOCAL NON-PRODUCTION BUILD · NOT DEPLOYED</p>
   <header class="site-header"><a href="${pathPrefix}">Culture &amp; Taste Daily</a><a href="${pathPrefix}archive/">Archive</a></header>

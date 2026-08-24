@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { after, before, test } from "node:test";
-import { cp, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { cp, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -53,6 +53,18 @@ async function clonedDist(name) {
   return target;
 }
 
+async function expectPrivateFixtureRejected(name, relativePath, contents = "fixture only\n") {
+  const sourceCopy = path.join(workspace, `source-private-${name}`);
+  const prohibitedPath = path.join(sourceCopy, issueId, relativePath);
+  await cp(validSource, sourceCopy, { recursive: true });
+  await mkdir(path.dirname(prohibitedPath), { recursive: true });
+  await writeFile(prohibitedPath, contents, "utf8");
+  await assert.rejects(
+    buildSite({ repoRoot, sourceRoot: sourceCopy, outDir: path.join(workspace, `dist-private-${name}`), issueId }),
+    /Private material check failed/,
+  );
+}
+
 before(async () => {
   workspace = await mkdtemp(path.join(os.tmpdir(), "culture-taste-stage4-"));
   distDir = path.join(workspace, "dist-valid");
@@ -103,6 +115,20 @@ test("deterministic rebuild produces the same candidate and artifact digests", a
   assert.equal(second.artifact_digest, buildReport.artifact_digest);
 });
 
+test("shared core remains functional and leaves issue visual decisions to issue CSS", async () => {
+  const baseCss = await readFile(path.join(repoRoot, "core/styles/base.css"), "utf8");
+  const issueCss = await readFile(path.join(repoRoot, "src/issues/2026-08-25/issue.css"), "utf8");
+  assert.match(baseCss, /\.skip-link/);
+  assert.match(baseCss, /:focus-visible/);
+  assert.match(baseCss, /prefers-reduced-motion/);
+  assert.match(baseCss, /body\[data-shell="publication"\]/);
+  assert.doesNotMatch(baseCss, /#[0-9a-f]{3,8}\b/i);
+  assert.doesNotMatch(baseCss, /(?:^|\n)\s*(?:article|h1|h2|h3)(?:\s|,|\{)/);
+  assert.match(issueCss, /body\[data-issue="2026-08-25"\][\s\S]*background:/);
+  assert.match(issueCss, /body\[data-issue="2026-08-25"\]\s+h1[\s\S]*font-size:/);
+  assert.match(issueCss, /max-width:/);
+});
+
 test("malformed HTML fails independent static QA", async () => {
   const target = await clonedDist("dist-malformed");
   const htmlPath = path.join(target, "issues", issueId, "index.html");
@@ -131,14 +157,24 @@ test("JavaScript-only article fails the full-article/no-JS boundary", async () =
   assert.equal(qa.checks.find((check) => check.id === "full_article_and_sources").status, "FAIL");
 });
 
-test("private source-ledger fixture is rejected before build", async () => {
-  const sourceCopy = path.join(workspace, "source-private");
-  await cp(validSource, sourceCopy, { recursive: true });
-  await writeFile(path.join(sourceCopy, issueId, "source-ledger.private.json"), "{}\n", "utf8");
-  await assert.rejects(
-    buildSite({ repoRoot, sourceRoot: sourceCopy, outDir: path.join(workspace, "dist-private"), issueId }),
-    /Private material check failed/,
-  );
+test("source-ledger.private.json fixture is rejected before build", async () => {
+  await expectPrivateFixtureRejected("source-ledger", "source-ledger.private.json", "{}\n");
+});
+
+test(".env fixture is rejected before build", async () => {
+  await expectPrivateFixtureRejected("env", ".env", "FIXTURE_TOKEN=not-a-real-secret\n");
+});
+
+test("credentials.json fixture is rejected before build", async () => {
+  await expectPrivateFixtureRejected("credentials", "credentials.json", "{}\n");
+});
+
+test("private directory fixture is rejected before build", async () => {
+  await expectPrivateFixtureRejected("private-directory", "private/notes.txt");
+});
+
+test("vendor/harry-tone fixture is rejected before build", async () => {
+  await expectPrivateFixtureRejected("vendored-harrytone", "vendor/harry-tone/SKILL.md");
 });
 
 test("missing technical evidence is BLOCKED and preserves previous good", async () => {
