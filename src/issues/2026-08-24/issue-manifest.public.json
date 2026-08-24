@@ -146,7 +146,7 @@
         {"title": "2026 TMEX 台北音樂博覽會 8/27 登場", "publisher": "Taipei Music Center", "url": "https://www.tmc.taipei/tw/news/announcement/2FDb231761f9", "published_date": "2026-08-22", "event_date": "2026-08-27/2026-08-30"}
       ],
       "image_credit": "Taipei Music Center source image preview / click through to source",
-      "media": {"asset": "assets/tmex-forum-lanes.svg", "alt": "Taipei Music Expo announcement image from the linked official source", "caption": "SOURCE IMAGE / click through to the Taipei Music Center announcement", "credit": "Taipei Music Center · Preview-only external image", "kind": "source_image", "origin_url": "https://www.tmc.taipei/tw/news/announcement/2FDb231761f9", "rights_basis": "preview_user_authorized_external", "external_image_url": "https://www.tmc.taipei/files/1787396628jvRIKFwQ3t.jpg"}
+      "media": {"asset": "assets/tmex-forum-lanes.svg", "alt": "Taipei Music Expo announcement image from the linked official source", "caption": "SOURCE IMAGE / click through to the Taipei Music Center announcement", "credit": "Taipei Music Center · Preview-only external image", "kind": "source_image", "origin_url": "https://www.tmc.taipei/tw/news/announcement/2FDb231761f9", "rights_basis": "preview_user_authorized_external", "external_image_url": "https://www.tmc.taipei/files/20260822190550501.jpg"}
     }
   ],
   "rights_summary": {"required_assets": 8, "unknown_required_assets": 5, "status": "blocked"},
