@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://culture-taste-daily.invalid/schemas/editorial-review.schema.json",
+  "title": "Named Editorial and Visual Review Evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "kind", "scope", "reviewer", "issue_id", "candidate_digest", "artifact_digest", "reviewed_at", "decision", "checks", "comment"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "kind": { "const": "editorial_visual_review" },
+    "scope": { "const": "local_non_production" },
+    "reviewer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "name"],
+      "properties": {
+        "type": { "const": "human" },
+        "name": { "type": "string", "minLength": 1 }
+      }
+    },
+    "issue_id": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "candidate_digest": { "$ref": "#/$defs/sha256" },
+    "artifact_digest": { "$ref": "#/$defs/sha256" },
+    "reviewed_at": { "type": ["string", "null"], "format": "date-time" },
+    "decision": { "enum": ["PENDING", "APPROVE", "REJECT"] },
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["editorial_truth_judgment", "harrytone", "cultural_appropriateness", "image_rights_disposition", "hierarchy", "reference_integrity", "visual_authorship", "desktop_mobile_translation", "historical_fidelity"],
+      "properties": {
+        "editorial_truth_judgment": { "$ref": "#/$defs/reviewStatus" },
+        "harrytone": { "$ref": "#/$defs/reviewStatus" },
+        "cultural_appropriateness": { "$ref": "#/$defs/reviewStatus" },
+        "image_rights_disposition": { "$ref": "#/$defs/reviewStatus" },
+        "hierarchy": { "$ref": "#/$defs/reviewStatus" },
+        "reference_integrity": { "$ref": "#/$defs/reviewStatus" },
+        "visual_authorship": { "$ref": "#/$defs/reviewStatus" },
+        "desktop_mobile_translation": { "$ref": "#/$defs/reviewStatus" },
+        "historical_fidelity": { "$ref": "#/$defs/reviewStatus" }
+      }
+    },
+    "comment": { "type": "string" }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "reviewStatus": { "enum": ["PENDING", "APPROVE", "REJECT", "NOT_APPLICABLE"] }
+  }
+}

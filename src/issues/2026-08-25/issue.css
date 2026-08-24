@@ -1,0 +1,150 @@
+body[data-issue="2026-08-25"] {
+  background:
+    linear-gradient(90deg, transparent 0 11%, rgba(217, 255, 67, 0.22) 11% 11.35%, transparent 11.35%),
+    #101552;
+  color: #f5f0e6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  font-size: 18px;
+  font-synthesis: none;
+  line-height: 1.75;
+}
+
+body[data-issue="2026-08-25"] a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+body[data-issue="2026-08-25"] .site-header,
+body[data-issue="2026-08-25"] .site-footer,
+body[data-issue="2026-08-25"] .issue-nav,
+body[data-issue="2026-08-25"] main {
+  width: min(100% - 2rem, 76rem);
+  margin-inline: auto;
+}
+
+body[data-issue="2026-08-25"] .site-header,
+body[data-issue="2026-08-25"] .site-footer {
+  padding-block: 1.25rem;
+  color: #d9ff43;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body[data-issue="2026-08-25"] .non-production-label {
+  margin: 0;
+  padding: 0.55rem 1rem;
+  background: #101552;
+  color: #d9ff43;
+  font: 700 0.75rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+body[data-issue="2026-08-25"] .issue-nav {
+  color: #d9ff43;
+  border-block: 1px solid currentColor;
+}
+
+body[data-issue="2026-08-25"] .issue-nav ul {
+  gap: 0.35rem;
+  padding-block: 0.5rem;
+}
+
+body[data-issue="2026-08-25"] .issue-nav a {
+  padding: 0.35rem 0.7rem;
+}
+
+body[data-issue="2026-08-25"] main {
+  padding-block: clamp(2rem, 6vw, 5rem);
+}
+
+body[data-issue="2026-08-25"] article,
+body[data-issue="2026-08-25"] .sources {
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
+body[data-issue="2026-08-25"] h1,
+body[data-issue="2026-08-25"] h2,
+body[data-issue="2026-08-25"] h3 {
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+body[data-issue="2026-08-25"] h1 {
+  margin: 0 0 2rem;
+  font-size: clamp(3rem, 11vw, 8rem);
+  letter-spacing: -0.06em;
+}
+
+body[data-issue="2026-08-25"] article > h2 {
+  position: relative;
+  margin-top: clamp(5rem, 12vw, 10rem);
+  padding-top: 1rem;
+  border-top: 1px solid #b7c9ff;
+  font-size: clamp(1.8rem, 4vw, 3.6rem);
+}
+
+body[data-issue="2026-08-25"] article > h2::before {
+  content: "";
+  position: absolute;
+  top: -0.45rem;
+  left: -1rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: #d9ff43;
+}
+
+body[data-issue="2026-08-25"] p {
+  max-width: 42rem;
+}
+
+body[data-issue="2026-08-25"] article a {
+  color: #d9ff43;
+}
+
+body[data-issue="2026-08-25"] .sources {
+  margin-top: 7rem;
+  padding-top: 2rem;
+  border-top: 2px solid currentColor;
+  color: #b7c9ff;
+}
+
+body[data-issue="2026-08-25"] .sources h2 {
+  font-size: clamp(1.8rem, 4vw, 3.6rem);
+}
+
+body[data-issue="2026-08-25"] .sources li {
+  margin-block: 0.75rem;
+}
+
+body[data-issue="2026-08-25"] .source-meta {
+  font-size: 0.82rem;
+  opacity: 0.75;
+}
+
+body[data-issue="2026-08-25"] img {
+  display: block;
+}
+
+@media (max-width: 42rem) {
+  body[data-issue="2026-08-25"] {
+    font-size: 17px;
+  }
+
+  body[data-issue="2026-08-25"] .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  body[data-issue="2026-08-25"] main {
+    padding-top: 2.5rem;
+  }
+
+  body[data-issue="2026-08-25"] h1 {
+    font-size: clamp(3rem, 18vw, 5.6rem);
+  }
+}

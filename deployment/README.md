@@ -2,6 +2,6 @@
 
 GitHub Pages, preview hosting, and production deployment are not enabled.
 
-No workflow, deploy key, environment, Pages source, custom domain, or production branch is configured in this stage.
+No workflow, deploy key, environment, Pages source, custom domain, or production branch is configured. Stage ④A adds only a local gate simulation; every decision it emits is schema-bound to `production_authority: false`.
 
-Future deployment authority must require the approved evidence gate and explicit human acceptance. Generator output, manifest `PASS`, scores, and visual self-review cannot trigger deployment.
+Any later deployment design requires separate authorization and must consume exact artifact-bound technical evidence plus named human editorial/visual acceptance. Generator output, manifest `PASS`, scores, visual self-review, or a local gate file cannot trigger deployment.

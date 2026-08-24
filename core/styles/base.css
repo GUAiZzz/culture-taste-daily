@@ -1,0 +1,123 @@
+/* Functional core only: semantic access and responsive safety, not issue art direction. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  background: Canvas;
+  color: CanvasText;
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.issue-nav {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.issue-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.issue-nav a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.source-meta {
+  display: block;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* The publication index/archive shell is stable and never styles issue articles. */
+body[data-shell="publication"] {
+  padding-inline: 1rem;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+body[data-shell="publication"] .site-header,
+body[data-shell="publication"] .site-footer,
+body[data-shell="publication"] main {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+body[data-shell="publication"] .site-header,
+body[data-shell="publication"] .site-footer {
+  padding-block: 1rem;
+}
+
+body[data-shell="publication"] main {
+  padding-block: 2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

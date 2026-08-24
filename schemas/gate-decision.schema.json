@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://culture-taste-daily.invalid/schemas/gate-decision.schema.json",
+  "title": "Local Non-Production Evidence Gate Decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "kind", "scope", "production_authority", "issue_id", "candidate_digest", "artifact_digest", "decision", "reasons", "previous_good_release", "selected_release"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "kind": { "const": "evidence_gate_decision" },
+    "scope": { "const": "local_non_production_simulation" },
+    "production_authority": { "const": false },
+    "issue_id": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "candidate_digest": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "artifact_digest": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "decision": { "enum": ["AUTHORIZED", "BLOCKED"] },
+    "reasons": { "type": "array", "items": { "type": "string" } },
+    "previous_good_release": { "type": ["string", "null"] },
+    "selected_release": { "type": ["string", "null"] }
+  }
+}

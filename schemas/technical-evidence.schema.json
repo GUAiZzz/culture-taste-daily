@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://culture-taste-daily.invalid/schemas/technical-evidence.schema.json",
+  "title": "Independent Technical Evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "kind", "scope", "producer", "issue_id", "candidate_digest", "artifact_digest", "created_at", "status", "checks", "renders", "limitations"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "kind": { "const": "independent_technical_evidence" },
+    "scope": { "const": "local_non_production" },
+    "producer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "tool"],
+      "properties": {
+        "role": { "const": "independent_technical" },
+        "tool": { "type": "string", "minLength": 1 }
+      }
+    },
+    "issue_id": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "candidate_digest": { "$ref": "#/$defs/sha256" },
+    "artifact_digest": { "$ref": "#/$defs/sha256" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "status": { "enum": ["PASS", "FAIL"] },
+    "checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "status", "detail"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "status": { "enum": ["PASS", "FAIL"] },
+          "detail": {}
+        }
+      }
+    },
+    "renders": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/render" }
+    },
+    "limitations": { "type": "array", "items": { "type": "string" } }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "render": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "width", "height", "java_script", "reduced_motion"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "java_script": { "type": "boolean" },
+        "reduced_motion": { "type": "boolean" }
+      }
+    }
+  }
+}

@@ -29,6 +29,11 @@ __MACOSX/
 tmp/
 coverage/
 
+# Stage ④A generated evidence and test output
+.stage4/
+test-results/
+playwright-report/
+
 # Generated release directories are not authorized yet
 dist/
 release/

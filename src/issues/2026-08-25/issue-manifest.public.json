@@ -1,14 +1,28 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "issue_id": "2026-08-25",
   "publication_date": "2026-08-25",
   "timezone": "Asia/Shanghai",
+  "candidate_created_at": null,
+  "research_locked_at": "2026-08-24T10:10:00+08:00",
+  "content_locked_at": "2026-08-24T10:48:15+08:00",
   "status": "PASS",
-  "core_version": "v3",
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v1",
   "content_lock": {
     "status": "locked",
     "sha256": "c7a484db9ca2cb5939337882ea1e0a389faef3e2533c50eafd99307ac7fad3d9",
     "locked_at": "2026-08-24T10:48:15+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "c7a484db9ca2cb5939337882ea1e0a389faef3e2533c50eafd99307ac7fad3d9",
+    "art_direction_sha256": "9f6fef80003de2cb2c7c579c1775e33d5e9c3f0ead06453f93d5216470dfad46",
+    "issue_style_sha256": "5c08410c612d9050f84ccac8f5d2aae9bb8441a9bce549d45e76d9c0b0a7c5bf"
   },
   "harrytone": {
     "repository": "GUAiZzz/harry-tone",
@@ -160,6 +174,19 @@
       "image_credit": null
     }
   ],
+  "rights_summary": {
+    "required_assets": 0,
+    "unknown_required_assets": 0,
+    "status": "clear"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": null
+  },
+  "evidence_refs": {
+    "technical": [],
+    "editorial_visual": [],
+    "gate": []
+  },
   "qa": {
     "html_parse": "pass",
     "assets": "pass",
@@ -172,6 +199,8 @@
   },
   "limitations": [
     "Local review candidate only; this manifest cannot authorize deployment.",
+    "Exact first materialization time is unavailable because this candidate predates canonical V3; candidate_created_at remains null and must fail the local evidence gate.",
+    "Research locked on 2026-08-24 for a 2026-08-25 issue, outside the canonical publication-day final-refresh window; this remains non-production test input.",
     "HarryTone visual-editorial support used a user-supplied pinned snapshot and is not claimed as canonical repository state.",
     "No third-party images are included; CSS-only graphics preserve rights separation.",
     "Arteen Taipei and Palace Seoul are explicitly constrained by source-access and promotional-material limits."

@@ -1,0 +1,68 @@
+body[data-issue="2026-08-20"] {
+  padding-inline: 1rem;
+  background: #f7f3ea;
+  color: #17203a;
+  font-family: system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+body[data-issue="2026-08-20"] .site-header,
+body[data-issue="2026-08-20"] .site-footer,
+body[data-issue="2026-08-20"] .issue-nav,
+body[data-issue="2026-08-20"] main {
+  width: 100%;
+  max-width: 68rem;
+  margin-inline: auto;
+}
+
+body[data-issue="2026-08-20"] .site-header,
+body[data-issue="2026-08-20"] .site-footer {
+  padding-block: 1rem;
+}
+
+body[data-issue="2026-08-20"] .non-production-label {
+  margin: 0;
+  padding: 0.5rem;
+  border-block: 1px solid currentColor;
+  text-align: center;
+}
+
+body[data-issue="2026-08-20"] .issue-nav {
+  border-block: 1px solid currentColor;
+}
+
+body[data-issue="2026-08-20"] .issue-nav ul {
+  gap: 0.75rem;
+}
+
+body[data-issue="2026-08-20"] .issue-nav a {
+  padding-inline: 0.25rem;
+}
+
+body[data-issue="2026-08-20"] main {
+  padding-block: 3rem;
+}
+
+body[data-issue="2026-08-20"] article,
+body[data-issue="2026-08-20"] .sources {
+  max-width: 44rem;
+  margin-inline: auto;
+}
+
+body[data-issue="2026-08-20"] h1 {
+  font-size: clamp(2.5rem, 9vw, 5.5rem);
+  line-height: 1;
+}
+
+body[data-issue="2026-08-20"] h2 {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid #17203a;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  line-height: 1.15;
+}
+
+body[data-issue="2026-08-20"] .sources {
+  margin-top: 5rem;
+}
