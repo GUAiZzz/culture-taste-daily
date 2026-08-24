@@ -70,7 +70,7 @@ function wrapIssueSections(article, manifest) {
       const externalImage = story.media.external_image_url;
       const mediaSourceUrl = story.media.origin_url ?? story.sources[0]?.url ?? "#";
       const imageMarkup = externalImage
-        ? `<a class="source-image-link" href="${escapeHtml(mediaSourceUrl)}" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="${escapeHtml(externalImage)}" alt="${escapeHtml(story.media.alt)}" loading="eager" decoding="async" width="1200" height="720"></a><p class="source-image-fallback"><a href="${escapeHtml(mediaSourceUrl)}" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p>`
+        ? `<a class="source-image-link" href="${escapeHtml(mediaSourceUrl)}" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="${escapeHtml(externalImage)}" alt="${escapeHtml(story.media.alt)}" loading="lazy" decoding="async" width="1200" height="720"></a><p class="source-image-fallback"><a href="${escapeHtml(mediaSourceUrl)}" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p>`
         : `<img src="./${escapeHtml(story.media.asset)}" alt="${escapeHtml(story.media.alt)}" loading="eager" decoding="async" width="1200" height="720">`;
       const figureLabel = externalImage ? `${mediaLabel} · PREVIEW ONLY` : mediaLabel;
       const figure = `<figure class="story-figure" data-media-kind="${escapeHtml(mediaKind)}"${externalImage ? " data-external-preview=\"true\"" : ""}>${imageMarkup}<figcaption><strong>${figureLabel}</strong> ${escapeHtml(story.media.caption)} <span>${escapeHtml(story.media.credit)}</span></figcaption></figure>`;
@@ -147,9 +147,13 @@ function shell({ title, body, baseCss, siteCss, siteJs = "", pathPrefix = "./", 
 }
 
 function issueCard(issue, pathPrefix, position) {
+  const coverWords = (issue.title_en || issue.title).trim().split(/\s+/);
+  const coverBreak = Math.max(1, Math.ceil(coverWords.length / 2));
+  const coverLead = coverWords.slice(0, coverBreak).join(" ");
+  const coverTail = coverWords.slice(coverBreak).join(" ");
   const cover = issue.coverAsset
-    ? `<img src="${pathPrefix}assets/${escapeHtml(issue.coverAsset)}" alt="${escapeHtml(issue.title_en || issue.title)} historical cover preview">`
-    : `<div class="type-cover" aria-hidden="true"><span>THE VENUE</span><b>SPEAKS</b><i>${escapeHtml(issue.publication_date.slice(5).replace("-", "/"))}</i></div>`;
+    ? `<img src="${pathPrefix}assets/${escapeHtml(issue.coverAsset)}" alt="${escapeHtml(issue.title_en || issue.title)} issue cover preview">`
+    : `<div class="type-cover" aria-hidden="true"><span>${escapeHtml(coverLead)}</span>${coverTail ? `<b>${escapeHtml(coverTail)}</b>` : ""}<i>${escapeHtml(issue.publication_date.slice(5).replace("-", "/"))}</i></div>`;
   return `<li class="issue-card" data-kind="${escapeHtml(issue.kind)}" style="--card-index:${position}"><a href="${pathPrefix}issues/${escapeHtml(issue.issue_id)}/"><div class="issue-card-cover">${cover}<span class="open-mark">OPEN ↗</span></div><div class="issue-card-copy"><p>${escapeHtml(issue.publication_date)} · ${escapeHtml(issue.kind === "current" ? "CURRENT FIELD" : "HISTORICAL ORIGINAL")}</p><h3>${escapeHtml(issue.title)}</h3><strong>${escapeHtml(issue.title_en)}</strong><span>${escapeHtml(issue.deck)}</span></div></a></li>`;
 }
 

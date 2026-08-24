@@ -245,20 +245,24 @@ export async function buildSite({
   const historical = includeHistorical
     ? await buildHistoricalIssues({ historicalRoot: resolvedHistoricalRoot, outDir, baseCss, siteCss, siteJs })
     : [];
-  const publicationIssues = [
-    ...historical,
-    ...issues.map((issue) => ({
+  const currentIssues = await Promise.all(issues.map(async (issue) => {
+    const shellCover = `covers/${issue.issueId}.svg`;
+    return {
       issue_id: issue.issueId,
       publication_date: issue.manifest.publication_date,
       title: issue.title,
       title_en: issue.titleEn,
       deck: issue.manifest.editorial_position,
       kind: "current",
-      coverAsset: null,
+      coverAsset: (await exists(path.join(siteAssets, shellCover))) ? shellCover : null,
       digest: issue.candidateDigest,
       production_eligible: issue.dateSemantics.production_candidate_valid,
       visibility: issue.manifest.visibility,
-    })).filter((issue) => issue.visibility !== "future_draft"),
+    };
+  }));
+  const publicationIssues = [
+    ...historical,
+    ...currentIssues.filter((issue) => issue.visibility !== "future_draft"),
   ].sort((a, b) => a.publication_date.localeCompare(b.publication_date));
 
   const archiveDir = path.join(outDir, "archive");

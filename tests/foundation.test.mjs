@@ -150,11 +150,11 @@ test("repository Preview preserves all three historical originals as non-product
   );
 });
 
-test("Preview homepage and archive expose the current 2026-08-24 field plus historical issues", async () => {
+test("Preview homepage and archive expose the current 2026-08-23/24 fields plus historical issues", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
   const archive = await readFile(path.join(previewDist, "archive/index.html"), "utf8");
   const current = await readFile(path.join(previewDist, "issues/2026-08-24/index.html"), "utf8");
-  for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-24"]) {
+  for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24"]) {
     assert.ok(home.includes(`issues/${date}/`));
     assert.ok(archive.includes(`issues/${date}/`));
   }
@@ -165,10 +165,28 @@ test("Preview homepage and archive expose the current 2026-08-24 field plus hist
   assert.match(home, /rel="icon" type="image\/png" href="\.\/assets\/culture-taste-earth\.png"/);
   assert.match(archive, /rel="icon" type="image\/png" href="\.\.\/assets\/culture-taste-earth\.png"/);
   assert.match(current, /class="issue-brand"[\s\S]*culture-taste-earth\.png/);
+  assert.match(home, /THE DAY CLOSES AND OPENS/);
+  assert.doesNotMatch(home, /THE VENUE<\/span><b>SPEAKS/);
+  assert.match(home, /assets\/covers\/2026-08-23\.svg/);
+  assert.match(archive, /assets\/covers\/2026-08-23\.svg/);
+  assert.match(home, /<div class="type-cover"[^>]*><span>THE ENTRY POINT<\/span><b>IS MOVING<\/b><i>08\/24<\/i>/);
+  assert.doesNotMatch(home, /<div class="type-cover"[^>]*><span>THE DAY/);
   await readFile(path.join(previewDist, "assets/culture-taste-earth.png"));
-  for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg"]) {
+  for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg", "2026-08-23.svg"]) {
     await readFile(path.join(previewDist, "assets/covers", cover));
   }
+});
+
+test("2026-08-23 Preview has a dated visual and source chain for every story", async () => {
+  const issue = await readFile(path.join(previewDist, "issues/2026-08-23/index.html"), "utf8");
+  const manifest = await readJson(path.join(previewDist, "issues/2026-08-23/issue-manifest.public.json"));
+  assert.equal((issue.match(/class="story-figure"/g) ?? []).length, 7);
+  assert.equal(manifest.stories.length, 7);
+  assert.equal(manifest.stories.filter((story) => story.media?.external_image_url).length, 5);
+  assert.equal((issue.match(/data-external-preview="true"[\s\S]*?loading="lazy"/g) ?? []).length, 5);
+  assert.ok(manifest.stories.every((story) => story.sources.length > 0 && story.media));
+  assert.equal(manifest.status, "BLOCKED");
+  assert.equal(manifest.rights_summary.status, "blocked");
 });
 
 test("independent static QA validates historical archive routes and assets", async () => {
