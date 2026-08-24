@@ -79,7 +79,22 @@ The routes below are seed entrances. Open the exact detail page used for each ca
 | adidas | <https://news.adidas.com/> | Product, Originals, partnership, release date, official assets | Separate newsroom fact from editorial interpretation |
 | On | <https://press.on-running.com/> | Product, collaboration, retail, innovation, official timing | Company claims and modeled impact require source and method checks |
 
-Extend this family dynamically to the official page of any relevant brand, store, label, designer, artist, or collaborator. Do not maintain a giant static brand list. A Hypebeast or social post about a release triggers an official-page check first.
+Extend this family dynamically to the official page of any relevant brand, store, label, designer, artist, or collaborator. The maintained radar at `automation/brand-radar.json` preserves the owner-selected subjects that must be revisited over time; it is a rotational discovery registry, not a whitelist and not a requirement to publish brand news. A Hypebeast or social post about a release triggers an official-page check first.
+
+#### 3.1.1 Maintained brand-and-culture radar
+
+The public registry separates a durable research obligation from any personal social-media account. It contains the established taste anchors and the newly requested streetwear, Japanese, Korean, Greater China, European, luxury, sport, outdoor, retail, and cultural subjects.
+
+Operating rules:
+
+- `npm run daily:preflight` chooses one deterministic cohort each day; all cohorts are covered once in a seven-day cycle, in addition to the Supreme, Stüssy, and active-runway standing beats;
+- a radar entry means “check for a relevant new official signal,” not “write about this subject”;
+- official brand, designer, retailer, event, or archive pages may establish only subject-originated facts under P0;
+- cultural impact, reception, breakout status, or trend claims still require independent or direct community evidence appropriate to the claim;
+- the scan must resolve and open the current official detail route rather than treating a saved name, social profile, homepage, or search snippet as evidence;
+- Instagram login and social following are not part of the research contract and must never become runtime dependencies;
+- missing, renamed, ambiguous, inactive, or compromised identities are recorded as access limits and held until reverified;
+- “Daisy” remains excluded from the active rotation until its exact brand and official source identity are supplied; the system must not guess which subject was intended.
 
 ### 3.2 Fashion calendars and runway authority
 

@@ -33,6 +33,31 @@ function selectedBeats(policy, weekday) {
   return policy.standing_beats.filter((beat) => beat.cadence === "daily" || (beat.cadence === "thursday" && weekday === "Thursday"));
 }
 
+function selectedBrandCohort(radar, targetDate) {
+  const day = Math.floor(Date.parse(`${targetDate}T00:00:00Z`) / 86_400_000);
+  return radar.cohorts[day % radar.cohorts.length];
+}
+
+function validateBrandRadar({ policy, radar, blockers }) {
+  if (policy.brand_radar?.registry !== "automation/brand-radar.json") blockers.push("brand radar registry path is invalid");
+  if (policy.brand_radar?.selection !== "daily_deterministic_cohort_plus_standing_beats") blockers.push("brand radar selection mode is invalid");
+  if (policy.brand_radar?.publication_quota !== false || policy.brand_radar?.social_following_required !== false) {
+    blockers.push("brand radar cannot require publication or social following");
+  }
+  if (radar.rules?.publication_quota !== false || radar.rules?.social_following_required !== false) {
+    blockers.push("brand radar rules cannot require publication or social following");
+  }
+  if (!Array.isArray(radar.cohorts) || radar.cohorts.length !== radar.rotation?.full_cycle_days) {
+    blockers.push("brand radar cohorts must match the declared full cycle");
+    return;
+  }
+  const subjects = radar.cohorts.flatMap((cohort) => cohort.subjects ?? []);
+  if (subjects.length === 0 || subjects.some((subject) => typeof subject !== "string" || subject.trim() === "")) {
+    blockers.push("brand radar subjects must be non-empty names");
+  }
+  if (new Set(subjects).size !== subjects.length) blockers.push("brand radar subjects must be unique");
+}
+
 async function priorIssueDates(repoRoot, issueDate) {
   const issueRoot = path.join(repoRoot, "src/issues");
   if (!(await exists(issueRoot))) return [];
@@ -48,11 +73,13 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
   if (!(now instanceof Date) || Number.isNaN(now.getTime())) throw new Error("now must be a valid Date");
 
   const policyPath = path.join(repoRoot, "automation/daily-policy.json");
+  const brandRadarPath = path.join(repoRoot, "automation/brand-radar.json");
   const contractDependencyPath = path.join(repoRoot, "dependencies/contract.json");
   const harrytoneDependencyPath = path.join(repoRoot, "dependencies/harrytone.json");
   const previewWorkflowPath = path.join(repoRoot, ".github/workflows/preview.yml");
   const gitignorePath = path.join(repoRoot, ".gitignore");
   const policy = await readJson(policyPath);
+  const brandRadar = await readJson(brandRadarPath);
   const contract = await readJson(contractDependencyPath);
   const harrytone = await readJson(harrytoneDependencyPath);
   const shanghai = shanghaiParts(now);
@@ -63,6 +90,7 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
   if (targetDate !== shanghai.date) blockers.push("issue date must match the current Asia/Shanghai calendar date");
   if (policy.timezone !== "Asia/Shanghai") blockers.push("daily policy timezone must remain Asia/Shanghai");
   if (policy.mode !== "scheduled_dry_run_candidate") blockers.push("daily policy may authorize dry-run candidates only");
+  validateBrandRadar({ policy, radar: brandRadar, blockers });
 
   const currentMinute = minutes(shanghai.time);
   const windowStart = minutes(policy.schedule.research_window_start);
@@ -115,6 +143,7 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
 
   const issueExists = await exists(path.join(repoRoot, "src/issues", targetDate));
   const status = blockers.length === 0 ? "READY_FOR_DRY_RUN" : "BLOCKED";
+  const brandCohort = brandRadar.cohorts.length > 0 ? selectedBrandCohort(brandRadar, targetDate) : null;
   return {
     schema_version: 1,
     kind: "daily_candidate_preflight",
@@ -128,6 +157,15 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
     branch_name: `${policy.branch_prefix}-${targetDate}`,
     source_lanes: policy.required_source_lanes,
     standing_beats: selectedBeats(policy, shanghai.weekday).map((beat) => beat.id),
+    brand_radar: brandCohort
+      ? {
+          registry: policy.brand_radar.registry,
+          cohort_id: brandCohort.id,
+          subjects: brandCohort.subjects,
+          publication_quota: false,
+          social_following_required: false,
+        }
+      : null,
     previous_issue_dates: await priorIssueDates(repoRoot, targetDate),
     runtime_checks_required: policy.required_runtime_checks,
     deployment: {

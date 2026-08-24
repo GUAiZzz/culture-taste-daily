@@ -80,3 +80,66 @@ test("daily preflight verifies the existing manual-only Preview and privacy defe
   assert.equal(report.status, "READY_FOR_DRY_RUN");
   assert.doesNotMatch(report.blockers.join("\n"), /Preview workflow|privacy ignore/);
 });
+
+test("brand radar is deterministic, complete, and independent from social following", async () => {
+  const report = await evaluateDailyPreflight({
+    repoRoot,
+    issueDate: "2026-08-24",
+    now: new Date("2026-08-23T22:15:00Z"),
+  });
+  const radar = JSON.parse(await readFile(path.join(repoRoot, "automation/brand-radar.json"), "utf8"));
+  const subjects = radar.cohorts.flatMap((cohort) => cohort.subjects);
+  const requiredAdditions = [
+    "Stüssy",
+    "Palace",
+    "Brain Dead",
+    "Aimé Leon Dore",
+    "Noah",
+    "Corteiz",
+    "Denim Tears",
+    "UNDERCOVER",
+    "WTAPS",
+    "NEIGHBORHOOD",
+    "sacai",
+    "Needles",
+    "visvim",
+    "AURALEE",
+    "Hender Scheme",
+    "POST ARCHIVE FACTION",
+    "ADER ERROR",
+    "thisisneverthat",
+    "Gentle Monster",
+    "KUSIKOHC",
+    "ROARINGWILD",
+    "Randomevent",
+    "STAFFONLY",
+    "SHUSHU/TONG",
+    "SANKUANZ",
+    "HAMCUS",
+    "GOOPiMADE",
+    "Guerrilla-Group",
+    "INVINCIBLE",
+    "Loewe",
+    "Miu Miu",
+    "Rick Owens",
+    "Stone Island",
+    "C.P. Company",
+    "Martine Rose",
+    "Wales Bonner",
+    "Dries Van Noten",
+    "Lemaire",
+    "ASICS SportStyle",
+    "New Balance",
+    "HOKA",
+    "Merrell 1TRL",
+    "Nike ACG"
+  ];
+  assert.equal(new Set(subjects).size, subjects.length);
+  for (const subject of requiredAdditions) assert.ok(subjects.includes(subject), `missing brand radar subject: ${subject}`);
+  assert.equal(radar.rules.publication_quota, false);
+  assert.equal(radar.rules.social_following_required, false);
+  assert.equal(report.brand_radar.registry, "automation/brand-radar.json");
+  assert.equal(report.brand_radar.publication_quota, false);
+  assert.equal(report.brand_radar.social_following_required, false);
+  assert.ok(report.brand_radar.subjects.length > 0);
+});

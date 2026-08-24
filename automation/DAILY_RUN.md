@@ -6,7 +6,7 @@ This runbook is the auditable instruction surface for the scheduled Culture & Ta
 
 ## Schedule and date
 
-- Start at `06:15` in `Asia/Shanghai` every day.
+- Start at `09:15` in `Asia/Shanghai` every day.
 - Run `npm run daily:preflight` before browsing or editing.
 - The target issue date must equal the current Shanghai calendar date.
 - Research must be refreshed and locked between `06:00` and `08:30` Shanghai time.
@@ -42,10 +42,12 @@ Follow `docs/CULTURE_TASTE_SOURCE_MAP.md` and use detail pages rather than headl
 1. Scan P0 official calendars, institutions, brands, designers, artists, labels, venues, and organizers.
 2. Scan strong independent fashion/culture, art/design, and relevant specialist sources.
 3. Complete all five regional lanes from `automation/daily-policy.json`; an empty lane is allowed when recorded privately.
-4. Check direct community evidence only as a bounded discovery signal.
-5. Deduplicate by underlying event and separate publication date, event date, access time, and current status.
-6. Assign evidence confidence before editorial weight.
-7. Apply the trend, breakout-object, sensitive-news, and commercial-content gates when relevant.
+4. Load `automation/brand-radar.json`, check the deterministic cohort reported by `npm run daily:preflight`, and apply the standing beats below. The registry is a discovery obligation, not a publication quota.
+5. Resolve each selected subject to its current official public route. Instagram following, login, or private access is never required. An exact official detail page is still required before a brand announcement can become P0 evidence.
+6. Check direct community evidence only as a bounded discovery signal.
+7. Deduplicate by underlying event and separate publication date, event date, access time, and current status.
+8. Assign evidence confidence before editorial weight.
+9. Apply the trend, breakout-object, sensitive-news, and commercial-content gates when relevant.
 
 Standing checks are research obligations, never publication quotas:
 
@@ -54,6 +56,8 @@ Standing checks are research obligations, never publication quotas:
 - active luxury runway calendars every day;
 - exhibitions and cultural programmes every day;
 - small breakout objects and observable cultural shifts every day.
+
+The complete maintained brand-and-culture radar is covered once per seven-day deterministic rotation. A subject's presence in the radar never proves relevance, independence, cultural impact, or image rights, and it never requires a social-media follow.
 
 The issue may publish none of these when evidence or editorial relevance is weak.
 

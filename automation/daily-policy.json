@@ -31,6 +31,12 @@
     "united_states_or_canada",
     "rotating_global_lane"
   ],
+  "brand_radar": {
+    "registry": "automation/brand-radar.json",
+    "selection": "daily_deterministic_cohort_plus_standing_beats",
+    "publication_quota": false,
+    "social_following_required": false
+  },
   "standing_beats": [
     {
       "id": "supreme-thursday-drop",
