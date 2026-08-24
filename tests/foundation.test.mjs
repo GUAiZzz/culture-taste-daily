@@ -177,10 +177,22 @@ test("current Preview issue exposes one provenance-labeled visual per story and 
   const current = await readFile(path.join(previewDist, "issues/2026-08-24/index.html"), "utf8");
   const future = await readFile(path.join(previewDist, "issues/2026-08-25/index.html"), "utf8");
   assert.equal((current.match(/class="story-figure"/g) ?? []).length, 8);
-  assert.equal((current.match(/data-media-kind="data_diagram"/g) ?? []).length, 8);
+  assert.equal((current.match(/data-media-kind="source_image"/g) ?? []).length, 5);
+  assert.equal((current.match(/data-external-preview="true"/g) ?? []).length, 10);
+  assert.equal((current.match(/图片加载失败？在来源页面查看原图/g) ?? []).length, 5);
+  assert.match(current, /href="https:\/\/hypebeast\.com\/2026\/8\/supreme-fall-winter-2026-collection"/);
+  assert.match(current, /href="https:\/\/en\.jp\.bape\.com\/blogs\/news\/saintmxxxxxx-26fw"/);
   assert.match(current, /2026-08-24/);
   assert.match(future, /TOMORROW DRAFT · NOT LATEST/);
   assert.doesNotMatch(await readFile(path.join(previewDist, "index.html"), "utf8"), /issues\/2026-08-25\//);
+});
+
+test("Preview source-image figures remain rights-blocked and click through to their publishers", async () => {
+  const manifest = await readJson(path.join(previewDist, "issues/2026-08-24/issue-manifest.public.json"));
+  assert.equal(manifest.rights_summary.status, "blocked");
+  assert.equal(manifest.rights_summary.unknown_required_assets, 5);
+  assert.equal(manifest.stories.filter((story) => story.media?.external_image_url).length, 5);
+  assert.ok(manifest.stories.filter((story) => story.media?.external_image_url).every((story) => story.media.rights_basis === "preview_user_authorized_external"));
 });
 
 test("2026-08-22 historical web edition keeps all exact source pages addressable", async () => {

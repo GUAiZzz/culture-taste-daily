@@ -5,15 +5,15 @@ Culture & Taste should prefer a real image supplied by the information source wh
 ## The publication rule
 
 1. Select the story and the exact image together. The image must be relevant to the claim and its role must be explicit: `source_image`, `original_illustration`, `data_diagram`, or `historical_artifact`.
-2. Record the image-origin page or direct asset URL as `media.origin_url`. This is provenance only; it is not a rights grant and it must never become a remote display dependency.
+2. Record the image-origin page or direct asset URL as `media.origin_url`. This is provenance only; it is not a rights grant. A publisher-hosted `external_image_url` is permitted only for the visibly non-production Preview treatment described below; it must never enter a production artifact.
 3. Record a specific public rights label in `media.rights_basis`: `open_license`, `documented_permission`, `public_domain`, `owned_original`, or `historical_artifact_review`.
-4. Copy the image into the issue package only after the rights basis is verified for this repository, territory, format, and duration. The build accepts only local assets, so a source image that is merely linkable cannot silently become a hotlink.
+4. Copy the image into the issue package only after the rights basis is verified for this repository, territory, format, and duration. The production build accepts only local display-critical assets. A Preview-only linked figure may temporarily show a publisher-hosted URL, but it is marked `PREVIEW ONLY`, keeps the rights summary `blocked`, and cannot pass the production gate.
 5. Keep permission emails, contracts, restrictions, and full evidence in the private source-ledger. The public manifest contains only the minimum provenance and rights label needed for reader trust.
 6. Caption the image accurately. A source image may document the event; an original diagram or contextual image must be labeled as such and cannot be presented as documentary evidence.
 
 ## What is blocked
 
-The following are never valid rights bases by themselves: `found online`, `credit`, `press access`, `fair use` guessed by the editor, an official website URL, an `og:image` tag, or a remote embed. Unknown, contradictory, expired, or out-of-scope rights block that image. If no source image clears the check, use a clearly labeled original diagram, a verified text/data composition, or a deliberate text-only passage.
+The following are never valid production rights bases by themselves: `found online`, `credit`, `press access`, `fair use` guessed by the editor, an official website URL, an `og:image` tag, or a remote embed. Unknown, contradictory, expired, or out-of-scope rights block that image. The Preview-only `preview_user_authorized_external` label is a display exception, not a permission claim; it is always blocked from production. If no source image clears the check, use a clearly labeled original diagram, a verified text/data composition, or a deliberate text-only passage.
 
 ## Manifest contract
 
@@ -29,4 +29,4 @@ Every issue visual declares:
 
 ## Current Preview
 
-The 2026-08-24 and 2026-08-25 Preview issues currently use original data diagrams, explicitly labeled in the figure caption. We have not copied Stüssy, BAPE, SFMOMA, Southbank, Seoul Fashion Week, Supreme, or other source-page photography into the public repository because the pages inspected do not provide a clear public reuse license. Replacing a selected figure with the source's own image is the next safe step after the source owner supplies a press asset, written permission, or a clearly applicable open-license record.
+The 2026-08-24 Preview now surfaces five publisher-hosted source-image URLs (Supreme/Hypebeast, Stüssy, BAPE, SFMOMA, and Taipei Music Center) inside linked figures; clicking the figure opens the cited source. These are explicitly `PREVIEW ONLY`, use `preview_user_authorized_external`, and set the public rights summary to `blocked`, so they cannot pass the production gate. The Southbank, Seoul Fashion Week, and empty luxury-runway slots remain original data diagrams because no source image was safely surfaced for them. A production cutover still requires the source owner’s press asset, written permission, or a clearly applicable open-license record.

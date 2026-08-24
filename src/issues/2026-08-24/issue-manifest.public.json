@@ -7,7 +7,7 @@
   "candidate_created_at": "2026-08-24T14:20:47+08:00",
   "research_locked_at": "2026-08-24T14:20:47+08:00",
   "content_locked_at": "2026-08-24T14:22:00+08:00",
-  "status": "DEGRADED",
+  "status": "BLOCKED",
   "media_required": true,
   "contract": {
     "repository": "GUAiZzz/culture-taste-daily",
@@ -24,7 +24,7 @@
   "source_hashes": {
     "content_sha256": "7c6182645bb289d3fa8f45c9e707a76ede4f8c6bebd04e9f0dafd9af76754177",
     "art_direction_sha256": "917c7b300bd21086b31330d94e68dd872926d5eed8d1f6348038001b7fd7413f",
-    "issue_style_sha256": "0dd495ed0553fd4223a6b8bbadfa386807dded076dd5f48ffd82291d1b9759e5"
+    "issue_style_sha256": "c0a82806402b28680b15b3b7d4b4575b31171107700a26dd37713aadf0a19bd1"
   },
   "harrytone": {
     "repository": "GUAiZzz/harry-tone",
@@ -39,7 +39,7 @@
     "background_logic": "deep indigo holds a sequence of paper, orange, lime and blue signal fields",
     "palette_logic": "indigo for the clock, paper for verification, orange for movement, lime for confirmed windows, blue for open questions",
     "type_scale_logic": "compressed display titles for entry points, readable 18px body copy, monospaced timestamps and source labels",
-    "image_behavior": "one original local SVG information figure per story; no third-party editorial photography",
+    "image_behavior": "source image preview where a publisher image endpoint is available, linked back to the source; original data diagrams only where no source image is safely surfaced",
     "page_density_and_tempo": "dense cover, two release-led majors, tactile signals, explicit runway gap, forward-looking watches, quiet exit",
     "core_visual_action": "a route changes from clock to object to room to city without pretending the signals are one trend",
     "cover_composition": "a large moving-entry title beside a route board connecting drop, release, object, gallery and runway",
@@ -65,8 +65,8 @@
         {"title": "Supreme official store — New", "publisher": "Supreme", "url": "https://us.supreme.com/collections/new?order=1113564120", "published_date": "2026-08-23", "event_date": "2026-08-20"},
         {"title": "Supreme Fall/Winter 2026 collection", "publisher": "Hypebeast", "url": "https://hypebeast.com/2026/8/supreme-fall-winter-2026-collection", "published_date": "2026-08-20", "event_date": "2026-08-20"}
       ],
-      "image_credit": "Culture & Taste original SVG / no third-party image",
-      "media": {"asset": "assets/supreme-drop-window.svg", "alt": "A clock, product card and street path diagramming a weekly Supreme drop window", "caption": "TIME → PRODUCT → STREET / an original editorial diagram", "credit": "Original Culture & Taste visual", "kind": "data_diagram", "origin_url": null, "rights_basis": "owned_original"}
+      "image_credit": "Hypebeast source image preview / click through to source",
+      "media": {"asset": "assets/supreme-drop-window.svg", "alt": "Supreme Fall/Winter 2026 collection image from the linked Hypebeast source", "caption": "SOURCE IMAGE / click through to the Hypebeast report", "credit": "Hypebeast · Preview-only external image", "kind": "source_image", "origin_url": "https://hypebeast.com/2026/8/supreme-fall-winter-2026-collection", "rights_basis": "preview_user_authorized_external", "external_image_url": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F08%2F17%2Fsupreme-fall-winter-2026-collection-0.jpg?w=960&cbr=1&q=90&fit=max"}
     },
     {
       "id": "stussy-fall-26-release",
@@ -76,8 +76,8 @@
       "sources": [
         {"title": "Stüssy Fall '26 Collection", "publisher": "Stüssy", "url": "https://www.stussy.com/blogs/news/fall-26-collection", "published_date": "2026-08-18", "event_date": "2026-08-21"}
       ],
-      "image_credit": "Culture & Taste original SVG / no third-party image",
-      "media": {"asset": "assets/stussy-release-grid.svg", "alt": "A typographic grid mapping Stüssy Fall 26 release times across regions", "caption": "NORTH AMERICA / UK-EUROPE / JAPAN-KOREA", "credit": "Original Culture & Taste visual", "kind": "data_diagram", "origin_url": null, "rights_basis": "owned_original"}
+      "image_credit": "Stüssy source image preview / click through to source",
+      "media": {"asset": "assets/stussy-release-grid.svg", "alt": "Stüssy Fall 26 collection image from the linked official source", "caption": "SOURCE IMAGE / click through to the official Stüssy release note", "credit": "Stüssy · Preview-only external image", "kind": "source_image", "origin_url": "https://www.stussy.com/blogs/news/fall-26-collection", "rights_basis": "preview_user_authorized_external", "external_image_url": "https://www.stussy.com/cdn/shop/files/sync-33854868947141.jpg?v=1787064187&width=1920"}
     },
     {
       "id": "bape-can-stool",
@@ -88,8 +88,8 @@
         {"title": "A BATHING APE® x ©SAINT Mxxxxxx", "publisher": "BAPE", "url": "https://en.jp.bape.com/blogs/news/saintmxxxxxx-26fw", "published_date": null, "event_date": "2026-08-22/2026-08-23"},
         {"title": "BAPE × ©SAINT Mxxxxxx Fall/Winter 2026", "publisher": "Hypebeast", "url": "https://hypebeast.com/2026/8/bape-saint-mxxxxxx-fall-winter-2026-capsule-collaboration-release-info", "published_date": "2026-08-21", "event_date": "2026-08-22/2026-08-23"}
       ],
-      "image_credit": "Culture & Taste original SVG / no third-party image",
-      "media": {"asset": "assets/bape-can-stool.svg", "alt": "A can-shaped stool diagram with a graphic language moving from apparel to interior", "caption": "A small object marks a larger boundary move", "credit": "Original Culture & Taste visual", "kind": "data_diagram", "origin_url": null, "rights_basis": "owned_original"}
+      "image_credit": "BAPE source image preview / click through to source",
+      "media": {"asset": "assets/bape-can-stool.svg", "alt": "BAPE and ©SAINT Mxxxxxx collection image from the linked official source", "caption": "SOURCE IMAGE / click through to the official BAPE release note", "credit": "BAPE · Preview-only external image", "kind": "source_image", "origin_url": "https://en.jp.bape.com/blogs/news/saintmxxxxxx-26fw", "rights_basis": "preview_user_authorized_external", "external_image_url": "https://i.shgcdn.com/2c481803-8340-45ca-9719-91918b982fa0/-/format/auto/-/quality/normal/"}
     },
     {
       "id": "sfmoma-giant-arc",
@@ -99,8 +99,8 @@
       "sources": [
         {"title": "Jacob Hashimoto: Giant Arc", "publisher": "SFMOMA", "url": "https://www.sfmoma.org/exhibition/jacob-hashimoto-giant-arc/", "published_date": null, "event_date": "2026-08-22"}
       ],
-      "image_credit": "Culture & Taste original SVG / no third-party image",
-      "media": {"asset": "assets/giant-arc-kite-field.svg", "alt": "A field of small kite units bending across a gallery diagram", "caption": "75,000 UNITS / FREE FLOOR", "credit": "Original Culture & Taste visual", "kind": "data_diagram", "origin_url": null, "rights_basis": "owned_original"}
+      "image_credit": "SFMOMA source image preview / click through to source",
+      "media": {"asset": "assets/giant-arc-kite-field.svg", "alt": "Jacob Hashimoto Giant Arc installation image from the linked SFMOMA source", "caption": "SOURCE IMAGE / click through to the SFMOMA exhibition page", "credit": "SFMOMA · Preview-only external image", "kind": "source_image", "origin_url": "https://www.sfmoma.org/exhibition/jacob-hashimoto-giant-arc/", "rights_basis": "preview_user_authorized_external", "external_image_url": "https://d1hhug17qm51in.cloudfront.net/www-media/2026/05/15165415/Jacob_Hashimoto_230515083637-4235-TobinRogers-1024x683.jpg"}
     },
     {
       "id": "southbank-curatorial-seat",
@@ -111,7 +111,7 @@
         {"title": "Young adults with experience of having parents in prison to curate exhibition", "publisher": "The Art Newspaper", "url": "https://www.theartnewspaper.com/2026/08/21/young-adults-with-experience-of-having-parents-in-prison-to-curate-southbank-centre-exhibition", "published_date": "2026-08-21", "event_date": "2026-10-16/2026-11-29"},
         {"title": "Southbank Centre programme", "publisher": "Southbank Centre", "url": "https://www.southbankcentre.co.uk/", "published_date": null, "event_date": "2026-10-16/2026-11-29"}
       ],
-      "image_credit": "Culture & Taste original SVG / no third-party image",
+      "image_credit": "Culture & Taste original SVG / no source image safely surfaced",
       "media": {"asset": "assets/southbank-curatorial-seat.svg", "alt": "Three seats shifting selection, order and credit in a curatorial room diagram", "caption": "SELECTION / ORDER / CREDIT", "credit": "Original Culture & Taste visual", "kind": "data_diagram", "origin_url": null, "rights_basis": "owned_original"}
     },
     {
@@ -122,7 +122,7 @@
       "sources": [
         {"title": "Seoul Fashion Week expands beyond DDP to Lotte World Tower", "publisher": "Seoul Metropolitan Government", "url": "https://world.seoul.go.kr/seoul-fashion-week-expands-beyond-ddp-to-lotte-world-tower-turning-seouls-iconic-landmarks-into-runways/", "published_date": "2026-08-21", "event_date": "2026-09-01/2026-09-06"}
       ],
-      "image_credit": "Culture & Taste original SVG / no third-party image",
+      "image_credit": "Culture & Taste original SVG / no source image safely surfaced",
       "media": {"asset": "assets/seoul-runway-map.svg", "alt": "A route connecting DDP industry programming to Lotte public programming", "caption": "DDP / INDUSTRY → LOTTE / PUBLIC", "credit": "Original Culture & Taste visual", "kind": "data_diagram", "origin_url": null, "rights_basis": "owned_original"}
     },
     {
@@ -134,7 +134,7 @@
         {"title": "Fashion Shows index", "publisher": "Vogue", "url": "https://www.vogue.com/fashion-shows", "published_date": null, "event_date": null},
         {"title": "Rakuten Fashion Week TOKYO official schedule", "publisher": "Japan Fashion Week Organization", "url": "https://rakutenfashionweektokyo.com/en/schedule/", "published_date": null, "event_date": "2026-08-24"}
       ],
-      "image_credit": "Culture & Taste original SVG / no third-party image",
+      "image_credit": "Culture & Taste original SVG / no source image safely surfaced",
       "media": {"asset": "assets/runway-radar-clear.svg", "alt": "A radar card with an open slot for a verified new luxury-house show", "caption": "NO VERIFIED NEW LUXURY-HOUSE SHOW IN THIS WINDOW", "credit": "Original Culture & Taste visual", "kind": "data_diagram", "origin_url": null, "rights_basis": "owned_original"}
     },
     {
@@ -145,18 +145,18 @@
       "sources": [
         {"title": "2026 TMEX 台北音樂博覽會 8/27 登場", "publisher": "Taipei Music Center", "url": "https://www.tmc.taipei/tw/news/announcement/2FDb231761f9", "published_date": "2026-08-22", "event_date": "2026-08-27/2026-08-30"}
       ],
-      "image_credit": "Culture & Taste original SVG / no third-party image",
-      "media": {"asset": "assets/tmex-forum-lanes.svg", "alt": "Five lanes for TMEX forums on sound, sustainability, AI, festivals and audiovisual space", "caption": "SOUND / GREEN / AI / FEST / A/V", "credit": "Original Culture & Taste visual", "kind": "data_diagram", "origin_url": null, "rights_basis": "owned_original"}
+      "image_credit": "Taipei Music Center source image preview / click through to source",
+      "media": {"asset": "assets/tmex-forum-lanes.svg", "alt": "Taipei Music Expo announcement image from the linked official source", "caption": "SOURCE IMAGE / click through to the Taipei Music Center announcement", "credit": "Taipei Music Center · Preview-only external image", "kind": "source_image", "origin_url": "https://www.tmc.taipei/tw/news/announcement/2FDb231761f9", "rights_basis": "preview_user_authorized_external", "external_image_url": "https://www.tmc.taipei/files/1787396628jvRIKFwQ3t.jpg"}
     }
   ],
-  "rights_summary": {"required_assets": 8, "unknown_required_assets": 0, "status": "clear"},
+  "rights_summary": {"required_assets": 8, "unknown_required_assets": 5, "status": "blocked"},
   "artifact_digests": {"issue_payload_sha256": null},
   "evidence_refs": {"technical": [], "editorial_visual": [], "gate": []},
   "qa": {"html_parse": "pass", "assets": "pass", "internal_links": "pass", "no_js_reading": "pass", "accessibility": "pass", "desktop_render": "pass", "mobile_render": "pass", "reduced_motion": "pass"},
   "limitations": [
     "This is a non-production Preview issue; manifest status and QA fields are reporting only.",
     "Research and content were refreshed on 2026-08-24 after the canonical 06:00–08:30 production refresh window; the issue is intentionally not production-eligible.",
-    "All eight visuals are original local SVG information diagrams. No third-party editorial photography or private source-ledger instance is included.",
+    "Five source-image previews are displayed from publisher-hosted URLs with a click-through to the source; these are Preview-only and are not rights-cleared for production. The remaining three visuals are original local SVG information diagrams.",
     "Supreme and Stüssy release claims are limited to the official page states and release windows observed; inventory, sales and cultural impact are not inferred.",
     "The runway radar explicitly records a missing qualifying luxury-house event rather than filling the slot with stale or unverified material."
   ]

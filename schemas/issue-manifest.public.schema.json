@@ -299,8 +299,13 @@
               "format": "uri"
             },
             "rights_basis": {
-              "description": "Public label for the separately recorded usage-rights basis. found online, credit, or hotlink availability are not valid values.",
-              "enum": ["owned_original", "open_license", "documented_permission", "public_domain", "historical_artifact_review"]
+              "description": "Public label for the separately recorded usage-rights basis. preview_user_authorized_external is Preview-only and can never clear the production gate.",
+              "enum": ["owned_original", "open_license", "documented_permission", "public_domain", "historical_artifact_review", "preview_user_authorized_external"]
+            },
+            "external_image_url": {
+              "description": "Preview-only source image URL. It is displayed inside a linked figure and must never be used for production or treated as a local asset.",
+              "type": ["string", "null"],
+              "pattern": "^https://"
             }
           },
           "allOf": [
@@ -310,7 +315,7 @@
                 "required": ["origin_url"],
                 "properties": {
                   "origin_url": { "type": "string", "format": "uri" },
-                  "rights_basis": { "enum": ["open_license", "documented_permission", "public_domain"] }
+                  "rights_basis": { "enum": ["open_license", "documented_permission", "public_domain", "preview_user_authorized_external"] }
                 }
               }
             },
@@ -319,7 +324,8 @@
               "then": {
                 "properties": {
                   "rights_basis": { "const": "owned_original" },
-                  "origin_url": { "type": "null" }
+                  "origin_url": { "type": "null" },
+                  "external_image_url": { "type": "null" }
                 }
               }
             },
@@ -328,6 +334,24 @@
               "then": {
                 "properties": {
                   "rights_basis": { "const": "historical_artifact_review" }
+                }
+              }
+            },
+            {
+              "if": { "properties": { "rights_basis": { "const": "preview_user_authorized_external" } } },
+              "then": {
+                "required": ["external_image_url"],
+                "properties": {
+                  "kind": { "const": "source_image" },
+                  "external_image_url": { "type": "string", "pattern": "^https://" }
+                }
+              }
+            },
+            {
+              "if": { "required": ["external_image_url"], "properties": { "external_image_url": { "type": "string" } } },
+              "then": {
+                "properties": {
+                  "rights_basis": { "const": "preview_user_authorized_external" }
                 }
               }
             }

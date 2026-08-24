@@ -102,6 +102,17 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss }) {
       if (!story.media) throw new Error(`${issueId} story ${story.id} is missing required media`);
       const mediaPath = path.join(issueRoot, story.media.asset.replace(/^assets\//, "assets/"));
       if (!(await exists(mediaPath))) throw new Error(`${issueId} story ${story.id} media asset is missing: ${story.media.asset}`);
+      if (story.media.external_image_url) {
+        if (manifest.visibility !== "published_preview" && manifest.visibility !== "future_draft") {
+          throw new Error(`${issueId} story ${story.id} external source image is Preview-only`);
+        }
+        if (story.media.rights_basis !== "preview_user_authorized_external") {
+          throw new Error(`${issueId} story ${story.id} external source image lacks the Preview-only rights label`);
+        }
+        if (manifest.rights_summary.status !== "blocked" || manifest.rights_summary.unknown_required_assets < 1) {
+          throw new Error(`${issueId} external source image requires a blocked public rights summary`);
+        }
+      }
     }
   }
 

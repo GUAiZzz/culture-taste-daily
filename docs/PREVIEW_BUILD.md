@@ -42,7 +42,7 @@ Deployment occurs only through an explicit `workflow_dispatch`. There is no push
 - 2026-08-24 was refreshed after the canonical same-day production window and is Preview-only;
 - 2026-08-25 does not satisfy canonical V3 candidate/research timing and is excluded as a future draft;
 - historical media rights require human review;
-- current Preview figures are original data diagrams because inspected source pages do not yet supply a verified public image-reuse basis;
+- 2026-08-24 includes five linked, publisher-hosted source-image previews; the public rights summary remains `blocked`, so they are Preview-only and cannot authorize production;
 - 2026-08-22 lacks selectable accessible source text;
 - named editorial/visual Preview acceptance has not occurred;
 - production evidence, rollback, post-deploy verification, and daily automation remain unimplemented.

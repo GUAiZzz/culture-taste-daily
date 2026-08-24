@@ -16,7 +16,7 @@ Production Contract V3 is canonical. The repository now builds the real Culture 
 - a local fail-closed gate simulation that has no production authority;
 - deterministic regression and failure-path tests;
 - a designed homepage and filterable archive;
-- one provenance-labeled, rights-clear visual per story in the current and future-draft issue routes; source photography is preferred when its usage basis is verified;
+- one provenance-labeled visual per story in the current and future-draft issue routes; five 2026-08-24 figures are Preview-only source-image links and remain blocked from production until rights are cleared;
 - preserved 2026-08-20 and 2026-08-21 self-contained HTML originals;
 - an honest 16-page facsimile reader for the supplied 2026-08-22 PDF;
 - manually triggered GitHub Pages Preview hosting after CI verification.

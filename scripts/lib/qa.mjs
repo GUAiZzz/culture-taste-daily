@@ -162,7 +162,12 @@ export async function runStaticChecks({ repoRoot, distDir, issueId }) {
       const href = item.attributes.href;
       if (src === "" || href === "") assetErrors.push(`${toPosix(path.relative(distDir, htmlFile))}: empty src/href`);
       const displayReference = src ?? (item.tag.toLowerCase().startsWith("<link") && item.attributes.rel === "stylesheet" ? href : null);
-      if (displayReference && /^https?:/i.test(displayReference)) assetErrors.push(`${toPosix(path.relative(distDir, htmlFile))}: remote display dependency ${displayReference}`);
+      if (displayReference && /^https?:/i.test(displayReference)) {
+        const externalPreview = item.attributes["data-external-preview"] === "true";
+        if (!externalPreview) {
+          assetErrors.push(`${toPosix(path.relative(distDir, htmlFile))}: remote display dependency ${displayReference}`);
+        }
+      }
       if (displayReference) {
         const target = targetForLink(distDir, htmlFile, displayReference);
         if (target) {
