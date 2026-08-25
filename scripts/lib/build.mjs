@@ -233,7 +233,7 @@ export async function buildSite({
     await mkdir(issueOut, { recursive: true });
     await writeFile(
       path.join(issueOut, "index.html"),
-      renderIssue({ content: issue.content, manifest: issue.manifest, baseCss, issueCss: issue.issueCss }),
+      renderIssue({ content: issue.content, manifest: issue.manifest, baseCss, issueCss: issue.issueCss, siteJs }),
       "utf8",
     );
 
@@ -271,6 +271,7 @@ export async function buildSite({
       digest: issue.candidateDigest,
       production_eligible: issue.dateSemantics.production_candidate_valid,
       visibility: issue.manifest.visibility,
+      stories: issue.manifest.stories,
     };
   }));
   const publicationIssues = [

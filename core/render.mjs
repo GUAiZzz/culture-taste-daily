@@ -13,6 +13,10 @@ function issueTitle(content) {
   return match ? match[1].trim() : "Culture & Taste Daily";
 }
 
+function themeBootstrap() {
+  return `<script>(()=>{const themes=["field","coral","analog"];let selected=null;try{const requested=new URLSearchParams(location.search).get("theme");const stored=sessionStorage.getItem("ctd-theme");selected=themes.includes(requested)?requested:themes.includes(stored)?stored:themes[Math.floor(Math.random()*themes.length)];sessionStorage.setItem("ctd-theme",selected);}catch{selected=themes[0];}document.documentElement.dataset.visualTheme=selected;})();</script>`;
+}
+
 function markdownRenderer(manifest) {
   const markdown = new MarkdownIt({ html: false, linkify: false, typographer: false });
   const sectionIds = [...manifest.stories.map((story) => story.id), "exit"];
@@ -83,7 +87,7 @@ function wrapIssueSections(article, manifest) {
   return `<header class="issue-cover"><div class="issue-cover-copy">${introduction}<a class="enter-issue" href="#${escapeHtml(firstId)}">Enter the issue <span aria-hidden="true">↓</span></a></div><div class="issue-cover-visual" aria-hidden="true"><span data-node="cover">COVER</span><span data-node="major">MAJOR</span><span data-node="signal">SIGNAL</span><span data-node="watch">WATCH</span><i></i></div></header>${sections.join("")}`;
 }
 
-export function renderIssue({ content, manifest, baseCss, issueCss }) {
+export function renderIssue({ content, manifest, baseCss, issueCss, siteJs = "" }) {
   const markdown = markdownRenderer(manifest);
   const title = issueTitle(content);
   const article = wrapIssueSections(markdown.render(content, {}), manifest);
@@ -101,18 +105,21 @@ export function renderIssue({ content, manifest, baseCss, issueCss }) {
   <meta name="color-scheme" content="dark">
   <link rel="icon" type="image/png" href="../../assets/culture-taste-earth.png">
   <title>${escapeHtml(title)} — Culture &amp; Taste Daily ${escapeHtml(manifest.publication_date)}</title>
+  ${themeBootstrap()}
   <style>${baseCss}\n${issueCss}</style>
 </head>
 <body data-issue="${escapeHtml(manifest.issue_id)}">
   <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
   <p class="non-production-label">${draftLabel}</p>
-  <header class="site-header"><a class="issue-brand" href="../../"><img class="brand-mark" src="../../assets/culture-taste-earth.png" alt=""><span>Culture &amp; Taste Daily</span></a><span>${escapeHtml(manifest.publication_date)} · Asia/Shanghai</span><a href="../../archive/">Archive</a></header>
+  <header class="site-header"><a class="issue-brand" href="../../" data-theme-link><img class="brand-mark" src="../../assets/culture-taste-earth.png" alt=""><span>Culture &amp; Taste Daily</span></a><span>${escapeHtml(manifest.publication_date)} · Asia/Shanghai</span><span class="theme-status">FILTER · <strong data-theme-status>LOADING</strong></span><a href="../../archive/" data-theme-link>Archive</a></header>
   <details class="issue-nav-panel" open><summary>Issue index <span aria-hidden="true">＋</span></summary><nav class="issue-nav" aria-label="Issue contents"><ul>${navigation}<li><a href="#sources"><span>index</span>Sources &amp; Dates</a></li></ul></nav></details>
   <main id="main-content">
     <article aria-labelledby="issue-title" data-content-sha256="${escapeHtml(manifest.source_hashes.content_sha256)}">${article}</article>
     ${sourceIndex(manifest)}
   </main>
   <footer class="site-footer"><a href="../../archive/">All issues</a><span>Static, readable without JavaScript</span></footer>
+  ${siteJs ? `<script>${siteJs}</script>` : ""}
 </body>
 </html>
 `;
@@ -128,15 +135,16 @@ function shell({ title, body, baseCss, siteCss, siteJs = "", pathPrefix = "./", 
   <meta name="color-scheme" content="light dark">
   <link rel="icon" type="image/png" href="${pathPrefix}assets/culture-taste-earth.png">
   <title>${escapeHtml(title)}</title>
+  ${themeBootstrap()}
   <style>${baseCss}\n${siteCss}</style>
 </head>
 <body data-shell="publication" data-page="${escapeHtml(page)}">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="preview-ribbon"><span>NON-PRODUCTION PREVIEW</span><span>SHANGHAI · 2026</span></div>
   <header class="publication-header">
-    <a class="wordmark" href="${pathPrefix}"><img class="brand-mark" src="${pathPrefix}assets/culture-taste-earth.png" alt=""><span class="wordmark-text"><span>Culture</span><span>&amp; Taste</span><span>Daily</span></span></a>
+    <a class="wordmark" href="${pathPrefix}" data-theme-link><img class="brand-mark" src="${pathPrefix}assets/culture-taste-earth.png" alt=""><span class="wordmark-text"><span>Culture</span><span>&amp; Taste</span><span>Daily</span></span></a>
     <p class="publication-mode">A daily field magazine<br>关于衣服、场地、物件与正在形成的文化</p>
-    <nav aria-label="Publication"><a href="${pathPrefix}">Latest</a><a href="${pathPrefix}archive/">Archive</a></nav>
+    <nav aria-label="Publication"><a href="${pathPrefix}" data-theme-link>Latest</a><a href="${pathPrefix}archive/" data-theme-link>Archive</a></nav>
   </header>
   <main id="main-content">${body}</main>
   <footer class="publication-footer"><p>Culture &amp; Taste Daily</p><p>Every issue keeps its own visual world.<br>Preview before production.</p><a href="${pathPrefix}archive/">Open the complete archive ↗</a></footer>
@@ -154,7 +162,7 @@ function issueCard(issue, pathPrefix, position) {
   const cover = issue.coverAsset
     ? `<img src="${pathPrefix}assets/${escapeHtml(issue.coverAsset)}" alt="${escapeHtml(issue.title_en || issue.title)} issue cover preview">`
     : `<div class="type-cover" aria-hidden="true"><span>${escapeHtml(coverLead)}</span>${coverTail ? `<b>${escapeHtml(coverTail)}</b>` : ""}<i>${escapeHtml(issue.publication_date.slice(5).replace("-", "/"))}</i></div>`;
-  return `<li class="issue-card" data-kind="${escapeHtml(issue.kind)}" style="--card-index:${position}"><a href="${pathPrefix}issues/${escapeHtml(issue.issue_id)}/"><div class="issue-card-cover">${cover}<span class="open-mark">OPEN ↗</span></div><div class="issue-card-copy"><p>${escapeHtml(issue.publication_date)} · ${escapeHtml(issue.kind === "current" ? "CURRENT FIELD" : "HISTORICAL ORIGINAL")}</p><h3>${escapeHtml(issue.title)}</h3><strong>${escapeHtml(issue.title_en)}</strong><span>${escapeHtml(issue.deck)}</span></div></a></li>`;
+  return `<li class="issue-card" data-kind="${escapeHtml(issue.kind)}" style="--card-index:${position}"><a href="${pathPrefix}issues/${escapeHtml(issue.issue_id)}/" data-theme-link><div class="issue-card-cover">${cover}<span class="open-mark">OPEN ↗</span></div><div class="issue-card-copy"><p>${escapeHtml(issue.publication_date)} · ${escapeHtml(issue.kind === "current" ? "CURRENT FIELD" : "HISTORICAL ORIGINAL")}</p><h3>${escapeHtml(issue.title)}</h3><strong>${escapeHtml(issue.title_en)}</strong><span>${escapeHtml(issue.deck)}</span></div></a></li>`;
 }
 
 function issueGrid(issues, pathPrefix) {
@@ -165,9 +173,42 @@ function routeMap() {
   return `<svg class="route-map" viewBox="0 0 720 640" role="img" aria-label="A route connecting cover, major, signal and watch sections"><path d="M86 88 H410 V210 H620 V382 H330 V545 H86"/><circle cx="86" cy="88" r="14"/><circle cx="410" cy="210" r="14"/><circle cx="620" cy="382" r="14"/><circle cx="330" cy="545" r="14"/><text x="72" y="62">COVER</text><text x="360" y="188">MAJOR</text><text x="548" y="360">SIGNALS</text><text x="276" y="590">WATCH</text><text class="route-question" x="70" y="420">WHO GETS TO SPEAK?</text></svg>`;
 }
 
+function themePicker() {
+  const themes = [
+    ["field", "01", "FIELD GREEN", "冷静、自然的绿色光场"],
+    ["coral", "02", "CORAL SIGNAL", "更直接的珊瑚色信号"],
+    ["analog", "03", "2000s TV", "褪色、扫描线与模拟噪点"],
+  ];
+  const buttons = themes.map(([value, number, title, note]) => `<button type="button" data-theme-choice="${value}" aria-pressed="false"><span>${number}</span><strong>${title}</strong><small>${note}</small></button>`).join("");
+  return `<section class="theme-picker" aria-labelledby="theme-picker-title"><div class="theme-copy"><p>CHOOSE YOUR SIGNAL</p><h2 id="theme-picker-title">同一份内容，<br>三种观看温度。</h2><p>首次进入随机选择；你也可以接管。进入文章后，滤镜继续保持，内容、来源和版式都不改变。</p></div><div class="theme-options">${buttons}</div><noscript><p>当前显示原始视觉；开启 JavaScript 后可选择并保留主题。</p></noscript></section>`;
+}
+
+function storyCategory(story) {
+  const signal = `${story.id} ${story.title} ${story.english?.title ?? ""}`.toLowerCase();
+  if (/(tmex|music|sound|音乐|声音)/.test(signal)) return "music";
+  if (/(bape|stool|van-cleef|jewel|object|物件|珠宝|凳)/.test(signal)) return "objects";
+  if (/(fashion|runway|seoul-fashion|时装|秀场)/.test(signal)) return "fashion";
+  return "city";
+}
+
+function dailyIndex(issue) {
+  if (!issue?.stories?.length) return "";
+  const filters = [["all", "ALL"], ["fashion", "FASHION"], ["music", "MUSIC"], ["objects", "OBJECTS"], ["city", "CITY"]]
+    .map(([value, label], index) => `<button type="button" data-story-filter="${value}" aria-pressed="${index === 0}">${label}</button>`)
+    .join("");
+  const cards = issue.stories.map((story, index) => {
+    const category = storyCategory(story);
+    const deck = story.english?.deck ?? story.english?.abstract ?? "Open the verified story and source chain.";
+    return `<li data-story-card data-story-category="${category}" style="--story-index:${index + 1}"><a href="./issues/${escapeHtml(issue.issue_id)}/#${escapeHtml(story.id)}" data-theme-link><span class="radar-visual" data-category="${category}" data-level="${escapeHtml(story.level)}" aria-hidden="true"><i></i><b>${String(index + 1).padStart(2, "0")}</b></span><span class="radar-meta"><strong>${escapeHtml(category)}</strong><time datetime="${escapeHtml(issue.publication_date)}">${escapeHtml(issue.publication_date.replaceAll("-", "."))}</time></span><h3>${escapeHtml(story.title)}</h3><p>${escapeHtml(deck)}</p><span class="radar-link">READ STORY ↗</span></a></li>`;
+  }).join("");
+  return `<section class="daily-index" aria-labelledby="daily-index-title"><header><p>DAILY INDEX / ${escapeHtml(issue.publication_date)}</p><div><h2 id="daily-index-title"><b>WHAT'S</b><i>ON OUR RADAR.</i></h2><p>五个入口，今天的不同切面。这里只重新组织已经核验的内容，不改变任何故事、来源或发布状态。</p></div></header><div class="radar-filters" role="group" aria-label="Filter today's stories">${filters}</div><ol>${cards}</ol></section>`;
+}
+
 export function renderHome({ issues, baseCss, siteCss, siteJs }) {
   const latest = [...issues].sort((a, b) => a.publication_date.localeCompare(b.publication_date)).at(-1);
-  const body = `<section class="home-hero" aria-labelledby="latest-title"><div class="hero-copy"><p class="hero-kicker">ISSUE ${String(issues.length).padStart(2, "0")} / ${escapeHtml(latest.publication_date)}</p><h1 id="latest-title"><a href="./issues/${escapeHtml(latest.issue_id)}/">${escapeHtml(latest.title)}</a></h1><p class="hero-english">${escapeHtml(latest.title_en)}</p><p class="hero-deck">${escapeHtml(latest.deck)}</p><a class="hero-link" href="./issues/${escapeHtml(latest.issue_id)}/">Read the latest issue <span aria-hidden="true">↗</span></a></div><div class="hero-map">${routeMap()}</div></section>
+  const body = `<section class="home-hero" aria-labelledby="latest-title"><div class="hero-copy"><p class="hero-kicker">ISSUE ${String(issues.length).padStart(2, "0")} / ${escapeHtml(latest.publication_date)}</p><h1 id="latest-title"><a href="./issues/${escapeHtml(latest.issue_id)}/" data-theme-link>${escapeHtml(latest.title)}</a></h1><p class="hero-english">${escapeHtml(latest.title_en)}</p><p class="hero-deck">${escapeHtml(latest.deck)}</p><a class="hero-link" href="./issues/${escapeHtml(latest.issue_id)}/" data-theme-link>Read the latest issue <span aria-hidden="true">↗</span></a></div><div class="hero-map">${routeMap()}</div></section>
+  ${themePicker()}
+  ${dailyIndex(latest)}
   <section class="issue-field" aria-labelledby="field-title"><div class="section-heading"><p>THE ISSUES / 20—24 AUG</p><h2 id="field-title">不是同一个模板。<br>是不同的进入。</h2><p>Each issue keeps its own visual grammar. The publication shell only helps you move between them.</p></div>${issueGrid(issues, "./")}</section>
   <section class="editorial-code" aria-labelledby="code-title"><p class="vertical-label">EDITORIAL CODE</p><div><h2 id="code-title">事实先站稳。<br>形式才开始冒险。</h2><p>We follow the story into its own visual world. References teach; they do not dictate. No JavaScript is required to read. No automated PASS can replace a human judgment.</p></div><dl><div><dt>01</dt><dd>TRUTH<br>可核验的事实</dd></div><div><dt>02</dt><dd>AUTHORSHIP<br>独立的表达</dd></div><div><dt>03</dt><dd>ACCESS<br>真实可用</dd></div></dl></section>`;
   return shell({ title: "Culture & Taste Daily — Preview", body, baseCss, siteCss, siteJs, page: "home" });
