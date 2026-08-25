@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://culture-taste-daily.invalid/schemas/daily-radar.public.schema.json",
+  "title": "Culture & Taste Daily public daily radar",
+  "description": "A supplemental homepage index. Items may reference a formal issue story or link directly to a verified first-party source; this file does not add stories to the issue, RSS, or archive.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "date", "items"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "date": { "type": "string", "format": "date" },
+    "items": {
+      "type": "array",
+      "minItems": 8,
+      "items": { "$ref": "#/$defs/item" }
+    }
+  },
+  "$defs": {
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "category"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "category": { "enum": ["fashion", "music", "objects", "city"] },
+        "included_story_id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "title": { "type": "string", "minLength": 1 },
+        "deck": { "type": "string", "minLength": 1 },
+        "publisher": { "type": "string", "minLength": 1 },
+        "official_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "published_date": { "type": ["string", "null"], "format": "date" },
+        "event_date": { "type": ["string", "null"], "minLength": 1 },
+        "media": { "$ref": "#/$defs/media" }
+      }
+    },
+    "media": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "url", "alt", "credit", "origin_authority", "rights_basis"],
+      "properties": {
+        "kind": { "enum": ["image", "video"] },
+        "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "poster_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "alt": { "type": "string", "minLength": 1 },
+        "credit": { "type": "string", "minLength": 1 },
+        "origin_authority": { "const": "first_party_official" },
+        "rights_basis": { "enum": ["preview_user_authorized_external", "cleared_public_use"] }
+      }
+    }
+  }
+}

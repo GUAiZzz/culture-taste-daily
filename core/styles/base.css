@@ -46,8 +46,7 @@ textarea:focus-visible {
   gap: 1rem;
 }
 
-.issue-brand,
-.brand-mark {
+.issue-brand {
   display: inline-flex;
   align-items: center;
 }
@@ -57,10 +56,24 @@ textarea:focus-visible {
   text-decoration: none;
 }
 
-.brand-mark {
-  width: 2rem;
-  height: 2rem;
-  flex: 0 0 auto;
+.brand-type {
+  display: inline-flex;
+  gap: 0.15em;
+  align-items: baseline;
+  color: inherit;
+  font-family: Arial, "Helvetica Neue", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.075em;
+  line-height: 0.9;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.brand-type em {
+  font-family: Georgia, "Times New Roman", "Songti SC", serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.06em;
 }
 
 .issue-nav {
@@ -128,51 +141,6 @@ body[data-shell="publication"] main {
   padding-block: 2rem;
 }
 
-/* Reader-selected atmosphere: visual only, with no effect on source or reading order. */
-html[data-visual-theme]::before,
-html[data-visual-theme]::after {
-  position: fixed;
-  z-index: 80;
-  inset: 0;
-  pointer-events: none;
-  content: "";
-}
-
-html[data-visual-theme="field"]::before {
-  background: radial-gradient(circle at 18% 8%, oklch(82% 0.2 145deg / 0.2), transparent 42%), linear-gradient(125deg, oklch(63% 0.17 155deg / 0.07), transparent 58%);
-  mix-blend-mode: screen;
-}
-
-html[data-visual-theme="coral"]::before {
-  background: radial-gradient(circle at 78% 12%, oklch(74% 0.2 28deg / 0.22), transparent 40%), linear-gradient(145deg, transparent 42%, oklch(68% 0.2 24deg / 0.11));
-  mix-blend-mode: screen;
-}
-
-html[data-visual-theme="analog"] img,
-html[data-visual-theme="analog"] svg,
-html[data-visual-theme="analog"] iframe {
-  filter: saturate(0.52) sepia(0.14) contrast(0.9) brightness(0.96);
-}
-
-html[data-visual-theme="analog"]::before {
-  background: repeating-linear-gradient(0deg, oklch(5% 0 0deg / 0.17) 0 1px, transparent 1px 3px);
-  mix-blend-mode: multiply;
-}
-
-html[data-visual-theme="analog"]::after {
-  background:
-    radial-gradient(ellipse at center, transparent 52%, oklch(5% 0 0deg / 0.26) 100%),
-    repeating-radial-gradient(circle at 22% 38%, oklch(100% 0 0deg / 0.035) 0 1px, transparent 1px 4px);
-  animation: analog-drift 280ms steps(2, end) infinite;
-  mix-blend-mode: overlay;
-}
-
-@keyframes analog-drift {
-  0% { transform: translate3d(0, 0, 0); }
-  33% { transform: translate3d(0.5px, -0.5px, 0); }
-  66% { transform: translate3d(-0.5px, 0.5px, 0); }
-}
-
 .reading-progress {
   position: fixed;
   z-index: 95;
@@ -215,10 +183,6 @@ html[data-visual-theme="analog"]::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
-  }
-
-  html[data-visual-theme="analog"]::after {
-    animation: none;
   }
 
   .has-js body[data-issue] .issue-story {

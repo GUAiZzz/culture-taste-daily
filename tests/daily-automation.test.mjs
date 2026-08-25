@@ -130,6 +130,13 @@ test("daily policy cannot merge, deploy, alter Pages, or touch the legacy reposi
     preview_external_allowed: true,
     production_requires_cleared_rights: true,
   });
+  assert.deepEqual(policy.daily_radar.categories, ["fashion", "music", "objects", "city"]);
+  assert.equal(policy.daily_radar.minimum_items_per_category, 2);
+  assert.equal(policy.daily_radar.supplemental_to_issue, true);
+  assert.equal(policy.daily_radar.changes_issue_selection, false);
+  assert.equal(policy.daily_radar.first_party_official_media_required, true);
+  assert.equal(policy.daily_radar.official_video_preferred_when_available, true);
+  assert.equal(policy.daily_radar.included_in_rss, false);
 });
 
 test("official image gate accepts a linked first-party official Preview image", () => {
