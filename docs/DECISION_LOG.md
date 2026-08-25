@@ -26,6 +26,17 @@ The decisions below became active through V3 activation. Their historical `OLD A
 - Historical boundary: publication dates through `2026-08-25` retain the former `06:00–08:30` rule and are not reclassified
 - Authority boundary: A1 changes no Preview, Pages, deployment, review, privacy, HarryTone, or unattended-automation gate
 
+## Amendment A2 — First-party official image gate
+
+- Human approval: repository owner instruction that every story use an image from its official information source, by a rights-cleared local copy or a linked official Preview treatment
+- Approval recorded: `2026-08-25T12:05:44+08:00` (`Asia/Shanghai`)
+- Effective date: publication dates on or after `2026-08-25`
+- Amendment commit: the commit containing this A2 record; its immutable SHA is the amendment identity
+- Activation: canonical upon merge of the amendment commit
+- Change: each selected story must verify at least one story-specific first-party official image; editorial diagrams and third-party media cannot satisfy the gate
+- Rights boundary: official provenance is not permission; unknown rights remain production-blocking and allow only the visibly linked non-production Preview treatment
+- Authority boundary: A2 changes no Preview dispatch, Pages, deployment, privacy, HarryTone, or unattended-automation gate
+
 ## D01 — Canonical authority and activation
 
 **OLD ASSUMPTION**

@@ -360,6 +360,29 @@ body[data-issue="2026-08-25"] .story-figure img {
   height: auto;
 }
 
+body[data-issue="2026-08-25"] .story-figure .source-image-link {
+  display: block;
+  overflow: hidden;
+  background: #050509;
+}
+
+body[data-issue="2026-08-25"] .story-figure .source-image-link img {
+  min-height: 14rem;
+  max-height: 46rem;
+  object-fit: cover;
+}
+
+body[data-issue="2026-08-25"] .source-image-fallback {
+  margin: 0;
+  padding: 0.55rem 0.8rem 0;
+  color: #ffd126;
+  font: 700 0.68rem/1.35 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+body[data-issue="2026-08-25"] .source-image-fallback a {
+  color: inherit;
+}
+
 body[data-issue="2026-08-25"] .story-figure figcaption {
   display: flex;
   justify-content: space-between;

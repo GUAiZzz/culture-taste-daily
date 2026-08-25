@@ -74,10 +74,12 @@ The issue may publish none of these when evidence or editorial relevance is weak
 
 ## Images
 
-- Every selected main story needs one visual treatment.
-- Prefer a story-specific source image only when its usage-rights basis is separately verified.
+- Every selected story must resolve and verify at least one story-specific image from a first-party official source before editorial lock. Use the subject, brand, designer, artist, institution, venue, organizer, or another directly responsible canonical public channel.
+- A media publication, discovery index, search result, repost, social mirror, stock image, AI image, owned diagram, or editorial illustration cannot satisfy the official-image gate.
+- Record the official origin page, exact image URL, verification time, source relationship, documentary or contextual role, credit, and usage-rights basis separately. A contextual official image must be labeled and cannot impersonate current documentary evidence.
 - Credit never substitutes for permission.
-- If rights are unknown, do not download or package the image. Use an owned original diagram, a clearly labeled non-documentary illustration, or a deliberate text-led treatment.
+- If rights are cleared for the intended use, copy the image locally and preserve the evidence privately. If rights are unknown, do not download or package it: a visibly non-production Preview may use only the linked external-image treatment that opens the official origin page, keeps the rights summary `blocked`, and cannot enter production.
+- An owned diagram, clearly labeled non-documentary illustration, or text-led treatment may supplement an official image but cannot replace it. If no accurate official image can be verified, hold or omit the story.
 - Never fabricate documentary evidence, a person, product, show, campaign, or event.
 
 ## Public promotion and validation

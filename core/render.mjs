@@ -70,7 +70,7 @@ function wrapIssueSections(article, manifest) {
       const externalImage = story.media.external_image_url;
       const mediaSourceUrl = story.media.origin_url ?? story.sources[0]?.url ?? "#";
       const imageMarkup = externalImage
-        ? `<a class="source-image-link" href="${escapeHtml(mediaSourceUrl)}" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="${escapeHtml(externalImage)}" alt="${escapeHtml(story.media.alt)}" loading="lazy" decoding="async" width="1200" height="720"></a><p class="source-image-fallback"><a href="${escapeHtml(mediaSourceUrl)}" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p>`
+        ? `<a class="source-image-link" href="${escapeHtml(mediaSourceUrl)}" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="${escapeHtml(externalImage)}" alt="${escapeHtml(story.media.alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="${escapeHtml(mediaSourceUrl)}" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p>`
         : `<img src="./${escapeHtml(story.media.asset)}" alt="${escapeHtml(story.media.alt)}" loading="eager" decoding="async" width="1200" height="720">`;
       const figureLabel = externalImage ? `${mediaLabel} · PREVIEW ONLY` : mediaLabel;
       const figure = `<figure class="story-figure" data-media-kind="${escapeHtml(mediaKind)}"${externalImage ? " data-external-preview=\"true\"" : ""}>${imageMarkup}<figcaption><strong>${figureLabel}</strong> ${escapeHtml(story.media.caption)} <span>${escapeHtml(story.media.credit)}</span></figcaption></figure>`;

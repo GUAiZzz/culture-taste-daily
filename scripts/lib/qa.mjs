@@ -256,11 +256,30 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
   const page = await context.newPage();
   const consoleErrors = [];
   const requestFailures = [];
+  const externalPreviewFailures = [];
+  const externalPreviewUrls = new Set(
+    manifest.stories.map((story) => story.media?.external_image_url).filter(Boolean),
+  );
   page.on("console", (message) => {
     if (message.type() === "error") consoleErrors.push(message.text());
   });
-  page.on("requestfailed", (request) => requestFailures.push(`${request.url()} ${request.failure()?.errorText ?? "failed"}`));
-  await page.goto(`${origin}/${urlPath ?? `issues/${issueId}/`}`, { waitUntil: "networkidle" });
+  page.on("requestfailed", (request) => {
+    const failure = `${request.url()} ${request.failure()?.errorText ?? "failed"}`;
+    if (externalPreviewUrls.has(request.url())) externalPreviewFailures.push(failure);
+    else requestFailures.push(failure);
+  });
+  await page.goto(`${origin}/${urlPath ?? `issues/${issueId}/`}`, { waitUntil: "domcontentloaded" });
+  if (!urlPath && ["desktop-1440x900", "mobile-390x844"].includes(name)) {
+    await page.evaluate(() => {
+      for (const image of document.querySelectorAll('img[data-external-preview="true"]')) image.loading = "eager";
+    });
+    await page.waitForFunction(
+      () => [...document.querySelectorAll('img[data-external-preview="true"]')].every((image) => image.complete),
+      null,
+      { timeout: 15_000 },
+    ).catch(() => {});
+  }
+  await page.waitForTimeout(500);
 
   const facts = await page.evaluate((storyTitles) => {
     const mainText = document.querySelector("main")?.innerText ?? "";
@@ -274,11 +293,14 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
       sources_and_dates: mainText.includes("Sources & Dates"),
       horizontal_overflow: Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth),
       broken_images: images
-        .filter((image) => !isDeferredExternalPreview(image) && (!image.complete || image.naturalWidth === 0))
+        .filter((image) => image.dataset.externalPreview !== "true" && !isDeferredExternalPreview(image) && (!image.complete || image.naturalWidth === 0))
         .map((image) => image.currentSrc || image.src),
       deferred_external_previews: images
         .filter(isDeferredExternalPreview)
         .map((image) => image.currentSrc || image.src),
+      external_preview_images: images
+        .filter((image) => image.dataset.externalPreview === "true")
+        .map((image) => ({ url: image.currentSrc || image.src, loaded: image.complete && image.naturalWidth > 0 })),
       story_visual_count: document.querySelectorAll(".issue-story .story-figure").length,
       issue_index_is_native_disclosure: Boolean(document.querySelector(".issue-nav-panel > summary")),
       nested_scroll_frames: [...document.querySelectorAll("iframe[data-historical-frame]")].filter((frame) => frame.scrollHeight > frame.clientHeight + 50).length,
@@ -321,7 +343,7 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
     reduced_motion: reducedMotion,
   };
   await context.close();
-  return { facts, consoleErrors, requestFailures, render };
+  return { facts, consoleErrors, requestFailures, externalPreviewFailures, render };
 }
 
 export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, createdAt = new Date().toISOString(), capture = true }) {
@@ -373,7 +395,12 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
       ]) {
         const item = captures[captureName];
         const ok = item.facts.horizontal_overflow === 0 && item.facts.broken_images.length === 0 && item.consoleErrors.length === 0 && item.requestFailures.length === 0;
-        checks.push(result(checkId, ok, { ...item.facts, console_errors: item.consoleErrors, request_failures: item.requestFailures }));
+        checks.push(result(checkId, ok, {
+          ...item.facts,
+          console_errors: item.consoleErrors,
+          request_failures: item.requestFailures,
+          external_preview_failures: item.externalPreviewFailures,
+        }));
       }
       const reduced = captures["reduced-motion-1440x900"];
       checks.push(result("reduced_motion_render", reduced.facts.reduced_motion_matches && reduced.facts.horizontal_overflow === 0, reduced.facts));

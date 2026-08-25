@@ -16,6 +16,7 @@ import {
 import { assertPublicTree } from "./privacy.mjs";
 import { validateJsonFile } from "./schema.mjs";
 import { evaluateDateSemantics } from "./dates.mjs";
+import { assertOfficialStoryImages } from "./official-media.mjs";
 import {
   renderArchive,
   renderFacsimile,
@@ -75,7 +76,7 @@ function englishTitle(content) {
   return lines.find((line, index) => index > 0 && /^[A-Z0-9$][A-Z0-9$ &/.,'’—-]+$/.test(line)) ?? "CULTURE & TASTE DAILY";
 }
 
-async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, schedule }) {
+async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, schedule, officialImageGate }) {
   const issueRoot = path.join(sourceRoot, issueId);
   await assertPublicTree(issueRoot);
 
@@ -99,6 +100,7 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, schedule }) {
   const actualStyleHash = issueCss ? await sha256File(stylePath) : null;
   assertEqual(actualStyleHash, manifest.source_hashes.issue_style_sha256, "issue style source hash");
   await verifyDependencies(repoRoot, manifest);
+  assertOfficialStoryImages(manifest, officialImageGate);
 
   if (manifest.media_required) {
     for (const story of manifest.stories) {
@@ -219,7 +221,14 @@ export async function buildSite({
   const issues = [];
 
   for (const id of await discoverDateDirectories(sourceRoot, issueId)) {
-    const issue = await loadIssue({ repoRoot, sourceRoot, issueId: id, baseCss, schedule: dailyPolicy.schedule });
+    const issue = await loadIssue({
+      repoRoot,
+      sourceRoot,
+      issueId: id,
+      baseCss,
+      schedule: dailyPolicy.schedule,
+      officialImageGate: dailyPolicy.official_image_gate,
+    });
     const issueOut = path.join(outDir, "issues", id);
     await mkdir(issueOut, { recursive: true });
     await writeFile(
