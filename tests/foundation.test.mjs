@@ -150,29 +150,27 @@ test("repository Preview preserves all three historical originals as non-product
   );
 });
 
-test("Preview homepage and archive expose the current 2026-08-23/24 fields plus historical issues", async () => {
+test("Preview homepage and archive expose the current 2026-08-23/24/25 fields plus historical issues", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
   const archive = await readFile(path.join(previewDist, "archive/index.html"), "utf8");
-  const current = await readFile(path.join(previewDist, "issues/2026-08-24/index.html"), "utf8");
-  for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24"]) {
+  const current = await readFile(path.join(previewDist, "issues/2026-08-25/index.html"), "utf8");
+  for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24", "2026-08-25"]) {
     assert.ok(home.includes(`issues/${date}/`));
     assert.ok(archive.includes(`issues/${date}/`));
   }
-  assert.doesNotMatch(home, /issues\/2026-08-25\//);
-  assert.doesNotMatch(archive, /issues\/2026-08-25\//);
   assert.match(home, /NON-PRODUCTION PREVIEW/);
   assert.match(home, /meta name="robots" content="noindex,nofollow"/);
   assert.match(home, /rel="icon" type="image\/png" href="\.\/assets\/culture-taste-earth\.png"/);
   assert.match(archive, /rel="icon" type="image\/png" href="\.\.\/assets\/culture-taste-earth\.png"/);
   assert.match(current, /class="issue-brand"[\s\S]*culture-taste-earth\.png/);
-  assert.match(home, /THE DAY CLOSES AND OPENS/);
-  assert.doesNotMatch(home, /THE VENUE<\/span><b>SPEAKS/);
+  assert.match(home, /THE ROOM HAS A VOTE/);
   assert.match(home, /assets\/covers\/2026-08-23\.svg/);
   assert.match(archive, /assets\/covers\/2026-08-23\.svg/);
-  assert.match(home, /<div class="type-cover"[^>]*><span>THE ENTRY POINT<\/span><b>IS MOVING<\/b><i>08\/24<\/i>/);
+  assert.match(home, /assets\/covers\/2026-08-25\.svg/);
+  assert.match(archive, /assets\/covers\/2026-08-25\.svg/);
   assert.doesNotMatch(home, /<div class="type-cover"[^>]*><span>THE DAY/);
   await readFile(path.join(previewDist, "assets/culture-taste-earth.png"));
-  for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg", "2026-08-23.svg"]) {
+  for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg", "2026-08-23.svg", "2026-08-25.svg"]) {
     await readFile(path.join(previewDist, "assets/covers", cover));
   }
 });
@@ -196,18 +194,18 @@ test("independent static QA validates historical archive routes and assets", asy
   assert.equal(qa.checks.find((check) => check.id === "internal_links").status, "PASS");
 });
 
-test("current Preview issue exposes one provenance-labeled visual per story and future draft stays out of latest feed", async () => {
-  const current = await readFile(path.join(previewDist, "issues/2026-08-24/index.html"), "utf8");
-  const future = await readFile(path.join(previewDist, "issues/2026-08-25/index.html"), "utf8");
+test("current 2026-08-25 Preview exposes one owned visual per story and becomes the latest feed entry", async () => {
+  const current = await readFile(path.join(previewDist, "issues/2026-08-25/index.html"), "utf8");
+  const manifest = await readJson(path.join(previewDist, "issues/2026-08-25/issue-manifest.public.json"));
   assert.equal((current.match(/class="story-figure"/g) ?? []).length, 8);
-  assert.equal((current.match(/data-media-kind="source_image"/g) ?? []).length, 5);
-  assert.equal((current.match(/data-external-preview="true"/g) ?? []).length, 10);
-  assert.equal((current.match(/图片加载失败？在来源页面查看原图/g) ?? []).length, 5);
-  assert.match(current, /href="https:\/\/hypebeast\.com\/2026\/8\/supreme-fall-winter-2026-collection"/);
+  assert.equal(manifest.stories.length, 8);
+  assert.equal(manifest.stories.filter((story) => story.media?.rights_basis === "owned_original").length, 8);
+  assert.equal((current.match(/data-media-kind="data_diagram"/g) ?? []).length, 8);
+  assert.equal((current.match(/data-external-preview="true"/g) ?? []).length, 0);
+  assert.match(current, /musquiqui-life-of-navigation/);
   assert.match(current, /href="https:\/\/en\.jp\.bape\.com\/blogs\/news\/saintmxxxxxx-26fw"/);
-  assert.match(current, /2026-08-24/);
-  assert.match(future, /TOMORROW DRAFT · NOT LATEST/);
-  assert.doesNotMatch(await readFile(path.join(previewDist, "index.html"), "utf8"), /issues\/2026-08-25\//);
+  assert.match(current, /2026-08-25/);
+  assert.match(await readFile(path.join(previewDist, "index.html"), "utf8"), /issues\/2026-08-25\//);
 });
 
 test("Preview source-image figures remain rights-blocked and click through to their publishers", async () => {

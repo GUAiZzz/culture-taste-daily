@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Archive beside object</title>
+  <desc id="desc">Twenty-eight circular object marks sit beside seven rectangular archive sheets.</desc>
+  <rect width="1200" height="720" fill="#09090b"/>
+  <text x="74" y="94" fill="#f7f4ed" font-family="ui-monospace, monospace" font-size="32" font-weight="700">28 OBJECTS</text>
+  <text x="795" y="94" fill="#f7f4ed" font-family="ui-monospace, monospace" font-size="32" font-weight="700">7 DOCUMENTS</text>
+  <g fill="#ffd126">
+    <circle cx="105" cy="170" r="24"/><circle cx="185" cy="170" r="24"/><circle cx="265" cy="170" r="24"/><circle cx="345" cy="170" r="24"/><circle cx="425" cy="170" r="24"/><circle cx="505" cy="170" r="24"/><circle cx="585" cy="170" r="24"/>
+    <circle cx="105" cy="280" r="24"/><circle cx="185" cy="280" r="24"/><circle cx="265" cy="280" r="24"/><circle cx="345" cy="280" r="24"/><circle cx="425" cy="280" r="24"/><circle cx="505" cy="280" r="24"/><circle cx="585" cy="280" r="24"/>
+    <circle cx="105" cy="390" r="24"/><circle cx="185" cy="390" r="24"/><circle cx="265" cy="390" r="24"/><circle cx="345" cy="390" r="24"/><circle cx="425" cy="390" r="24"/><circle cx="505" cy="390" r="24"/><circle cx="585" cy="390" r="24"/>
+    <circle cx="105" cy="500" r="24"/><circle cx="185" cy="500" r="24"/><circle cx="265" cy="500" r="24"/><circle cx="345" cy="500" r="24"/><circle cx="425" cy="500" r="24"/><circle cx="505" cy="500" r="24"/><circle cx="585" cy="500" r="24"/>
+  </g>
+  <g fill="none" stroke="#36d7e8" stroke-width="7">
+    <rect x="790" y="145" width="290" height="55"/><rect x="770" y="215" width="290" height="55"/>
+    <rect x="810" y="285" width="290" height="55"/><rect x="785" y="355" width="290" height="55"/>
+    <rect x="805" y="425" width="290" height="55"/><rect x="775" y="495" width="290" height="55"/>
+    <rect x="795" y="565" width="290" height="55"/>
+  </g>
+  <path d="M690 120v520" stroke="#9b6bff" stroke-width="8" stroke-dasharray="18 18"/>
+</svg>
