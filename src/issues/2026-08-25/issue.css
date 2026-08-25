@@ -500,3 +500,105 @@ body[data-issue="2026-08-25"] .source-meta {
     text-align: left;
   }
 }
+
+/* 2026-08-25 issue world: an irregular programme floor, not the prior issue's route/clock. */
+body[data-issue="2026-08-25"] {
+  background: #09090b;
+  color: #f7f4ed;
+}
+
+body[data-issue="2026-08-25"] .site-header,
+body[data-issue="2026-08-25"] .site-footer,
+body[data-issue="2026-08-25"] .issue-cover-copy > p:first-of-type,
+body[data-issue="2026-08-25"] .enter-issue,
+body[data-issue="2026-08-25"] .story-marker,
+body[data-issue="2026-08-25"] .issue-story p:last-child,
+body[data-issue="2026-08-25"] article a,
+body[data-issue="2026-08-25"] .story-figure figcaption span,
+body[data-issue="2026-08-25"] .story-english strong {
+  color: #ffd126;
+}
+
+body[data-issue="2026-08-25"] .non-production-label,
+body[data-issue="2026-08-25"] .enter-issue:hover,
+body[data-issue="2026-08-25"] .enter-issue:focus-visible {
+  background: #ffd126;
+  color: #09090b;
+}
+
+body[data-issue="2026-08-25"] .issue-nav,
+body[data-issue="2026-08-25"] .issue-nav-panel {
+  color: #36d7e8;
+  background: rgba(9, 9, 11, 0.96);
+}
+
+body[data-issue="2026-08-25"] .issue-nav a span,
+body[data-issue="2026-08-25"] .issue-cover-copy > p:nth-last-of-type(-n + 2),
+body[data-issue="2026-08-25"] .sources,
+body[data-issue="2026-08-25"] .story-figure figcaption,
+body[data-issue="2026-08-25"] .story-english {
+  color: #36d7e8;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual {
+  border: 0;
+  transform: none;
+  background:
+    linear-gradient(#f7f4ed 0 0) 0 0 / 47% 46% no-repeat,
+    linear-gradient(#36d7e8 0 0) 51% 0 / 18% 24% no-repeat,
+    linear-gradient(#ffd126 0 0) 72% 0 / 28% 38% no-repeat,
+    linear-gradient(#9b6bff 0 0) 51% 28% / 18% 18% no-repeat,
+    linear-gradient(#36d7e8 0 0) 0 50% / 22% 50% no-repeat,
+    linear-gradient(#ffd126 0 0) 26% 50% / 43% 22% no-repeat,
+    linear-gradient(#f7f4ed 0 0) 26% 76% / 43% 24% no-repeat,
+    linear-gradient(#9b6bff 0 0) 72% 42% / 28% 58% no-repeat;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual::before,
+body[data-issue="2026-08-25"] .issue-cover-visual::after,
+body[data-issue="2026-08-25"] .issue-cover-visual i {
+  display: none;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual span {
+  background: #09090b;
+  color: #f7f4ed;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual span::before {
+  background: #ffd126;
+}
+
+body[data-issue="2026-08-25"] .issue-story,
+body[data-issue="2026-08-25"] .sources,
+body[data-issue="2026-08-25"] .story-figure {
+  border-color: #36d7e8;
+}
+
+body[data-issue="2026-08-25"] .issue-story[data-level="major"] {
+  background: #f7f4ed;
+  color: #09090b;
+}
+
+body[data-issue="2026-08-25"] [data-level="major"] .story-marker,
+body[data-issue="2026-08-25"] [data-level="major"] a {
+  color: #9b6bff;
+}
+
+body[data-issue="2026-08-25"] [data-level="major"] p:last-child {
+  color: #09090b;
+}
+
+body[data-issue="2026-08-25"] .story-figure {
+  background: #111115;
+}
+
+body[data-issue="2026-08-25"] .sources h2 {
+  color: #f7f4ed;
+}
+
+@media (max-width: 42rem) {
+  body[data-issue="2026-08-25"] {
+    background: #09090b;
+  }
+}
