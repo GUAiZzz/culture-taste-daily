@@ -229,6 +229,8 @@ independent_verification:
 contradictions:
 commercial_label:
 image_origin:
+image_origin_relationship: first_party_official | independent_media | community
+official_image_verified_at:
 image_credit:
 image_usage_rights_basis:
 access_limits:
@@ -291,7 +293,8 @@ By default, `cover` and `major` require:
 - dates and official status checked on the day of lock;
 - commercial relationships recorded;
 - a stated cultural consequence and counter-reading;
-- usable image rights or an intentional text-led visual plan.
+- at least one exact, story-specific image verified from a first-party official source;
+- a separately recorded image usage-rights basis; unknown rights may support only the linked, production-blocked Preview treatment.
 
 If the independent source is not available, narrow the claim and downgrade to `signal` or `watch`.
 
@@ -384,6 +387,7 @@ source relationships and commercial labels recorded: PASS | FAIL
 fact / source rationale / editorial inference separated: PASS | FAIL
 sensitive or trend gates completed where applicable: PASS | FAIL
 image credit and usage-rights basis separated: PASS | FAIL
+first-party official image verified for every selected story: PASS | FAIL
 cover and major evidence gates passed: PASS | FAIL
 ```
 

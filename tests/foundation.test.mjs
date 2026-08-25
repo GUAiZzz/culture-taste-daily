@@ -107,7 +107,7 @@ test("no-JavaScript reading and required render evidence pass", async () => {
 
 test("matching independent and named review evidence authorizes only the local simulation", async () => {
   const decision = await evaluateGate({ repoRoot, distDir, issueId, technicalEvidence, reviewEvidence: approvedReview, previousGoodRelease: "release-X" });
-  assert.equal(decision.decision, "AUTHORIZED");
+  assert.equal(decision.decision, "AUTHORIZED", decision.reasons.join("\n"));
   assert.equal(decision.production_authority, false);
   assert.equal(decision.selected_release, buildReport.issues[0].candidate_digest);
 });
@@ -194,14 +194,19 @@ test("independent static QA validates historical archive routes and assets", asy
   assert.equal(qa.checks.find((check) => check.id === "internal_links").status, "PASS");
 });
 
-test("current 2026-08-25 Preview exposes one owned visual per story and becomes the latest feed entry", async () => {
+test("current 2026-08-25 Preview exposes one first-party official image per story and becomes the latest feed entry", async () => {
   const current = await readFile(path.join(previewDist, "issues/2026-08-25/index.html"), "utf8");
   const manifest = await readJson(path.join(previewDist, "issues/2026-08-25/issue-manifest.public.json"));
   assert.equal((current.match(/class="story-figure"/g) ?? []).length, 8);
   assert.equal(manifest.stories.length, 8);
-  assert.equal(manifest.stories.filter((story) => story.media?.rights_basis === "owned_original").length, 8);
-  assert.equal((current.match(/data-media-kind="data_diagram"/g) ?? []).length, 8);
-  assert.equal((current.match(/data-external-preview="true"/g) ?? []).length, 0);
+  assert.equal(manifest.stories.filter((story) => story.media?.kind === "source_image").length, 8);
+  assert.equal(manifest.stories.filter((story) => story.media?.origin_authority === "first_party_official").length, 8);
+  assert.equal(manifest.stories.filter((story) => story.media?.rights_basis === "preview_user_authorized_external").length, 8);
+  assert.equal((current.match(/data-media-kind="source_image"/g) ?? []).length, 8);
+  assert.equal((current.match(/data-external-preview="true"/g) ?? []).length, 16);
+  assert.equal(manifest.rights_summary.status, "blocked");
+  assert.equal(manifest.rights_summary.unknown_required_assets, 8);
+  assert.ok(manifest.stories.every((story) => story.sources.some((source) => source.relationship === "first_party_official" && source.url === story.media.origin_url)));
   assert.match(current, /musquiqui-life-of-navigation/);
   assert.match(current, /href="https:\/\/en\.jp\.bape\.com\/blogs\/news\/saintmxxxxxx-26fw"/);
   assert.match(current, /2026-08-25/);

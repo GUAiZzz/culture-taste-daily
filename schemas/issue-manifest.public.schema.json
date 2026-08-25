@@ -265,7 +265,11 @@
               "publisher": { "type": "string", "minLength": 1 },
               "url": { "type": "string", "format": "uri" },
               "published_date": { "type": ["string", "null"] },
-              "event_date": { "type": ["string", "null"] }
+              "event_date": { "type": ["string", "null"] },
+              "relationship": {
+                "description": "Public source relationship. first_party_official identifies a canonical page operated by the directly responsible subject or organizer.",
+                "enum": ["first_party_official", "independent_reporting", "community_signal"]
+              }
             }
           }
         },
@@ -306,6 +310,10 @@
               "description": "Preview-only source image URL. It is displayed inside a linked figure and must never be used for production or treated as a local asset.",
               "type": ["string", "null"],
               "pattern": "^https://"
+            },
+            "origin_authority": {
+              "description": "Who controls the image-origin page. This records provenance, not permission.",
+              "enum": ["first_party_official", "independent_media", "community"]
             }
           },
           "allOf": [

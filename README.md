@@ -16,7 +16,7 @@ Production Contract V3 is canonical. The repository now builds the real Culture 
 - a local fail-closed gate simulation that has no production authority;
 - deterministic regression and failure-path tests;
 - a designed homepage and filterable archive;
-- one provenance-labeled visual per story in the current and future-draft issue routes; five 2026-08-24 figures are Preview-only source-image links and remain blocked from production until rights are cleared;
+- one provenance-labeled visual per story in the current issue routes; all eight 2026-08-25 figures now use verified first-party official image origins as Preview-only links and remain blocked from production until rights are cleared;
 - preserved 2026-08-20 and 2026-08-21 self-contained HTML originals;
 - an honest 16-page facsimile reader for the supplied 2026-08-22 PDF;
 - manually triggered GitHub Pages Preview hosting after CI verification.
@@ -69,7 +69,7 @@ docs/                Product, editorial, architecture, and authority decisions
 
 ## Current candidate
 
-The `2026-08-24` source is the latest Preview issue. Its refresh happened after the canonical same-day production window, so it is visibly non-production and ineligible for release. The `2026-08-25` source remains available only as a `future_draft`: its missing `candidate_created_at` and out-of-window research lock make it ineligible for release and exclude it from the normal homepage/archive feed.
+The `2026-08-25` source is the latest Preview issue. Its missing `candidate_created_at` and out-of-window research lock keep it visibly non-production and ineligible for release. Its eight official source images are externally linked Preview figures with unresolved reuse rights, which is an additional production blocker.
 
 The accepted snapshot at [`candidate/2026-08-25/index.html`](candidate/2026-08-25/index.html) remains unchanged and has never been deployed.
 

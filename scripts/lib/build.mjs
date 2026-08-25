@@ -16,6 +16,7 @@ import {
 import { assertPublicTree } from "./privacy.mjs";
 import { validateJsonFile } from "./schema.mjs";
 import { evaluateDateSemantics } from "./dates.mjs";
+import { assertOfficialStoryImages } from "./official-media.mjs";
 import {
   renderArchive,
   renderFacsimile,
@@ -55,6 +56,9 @@ async function verifyDependencies(repoRoot, manifest) {
   const contractHash = await sha256File(path.join(repoRoot, contract.path));
 
   assertEqual(contractHash, contract.sha256, "canonical contract hash");
+  for (const amendment of contract.amendments ?? []) {
+    assertEqual(await sha256File(path.join(repoRoot, amendment.path)), amendment.sha256, `contract amendment ${amendment.id} hash`);
+  }
   assertEqual(manifest.contract.repository, contract.repository, "contract repository");
   assertEqual(manifest.contract.path, contract.path, "contract path");
   assertEqual(manifest.contract.commit, contract.canonical_main_commit, "contract commit");
@@ -72,7 +76,7 @@ function englishTitle(content) {
   return lines.find((line, index) => index > 0 && /^[A-Z0-9$][A-Z0-9$ &/.,'’—-]+$/.test(line)) ?? "CULTURE & TASTE DAILY";
 }
 
-async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss }) {
+async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, schedule, officialImageGate }) {
   const issueRoot = path.join(sourceRoot, issueId);
   await assertPublicTree(issueRoot);
 
@@ -96,6 +100,7 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss }) {
   const actualStyleHash = issueCss ? await sha256File(stylePath) : null;
   assertEqual(actualStyleHash, manifest.source_hashes.issue_style_sha256, "issue style source hash");
   await verifyDependencies(repoRoot, manifest);
+  assertOfficialStoryImages(manifest, officialImageGate);
 
   if (manifest.media_required) {
     for (const story of manifest.stories) {
@@ -135,7 +140,7 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss }) {
     issueCss,
     inputDigests,
     candidateDigest: digestMap(inputDigests),
-    dateSemantics: evaluateDateSemantics(manifest),
+    dateSemantics: evaluateDateSemantics(manifest, schedule),
     title: content.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? issueId,
     titleEn: englishTitle(content),
   };
@@ -207,15 +212,23 @@ export async function buildSite({
   const defaultSourceRoot = path.join(repoRoot, "src/issues");
   const includeHistorical = historicalRoot !== null && !issueId && path.resolve(sourceRoot) === path.resolve(defaultSourceRoot);
   const resolvedHistoricalRoot = historicalRoot ?? path.join(repoRoot, "src/historical");
-  const [baseCss, siteCss, siteJs] = await Promise.all([
+  const [baseCss, siteCss, siteJs, dailyPolicy] = await Promise.all([
     readFile(path.join(repoRoot, "core/styles/base.css"), "utf8"),
     readFile(path.join(repoRoot, "core/styles/site.css"), "utf8"),
     readFile(path.join(repoRoot, "core/site.js"), "utf8"),
+    readJson(path.join(repoRoot, "automation/daily-policy.json")),
   ]);
   const issues = [];
 
   for (const id of await discoverDateDirectories(sourceRoot, issueId)) {
-    const issue = await loadIssue({ repoRoot, sourceRoot, issueId: id, baseCss });
+    const issue = await loadIssue({
+      repoRoot,
+      sourceRoot,
+      issueId: id,
+      baseCss,
+      schedule: dailyPolicy.schedule,
+      officialImageGate: dailyPolicy.official_image_gate,
+    });
     const issueOut = path.join(outDir, "issues", id);
     await mkdir(issueOut, { recursive: true });
     await writeFile(
@@ -290,6 +303,7 @@ export async function buildSite({
       commit: contract.canonical_main_commit,
       activation_commit: contract.activation_commit,
       sha256: contract.sha256,
+      amendments: contract.amendments ?? [],
     },
     issues: issues.map((issue) => ({
       issue_id: issue.issueId,

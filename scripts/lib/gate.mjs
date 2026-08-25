@@ -1,5 +1,5 @@
 import path from "node:path";
-import { digestMap, fileDigestMap, readJson, writeJson } from "./files.mjs";
+import { digestMap, fileDigestMap, readJson, stableJson, writeJson } from "./files.mjs";
 import { validateJsonFile } from "./schema.mjs";
 import { REQUIRED_TECHNICAL_CHECKS } from "./qa.mjs";
 
@@ -33,6 +33,7 @@ export async function evaluateGate({ repoRoot, distDir, issueId, technicalEviden
   addMismatch(reasons, "canonical contract commit", buildReport.contract.commit, contract.canonical_main_commit);
   addMismatch(reasons, "canonical contract activation commit", buildReport.contract.activation_commit, contract.activation_commit);
   addMismatch(reasons, "canonical contract hash", buildReport.contract.sha256, contract.sha256);
+  addMismatch(reasons, "canonical contract amendments", stableJson(buildReport.contract.amendments ?? []), stableJson(contract.amendments ?? []));
   if (!issueReport.date_semantics.production_candidate_valid) {
     reasons.push(...issueReport.date_semantics.reasons.map((reason) => `date semantics: ${reason}`));
   }
