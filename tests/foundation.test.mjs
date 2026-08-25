@@ -4,10 +4,12 @@ import { cp, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { chromium } from "playwright";
 import { buildSite } from "../scripts/lib/build.mjs";
 import { evaluateGate } from "../scripts/lib/gate.mjs";
 import { readJson, sha256File, writeJson } from "../scripts/lib/files.mjs";
 import { runStaticChecks, runTechnicalQa } from "../scripts/lib/qa.mjs";
+import { startStaticServer } from "../scripts/lib/server.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const validSource = path.join(repoRoot, "tests/fixtures/valid-source");
@@ -172,6 +174,73 @@ test("Preview homepage and archive expose the current 2026-08-23/24/25 fields pl
   await readFile(path.join(previewDist, "assets/culture-taste-earth.png"));
   for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg", "2026-08-23.svg", "2026-08-25.svg"]) {
     await readFile(path.join(previewDist, "assets/covers", cover));
+  }
+});
+
+test("frontend integration reorganizes only the existing latest stories and keeps article reading intact", async () => {
+  const home = await readFile(path.join(previewDist, "index.html"), "utf8");
+  const current = await readFile(path.join(previewDist, "issues/2026-08-25/index.html"), "utf8");
+  assert.equal((home.match(/<button type="button" data-theme-choice=/g) ?? []).length, 3);
+  assert.equal((home.match(/<li data-story-card/g) ?? []).length, 8);
+  assert.match(home, /id="daily-index-title"/);
+  assert.match(home, /首次进入随机选择/);
+  assert.match(current, /class="reading-progress"/);
+  assert.match(current, /data-theme-status/);
+  assert.match(current, /data-content-sha256="[0-9a-f]{64}"/);
+  assert.equal((current.match(/class="issue-story"/g) ?? []).length, 9);
+  assert.match(current, /data-story="exit"/);
+  assert.match(current, /id="sources"/);
+});
+
+test("theme selection persists into stories while filtering and no-JavaScript reading still work", async () => {
+  const server = await startStaticServer(previewDist);
+  let browser;
+  try {
+    try {
+      browser = await chromium.launch({ headless: true, channel: process.env.PLAYWRIGHT_CHANNEL ?? "chrome" });
+    } catch {
+      browser = await chromium.launch({ headless: true });
+    }
+
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    await page.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
+    const firstTheme = await page.locator("html").getAttribute("data-visual-theme");
+    assert.ok(["field", "coral", "analog"].includes(firstTheme));
+    await page.reload();
+    assert.equal(await page.locator("html").getAttribute("data-visual-theme"), firstTheme);
+
+    await page.locator('[data-theme-choice="analog"]').click();
+    assert.equal(await page.locator("html").getAttribute("data-visual-theme"), "analog");
+    assert.equal(await page.locator("[data-theme-status]").count(), 0);
+    await page.locator('[data-story-filter="objects"]').click();
+    const visibleCategories = await page.locator("[data-story-card]").evaluateAll((cards) => cards.filter((card) => !card.hidden).map((card) => card.dataset.storyCategory));
+    assert.ok(visibleCategories.length > 0);
+    assert.ok(visibleCategories.every((category) => category === "objects"));
+
+    const storyHref = await page.locator("[data-story-card] a").first().getAttribute("href");
+    assert.match(storyHref, /theme=analog/);
+    await page.goto(new URL(storyHref, `${server.origin}/`).href, { waitUntil: "domcontentloaded" });
+    assert.equal(await page.locator("html").getAttribute("data-visual-theme"), "analog");
+    assert.equal(await page.locator("[data-theme-status]").textContent(), "2000s TV");
+    assert.equal(await page.locator(".issue-story").count(), 9);
+    assert.equal(await page.locator('[data-story="exit"]').count(), 1);
+    assert.match(await page.locator("main").innerText(), /Sources & Dates/);
+    await context.close();
+
+    const noJsContext = await browser.newContext({ javaScriptEnabled: false });
+    const noJsPage = await noJsContext.newPage();
+    await noJsPage.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
+    assert.equal(await noJsPage.locator("[data-story-card]").count(), 8);
+    assert.equal(await noJsPage.locator(".theme-options").isVisible(), false);
+    assert.equal(await noJsPage.locator(".radar-filters").isVisible(), false);
+    await noJsPage.goto(`${server.origin}/issues/2026-08-25/`, { waitUntil: "domcontentloaded" });
+    assert.equal(await noJsPage.locator(".issue-story").count(), 9);
+    assert.match(await noJsPage.locator("main").innerText(), /Sources & Dates/);
+    await noJsContext.close();
+  } finally {
+    await browser?.close();
+    await server.close();
   }
 });
 
