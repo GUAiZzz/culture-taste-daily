@@ -9,10 +9,11 @@ Read these files before changing this repository, in order:
 5. `docs/CONTRACT_STATUS.md`
 6. `docs/PRODUCTION_CONTRACT_V3.md`
 7. `docs/PRODUCTION_CONTRACT_V3_A1.md`
-8. `docs/ARCHITECTURE.md`
-9. `docs/DATA_BOUNDARIES.md`
-10. `docs/HARRYTONE_DEPENDENCY.md`
-11. `docs/REFERENCE_SYSTEM.md` and `docs/CULTURE_TASTE_SOURCE_MAP.md` for editorial work
+8. `docs/PRODUCTION_CONTRACT_V3_A2.md`
+9. `docs/ARCHITECTURE.md`
+10. `docs/DATA_BOUNDARIES.md`
+11. `docs/HARRYTONE_DEPENDENCY.md`
+12. `docs/REFERENCE_SYSTEM.md` and `docs/CULTURE_TASTE_SOURCE_MAP.md` for editorial work
 
 For the authorized daily candidate dry run, also read `automation/DAILY_RUN.md` and `automation/daily-policy.json` before acting.
 
@@ -36,3 +37,5 @@ For the authorized daily candidate dry run, also read `automation/DAILY_RUN.md` 
 - Shared site behavior and issue-specific art direction must remain separate.
 - The accepted `candidate/2026-08-25/` snapshot is review evidence, not a production release.
 - Changes to locked content require a new content hash and a full QA rerun.
+- Every selected story must verify a story-specific image from a first-party official source. An owned diagram, editorial illustration, media image, search result, or generated image cannot satisfy that gate.
+- Official provenance and usage permission are separate. Unknown rights permit only the visibly linked, rights-blocked Preview treatment; they never authorize copying the asset into production.
