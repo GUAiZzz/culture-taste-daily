@@ -54,7 +54,7 @@ async function verifyDependencies(repoRoot, manifest) {
   return { contract, harrytone, core };
 }
 
-async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss }) {
+async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, enhancementJs }) {
   const issueRoot = path.join(sourceRoot, issueId);
   await assertPublicTree(issueRoot);
 
@@ -85,6 +85,7 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss }) {
     [PUBLIC_MANIFEST]: await sha256File(manifestPath),
     "issue.css": actualStyleHash ?? sha256(""),
     "core/base.css": sha256(baseCss),
+    "core/enhance.js": sha256(enhancementJs),
     "contract/identity": sha256(stableJson(manifest.contract)),
     "harrytone/identity": sha256(stableJson(manifest.harrytone)),
   };
@@ -111,16 +112,19 @@ export async function buildSite({
   baseUrl = "https://culture-taste-daily.invalid/",
 } = {}) {
   await resetDirectory(outDir, path.dirname(outDir));
-  const baseCss = await readFile(path.join(repoRoot, "core/styles/base.css"), "utf8");
+  const [baseCss, enhancementJs] = await Promise.all([
+    readFile(path.join(repoRoot, "core/styles/base.css"), "utf8"),
+    readFile(path.join(repoRoot, "core/enhance.js"), "utf8"),
+  ]);
   const issues = [];
 
   for (const id of await discoverIssues(sourceRoot, issueId)) {
-    const issue = await loadIssue({ repoRoot, sourceRoot, issueId: id, baseCss });
+    const issue = await loadIssue({ repoRoot, sourceRoot, issueId: id, baseCss, enhancementJs });
     const issueOut = path.join(outDir, "issues", id);
     await mkdir(issueOut, { recursive: true });
     await writeFile(
       path.join(issueOut, "index.html"),
-      renderIssue({ content: issue.content, manifest: issue.manifest, baseCss, issueCss: issue.issueCss }),
+      renderIssue({ content: issue.content, manifest: issue.manifest, artDirection: issue.artDirection, baseCss, issueCss: issue.issueCss, enhancementJs }),
       "utf8",
     );
 
@@ -139,8 +143,8 @@ export async function buildSite({
   issues.sort((a, b) => a.manifest.publication_date.localeCompare(b.manifest.publication_date));
   const archiveDir = path.join(outDir, "archive");
   await mkdir(archiveDir, { recursive: true });
-  await writeFile(path.join(outDir, "index.html"), renderHome({ issues, baseCss }), "utf8");
-  await writeFile(path.join(archiveDir, "index.html"), renderArchive({ issues, baseCss }), "utf8");
+  await writeFile(path.join(outDir, "index.html"), renderHome({ issues, baseCss, enhancementJs }), "utf8");
+  await writeFile(path.join(archiveDir, "index.html"), renderArchive({ issues, baseCss, enhancementJs }), "utf8");
   await writeFile(path.join(outDir, "rss.xml"), renderRss({ issues, baseUrl }), "utf8");
   await writeFile(path.join(outDir, "sitemap.xml"), renderSitemap({ issues, baseUrl }), "utf8");
 

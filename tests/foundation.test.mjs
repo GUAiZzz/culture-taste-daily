@@ -4,10 +4,12 @@ import { cp, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { chromium } from "playwright";
 import { buildSite } from "../scripts/lib/build.mjs";
 import { evaluateGate } from "../scripts/lib/gate.mjs";
 import { readJson, writeJson } from "../scripts/lib/files.mjs";
 import { runStaticChecks, runTechnicalQa } from "../scripts/lib/qa.mjs";
+import { startStaticServer } from "../scripts/lib/server.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const validSource = path.join(repoRoot, "tests/fixtures/valid-source");
@@ -127,6 +129,30 @@ test("shared core remains functional and leaves issue visual decisions to issue 
   assert.match(issueCss, /body\[data-issue="2026-08-25"\][\s\S]*background:/);
   assert.match(issueCss, /body\[data-issue="2026-08-25"\]\s+h1[\s\S]*font-size:/);
   assert.match(issueCss, /max-width:/);
+});
+
+test("reader theme is selected once per session and follows issue navigation", async () => {
+  const server = await startStaticServer(distDir);
+  const browser = await chromium.launch({ headless: true, channel: process.env.PLAYWRIGHT_CHANNEL ?? "chrome" });
+  try {
+    const context = await browser.newContext({ viewport: { width: 900, height: 700 } });
+    const page = await context.newPage();
+    await page.goto(`${server.origin}/`, { waitUntil: "networkidle" });
+    const firstTheme = await page.evaluate(() => document.documentElement.dataset.visualTheme);
+    assert.ok(["field", "coral", "analog"].includes(firstTheme));
+    await page.reload({ waitUntil: "networkidle" });
+    assert.equal(await page.evaluate(() => document.documentElement.dataset.visualTheme), firstTheme);
+
+    await page.click('[data-theme-choice="analog"]');
+    const issueHref = await page.getAttribute("a[data-theme-link]", "href");
+    assert.match(issueHref, /theme=analog/);
+    await page.goto(new URL(issueHref, server.origin).href, { waitUntil: "networkidle" });
+    assert.equal(await page.evaluate(() => document.documentElement.dataset.visualTheme), "analog");
+    await context.close();
+  } finally {
+    await browser.close();
+    await server.close();
+  }
 });
 
 test("malformed HTML fails independent static QA", async () => {
