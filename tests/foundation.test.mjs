@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { after, before, test } from "node:test";
-import { cp, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { cp, mkdir, mkdtemp, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -164,7 +164,8 @@ test("Preview homepage and archive expose the current 2026-08-23/24/25 fields pl
   assert.match(home, /meta name="robots" content="noindex,nofollow"/);
   assert.match(home, /rel="icon" type="image\/png" href="\.\/assets\/culture-taste-earth\.png"/);
   assert.match(archive, /rel="icon" type="image\/png" href="\.\.\/assets\/culture-taste-earth\.png"/);
-  assert.match(current, /class="issue-brand"[\s\S]*culture-taste-earth\.png/);
+  assert.match(current, /class="issue-brand"[\s\S]*class="brand-type"/);
+  assert.doesNotMatch(current, /class="issue-brand"[\s\S]{0,240}<img/);
   assert.match(home, /THE ROOM HAS A VOTE/);
   assert.match(home, /assets\/covers\/2026-08-23\.svg/);
   assert.match(archive, /assets\/covers\/2026-08-23\.svg/);
@@ -177,19 +178,53 @@ test("Preview homepage and archive expose the current 2026-08-23/24/25 fields pl
   }
 });
 
-test("frontend integration reorganizes only the existing latest stories and keeps article reading intact", async () => {
+test("frontend integration keeps the formal issue intact while adding the supplemental daily radar", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
   const current = await readFile(path.join(previewDist, "issues/2026-08-25/index.html"), "utf8");
   assert.equal((home.match(/<button type="button" data-theme-choice=/g) ?? []).length, 3);
-  assert.equal((home.match(/<li data-story-card/g) ?? []).length, 8);
+  assert.match(home, /class="wordmark"[\s\S]*<em>Taste<\/em>/);
+  assert.doesNotMatch(home, /class="wordmark"[^>]*>[\s\S]{0,240}<img/);
+  assert.equal((home.match(/<li data-story-card/g) ?? []).length, 10);
   assert.match(home, /id="daily-index-title"/);
-  assert.match(home, /首次进入随机选择/);
+  assert.doesNotMatch(home, /先看正式日报/);
+  assert.match(home, /01 \/ IN TODAY'S ISSUE/);
+  assert.match(home, /02 \/ MORE FROM TODAY/);
+  assert.equal((home.match(/data-official-only/g) ?? []).length, 10);
+  assert.equal((home.match(/data-radar-kind="issue"/g) ?? []).length, 8);
+  assert.equal((home.match(/data-radar-kind="extra"/g) ?? []).length, 2);
+  assert.doesNotMatch(home, /class="local-art"/);
+  assert.doesNotMatch(home, /<span class="radar-visual"[^>]*>[\s\S]*?<i aria-hidden="true"><\/i>/);
+  assert.doesNotMatch(home, /class="theme-picker"/);
+  assert.equal((home.match(/issues\/2026-08-25\/stories\/[^/]+\//g) ?? []).length, 8);
   assert.match(current, /class="reading-progress"/);
-  assert.match(current, /data-theme-status/);
+  assert.equal((current.match(/<button type="button" data-theme-choice=/g) ?? []).length, 3);
   assert.match(current, /data-content-sha256="[0-9a-f]{64}"/);
   assert.equal((current.match(/class="issue-story"/g) ?? []).length, 9);
   assert.match(current, /data-story="exit"/);
   assert.match(current, /id="sources"/);
+  const storyRoutes = await readdir(path.join(previewDist, "issues/2026-08-25/stories"));
+  assert.equal(storyRoutes.length, 8);
+  for (const storyId of storyRoutes) await readFile(path.join(previewDist, "issues/2026-08-25/stories", storyId, "index.html"));
+  const firstStory = await readFile(path.join(previewDist, "issues/2026-08-25/stories", storyRoutes[0], "index.html"), "utf8");
+  assert.match(firstStory, /class="story-reader-brand"[\s\S]*<em>Taste<\/em>/);
+  assert.doesNotMatch(firstStory, /class="story-reader-brand"[^>]*>[\s\S]{0,240}<img/);
+  const sitemap = await readFile(path.join(previewDist, "sitemap.xml"), "utf8");
+  for (const storyId of storyRoutes) assert.match(sitemap, new RegExp(`issues/2026-08-25/stories/${storyId}/`));
+});
+
+test("daily radar has at least two official-media selections in every category without changing the issue manifest", async () => {
+  const radar = JSON.parse(await readFile(path.join(repoRoot, "src/issues/2026-08-25/daily-radar.public.json"), "utf8"));
+  const manifest = JSON.parse(await readFile(path.join(repoRoot, "src/issues/2026-08-25/issue-manifest.public.json"), "utf8"));
+  assert.equal(manifest.stories.length, 8);
+  assert.equal(radar.items.length, 10);
+  for (const category of ["fashion", "music", "objects", "city"]) {
+    assert.ok(radar.items.filter((item) => item.category === category).length >= 2, category);
+  }
+  for (const extra of radar.items.filter((item) => !item.included_story_id)) {
+    assert.equal(extra.media.origin_authority, "first_party_official");
+    assert.match(extra.official_url, /^https:\/\//);
+    assert.match(extra.media.url, /^https:\/\//);
+  }
 });
 
 test("theme selection persists into stories while filtering and no-JavaScript reading still work", async () => {
@@ -203,16 +238,21 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     }
 
     const context = await browser.newContext();
+    await context.addInitScript(() => {
+      const count = Number(sessionStorage.getItem("ctd-test-random-count") ?? "0");
+      sessionStorage.setItem("ctd-test-random-count", String(count + 1));
+      Math.random = () => count % 2 === 0 ? 0 : 0.5;
+    });
     const page = await context.newPage();
     await page.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
     const firstTheme = await page.locator("html").getAttribute("data-visual-theme");
     assert.ok(["field", "coral", "analog"].includes(firstTheme));
     await page.reload();
-    assert.equal(await page.locator("html").getAttribute("data-visual-theme"), firstTheme);
+    assert.notEqual(await page.locator("html").getAttribute("data-visual-theme"), firstTheme);
 
     await page.locator('[data-theme-choice="analog"]').click();
     assert.equal(await page.locator("html").getAttribute("data-visual-theme"), "analog");
-    assert.equal(await page.locator("[data-theme-status]").count(), 0);
+    assert.equal(await page.locator('[data-theme-choice="analog"]').getAttribute("aria-pressed"), "true");
     await page.locator('[data-story-filter="objects"]').click();
     const visibleCategories = await page.locator("[data-story-card]").evaluateAll((cards) => cards.filter((card) => !card.hidden).map((card) => card.dataset.storyCategory));
     assert.ok(visibleCategories.length > 0);
@@ -222,21 +262,46 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     assert.match(storyHref, /theme=analog/);
     await page.goto(new URL(storyHref, `${server.origin}/`).href, { waitUntil: "domcontentloaded" });
     assert.equal(await page.locator("html").getAttribute("data-visual-theme"), "analog");
-    assert.equal(await page.locator("[data-theme-status]").textContent(), "2000s TV");
-    assert.equal(await page.locator(".issue-story").count(), 9);
-    assert.equal(await page.locator('[data-story="exit"]').count(), 1);
-    assert.match(await page.locator("main").innerText(), /Sources & Dates/);
+    assert.equal(await page.locator('[data-theme-choice="analog"]').getAttribute("aria-pressed"), "true");
+    assert.equal(await page.locator("body[data-story-reader]").count(), 1);
+    assert.equal(await page.locator("main h1").count(), 1);
+    assert.match(await page.locator("main").innerText(), /VERIFIED SOURCES \/ DATES/);
+    await page.reload();
+    assert.equal(await page.locator("html").getAttribute("data-visual-theme"), "analog");
+    await page.setViewportSize({ width: 390, height: 844 });
+    assert.equal(await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth)), 0);
     await context.close();
+
+    const fallbackContext = await browser.newContext();
+    await fallbackContext.route(/^https:\/\//, (route) => route.abort());
+    const fallbackPage = await fallbackContext.newPage();
+    await fallbackPage.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
+    await fallbackPage.waitForFunction(() => document.querySelector("[data-official-only]")?.classList.contains("image-failed"));
+    assert.equal(await fallbackPage.locator("[data-official-only] .local-art").count(), 0);
+    assert.ok(await fallbackPage.locator("[data-official-only].image-failed .official-media-fallback").first().isVisible());
+    await fallbackPage.goto(`${server.origin}/issues/2026-08-25/stories/seoul-fashion-week-two-city-systems/`, { waitUntil: "domcontentloaded" });
+    await fallbackPage.waitForFunction(() => document.querySelector("[data-visual-frame]")?.classList.contains("image-failed"));
+    assert.ok(await fallbackPage.locator("[data-visual-frame].image-failed .local-art").count() > 0);
+    assert.match(await fallbackPage.locator("main").innerText(), /官方图片未载入/);
+    await fallbackContext.close();
+
+    const reducedContext = await browser.newContext({ reducedMotion: "reduce" });
+    const reducedPage = await reducedContext.newPage();
+    await reducedPage.goto(`${server.origin}/issues/2026-08-25/stories/seoul-fashion-week-two-city-systems/`, { waitUntil: "domcontentloaded" });
+    assert.equal(await reducedPage.locator(".story-opening-sticky").evaluate((element) => getComputedStyle(element).position), "relative");
+    assert.equal(await reducedPage.locator(".story-title-line").first().evaluate((element) => getComputedStyle(element).translate), "none");
+    await reducedContext.close();
 
     const noJsContext = await browser.newContext({ javaScriptEnabled: false });
     const noJsPage = await noJsContext.newPage();
     await noJsPage.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
-    assert.equal(await noJsPage.locator("[data-story-card]").count(), 8);
-    assert.equal(await noJsPage.locator(".theme-options").isVisible(), false);
+    assert.equal(await noJsPage.locator("[data-story-card]").count(), 10);
+    assert.equal(await noJsPage.locator(".theme-picker").count(), 0);
     assert.equal(await noJsPage.locator(".radar-filters").isVisible(), false);
-    await noJsPage.goto(`${server.origin}/issues/2026-08-25/`, { waitUntil: "domcontentloaded" });
-    assert.equal(await noJsPage.locator(".issue-story").count(), 9);
-    assert.match(await noJsPage.locator("main").innerText(), /Sources & Dates/);
+    const noJsStory = await noJsPage.locator("[data-story-card] a").first().getAttribute("href");
+    await noJsPage.goto(new URL(noJsStory, `${server.origin}/`).href, { waitUntil: "domcontentloaded" });
+    assert.equal(await noJsPage.locator("body[data-story-reader]").count(), 1);
+    assert.match(await noJsPage.locator("main").innerText(), /VERIFIED SOURCES \/ DATES/);
     await noJsContext.close();
   } finally {
     await browser?.close();

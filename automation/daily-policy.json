@@ -20,6 +20,16 @@
     "preview_external_allowed": true,
     "production_requires_cleared_rights": true
   },
+  "daily_radar": {
+    "public_file": "daily-radar.public.json",
+    "supplemental_to_issue": true,
+    "changes_issue_selection": false,
+    "categories": ["fashion", "music", "objects", "city"],
+    "minimum_items_per_category": 2,
+    "first_party_official_media_required": true,
+    "official_video_preferred_when_available": true,
+    "included_in_rss": false
+  },
   "dry_run_base_ref": "codex/daily-automation-v1",
   "branch_prefix": "automation/culture-taste",
   "output": {
@@ -87,6 +97,7 @@
     "event_level_deduplication",
     "primary_and_independent_source_evidence",
     "first_party_official_image_for_every_selected_story",
+    "daily_radar_two_per_category_with_first_party_official_media",
     "image_rights_basis_separate_from_credit",
     "detail_level_reference_recheck",
     "seven_issue_variation_review",

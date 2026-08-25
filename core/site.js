@@ -2,6 +2,7 @@ document.documentElement.classList.add("has-js");
 
 const visualThemes = ["field", "coral", "analog"];
 const themeStorageKey = "ctd-theme";
+const themeManualKey = "ctd-theme-manual";
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 function rememberTheme(theme) {
@@ -12,10 +13,24 @@ function rememberTheme(theme) {
   }
 }
 
+function hasManualTheme() {
+  try {
+    return window.sessionStorage.getItem(themeManualKey) === "1";
+  } catch {
+    return false;
+  }
+}
+
 function updateThemeLinks(theme) {
   for (const link of document.querySelectorAll("a[data-theme-link]")) {
     const url = new URL(link.href, window.location.href);
     url.searchParams.set("theme", theme);
+    link.href = `${url.pathname}${url.search}${url.hash}`;
+  }
+  for (const link of document.querySelectorAll("a[data-theme-home]")) {
+    const url = new URL(link.href, window.location.href);
+    if (hasManualTheme()) url.searchParams.set("theme", theme);
+    else url.searchParams.delete("theme");
     link.href = `${url.pathname}${url.search}${url.hash}`;
   }
 }
@@ -24,12 +39,20 @@ function updateThemeControls(theme) {
   for (const button of document.querySelectorAll("[data-theme-choice]")) {
     button.setAttribute("aria-pressed", String(button.dataset.themeChoice === theme));
   }
-  const status = document.querySelector("[data-theme-status]");
-  if (status) status.textContent = theme === "field" ? "FIELD GREEN" : theme === "coral" ? "CORAL SIGNAL" : "2000s TV";
+  for (const status of document.querySelectorAll("[data-theme-status]")) {
+    status.textContent = theme === "field" ? "FIELD GREEN" : theme === "coral" ? "CORAL SIGNAL" : "2000s TV";
+  }
 }
 
-function applyTheme(theme) {
+function applyTheme(theme, { manual = false } = {}) {
   const safeTheme = visualThemes.includes(theme) ? theme : "field";
+  if (manual) {
+    try {
+      window.sessionStorage.setItem(themeManualKey, "1");
+    } catch {
+      // The click still applies to the current page when storage is unavailable.
+    }
+  }
   document.documentElement.dataset.visualTheme = safeTheme;
   rememberTheme(safeTheme);
   updateThemeControls(safeTheme);
@@ -39,17 +62,30 @@ function applyTheme(theme) {
 applyTheme(document.documentElement.dataset.visualTheme);
 
 for (const button of document.querySelectorAll("[data-theme-choice]")) {
-  button.addEventListener("click", () => applyTheme(button.dataset.themeChoice));
+  button.addEventListener("click", () => applyTheme(button.dataset.themeChoice, { manual: true }));
+}
+
+for (const frame of document.querySelectorAll("[data-visual-frame]")) {
+  const image = frame.querySelector("img.source-art");
+  if (!image) continue;
+  const markFailure = () => frame.classList.add("image-failed");
+  image.addEventListener("error", markFailure);
+  if (image.complete && !image.naturalWidth) markFailure();
+  window.setTimeout(() => {
+    if (!image.complete || !image.naturalWidth) markFailure();
+  }, 6000);
 }
 
 const storyFilters = [...document.querySelectorAll("[data-story-filter]")];
 const storyCards = [...document.querySelectorAll("[data-story-card]")];
+const radarGroups = [...document.querySelectorAll("[data-radar-group]")];
 
 for (const button of storyFilters) {
   button.addEventListener("click", () => {
     const filter = button.dataset.storyFilter;
     for (const candidate of storyFilters) candidate.setAttribute("aria-pressed", String(candidate === button));
     for (const card of storyCards) card.hidden = filter !== "all" && card.dataset.storyCategory !== filter;
+    for (const group of radarGroups) group.hidden = ![...group.querySelectorAll("[data-story-card]")].some((card) => !card.hidden);
   });
 }
 
@@ -83,7 +119,32 @@ const issueBody = document.querySelector("body[data-issue]");
 const issueStories = issueBody ? [...document.querySelectorAll(".issue-story")] : [];
 const issueHeadings = issueBody ? [...document.querySelectorAll(".issue-story h2[id]")] : [];
 const issueNavLinks = issueBody ? [...document.querySelectorAll(".issue-nav a[href^='#']")] : [];
+const storyReader = document.querySelector("body[data-story-reader]");
+const storyOpening = storyReader?.querySelector("[data-story-opening]");
+const storyLedeStage = storyReader?.querySelector(".story-lede-stage");
+const storyLede = storyReader?.querySelector("[data-word-reveal]");
+const storyMediaStage = storyReader?.querySelector("[data-media-stage]");
+let storyWords = [];
 let motionFrame = 0;
+
+function clamp(value, minimum = 0, maximum = 1) {
+  return Math.min(maximum, Math.max(minimum, value));
+}
+
+if (storyLede) {
+  const source = storyLede.textContent.trim();
+  const segments = "Segmenter" in Intl
+    ? [...new Intl.Segmenter("zh-CN", { granularity: "word" }).segment(source)].map((part) => part.segment)
+    : [...source];
+  storyLede.replaceChildren(...segments.map((segment) => {
+    const word = document.createElement("span");
+    word.className = "story-word";
+    word.textContent = segment;
+    return word;
+  }));
+  storyWords = [...storyLede.querySelectorAll(".story-word")];
+  storyReader.dataset.motionReady = "true";
+}
 
 function updateMotion() {
   motionFrame = 0;
@@ -91,6 +152,25 @@ function updateMotion() {
   const progress = Math.min(1, Math.max(0, window.scrollY / maximum));
   document.documentElement.style.setProperty("--reading-progress", String(progress));
   document.documentElement.style.setProperty("--shell-progress", String(Math.min(1, window.scrollY / 320)));
+
+  if (storyReader && !reducedMotion.matches) {
+    if (storyOpening) {
+      const rect = storyOpening.getBoundingClientRect();
+      const openingProgress = clamp(-rect.top / Math.max(1, rect.height - window.innerHeight));
+      document.documentElement.style.setProperty("--opening-progress", String(openingProgress));
+    }
+    if (storyLedeStage && storyWords.length) {
+      const rect = storyLedeStage.getBoundingClientRect();
+      const wordProgress = clamp((window.innerHeight * 0.8 - rect.top) / Math.max(1, rect.height * 0.68));
+      const visible = wordProgress * (storyWords.length + 5);
+      storyWords.forEach((word, index) => word.style.setProperty("--word-visible", String(clamp(visible - index))));
+    }
+    if (storyMediaStage) {
+      const rect = storyMediaStage.getBoundingClientRect();
+      const mediaProgress = clamp((window.innerHeight * 0.82 - rect.top) / Math.max(1, rect.height * 0.58));
+      document.documentElement.style.setProperty("--media-progress", String(mediaProgress));
+    }
+  }
 
   if (!issueBody || reducedMotion.matches) return;
   const center = window.innerHeight * 0.58;
@@ -101,6 +181,17 @@ function updateMotion() {
     const distance = Math.min(1, Math.abs(rect.top - center) / window.innerHeight);
     story.style.setProperty("--story-shift", `${Math.round(shift)}px`);
     story.style.setProperty("--story-opacity", String(1 - distance * 0.22));
+  }
+}
+
+if (storyReader && document.startViewTransition) {
+  for (const link of storyReader.querySelectorAll("a.next-story, a.related-card, .story-sibling-nav a")) {
+    link.addEventListener("click", (event) => {
+      const destination = new URL(link.href, window.location.href);
+      if (destination.origin !== window.location.origin || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      document.startViewTransition(() => { window.location.href = destination.href; });
+    });
   }
 }
 

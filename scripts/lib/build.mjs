@@ -25,10 +25,13 @@ import {
   renderIssue,
   renderRss,
   renderSitemap,
+  renderStoryPage,
 } from "../../core/render.mjs";
 
 const PUBLIC_MANIFEST = "issue-manifest.public.json";
+const PUBLIC_DAILY_RADAR = "daily-radar.public.json";
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
+const RADAR_CATEGORIES = ["fashion", "music", "objects", "city"];
 
 function assertEqual(actual, expected, label) {
   if (actual !== expected) throw new Error(`${label} mismatch: expected ${expected}, received ${actual}`);
@@ -76,6 +79,59 @@ function englishTitle(content) {
   return lines.find((line, index) => index > 0 && /^[A-Z0-9$][A-Z0-9$ &/.,'’—-]+$/.test(line)) ?? "CULTURE & TASTE DAILY";
 }
 
+function hydrateDailyRadar(radar, manifest, issueId) {
+  assertEqual(radar.date, issueId, "daily radar date");
+  const storyById = new Map(manifest.stories.map((story) => [story.id, story]));
+  const seen = new Set();
+  const counts = Object.fromEntries(RADAR_CATEGORIES.map((category) => [category, 0]));
+  const items = radar.items.map((item) => {
+    if (seen.has(item.id)) throw new Error(`${issueId} daily radar repeats item ${item.id}`);
+    seen.add(item.id);
+    counts[item.category] += 1;
+
+    if (!item.included_story_id) {
+      for (const field of ["title", "deck", "publisher", "official_url", "media"]) {
+        if (!item[field]) throw new Error(`${issueId} daily radar extra ${item.id} is missing ${field}`);
+      }
+      if (item.media.origin_authority !== "first_party_official") throw new Error(`${issueId} daily radar item ${item.id} lacks first-party official media`);
+      if (item.media.kind === "video" && !item.media.poster_url) throw new Error(`${issueId} daily radar video ${item.id} is missing an official poster`);
+      return { ...item, included_in_issue: false };
+    }
+
+    const story = storyById.get(item.included_story_id);
+    if (!story) throw new Error(`${issueId} daily radar references unknown story ${item.included_story_id}`);
+    const officialSource = story.sources.find((source) => source.relationship === "first_party_official") ?? story.sources.find((source) => source.url === story.media?.origin_url);
+    if (!story.media?.external_image_url || story.media.origin_authority !== "first_party_official" || !officialSource) {
+      throw new Error(`${issueId} daily radar story ${story.id} lacks first-party official media`);
+    }
+    return {
+      id: item.id,
+      category: item.category,
+      included_story_id: story.id,
+      included_in_issue: true,
+      title: story.title,
+      deck: story.english?.deck ?? story.english?.abstract ?? "Open the verified story and source chain.",
+      publisher: officialSource.publisher,
+      official_url: story.media.origin_url ?? officialSource.url,
+      published_date: officialSource.published_date,
+      event_date: officialSource.event_date,
+      media: {
+        kind: "image",
+        url: story.media.external_image_url,
+        alt: story.media.alt,
+        credit: story.media.credit,
+        origin_authority: story.media.origin_authority,
+        rights_basis: story.media.rights_basis,
+      },
+    };
+  });
+
+  for (const category of RADAR_CATEGORIES) {
+    if (counts[category] < 2) throw new Error(`${issueId} daily radar requires at least two ${category} items; received ${counts[category]}`);
+  }
+  return { ...radar, items, counts };
+}
+
 async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, schedule, officialImageGate }) {
   const issueRoot = path.join(sourceRoot, issueId);
   await assertPublicTree(issueRoot);
@@ -84,6 +140,7 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, schedule, off
   const artPath = path.join(issueRoot, "art-direction.json");
   const stylePath = path.join(issueRoot, "issue.css");
   const manifestPath = path.join(issueRoot, PUBLIC_MANIFEST);
+  const dailyRadarPath = path.join(issueRoot, PUBLIC_DAILY_RADAR);
   const [content, artDirection, manifest] = await Promise.all([
     readFile(contentPath, "utf8"),
     readJson(artPath),
@@ -101,6 +158,14 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, schedule, off
   assertEqual(actualStyleHash, manifest.source_hashes.issue_style_sha256, "issue style source hash");
   await verifyDependencies(repoRoot, manifest);
   assertOfficialStoryImages(manifest, officialImageGate);
+  let dailyRadar = null;
+  let dailyRadarDigest = null;
+  if (await exists(dailyRadarPath)) {
+    const rawDailyRadar = await readJson(dailyRadarPath);
+    await validateJsonFile(rawDailyRadar, path.join(repoRoot, "schemas/daily-radar.public.schema.json"), `${issueId} public daily radar`);
+    dailyRadar = hydrateDailyRadar(rawDailyRadar, manifest, issueId);
+    dailyRadarDigest = await sha256File(dailyRadarPath);
+  }
 
   if (manifest.media_required) {
     for (const story of manifest.stories) {
@@ -137,6 +202,8 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, schedule, off
     content,
     artDirection,
     manifest,
+    dailyRadar,
+    dailyRadarDigest,
     issueCss,
     inputDigests,
     candidateDigest: digestMap(inputDigests),
@@ -155,7 +222,7 @@ function validateHistoricalMeta(meta, issueId) {
   if (!Array.isArray(meta.limitations) || !meta.limitations.length) throw new Error(`Historical issue ${issueId} must disclose migration limitations`);
 }
 
-async function buildHistoricalIssues({ historicalRoot, outDir, baseCss, siteCss, siteJs }) {
+async function buildHistoricalIssues({ historicalRoot, outDir, baseCss, themesCss, siteCss, siteJs }) {
   const historical = [];
   for (const issueId of await discoverDateDirectories(historicalRoot, null, false)) {
     const issueRoot = path.join(historicalRoot, issueId);
@@ -168,7 +235,7 @@ async function buildHistoricalIssues({ historicalRoot, outDir, baseCss, siteCss,
     const issueOut = path.join(outDir, "issues", issueId);
     await mkdir(issueOut, { recursive: true });
     if (meta.migration_mode === "preserved_self_contained_html") {
-      await writeFile(path.join(issueOut, "index.html"), renderHistoricalWrapper({ meta, baseCss, siteCss, siteJs }), "utf8");
+      await writeFile(path.join(issueOut, "index.html"), renderHistoricalWrapper({ meta, baseCss, themesCss, siteCss, siteJs }), "utf8");
       await writeFile(path.join(issueOut, "original.html"), await readFile(originalPath));
     } else if (meta.migration_mode === "pdf_facsimile" || meta.migration_mode === "historical_web_edition") {
       const sourcePages = path.join(issueRoot, "pages");
@@ -176,7 +243,7 @@ async function buildHistoricalIssues({ historicalRoot, outDir, baseCss, siteCss,
       assertEqual(pageFiles.length, meta.page_count, `${issueId} facsimile page count`);
       await copyTree(sourcePages, path.join(issueOut, "pages"));
       await writeFile(path.join(issueOut, "original.pdf"), await readFile(originalPath));
-      await writeFile(path.join(issueOut, "index.html"), renderFacsimile({ meta, pageFiles, baseCss, siteCss, siteJs }), "utf8");
+      await writeFile(path.join(issueOut, "index.html"), renderFacsimile({ meta, pageFiles, baseCss, themesCss, siteCss, siteJs }), "utf8");
     } else {
       throw new Error(`Unsupported historical migration mode for ${issueId}: ${meta.migration_mode}`);
     }
@@ -212,8 +279,10 @@ export async function buildSite({
   const defaultSourceRoot = path.join(repoRoot, "src/issues");
   const includeHistorical = historicalRoot !== null && !issueId && path.resolve(sourceRoot) === path.resolve(defaultSourceRoot);
   const resolvedHistoricalRoot = historicalRoot ?? path.join(repoRoot, "src/historical");
-  const [baseCss, siteCss, siteJs, dailyPolicy] = await Promise.all([
+  const [baseCss, themesCss, storyCss, siteCss, siteJs, dailyPolicy] = await Promise.all([
     readFile(path.join(repoRoot, "core/styles/base.css"), "utf8"),
+    readFile(path.join(repoRoot, "core/styles/themes.css"), "utf8"),
+    readFile(path.join(repoRoot, "core/styles/story.css"), "utf8"),
     readFile(path.join(repoRoot, "core/styles/site.css"), "utf8"),
     readFile(path.join(repoRoot, "core/site.js"), "utf8"),
     readJson(path.join(repoRoot, "automation/daily-policy.json")),
@@ -233,9 +302,19 @@ export async function buildSite({
     await mkdir(issueOut, { recursive: true });
     await writeFile(
       path.join(issueOut, "index.html"),
-      renderIssue({ content: issue.content, manifest: issue.manifest, baseCss, issueCss: issue.issueCss, siteJs }),
+      renderIssue({ content: issue.content, manifest: issue.manifest, baseCss, themesCss, issueCss: issue.issueCss, siteJs }),
       "utf8",
     );
+
+    for (const [storyIndex, story] of issue.manifest.stories.entries()) {
+      const storyOut = path.join(issueOut, "stories", story.id);
+      await mkdir(storyOut, { recursive: true });
+      await writeFile(
+        path.join(storyOut, "index.html"),
+        renderStoryPage({ content: issue.content, manifest: issue.manifest, story, storyIndex, baseCss, themesCss, storyCss, siteJs }),
+        "utf8",
+      );
+    }
 
     const assetsRoot = path.join(issue.issueRoot, "assets");
     if (await exists(assetsRoot)) await copyTree(assetsRoot, path.join(issueOut, "assets"));
@@ -256,7 +335,7 @@ export async function buildSite({
   }
 
   const historical = includeHistorical
-    ? await buildHistoricalIssues({ historicalRoot: resolvedHistoricalRoot, outDir, baseCss, siteCss, siteJs })
+    ? await buildHistoricalIssues({ historicalRoot: resolvedHistoricalRoot, outDir, baseCss, themesCss, siteCss, siteJs })
     : [];
   const currentIssues = await Promise.all(issues.map(async (issue) => {
     const shellCover = `covers/${issue.issueId}.svg`;
@@ -272,6 +351,7 @@ export async function buildSite({
       production_eligible: issue.dateSemantics.production_candidate_valid,
       visibility: issue.manifest.visibility,
       stories: issue.manifest.stories,
+      dailyRadar: issue.dailyRadar,
     };
   }));
   const publicationIssues = [
@@ -281,8 +361,8 @@ export async function buildSite({
 
   const archiveDir = path.join(outDir, "archive");
   await mkdir(archiveDir, { recursive: true });
-  await writeFile(path.join(outDir, "index.html"), renderHome({ issues: publicationIssues, baseCss, siteCss, siteJs }), "utf8");
-  await writeFile(path.join(archiveDir, "index.html"), renderArchive({ issues: publicationIssues, baseCss, siteCss, siteJs }), "utf8");
+  await writeFile(path.join(outDir, "index.html"), renderHome({ issues: publicationIssues, baseCss, themesCss, siteCss, siteJs }), "utf8");
+  await writeFile(path.join(archiveDir, "index.html"), renderArchive({ issues: publicationIssues, baseCss, themesCss, siteCss, siteJs }), "utf8");
   await writeFile(path.join(outDir, "rss.xml"), renderRss({ issues: publicationIssues, baseUrl }), "utf8");
   await writeFile(path.join(outDir, "sitemap.xml"), renderSitemap({ issues: publicationIssues, baseUrl }), "utf8");
   const robotsBase = new URL(baseUrl).pathname.replace(/\/$/, "");
@@ -311,6 +391,7 @@ export async function buildSite({
       candidate_digest: issue.candidateDigest,
       issue_payload_digest: issue.issuePayloadDigest,
       source_hashes: issue.manifest.source_hashes,
+      daily_radar_sha256: issue.dailyRadarDigest,
       date_semantics: issue.dateSemantics,
     })),
     historical_issues: historical,
