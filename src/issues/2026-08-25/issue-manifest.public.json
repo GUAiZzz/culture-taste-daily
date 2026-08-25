@@ -13,7 +13,7 @@
     "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
     "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
   },
-  "core_version": "v1",
+  "core_version": "v2",
   "content_lock": {
     "status": "locked",
     "sha256": "c7a484db9ca2cb5939337882ea1e0a389faef3e2533c50eafd99307ac7fad3d9",
@@ -21,8 +21,8 @@
   },
   "source_hashes": {
     "content_sha256": "c7a484db9ca2cb5939337882ea1e0a389faef3e2533c50eafd99307ac7fad3d9",
-    "art_direction_sha256": "9f6fef80003de2cb2c7c579c1775e33d5e9c3f0ead06453f93d5216470dfad46",
-    "issue_style_sha256": "5c08410c612d9050f84ccac8f5d2aae9bb8441a9bce549d45e76d9c0b0a7c5bf"
+    "art_direction_sha256": "4fddc0f07e63c8f2318c1a5215d0ea92eeca34757a1e2414d91de5007b2fd8c4",
+    "issue_style_sha256": "daee0decfe28fc9687659fc1f7620e0edc91fb026e9cd62ccdd3609764ae9a0f"
   },
   "harrytone": {
     "repository": "GUAiZzz/harry-tone",

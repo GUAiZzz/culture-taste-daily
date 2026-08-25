@@ -13,5 +13,25 @@
   "behance_viewing_arc": "先给总命题，再以首尔形成主冲突，伦敦加深权力问题，四条信号改变节奏，TMEX 保留待验证项，最后回到门槛",
   "mobile_translation": "路线收为左侧细线，双栏全部改单栏，标题不溢出，sticky index 改为顶部横向可滚动导览",
   "mobbin_usability_constraint": "正文不被交互遮挡；点击目标至少 44px；焦点可见；层级、来源和状态标签始终可识别",
-  "quiet_ending": "大面积靛蓝空场中只保留一块未被占用的荧光地板与一句问题"
+  "quiet_ending": "大面积靛蓝空场中只保留一块未被占用的荧光地板与一句问题",
+  "index_categories": {
+    "seoul-fashion-week-two-city-systems": "fashion",
+    "southbank-lived-experience-curation": "city",
+    "arteen-taipei-hotel-rooms": "city",
+    "sfmoma-giant-arc": "city",
+    "palace-seoul-retail-heritage": "fashion",
+    "bape-saint-mxxxxxx-can-stool": "objects",
+    "tmex-2026-agenda": "music"
+  },
+  "feature_matrix": {
+    "after_story_id": "bape-saint-mxxxxxx-can-stool",
+    "eyebrow": "DROP MATRIX / VERIFIED RELEASE NOTES",
+    "title": "四件关键单品，把旧化语言从身体推到房间。",
+    "items": [
+      { "label": "LONG-SLEEVE TEE", "note": "AGED GRAPHIC" },
+      { "label": "SHORT-SLEEVE TEE", "note": "AGED GRAPHIC" },
+      { "label": "SOCKS", "note": "WEARABLE DETAIL" },
+      { "label": "CAN STOOL", "note": "OBJECT / FURNITURE" }
+    ]
+  }
 }

@@ -32,6 +32,15 @@ body[data-issue="2026-08-25"] .site-footer {
   text-transform: uppercase;
 }
 
+body[data-issue="2026-08-25"] .site-header {
+  position: sticky;
+  z-index: 60;
+  top: 0;
+  align-items: center;
+  background: color-mix(in srgb, #101552 86%, transparent);
+  backdrop-filter: blur(12px);
+}
+
 body[data-issue="2026-08-25"] .non-production-label {
   margin: 0;
   padding: 0.55rem 1rem;
@@ -106,6 +115,109 @@ body[data-issue="2026-08-25"] article a {
   color: #d9ff43;
 }
 
+body[data-issue="2026-08-25"] .feature-matrix {
+  width: min(68rem, calc(100vw - 2rem));
+  margin-block: 3rem 5rem;
+  margin-left: 50%;
+  padding: clamp(1.2rem, 3vw, 2.5rem);
+  border: 1px solid #d9ff43;
+  background: #f5f0e6;
+  color: #101552;
+  transform: translateX(-50%);
+}
+
+body[data-issue="2026-08-25"] .feature-matrix header {
+  display: grid;
+  grid-template-columns: 0.55fr 1.45fr;
+  gap: 2rem;
+  align-items: end;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid currentColor;
+}
+
+body[data-issue="2026-08-25"] .feature-matrix header p {
+  margin: 0;
+  color: #ff6b57;
+  font: 700 0.72rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.12em;
+}
+
+body[data-issue="2026-08-25"] .feature-matrix h3 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3.8rem);
+  letter-spacing: -0.05em;
+}
+
+body[data-issue="2026-08-25"] .feature-matrix ol {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body[data-issue="2026-08-25"] .feature-matrix li {
+  display: grid;
+  min-height: 22rem;
+  grid-template-rows: 1fr auto auto;
+  gap: 0.45rem;
+  padding: 1rem;
+  border-right: 1px solid currentColor;
+}
+
+body[data-issue="2026-08-25"] .feature-matrix li:last-child {
+  border-right: 0;
+}
+
+body[data-issue="2026-08-25"] .feature-matrix li > span:not(.matrix-object) {
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+body[data-issue="2026-08-25"] .feature-matrix li small {
+  color: #ff6b57;
+  font: 700 0.68rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.1em;
+}
+
+body[data-issue="2026-08-25"] .matrix-object {
+  position: relative;
+  align-self: center;
+  justify-self: center;
+  width: 72%;
+  aspect-ratio: 0.72;
+  border: 1px solid currentColor;
+  background:
+    repeating-linear-gradient(8deg, transparent 0 7px, rgba(16, 21, 82, 0.09) 7px 8px),
+    #d9ff43;
+  clip-path: polygon(28% 0, 40% 7%, 60% 7%, 72% 0, 100% 22%, 85% 38%, 76% 30%, 76% 100%, 24% 100%, 24% 30%, 15% 38%, 0 22%);
+}
+
+body[data-issue="2026-08-25"] .matrix-object[data-object="3"] {
+  width: 34%;
+  aspect-ratio: 0.46;
+  border-radius: 0 0 40% 40%;
+  clip-path: none;
+}
+
+body[data-issue="2026-08-25"] .matrix-object[data-object="4"] {
+  width: 72%;
+  aspect-ratio: 1;
+  border-radius: 50% 50% 12% 12%;
+  clip-path: none;
+  transform: rotate(-6deg);
+}
+
+body[data-issue="2026-08-25"] .matrix-object[data-object="4"]::after {
+  position: absolute;
+  inset: 42% 10% auto;
+  border-top: 2px solid currentColor;
+  content: "CAN / STOOL";
+  font: 700 0.55rem/2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  text-align: center;
+}
+
 body[data-issue="2026-08-25"] .sources {
   margin-top: 7rem;
   padding-top: 2rem;
@@ -146,5 +258,24 @@ body[data-issue="2026-08-25"] img {
 
   body[data-issue="2026-08-25"] h1 {
     font-size: clamp(3rem, 18vw, 5.6rem);
+  }
+
+  body[data-issue="2026-08-25"] .site-header {
+    position: static;
+  }
+
+  body[data-issue="2026-08-25"] .feature-matrix header,
+  body[data-issue="2026-08-25"] .feature-matrix ol {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-issue="2026-08-25"] .feature-matrix li {
+    min-height: 18rem;
+    border-right: 0;
+    border-bottom: 1px solid currentColor;
+  }
+
+  body[data-issue="2026-08-25"] .feature-matrix li:last-child {
+    border-bottom: 0;
   }
 }

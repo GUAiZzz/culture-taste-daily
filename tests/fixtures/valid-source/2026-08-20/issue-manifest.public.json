@@ -13,7 +13,7 @@
     "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
     "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
   },
-  "core_version": "v1",
+  "core_version": "v2",
   "content_lock": {
     "status": "locked",
     "sha256": "85dab0ecf155aa9c1139b257055bd89049764f08dacc10f3c590d80114afbaa5",
