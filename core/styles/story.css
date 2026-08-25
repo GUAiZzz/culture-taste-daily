@@ -119,10 +119,10 @@ body[data-story-reader] a {
 }
 
 .story-opening h1 {
-  max-width: min(100%, 5.5em);
+  max-width: min(100%, 9em);
   margin: 1.35rem 0 1.5rem;
   font-family: "Arial Narrow", Impact, "PingFang SC", sans-serif;
-  font-size: clamp(3.8rem, 7.2vw, 8.2rem);
+  font-size: clamp(2.4rem, 3.6vw, 4.2rem);
   font-weight: 900;
   letter-spacing: -0.055em;
   line-height: 0.96;
@@ -535,7 +535,7 @@ body[data-story-reader] a.next-story {
   .story-opening h1 {
     max-width: 100%;
     margin-block: 0.8rem;
-    font-size: clamp(3.25rem, 17vw, 5.25rem);
+    font-size: clamp(2rem, 8.5vw, 3rem);
     letter-spacing: -0.045em;
     line-height: 1;
   }

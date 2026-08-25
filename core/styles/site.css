@@ -1038,12 +1038,7 @@ body[data-page="facsimile"] .publication-footer {
 }
 
 .radar-group > header {
-  display: flex;
-  gap: 2rem;
-  align-items: baseline;
-  justify-content: space-between;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid currentColor;
+  padding-bottom: 1rem;
 }
 
 .radar-group > header h3 {
@@ -1053,20 +1048,18 @@ body[data-page="facsimile"] .publication-footer {
   letter-spacing: 0.12em;
 }
 
-.radar-group > header p {
-  margin: 0;
-  padding: 0;
-  font: 0.86rem/1.4 Georgia, "Songti SC", serif;
-}
-
 .radar-group ol {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1px;
+  gap: clamp(0.8rem, 1.25vw, 1.35rem);
   margin: 0;
   padding: 0;
-  background: color-mix(in srgb, currentColor 36%, transparent);
+  background: transparent;
   list-style: none;
+}
+
+.radar-group[data-radar-group="extra"] ol {
+  grid-template-columns: repeat(2, minmax(16rem, 21rem));
 }
 
 .radar-group li > a {
@@ -1077,13 +1070,16 @@ body[data-page="facsimile"] .publication-footer {
   background: var(--theme-panel, var(--paper));
   color: inherit;
   text-decoration: none;
-  transition: background 180ms ease, color 180ms ease;
+  box-shadow: 0 0.75rem 2rem color-mix(in srgb, var(--ink) 13%, transparent);
+  transition: background 180ms ease, color 180ms ease, box-shadow 180ms ease, translate 180ms ease;
 }
 
 .radar-group li > a:hover,
 .radar-group li > a:focus-visible {
   background: var(--theme-accent, var(--ink));
   color: var(--paper);
+  box-shadow: 0 1.2rem 2.8rem color-mix(in srgb, var(--ink) 22%, transparent);
+  translate: 0 -0.25rem;
 }
 
 .radar-visual {
@@ -1091,7 +1087,6 @@ body[data-page="facsimile"] .publication-footer {
   display: block;
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  border-bottom: 1px solid currentColor;
   background: color-mix(in srgb, var(--theme-panel, var(--paper)) 74%, var(--theme-accent));
 }
 
@@ -1190,6 +1185,10 @@ body[data-page="facsimile"] .publication-footer {
 }
 
 .radar-source {
+  display: flex;
+  gap: 0.45rem;
+  align-items: baseline;
+  justify-content: space-between;
   padding: 0 0.75rem 0.55rem;
   overflow: hidden;
   font: 700 0.56rem/1.2 ui-monospace, monospace;
@@ -1199,12 +1198,21 @@ body[data-page="facsimile"] .publication-footer {
   white-space: nowrap;
 }
 
+.radar-source b {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.radar-source time {
+  flex: 0 0 auto;
+  font-weight: 500;
+}
+
 .radar-link {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
   padding: 0.75rem;
-  border-top: 1px solid color-mix(in srgb, currentColor 28%, transparent);
   font: 800 0.62rem/1 ui-monospace, monospace;
   letter-spacing: 0.08em;
 }
@@ -1212,6 +1220,10 @@ body[data-page="facsimile"] .publication-footer {
 @media (max-width: 70rem) {
   .radar-group ol {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .radar-group[data-radar-group="extra"] ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1224,13 +1236,11 @@ body[data-page="facsimile"] .publication-footer {
     font-size: clamp(3.2rem, 18vw, 6rem);
   }
 
-  .radar-group > header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.4rem;
+  .radar-group ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .radar-group ol {
+  .radar-group[data-radar-group="extra"] ol {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 

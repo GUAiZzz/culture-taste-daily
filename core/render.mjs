@@ -233,13 +233,14 @@ function dailyIndex(issue) {
       ? `<img class="source-art" data-external-preview="true" src="${escapeHtml(imageUrl)}" alt="${escapeHtml(item.media.alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="900" height="900">`
       : "";
     const mediaLabel = item.media?.kind === "video" ? "VIDEO" : "OFFICIAL IMAGE";
-    return `<li data-story-card data-story-category="${escapeHtml(item.category)}" data-radar-kind="${inIssue ? "issue" : "extra"}"><a href="${href}" ${linkAttrs}><span class="radar-visual" data-visual-frame data-official-only data-category="${escapeHtml(item.category)}">${media}<span class="official-media-fallback"><b>${escapeHtml(item.publisher)}</b><small>OPEN OFFICIAL MEDIA ↗</small></span><span class="media-kind">${mediaLabel}</span><span class="visual-label">${String(index + 1).padStart(2, "0")}</span></span><span class="radar-meta"><strong>${escapeHtml(item.category)}</strong><span>${inIssue ? "IN ISSUE" : "EXTRA SIGNAL"}</span></span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.deck)}</p><span class="radar-source">${escapeHtml(item.publisher)}</span><span class="radar-link">${inIssue ? "READ STORY" : "OPEN OFFICIAL"} ↗</span></a></li>`;
+    const date = item.event_date ?? item.published_date ?? issue.publication_date;
+    return `<li data-story-card data-story-category="${escapeHtml(item.category)}" data-radar-kind="${inIssue ? "issue" : "extra"}"><a href="${href}" ${linkAttrs}><span class="radar-visual" data-visual-frame data-official-only data-category="${escapeHtml(item.category)}">${media}<span class="official-media-fallback"><b>${escapeHtml(item.publisher)}</b><small>OPEN OFFICIAL MEDIA ↗</small></span><span class="media-kind">${mediaLabel}</span><span class="visual-label">${String(index + 1).padStart(2, "0")}</span></span><span class="radar-meta"><strong>${escapeHtml(item.category)}</strong><span>${inIssue ? "IN ISSUE" : "EXTRA SIGNAL"}</span></span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.deck)}</p><span class="radar-source"><b>${escapeHtml(item.publisher)}</b><time>${escapeHtml(date)}</time></span><span class="radar-link">${inIssue ? "READ STORY" : "OPEN OFFICIAL"} ↗</span></a></li>`;
   };
   let index = 0;
   const groups = [
-    ["issue", "01 / IN TODAY'S ISSUE", "进入完整阅读与核验来源。", items.filter((item) => item.included_in_issue !== false && item.included_story_id)],
-    ["extra", "02 / MORE FROM TODAY", "不挤进正式日报，但值得继续打开。", items.filter((item) => item.included_in_issue === false || !item.included_story_id)],
-  ].filter(([, , , groupItems]) => groupItems.length).map(([kind, title, note, groupItems]) => `<section class="radar-group" data-radar-group="${kind}"><header><h3>${title}</h3><p>${note}</p></header><ol>${groupItems.map((item) => card(item, index++)).join("")}</ol></section>`).join("");
+    ["issue", "01 / IN TODAY'S ISSUE", items.filter((item) => item.included_in_issue !== false && item.included_story_id)],
+    ["extra", "02 / MORE FROM TODAY", items.filter((item) => item.included_in_issue === false || !item.included_story_id)],
+  ].filter(([, , groupItems]) => groupItems.length).map(([kind, title, groupItems]) => `<section class="radar-group" data-radar-group="${kind}"><header><h3>${title}</h3></header><ol>${groupItems.map((item) => card(item, index++)).join("")}</ol></section>`).join("");
   return `<section class="daily-index" aria-labelledby="daily-index-title"><header><p>DAILY SELECTS / ${escapeHtml(issue.publication_date)}</p><div><h2 id="daily-index-title"><b>TODAY'S</b><i>FIELD NOTES.</i></h2></div></header><div class="radar-filters" role="group" aria-label="Filter today's selections">${filters}</div>${groups}</section>`;
 }
 
