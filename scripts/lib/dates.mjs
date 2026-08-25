@@ -1,10 +1,32 @@
 const SHANGHAI_TIMESTAMP = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?\+08:00$/;
+const DATE = /^\d{4}-\d{2}-\d{2}$/;
+const TIME = /^(?:[01]\d|2[0-3]):[0-5]\d$/;
 
 function shanghaiDateTime(date, time) {
   return new Date(`${date}T${time}+08:00`).getTime();
 }
 
-export function evaluateDateSemantics(manifest) {
+export function researchWindowFor(publicationDate, schedule) {
+  if (!schedule) throw new Error("daily schedule is required");
+  if (!DATE.test(publicationDate)) throw new Error("publication date must use YYYY-MM-DD");
+  for (const [field, value] of [
+    ["research_window_start", schedule.research_window_start],
+    ["research_lock_deadline", schedule.research_lock_deadline],
+    ["historical_research_lock_deadline", schedule.historical_research_lock_deadline],
+  ]) {
+    if (!TIME.test(value)) throw new Error(`daily schedule ${field} must use HH:MM`);
+  }
+  if (!DATE.test(schedule.research_lock_deadline_effective_from)) {
+    throw new Error("daily schedule research_lock_deadline_effective_from must use YYYY-MM-DD");
+  }
+  const isAmended = publicationDate >= schedule.research_lock_deadline_effective_from;
+  return {
+    start: schedule.research_window_start,
+    deadline: isAmended ? schedule.research_lock_deadline : schedule.historical_research_lock_deadline,
+  };
+}
+
+export function evaluateDateSemantics(manifest, schedule) {
   const reasons = [];
   const candidate = manifest.candidate_created_at;
   const research = manifest.research_locked_at;
@@ -29,10 +51,11 @@ export function evaluateDateSemantics(manifest) {
   }
 
   const researchTime = new Date(research).getTime();
-  const researchStart = shanghaiDateTime(manifest.publication_date, "06:00:00");
-  const researchLock = shanghaiDateTime(manifest.publication_date, "08:30:00");
+  const researchWindow = researchWindowFor(manifest.publication_date, schedule);
+  const researchStart = shanghaiDateTime(manifest.publication_date, `${researchWindow.start}:00`);
+  const researchLock = shanghaiDateTime(manifest.publication_date, `${researchWindow.deadline}:00`);
   if (researchTime < researchStart || researchTime > researchLock) {
-    reasons.push("research lock is outside the publication-day 06:00–08:30 final-refresh window");
+    reasons.push(`research lock is outside the publication-day ${researchWindow.start}–${researchWindow.deadline} final-refresh window`);
   }
 
   if (new Date(content).getTime() < researchTime) {

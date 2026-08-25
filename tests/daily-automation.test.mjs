@@ -4,6 +4,7 @@ import { test } from "node:test";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { evaluateDailyPreflight } from "../scripts/lib/daily.mjs";
+import { evaluateDateSemantics } from "../scripts/lib/dates.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -33,6 +34,53 @@ test("daily preflight blocks an out-of-window run and preserves the previous goo
   assert.equal(report.status, "BLOCKED");
   assert.equal(report.deployment.preserve_previous_good, true);
   assert.match(report.blockers.join("\n"), /outside the publication-day 06:00–08:30/);
+});
+
+test("A1 allows the final refresh through 15:00 from 2026-08-26", async () => {
+  const beforeDeadline = await evaluateDailyPreflight({
+    repoRoot,
+    issueDate: "2026-08-26",
+    now: new Date("2026-08-26T06:59:00Z"),
+  });
+  const atDeadline = await evaluateDailyPreflight({
+    repoRoot,
+    issueDate: "2026-08-26",
+    now: new Date("2026-08-26T07:00:00Z"),
+  });
+  const afterDeadline = await evaluateDailyPreflight({
+    repoRoot,
+    issueDate: "2026-08-26",
+    now: new Date("2026-08-26T07:01:00Z"),
+  });
+
+  assert.equal(beforeDeadline.status, "READY_FOR_DRY_RUN");
+  assert.equal(atDeadline.status, "READY_FOR_DRY_RUN");
+  assert.equal(afterDeadline.status, "BLOCKED");
+  assert.match(afterDeadline.blockers.join("\n"), /outside the publication-day 06:00–15:00/);
+});
+
+test("date semantics use A1 prospectively without reclassifying the historical window", async () => {
+  const policy = JSON.parse(await readFile(path.join(repoRoot, "automation/daily-policy.json"), "utf8"));
+  const manifest = {
+    publication_date: "2026-08-26",
+    candidate_created_at: "2026-08-25T18:00:00+08:00",
+    research_locked_at: "2026-08-26T14:59:00+08:00",
+    content_locked_at: "2026-08-26T15:00:00+08:00",
+    content_lock: { locked_at: "2026-08-26T15:00:00+08:00" },
+  };
+
+  assert.equal(evaluateDateSemantics(manifest, policy.schedule).production_candidate_valid, true);
+  const historical = {
+    ...manifest,
+    publication_date: "2026-08-25",
+    candidate_created_at: "2026-08-24T18:00:00+08:00",
+    research_locked_at: "2026-08-25T14:59:00+08:00",
+    content_locked_at: "2026-08-25T15:00:00+08:00",
+    content_lock: { locked_at: "2026-08-25T15:00:00+08:00" },
+  };
+  const historicalResult = evaluateDateSemantics(historical, policy.schedule);
+  assert.equal(historicalResult.production_candidate_valid, false);
+  assert.match(historicalResult.reasons.join("\n"), /06:00–08:30/);
 });
 
 test("daily preflight blocks a date that is not today's Shanghai date", async () => {
@@ -69,6 +117,9 @@ test("daily policy cannot merge, deploy, alter Pages, or touch the legacy reposi
   });
   assert.equal(policy.failure.preserve_previous_good, true);
   assert.equal(policy.failure.allow_partial_publish, false);
+  assert.equal(policy.schedule.research_lock_deadline, "15:00");
+  assert.equal(policy.schedule.research_lock_deadline_effective_from, "2026-08-26");
+  assert.equal(policy.schedule.historical_research_lock_deadline, "08:30");
 });
 
 test("daily preflight verifies the existing manual-only Preview and privacy defenses", async () => {

@@ -107,7 +107,7 @@ test("no-JavaScript reading and required render evidence pass", async () => {
 
 test("matching independent and named review evidence authorizes only the local simulation", async () => {
   const decision = await evaluateGate({ repoRoot, distDir, issueId, technicalEvidence, reviewEvidence: approvedReview, previousGoodRelease: "release-X" });
-  assert.equal(decision.decision, "AUTHORIZED");
+  assert.equal(decision.decision, "AUTHORIZED", decision.reasons.join("\n"));
   assert.equal(decision.production_authority, false);
   assert.equal(decision.selected_release, buildReport.issues[0].candidate_digest);
 });
