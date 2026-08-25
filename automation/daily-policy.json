@@ -6,7 +6,9 @@
   "schedule": {
     "start_time": "06:15",
     "research_window_start": "06:00",
-    "research_lock_deadline": "08:30"
+    "research_lock_deadline": "15:00",
+    "research_lock_deadline_effective_from": "2026-08-26",
+    "historical_research_lock_deadline": "08:30"
   },
   "freshness_hours": 72,
   "dry_run_base_ref": "codex/daily-automation-v1",

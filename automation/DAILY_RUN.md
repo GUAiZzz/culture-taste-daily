@@ -9,7 +9,7 @@ This runbook is the auditable instruction surface for the scheduled Culture & Ta
 - Start at `09:15` in `Asia/Shanghai` every day.
 - Run `npm run daily:preflight` before browsing or editing.
 - The target issue date must equal the current Shanghai calendar date.
-- Research must be refreshed and locked between `06:00` and `08:30` Shanghai time.
+- For publication dates on or after `2026-08-26`, research must be refreshed and locked between `06:00` and `15:00` Shanghai time. Earlier dates retain the historical `08:30` deadline and are never reclassified.
 - If the run starts late, misses the window, or cannot finish an honest refresh, report `BLOCKED`; do not backdate timestamps.
 
 ## Git boundary

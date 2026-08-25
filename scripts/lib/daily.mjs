@@ -1,6 +1,7 @@
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { exists, readJson, sha256File } from "./files.mjs";
+import { researchWindowFor } from "./dates.mjs";
 
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 const SHA1_PATTERN = /^[0-9a-f]{40}$/;
@@ -93,10 +94,11 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
   validateBrandRadar({ policy, radar: brandRadar, blockers });
 
   const currentMinute = minutes(shanghai.time);
-  const windowStart = minutes(policy.schedule.research_window_start);
-  const windowEnd = minutes(policy.schedule.research_lock_deadline);
+  const researchWindow = researchWindowFor(targetDate, policy.schedule);
+  const windowStart = minutes(researchWindow.start);
+  const windowEnd = minutes(researchWindow.deadline);
   if (currentMinute < windowStart || currentMinute > windowEnd) {
-    blockers.push("run is outside the publication-day 06:00–08:30 final-refresh window");
+    blockers.push(`run is outside the publication-day ${researchWindow.start}–${researchWindow.deadline} final-refresh window`);
   }
 
   if (contract.repository !== "GUAiZzz/culture-taste-daily" || contract.path !== "docs/PRODUCTION_CONTRACT_V3.md") {
@@ -110,6 +112,15 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
     blockers.push("canonical contract file is missing");
   } else if ((await sha256File(contractPath)) !== contract.sha256) {
     blockers.push("canonical contract file hash does not match dependencies/contract.json");
+  }
+  for (const amendment of contract.amendments ?? []) {
+    if (!SHA1_PATTERN.test(amendment.commit)) blockers.push(`contract amendment ${amendment.id} commit is invalid`);
+    const amendmentPath = path.join(repoRoot, amendment.path);
+    if (!(await exists(amendmentPath))) {
+      blockers.push(`contract amendment ${amendment.id} file is missing`);
+    } else if ((await sha256File(amendmentPath)) !== amendment.sha256) {
+      blockers.push(`contract amendment ${amendment.id} hash does not match dependencies/contract.json`);
+    }
   }
 
   if (harrytone.repository !== "GUAiZzz/harry-tone" || harrytone.branch !== "main" || !SHA1_PATTERN.test(harrytone.commit)) {

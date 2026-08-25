@@ -4,5 +4,14 @@
   "canonical_main_commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
   "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667",
   "approved_draft_commit": "769c47f16a183f9fd37788070a71cbeab6309b49",
-  "sha256": "7ed55419ac723b9eda668a4bf280b696caccf172ee35a20f5a859c39937eebd3"
+  "sha256": "7ed55419ac723b9eda668a4bf280b696caccf172ee35a20f5a859c39937eebd3",
+  "amendments": [
+    {
+      "id": "A1",
+      "path": "docs/PRODUCTION_CONTRACT_V3_A1.md",
+      "commit": "43e72da4c7beb1a0bf5ae756ed7c339c1eb2accb",
+      "sha256": "6fe974bf6ccf9ee443a87af2f4d8742cfc0c8d0afebd6816785217d190e2bccc",
+      "effective_from": "2026-08-26"
+    }
+  ]
 }

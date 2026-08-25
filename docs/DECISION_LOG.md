@@ -15,6 +15,17 @@ The decisions below became active through V3 activation. Their historical `OLD A
 - Result: Production Contract V3 is the canonical Culture & Taste production contract upon merge of the activation commit to `main`
 - Boundary: activation does not authorize implementation, Pages, preview, deployment, historical migration, production cutover, or daily automation
 
+## Amendment A1 — Final-refresh deadline
+
+- Human approval: repository owner instruction to move the daily cutoff to `15:00` Shanghai time
+- Approval recorded: `2026-08-25T11:43:38+08:00` (`Asia/Shanghai`)
+- Effective date: publication dates on or after `2026-08-26`
+- Amendment commit: the commit containing this A1 record; its immutable SHA is the amendment identity
+- Activation: canonical upon merge of the amendment commit
+- Change: the final-refresh and research-lock window becomes `06:00–15:00`
+- Historical boundary: publication dates through `2026-08-25` retain the former `06:00–08:30` rule and are not reclassified
+- Authority boundary: A1 changes no Preview, Pages, deployment, review, privacy, HarryTone, or unattended-automation gate
+
 ## D01 — Canonical authority and activation
 
 **OLD ASSUMPTION**

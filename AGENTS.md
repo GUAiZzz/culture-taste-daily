@@ -8,10 +8,11 @@ Read these files before changing this repository, in order:
 4. `docs/PREVIEW_BUILD.md`
 5. `docs/CONTRACT_STATUS.md`
 6. `docs/PRODUCTION_CONTRACT_V3.md`
-7. `docs/ARCHITECTURE.md`
-8. `docs/DATA_BOUNDARIES.md`
-9. `docs/HARRYTONE_DEPENDENCY.md`
-10. `docs/REFERENCE_SYSTEM.md` and `docs/CULTURE_TASTE_SOURCE_MAP.md` for editorial work
+7. `docs/PRODUCTION_CONTRACT_V3_A1.md`
+8. `docs/ARCHITECTURE.md`
+9. `docs/DATA_BOUNDARIES.md`
+10. `docs/HARRYTONE_DEPENDENCY.md`
+11. `docs/REFERENCE_SYSTEM.md` and `docs/CULTURE_TASTE_SOURCE_MAP.md` for editorial work
 
 For the authorized daily candidate dry run, also read `automation/DAILY_RUN.md` and `automation/daily-policy.json` before acting.
 
