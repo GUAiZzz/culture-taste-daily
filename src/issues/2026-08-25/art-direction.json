@@ -5,7 +5,7 @@
   "background_logic": "近黑色是场地底图；每章占据一个比例不同的房间块，不再用路线或时钟连接故事",
   "palette_logic": "near-black #09090B, warm white #F7F4ED, pool cyan #36D7E8, taxi yellow #FFD126, orchid #9B6BFF",
   "type_scale_logic": "封面使用超大窄体系统字；正文保持 18–20px；章节编号与事实字段使用等宽系统字形成导视层",
-  "image_behavior": "不使用第三方图片；以原创平面图、数量关系与物件轮廓说明事实，不伪造现场影像",
+  "image_behavior": "每篇使用与事件对应的一手官方图片；未知使用权只通过可点击的 Preview 外链展示，原创平面图仅作为未展示的本地补充资产而不冒充现场影像",
   "page_density_and_tempo": "封面像压缩节目单，COVER 拉长，MAJOR 留白，六条 SIGNAL 比例不一，WATCH 收窄，EXIT 安静",
   "core_visual_action": "不规则平面图随场地权力关系改变比例和方向，而不是让所有故事排进同一条路线",
   "cover_composition": "超大标题压住八个比例不同的房间块；不复用 8/24 的路线、时钟或 8/23 的日期闭合线",

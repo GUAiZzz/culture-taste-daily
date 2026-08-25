@@ -12,6 +12,13 @@
       "commit": "43e72da4c7beb1a0bf5ae756ed7c339c1eb2accb",
       "sha256": "6fe974bf6ccf9ee443a87af2f4d8742cfc0c8d0afebd6816785217d190e2bccc",
       "effective_from": "2026-08-26"
+    },
+    {
+      "id": "A2",
+      "path": "docs/PRODUCTION_CONTRACT_V3_A2.md",
+      "commit": "fef6481517d67a0099612bd7f97573ea907cf299",
+      "sha256": "c3c4d145d2ace2d48a083fe9a12eb3584d36966aeb6f4727e5b44fb2d29ce31e",
+      "effective_from": "2026-08-25"
     }
   ]
 }

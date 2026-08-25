@@ -5,6 +5,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { evaluateDailyPreflight } from "../scripts/lib/daily.mjs";
 import { evaluateDateSemantics } from "../scripts/lib/dates.mjs";
+import { assertOfficialStoryImages } from "../scripts/lib/official-media.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -120,6 +121,99 @@ test("daily policy cannot merge, deploy, alter Pages, or touch the legacy reposi
   assert.equal(policy.schedule.research_lock_deadline, "15:00");
   assert.equal(policy.schedule.research_lock_deadline_effective_from, "2026-08-26");
   assert.equal(policy.schedule.historical_research_lock_deadline, "08:30");
+  assert.deepEqual(policy.official_image_gate, {
+    required: true,
+    effective_from: "2026-08-25",
+    required_origin_authority: "first_party_official",
+    required_source_relationship: "first_party_official",
+    original_visual_satisfies: false,
+    preview_external_allowed: true,
+    production_requires_cleared_rights: true,
+  });
+});
+
+test("official image gate accepts a linked first-party official Preview image", () => {
+  const origin = "https://official.example/events/story";
+  const manifest = {
+    issue_id: "2026-08-25",
+    publication_date: "2026-08-25",
+    stories: [{
+      id: "verified-story",
+      sources: [{ url: origin, relationship: "first_party_official" }],
+      media: {
+        kind: "source_image",
+        origin_url: origin,
+        external_image_url: "https://official.example/assets/story.jpg",
+        origin_authority: "first_party_official",
+        rights_basis: "preview_user_authorized_external",
+      },
+    }],
+  };
+  const gate = {
+    required: true,
+    effective_from: "2026-08-25",
+    required_origin_authority: "first_party_official",
+    required_source_relationship: "first_party_official",
+  };
+  assert.doesNotThrow(() => assertOfficialStoryImages(manifest, gate));
+});
+
+test("official image gate rejects an owned diagram as the only story visual", () => {
+  const manifest = {
+    issue_id: "2026-08-25",
+    publication_date: "2026-08-25",
+    stories: [{ id: "diagram-only", sources: [], media: { kind: "data_diagram", rights_basis: "owned_original" } }],
+  };
+  assert.throws(
+    () => assertOfficialStoryImages(manifest, { required: true, effective_from: "2026-08-25", required_origin_authority: "first_party_official", required_source_relationship: "first_party_official" }),
+    /editorial visuals cannot satisfy the gate/,
+  );
+});
+
+test("official image gate rejects media and search sources posing as official", () => {
+  const origin = "https://media.example/story";
+  const manifest = {
+    issue_id: "2026-08-25",
+    publication_date: "2026-08-25",
+    stories: [{
+      id: "third-party-image",
+      sources: [{ url: origin, relationship: "independent_reporting" }],
+      media: {
+        kind: "source_image",
+        origin_url: origin,
+        external_image_url: "https://media.example/story.jpg",
+        origin_authority: "independent_media",
+        rights_basis: "preview_user_authorized_external",
+      },
+    }],
+  };
+  assert.throws(
+    () => assertOfficialStoryImages(manifest, { required: true, effective_from: "2026-08-25", required_origin_authority: "first_party_official", required_source_relationship: "first_party_official" }),
+    /not marked first-party official/,
+  );
+});
+
+test("official image gate rejects an official-looking page absent from the story source chain", () => {
+  const origin = "https://official.example/events/missing";
+  const manifest = {
+    issue_id: "2026-08-25",
+    publication_date: "2026-08-25",
+    stories: [{
+      id: "missing-source-chain",
+      sources: [{ url: "https://media.example/story", relationship: "independent_reporting" }],
+      media: {
+        kind: "source_image",
+        origin_url: origin,
+        external_image_url: "https://official.example/assets/story.jpg",
+        origin_authority: "first_party_official",
+        rights_basis: "preview_user_authorized_external",
+      },
+    }],
+  };
+  assert.throws(
+    () => assertOfficialStoryImages(manifest, { required: true, effective_from: "2026-08-25", required_origin_authority: "first_party_official", required_source_relationship: "first_party_official" }),
+    /must match a first-party official story source/,
+  );
 });
 
 test("daily preflight verifies the existing manual-only Preview and privacy defenses", async () => {
