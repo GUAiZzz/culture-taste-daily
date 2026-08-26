@@ -247,7 +247,7 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     await page.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
     const firstTheme = await page.locator("html").getAttribute("data-visual-theme");
     assert.ok(["field", "coral", "analog"].includes(firstTheme));
-    await page.reload();
+    await page.reload({ waitUntil: "domcontentloaded" });
     assert.notEqual(await page.locator("html").getAttribute("data-visual-theme"), firstTheme);
 
     await page.locator('[data-theme-choice="analog"]').click();
@@ -266,7 +266,7 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     assert.equal(await page.locator("body[data-story-reader]").count(), 1);
     assert.equal(await page.locator("main h1").count(), 1);
     assert.match(await page.locator("main").innerText(), /VERIFIED SOURCES \/ DATES/);
-    await page.reload();
+    await page.reload({ waitUntil: "domcontentloaded" });
     assert.equal(await page.locator("html").getAttribute("data-visual-theme"), "analog");
     await page.setViewportSize({ width: 390, height: 844 });
     assert.equal(await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth)), 0);
@@ -366,7 +366,7 @@ test("2026-08-22 historical web edition keeps all exact source pages addressable
 test("Preview workflow verifies pull requests but deploys only on explicit manual dispatch", async () => {
   const workflow = await readFile(path.join(repoRoot, ".github/workflows/preview.yml"), "utf8");
   assert.match(workflow, /pull_request:/);
-  assert.match(workflow, /branches: \[main, codex\/daily-automation-v1\]/);
+  assert.match(workflow, /branches: \[main, preview-build-v1\]/);
   assert.match(workflow, /workflow_dispatch:/);
   assert.match(workflow, /if: github\.event_name == 'workflow_dispatch'/);
   assert.match(workflow, /NON-PRODUCTION|non-production/);

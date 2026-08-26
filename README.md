@@ -21,6 +21,7 @@ Production Contract V3 is canonical. The repository now builds the real Culture 
 - an honest 16-page facsimile reader for the supplied 2026-08-22 PDF;
 - manually triggered GitHub Pages Preview hosting after CI verification.
 - a fail-closed daily candidate preflight and auditable runbook with zero deployment authority.
+- strict daily live checks for public source pages and official media, plus a weekly read-only site-health audit.
 
 Manifest `status`, generator QA fields, and scores are reporting only. They cannot approve editorial quality or authorize release.
 

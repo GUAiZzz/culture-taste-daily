@@ -32,9 +32,9 @@ Current issue art direction remains in the scoped `src/issues/<date>/issue.css`.
 
 ## Preview CI and hosting
 
-`.github/workflows/preview.yml` runs on pull requests to `main`. It installs pinned dependencies, runs the full verification suite, builds with the GitHub Pages base URL, rechecks the exact artifact, and retains review evidence for seven days.
+`.github/workflows/preview.yml` runs on pull requests to `main` and `preview-build-v1`. The latter is the current shared publication and daily-candidate base. It installs pinned dependencies, runs the full verification suite, builds with the GitHub Pages base URL, rechecks the exact artifact, and retains review evidence for seven days.
 
-Deployment occurs only through an explicit `workflow_dispatch`. There is no push-triggered deployment, GitHub Actions schedule, production job, custom domain, or redirect. A separate Codex daily dry-run task may prepare a dated candidate pull request, but it cannot dispatch this workflow or update the Pages endpoint. The Pages endpoint is Preview infrastructure only.
+Deployment occurs only through an explicit `workflow_dispatch`. There is no push-triggered deployment, GitHub Actions schedule, production job, custom domain, or redirect. A separate Codex daily task may prepare a dated candidate pull request and a weekly task may audit the site read-only, but neither can dispatch this workflow or update the Pages endpoint. The Pages endpoint is Preview infrastructure only.
 
 ## Production blockers intentionally retained
 

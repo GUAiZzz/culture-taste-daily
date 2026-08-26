@@ -91,12 +91,20 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
   if (targetDate !== shanghai.date) blockers.push("issue date must match the current Asia/Shanghai calendar date");
   if (policy.timezone !== "Asia/Shanghai") blockers.push("daily policy timezone must remain Asia/Shanghai");
   if (policy.mode !== "scheduled_dry_run_candidate") blockers.push("daily policy may authorize dry-run candidates only");
+  if (policy.dry_run_base_ref !== "preview-build-v1") blockers.push("daily candidates must use the current preview-build-v1 publication base");
   validateBrandRadar({ policy, radar: brandRadar, blockers });
 
   const currentMinute = minutes(shanghai.time);
   const researchWindow = researchWindowFor(targetDate, policy.schedule);
   const windowStart = minutes(researchWindow.start);
   const windowEnd = minutes(researchWindow.deadline);
+  if (targetDate >= policy.schedule.research_lock_deadline_effective_from) {
+    for (const [name, value] of [["start_time", policy.schedule.start_time], ["recovery_time", policy.schedule.recovery_time]]) {
+      if (typeof value !== "string" || minutes(value) < windowStart || minutes(value) > windowEnd) {
+        blockers.push(`${name} must remain inside the publication-day ${researchWindow.start}–${researchWindow.deadline} final-refresh window`);
+      }
+    }
+  }
   if (currentMinute < windowStart || currentMinute > windowEnd) {
     blockers.push(`run is outside the publication-day ${researchWindow.start}–${researchWindow.deadline} final-refresh window`);
   }
@@ -146,6 +154,9 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
   if (!/if: github\.event_name == 'workflow_dispatch'/.test(previewWorkflow)) {
     blockers.push("Preview deployment must remain guarded by explicit workflow dispatch");
   }
+  if (!new RegExp(`branches: \\[main, ${policy.dry_run_base_ref.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\]`).test(previewWorkflow)) {
+    blockers.push("Preview pull-request verification must include the configured daily base ref");
+  }
 
   const gitignore = await readFile(gitignorePath, "utf8");
   for (const requiredIgnore of ["private/", "research-private/", "source-ledger*.json", ".env", "credentials*.json", "vendor/harry-tone/"]) {
@@ -164,8 +175,14 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
     shanghai_now: `${shanghai.date}T${shanghai.time}:00+08:00`,
     weekday: shanghai.weekday,
     mode: policy.mode,
+    schedule: {
+      primary: policy.schedule.start_time,
+      recovery: policy.schedule.recovery_time,
+      deadline: researchWindow.deadline,
+    },
     candidate_action: issueExists ? "repair_or_refresh_existing_candidate" : "create_new_candidate",
     branch_name: `${policy.branch_prefix}-${targetDate}`,
+    base_ref: policy.dry_run_base_ref,
     source_lanes: policy.required_source_lanes,
     standing_beats: selectedBeats(policy, shanghai.weekday).map((beat) => beat.id),
     brand_radar: brandCohort

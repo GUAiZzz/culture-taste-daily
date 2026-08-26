@@ -6,7 +6,8 @@ This runbook is the auditable instruction surface for the scheduled Culture & Ta
 
 ## Schedule and date
 
-- Start at `09:15` in `Asia/Shanghai` every day.
+- Start the primary run at `09:30` in `Asia/Shanghai` every day.
+- Run one recovery/final-refresh attempt at `13:30` on the same dated branch. The second attempt updates the existing candidate and pull request; it never creates a duplicate.
 - Run `npm run daily:preflight` before browsing or editing.
 - The target issue date must equal the current Shanghai calendar date.
 - For publication dates on or after `2026-08-26`, research must be refreshed and locked between `06:00` and `15:00` Shanghai time. Earlier dates retain the historical `08:30` deadline and are never reclassified.
@@ -14,12 +15,13 @@ This runbook is the auditable instruction surface for the scheduled Culture & Ta
 
 ## Git boundary
 
-- Initial dry-run base ref: `codex/daily-automation-v1`.
+- Stable dry-run base ref: `preview-build-v1`. This is the current shared publication container and front-end baseline.
 - Create or update only `automation/culture-taste-YYYY-MM-DD`.
 - Never commit directly to `main`, `preview-build-v1`, or `gh-pages`.
 - Open or update one pull request from the dated branch to the configured dry-run base ref.
 - Never merge the pull request or dispatch `.github/workflows/preview.yml`.
 - If the base ref, repository identity, or worktree state is ambiguous, stop `BLOCKED`.
+- A daily content run may change only `src/issues/YYYY-MM-DD/` and narrowly required date-specific tests. It must not redesign or modify `core/`, historical issues, schemas, workflows, Pages settings, automation policy, or the publication container.
 
 ## Private workspace
 
@@ -110,11 +112,14 @@ Then run:
 npm ci
 npm run daily:preflight
 npm run verify
+npm run health:daily -- --date YYYY-MM-DD
 npm audit --audit-level=high
 git diff --check
 ```
 
-Confirm privacy scanning rejects private material and confirm the issue is fully readable on desktop, mobile, reduced motion, and without JavaScript. Re-run every dependent check after a material content, source, image, style, or interaction change.
+`health:daily` must verify every public source page, first-party official image, radar image, official video route, and static video poster for the dated issue. It retries transient failures, then uses a real-browser fallback for anti-bot responses. It writes ignored evidence under `.stage4/health/` and fails closed when a required media response or public route is genuinely unavailable. A `REVIEW_REQUIRED` page must be opened and read in the connected interactive browser; record that verification privately or stop `BLOCKED`. Availability does not grant image rights.
+
+Confirm privacy scanning rejects private material and confirm the issue is fully readable on desktop, mobile, reduced motion, and without JavaScript. The QA evidence must include complete desktop and mobile captures of the current homepage and issue plus story-reader coverage. Re-run every dependent check after a material content, source, image, style, or interaction change.
 
 ## Result
 
@@ -123,7 +128,7 @@ On success:
 - commit only the dated public issue and necessary public test updates;
 - push the dated branch;
 - open or update one pull request;
-- report source/issue/artifact digests, QA result, unresolved rights, and the exact human decisions still required;
+- report source/issue/artifact digests, live-source health, QA result, unresolved rights, and the exact human decisions still required;
 - stop before merge or deployment.
 
 On any failure:
