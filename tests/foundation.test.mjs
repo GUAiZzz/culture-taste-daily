@@ -171,9 +171,11 @@ test("Preview homepage and archive expose the current 2026-08-23/24/25/26 fields
   assert.match(archive, /assets\/covers\/2026-08-23\.svg/);
   assert.match(home, /assets\/covers\/2026-08-25\.svg/);
   assert.match(archive, /assets\/covers\/2026-08-25\.svg/);
+  assert.match(home, /assets\/covers\/2026-08-26\.svg/);
+  assert.match(archive, /assets\/covers\/2026-08-26\.svg/);
   assert.doesNotMatch(home, /<div class="type-cover"[^>]*><span>THE DAY/);
   await readFile(path.join(previewDist, "assets/culture-taste-earth.png"));
-  for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg", "2026-08-23.svg", "2026-08-25.svg"]) {
+  for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg", "2026-08-23.svg", "2026-08-25.svg", "2026-08-26.svg"]) {
     await readFile(path.join(previewDist, "assets/covers", cover));
   }
 });
@@ -214,6 +216,7 @@ test("frontend integration keeps the formal issue intact while adding the supple
 
 test("daily radar has at least two official-media selections in every category without changing the issue manifest", async () => {
   const radar = JSON.parse(await readFile(path.join(repoRoot, "src/issues/2026-08-26/daily-radar.public.json"), "utf8"));
+  const priorRadar = JSON.parse(await readFile(path.join(repoRoot, "src/issues/2026-08-25/daily-radar.public.json"), "utf8"));
   const manifest = JSON.parse(await readFile(path.join(repoRoot, "src/issues/2026-08-26/issue-manifest.public.json"), "utf8"));
   assert.equal(manifest.stories.length, 5);
   assert.equal(radar.items.length, 10);
@@ -225,6 +228,10 @@ test("daily radar has at least two official-media selections in every category w
     assert.match(extra.official_url, /^https:\/\//);
     assert.match(extra.media.url, /^https:\/\//);
   }
+  const priorIds = new Set(priorRadar.items.map((item) => item.id));
+  const priorUrls = new Set(priorRadar.items.map((item) => item.official_url).filter(Boolean));
+  assert.ok(radar.items.every((item) => !priorIds.has(item.id)), "current radar repeats a prior item id");
+  assert.ok(radar.items.filter((item) => item.official_url).every((item) => !priorUrls.has(item.official_url)), "current radar repeats a prior official URL");
 });
 
 test("theme selection persists into stories while filtering and no-JavaScript reading still work", async () => {

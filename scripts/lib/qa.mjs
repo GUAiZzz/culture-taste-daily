@@ -34,6 +34,7 @@ const CHECK_IDS = [
   "desktop_render",
   "mobile_render",
   "reduced_motion_render",
+  "headline_layout",
   "publication_shell_render",
 ];
 
@@ -289,8 +290,12 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
       await page.reload({ waitUntil: "domcontentloaded" });
     }
     await page.evaluate(async () => {
+      const decodeWithTimeout = (image) => Promise.race([
+        image.decode().catch(() => undefined),
+        new Promise((resolve) => setTimeout(resolve, 5_000)),
+      ]);
       await Promise.all([...document.querySelectorAll('img[data-external-preview="true"]')]
-        .map((image) => image.decode().catch(() => undefined)));
+        .map(decodeWithTimeout));
     });
   }
   await page.waitForTimeout(500);
@@ -301,6 +306,10 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
     const isDeferredExternalPreview = (image) => image.loading === "lazy"
       && image.dataset.externalPreview === "true"
       && !image.complete;
+    const headline = document.querySelector(".hero-copy h1");
+    const headlineStyle = headline ? getComputedStyle(headline) : null;
+    const headlineFontSize = headlineStyle ? Number.parseFloat(headlineStyle.fontSize) : null;
+    const headlineLineHeight = headlineStyle ? Number.parseFloat(headlineStyle.lineHeight) : null;
     return {
       main_text_length: mainText.length,
       missing_story_titles: storyTitles.filter((title) => !mainText.includes(title)),
@@ -320,6 +329,12 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
       issue_index_is_native_disclosure: Boolean(document.querySelector(".issue-nav-panel > summary")),
       nested_scroll_frames: [...document.querySelectorAll("iframe[data-historical-frame]")].filter((frame) => frame.scrollHeight > frame.clientHeight + 50).length,
       reduced_motion_matches: matchMedia("(prefers-reduced-motion: reduce)").matches,
+      headline_layout: headline ? {
+        font_size: headlineFontSize,
+        line_height: headlineLineHeight,
+        line_height_ratio: headlineLineHeight / headlineFontSize,
+        horizontal_overflow: Math.max(0, headline.scrollWidth - headline.clientWidth),
+      } : null,
     };
   }, manifest.stories.map((story) => story.title));
 
@@ -425,6 +440,13 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
       const reduced = captures["reduced-motion-1440x900"];
       checks.push(result("reduced_motion_render", reduced.facts.reduced_motion_matches && reduced.facts.horizontal_overflow === 0, reduced.facts));
 
+      const headlineLayouts = [captures["home-desktop-1440x900"], captures["home-mobile-390x844"]]
+        .map((item) => item.facts.headline_layout);
+      const headlineOk = headlineLayouts.every((headline) => headline
+        && headline.line_height_ratio >= 0.9
+        && headline.horizontal_overflow === 0);
+      checks.push(result("headline_layout", headlineOk, headlineLayouts));
+
       const shellCaptures = [captures["home-desktop-1440x900"], captures["home-mobile-390x844"], captures["archive-desktop-1440x900"], captures["historical-20-mobile-390x844"], captures["historical-21-mobile-390x844"], captures["historical-22-mobile-390x844"]].filter(Boolean);
       const shellOk = shellCaptures.every((item) => item.facts.horizontal_overflow === 0
         && item.facts.broken_images.length === 0
@@ -446,7 +468,7 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
       await server.close();
     }
   } else {
-    for (const id of ["no_js_reading", "keyboard_focus", "desktop_render", "mobile_render", "reduced_motion_render", "publication_shell_render"]) {
+    for (const id of ["no_js_reading", "keyboard_focus", "desktop_render", "mobile_render", "reduced_motion_render", "headline_layout", "publication_shell_render"]) {
       checks.push(result(id, false, capture ? "render checks skipped because static QA failed" : "render checks not requested"));
     }
   }

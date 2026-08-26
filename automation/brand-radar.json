@@ -11,8 +11,9 @@
     "exact_source_identity_required": true
   },
   "rotation": {
-    "mode": "daily_deterministic_cohort_plus_standing_beats",
+    "mode": "full_registry_daily_quick_scan_plus_focus_cohort_and_standing_beats",
     "full_cycle_days": 7,
+    "full_registry_daily_quick_scan": true,
     "standing_beats_source": "automation/daily-policy.json"
   },
   "cohorts": [

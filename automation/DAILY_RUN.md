@@ -7,7 +7,8 @@ This runbook is the auditable instruction surface for the scheduled Culture & Ta
 ## Schedule and date
 
 - Start the primary run at `09:30` in `Asia/Shanghai` every day.
-- A same-day manual recovery run is allowed before `15:00`; it must update the same dated branch and pull request rather than create a duplicate.
+- Recheck at `11:30`, `13:30`, and `14:30`. If today's complete candidate and pull request are missing, stale, or previously blocked, recover automatically before `15:00` on the same dated branch and pull request. Passing the primary start time is never itself a blocker.
+- A same-day manual recovery run is also allowed before `15:00`; it must update the same dated branch and pull request rather than create a duplicate.
 - Run `npm run daily:preflight` before browsing or editing.
 - The target issue date must equal the current Shanghai calendar date.
 - For publication dates on or after `2026-08-26`, research must be refreshed and locked between `06:00` and `15:00` Shanghai time. Earlier dates retain the historical `08:30` deadline and are never reclassified.
@@ -44,7 +45,7 @@ Follow `docs/CULTURE_TASTE_SOURCE_MAP.md` and use detail pages rather than headl
 1. Scan P0 official calendars, institutions, brands, designers, artists, labels, venues, and organizers.
 2. Scan strong independent fashion/culture, art/design, and relevant specialist sources.
 3. Complete all five regional lanes from `automation/daily-policy.json`; an empty lane is allowed when recorded privately.
-4. Load `automation/brand-radar.json`, check the deterministic cohort reported by `npm run daily:preflight`, and apply the standing beats below. The registry is a discovery obligation, not a publication quota.
+4. Load `automation/brand-radar.json`, complete a lightweight current-status scan of every active subject, then deeply verify the deterministic focus cohort reported by `npm run daily:preflight` and apply the standing beats below. The complete registry is a daily discovery obligation, not a publication quota.
 5. Resolve each selected subject to its current official public route. Instagram following, login, or private access is never required. An exact official detail page is still required before a brand announcement can become P0 evidence.
 6. Check direct community evidence only as a bounded discovery signal.
 7. Deduplicate by underlying event and separate publication date, event date, access time, and current status.
@@ -59,7 +60,7 @@ Standing checks are research obligations, never publication quotas:
 - exhibitions and cultural programmes every day;
 - small breakout objects and observable cultural shifts every day.
 
-The complete maintained brand-and-culture radar is covered once per seven-day deterministic rotation. A subject's presence in the radar never proves relevance, independence, cultural impact, or image rights, and it never requires a social-media follow.
+Every active subject in the maintained brand-and-culture radar receives a lightweight daily status scan. One deterministic cohort receives the deeper official-detail-page pass each day, so every subject gets a deep pass once per seven-day rotation. A subject's presence in the radar never proves relevance, independence, cultural impact, or image rights, and it never requires a social-media follow.
 
 The issue may publish none of these when evidence or editorial relevance is weak.
 
@@ -79,10 +80,12 @@ The issue may publish none of these when evidence or editorial relevance is weak
 Build the homepage radar separately from the formal issue. The issue must still select the smallest strong set and must never be padded to satisfy the radar count.
 
 - Create `daily-radar.public.json` for the current date with at least two verified items in each of Fashion, Music, Objects, and City.
+- The radar must include a public coverage attestation: all five regional lanes checked, full brand registry quick-scan completed, the exact focus cohort and standing beats checked, and the configured prior-issue deduplication window applied. Item-level rejected research remains private.
 - An item may reference a story already selected for the issue or remain an extra signal that links directly to its official page. Extra signals do not enter `content.md`, the issue manifest, RSS, or the archive issue count.
 - Every radar item must display first-party official media. Reuse the issue's verified official image for referenced stories. For extra signals, record the official detail page, exact official image or video URL, publisher, dates, alt text, credit, source authority, and rights basis.
 - Prefer an official video and official poster when the source provides a useful moving-image asset. A screenshot may be used only when its public-use basis is documented; a self-created illustration, generic placeholder, search thumbnail, or media repost cannot satisfy the radar.
 - If any category has fewer than two honest items or any item lacks verified official media, fail the radar check. Do not weaken the formal issue or fabricate a visual to fill the grid.
+- From 2026-08-26 onward, an event, official detail URL, or canonical item key already used in either of the previous two issues cannot be reused as a fresh Daily Select. A genuine continuation needs a new event key, new dated evidence, and an explicit continuation rationale in the private ledger.
 
 ## Images
 
@@ -120,6 +123,8 @@ git diff --check
 `health:daily` must verify every public source page, first-party official image, radar image, official video route, and static video poster for the dated issue. It retries transient failures, then uses a real-browser fallback for anti-bot responses. It writes ignored evidence under `.stage4/health/` and fails closed when a required media response or public route is genuinely unavailable. A `REVIEW_REQUIRED` page must be opened and read in the connected interactive browser; record that verification privately or stop `BLOCKED`. Availability does not grant image rights.
 
 Confirm privacy scanning rejects private material and confirm the issue is fully readable on desktop, mobile, reduced motion, and without JavaScript. The QA evidence must include complete desktop and mobile captures of the current homepage and issue plus story-reader coverage. Re-run every dependent check after a material content, source, image, style, or interaction change.
+
+From 2026-08-26 onward, every current issue also needs a local, issue-specific archive cover. Falling back to the generic blue/lime type card is a build failure. Compare the cover against the previous seven issues, and fail visual QA when the homepage Chinese headline uses a line-height below the collision-safe threshold or overflows its container.
 
 ## Result
 

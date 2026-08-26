@@ -87,7 +87,8 @@ The public registry separates a durable research obligation from any personal so
 
 Operating rules:
 
-- `npm run daily:preflight` chooses one deterministic cohort each day; all cohorts are covered once in a seven-day cycle, in addition to the Supreme, Stüssy, and active-runway standing beats;
+- every candidate day performs a lightweight official-signal check across the complete active registry, then `npm run daily:preflight` chooses one deterministic cohort for a deeper detail-page review;
+- the daily public radar must attest the complete-registry quick scan, the exact deep-review cohort, the required standing beats, all five regional lanes, and the prior-two-issue deduplication window; the attestation gate applies from 2026-08-27;
 - a radar entry means “check for a relevant new official signal,” not “write about this subject”;
 - official brand, designer, retailer, event, or archive pages may establish only subject-originated facts under P0;
 - cultural impact, reception, breakout status, or trend claims still require independent or direct community evidence appropriate to the claim;

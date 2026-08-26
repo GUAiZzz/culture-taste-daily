@@ -79,7 +79,85 @@ function englishTitle(content) {
   return lines.find((line, index) => index > 0 && /^[A-Z0-9$][A-Z0-9$ &/.,'’—-]+$/.test(line)) ?? "CULTURE & TASTE DAILY";
 }
 
-function hydrateDailyRadar(radar, manifest, issueId) {
+function normalizedUrl(value) {
+  if (!value) return null;
+  const url = new URL(value);
+  url.hash = "";
+  url.search = "";
+  return url.href.replace(/\/$/, "");
+}
+
+function sorted(values) {
+  return [...values].sort((a, b) => a.localeCompare(b));
+}
+
+function focusCohortForDate(brandRadar, issueId) {
+  const day = Math.floor(Date.parse(`${issueId}T00:00:00Z`) / 86_400_000);
+  return brandRadar.cohorts[day % brandRadar.cohorts.length];
+}
+
+function standingBeatsForDate(policy, issueId) {
+  const isThursday = new Date(`${issueId}T00:00:00Z`).getUTCDay() === 4;
+  return policy.standing_beats
+    .filter((beat) => beat.cadence === "daily" || (beat.cadence === "thursday" && isThursday))
+    .map((beat) => beat.id);
+}
+
+function assertCoverageAttestation(radar, issueId, policy, brandRadar) {
+  if (!policy.daily_radar.source_coverage_attestation_required) return;
+  if (issueId < policy.daily_radar.source_coverage_attestation_effective_from) return;
+  if (!radar.coverage) throw new Error(`${issueId} daily radar is missing the source coverage attestation`);
+  const coverage = radar.coverage;
+  const allSubjects = brandRadar.cohorts.flatMap((cohort) => cohort.subjects);
+  const focus = focusCohortForDate(brandRadar, issueId);
+  const expectedDigest = sha256(stableJson(allSubjects));
+  const comparisons = [
+    ["regional lanes", coverage.regional_lanes_checked, policy.required_source_lanes],
+    ["focus subjects", coverage.focus_subjects_checked, focus.subjects],
+    ["standing beats", coverage.standing_beats_checked, standingBeatsForDate(policy, issueId)],
+  ];
+  for (const [label, actual, expected] of comparisons) {
+    if (stableJson(sorted(actual ?? [])) !== stableJson(sorted(expected))) {
+      throw new Error(`${issueId} daily radar ${label} coverage is incomplete`);
+    }
+  }
+  if (coverage.full_registry_daily_quick_scan !== true) throw new Error(`${issueId} daily radar did not attest the full registry quick scan`);
+  if (coverage.registry_subject_count !== allSubjects.length || coverage.registry_digest !== expectedDigest) {
+    throw new Error(`${issueId} daily radar registry coverage does not match automation/brand-radar.json`);
+  }
+  if (coverage.focus_cohort_id !== focus.id) throw new Error(`${issueId} daily radar focus cohort is incorrect`);
+  if (coverage.deduplication_lookback_days !== policy.daily_radar.deduplication_lookback_days) {
+    throw new Error(`${issueId} daily radar deduplication window is incorrect`);
+  }
+}
+
+async function priorRadarIndex(sourceRoot, issueId, lookbackDays) {
+  const dates = (await discoverDateDirectories(sourceRoot, null, false))
+    .filter((date) => date < issueId)
+    .sort((a, b) => b.localeCompare(a))
+    .slice(0, lookbackDays);
+  const ids = new Map();
+  const urls = new Map();
+  for (const date of dates) {
+    const radarPath = path.join(sourceRoot, date, PUBLIC_DAILY_RADAR);
+    const manifestPath = path.join(sourceRoot, date, PUBLIC_MANIFEST);
+    if (!(await exists(radarPath))) continue;
+    const radar = await readJson(radarPath);
+    const manifest = (await exists(manifestPath)) ? await readJson(manifestPath) : { stories: [] };
+    const stories = new Map((manifest.stories ?? []).map((story) => [story.id, story]));
+    for (const item of radar.items ?? []) {
+      ids.set(item.id, date);
+      if (item.included_story_id) ids.set(item.included_story_id, date);
+      const story = stories.get(item.included_story_id);
+      const officialUrl = item.official_url ?? story?.media?.origin_url ?? story?.sources?.find((source) => source.relationship === "first_party_official")?.url;
+      const key = normalizedUrl(officialUrl);
+      if (key) urls.set(key, date);
+    }
+  }
+  return { ids, urls };
+}
+
+function hydrateDailyRadar(radar, manifest, issueId, priorIndex = null) {
   assertEqual(radar.date, issueId, "daily radar date");
   const storyById = new Map(manifest.stories.map((story) => [story.id, story]));
   const seen = new Set();
@@ -126,13 +204,22 @@ function hydrateDailyRadar(radar, manifest, issueId) {
     };
   });
 
+  if (priorIndex) {
+    for (const item of items) {
+      const repeatedIdDate = priorIndex.ids.get(item.id) ?? priorIndex.ids.get(item.included_story_id);
+      if (repeatedIdDate) throw new Error(`${issueId} daily radar reuses ${item.id} from ${repeatedIdDate}`);
+      const repeatedUrlDate = priorIndex.urls.get(normalizedUrl(item.official_url));
+      if (repeatedUrlDate) throw new Error(`${issueId} daily radar reuses the official event URL for ${item.id} from ${repeatedUrlDate}`);
+    }
+  }
+
   for (const category of RADAR_CATEGORIES) {
     if (counts[category] < 2) throw new Error(`${issueId} daily radar requires at least two ${category} items; received ${counts[category]}`);
   }
   return { ...radar, items, counts };
 }
 
-async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, schedule, officialImageGate }) {
+async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, dailyPolicy, brandRadar }) {
   const issueRoot = path.join(sourceRoot, issueId);
   await assertPublicTree(issueRoot);
 
@@ -157,13 +244,18 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, schedule, off
   const actualStyleHash = issueCss ? await sha256File(stylePath) : null;
   assertEqual(actualStyleHash, manifest.source_hashes.issue_style_sha256, "issue style source hash");
   await verifyDependencies(repoRoot, manifest);
-  assertOfficialStoryImages(manifest, officialImageGate);
+  assertOfficialStoryImages(manifest, dailyPolicy.official_image_gate);
   let dailyRadar = null;
   let dailyRadarDigest = null;
   if (await exists(dailyRadarPath)) {
     const rawDailyRadar = await readJson(dailyRadarPath);
     await validateJsonFile(rawDailyRadar, path.join(repoRoot, "schemas/daily-radar.public.schema.json"), `${issueId} public daily radar`);
-    dailyRadar = hydrateDailyRadar(rawDailyRadar, manifest, issueId);
+    const freshGateApplies = issueId >= dailyPolicy.daily_radar.fresh_event_gate_effective_from;
+    assertCoverageAttestation(rawDailyRadar, issueId, dailyPolicy, brandRadar);
+    const priorIndex = freshGateApplies
+      ? await priorRadarIndex(sourceRoot, issueId, dailyPolicy.daily_radar.deduplication_lookback_days)
+      : null;
+    dailyRadar = hydrateDailyRadar(rawDailyRadar, manifest, issueId, priorIndex);
     dailyRadarDigest = await sha256File(dailyRadarPath);
   }
 
@@ -207,7 +299,7 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, schedule, off
     issueCss,
     inputDigests,
     candidateDigest: digestMap(inputDigests),
-    dateSemantics: evaluateDateSemantics(manifest, schedule),
+    dateSemantics: evaluateDateSemantics(manifest, dailyPolicy.schedule),
     title: content.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? issueId,
     titleEn: englishTitle(content),
   };
@@ -279,13 +371,14 @@ export async function buildSite({
   const defaultSourceRoot = path.join(repoRoot, "src/issues");
   const includeHistorical = historicalRoot !== null && !issueId && path.resolve(sourceRoot) === path.resolve(defaultSourceRoot);
   const resolvedHistoricalRoot = historicalRoot ?? path.join(repoRoot, "src/historical");
-  const [baseCss, themesCss, storyCss, siteCss, siteJs, dailyPolicy] = await Promise.all([
+  const [baseCss, themesCss, storyCss, siteCss, siteJs, dailyPolicy, brandRadar] = await Promise.all([
     readFile(path.join(repoRoot, "core/styles/base.css"), "utf8"),
     readFile(path.join(repoRoot, "core/styles/themes.css"), "utf8"),
     readFile(path.join(repoRoot, "core/styles/story.css"), "utf8"),
     readFile(path.join(repoRoot, "core/styles/site.css"), "utf8"),
     readFile(path.join(repoRoot, "core/site.js"), "utf8"),
     readJson(path.join(repoRoot, "automation/daily-policy.json")),
+    readJson(path.join(repoRoot, "automation/brand-radar.json")),
   ]);
   const issues = [];
 
@@ -295,8 +388,8 @@ export async function buildSite({
       sourceRoot,
       issueId: id,
       baseCss,
-      schedule: dailyPolicy.schedule,
-      officialImageGate: dailyPolicy.official_image_gate,
+      dailyPolicy,
+      brandRadar,
     });
     const issueOut = path.join(outDir, "issues", id);
     await mkdir(issueOut, { recursive: true });
@@ -339,6 +432,12 @@ export async function buildSite({
     : [];
   const currentIssues = await Promise.all(issues.map(async (issue) => {
     const shellCover = `covers/${issue.issueId}.svg`;
+    const coverAsset = (await exists(path.join(siteAssets, shellCover))) ? shellCover : null;
+    if (issue.issueId >= dailyPolicy.cover_variation_gate.effective_from
+      && dailyPolicy.cover_variation_gate.local_cover_required
+      && !coverAsset) {
+      throw new Error(`${issue.issueId} requires an issue-specific local archive cover`);
+    }
     return {
       issue_id: issue.issueId,
       publication_date: issue.manifest.publication_date,
@@ -346,7 +445,7 @@ export async function buildSite({
       title_en: issue.titleEn,
       deck: issue.manifest.editorial_position,
       kind: "current",
-      coverAsset: (await exists(path.join(siteAssets, shellCover))) ? shellCover : null,
+      coverAsset,
       digest: issue.candidateDigest,
       production_eligible: issue.dateSemantics.production_candidate_valid,
       visibility: issue.manifest.visibility,
@@ -354,6 +453,17 @@ export async function buildSite({
       dailyRadar: issue.dailyRadar,
     };
   }));
+  const coveredIssues = currentIssues.filter((issue) => issue.coverAsset).sort((a, b) => a.publication_date.localeCompare(b.publication_date));
+  for (const [index, issue] of coveredIssues.entries()) {
+    if (issue.issue_id < dailyPolicy.cover_variation_gate.effective_from || !dailyPolicy.cover_variation_gate.exact_asset_reuse_forbidden) continue;
+    const currentHash = await sha256File(path.join(siteAssets, issue.coverAsset));
+    const previous = coveredIssues.slice(Math.max(0, index - dailyPolicy.cover_variation_gate.comparison_window_issues), index);
+    for (const candidate of previous) {
+      if (currentHash === await sha256File(path.join(siteAssets, candidate.coverAsset))) {
+        throw new Error(`${issue.issue_id} archive cover exactly reuses ${candidate.issue_id}`);
+      }
+    }
+  }
   const publicationIssues = [
     ...historical,
     ...currentIssues.filter((issue) => issue.visibility !== "future_draft"),

@@ -24,7 +24,7 @@
   "source_hashes": {
     "content_sha256": "e0824fc2ac83dcb067e934b3355d1178afa35e9f882678ac0e47fee2ced1022a",
     "art_direction_sha256": "d58f659995a6522ba7afc8a628f424bb3ac56b082b9823702113278b38a2bbd7",
-    "issue_style_sha256": "7ad28e0130f1f7cc7b6f6339033b15b53952ede2ea2fd7380c9bead660c53fff"
+    "issue_style_sha256": "bc6c54204c1a8c57c966155efd41d7fefb00b05441f8127644663b518fce5a73"
   },
   "harrytone": {
     "repository": "GUAiZzz/harry-tone",
@@ -77,7 +77,7 @@
       ],
       "image_credit": "M+ official exhibition image / Preview-linked",
       "english": {"title": "A FILM CHANGES THE BODY", "deck": "Five hours and twenty-one minutes turn a stair into a place to stay.", "abstract": "M+ confirms the August 28 screening and explicitly permits sleeping bags, pillows and bedding."},
-      "media": {"asset": "assets/mplus-duration-frame.svg", "alt": "Official M+ hero image for Andy Warhol Screen Tests and Sleep", "caption": "Official exhibition image for Andy Warhol: Screen Tests, Sleep; click through to M+.", "credit": "M+ · Preview-linked official image", "kind": "source_image", "origin_url": "https://www.mplus.org.hk/en/exhibitions/andy-warhol-screen-tests-sleep/", "external_image_url": "https://webmedia.mplus.org.hk/original_images/andy-worhol-screening-hero.png", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+      "media": {"asset": "assets/mplus-duration-frame.svg", "alt": "Official M+ film still of John Giorno in Andy Warhol's Sleep", "caption": "Official film still from Andy Warhol: Screen Tests, Sleep; click through to M+.", "credit": "M+ / The Andy Warhol Museum · Preview-linked official image", "kind": "source_image", "origin_url": "https://www.mplus.org.hk/en/exhibitions/andy-warhol-screen-tests-sleep/", "external_image_url": "https://webmedia.mplus.org.hk/original_images/1997-4-113-116_int_01.jpg", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
     },
     {
       "id": "rsp70-public-archive",
@@ -85,12 +85,11 @@
       "title": "周年展最有用的部分，是文件真的被交出去",
       "sources": [
         {"title": "RSP70: Where Design Meets Humanity", "publisher": "RSP", "url": "https://rsp.design/rsp70/", "published_date": null, "event_date": "2026-08-12/2026-10-26", "relationship": "first_party_official"},
-        {"title": "RSP70 — Where Design Meets Humanity", "publisher": "Urban Redevelopment Authority", "url": "https://www.ura.gov.sg/get-involved/events-and-exhibitions/rsp70-where-design-meets-humanity-sac/", "published_date": null, "event_date": "2026-08-12/2026-10-26", "relationship": "first_party_official"},
-        {"title": "RSP's new book commemorates 70 years of architecture", "publisher": "The Business Times", "url": "https://www.businesstimes.com.sg/lifestyle/arts-design/rsps-new-book-commemorates-70-years-architecture", "published_date": "2026-08-06", "event_date": "2026-08-12/2026-10-26", "relationship": "independent_reporting"}
+        {"title": "RSP70 — Where Design Meets Humanity", "publisher": "Urban Redevelopment Authority", "url": "https://www.ura.gov.sg/get-involved/events-and-exhibitions/rsp70-where-design-meets-humanity-sac/", "published_date": null, "event_date": "2026-08-12/2026-10-26", "relationship": "first_party_official"}
       ],
       "image_credit": "RSP official exhibition image / Preview-linked",
       "english": {"title": "ANNIVERSARY → PUBLIC RECORD", "deck": "Models draw attention; donated work files extend the exhibition's use.", "abstract": "Official sources confirm 15 models and a planned donation of selected drawings and design records to the Singapore Architecture Collection."},
-      "media": {"asset": "assets/rsp-public-archive.svg", "alt": "Official RSP rendering of an architectural model displayed for the RSP70 exhibition", "caption": "RSP70 official exhibition image; click through to RSP's exhibition and book page.", "credit": "RSP · Preview-linked official image", "kind": "source_image", "origin_url": "https://rsp.design/rsp70/", "external_image_url": "https://rsp.design/wp-content/uploads/image-12-768x543.png", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+      "media": {"asset": "assets/rsp-public-archive.svg", "alt": "Official RSP rendering of an architectural model displayed for the RSP70 exhibition", "caption": "RSP70 official exhibition image; click through to RSP's exhibition and book page.", "credit": "RSP · Preview-linked official image", "kind": "source_image", "origin_url": "https://rsp.design/rsp70/", "external_image_url": "https://rsp.design/wp-content/uploads/image-12.png", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
     },
     {
       "id": "stussy-jeju-archive-store",
@@ -109,7 +108,7 @@
       "title": "别再只用「挑衅」替一位摄影师结案",
       "sources": [
         {"title": "The Last Dolls by Bob Carlos Clarke", "publisher": "Atlas Gallery", "url": "https://www.atlasgallery.com/exhibition/the-last-dolls-by-bob-carlos-clarke", "published_date": null, "event_date": "2026-09-05/2026-09-26", "relationship": "first_party_official"},
-        {"title": "Bob Carlos Clarke's controversial photography returns to London", "publisher": "Dazed", "url": "https://preview2.dazeddigital.com/art-photography/article/70841/1/bob-carlos-clarke-last-dolls-exhibition-london-erotica-photography?preview=2", "published_date": "2026-08-24", "event_date": "2026-09-05/2026-09-26", "relationship": "independent_reporting"}
+        {"title": "In pictures: Bob Carlos Clarke’s darkly charged erotica", "publisher": "Dazed", "url": "https://www.dazeddigital.com/art-photography/article/70841/1/bob-carlos-clarke-last-dolls-exhibition-london-erotica-photography", "published_date": "2026-08-24", "event_date": "2026-09-05/2026-09-26", "relationship": "independent_reporting"}
       ],
       "image_credit": "Atlas Gallery official exhibition image / Preview-linked",
       "english": {"title": "CRAFT DOES NOT END THE ARGUMENT", "deck": "A retrospective can hold technique and the criticism of objectification in the same frame.", "abstract": "Atlas confirms the dates and contents; Dazed supplies critical context without resolving the ethical dispute."},

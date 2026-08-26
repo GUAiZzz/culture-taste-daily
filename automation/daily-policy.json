@@ -5,6 +5,8 @@
   "mode": "scheduled_dry_run_candidate",
   "schedule": {
     "start_time": "09:30",
+    "recovery_check_times": ["11:30", "13:30", "14:30"],
+    "recover_when_current_candidate_missing": true,
     "research_window_start": "06:00",
     "research_lock_deadline": "15:00",
     "research_lock_deadline_effective_from": "2026-08-26",
@@ -28,7 +30,11 @@
     "minimum_items_per_category": 2,
     "first_party_official_media_required": true,
     "official_video_preferred_when_available": true,
-    "included_in_rss": false
+    "included_in_rss": false,
+    "fresh_event_gate_effective_from": "2026-08-26",
+    "deduplication_lookback_days": 2,
+    "source_coverage_attestation_required": true,
+    "source_coverage_attestation_effective_from": "2026-08-27"
   },
   "dry_run_base_ref": "preview-build-v1",
   "branch_prefix": "automation/culture-taste",
@@ -54,9 +60,16 @@
   ],
   "brand_radar": {
     "registry": "automation/brand-radar.json",
-    "selection": "daily_deterministic_cohort_plus_standing_beats",
+    "selection": "full_registry_daily_quick_scan_plus_focus_cohort_and_standing_beats",
+    "full_registry_daily_quick_scan": true,
     "publication_quota": false,
     "social_following_required": false
+  },
+  "cover_variation_gate": {
+    "effective_from": "2026-08-26",
+    "local_cover_required": true,
+    "exact_asset_reuse_forbidden": true,
+    "comparison_window_issues": 7
   },
   "standing_beats": [
     {
@@ -95,6 +108,9 @@
     "private_ephemeral_workspace_outside_repository",
     "required_regional_lanes",
     "event_level_deduplication",
+    "previous_two_issue_radar_deduplication",
+    "full_brand_registry_daily_quick_scan",
+    "source_coverage_attestation",
     "primary_and_independent_source_evidence",
     "first_party_official_image_for_every_selected_story",
     "daily_radar_two_per_category_with_first_party_official_media",
@@ -102,6 +118,7 @@
     "image_rights_basis_separate_from_credit",
     "detail_level_reference_recheck",
     "seven_issue_variation_review",
+    "local_cover_and_headline_collision_gate",
     "deterministic_build_and_independent_qa",
     "privacy_scan",
     "named_human_review_pending"

@@ -41,7 +41,11 @@ function selectedBrandCohort(radar, targetDate) {
 
 function validateBrandRadar({ policy, radar, blockers }) {
   if (policy.brand_radar?.registry !== "automation/brand-radar.json") blockers.push("brand radar registry path is invalid");
-  if (policy.brand_radar?.selection !== "daily_deterministic_cohort_plus_standing_beats") blockers.push("brand radar selection mode is invalid");
+  const expectedMode = "full_registry_daily_quick_scan_plus_focus_cohort_and_standing_beats";
+  if (policy.brand_radar?.selection !== expectedMode || radar.rotation?.mode !== expectedMode) blockers.push("brand radar selection mode is invalid");
+  if (policy.brand_radar?.full_registry_daily_quick_scan !== true || radar.rotation?.full_registry_daily_quick_scan !== true) {
+    blockers.push("brand radar must quick-scan the full active registry every day");
+  }
   if (policy.brand_radar?.publication_quota !== false || policy.brand_radar?.social_following_required !== false) {
     blockers.push("brand radar cannot require publication or social following");
   }
@@ -99,10 +103,16 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
   const windowStart = minutes(researchWindow.start);
   const windowEnd = minutes(researchWindow.deadline);
   if (targetDate >= policy.schedule.research_lock_deadline_effective_from) {
-    for (const [name, value] of [["start_time", policy.schedule.start_time]]) {
+    for (const [name, value] of [
+      ["start_time", policy.schedule.start_time],
+      ...(policy.schedule.recovery_check_times ?? []).map((value, index) => [`recovery_check_times[${index}]`, value]),
+    ]) {
       if (typeof value !== "string" || minutes(value) < windowStart || minutes(value) > windowEnd) {
         blockers.push(`${name} must remain inside the publication-day ${researchWindow.start}–${researchWindow.deadline} final-refresh window`);
       }
+    }
+    if (policy.schedule.recover_when_current_candidate_missing !== true) {
+      blockers.push("same-day candidate recovery must remain enabled before the final-refresh deadline");
     }
   }
   if (currentMinute < windowStart || currentMinute > windowEnd) {
@@ -177,7 +187,9 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
     mode: policy.mode,
     schedule: {
       primary: policy.schedule.start_time,
+      recovery_checks: policy.schedule.recovery_check_times ?? [],
       deadline: researchWindow.deadline,
+      recover_when_current_candidate_missing: policy.schedule.recover_when_current_candidate_missing === true,
     },
     candidate_action: issueExists ? "repair_or_refresh_existing_candidate" : "create_new_candidate",
     branch_name: `${policy.branch_prefix}-${targetDate}`,
@@ -187,8 +199,10 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
     brand_radar: brandCohort
       ? {
           registry: policy.brand_radar.registry,
-          cohort_id: brandCohort.id,
-          subjects: brandCohort.subjects,
+          full_registry_daily_quick_scan: true,
+          full_registry_subjects: brandRadar.cohorts.flatMap((cohort) => cohort.subjects),
+          focus_cohort_id: brandCohort.id,
+          focus_subjects: brandCohort.subjects,
           publication_quota: false,
           social_following_required: false,
         }

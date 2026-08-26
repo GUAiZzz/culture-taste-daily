@@ -131,13 +131,14 @@ body[data-shell="publication"] main {
 }
 
 .hero-copy h1 {
-  max-width: 8ch;
+  max-width: 10ch;
   margin: 0;
   font-family: "Arial Narrow", Impact, "PingFang SC", sans-serif;
-  font-size: clamp(4.6rem, 11.8vw, 11rem);
+  font-size: clamp(4rem, 8.4vw, 8.6rem);
   font-weight: 900;
-  letter-spacing: -0.09em;
-  line-height: 0.78;
+  letter-spacing: -0.055em;
+  line-height: 0.96;
+  overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
@@ -843,7 +844,9 @@ body[data-page="facsimile"] .publication-footer {
   }
 
   .hero-copy h1 {
-    font-size: clamp(4.2rem, 24vw, 7rem);
+    font-size: clamp(3.4rem, 18vw, 5.6rem);
+    letter-spacing: -0.04em;
+    line-height: 1;
   }
 
   .hero-map {

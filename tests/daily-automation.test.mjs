@@ -60,6 +60,19 @@ test("A1 allows the final refresh through 15:00 from 2026-08-26", async () => {
   assert.match(afterDeadline.blockers.join("\n"), /outside the publication-day 06:00–15:00/);
 });
 
+test("a missing same-day candidate remains recoverable after 09:30 and before 15:00", async () => {
+  const report = await evaluateDailyPreflight({
+    repoRoot,
+    issueDate: "2026-08-27",
+    now: new Date("2026-08-27T04:15:00Z"),
+  });
+
+  assert.equal(report.shanghai_now, "2026-08-27T12:15:00+08:00");
+  assert.equal(report.status, "READY_FOR_DRY_RUN");
+  assert.equal(report.candidate_action, "create_new_candidate");
+  assert.equal(report.schedule.recover_when_current_candidate_missing, true);
+});
+
 test("date semantics use A1 prospectively without reclassifying the historical window", async () => {
   const policy = JSON.parse(await readFile(path.join(repoRoot, "automation/daily-policy.json"), "utf8"));
   const manifest = {
@@ -120,6 +133,8 @@ test("daily policy cannot merge, deploy, alter Pages, or touch the legacy reposi
   assert.equal(policy.failure.allow_partial_publish, false);
   assert.equal(policy.schedule.research_lock_deadline, "15:00");
   assert.equal(policy.schedule.start_time, "09:30");
+  assert.deepEqual(policy.schedule.recovery_check_times, ["11:30", "13:30", "14:30"]);
+  assert.equal(policy.schedule.recover_when_current_candidate_missing, true);
   assert.equal(policy.schedule.research_lock_deadline_effective_from, "2026-08-26");
   assert.equal(policy.schedule.historical_research_lock_deadline, "08:30");
   assert.deepEqual(policy.official_image_gate, {
@@ -133,6 +148,10 @@ test("daily policy cannot merge, deploy, alter Pages, or touch the legacy reposi
   });
   assert.deepEqual(policy.daily_radar.categories, ["fashion", "music", "objects", "city"]);
   assert.equal(policy.daily_radar.minimum_items_per_category, 2);
+  assert.equal(policy.daily_radar.deduplication_lookback_days, 2);
+  assert.equal(policy.daily_radar.source_coverage_attestation_effective_from, "2026-08-27");
+  assert.equal(policy.brand_radar.full_registry_daily_quick_scan, true);
+  assert.equal(policy.cover_variation_gate.local_cover_required, true);
   assert.equal(policy.daily_radar.supplemental_to_issue, true);
   assert.equal(policy.daily_radar.changes_issue_selection, false);
   assert.equal(policy.daily_radar.first_party_official_media_required, true);
@@ -246,7 +265,12 @@ test("daily preflight verifies the existing manual-only Preview and privacy defe
   assert.equal(report.status, "READY_FOR_DRY_RUN");
   assert.doesNotMatch(report.blockers.join("\n"), /Preview workflow|privacy ignore/);
   assert.equal(report.base_ref, "preview-build-v1");
-  assert.deepEqual(report.schedule, { primary: "09:30", deadline: "08:30" });
+  assert.deepEqual(report.schedule, {
+    primary: "09:30",
+    recovery_checks: ["11:30", "13:30", "14:30"],
+    deadline: "08:30",
+    recover_when_current_candidate_missing: true,
+  });
 });
 
 test("brand radar is deterministic, complete, and independent from social following", async () => {
@@ -309,5 +333,7 @@ test("brand radar is deterministic, complete, and independent from social follow
   assert.equal(report.brand_radar.registry, "automation/brand-radar.json");
   assert.equal(report.brand_radar.publication_quota, false);
   assert.equal(report.brand_radar.social_following_required, false);
-  assert.ok(report.brand_radar.subjects.length > 0);
+  assert.equal(report.brand_radar.full_registry_daily_quick_scan, true);
+  assert.equal(report.brand_radar.full_registry_subjects.length, subjects.length);
+  assert.ok(report.brand_radar.focus_subjects.length > 0);
 });
