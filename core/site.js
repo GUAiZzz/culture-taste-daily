@@ -68,16 +68,51 @@ for (const button of document.querySelectorAll("[data-theme-choice]")) {
 for (const frame of document.querySelectorAll("[data-visual-frame]")) {
   const image = frame.querySelector("img.source-art");
   if (!image) continue;
+  const originalSource = image.src;
+  const retryDelays = [1200, 3000];
+  let retryCount = 0;
+  let retryTimer = null;
+  let deadlineTimer = null;
   const markFailure = () => frame.classList.add("image-failed");
-  const markSuccess = () => frame.classList.remove("image-failed");
+  const markSuccess = () => {
+    window.clearTimeout(deadlineTimer);
+    frame.classList.remove("image-failed");
+  };
+  const monitorAttempt = () => {
+    window.clearTimeout(deadlineTimer);
+    deadlineTimer = window.setTimeout(() => {
+      if (image.complete && image.naturalWidth) markSuccess();
+      else retryImage();
+    }, 8000);
+  };
+  const retryImage = () => {
+    window.clearTimeout(deadlineTimer);
+    markFailure();
+    if (retryCount >= retryDelays.length || retryTimer !== null) return;
+    const delay = retryDelays[retryCount];
+    retryTimer = window.setTimeout(() => {
+      retryTimer = null;
+      retryCount += 1;
+      const retryUrl = new URL(originalSource, window.location.href);
+      retryUrl.searchParams.set("ctd_retry", String(retryCount));
+      image.src = retryUrl.href;
+      monitorAttempt();
+    }, delay);
+  };
   image.addEventListener("load", markSuccess);
-  image.addEventListener("error", markFailure);
+  image.addEventListener("error", retryImage);
   if (image.complete && image.naturalWidth) markSuccess();
-  else if (image.complete) markFailure();
-  window.setTimeout(() => {
-    if (image.complete && image.naturalWidth) markSuccess();
-    else markFailure();
-  }, 6000);
+  else if (image.complete) retryImage();
+  else if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      observer.disconnect();
+      monitorAttempt();
+    }, { rootMargin: "800px" });
+    observer.observe(image);
+  } else {
+    monitorAttempt();
+  }
 }
 
 const storyFilters = [...document.querySelectorAll("[data-story-filter]")];

@@ -292,6 +292,33 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     assert.match(await fallbackPage.locator("main").innerText(), /官方图片未载入/);
     await fallbackContext.close();
 
+    const retryContext = await browser.newContext();
+    const retryImagePrefix = "https://www.humanmade.jp/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw01c37a5d/images/large/HM_1784879966003_ynmhox.jpg";
+    let retryAttempts = 0;
+    await retryContext.route((url) => url.href.startsWith(retryImagePrefix), async (route) => {
+      retryAttempts += 1;
+      if (retryAttempts === 1) {
+        await route.abort("failed");
+        return;
+      }
+      await route.fulfill({
+        status: 200,
+        contentType: "image/svg+xml",
+        body: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect width="32" height="32" fill="#ff512b"/></svg>',
+      });
+    });
+    const retryPage = await retryContext.newPage();
+    await retryPage.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
+    const retryImage = retryPage.locator('img[alt="HUMAN MADE Daily short-sleeve T-shirt printed with the date 260826"]');
+    await retryImage.scrollIntoViewIfNeeded();
+    await retryPage.waitForFunction(() => {
+      const image = document.querySelector('img[alt="HUMAN MADE Daily short-sleeve T-shirt printed with the date 260826"]');
+      return image?.complete && image.naturalWidth > 0 && image.src.includes("ctd_retry=1");
+    }, null, { timeout: 10_000 });
+    assert.ok(retryAttempts >= 2);
+    assert.equal(await retryImage.locator("..").evaluate((frame) => frame.classList.contains("image-failed")), false);
+    await retryContext.close();
+
     const reducedContext = await browser.newContext({ reducedMotion: "reduce" });
     const reducedPage = await reducedContext.newPage();
     await reducedPage.goto(`${server.origin}/issues/2026-08-25/stories/seoul-fashion-week-two-city-systems/`, { waitUntil: "domcontentloaded" });
