@@ -69,10 +69,14 @@ for (const frame of document.querySelectorAll("[data-visual-frame]")) {
   const image = frame.querySelector("img.source-art");
   if (!image) continue;
   const markFailure = () => frame.classList.add("image-failed");
+  const markSuccess = () => frame.classList.remove("image-failed");
+  image.addEventListener("load", markSuccess);
   image.addEventListener("error", markFailure);
-  if (image.complete && !image.naturalWidth) markFailure();
+  if (image.complete && image.naturalWidth) markSuccess();
+  else if (image.complete) markFailure();
   window.setTimeout(() => {
-    if (!image.complete || !image.naturalWidth) markFailure();
+    if (image.complete && image.naturalWidth) markSuccess();
+    else markFailure();
   }, 6000);
 }
 
