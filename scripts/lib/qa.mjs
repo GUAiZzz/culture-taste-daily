@@ -269,15 +269,29 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
     else requestFailures.push(failure);
   });
   await page.goto(`${origin}/${urlPath ?? `issues/${issueId}/`}`, { waitUntil: "domcontentloaded" });
-  if (!urlPath && ["desktop-1440x900", "mobile-390x844"].includes(name)) {
-    await page.evaluate(() => {
-      for (const image of document.querySelectorAll('img[data-external-preview="true"]')) image.loading = "eager";
+  const resolveExternalPreviews = javaScriptEnabled && (
+    urlPath === "" || (!urlPath && ["desktop-1440x900", "mobile-390x844"].includes(name))
+  );
+  if (resolveExternalPreviews) {
+    for (let attempt = 0; attempt < 2; attempt += 1) {
+      await page.evaluate(() => {
+        for (const image of document.querySelectorAll('img[data-external-preview="true"]')) image.loading = "eager";
+      });
+      await page.waitForFunction(
+        () => [...document.querySelectorAll('img[data-external-preview="true"]')].every((image) => image.complete),
+        null,
+        { timeout: 20_000 },
+      ).catch(() => {});
+      const unresolved = await page.evaluate(() => [...document.querySelectorAll('img[data-external-preview="true"]')]
+        .filter((image) => !image.complete || image.naturalWidth === 0)
+        .length);
+      if (unresolved === 0 || attempt === 1) break;
+      await page.reload({ waitUntil: "domcontentloaded" });
+    }
+    await page.evaluate(async () => {
+      await Promise.all([...document.querySelectorAll('img[data-external-preview="true"]')]
+        .map((image) => image.decode().catch(() => undefined)));
     });
-    await page.waitForFunction(
-      () => [...document.querySelectorAll('img[data-external-preview="true"]')].every((image) => image.complete),
-      null,
-      { timeout: 15_000 },
-    ).catch(() => {});
   }
   await page.waitForTimeout(500);
 
@@ -301,6 +315,7 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
       external_preview_images: images
         .filter((image) => image.dataset.externalPreview === "true")
         .map((image) => ({ url: image.currentSrc || image.src, loaded: image.complete && image.naturalWidth > 0 })),
+      image_failed_frames: document.querySelectorAll("[data-visual-frame].image-failed").length,
       story_visual_count: document.querySelectorAll(".issue-story .story-figure").length,
       issue_index_is_native_disclosure: Boolean(document.querySelector(".issue-nav-panel > summary")),
       nested_scroll_frames: [...document.querySelectorAll("iframe[data-historical-frame]")].filter((frame) => frame.scrollHeight > frame.clientHeight + 50).length,
@@ -394,7 +409,12 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
         ["mobile_render", "mobile-390x844"],
       ]) {
         const item = captures[captureName];
-        const ok = item.facts.horizontal_overflow === 0 && item.facts.broken_images.length === 0 && item.consoleErrors.length === 0 && item.requestFailures.length === 0;
+        const ok = item.facts.horizontal_overflow === 0
+          && item.facts.broken_images.length === 0
+          && item.facts.external_preview_images.every((image) => image.loaded)
+          && item.facts.image_failed_frames === 0
+          && item.consoleErrors.length === 0
+          && item.requestFailures.length === 0;
         checks.push(result(checkId, ok, {
           ...item.facts,
           console_errors: item.consoleErrors,
@@ -408,9 +428,12 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
       const shellCaptures = [captures["home-desktop-1440x900"], captures["home-mobile-390x844"], captures["archive-desktop-1440x900"], captures["historical-20-mobile-390x844"], captures["historical-21-mobile-390x844"], captures["historical-22-mobile-390x844"]].filter(Boolean);
       const shellOk = shellCaptures.every((item) => item.facts.horizontal_overflow === 0
         && item.facts.broken_images.length === 0
+        && item.facts.image_failed_frames === 0
         && item.facts.nested_scroll_frames === 0
         && item.consoleErrors.length === 0
         && item.requestFailures.length === 0)
+        && captures["home-desktop-1440x900"].facts.external_preview_images.every((image) => image.loaded)
+        && captures["home-mobile-390x844"].facts.external_preview_images.every((image) => image.loaded)
         && captures["archive-desktop-1440x900"].facts.archive_filter?.historical_visible
         && captures["archive-desktop-1440x900"].facts.archive_filter?.current_hidden;
       checks.push(result("publication_shell_render", shellOk, {
