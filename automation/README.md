@@ -4,7 +4,7 @@ Status: `DAILY CANDIDATE DRY RUN AUTHORIZED / PRODUCTION AUTOMATION DISABLED`
 
 The continuing automation is intentionally bounded:
 
-- one Codex task runs a primary attempt at `09:30` and a recovery/final-refresh attempt at `13:30` in `Asia/Shanghai`, both inside the approved `06:00–15:00` window;
+- one Codex task runs every day at `09:30` in `Asia/Shanghai`, inside the approved `06:00–15:00` window; a manual same-day recovery may refresh the same branch before `15:00`;
 - it may research, create or repair today's isolated public issue, run deterministic QA, and open or update one dated pull request;
 - the stable content base is `preview-build-v1`, so future issues inherit the current homepage, themes, story routes, typography, and interaction container;
 - pull requests targeting that base receive the same independent Preview build and QA checks, without a deployment job;
