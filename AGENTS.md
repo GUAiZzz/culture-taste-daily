@@ -21,7 +21,7 @@ For the authorized daily candidate dry run, also read `automation/DAILY_RUN.md` 
 
 - Preview hosting is authorized only through `.github/workflows/preview.yml`; it must remain visibly non-production and `noindex`.
 - Do not enable production cutover or unattended production automation.
-- The repository owner authorized a daily dry-run candidate task on 2026-08-24. It is limited to `automation/DAILY_RUN.md`: dated candidate branch, QA, and pull request only. It cannot merge or deploy.
+- The repository owner authorized a continuing daily dry-run candidate task and a weekly read-only health audit. They are limited to `automation/DAILY_RUN.md` and `automation/WEEKLY_HEALTH.md`: dated candidate branch, QA, pull request, and read-only audit only. They cannot merge or deploy.
 - Do not create a production or scheduled GitHub workflow. The authorized schedule lives outside GitHub Actions and has zero deployment authority.
 - Production Contract V3 is canonical, but implementation, preview, GitHub Pages, production deployment, historical migration, workflows, and daily automation remain separately gated and are not authorized by contract activation.
 - The supplied 2026-08-20, 2026-08-21, and 2026-08-22 historical originals may be preserved in Preview with exact source hashes. Do not rewrite, normalize, or declare them production-ready.

@@ -119,6 +119,8 @@ test("daily policy cannot merge, deploy, alter Pages, or touch the legacy reposi
   assert.equal(policy.failure.preserve_previous_good, true);
   assert.equal(policy.failure.allow_partial_publish, false);
   assert.equal(policy.schedule.research_lock_deadline, "15:00");
+  assert.equal(policy.schedule.start_time, "09:30");
+  assert.equal(policy.schedule.recovery_time, "13:30");
   assert.equal(policy.schedule.research_lock_deadline_effective_from, "2026-08-26");
   assert.equal(policy.schedule.historical_research_lock_deadline, "08:30");
   assert.deepEqual(policy.official_image_gate, {
@@ -137,6 +139,19 @@ test("daily policy cannot merge, deploy, alter Pages, or touch the legacy reposi
   assert.equal(policy.daily_radar.first_party_official_media_required, true);
   assert.equal(policy.daily_radar.official_video_preferred_when_available, true);
   assert.equal(policy.daily_radar.included_in_rss, false);
+  assert.equal(policy.dry_run_base_ref, "preview-build-v1");
+  assert.ok(policy.required_runtime_checks.includes("live_public_source_and_media_health"));
+});
+
+test("weekly health audit is read-only and aligned to the current publication base", async () => {
+  const policy = JSON.parse(await readFile(path.join(repoRoot, "automation/weekly-health-policy.json"), "utf8"));
+  assert.equal(policy.mode, "read_only_health_audit");
+  assert.equal(policy.timezone, "Asia/Shanghai");
+  assert.equal(policy.base_ref, "preview-build-v1");
+  assert.deepEqual(policy.schedule, { weekday: "Sunday", start_time: "16:30" });
+  assert.ok(Object.values(policy.output).every((value) => value === false));
+  assert.equal(policy.failure.preserve_previous_good, true);
+  assert.ok(policy.required_checks.includes("all_published_source_and_media_links"));
 });
 
 test("official image gate accepts a linked first-party official Preview image", () => {
@@ -231,6 +246,8 @@ test("daily preflight verifies the existing manual-only Preview and privacy defe
   });
   assert.equal(report.status, "READY_FOR_DRY_RUN");
   assert.doesNotMatch(report.blockers.join("\n"), /Preview workflow|privacy ignore/);
+  assert.equal(report.base_ref, "preview-build-v1");
+  assert.deepEqual(report.schedule, { primary: "09:30", recovery: "13:30", deadline: "08:30" });
 });
 
 test("brand radar is deterministic, complete, and independent from social following", async () => {
