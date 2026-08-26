@@ -1,13 +1,15 @@
 import assert from "node:assert/strict";
 import { after, before, test } from "node:test";
-import { cp, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { cp, mkdir, mkdtemp, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { chromium } from "playwright";
 import { buildSite } from "../scripts/lib/build.mjs";
 import { evaluateGate } from "../scripts/lib/gate.mjs";
 import { readJson, sha256File, writeJson } from "../scripts/lib/files.mjs";
 import { runStaticChecks, runTechnicalQa } from "../scripts/lib/qa.mjs";
+import { startStaticServer } from "../scripts/lib/server.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const validSource = path.join(repoRoot, "tests/fixtures/valid-source");
@@ -162,7 +164,8 @@ test("Preview homepage and archive expose the current 2026-08-23/24/25/26 fields
   assert.match(home, /meta name="robots" content="noindex,nofollow"/);
   assert.match(home, /rel="icon" type="image\/png" href="\.\/assets\/culture-taste-earth\.png"/);
   assert.match(archive, /rel="icon" type="image\/png" href="\.\.\/assets\/culture-taste-earth\.png"/);
-  assert.match(current, /class="issue-brand"[\s\S]*culture-taste-earth\.png/);
+  assert.match(current, /class="issue-brand"[\s\S]*class="brand-type"/);
+  assert.doesNotMatch(current, /class="issue-brand"[\s\S]{0,240}<img/);
   assert.match(home, /SAME FRAME, NEW MOVE/);
   assert.match(home, /assets\/covers\/2026-08-23\.svg/);
   assert.match(archive, /assets\/covers\/2026-08-23\.svg/);
@@ -172,6 +175,137 @@ test("Preview homepage and archive expose the current 2026-08-23/24/25/26 fields
   await readFile(path.join(previewDist, "assets/culture-taste-earth.png"));
   for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg", "2026-08-23.svg", "2026-08-25.svg"]) {
     await readFile(path.join(previewDist, "assets/covers", cover));
+  }
+});
+
+test("frontend integration keeps the formal issue intact while adding the supplemental daily radar", async () => {
+  const home = await readFile(path.join(previewDist, "index.html"), "utf8");
+  const current = await readFile(path.join(previewDist, "issues/2026-08-26/index.html"), "utf8");
+  assert.equal((home.match(/<button type="button" data-theme-choice=/g) ?? []).length, 3);
+  assert.match(home, /class="wordmark"[\s\S]*<em>Taste<\/em>/);
+  assert.doesNotMatch(home, /class="wordmark"[^>]*>[\s\S]{0,240}<img/);
+  assert.equal((home.match(/<li data-story-card/g) ?? []).length, 10);
+  assert.match(home, /id="daily-index-title"/);
+  assert.doesNotMatch(home, /先看正式日报/);
+  assert.match(home, /01 \/ IN TODAY'S ISSUE/);
+  assert.match(home, /02 \/ MORE FROM TODAY/);
+  assert.equal((home.match(/data-official-only/g) ?? []).length, 10);
+  assert.equal((home.match(/data-radar-kind="issue"/g) ?? []).length, 5);
+  assert.equal((home.match(/data-radar-kind="extra"/g) ?? []).length, 5);
+  assert.doesNotMatch(home, /class="local-art"/);
+  assert.doesNotMatch(home, /<span class="radar-visual"[^>]*>[\s\S]*?<i aria-hidden="true"><\/i>/);
+  assert.doesNotMatch(home, /class="theme-picker"/);
+  assert.equal((home.match(/issues\/2026-08-26\/stories\/[^/]+\//g) ?? []).length, 5);
+  assert.match(current, /class="reading-progress"/);
+  assert.equal((current.match(/<button type="button" data-theme-choice=/g) ?? []).length, 3);
+  assert.match(current, /data-content-sha256="[0-9a-f]{64}"/);
+  assert.equal((current.match(/class="issue-story"/g) ?? []).length, 6);
+  assert.match(current, /data-story="exit"/);
+  assert.match(current, /id="sources"/);
+  const storyRoutes = await readdir(path.join(previewDist, "issues/2026-08-26/stories"));
+  assert.equal(storyRoutes.length, 5);
+  for (const storyId of storyRoutes) await readFile(path.join(previewDist, "issues/2026-08-26/stories", storyId, "index.html"));
+  const firstStory = await readFile(path.join(previewDist, "issues/2026-08-26/stories", storyRoutes[0], "index.html"), "utf8");
+  assert.match(firstStory, /class="story-reader-brand"[\s\S]*<em>Taste<\/em>/);
+  assert.doesNotMatch(firstStory, /class="story-reader-brand"[^>]*>[\s\S]{0,240}<img/);
+  const sitemap = await readFile(path.join(previewDist, "sitemap.xml"), "utf8");
+  for (const storyId of storyRoutes) assert.match(sitemap, new RegExp(`issues/2026-08-26/stories/${storyId}/`));
+});
+
+test("daily radar has at least two official-media selections in every category without changing the issue manifest", async () => {
+  const radar = JSON.parse(await readFile(path.join(repoRoot, "src/issues/2026-08-26/daily-radar.public.json"), "utf8"));
+  const manifest = JSON.parse(await readFile(path.join(repoRoot, "src/issues/2026-08-26/issue-manifest.public.json"), "utf8"));
+  assert.equal(manifest.stories.length, 5);
+  assert.equal(radar.items.length, 10);
+  for (const category of ["fashion", "music", "objects", "city"]) {
+    assert.ok(radar.items.filter((item) => item.category === category).length >= 2, category);
+  }
+  for (const extra of radar.items.filter((item) => !item.included_story_id)) {
+    assert.equal(extra.media.origin_authority, "first_party_official");
+    assert.match(extra.official_url, /^https:\/\//);
+    assert.match(extra.media.url, /^https:\/\//);
+  }
+});
+
+test("theme selection persists into stories while filtering and no-JavaScript reading still work", async () => {
+  const server = await startStaticServer(previewDist);
+  let browser;
+  try {
+    try {
+      browser = await chromium.launch({ headless: true, channel: process.env.PLAYWRIGHT_CHANNEL ?? "chrome" });
+    } catch {
+      browser = await chromium.launch({ headless: true });
+    }
+
+    const context = await browser.newContext();
+    await context.addInitScript(() => {
+      const count = Number(sessionStorage.getItem("ctd-test-random-count") ?? "0");
+      sessionStorage.setItem("ctd-test-random-count", String(count + 1));
+      Math.random = () => count % 2 === 0 ? 0 : 0.5;
+    });
+    const page = await context.newPage();
+    await page.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
+    const firstTheme = await page.locator("html").getAttribute("data-visual-theme");
+    assert.ok(["field", "coral", "analog"].includes(firstTheme));
+    await page.reload({ waitUntil: "domcontentloaded" });
+    assert.notEqual(await page.locator("html").getAttribute("data-visual-theme"), firstTheme);
+
+    await page.locator('[data-theme-choice="analog"]').click();
+    assert.equal(await page.locator("html").getAttribute("data-visual-theme"), "analog");
+    assert.equal(await page.locator('[data-theme-choice="analog"]').getAttribute("aria-pressed"), "true");
+    await page.locator('[data-story-filter="objects"]').click();
+    const visibleCategories = await page.locator("[data-story-card]").evaluateAll((cards) => cards.filter((card) => !card.hidden).map((card) => card.dataset.storyCategory));
+    assert.ok(visibleCategories.length > 0);
+    assert.ok(visibleCategories.every((category) => category === "objects"));
+
+    const storyHref = await page.locator("[data-story-card] a").first().getAttribute("href");
+    assert.match(storyHref, /theme=analog/);
+    await page.goto(new URL(storyHref, `${server.origin}/`).href, { waitUntil: "domcontentloaded" });
+    assert.equal(await page.locator("html").getAttribute("data-visual-theme"), "analog");
+    assert.equal(await page.locator('[data-theme-choice="analog"]').getAttribute("aria-pressed"), "true");
+    assert.equal(await page.locator("body[data-story-reader]").count(), 1);
+    assert.equal(await page.locator("main h1").count(), 1);
+    assert.match(await page.locator("main").innerText(), /VERIFIED SOURCES \/ DATES/);
+    await page.reload({ waitUntil: "domcontentloaded" });
+    assert.equal(await page.locator("html").getAttribute("data-visual-theme"), "analog");
+    await page.setViewportSize({ width: 390, height: 844 });
+    assert.equal(await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth)), 0);
+    await context.close();
+
+    const fallbackContext = await browser.newContext();
+    await fallbackContext.route(/^https:\/\//, (route) => route.abort());
+    const fallbackPage = await fallbackContext.newPage();
+    await fallbackPage.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
+    await fallbackPage.waitForFunction(() => document.querySelector("[data-official-only]")?.classList.contains("image-failed"));
+    assert.equal(await fallbackPage.locator("[data-official-only] .local-art").count(), 0);
+    assert.ok(await fallbackPage.locator("[data-official-only].image-failed .official-media-fallback").first().isVisible());
+    await fallbackPage.goto(`${server.origin}/issues/2026-08-25/stories/seoul-fashion-week-two-city-systems/`, { waitUntil: "domcontentloaded" });
+    await fallbackPage.waitForFunction(() => document.querySelector("[data-visual-frame]")?.classList.contains("image-failed"));
+    assert.ok(await fallbackPage.locator("[data-visual-frame].image-failed .local-art").count() > 0);
+    assert.match(await fallbackPage.locator("main").innerText(), /官方图片未载入/);
+    await fallbackContext.close();
+
+    const reducedContext = await browser.newContext({ reducedMotion: "reduce" });
+    const reducedPage = await reducedContext.newPage();
+    await reducedPage.goto(`${server.origin}/issues/2026-08-25/stories/seoul-fashion-week-two-city-systems/`, { waitUntil: "domcontentloaded" });
+    assert.equal(await reducedPage.locator(".story-opening-sticky").evaluate((element) => getComputedStyle(element).position), "relative");
+    assert.equal(await reducedPage.locator(".story-title-line").first().evaluate((element) => getComputedStyle(element).translate), "none");
+    await reducedContext.close();
+
+    const noJsContext = await browser.newContext({ javaScriptEnabled: false });
+    const noJsPage = await noJsContext.newPage();
+    await noJsPage.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
+    assert.equal(await noJsPage.locator("[data-story-card]").count(), 10);
+    assert.equal(await noJsPage.locator(".theme-picker").count(), 0);
+    assert.equal(await noJsPage.locator(".radar-filters").isVisible(), false);
+    const noJsStory = await noJsPage.locator("[data-story-card] a").first().getAttribute("href");
+    await noJsPage.goto(new URL(noJsStory, `${server.origin}/`).href, { waitUntil: "domcontentloaded" });
+    assert.equal(await noJsPage.locator("body[data-story-reader]").count(), 1);
+    assert.match(await noJsPage.locator("main").innerText(), /VERIFIED SOURCES \/ DATES/);
+    await noJsContext.close();
+  } finally {
+    await browser?.close();
+    await server.close();
   }
 });
 
@@ -232,7 +366,7 @@ test("2026-08-22 historical web edition keeps all exact source pages addressable
 test("Preview workflow verifies pull requests but deploys only on explicit manual dispatch", async () => {
   const workflow = await readFile(path.join(repoRoot, ".github/workflows/preview.yml"), "utf8");
   assert.match(workflow, /pull_request:/);
-  assert.match(workflow, /branches: \[main, codex\/daily-automation-v1\]/);
+  assert.match(workflow, /branches: \[main, preview-build-v1\]/);
   assert.match(workflow, /workflow_dispatch:/);
   assert.match(workflow, /if: github\.event_name == 'workflow_dispatch'/);
   assert.match(workflow, /NON-PRODUCTION|non-production/);

@@ -6,7 +6,8 @@ This runbook is the auditable instruction surface for the scheduled Culture & Ta
 
 ## Schedule and date
 
-- Start at `09:15` in `Asia/Shanghai` every day.
+- Start the primary run at `09:30` in `Asia/Shanghai` every day.
+- A same-day manual recovery run is allowed before `15:00`; it must update the same dated branch and pull request rather than create a duplicate.
 - Run `npm run daily:preflight` before browsing or editing.
 - The target issue date must equal the current Shanghai calendar date.
 - For publication dates on or after `2026-08-26`, research must be refreshed and locked between `06:00` and `15:00` Shanghai time. Earlier dates retain the historical `08:30` deadline and are never reclassified.
@@ -14,12 +15,13 @@ This runbook is the auditable instruction surface for the scheduled Culture & Ta
 
 ## Git boundary
 
-- Initial dry-run base ref: `codex/daily-automation-v1`.
+- Stable dry-run base ref: `preview-build-v1`. This is the current shared publication container and front-end baseline.
 - Create or update only `automation/culture-taste-YYYY-MM-DD`.
 - Never commit directly to `main`, `preview-build-v1`, or `gh-pages`.
 - Open or update one pull request from the dated branch to the configured dry-run base ref.
 - Never merge the pull request or dispatch `.github/workflows/preview.yml`.
 - If the base ref, repository identity, or worktree state is ambiguous, stop `BLOCKED`.
+- A daily content run may change only `src/issues/YYYY-MM-DD/` and narrowly required date-specific tests. It must not redesign or modify `core/`, historical issues, schemas, workflows, Pages settings, automation policy, or the publication container.
 
 ## Private workspace
 
@@ -72,6 +74,16 @@ The issue may publish none of these when evidence or editorial relevance is weak
 - Reopen and verify at least one detail-level project, live work, or case-study article; use at most two new deep cases by default.
 - Complete the reference chain: original problem → transferable principle → today's problem → independent expression → do-not-copy surface.
 
+## Supplemental daily radar
+
+Build the homepage radar separately from the formal issue. The issue must still select the smallest strong set and must never be padded to satisfy the radar count.
+
+- Create `daily-radar.public.json` for the current date with at least two verified items in each of Fashion, Music, Objects, and City.
+- An item may reference a story already selected for the issue or remain an extra signal that links directly to its official page. Extra signals do not enter `content.md`, the issue manifest, RSS, or the archive issue count.
+- Every radar item must display first-party official media. Reuse the issue's verified official image for referenced stories. For extra signals, record the official detail page, exact official image or video URL, publisher, dates, alt text, credit, source authority, and rights basis.
+- Prefer an official video and official poster when the source provides a useful moving-image asset. A screenshot may be used only when its public-use basis is documented; a self-created illustration, generic placeholder, search thumbnail, or media repost cannot satisfy the radar.
+- If any category has fewer than two honest items or any item lacks verified official media, fail the radar check. Do not weaken the formal issue or fabricate a visual to fill the grid.
+
 ## Images
 
 - Every selected story must resolve and verify at least one story-specific image from a first-party official source before editorial lock. Use the subject, brand, designer, artist, institution, venue, organizer, or another directly responsible canonical public channel.
@@ -81,6 +93,7 @@ The issue may publish none of these when evidence or editorial relevance is weak
 - If rights are cleared for the intended use, copy the image locally and preserve the evidence privately. If rights are unknown, do not download or package it: a visibly non-production Preview may use only the linked external-image treatment that opens the official origin page, keeps the rights summary `blocked`, and cannot enter production.
 - An owned diagram, clearly labeled non-documentary illustration, or text-led treatment may supplement an official image but cannot replace it. If no accurate official image can be verified, hold or omit the story.
 - Never fabricate documentary evidence, a person, product, show, campaign, or event.
+- Apply the same origin and rights separation to supplemental radar media. A video must link to the official host and include an official poster image for the static, no-JavaScript card.
 
 ## Public promotion and validation
 
@@ -89,6 +102,7 @@ Promote only reader-facing, publishable material into `src/issues/YYYY-MM-DD/`:
 - `content.md`;
 - `art-direction.json`;
 - `issue-manifest.public.json`;
+- `daily-radar.public.json` for the supplemental homepage index;
 - scoped `issue.css` and optional progressive enhancement;
 - local assets with a valid public rights basis.
 
@@ -98,11 +112,14 @@ Then run:
 npm ci
 npm run daily:preflight
 npm run verify
+npm run health:daily -- --date YYYY-MM-DD
 npm audit --audit-level=high
 git diff --check
 ```
 
-Confirm privacy scanning rejects private material and confirm the issue is fully readable on desktop, mobile, reduced motion, and without JavaScript. Re-run every dependent check after a material content, source, image, style, or interaction change.
+`health:daily` must verify every public source page, first-party official image, radar image, official video route, and static video poster for the dated issue. It retries transient failures, then uses a real-browser fallback for anti-bot responses. It writes ignored evidence under `.stage4/health/` and fails closed when a required media response or public route is genuinely unavailable. A `REVIEW_REQUIRED` page must be opened and read in the connected interactive browser; record that verification privately or stop `BLOCKED`. Availability does not grant image rights.
+
+Confirm privacy scanning rejects private material and confirm the issue is fully readable on desktop, mobile, reduced motion, and without JavaScript. The QA evidence must include complete desktop and mobile captures of the current homepage and issue plus story-reader coverage. Re-run every dependent check after a material content, source, image, style, or interaction change.
 
 ## Result
 
@@ -111,7 +128,7 @@ On success:
 - commit only the dated public issue and necessary public test updates;
 - push the dated branch;
 - open or update one pull request;
-- report source/issue/artifact digests, QA result, unresolved rights, and the exact human decisions still required;
+- report source/issue/artifact digests, live-source health, QA result, unresolved rights, and the exact human decisions still required;
 - stop before merge or deployment.
 
 On any failure:

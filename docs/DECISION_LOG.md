@@ -37,6 +37,16 @@ The decisions below became active through V3 activation. Their historical `OLD A
 - Rights boundary: official provenance is not permission; unknown rights remain production-blocking and allow only the visibly linked non-production Preview treatment
 - Authority boundary: A2 changes no Preview dispatch, Pages, deployment, privacy, HarryTone, or unattended-automation gate
 
+## Operational authorization O1 — Continuing daily candidate and weekly health audit
+
+- Human approval: repository owner instruction to make the current editorial and front-end standard repeatable every day and week
+- Approval recorded: `2026-08-25` (`Asia/Shanghai`)
+- Daily schedule: one candidate run at `09:30`; a same-day manual recovery may update the same branch before the canonical `15:00` deadline
+- Stable base: `preview-build-v1`, so new dated issues inherit the reviewed publication container without changing it during content generation
+- Added checks: live public source pages, first-party official images, official video routes and posters, plus a weekly read-only whole-site health audit
+- Failure boundary: any hard failure is `BLOCKED` and preserves the previous good website
+- Authority boundary: O1 permits candidate generation, dated pull requests, and read-only health reporting only; it does not permit merge, Preview dispatch, Pages changes, production deployment, or automated editorial/rights approval
+
 ## D01 — Canonical authority and activation
 
 **OLD ASSUMPTION**
