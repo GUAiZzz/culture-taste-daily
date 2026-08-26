@@ -23,7 +23,7 @@ Implemented in this stage:
 - designed homepage and interactive-enhanced archive with full no-JavaScript fallback;
 - preview-only historical preservation for 2026-08-20, 2026-08-21, and 2026-08-22;
 - pull-request CI and manually triggered GitHub Pages Preview workflow.
-- continuing daily Codex candidate policy with a primary and recovery attempt before the Shanghai 15:00 deadline;
+- continuing daily Codex candidate policy at `09:30` Shanghai time, with same-day manual recovery allowed before the `15:00` deadline;
 - strict public source and official-media availability checks for daily candidates;
 - a weekly read-only whole-site health audit;
 - daily and weekly automation retain no merge or deployment authority.

@@ -99,7 +99,7 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
   const windowStart = minutes(researchWindow.start);
   const windowEnd = minutes(researchWindow.deadline);
   if (targetDate >= policy.schedule.research_lock_deadline_effective_from) {
-    for (const [name, value] of [["start_time", policy.schedule.start_time], ["recovery_time", policy.schedule.recovery_time]]) {
+    for (const [name, value] of [["start_time", policy.schedule.start_time]]) {
       if (typeof value !== "string" || minutes(value) < windowStart || minutes(value) > windowEnd) {
         blockers.push(`${name} must remain inside the publication-day ${researchWindow.start}–${researchWindow.deadline} final-refresh window`);
       }
@@ -177,7 +177,6 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
     mode: policy.mode,
     schedule: {
       primary: policy.schedule.start_time,
-      recovery: policy.schedule.recovery_time,
       deadline: researchWindow.deadline,
     },
     candidate_action: issueExists ? "repair_or_refresh_existing_candidate" : "create_new_candidate",

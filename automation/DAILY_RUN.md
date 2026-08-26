@@ -7,7 +7,7 @@ This runbook is the auditable instruction surface for the scheduled Culture & Ta
 ## Schedule and date
 
 - Start the primary run at `09:30` in `Asia/Shanghai` every day.
-- Run one recovery/final-refresh attempt at `13:30` on the same dated branch. The second attempt updates the existing candidate and pull request; it never creates a duplicate.
+- A same-day manual recovery run is allowed before `15:00`; it must update the same dated branch and pull request rather than create a duplicate.
 - Run `npm run daily:preflight` before browsing or editing.
 - The target issue date must equal the current Shanghai calendar date.
 - For publication dates on or after `2026-08-26`, research must be refreshed and locked between `06:00` and `15:00` Shanghai time. Earlier dates retain the historical `08:30` deadline and are never reclassified.

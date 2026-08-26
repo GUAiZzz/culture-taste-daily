@@ -22,7 +22,7 @@ production release
 
 The pipeline ends at the non-production Preview today. The production arrow remains inactive and separately gated.
 
-The daily candidate task operates before the public-source layer. It starts from an ephemeral private workspace, uses `preview-build-v1` as the stable current publication container, may promote only publishable issue source to a dated branch, and stops at a pull request. Its primary and recovery attempts both finish inside the Shanghai `06:00–15:00` window. It does not call the Preview workflow or cross the production arrow.
+The daily candidate task operates before the public-source layer. It starts from an ephemeral private workspace, uses `preview-build-v1` as the stable current publication container, may promote only publishable issue source to a dated branch, and stops at a pull request. Its scheduled `09:30` run and any same-day manual recovery finish inside the Shanghai `06:00–15:00` window. It does not call the Preview workflow or cross the production arrow.
 
 A separate weekly read-only task checks automation drift, deterministic QA, live publication routes, and all public source/media links. It writes no repository state and has no pull-request or deployment authority.
 
