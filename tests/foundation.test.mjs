@@ -150,11 +150,11 @@ test("repository Preview preserves all three historical originals as non-product
   );
 });
 
-test("Preview homepage and archive expose the current 2026-08-23/24/25 fields plus historical issues", async () => {
+test("Preview homepage and archive expose the current 2026-08-23/24/25/26 fields plus historical issues", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
   const archive = await readFile(path.join(previewDist, "archive/index.html"), "utf8");
-  const current = await readFile(path.join(previewDist, "issues/2026-08-25/index.html"), "utf8");
-  for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24", "2026-08-25"]) {
+  const current = await readFile(path.join(previewDist, "issues/2026-08-26/index.html"), "utf8");
+  for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24", "2026-08-25", "2026-08-26"]) {
     assert.ok(home.includes(`issues/${date}/`));
     assert.ok(archive.includes(`issues/${date}/`));
   }
@@ -163,7 +163,7 @@ test("Preview homepage and archive expose the current 2026-08-23/24/25 fields pl
   assert.match(home, /rel="icon" type="image\/png" href="\.\/assets\/culture-taste-earth\.png"/);
   assert.match(archive, /rel="icon" type="image\/png" href="\.\.\/assets\/culture-taste-earth\.png"/);
   assert.match(current, /class="issue-brand"[\s\S]*culture-taste-earth\.png/);
-  assert.match(home, /THE ROOM HAS A VOTE/);
+  assert.match(home, /SAME FRAME, NEW MOVE/);
   assert.match(home, /assets\/covers\/2026-08-23\.svg/);
   assert.match(archive, /assets\/covers\/2026-08-23\.svg/);
   assert.match(home, /assets\/covers\/2026-08-25\.svg/);
@@ -188,29 +188,29 @@ test("2026-08-23 Preview has a dated visual and source chain for every story", a
 });
 
 test("independent static QA validates historical archive routes and assets", async () => {
-  const qa = await runStaticChecks({ repoRoot, distDir: previewDist, issueId: "2026-08-25" });
+  const qa = await runStaticChecks({ repoRoot, distDir: previewDist, issueId: "2026-08-26" });
   assert.equal(qa.checks.find((check) => check.id === "historical_archive").status, "PASS");
   assert.equal(qa.checks.find((check) => check.id === "assets").status, "PASS");
   assert.equal(qa.checks.find((check) => check.id === "internal_links").status, "PASS");
 });
 
-test("current 2026-08-25 Preview exposes one first-party official image per story and becomes the latest feed entry", async () => {
-  const current = await readFile(path.join(previewDist, "issues/2026-08-25/index.html"), "utf8");
-  const manifest = await readJson(path.join(previewDist, "issues/2026-08-25/issue-manifest.public.json"));
-  assert.equal((current.match(/class="story-figure"/g) ?? []).length, 8);
-  assert.equal(manifest.stories.length, 8);
-  assert.equal(manifest.stories.filter((story) => story.media?.kind === "source_image").length, 8);
-  assert.equal(manifest.stories.filter((story) => story.media?.origin_authority === "first_party_official").length, 8);
-  assert.equal(manifest.stories.filter((story) => story.media?.rights_basis === "preview_user_authorized_external").length, 8);
-  assert.equal((current.match(/data-media-kind="source_image"/g) ?? []).length, 8);
-  assert.equal((current.match(/data-external-preview="true"/g) ?? []).length, 16);
+test("current 2026-08-26 Preview exposes one first-party official image per story and becomes the latest feed entry", async () => {
+  const current = await readFile(path.join(previewDist, "issues/2026-08-26/index.html"), "utf8");
+  const manifest = await readJson(path.join(previewDist, "issues/2026-08-26/issue-manifest.public.json"));
+  assert.equal((current.match(/class="story-figure"/g) ?? []).length, 5);
+  assert.equal(manifest.stories.length, 5);
+  assert.equal(manifest.stories.filter((story) => story.media?.kind === "source_image").length, 5);
+  assert.equal(manifest.stories.filter((story) => story.media?.origin_authority === "first_party_official").length, 5);
+  assert.equal(manifest.stories.filter((story) => story.media?.rights_basis === "preview_user_authorized_external").length, 5);
+  assert.equal((current.match(/data-media-kind="source_image"/g) ?? []).length, 5);
+  assert.equal((current.match(/data-external-preview="true"/g) ?? []).length, 10);
   assert.equal(manifest.rights_summary.status, "blocked");
-  assert.equal(manifest.rights_summary.unknown_required_assets, 8);
+  assert.equal(manifest.rights_summary.unknown_required_assets, 5);
   assert.ok(manifest.stories.every((story) => story.sources.some((source) => source.relationship === "first_party_official" && source.url === story.media.origin_url)));
-  assert.match(current, /musquiqui-life-of-navigation/);
-  assert.match(current, /href="https:\/\/en\.jp\.bape\.com\/blogs\/news\/saintmxxxxxx-26fw"/);
-  assert.match(current, /2026-08-25/);
-  assert.match(await readFile(path.join(previewDist, "index.html"), "utf8"), /issues\/2026-08-25\//);
+  assert.match(current, /stussy-jeju-archive-store/);
+  assert.match(current, /href="https:\/\/www\.stussy\.com\/blogs\/news\/jeju-archive-store"/);
+  assert.match(current, /2026-08-26/);
+  assert.match(await readFile(path.join(previewDist, "index.html"), "utf8"), /issues\/2026-08-26\//);
 });
 
 test("Preview source-image figures remain rights-blocked and click through to their publishers", async () => {
