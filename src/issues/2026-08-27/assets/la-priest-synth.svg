@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">LA Priest Into The Sky local fallback diagram</title>
+  <desc id="desc">An original non-documentary diagram of a handmade synthesizer, a drum machine and a dance-floor grid.</desc>
+  <rect width="1200" height="900" fill="#123B40"/>
+  <path d="M0 720H1200M0 600H1200M0 480H1200M0 360H1200M0 240H1200M150 0V900M300 0V900M450 0V900M600 0V900M750 0V900M900 0V900M1050 0V900" fill="none" stroke="#3E9C91" stroke-width="3" opacity=".45"/>
+  <path d="M88 160H1112V682H88Z" fill="#F4F0E4" stroke="#EF5B35" stroke-width="12"/>
+  <rect x="146" y="214" width="460" height="300" rx="18" fill="#F2D14C" stroke="#111515" stroke-width="10"/>
+  <rect x="650" y="214" width="398" height="300" rx="18" fill="#EF5B35" stroke="#111515" stroke-width="10"/>
+  <circle cx="220" cy="300" r="22" fill="#123B40"/><circle cx="310" cy="300" r="22" fill="#123B40"/><circle cx="400" cy="300" r="22" fill="#123B40"/><circle cx="490" cy="300" r="22" fill="#123B40"/>
+  <path d="M178 422H568M178 458H568" stroke="#111515" stroke-width="13"/>
+  <path d="M696 286h82v82h-82zM822 286h82v82h-82zM948 286h56v82h-56zM696 412h308" fill="none" stroke="#F4F0E4" stroke-width="15"/>
+  <path d="M142 636H1056" stroke="#111515" stroke-width="13"/><circle cx="198" cy="636" r="22" fill="#EF5B35"/><circle cx="406" cy="636" r="22" fill="#EF5B35"/><circle cx="614" cy="636" r="22" fill="#EF5B35"/><circle cx="822" cy="636" r="22" fill="#EF5B35"/><circle cx="1030" cy="636" r="22" fill="#EF5B35"/>
+  <text x="118" y="90" font-family="monospace" font-size="34" font-weight="700" fill="#F4F0E4" letter-spacing="4">INTO THE SKY / 28.08.26</text>
+  <text x="150" y="758" font-family="monospace" font-size="28" font-weight="700" fill="#F4F0E4">HANDMADE SIGNAL → BODY</text>
+</svg>
