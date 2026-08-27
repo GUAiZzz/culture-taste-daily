@@ -1,0 +1,17 @@
+{
+  "issue_id": "2026-08-27",
+  "title": "发布总要找到一个现场 / RELEASE NEEDS A PLACE",
+  "dominant_mood": "一块挂在城市墙面上的深青色现场地图：准确、亮、留有手写坐标的余温",
+  "background_logic": "米白纸面承载八个现场切片，深青色坐标线把它们串成一张可读的发布地图；不使用最近几期的 proof sheet、路线图、钟表或房间平面",
+  "palette_logic": "paper #F4F0E4, ink #111515, deep teal #123B40, green #3E9C91, safety orange #EF5B35, signal yellow #F2D14C",
+  "type_scale_logic": "封面用宽体大字压住视觉重心，正文保持 18–20px，坐标标签用等宽小字；中文标题在桌面和 390px 移动端都保持短行",
+  "image_behavior": "八张经核验的一手官方图片使用八种裁切比例并点击回到官方来源；源站若阻止热链，位置保留本期自有且明确标注为非纪实的对象图解",
+  "page_density_and_tempo": "封面先给地图，Stüssy 与 LOEWE 快速进入，Prince 与 LA Priest 拉长声音的时间，两个对象把手感压低，香港与 FamilyMart 回到公共日常",
+  "core_visual_action": "把发布日期改写成坐标：每个故事都把一个抽象的上线动作钉到时间、地点或身体使用上",
+  "cover_composition": "深青底上八个橙色坐标点沿斜线分布，标题从中段切入；不重用最近三期的闭合线、路线钟表或房间块",
+  "desktop_interaction_mechanic": "黏附索引只显示故事坐标和章节锚点；正文、来源图、来源清单和故事路由不依赖 JavaScript",
+  "behance_viewing_arc": "从全球发售的本地时钟开始，进入高山 campaign，再穿过 Vault、黑胶、水瓶、扑克牌，最后回到图书馆和便利店的工作现场",
+  "mobile_translation": "地图视觉压缩为纵向坐标条，八个故事全部单列展开；图片保留不同裁切但不制造横向滚动",
+  "mobbin_usability_constraint": "所有来源图明确可点击、焦点可见、点击目标至少 44px；无 JavaScript 时全文、来源、图片说明与 Preview 权利提示完整",
+  "quiet_ending": "把现场还给使用者：发布不是终点，是对象第一次被使用的条件"
+}

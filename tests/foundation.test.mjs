@@ -152,11 +152,11 @@ test("repository Preview preserves all three historical originals as non-product
   );
 });
 
-test("Preview homepage and archive expose the current 2026-08-23/24/25/26 fields plus historical issues", async () => {
+test("Preview homepage and archive expose the current 2026-08-23/24/25/26/27 fields plus historical issues", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
   const archive = await readFile(path.join(previewDist, "archive/index.html"), "utf8");
-  const current = await readFile(path.join(previewDist, "issues/2026-08-26/index.html"), "utf8");
-  for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24", "2026-08-25", "2026-08-26"]) {
+  const current = await readFile(path.join(previewDist, "issues/2026-08-27/index.html"), "utf8");
+  for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27"]) {
     assert.ok(home.includes(`issues/${date}/`));
     assert.ok(archive.includes(`issues/${date}/`));
   }
@@ -173,45 +173,47 @@ test("Preview homepage and archive expose the current 2026-08-23/24/25/26 fields
   assert.match(archive, /assets\/covers\/2026-08-25\.svg/);
   assert.match(home, /assets\/covers\/2026-08-26\.svg/);
   assert.match(archive, /assets\/covers\/2026-08-26\.svg/);
+  assert.match(home, /assets\/covers\/2026-08-27\.svg/);
+  assert.match(archive, /assets\/covers\/2026-08-27\.svg/);
   assert.doesNotMatch(home, /<div class="type-cover"[^>]*><span>THE DAY/);
   await readFile(path.join(previewDist, "assets/culture-taste-earth.png"));
-  for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg", "2026-08-23.svg", "2026-08-25.svg", "2026-08-26.svg"]) {
+  for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg", "2026-08-23.svg", "2026-08-25.svg", "2026-08-26.svg", "2026-08-27.svg"]) {
     await readFile(path.join(previewDist, "assets/covers", cover));
   }
 });
 
 test("frontend integration keeps the formal issue intact while adding the supplemental daily radar", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
-  const current = await readFile(path.join(previewDist, "issues/2026-08-26/index.html"), "utf8");
+  const current = await readFile(path.join(previewDist, "issues/2026-08-27/index.html"), "utf8");
   assert.equal((home.match(/<button type="button" data-theme-choice=/g) ?? []).length, 3);
   assert.match(home, /class="wordmark"[\s\S]*<em>Taste<\/em>/);
   assert.doesNotMatch(home, /class="wordmark"[^>]*>[\s\S]{0,240}<img/);
-  assert.equal((home.match(/<li data-story-card/g) ?? []).length, 10);
+  assert.equal((home.match(/<li data-story-card/g) ?? []).length, 8);
   assert.match(home, /id="daily-index-title"/);
   assert.doesNotMatch(home, /先看正式日报/);
   assert.match(home, /01 \/ IN TODAY'S ISSUE/);
-  assert.match(home, /02 \/ MORE FROM TODAY/);
-  assert.equal((home.match(/data-official-only/g) ?? []).length, 10);
-  assert.equal((home.match(/data-radar-kind="issue"/g) ?? []).length, 5);
-  assert.equal((home.match(/data-radar-kind="extra"/g) ?? []).length, 5);
+  assert.doesNotMatch(home, /02 \/ MORE FROM TODAY/);
+  assert.equal((home.match(/data-official-only/g) ?? []).length, 8);
+  assert.equal((home.match(/data-radar-kind="issue"/g) ?? []).length, 8);
+  assert.equal((home.match(/data-radar-kind="extra"/g) ?? []).length, 0);
   assert.doesNotMatch(home, /class="local-art"/);
   assert.doesNotMatch(home, /<span class="radar-visual"[^>]*>[\s\S]*?<i aria-hidden="true"><\/i>/);
   assert.doesNotMatch(home, /class="theme-picker"/);
-  assert.equal((home.match(/issues\/2026-08-26\/stories\/[^/]+\//g) ?? []).length, 5);
+  assert.equal((home.match(/issues\/2026-08-27\/stories\/[^/]+\//g) ?? []).length, 8);
   assert.match(current, /class="reading-progress"/);
   assert.equal((current.match(/<button type="button" data-theme-choice=/g) ?? []).length, 3);
   assert.match(current, /data-content-sha256="[0-9a-f]{64}"/);
-  assert.equal((current.match(/class="issue-story"/g) ?? []).length, 6);
+  assert.equal((current.match(/class="issue-story"/g) ?? []).length, 9);
   assert.match(current, /data-story="exit"/);
   assert.match(current, /id="sources"/);
-  const storyRoutes = await readdir(path.join(previewDist, "issues/2026-08-26/stories"));
-  assert.equal(storyRoutes.length, 5);
-  for (const storyId of storyRoutes) await readFile(path.join(previewDist, "issues/2026-08-26/stories", storyId, "index.html"));
-  const firstStory = await readFile(path.join(previewDist, "issues/2026-08-26/stories", storyRoutes[0], "index.html"), "utf8");
+  const storyRoutes = await readdir(path.join(previewDist, "issues/2026-08-27/stories"));
+  assert.equal(storyRoutes.length, 8);
+  for (const storyId of storyRoutes) await readFile(path.join(previewDist, "issues/2026-08-27/stories", storyId, "index.html"));
+  const firstStory = await readFile(path.join(previewDist, "issues/2026-08-27/stories", storyRoutes[0], "index.html"), "utf8");
   assert.match(firstStory, /class="story-reader-brand"[\s\S]*<em>Taste<\/em>/);
   assert.doesNotMatch(firstStory, /class="story-reader-brand"[^>]*>[\s\S]{0,240}<img/);
   const sitemap = await readFile(path.join(previewDist, "sitemap.xml"), "utf8");
-  for (const storyId of storyRoutes) assert.match(sitemap, new RegExp(`issues/2026-08-26/stories/${storyId}/`));
+  for (const storyId of storyRoutes) assert.match(sitemap, new RegExp(`issues/2026-08-27/stories/${storyId}/`));
 });
 
 test("daily radar has at least two official-media selections in every category without changing the issue manifest", async () => {
@@ -293,7 +295,7 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     await fallbackContext.close();
 
     const retryContext = await browser.newContext();
-    const retryImagePrefix = "https://www.humanmade.jp/dw/image/v2/blsm_prd/on/demandware.static/-/Sites-catalog_master_sfcc_humanmade/default/dw01c37a5d/images/large/HM_1784879966003_ynmhox.jpg";
+    const retryImagePrefix = "https://www.stussy.com/cdn/shop/files/sync-33951488573637.jpg";
     let retryAttempts = 0;
     await retryContext.route((url) => url.href.startsWith(retryImagePrefix), async (route) => {
       retryAttempts += 1;
@@ -309,10 +311,10 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     });
     const retryPage = await retryContext.newPage();
     await retryPage.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
-    const retryImage = retryPage.locator('img[alt="HUMAN MADE Daily short-sleeve T-shirt printed with the date 260826"]');
+    const retryImage = retryPage.locator('img[alt="Official Stüssy image for the eYe JUNYA WATANABE MAN collaboration"]');
     await retryImage.scrollIntoViewIfNeeded();
     await retryPage.waitForFunction(() => {
-      const image = document.querySelector('img[alt="HUMAN MADE Daily short-sleeve T-shirt printed with the date 260826"]');
+      const image = document.querySelector('img[alt="Official Stüssy image for the eYe JUNYA WATANABE MAN collaboration"]');
       return image?.complete && image.naturalWidth > 0 && image.src.includes("ctd_retry=1");
     }, null, { timeout: 10_000 });
     assert.ok(retryAttempts >= 2);
@@ -329,7 +331,7 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     const noJsContext = await browser.newContext({ javaScriptEnabled: false });
     const noJsPage = await noJsContext.newPage();
     await noJsPage.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
-    assert.equal(await noJsPage.locator("[data-story-card]").count(), 10);
+    assert.equal(await noJsPage.locator("[data-story-card]").count(), 8);
     assert.equal(await noJsPage.locator(".theme-picker").count(), 0);
     assert.equal(await noJsPage.locator(".radar-filters").isVisible(), false);
     const noJsStory = await noJsPage.locator("[data-story-card] a").first().getAttribute("href");
