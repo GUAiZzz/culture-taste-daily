@@ -136,11 +136,12 @@
       "title": "香港中央图书馆先借一个下午，给隋唐服饰",
       "sources": [
         {"title": "Echoes of the Sui & Tang: Ancient Attire and Modern Design", "publisher": "Chinese Culture Festival", "url": "https://www.ccf.gov.hk/en/programme/echoes-of-the-sui-tang-ancient-attire-and-modern-design/", "published_date": null, "event_date": "2026-08-27/2026-09-06", "relationship": "first_party_official"},
+        {"title": "「霓裳越千年—隋唐服飾與現代設計」展覽", "publisher": "香港文聯", "url": "https://www.hkwl.org/article/36729-ccf2026-004/", "published_date": "2026-03-23", "event_date": "2026-08-27/2026-09-06", "relationship": "first_party_official"},
         {"title": "「霓裳越千年—隋唐服飾與現代設計」展8·27開幕", "publisher": "點新聞", "url": "https://www.dotdotnews.com/s/202608/18/AP6a842795e4b04b6c5d3708ec.html", "published_date": "2026-08-18", "event_date": "2026-08-27/2026-09-06", "relationship": "independent_reporting"}
       ],
-      "image_credit": "Chinese Culture Festival official programme image / Preview-linked",
+      "image_credit": "香港文聯 official programme image / Preview-linked",
       "english": {"title": "HISTORY BORROWS A PUBLIC ROOM", "deck": "A library hosts reconstructed attire, contemporary fashion and digital culture.", "abstract": "The official programme confirms dates, free entry, venue and sections; independent reporting adds the exhibition's public-facing display details without claiming audience response."},
-      "media": {"asset": "assets/hong-kong-attire.svg", "alt": "Official Chinese Culture Festival visual for Echoes of the Sui and Tang", "caption": "Chinese Culture Festival official programme image; click through to the exhibition page.", "credit": "Chinese Culture Festival · Preview-linked official image", "kind": "source_image", "origin_url": "https://www.ccf.gov.hk/en/programme/echoes-of-the-sui-tang-ancient-attire-and-modern-design/", "external_image_url": "https://www.ccf.gov.hk/media/2026/02/2026-icon-ea.webp", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+      "media": {"asset": "assets/hong-kong-attire.svg", "alt": "Official Hong Kong Literature and Art Association visual for Echoes of the Sui and Tang", "caption": "香港文聯 official programme image; click through to the exhibition detail page.", "credit": "香港文聯 · Preview-linked official image", "kind": "source_image", "origin_url": "https://www.hkwl.org/article/36729-ccf2026-004/", "external_image_url": "https://www.hkwl.org/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-09-at-10.51.28-600x239.jpeg", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
     },
     {
       "id": "familymart-new-uniform-famima-code",
