@@ -8,7 +8,7 @@ Run every Sunday at `16:30` in `Asia/Shanghai`. This audit verifies that the con
 
 1. Use the configured Culture & Taste repository and read `AGENTS.md` plus its mandatory files.
 2. Fetch and inspect `preview-build-v1` without modifying it.
-3. Confirm the daily candidate automation is active, uses the same repository, targets `preview-build-v1`, runs at `09:30` and `13:30` Shanghai time, and retains zero merge/deployment authority.
+3. Confirm the daily candidate automation is active, uses the same repository, targets `preview-build-v1`, runs once at `11:00` Shanghai time with no automatic recovery, and grants merge/dispatch authority only after a valid explicit human non-production Preview override.
 4. Confirm `.github/workflows/preview.yml` has no schedule or push trigger and deploys only after an explicit manual dispatch.
 
 Any drift is `BLOCKED` and must be reported exactly. Do not repair it during the audit.

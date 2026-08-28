@@ -63,6 +63,58 @@ function validateBrandRadar({ policy, radar, blockers }) {
   if (new Set(subjects).size !== subjects.length) blockers.push("brand radar subjects must be unique");
 }
 
+function validateHumanPreviewOverride({ policy, blockers }) {
+  const override = policy.human_preview_override;
+  if (!override || override.enabled !== true || override.effective_from !== "2026-08-29") {
+    blockers.push("human Preview override must be enabled from 2026-08-29");
+    return;
+  }
+  if (override.trigger !== "explicit_owner_instruction_after_completed_research") {
+    blockers.push("human Preview override must require an explicit owner instruction after completed research");
+  }
+  if (override.publish_target !== "non_production_preview_only" || override.production_authority !== false) {
+    blockers.push("human override may publish only to the non-production Preview");
+  }
+  if (!Array.isArray(override.example_instructions) || !override.example_instructions.includes("资料可以，发")) {
+    blockers.push("human Preview override must document an unambiguous owner instruction");
+  }
+  const requiredConditions = [
+    "explicit_owner_instruction_in_current_task",
+    "research_collection_complete",
+    "dated_public_package_complete",
+    "deterministic_build_and_technical_qa_pass",
+    "privacy_and_secret_scan_pass",
+    "repository_and_base_identity_verified",
+  ];
+  if (requiredConditions.some((key) => override.requirements?.[key] !== true)) {
+    blockers.push("human Preview override is missing a non-overridable safety requirement");
+  }
+  const requiredActions = [
+    "commit_dated_public_candidate",
+    "push_dated_branch",
+    "open_or_update_single_pull_request",
+    "merge_to_preview_base",
+    "dispatch_non_production_preview",
+    "verify_live_preview",
+  ];
+  if (requiredActions.some((key) => override.actions?.[key] !== true)) {
+    blockers.push("human Preview override must define the complete Preview publication path");
+  }
+  const forbiddenActions = [
+    "deploy_production",
+    "modify_main_directly",
+    "modify_gh_pages_directly",
+    "modify_pages_settings",
+    "modify_legacy_repository",
+  ];
+  if (forbiddenActions.some((key) => override.actions?.[key] !== false)) {
+    blockers.push("human Preview override cannot expand production or direct-branch authority");
+  }
+  if (override.preserve_candidate_status_and_rights_disclosures !== true) {
+    blockers.push("human Preview override must preserve BLOCKED status and rights disclosures");
+  }
+}
+
 async function priorIssueDates(repoRoot, issueDate) {
   const issueRoot = path.join(repoRoot, "src/issues");
   if (!(await exists(issueRoot))) return [];
@@ -97,6 +149,7 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
   if (policy.mode !== "scheduled_dry_run_candidate") blockers.push("daily policy may authorize dry-run candidates only");
   if (policy.dry_run_base_ref !== "preview-build-v1") blockers.push("daily candidates must use the current preview-build-v1 publication base");
   validateBrandRadar({ policy, radar: brandRadar, blockers });
+  validateHumanPreviewOverride({ policy, blockers });
 
   const currentMinute = minutes(shanghai.time);
   const researchWindow = researchWindowFor(targetDate, policy.schedule);
@@ -111,8 +164,8 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
         blockers.push(`${name} must remain inside the publication-day ${researchWindow.start}–${researchWindow.deadline} final-refresh window`);
       }
     }
-    if (policy.schedule.recover_when_current_candidate_missing !== true) {
-      blockers.push("same-day candidate recovery must remain enabled before the final-refresh deadline");
+    if (policy.schedule.recover_when_current_candidate_missing !== false || (policy.schedule.recovery_check_times ?? []).length !== 0) {
+      blockers.push("automatic same-day recovery must remain disabled; use an explicit human follow-up instead");
     }
   }
   if (currentMinute < windowStart || currentMinute > windowEnd) {
@@ -214,6 +267,14 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
       preview: false,
       production: false,
       preserve_previous_good: true,
+    },
+    human_preview_override: {
+      available: targetDate >= policy.human_preview_override.effective_from,
+      effective_from: policy.human_preview_override.effective_from,
+      trigger: policy.human_preview_override.trigger,
+      publish_target: policy.human_preview_override.publish_target,
+      preserves_reported_status: policy.human_preview_override.preserve_candidate_status_and_rights_disclosures,
+      production_authority: false,
     },
     blockers,
   };

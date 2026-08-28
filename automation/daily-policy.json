@@ -4,9 +4,9 @@
   "timezone": "Asia/Shanghai",
   "mode": "scheduled_dry_run_candidate",
   "schedule": {
-    "start_time": "09:30",
-    "recovery_check_times": ["11:30", "13:30", "14:30"],
-    "recover_when_current_candidate_missing": true,
+    "start_time": "11:00",
+    "recovery_check_times": [],
+    "recover_when_current_candidate_missing": false,
     "research_window_start": "06:00",
     "research_lock_deadline": "15:00",
     "research_lock_deadline_effective_from": "2026-08-26",
@@ -50,6 +50,43 @@
     "status": "BLOCKED",
     "preserve_previous_good": true,
     "allow_partial_publish": false
+  },
+  "human_preview_override": {
+    "enabled": true,
+    "effective_from": "2026-08-29",
+    "trigger": "explicit_owner_instruction_after_completed_research",
+    "publish_target": "non_production_preview_only",
+    "example_instructions": ["资料可以，发", "必须发"],
+    "requirements": {
+      "explicit_owner_instruction_in_current_task": true,
+      "research_collection_complete": true,
+      "dated_public_package_complete": true,
+      "deterministic_build_and_technical_qa_pass": true,
+      "privacy_and_secret_scan_pass": true,
+      "repository_and_base_identity_verified": true
+    },
+    "overridable_blockers": [
+      "research_window",
+      "source_health_review_required",
+      "source_access_limit_after_browser_review",
+      "unknown_image_rights_for_preview",
+      "named_editorial_or_visual_review_pending"
+    ],
+    "actions": {
+      "commit_dated_public_candidate": true,
+      "push_dated_branch": true,
+      "open_or_update_single_pull_request": true,
+      "merge_to_preview_base": true,
+      "dispatch_non_production_preview": true,
+      "verify_live_preview": true,
+      "deploy_production": false,
+      "modify_main_directly": false,
+      "modify_gh_pages_directly": false,
+      "modify_pages_settings": false,
+      "modify_legacy_repository": false
+    },
+    "preserve_candidate_status_and_rights_disclosures": true,
+    "production_authority": false
   },
   "required_source_lanes": [
     "mainland_china_plus_hong_kong_or_taiwan",

@@ -1,14 +1,13 @@
 # Culture & Taste Daily candidate run
 
-Status: `AUTHORIZED DAILY DRY RUN / NO DEPLOYMENT AUTHORITY`
+Status: `AUTHORIZED DAILY CANDIDATE / EXPLICIT HUMAN PREVIEW OVERRIDE`
 
-This runbook is the auditable instruction surface for the scheduled Culture & Taste candidate task. It produces a dated review branch and pull request. It never merges, changes Pages, deploys Preview or production, edits the legacy repository, or treats generator output as approval.
+This runbook is the auditable instruction surface for the scheduled Culture & Taste candidate task. The unattended run produces a dated review branch and pull request but never merges or deploys. From `2026-08-29`, an explicit owner instruction after completed research may override specified `BLOCKED` gates and publish the complete candidate to the existing non-production Preview. The override never grants production authority or converts unresolved evidence into `PASS`.
 
 ## Schedule and date
 
-- Start the primary run at `09:30` in `Asia/Shanghai` every day.
-- Recheck at `11:30`, `13:30`, and `14:30`. If today's complete candidate and pull request are missing, stale, or previously blocked, recover automatically before `15:00` on the same dated branch and pull request. Passing the primary start time is never itself a blocker.
-- A same-day manual recovery run is also allowed before `15:00`; it must update the same dated branch and pull request rather than create a duplicate.
+- Start the single daily run at `11:00` in `Asia/Shanghai`.
+- Do not create, schedule, or expect automatic recovery runs. A later explicit owner follow-up may continue the same dated task and branch.
 - Run `npm run daily:preflight` before browsing or editing.
 - The target issue date must equal the current Shanghai calendar date.
 - For publication dates on or after `2026-08-26`, research must be refreshed and locked between `06:00` and `15:00` Shanghai time. Earlier dates retain the historical `08:30` deadline and are never reclassified.
@@ -20,7 +19,7 @@ This runbook is the auditable instruction surface for the scheduled Culture & Ta
 - Create or update only `automation/culture-taste-YYYY-MM-DD`.
 - Never commit directly to `main`, `preview-build-v1`, or `gh-pages`.
 - Open or update one pull request from the dated branch to the configured dry-run base ref.
-- Never merge the pull request or dispatch `.github/workflows/preview.yml`.
+- The unattended daily run must never merge the pull request or dispatch `.github/workflows/preview.yml`. Only the explicit human Preview override below may do both.
 - If the base ref, repository identity, or worktree state is ambiguous, stop `BLOCKED`.
 - A daily content run may change only `src/issues/YYYY-MM-DD/` and narrowly required date-specific tests. It must not redesign or modify `core/`, historical issues, schemas, workflows, Pages settings, automation policy, or the publication container.
 
@@ -136,9 +135,21 @@ On success:
 - report source/issue/artifact digests, live-source health, QA result, unresolved rights, and the exact human decisions still required;
 - stop before merge or deployment.
 
+### Explicit human Preview override
+
+From `2026-08-29`, after research collection and the complete dated public package are finished, an unambiguous owner instruction in the current task—such as `资料可以，发` or `必须发`—is the highest publication instruction for the non-production Preview.
+
+That instruction may override a `BLOCKED` result caused by the research window, a source-health `REVIEW_REQUIRED` result, a source access limit after connected-browser review, unknown image rights that are already represented by linked Preview-only treatment, or pending named editorial/visual review. It does not rewrite those facts: keep the candidate status, source-access notes, rights state, and visible Preview-only disclosures honest.
+
+The override is valid only when research collection and the dated public package are complete, deterministic build and technical QA pass, privacy and secret scanning pass, and repository/base identity is verified. Missing or incomplete research, private-material exposure, a broken or nondeterministic artifact, technical QA failure, or repository ambiguity remains non-overridable.
+
+When valid, commit only the dated public candidate and necessary public tests, push the dated branch, open or update its single pull request, merge that pull request to `preview-build-v1`, dispatch the existing manual non-production Preview workflow, and verify the live Preview routes. Never deploy production, modify `main` or `gh-pages` directly, change Pages settings, touch the legacy repository, enable a schedule in GitHub Actions, or represent unknown rights as cleared.
+
 On any failure:
 
 - report `BLOCKED` with the smallest actionable reason;
 - do not push private or incomplete material;
 - do not change Preview or production;
 - preserve the previous good website exactly as it is.
+
+The failure behavior above applies unless the owner supplies a valid explicit human Preview override. Even then, a non-overridable failure preserves the previous good Preview.

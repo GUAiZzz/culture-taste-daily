@@ -60,17 +60,20 @@ test("A1 allows the final refresh through 15:00 from 2026-08-26", async () => {
   assert.match(afterDeadline.blockers.join("\n"), /outside the publication-day 06:00–15:00/);
 });
 
-test("a missing next-day candidate remains recoverable after 09:30 and before 15:00", async () => {
+test("the single 11:00 run does not create an automatic recovery run", async () => {
   const report = await evaluateDailyPreflight({
     repoRoot,
-    issueDate: "2026-08-28",
-    now: new Date("2026-08-28T04:15:00Z"),
+    issueDate: "2026-08-29",
+    now: new Date("2026-08-29T04:15:00Z"),
   });
 
-  assert.equal(report.shanghai_now, "2026-08-28T12:15:00+08:00");
+  assert.equal(report.shanghai_now, "2026-08-29T12:15:00+08:00");
   assert.equal(report.status, "READY_FOR_DRY_RUN");
   assert.equal(report.candidate_action, "create_new_candidate");
-  assert.equal(report.schedule.recover_when_current_candidate_missing, true);
+  assert.equal(report.schedule.primary, "11:00");
+  assert.deepEqual(report.schedule.recovery_checks, []);
+  assert.equal(report.schedule.recover_when_current_candidate_missing, false);
+  assert.equal(report.human_preview_override.available, true);
 });
 
 test("date semantics use A1 prospectively without reclassifying the historical window", async () => {
@@ -119,7 +122,7 @@ test("Thursday adds the Supreme drop beat without making it a publication quota"
   assert.equal(policy.standing_beats.find((beat) => beat.id === "supreme-thursday-drop").publication_quota, false);
 });
 
-test("daily policy cannot merge, deploy, alter Pages, or touch the legacy repository", async () => {
+test("unattended daily policy cannot merge or deploy and the human override stays Preview-only", async () => {
   const policy = JSON.parse(await readFile(path.join(repoRoot, "automation/daily-policy.json"), "utf8"));
   assert.deepEqual(policy.output, {
     open_pull_request: true,
@@ -132,9 +135,9 @@ test("daily policy cannot merge, deploy, alter Pages, or touch the legacy reposi
   assert.equal(policy.failure.preserve_previous_good, true);
   assert.equal(policy.failure.allow_partial_publish, false);
   assert.equal(policy.schedule.research_lock_deadline, "15:00");
-  assert.equal(policy.schedule.start_time, "09:30");
-  assert.deepEqual(policy.schedule.recovery_check_times, ["11:30", "13:30", "14:30"]);
-  assert.equal(policy.schedule.recover_when_current_candidate_missing, true);
+  assert.equal(policy.schedule.start_time, "11:00");
+  assert.deepEqual(policy.schedule.recovery_check_times, []);
+  assert.equal(policy.schedule.recover_when_current_candidate_missing, false);
   assert.equal(policy.schedule.research_lock_deadline_effective_from, "2026-08-26");
   assert.equal(policy.schedule.historical_research_lock_deadline, "08:30");
   assert.deepEqual(policy.official_image_gate, {
@@ -159,6 +162,19 @@ test("daily policy cannot merge, deploy, alter Pages, or touch the legacy reposi
   assert.equal(policy.daily_radar.included_in_rss, false);
   assert.equal(policy.dry_run_base_ref, "preview-build-v1");
   assert.ok(policy.required_runtime_checks.includes("live_public_source_and_media_health"));
+  assert.equal(policy.human_preview_override.enabled, true);
+  assert.equal(policy.human_preview_override.effective_from, "2026-08-29");
+  assert.equal(policy.human_preview_override.publish_target, "non_production_preview_only");
+  assert.equal(policy.human_preview_override.requirements.explicit_owner_instruction_in_current_task, true);
+  assert.equal(policy.human_preview_override.requirements.research_collection_complete, true);
+  assert.equal(policy.human_preview_override.requirements.deterministic_build_and_technical_qa_pass, true);
+  assert.equal(policy.human_preview_override.actions.merge_to_preview_base, true);
+  assert.equal(policy.human_preview_override.actions.dispatch_non_production_preview, true);
+  assert.equal(policy.human_preview_override.actions.deploy_production, false);
+  assert.equal(policy.human_preview_override.actions.modify_main_directly, false);
+  assert.equal(policy.human_preview_override.actions.modify_gh_pages_directly, false);
+  assert.equal(policy.human_preview_override.preserve_candidate_status_and_rights_disclosures, true);
+  assert.equal(policy.human_preview_override.production_authority, false);
 });
 
 test("weekly health audit is read-only and aligned to the current publication base", async () => {
@@ -266,10 +282,10 @@ test("daily preflight verifies the existing manual-only Preview and privacy defe
   assert.doesNotMatch(report.blockers.join("\n"), /Preview workflow|privacy ignore/);
   assert.equal(report.base_ref, "preview-build-v1");
   assert.deepEqual(report.schedule, {
-    primary: "09:30",
-    recovery_checks: ["11:30", "13:30", "14:30"],
+    primary: "11:00",
+    recovery_checks: [],
     deadline: "08:30",
-    recover_when_current_candidate_missing: true,
+    recover_when_current_candidate_missing: false,
   });
 });
 
