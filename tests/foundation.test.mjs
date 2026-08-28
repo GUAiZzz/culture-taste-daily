@@ -188,18 +188,18 @@ test("frontend integration keeps the formal issue intact while adding the supple
   assert.equal((home.match(/<button type="button" data-theme-choice=/g) ?? []).length, 3);
   assert.match(home, /class="wordmark"[\s\S]*<em>Taste<\/em>/);
   assert.doesNotMatch(home, /class="wordmark"[^>]*>[\s\S]{0,240}<img/);
-  assert.equal((home.match(/<li data-story-card/g) ?? []).length, 8);
+  assert.equal((home.match(/<li data-story-card/g) ?? []).length, 14);
   assert.match(home, /id="daily-index-title"/);
   assert.doesNotMatch(home, /先看正式日报/);
   assert.match(home, /01 \/ IN TODAY'S ISSUE/);
-  assert.doesNotMatch(home, /02 \/ MORE FROM TODAY/);
-  assert.equal((home.match(/data-official-only/g) ?? []).length, 8);
+  assert.match(home, /02 \/ MORE FROM TODAY/);
+  assert.equal((home.match(/data-official-only/g) ?? []).length, 14);
   assert.equal((home.match(/data-radar-kind="issue"/g) ?? []).length, 8);
-  assert.equal((home.match(/data-radar-kind="extra"/g) ?? []).length, 0);
+  assert.equal((home.match(/data-radar-kind="extra"/g) ?? []).length, 6);
   assert.doesNotMatch(home, /class="local-art"/);
   assert.doesNotMatch(home, /<span class="radar-visual"[^>]*>[\s\S]*?<i aria-hidden="true"><\/i>/);
   assert.doesNotMatch(home, /class="theme-picker"/);
-  assert.equal((home.match(/issues\/2026-08-27\/stories\/[^/]+\//g) ?? []).length, 8);
+  assert.equal((home.match(/issues\/2026-08-28\/stories\/[^/]+\//g) ?? []).length, 8);
   assert.match(current, /class="reading-progress"/);
   assert.equal((current.match(/<button type="button" data-theme-choice=/g) ?? []).length, 3);
   assert.match(current, /data-content-sha256="[0-9a-f]{64}"/);
@@ -295,7 +295,7 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     await fallbackContext.close();
 
     const retryContext = await browser.newContext();
-    const retryImagePrefix = "https://www.stussy.com/cdn/shop/files/sync-33951488573637.jpg";
+    const retryImagePrefix = "https://mmx.prnewswire.com/media/MS1969348/The-Alchemist-and-Erykah-Badu.jpg";
     let retryAttempts = 0;
     await retryContext.route((url) => url.href.startsWith(retryImagePrefix), async (route) => {
       retryAttempts += 1;
@@ -311,10 +311,10 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     });
     const retryPage = await retryContext.newPage();
     await retryPage.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
-    const retryImage = retryPage.locator('img[alt="Official Stüssy image for the eYe JUNYA WATANABE MAN collaboration"]');
+    const retryImage = retryPage.locator('img[alt="Official PR Newswire press photo for Erykah Badu and The Alchemist"]');
     await retryImage.scrollIntoViewIfNeeded();
     await retryPage.waitForFunction(() => {
-      const image = document.querySelector('img[alt="Official Stüssy image for the eYe JUNYA WATANABE MAN collaboration"]');
+      const image = document.querySelector('img[alt="Official PR Newswire press photo for Erykah Badu and The Alchemist"]');
       return image?.complete && image.naturalWidth > 0 && image.src.includes("ctd_retry=1");
     }, null, { timeout: 10_000 });
     assert.ok(retryAttempts >= 2);
@@ -331,7 +331,7 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     const noJsContext = await browser.newContext({ javaScriptEnabled: false });
     const noJsPage = await noJsContext.newPage();
     await noJsPage.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
-    assert.equal(await noJsPage.locator("[data-story-card]").count(), 8);
+    assert.equal(await noJsPage.locator("[data-story-card]").count(), 14);
     assert.equal(await noJsPage.locator(".theme-picker").count(), 0);
     assert.equal(await noJsPage.locator(".radar-filters").isVisible(), false);
     const noJsStory = await noJsPage.locator("[data-story-card] a").first().getAttribute("href");

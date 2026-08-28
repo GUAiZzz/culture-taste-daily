@@ -1,0 +1,17 @@
+{
+  "issue_id": "2026-08-28",
+  "title": "东西先被交到手上，才算发布 / RELEASE ONLY STARTS WHEN IT CAN BE ENTERED",
+  "dominant_mood": "一张摊开的灰白工作纸：蓝色铅笔、酸橙便签和温暖的砖红线，把抽象发布拆成几个可以走进去的入口",
+  "background_logic": "以未填满的纸面和开放网格承载八个入口，不使用最近七期的闭合地图、路线钟表、房间平面、proof sheet 或坐标斜线；空白是事实与判断之间的缓冲带",
+  "palette_logic": "warm paper #F4F0E6, ink #18202A, cobalt #2055D6, lime #D2E85B, brick #B64B38, lavender #D9D2E6, graphite #69727A",
+  "type_scale_logic": "封面用窄体大字切成两块，正文 18px 保持长段落呼吸；蓝色编号和酸橙标签承担视觉导航，中文标题控制在短句和两到三行",
+  "image_behavior": "八张一手官方媒体以外链形式进入，统一显示 Preview-only、来源页回链与权利提示；本地 SVG 只作为失图时的原创对象图解，不假装是纪实原图",
+  "page_density_and_tempo": "先用两张唱片说明包装与房间，再把阅读速度放慢到照护劳动，随后让鞋、人生阶段、生态作品、驻留展览和声音装置把身体、顺序与公共空间接回来",
+  "core_visual_action": "把每个发布动作画成一条没有封口的入口线：它从官方事实出发，经过一个可感知的条件，最后停在仍需人来完成的地方",
+  "cover_composition": "左侧是竖排大标题与一段判断，右侧是八个错位的开放矩形和一条贯穿的砖红手绘线；不使用最近三期的地图、钟面、房间块或八点斜线",
+  "desktop_interaction_mechanic": "顶部索引采用可折叠原生 details；卡片锚点、来源、图像回链和全文不依赖 JavaScript，色块只标记入口类型，不隐藏正文",
+  "behance_viewing_arc": "从封套进入无手机房间，向下穿过展厅和身体动作，再沿曲目阶段、生态作品、驻留标题与声音装置走到一个公共桌面；八个入口不是清单，而是一条开放的工作台",
+  "mobile_translation": "桌面网格在 390px 变成单列入口条，矩形不横向伸出视口；封面标题、导航和图片说明都在窄屏内保留清晰层级",
+  "mobbin_usability_constraint": "所有外链图像和按钮至少 44px、焦点可见；图片失败时仍显示来源页链接与权利状态；无 JavaScript 时全文、索引和退出段落完整可读",
+  "quiet_ending": "不把入口包装成答案：发布只在对象被人真正进入的那一刻开始"
+}
