@@ -1,0 +1,17 @@
+{
+  "issue_id":"2026-08-31",
+  "title":"开幕之前，准备已经暴露了质量 / PREPARATION IS ALREADY THE WORK",
+  "dominant_mood":"午夜蓝搭建现场：荧光橙脚手架、银灰测量线与尚未拆除的编号胶带",
+  "background_logic":"用斜向支撑杆和工程标尺组织暗场，不复用前九期的浅色倒计时网格、竖向接力带、地图或 proof sheet",
+  "palette_logic":"midnight #111B33, scaffold #FF6B2C, aluminium #C7CFD9, signal #78E6C5, chalk #F4F0E8",
+  "type_scale_logic":"标题像现场喷字跨过两根支撑杆，正文 18px；故事编号贴在结构节点上",
+  "image_behavior":"四张一手官方媒体只在 Preview 外链显示；本地 scaffold SVG 明确是原创失图占位",
+  "page_density_and_tempo":"封面结构密，四段正文依次拆掉一根支撑，退出处只剩测量线",
+  "core_visual_action":"页面把幕后准备推到前景，让引用、顺序、测试和搭建成为主角",
+  "cover_composition":"深蓝底上三根橙色斜撑交叉，日期像检验标签贴在右上节点",
+  "desktop_interaction_mechanic":"原生索引和锚点常驻，所有事实、来源与正文不依赖 JavaScript",
+  "behance_viewing_arc":"从材料翻译进入声音顺序，再看测试账本，最后抵达城市基础设施",
+  "mobile_translation":"390px 下斜撑退到背景边缘，文字保持单列，不造成横向滚动",
+  "mobbin_usability_constraint":"交互目标不少于 44px，焦点可见，长链接换行，外图失败不隐藏来源",
+  "quiet_ending":"最后一根支撑不被拆掉，提醒方法仍在承担结果"
+}
