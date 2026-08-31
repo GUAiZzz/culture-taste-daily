@@ -94,6 +94,7 @@ body[data-issue="2026-08-25"] article > h2 {
   padding-top: 1rem;
   border-top: 1px solid #b7c9ff;
   font-size: clamp(1.8rem, 4vw, 3.6rem);
+  scroll-margin-top: 7rem;
 }
 
 body[data-issue="2026-08-25"] article > h2::before {
@@ -242,14 +243,26 @@ body[data-issue="2026-08-25"] img {
   display: block;
 }
 
-@media (max-width: 42rem) {
+@media (max-width: 50rem) {
   body[data-issue="2026-08-25"] {
     font-size: 17px;
   }
 
+  body[data-issue="2026-08-25"] .site-header,
+  body[data-issue="2026-08-25"] .site-footer,
+  body[data-issue="2026-08-25"] .issue-nav,
+  body[data-issue="2026-08-25"] main {
+    width: auto;
+    margin-right: max(20px, env(safe-area-inset-right));
+    margin-left: max(20px, env(safe-area-inset-left));
+  }
+
   body[data-issue="2026-08-25"] .site-header {
     align-items: flex-start;
-    flex-direction: column;
+    top: 0;
+    gap: 0.25rem 1rem;
+    padding-top: max(0.75rem, env(safe-area-inset-top));
+    padding-bottom: 0.75rem;
   }
 
   body[data-issue="2026-08-25"] main {
@@ -257,14 +270,17 @@ body[data-issue="2026-08-25"] img {
   }
 
   body[data-issue="2026-08-25"] h1 {
-    font-size: clamp(3rem, 18vw, 5.6rem);
+    font-size: clamp(3rem, 15vw, 6.2rem);
   }
 
-  body[data-issue="2026-08-25"] .site-header {
-    position: static;
+  body[data-issue="2026-08-25"] .feature-matrix header {
+    grid-template-columns: 1fr;
   }
 
-  body[data-issue="2026-08-25"] .feature-matrix header,
+  body[data-issue="2026-08-25"] .feature-matrix {
+    width: calc(100vw - max(40px, env(safe-area-inset-left) + env(safe-area-inset-right)));
+  }
+
   body[data-issue="2026-08-25"] .feature-matrix ol {
     grid-template-columns: 1fr;
   }
@@ -277,5 +293,71 @@ body[data-issue="2026-08-25"] img {
 
   body[data-issue="2026-08-25"] .feature-matrix li:last-child {
     border-bottom: 0;
+  }
+}
+
+@media (max-width: 29.9375rem) {
+  body[data-issue="2026-08-25"] {
+    font-size: 16px;
+  }
+
+  body[data-issue="2026-08-25"] .site-header,
+  body[data-issue="2026-08-25"] .site-footer,
+  body[data-issue="2026-08-25"] .issue-nav,
+  body[data-issue="2026-08-25"] main {
+    margin-right: max(16px, env(safe-area-inset-right));
+    margin-left: max(16px, env(safe-area-inset-left));
+  }
+
+  body[data-issue="2026-08-25"] .site-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  body[data-issue="2026-08-25"] .site-header > span:nth-child(2) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  body[data-issue="2026-08-25"] .site-header > .theme-status {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  body[data-issue="2026-08-25"] h1 {
+    font-size: clamp(3rem, 17vw, 5rem);
+  }
+
+  body[data-issue="2026-08-25"] .feature-matrix {
+    width: calc(100vw - max(32px, env(safe-area-inset-left) + env(safe-area-inset-right)));
+  }
+
+  body[data-issue="2026-08-25"] .feature-matrix ol {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-issue="2026-08-25"] .feature-matrix li {
+    min-height: 18rem;
+    border-right: 0;
+    border-bottom: 1px solid currentColor;
+  }
+
+  body[data-issue="2026-08-25"] .feature-matrix li:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 30rem) and (max-width: 56rem) {
+  body[data-issue="2026-08-25"] .site-header {
+    position: relative;
+    padding-top: max(0.5rem, env(safe-area-inset-top));
+  }
+
+  body[data-issue="2026-08-25"] main {
+    padding-top: 1.5rem;
+  }
+
+  body[data-issue="2026-08-25"] h1 {
+    font-size: clamp(3rem, 11vw, 5rem);
   }
 }

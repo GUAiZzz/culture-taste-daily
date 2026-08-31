@@ -74,15 +74,40 @@
     document.querySelectorAll("[data-index-card]").forEach((card) => {
       card.hidden = category !== "all" && card.dataset.indexCategory !== category;
     });
+    filter.scrollIntoView({ block: "nearest", inline: "center", behavior: reducedMotion.matches ? "auto" : "smooth" });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    const control = event.target.closest("[data-theme-choice], [data-index-filter]");
+    if (!control) return;
+    const selector = control.matches("[data-theme-choice]") ? "[data-theme-choice]" : "[data-index-filter]";
+    const controls = [...control.parentElement.querySelectorAll(selector)];
+    const current = controls.indexOf(control);
+    if (current < 0) return;
+    event.preventDefault();
+    const nextIndex = event.key === "Home"
+      ? 0
+      : event.key === "End"
+        ? controls.length - 1
+        : (current + (event.key === "ArrowRight" ? 1 : -1) + controls.length) % controls.length;
+    const next = controls[nextIndex];
+    next.focus({ preventScroll: true });
+    next.click();
+    next.scrollIntoView({ block: "nearest", inline: "center", behavior: reducedMotion.matches ? "auto" : "smooth" });
   });
 
   const issueBody = document.querySelector("body[data-issue]");
   const headings = issueBody ? [...document.querySelectorAll("article > h2[id]")] : [];
   const navLinks = issueBody ? [...document.querySelectorAll(".issue-nav a[href^='#']")] : [];
   let frame = 0;
+  let motionActive = true;
+  let listenersAttached = false;
+  let sectionObserver = null;
 
   function updateMotion() {
     frame = 0;
+    if (!motionActive || document.hidden) return;
     const maximum = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
     const progress = Math.min(1, Math.max(0, window.scrollY / maximum));
     document.documentElement.style.setProperty("--reading-progress", String(progress));
@@ -90,24 +115,24 @@
 
     if (!issueBody || reducedMotion.matches) return;
     const viewportCenter = window.innerHeight * 0.56;
+    const shiftLimit = window.innerWidth <= 800 ? 12 : 24;
     headings.forEach((heading) => {
       const rect = heading.getBoundingClientRect();
       const distance = Math.min(1, Math.abs(rect.top - viewportCenter) / window.innerHeight);
-      heading.style.setProperty("--section-shift", `${Math.round((rect.top - viewportCenter) * 0.025)}px`);
+      const rawShift = Math.round((rect.top - viewportCenter) * 0.025);
+      const boundedShift = Math.max(-shiftLimit, Math.min(shiftLimit, rawShift));
+      heading.style.setProperty("--section-shift", `${boundedShift}px`);
       heading.style.setProperty("--section-opacity", String(1 - distance * 0.35));
     });
   }
 
   function scheduleMotion() {
-    if (!frame) frame = window.requestAnimationFrame(updateMotion);
+    if (motionActive && !document.hidden && !frame) frame = window.requestAnimationFrame(updateMotion);
   }
 
-  window.addEventListener("scroll", scheduleMotion, { passive: true });
-  window.addEventListener("resize", scheduleMotion, { passive: true });
-  updateMotion();
-
-  if (headings.length && "IntersectionObserver" in window) {
-    const observer = new IntersectionObserver((entries) => {
+  function observeSections() {
+    if (!headings.length || !("IntersectionObserver" in window) || sectionObserver) return;
+    sectionObserver = new IntersectionObserver((entries) => {
       const visible = entries
         .filter((entry) => entry.isIntersecting)
         .sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top))[0];
@@ -117,6 +142,41 @@
         else link.removeAttribute("aria-current");
       });
     }, { rootMargin: "-18% 0px -65%", threshold: [0, 0.2, 0.75] });
-    headings.forEach((heading) => observer.observe(heading));
+    headings.forEach((heading) => sectionObserver.observe(heading));
   }
+
+  function attachMotion() {
+    if (!listenersAttached) {
+      window.addEventListener("scroll", scheduleMotion, { passive: true });
+      window.addEventListener("resize", scheduleMotion, { passive: true });
+      listenersAttached = true;
+    }
+    motionActive = true;
+    delete document.documentElement.dataset.motionPaused;
+    observeSections();
+    scheduleMotion();
+  }
+
+  function detachMotion() {
+    motionActive = false;
+    document.documentElement.dataset.motionPaused = "true";
+    if (frame) window.cancelAnimationFrame(frame);
+    frame = 0;
+    if (listenersAttached) {
+      window.removeEventListener("scroll", scheduleMotion);
+      window.removeEventListener("resize", scheduleMotion);
+      listenersAttached = false;
+    }
+    sectionObserver?.disconnect();
+    sectionObserver = null;
+  }
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) detachMotion();
+    else attachMotion();
+  });
+  window.addEventListener("pagehide", detachMotion);
+  window.addEventListener("pageshow", attachMotion);
+  reducedMotion.addEventListener?.("change", scheduleMotion);
+  attachMotion();
 })();

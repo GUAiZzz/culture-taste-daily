@@ -12,6 +12,10 @@ Read these files before changing this repository, in order:
 8. `docs/HARRYTONE_DEPENDENCY.md`
 9. `docs/REFERENCE_SYSTEM.md` and `docs/CULTURE_TASTE_SOURCE_MAP.md` for editorial work
 
+For mobile, responsive, touch, or scroll-experience work, also read
+`.agents/skills/culture-taste-mobile/SKILL.md` and
+`docs/MOBILE_EDITORIAL_PROTOCOL.md` before changing implementation files.
+
 ## Current hard stops
 
 - Do not enable GitHub Pages, preview hosting, production deployment, or daily automation.

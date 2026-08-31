@@ -97,7 +97,16 @@ test("no-JavaScript reading and required render evidence pass", async () => {
   assert.equal(checks.get("desktop_render"), "PASS");
   assert.equal(checks.get("mobile_render"), "PASS");
   assert.equal(checks.get("reduced_motion_render"), "PASS");
-  for (const name of ["desktop-1440x900", "mobile-390x844", "reduced-motion-1440x900"]) {
+  for (const name of [
+    "desktop-1440x900",
+    "compact-320x568",
+    "mobile-390x844",
+    "mobile-430x932",
+    "tablet-768x1024",
+    "landscape-844x390",
+    "reduced-motion-1440x900",
+    "reduced-motion-390x844",
+  ]) {
     assert.match(technicalEvidence.renders[name].sha256, /^[0-9a-f]{64}$/);
     await readFile(path.join(evidenceDir, technicalEvidence.renders[name].path));
   }
@@ -124,11 +133,23 @@ test("shared core remains functional and leaves issue visual decisions to issue 
   assert.match(baseCss, /:focus-visible/);
   assert.match(baseCss, /prefers-reduced-motion/);
   assert.match(baseCss, /body\[data-shell="publication"\]/);
+  assert.match(baseCss, /@media \(max-width: 50rem\)/);
+  assert.match(baseCss, /@media \(max-width: 29\.9375rem\)/);
+  assert.match(baseCss, /safe-area-inset-left/);
   assert.doesNotMatch(baseCss, /#[0-9a-f]{3,8}\b/i);
   assert.doesNotMatch(baseCss, /(?:^|\n)\s*(?:article|h1|h2|h3)(?:\s|,|\{)/);
   assert.match(issueCss, /body\[data-issue="2026-08-25"\][\s\S]*background:/);
   assert.match(issueCss, /body\[data-issue="2026-08-25"\]\s+h1[\s\S]*font-size:/);
   assert.match(issueCss, /max-width:/);
+});
+
+test("mobile protocol and repository skill are present", async () => {
+  const protocol = await readFile(path.join(repoRoot, "docs/MOBILE_EDITORIAL_PROTOCOL.md"), "utf8");
+  const skill = await readFile(path.join(repoRoot, ".agents/skills/culture-taste-mobile/SKILL.md"), "utf8");
+  assert.match(protocol, /320×568/);
+  assert.match(protocol, /viewport-fit/);
+  assert.match(protocol, /field.*coral.*analog/s);
+  assert.match(skill, /MOBILE_EDITORIAL_PROTOCOL\.md/);
 });
 
 test("reader theme is selected once per session and follows issue navigation", async () => {
@@ -148,6 +169,38 @@ test("reader theme is selected once per session and follows issue navigation", a
     assert.match(issueHref, /theme=analog/);
     await page.goto(new URL(issueHref, server.origin).href, { waitUntil: "networkidle" });
     assert.equal(await page.evaluate(() => document.documentElement.dataset.visualTheme), "analog");
+    await context.close();
+  } finally {
+    await browser.close();
+    await server.close();
+  }
+});
+
+test("mobile controls support touch sizing and arrow-key selection", async () => {
+  const server = await startStaticServer(distDir);
+  const browser = await chromium.launch({ headless: true, channel: process.env.PLAYWRIGHT_CHANNEL ?? "chrome" });
+  try {
+    const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
+    const page = await context.newPage();
+    await page.goto(`${server.origin}/`, { waitUntil: "networkidle" });
+    assert.match(await page.locator('meta[name="viewport"]').getAttribute("content"), /viewport-fit=cover/);
+
+    const themeButtons = page.locator("[data-theme-choice]");
+    await themeButtons.first().focus();
+    await page.keyboard.press("ArrowRight");
+    assert.equal(await themeButtons.nth(1).getAttribute("aria-pressed"), "true");
+
+    const filters = page.locator("[data-index-filter]");
+    await filters.first().focus();
+    await page.keyboard.press("ArrowRight");
+    assert.equal(await filters.nth(1).getAttribute("aria-pressed"), "true");
+
+    const dimensions = await page.locator(".site-header a, .theme-options button, .index-filters button").evaluateAll((controls) => controls.map((control) => {
+      const rect = control.getBoundingClientRect();
+      return { width: rect.width, height: rect.height };
+    }));
+    assert.ok(dimensions.every(({ width, height }) => width >= 43.5 && height >= 43.5));
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth), 0);
     await context.close();
   } finally {
     await browser.close();

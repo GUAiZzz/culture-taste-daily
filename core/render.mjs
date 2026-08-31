@@ -53,7 +53,7 @@ function renderThemePicker() {
     ["analog", "03", "2000s TV", "褪色、扫描线与模拟噪点"],
   ];
   const choices = themes.map(([value, number, title, description]) => `<button type="button" data-theme-choice="${value}" aria-pressed="false"><span>${number}</span><strong>${title}</strong><small>${description}</small></button>`).join("");
-  return `<section class="theme-picker" aria-labelledby="theme-picker-title"><div><p>CHOOSE YOUR SIGNAL</p><h2 id="theme-picker-title">同一份内容，三种观看温度。</h2><p>首次进入会随机选择；你也可以在这里接管。进入文章后，滤镜继续保持，内容与版式不变。</p></div><div class="theme-options">${choices}</div><noscript><p>当前以原始视觉显示；开启 JavaScript 后可选择并保留主题。</p></noscript></section>`;
+  return `<section class="theme-picker" aria-labelledby="theme-picker-title"><div><p>CHOOSE YOUR SIGNAL</p><h2 id="theme-picker-title">同一份内容，三种观看温度。</h2><p>首次进入会随机选择；你也可以在这里接管。进入文章后，滤镜继续保持，内容与版式不变。</p></div><div class="theme-options" role="group" aria-label="Reader theme" data-horizontal-rail>${choices}</div><noscript><p>当前以原始视觉显示；开启 JavaScript 后可选择并保留主题。</p></noscript></section>`;
 }
 
 function renderFeatureMatrix(artDirection) {
@@ -93,7 +93,7 @@ export function renderIssue({ content, manifest, artDirection, baseCss, issueCss
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light">
   <link rel="icon" href="data:,">
   <title>${escapeHtml(title)} — Culture &amp; Taste Daily ${escapeHtml(manifest.publication_date)}</title>
@@ -103,8 +103,8 @@ export function renderIssue({ content, manifest, artDirection, baseCss, issueCss
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="reading-progress" aria-hidden="true"><span></span></div>
   <p class="non-production-label">LOCAL NON-PRODUCTION BUILD · MANIFEST STATUS IS REPORTING ONLY</p>
-  <header class="site-header"><a href="../../" data-theme-link>Culture &amp; Taste Daily</a><span>${escapeHtml(manifest.publication_date)} · Asia/Shanghai</span><span class="theme-status">FILTER · <strong data-theme-status>ORIGINAL</strong></span></header>
-  <nav class="issue-nav" aria-label="Issue contents"><ul>${navigation}<li><a href="#sources">Sources &amp; Dates</a></li></ul></nav>
+  <header class="site-header"><a href="../../" data-theme-link>Culture &amp; Taste Daily</a><span>${escapeHtml(manifest.publication_date)} · Asia/Shanghai</span><span class="theme-status">FILTER · <strong data-theme-status aria-live="polite">ORIGINAL</strong></span></header>
+  <nav class="issue-nav" aria-label="Issue contents" data-horizontal-rail><ul>${navigation}<li><a href="#sources">Sources &amp; Dates</a></li></ul></nav>
   <main id="main-content">
     <article aria-labelledby="issue-title" data-content-sha256="${escapeHtml(manifest.source_hashes.content_sha256)}">${article}</article>
     ${sourceIndex(manifest)}
@@ -121,7 +121,7 @@ function shell({ title, body, baseCss, enhancementJs, pathPrefix = "./", page = 
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="icon" href="data:,">
   <title>${escapeHtml(title)}</title>
   <style>${baseCss}</style>
@@ -149,7 +149,7 @@ function renderDailyIndex(issue) {
     const category = categoryFor(issue, story);
     return `<li data-index-card data-index-category="${escapeHtml(category)}"><a href="./issues/${escapeHtml(issue.manifest.issue_id)}/#${escapeHtml(story.id)}" data-theme-link><span class="index-visual" data-visual="${escapeHtml(story.level)}" data-sequence="${index + 1}" aria-hidden="true"></span><span class="index-meta"><b>${escapeHtml(category)}</b><time datetime="${escapeHtml(issue.manifest.publication_date)}">${escapeHtml(issue.manifest.publication_date.replaceAll("-", "."))}</time></span><strong>${escapeHtml(story.title)}</strong><span class="read-story">READ STORY ↗</span></a></li>`;
   }).join("");
-  return `<section class="daily-index" aria-labelledby="daily-index-title"><header><p>02 / DAILY INDEX</p><div><h2 id="daily-index-title"><b>WHAT'S</b><i>ON OUR RADAR.</i></h2><p>五个入口，今天的不同切面。你可以从这里开始，也可以继续往下滑。</p></div></header><div class="index-filters" role="group" aria-label="Filter stories">${filters}</div><ol>${cards}</ol></section>`;
+  return `<section class="daily-index" aria-labelledby="daily-index-title"><header><p>02 / DAILY INDEX</p><div><h2 id="daily-index-title"><b>WHAT'S</b><i>ON OUR RADAR.</i></h2><p>五个入口，今天的不同切面。你可以从这里开始，也可以继续往下滑。</p></div></header><div class="index-filters" role="group" aria-label="Filter stories" data-horizontal-rail>${filters}</div><ol>${cards}</ol></section>`;
 }
 
 export function renderHome({ issues, baseCss, enhancementJs }) {
