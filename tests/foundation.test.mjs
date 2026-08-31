@@ -155,7 +155,7 @@ test("repository Preview preserves all three historical originals as non-product
 test("Preview homepage and archive expose the current 2026-08-23/24/25/26/27 fields plus historical issues", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
   const archive = await readFile(path.join(previewDist, "archive/index.html"), "utf8");
-  const current = await readFile(path.join(previewDist, "issues/2026-08-27/index.html"), "utf8");
+  const current = await readFile(path.join(previewDist, "issues/2026-08-29/index.html"), "utf8");
   for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27"]) {
     assert.ok(home.includes(`issues/${date}/`));
     assert.ok(archive.includes(`issues/${date}/`));
@@ -184,36 +184,36 @@ test("Preview homepage and archive expose the current 2026-08-23/24/25/26/27 fie
 
 test("frontend integration keeps the formal issue intact while adding the supplemental daily radar", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
-  const current = await readFile(path.join(previewDist, "issues/2026-08-27/index.html"), "utf8");
+  const current = await readFile(path.join(previewDist, "issues/2026-08-29/index.html"), "utf8");
   assert.equal((home.match(/<button type="button" data-theme-choice=/g) ?? []).length, 3);
   assert.match(home, /class="wordmark"[\s\S]*<em>Taste<\/em>/);
   assert.doesNotMatch(home, /class="wordmark"[^>]*>[\s\S]{0,240}<img/);
-  assert.equal((home.match(/<li data-story-card/g) ?? []).length, 14);
+  assert.equal((home.match(/<li data-story-card/g) ?? []).length, 10);
   assert.match(home, /id="daily-index-title"/);
   assert.doesNotMatch(home, /先看正式日报/);
   assert.match(home, /01 \/ IN TODAY'S ISSUE/);
   assert.match(home, /02 \/ MORE FROM TODAY/);
-  assert.equal((home.match(/data-official-only/g) ?? []).length, 14);
-  assert.equal((home.match(/data-radar-kind="issue"/g) ?? []).length, 8);
+  assert.equal((home.match(/data-official-only/g) ?? []).length, 10);
+  assert.equal((home.match(/data-radar-kind="issue"/g) ?? []).length, 4);
   assert.equal((home.match(/data-radar-kind="extra"/g) ?? []).length, 6);
   assert.doesNotMatch(home, /class="local-art"/);
   assert.doesNotMatch(home, /<span class="radar-visual"[^>]*>[\s\S]*?<i aria-hidden="true"><\/i>/);
   assert.doesNotMatch(home, /class="theme-picker"/);
-  assert.equal((home.match(/issues\/2026-08-28\/stories\/[^/]+\//g) ?? []).length, 8);
+  assert.equal((home.match(/issues\/2026-08-29\/stories\/[^/]+\//g) ?? []).length, 4);
   assert.match(current, /class="reading-progress"/);
   assert.equal((current.match(/<button type="button" data-theme-choice=/g) ?? []).length, 3);
   assert.match(current, /data-content-sha256="[0-9a-f]{64}"/);
-  assert.equal((current.match(/class="issue-story"/g) ?? []).length, 9);
+  assert.equal((current.match(/class="issue-story"/g) ?? []).length, 5);
   assert.match(current, /data-story="exit"/);
   assert.match(current, /id="sources"/);
-  const storyRoutes = await readdir(path.join(previewDist, "issues/2026-08-27/stories"));
-  assert.equal(storyRoutes.length, 8);
-  for (const storyId of storyRoutes) await readFile(path.join(previewDist, "issues/2026-08-27/stories", storyId, "index.html"));
-  const firstStory = await readFile(path.join(previewDist, "issues/2026-08-27/stories", storyRoutes[0], "index.html"), "utf8");
+  const storyRoutes = await readdir(path.join(previewDist, "issues/2026-08-29/stories"));
+  assert.equal(storyRoutes.length, 4);
+  for (const storyId of storyRoutes) await readFile(path.join(previewDist, "issues/2026-08-29/stories", storyId, "index.html"));
+  const firstStory = await readFile(path.join(previewDist, "issues/2026-08-29/stories", storyRoutes[0], "index.html"), "utf8");
   assert.match(firstStory, /class="story-reader-brand"[\s\S]*<em>Taste<\/em>/);
   assert.doesNotMatch(firstStory, /class="story-reader-brand"[^>]*>[\s\S]{0,240}<img/);
   const sitemap = await readFile(path.join(previewDist, "sitemap.xml"), "utf8");
-  for (const storyId of storyRoutes) assert.match(sitemap, new RegExp(`issues/2026-08-27/stories/${storyId}/`));
+  for (const storyId of storyRoutes) assert.match(sitemap, new RegExp(`issues/2026-08-29/stories/${storyId}/`));
 });
 
 test("daily radar has at least two official-media selections in every category without changing the issue manifest", async () => {
@@ -295,7 +295,7 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     await fallbackContext.close();
 
     const retryContext = await browser.newContext();
-    const retryImagePrefix = "https://mmx.prnewswire.com/media/MS1969348/The-Alchemist-and-Erykah-Badu.jpg";
+    const retryImagePrefix = "https://cdn.shopify.com/s/files/1/0222/9796/8717/files/251KIKIN-AC04_01_f41c4792-cd0d-4a27-ab28-4d7bd5ab2128.webp";
     let retryAttempts = 0;
     await retryContext.route((url) => url.href.startsWith(retryImagePrefix), async (route) => {
       retryAttempts += 1;
@@ -311,10 +311,10 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     });
     const retryPage = await retryContext.newPage();
     await retryPage.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
-    const retryImage = retryPage.locator('img[alt="Official PR Newswire press photo for Erykah Badu and The Alchemist"]');
+    const retryImage = retryPage.locator('img[alt="Official NEIGHBORHOOD AW26 August 29 product image"]');
     await retryImage.scrollIntoViewIfNeeded();
     await retryPage.waitForFunction(() => {
-      const image = document.querySelector('img[alt="Official PR Newswire press photo for Erykah Badu and The Alchemist"]');
+      const image = document.querySelector('img[alt="Official NEIGHBORHOOD AW26 August 29 product image"]');
       return image?.complete && image.naturalWidth > 0 && image.src.includes("ctd_retry=1");
     }, null, { timeout: 10_000 });
     assert.ok(retryAttempts >= 2);
@@ -331,7 +331,7 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     const noJsContext = await browser.newContext({ javaScriptEnabled: false });
     const noJsPage = await noJsContext.newPage();
     await noJsPage.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
-    assert.equal(await noJsPage.locator("[data-story-card]").count(), 14);
+    assert.equal(await noJsPage.locator("[data-story-card]").count(), 10);
     assert.equal(await noJsPage.locator(".theme-picker").count(), 0);
     assert.equal(await noJsPage.locator(".radar-filters").isVisible(), false);
     const noJsStory = await noJsPage.locator("[data-story-card] a").first().getAttribute("href");

@@ -1,0 +1,84 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-08-29",
+  "publication_date": "2026-08-29",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-08-29T14:20:00+08:00",
+  "research_locked_at": "2026-08-29T14:20:00+08:00",
+  "content_locked_at": "2026-08-29T14:20:00+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {"repository":"GUAiZzz/culture-taste-daily","path":"docs/PRODUCTION_CONTRACT_V3.md","commit":"83982d543bb845819b3412cd5b10b273ec3fcf25","activation_commit":"da3842bcd72b6966a35826a38b737f12c9042667"},
+  "core_version": "v2",
+  "content_lock": {"status":"locked","sha256":"c3c0b69e79d817efef1a02a7c498e8f130bb1533f320bacdb638ddacbf379688","locked_at":"2026-08-29T14:20:00+08:00"},
+  "source_hashes": {"content_sha256":"c3c0b69e79d817efef1a02a7c498e8f130bb1533f320bacdb638ddacbf379688","art_direction_sha256":"20316a1049ea47e0098d210441782a6a515992792032d03854c4fd7c11a40bb2","issue_style_sha256":"bba862f94228c5a85a2c5664ab4f4c45d198739b7ee427e606e3add019fdef9b"},
+  "harrytone": {"repository":"GUAiZzz/harry-tone","branch":"main","commit":"13cd6b7046bd81be396810d2923f3a5dc818e93f","loaded_at":"2026-08-29T13:55:00+08:00"},
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "新并不等于多一点；真正有效的发布，会改变衣服、身体、声音与城市时间被人进入的方式。",
+  "art_direction": {
+    "dominant_mood":"深紫色接力台：四条琥珀色通道把服装、身体、录音与放映时间依次交接",
+    "background_logic":"用竖向接力带和大面积暗场组织页面，不复用前七期的纸张、地图、房间、proof sheet 或开放矩形",
+    "palette_logic":"aubergine #251936, amber #F1A72B, ice #EAF1F4, coral #F35E49, moss #8AA46E",
+    "type_scale_logic":"窄体标题沿竖带切分，正文保持 18px；编号像接力棒一样停在每段入口前",
+    "image_behavior":"四张一手官方媒体只在 Preview 外链显示；本地 SVG 是原创失图占位，不伪装成现场照片",
+    "page_density_and_tempo":"开场密集、正文四段逐步放松，最后以短句退出",
+    "core_visual_action":"一条信号从一个对象交到另一个对象，重点不是累积，而是进入方式发生变化",
+    "cover_composition":"四条宽窄不同的竖带穿过暗色封面，日期与判断分别落在带内与带外",
+    "desktop_interaction_mechanic":"原生索引与锚点始终可见，所有正文和来源不依赖 JavaScript",
+    "behance_viewing_arc":"从衣服的使用语法进入身体差异，再转向录音与城市时间表",
+    "mobile_translation":"390px 下竖带收成顶部色条，内容单列，无横向滚动",
+    "mobbin_usability_constraint":"交互目标不少于 44px，焦点可见，外图失败仍保留来源与权利说明",
+    "quiet_ending":"新意不宣布胜利，只留下一个可被使用的入口"
+  },
+  "variation_review": {"comparison_mode":"prior_issues","compared_issue_dates":["2026-08-22","2026-08-23","2026-08-24","2026-08-25","2026-08-26","2026-08-27","2026-08-28"],"repeated_mechanisms":["accessible section index","first-party source image with linked fallback"],"exception_reason":"可访问索引与一手来源是固定约束；本期竖向接力带、暗紫底色和信号交接节奏没有复用最近七期的核心构图。"},
+  "stories": [
+    {
+      "id":"neighborhood-aw26-aug29","level":"cover","title":"一张发售表，也在重新安排日常对象",
+      "sources":[
+        {"title":"AW26 COLLECTION｜AUG. 29 RELEASE","publisher":"NEIGHBORHOOD","url":"https://www.neighborhood.jp/en/collections/aw26-aug29-release","published_date":"2026-08-29","event_date":"2026-08-29","relationship":"first_party_official"}
+      ],
+      "image_credit":"NEIGHBORHOOD official AW26 product image / Preview-linked",
+      "english":{"title":"A RELEASE LIST REORDERS DAILY LIFE","deck":"Clothing and incense arrive as one sequence of use.","abstract":"NEIGHBORHOOD lists the products, prices and release state; this issue reads the grouping without inferring cultural impact."},
+      "media":{"asset":"assets/relay.svg","alt":"Official NEIGHBORHOOD AW26 August 29 product image","caption":"NEIGHBORHOOD official product image; open the release page for the full list.","credit":"NEIGHBORHOOD · Preview-linked official image","kind":"source_image","origin_url":"https://www.neighborhood.jp/en/collections/aw26-aug29-release","external_image_url":"https://cdn.shopify.com/s/files/1/0222/9796/8717/files/251KIKIN-AC04_01_f41c4792-cd0d-4a27-ab28-4d7bd5ab2128.webp?v=1787985941","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id":"asics-bloomstride-fit","level":"major","title":"一双鞋先承认脚并不只有一种标准",
+      "sources":[
+        {"title":"ASICS Introduces BLOOMSTRIDE","publisher":"ASICS","url":"https://corp3.asics.com/en/press/article/asics-introduces-bloomstridetm-a-new-era-of-running-comfort-designed-for-her-every-move-","published_date":"2026-08-26","event_date":"2026-09-01","relationship":"first_party_official"},
+        {"title":"ASICS BLOOMSTRIDE specs","publisher":"Running Shoe DB","url":"https://runningshoedb.com/en/shoes/asics-bloomstride/","published_date":"2026-08-30","event_date":"2026-09-01","relationship":"independent_reporting"}
+      ],
+      "image_credit":"ASICS official press image / Preview-linked",
+      "english":{"title":"FIT STARTS WITH DIFFERENCE","deck":"A shoe begins by admitting that the standard foot is a fiction.","abstract":"ASICS cites its scan base, fit logic and launch date; an independent specification page confirms the product details without making a universal performance claim."},
+      "media":{"asset":"assets/relay.svg","alt":"Official ASICS BLOOMSTRIDE press image","caption":"ASICS official press image; open the release for full specifications.","credit":"ASICS · Preview-linked official image","kind":"source_image","origin_url":"https://corp3.asics.com/en/press/article/asics-introduces-bloomstridetm-a-new-era-of-running-comfort-designed-for-her-every-move-","external_image_url":"https://assets.asics.com/system/media_libraries/25982/file.press.jpg?20260826215641","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id":"spotify-equal-recordings","level":"signal","title":"五年之后，计划需要留下可以被听见的版本",
+      "sources":[{"title":"New Spotify Singles Honor Iconic Women in Music","publisher":"Spotify","url":"https://newsroom.spotify.com/2026-08-26/spotify-singles-equal-anniversary/","published_date":"2026-08-26","event_date":"2026-08-26","relationship":"first_party_official"}],
+      "image_credit":"Spotify Newsroom official image / Preview-linked",
+      "english":{"title":"A PROGRAM NEEDS A RECORDING","deck":"Five years become useful when they leave something we can hear again.","abstract":"Spotify lists the participating artists and recording concept; this issue treats the series as documentation, not proof that structural inequity is solved."},
+      "media":{"asset":"assets/relay.svg","alt":"Official Spotify EQUAL fifth anniversary artist image","caption":"Spotify Newsroom official image; open the source for participating artists.","credit":"Spotify · Preview-linked official image","kind":"source_image","origin_url":"https://newsroom.spotify.com/2026-08-26/spotify-singles-equal-anniversary/","external_image_url":"https://storage.googleapis.com/pr-newsroom-wp/1/2026/08/equal-header-238042384023-1024x583.png","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id":"venice-films-become-time","level":"watch","title":"片单公布之后，电影节才开始变成时间",
+      "sources":[
+        {"title":"The films of the Biennale Cinema 2026","publisher":"La Biennale di Venezia","url":"https://www.labiennale.org/en/news/films-biennale-cinema-2026","published_date":"2026-08-29","event_date":"2026-09-02/2026-09-12","relationship":"first_party_official"},
+        {"title":"Movie stars and awards hopefuls convene at Venice","publisher":"Associated Press","url":"https://apnews.com/article/96e199af7b769e8bb07e7e9150802846","published_date":"2026-08-30","event_date":"2026-09-02/2026-09-12","relationship":"independent_reporting"}
+      ],
+      "image_credit":"La Biennale official festival image / Preview-linked",
+      "english":{"title":"A LINEUP BECOMES TIME","deck":"A festival starts when its name is translated into choices and hours.","abstract":"La Biennale publishes the official selection and dates; independent reporting adds pre-opening context without predicting critical outcomes."},
+      "media":{"asset":"assets/relay.svg","alt":"Official La Biennale cinema venue image","caption":"La Biennale official image; open the selection page for the programme.","credit":"La Biennale di Venezia · Preview-linked official image","kind":"source_image","origin_url":"https://www.labiennale.org/en/news/films-biennale-cinema-2026","external_image_url":"https://static.labiennale.org/files/styles/seo_thumbnail/public/cinema/2025/750x500/sala-grande-venezia82.jpg?itok=F_aEkmkb","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    }
+  ],
+  "rights_summary":{"required_assets":4,"unknown_required_assets":4,"status":"blocked"},
+  "artifact_digests":{"issue_payload_sha256":null},
+  "evidence_refs":{"technical":[],"editorial_visual":[],"gate":[]},
+  "qa":{"html_parse":"unavailable","assets":"unavailable","internal_links":"unavailable","no_js_reading":"unavailable","accessibility":"unavailable","desktop_render":"unavailable","mobile_render":"unavailable","reduced_motion":"unavailable"},
+  "limitations":[
+    "Backfill candidate and non-production Preview input only; this manifest cannot authorize production deployment.",
+    "Canonical private GUAiZzz/harry-tone main was verified at pinned commit 13cd6b7046bd81be396810d2923f3a5dc818e93f from a fresh ephemeral workspace; no private material enters this repository.",
+    "All selected stories use externally hosted first-party official images. Reuse rights remain unknown, so candidate status stays BLOCKED and Preview displays source links and local non-documentary fallbacks.",
+    "All five regional lanes, the full 99-subject registry quick scan, the japan focus cohort and all standing beats were checked; the public radar contains 10 distinct items and applies the prior-two-issue lookback.",
+    "Named editorial, visual and rights review remains unresolved; owner instruction authorizes only the existing non-production Preview after technical and privacy gates pass."
+  ]
+}

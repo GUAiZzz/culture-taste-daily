@@ -1,0 +1,17 @@
+{
+  "issue_id": "2026-08-29",
+  "title": "新东西不是多一点，而是换一种进入方式 / NEWNESS CHANGES THE WAY IN",
+  "dominant_mood": "深紫色接力台：四条琥珀色通道把服装、身体、录音与放映时间依次交接",
+  "background_logic": "用竖向接力带和大面积暗场组织页面，不复用前七期的纸张、地图、房间、proof sheet 或开放矩形",
+  "palette_logic": "aubergine #251936, amber #F1A72B, ice #EAF1F4, coral #F35E49, moss #8AA46E",
+  "type_scale_logic": "窄体标题沿竖带切分，正文保持 18px；编号像接力棒一样停在每段入口前",
+  "image_behavior": "四张一手官方媒体只在 Preview 外链显示；本地 SVG 是原创失图占位，不伪装成现场照片",
+  "page_density_and_tempo": "开场密集、正文四段逐步放松，最后以短句退出",
+  "core_visual_action": "一条信号从一个对象交到另一个对象，重点不是累积，而是进入方式发生变化",
+  "cover_composition": "四条宽窄不同的竖带穿过暗色封面，日期与判断分别落在带内与带外",
+  "desktop_interaction_mechanic": "原生索引与锚点始终可见，所有正文和来源不依赖 JavaScript",
+  "behance_viewing_arc": "从衣服的使用语法进入身体差异，再转向录音与城市时间表",
+  "mobile_translation": "390px 下竖带收成顶部色条，内容单列，无横向滚动",
+  "mobbin_usability_constraint": "交互目标不少于 44px，焦点可见，外图失败仍保留来源与权利说明",
+  "quiet_ending": "新意不宣布胜利，只留下一个可被使用的入口"
+}
