@@ -119,6 +119,17 @@ a:active {
   white-space: nowrap;
 }
 
+.issue-nav-panel summary,
+.enter-issue,
+.publication-footer a,
+.history-actions a,
+.facsimile-pages figcaption a {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+}
+
 .source-meta {
   display: block;
 }
@@ -165,6 +176,12 @@ html[data-motion-paused="true"] *::after {
   body[data-issue] .issue-nav-panel {
     padding-right: max(var(--mobile-gutter), env(safe-area-inset-right));
     padding-left: max(var(--mobile-gutter), env(safe-area-inset-left));
+  }
+
+  body[data-issue] .issue-cover p,
+  body[data-issue] .issue-story > p {
+    font-size: 0.9375rem !important;
+    line-height: 1.55 !important;
   }
 }
 

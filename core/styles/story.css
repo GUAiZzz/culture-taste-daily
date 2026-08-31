@@ -13,6 +13,15 @@ body[data-story-reader] a {
   color: inherit;
 }
 
+body[data-story-reader] h1,
+body[data-story-reader] h2,
+body[data-story-reader] h3,
+.story-opening-english,
+.story-media-meta,
+.story-source-list a {
+  overflow-wrap: anywhere;
+}
+
 .story-reader-progress {
   position: fixed;
   z-index: 130;
@@ -105,6 +114,7 @@ body[data-story-reader] a {
 .story-opening-copy {
   position: relative;
   z-index: 2;
+  min-width: 0;
 }
 
 .story-eyebrow,
@@ -523,6 +533,23 @@ body[data-story-reader] a.next-story {
     gap: 0.4rem;
   }
 
+  .story-reader-actions > a,
+  .story-source-list span,
+  .story-eyebrow,
+  .story-media-meta {
+    font-size: 0.6875rem;
+  }
+
+  .story-media-meta {
+    flex-wrap: wrap;
+    line-height: 1.45;
+  }
+
+  .story-judgment h2 {
+    font-size: clamp(2.4rem, 10vw, 4.2rem);
+    line-height: 0.9;
+  }
+
   .story-opening {
     min-height: 170svh;
   }
@@ -535,11 +562,16 @@ body[data-story-reader] a.next-story {
   }
 
   .story-opening h1 {
+    width: 100%;
     max-width: 100%;
     margin-block: 0.8rem;
     font-size: clamp(2rem, 8.5vw, 3rem);
     letter-spacing: -0.045em;
     line-height: 1;
+  }
+
+  .story-title-line {
+    white-space: normal;
   }
 
   .story-opening-english {

@@ -86,9 +86,10 @@ function wrapIssueSections(article, manifest) {
       }[mediaKind] ?? "EDITORIAL VISUAL";
       const externalImage = story.media.external_image_url;
       const mediaSourceUrl = story.media.origin_url ?? story.sources[0]?.url ?? "#";
+      const loading = index === 0 ? "eager" : "lazy";
       const imageMarkup = externalImage
-        ? `<a class="source-image-link" href="${escapeHtml(mediaSourceUrl)}" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="${escapeHtml(externalImage)}" alt="${escapeHtml(story.media.alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="${escapeHtml(mediaSourceUrl)}" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p>`
-        : `<img src="./${escapeHtml(story.media.asset)}" alt="${escapeHtml(story.media.alt)}" loading="eager" decoding="async" width="1200" height="720">`;
+        ? `<a class="source-image-link" href="${escapeHtml(mediaSourceUrl)}" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="${escapeHtml(externalImage)}" alt="${escapeHtml(story.media.alt)}" loading="${loading}" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="${escapeHtml(mediaSourceUrl)}" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p>`
+        : `<img src="./${escapeHtml(story.media.asset)}" alt="${escapeHtml(story.media.alt)}" loading="${loading}" decoding="async" width="1200" height="720">`;
       const figureLabel = externalImage ? `${mediaLabel} · PREVIEW ONLY` : mediaLabel;
       const figure = `<figure class="story-figure" data-media-kind="${escapeHtml(mediaKind)}"${externalImage ? " data-external-preview=\"true\"" : ""}>${imageMarkup}<figcaption><strong>${figureLabel}</strong> ${escapeHtml(story.media.caption)} <span>${escapeHtml(story.media.credit)}</span></figcaption></figure>`;
       storyPart = storyPart.replace("</h2>", `</h2>${figure}`);
@@ -173,13 +174,28 @@ function issueCard(issue, pathPrefix, position) {
   const coverLead = coverWords.slice(0, coverBreak).join(" ");
   const coverTail = coverWords.slice(coverBreak).join(" ");
   const cover = issue.coverAsset
-    ? `<img src="${pathPrefix}assets/${escapeHtml(issue.coverAsset)}" alt="${escapeHtml(issue.title_en || issue.title)} issue cover preview">`
+    ? `<img src="${pathPrefix}assets/${escapeHtml(issue.coverAsset)}" alt="${escapeHtml(issue.title_en || issue.title)} issue cover preview" loading="lazy" decoding="async">`
     : `<div class="type-cover" aria-hidden="true"><span>${escapeHtml(coverLead)}</span>${coverTail ? `<b>${escapeHtml(coverTail)}</b>` : ""}<i>${escapeHtml(issue.publication_date.slice(5).replace("-", "/"))}</i></div>`;
   return `<li class="issue-card" data-kind="${escapeHtml(issue.kind)}" style="--card-index:${position}"><a href="${pathPrefix}issues/${escapeHtml(issue.issue_id)}/" data-theme-link><div class="issue-card-cover">${cover}<span class="open-mark">OPEN ↗</span></div><div class="issue-card-copy"><p>${escapeHtml(issue.publication_date)} · ${escapeHtml(issue.kind === "current" ? "CURRENT FIELD" : "HISTORICAL ORIGINAL")}</p><h3>${escapeHtml(issue.title)}</h3><strong>${escapeHtml(issue.title_en)}</strong><span>${escapeHtml(issue.deck)}</span></div></a></li>`;
 }
 
 function issueGrid(issues, pathPrefix) {
   return `<ol class="issue-grid">${[...issues].reverse().map((issue, index) => issueCard(issue, pathPrefix, index)).join("")}</ol>`;
+}
+
+function issueRangeLabel(issues) {
+  const dates = issues.map((issue) => issue.publication_date).sort();
+  if (!dates.length) return "THE ISSUES";
+  const [first, last] = [dates[0], dates.at(-1)];
+  const monthName = (value) => new Intl.DateTimeFormat("en", { month: "short", timeZone: "UTC" })
+    .format(new Date(`${value}T00:00:00Z`)).toUpperCase();
+  const day = (value) => String(Number(value.slice(8, 10))).padStart(2, "0");
+  const firstMonth = monthName(first);
+  const lastMonth = monthName(last);
+  const range = firstMonth === lastMonth
+    ? `${day(first)}—${day(last)} ${lastMonth}`
+    : `${day(first)} ${firstMonth}—${day(last)} ${lastMonth}`;
+  return `THE ISSUES / ${range}`;
 }
 
 function routeMap() {
@@ -189,7 +205,7 @@ function routeMap() {
 function storyVisual(story, localPath, { loading = "lazy", label = "" } = {}) {
   if (!story?.media) return "";
   const external = story.media.external_image_url;
-  const localImage = `<img class="local-art" src="${escapeHtml(localPath)}" alt="" loading="eager" decoding="async" width="1200" height="900">`;
+  const localImage = `<img class="local-art" src="${escapeHtml(localPath)}" alt="" loading="${loading}" decoding="async" width="1200" height="900">`;
   const sourceImage = external
     ? `<img class="source-art" data-external-preview="true" src="${escapeHtml(external)}" alt="${escapeHtml(story.media.alt)}" loading="${loading}" decoding="async" referrerpolicy="no-referrer" width="1200" height="900">`
     : "";
@@ -248,7 +264,7 @@ export function renderHome({ issues, baseCss, themesCss, siteCss, siteJs }) {
   const latest = [...issues].sort((a, b) => a.publication_date.localeCompare(b.publication_date)).at(-1);
   const body = `<section class="home-hero" aria-labelledby="latest-title"><div class="hero-copy"><p class="hero-kicker">ISSUE ${String(issues.length).padStart(2, "0")} / ${escapeHtml(latest.publication_date)}</p><h1 id="latest-title"><a href="./issues/${escapeHtml(latest.issue_id)}/" data-theme-link>${escapeHtml(latest.title)}</a></h1><p class="hero-english">${escapeHtml(latest.title_en)}</p><p class="hero-deck">${escapeHtml(latest.deck)}</p><a class="hero-link" href="./issues/${escapeHtml(latest.issue_id)}/" data-theme-link>Read the latest issue <span aria-hidden="true">↗</span></a></div><div class="hero-map">${routeMap()}</div></section>
   ${dailyIndex(latest)}
-  <section class="issue-field" aria-labelledby="field-title"><div class="section-heading"><p>THE ISSUES / 20—24 AUG</p><h2 id="field-title">不是同一个模板。<br>是不同的进入。</h2><p>Each issue keeps its own visual grammar. The publication shell only helps you move between them.</p></div>${issueGrid(issues, "./")}</section>
+  <section class="issue-field" aria-labelledby="field-title"><div class="section-heading"><p>${escapeHtml(issueRangeLabel(issues))}</p><h2 id="field-title">不是同一个模板。<br>是不同的进入。</h2><p>Each issue keeps its own visual grammar. The publication shell only helps you move between them.</p></div>${issueGrid(issues, "./")}</section>
   <section class="editorial-code" aria-labelledby="code-title"><p class="vertical-label">EDITORIAL CODE</p><div><h2 id="code-title">事实先站稳。<br>形式才开始冒险。</h2><p>We follow the story into its own visual world. References teach; they do not dictate. No JavaScript is required to read. No automated PASS can replace a human judgment.</p></div><dl><div><dt>01</dt><dd>TRUTH<br>可核验的事实</dd></div><div><dt>02</dt><dd>AUTHORSHIP<br>独立的表达</dd></div><div><dt>03</dt><dd>ACCESS<br>真实可用</dd></div></dl></section>`;
   return shell({ title: "Culture & Taste Daily — Preview", body, baseCss, themesCss, siteCss, siteJs, page: "home" });
 }
@@ -266,7 +282,7 @@ export function renderHistoricalWrapper({ meta, baseCss, themesCss, siteCss, sit
 }
 
 export function renderFacsimile({ meta, pageFiles, baseCss, themesCss, siteCss, siteJs }) {
-  const pages = pageFiles.map((file, index) => `<li id="page-${index + 1}"><figure><img src="./pages/${escapeHtml(file)}" width="390" height="844" loading="eager" alt="Historical web edition page ${index + 1} of ${pageFiles.length}"><figcaption><span>${String(index + 1).padStart(2, "0")} / ${String(pageFiles.length).padStart(2, "0")}</span><a href="#page-${index + 1}">Permalink ↗</a></figcaption></figure></li>`).join("");
+  const pages = pageFiles.map((file, index) => `<li id="page-${index + 1}"><figure><img src="./pages/${escapeHtml(file)}" width="390" height="844" loading="${index === 0 ? "eager" : "lazy"}" decoding="async" alt="Historical web edition page ${index + 1} of ${pageFiles.length}"><figcaption><span>${String(index + 1).padStart(2, "0")} / ${String(pageFiles.length).padStart(2, "0")}</span><a href="#page-${index + 1}">Permalink ↗</a></figcaption></figure></li>`).join("");
   const body = `<section class="history-header facsimile-heading"><p>${escapeHtml(meta.publication_date)} · HISTORICAL WEB EDITION</p><h1>${escapeHtml(meta.title)}</h1><strong>${escapeHtml(meta.title_en)}</strong><p>${escapeHtml(meta.deck)}</p><div class="history-actions"><a href="./original.pdf">Download original PDF ↗</a><a href="../../archive/">Back to archive</a></div></section><section class="edition-intro"><p class="section-label">READING MAP / 16 SCREENS</p><h2>A page-by-page web edition, with the source still intact.</h2><p>The supplied artifact is a raster screenshot sequence. This reader gives each screen a stable anchor and keeps the exact PDF one click away; it does not invent missing article text.</p></section><aside class="migration-note"><strong>Honest limitation</strong><p>${escapeHtml(meta.limitations.join(" "))}</p></aside><ol class="facsimile-pages">${pages}</ol>`;
   return shell({ title: `${meta.title} — Historical Web Edition`, body, baseCss, themesCss, siteCss, siteJs, pathPrefix: "../../", page: "facsimile" });
 }

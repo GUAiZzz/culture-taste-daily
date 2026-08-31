@@ -908,6 +908,12 @@ body[data-page="facsimile"] .publication-footer {
     flex-direction: column;
   }
 
+  .archive-note,
+  .frame-fallback {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+  }
+
   .archive-controls div {
     width: 100%;
     overflow-x: auto;
@@ -1258,7 +1264,14 @@ body[data-page="facsimile"] .publication-footer {
   }
 
   .radar-group li p {
-    font-size: 0.7rem;
+    font-size: 0.9375rem;
+    line-height: 1.45;
+  }
+
+  .radar-meta,
+  .radar-source,
+  .radar-link {
+    font-size: 0.6875rem;
   }
 }
 

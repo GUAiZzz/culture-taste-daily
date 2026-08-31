@@ -170,6 +170,7 @@ test("Preview homepage and archive expose the current 2026-08-23/24/25/26/27 fie
     assert.ok(archive.includes(`issues/${date}/`));
   }
   assert.match(home, /NON-PRODUCTION PREVIEW/);
+  assert.match(home, /THE ISSUES \/ 20—31 AUG/);
   assert.match(home, /meta name="robots" content="noindex,nofollow"/);
   assert.match(home, /rel="icon" type="image\/png" href="\.\/assets\/culture-taste-earth\.png"/);
   assert.match(archive, /rel="icon" type="image\/png" href="\.\.\/assets\/culture-taste-earth\.png"/);
@@ -227,6 +228,43 @@ test("frontend integration keeps the formal issue intact while adding the supple
   assert.doesNotMatch(firstStory, /class="story-reader-brand"[^>]*>[\s\S]{0,240}<img/);
   const sitemap = await readFile(path.join(previewDist, "sitemap.xml"), "utf8");
   for (const storyId of storyRoutes) assert.match(sitemap, new RegExp(`issues/2026-08-31/stories/${storyId}/`));
+});
+
+test("theme controls share equal marks while desktop and mobile keep distinct editorial compositions", async () => {
+  const server = await startStaticServer(previewDist);
+  let browser;
+  try {
+    browser = await chromium.launch({ headless: true, channel: process.env.PLAYWRIGHT_CHANNEL ?? "chrome" });
+    const facts = {};
+    for (const [name, viewport] of Object.entries({ desktop: { width: 1440, height: 900 }, mobile: { width: 390, height: 844 } })) {
+      const context = await browser.newContext({ viewport });
+      await context.route(/^https:\/\//, (route) => route.abort());
+      const page = await context.newPage();
+      await page.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
+      facts[name] = await page.evaluate(() => ({
+        navigation: getComputedStyle(document.querySelector(".publication-header nav")).display,
+        heroColumns: getComputedStyle(document.querySelector(".home-hero")).gridTemplateColumns,
+        radarColumns: getComputedStyle(document.querySelector(".radar-group ol")).gridTemplateColumns,
+        dots: [...document.querySelectorAll(".theme-dots button")].map((button) => {
+          const rect = button.getBoundingClientRect();
+          const mark = getComputedStyle(button, "::before");
+          return { hit: [rect.width, rect.height], mark: [mark.width, mark.height] };
+        }),
+      }));
+      await context.close();
+    }
+    assert.equal(facts.desktop.navigation, "flex");
+    assert.equal(facts.mobile.navigation, "none");
+    assert.notEqual(facts.desktop.heroColumns, facts.mobile.heroColumns);
+    assert.notEqual(facts.desktop.radarColumns, facts.mobile.radarColumns);
+    for (const layout of Object.values(facts)) {
+      assert.deepEqual(layout.dots.map((dot) => dot.hit), [[44, 44], [44, 44], [44, 44]]);
+      assert.deepEqual(layout.dots.map((dot) => dot.mark), [["12px", "12px"], ["12px", "12px"], ["12px", "12px"]]);
+    }
+  } finally {
+    await browser?.close();
+    await server.close();
+  }
 });
 
 test("daily radar has at least two official-media selections in every category without changing the issue manifest", async () => {
@@ -364,7 +402,8 @@ test("2026-08-23 Preview has a dated visual and source chain for every story", a
   assert.equal((issue.match(/class="story-figure"/g) ?? []).length, 7);
   assert.equal(manifest.stories.length, 7);
   assert.equal(manifest.stories.filter((story) => story.media?.external_image_url).length, 5);
-  assert.equal((issue.match(/data-external-preview="true"[\s\S]*?loading="lazy"/g) ?? []).length, 5);
+  assert.equal((issue.match(/loading="eager"/g) ?? []).length, 1);
+  assert.equal((issue.match(/data-external-preview="true"[^>]*loading="lazy"/g) ?? []).length, 5);
   assert.ok(manifest.stories.every((story) => story.sources.length > 0 && story.media));
   assert.equal(manifest.status, "BLOCKED");
   assert.equal(manifest.rights_summary.status, "blocked");
@@ -409,7 +448,8 @@ test("2026-08-22 historical web edition keeps all exact source pages addressable
   assert.match(historical, /HISTORICAL WEB EDITION/);
   assert.match(historical, /Download original PDF/);
   assert.equal((historical.match(/id="page-\d+"/g) ?? []).length, 16);
-  assert.equal((historical.match(/loading="eager"/g) ?? []).length, 16);
+  assert.equal((historical.match(/loading="eager"/g) ?? []).length, 1);
+  assert.equal((historical.match(/loading="lazy"/g) ?? []).length, 15);
 });
 
 test("Preview workflow verifies pull requests but deploys only on explicit manual dispatch", async () => {

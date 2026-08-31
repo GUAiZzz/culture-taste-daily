@@ -271,7 +271,9 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
   });
   await page.goto(`${origin}/${urlPath ?? `issues/${issueId}/`}`, { waitUntil: "domcontentloaded" });
   const resolveExternalPreviews = javaScriptEnabled && (
-    urlPath === "" || (!urlPath && ["desktop-1440x900", "mobile-390x844"].includes(name))
+    urlPath === ""
+    || name.startsWith("story-")
+    || (!urlPath && ["desktop-1440x900", "mobile-390x844"].includes(name))
   );
   if (resolveExternalPreviews) {
     for (let attempt = 0; attempt < 2; attempt += 1) {
@@ -303,6 +305,7 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
   const facts = await page.evaluate((storyTitles) => {
     const mainText = document.querySelector("main")?.innerText ?? "";
     const images = [...document.images];
+    const isDeferredImage = (image) => image.loading === "lazy" && !image.complete;
     const isDeferredExternalPreview = (image) => image.loading === "lazy"
       && image.dataset.externalPreview === "true"
       && !image.complete;
@@ -329,14 +332,18 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
       }).map((control) => control.getAttribute("aria-label") || control.textContent.trim().slice(0, 40)),
       viewport_fit_cover: document.querySelector('meta[name="viewport"]')?.content.includes("viewport-fit=cover") ?? false,
       broken_images: images
-        .filter((image) => image.dataset.externalPreview !== "true" && !isDeferredExternalPreview(image) && (!image.complete || image.naturalWidth === 0))
+        .filter((image) => image.dataset.externalPreview !== "true" && !isDeferredImage(image) && (!image.complete || image.naturalWidth === 0))
         .map((image) => image.currentSrc || image.src),
       deferred_external_previews: images
         .filter(isDeferredExternalPreview)
         .map((image) => image.currentSrc || image.src),
       external_preview_images: images
         .filter((image) => image.dataset.externalPreview === "true")
-        .map((image) => ({ url: image.currentSrc || image.src, loaded: image.complete && image.naturalWidth > 0 })),
+        .map((image) => ({
+          url: image.currentSrc || image.src,
+          settled: image.complete,
+          loaded: image.complete && image.naturalWidth > 0,
+        })),
       image_failed_frames: document.querySelectorAll("[data-visual-frame].image-failed").length,
       story_visual_count: document.querySelectorAll(".issue-story .story-figure").length,
       issue_index_is_native_disclosure: Boolean(document.querySelector(".issue-nav-panel > summary")),
@@ -411,6 +418,8 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
         { name: "reduced-motion-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: true },
         { name: "home-desktop-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: false, urlPath: "" },
         { name: "home-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: "" },
+        { name: "story-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: `issues/${issueId}/stories/${staticResult.manifest.stories[0].id}/` },
+        { name: "story-landscape-844x390", width: 844, height: 390, javaScriptEnabled: true, reducedMotion: false, urlPath: `issues/${issueId}/stories/${staticResult.manifest.stories[0].id}/` },
         { name: "archive-desktop-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: false, urlPath: "archive/", testArchiveFilter: true },
         ...(staticResult.buildReport.historical_issues?.length ? [
           { name: "historical-20-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: "issues/2026-08-20/" },
@@ -443,6 +452,7 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
           && item.facts.viewport_fit_cover
           && item.facts.broken_images.length === 0
           && item.facts.external_preview_images.every((image) => image.loaded
+            || !image.settled
             || item.facts.deferred_external_previews.includes(image.url))
           && item.facts.image_failed_frames === 0
           && item.consoleErrors.length === 0
@@ -455,7 +465,7 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
         external_preview_failures: desktop.externalPreviewFailures,
       }));
 
-      const mobileNames = ["compact-320x568", "mobile-390x844", "mobile-430x932", "tablet-768x1024", "landscape-844x390"];
+      const mobileNames = ["compact-320x568", "mobile-390x844", "mobile-430x932", "tablet-768x1024", "landscape-844x390", "story-mobile-390x844", "story-landscape-844x390"];
       checks.push(result("mobile_render", mobileNames.every((name) => capturePasses(captures[name])), Object.fromEntries(mobileNames.map((name) => [name, {
         ...captures[name].facts,
         console_errors: captures[name].consoleErrors,

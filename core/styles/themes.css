@@ -120,10 +120,7 @@ html[data-visual-theme="analog"]::after {
   padding: 0;
   border: 0;
   border-radius: 50%;
-  background: var(--dot-color);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 12px 12px;
+  background: transparent;
   box-shadow: none;
   cursor: pointer;
 }
@@ -134,9 +131,23 @@ html[data-visual-theme="analog"]::after {
   --dot-color: repeating-linear-gradient(0deg, #d5c7aa 0 2px, #2a2924 2px 3px);
 }
 
-.theme-dots button[aria-pressed="true"] {
-  outline: 2px solid currentColor;
-  outline-offset: -10px;
+.theme-dots button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--dot-color);
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 42%);
+  content: "";
+  transform: translate(-50%, -50%);
+  transition: box-shadow 140ms ease, transform 140ms ease;
+}
+
+.theme-dots button[aria-pressed="true"]::before {
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px currentColor;
+  transform: translate(-50%, -50%) scale(1.08);
 }
 
 .theme-dots button::after {
