@@ -113,7 +113,7 @@ export function renderIssue({ content, manifest, baseCss, themesCss = "", issueC
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow">
   <meta name="color-scheme" content="dark">
   <link rel="icon" type="image/png" href="../../assets/culture-taste-earth.png">
@@ -143,7 +143,7 @@ function shell({ title, body, baseCss, themesCss = "", siteCss, siteJs = "", pat
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow">
   <meta name="color-scheme" content="light dark">
   <link rel="icon" type="image/png" href="${pathPrefix}assets/culture-taste-earth.png">
@@ -340,7 +340,7 @@ export function renderStoryPage({ content, manifest, story, storyIndex, baseCss,
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow">
   <meta name="color-scheme" content="light dark">
   <link rel="icon" type="image/png" href="../../../../assets/culture-taste-earth.png">

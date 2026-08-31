@@ -135,6 +135,15 @@ test("shared core remains functional and leaves issue visual decisions to issue 
   assert.match(issueCss, /max-width:/);
 });
 
+test("mobile protocol and repository skill are present", async () => {
+  const protocol = await readFile(path.join(repoRoot, "docs/MOBILE_EDITORIAL_PROTOCOL.md"), "utf8");
+  const skill = await readFile(path.join(repoRoot, ".agents/skills/culture-taste-mobile/SKILL.md"), "utf8");
+  assert.match(protocol, /320x568/);
+  assert.match(protocol, /viewport-fit/);
+  assert.match(protocol, /field.*coral.*analog/s);
+  assert.match(skill, /MOBILE_EDITORIAL_PROTOCOL\.md/);
+});
+
 test("repository Preview preserves all three historical originals as non-production issues", async () => {
   assert.deepEqual(previewReport.historical_issues.map((issue) => issue.issue_id), ["2026-08-20", "2026-08-21", "2026-08-22"]);
   assert.ok(previewReport.historical_issues.every((issue) => issue.production_eligible === false));

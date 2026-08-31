@@ -15,6 +15,10 @@ Read these files before changing this repository, in order:
 11. `docs/HARRYTONE_DEPENDENCY.md`
 12. `docs/REFERENCE_SYSTEM.md` and `docs/CULTURE_TASTE_SOURCE_MAP.md` for editorial work
 
+For mobile, responsive, touch, or scroll-experience work, also read
+`.agents/skills/culture-taste-mobile/SKILL.md` and
+`docs/MOBILE_EDITORIAL_PROTOCOL.md` before changing implementation files.
+
 For the authorized daily candidate dry run, also read `automation/DAILY_RUN.md` and `automation/daily-policy.json` before acting.
 
 ## Current hard stops

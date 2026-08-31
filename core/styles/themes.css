@@ -115,13 +115,16 @@ html[data-visual-theme="analog"]::after {
 
 .theme-dots button {
   position: relative;
-  width: 12px;
-  height: 12px;
+  width: 44px;
+  height: 44px;
   padding: 0;
   border: 0;
   border-radius: 50%;
   background: var(--dot-color);
-  box-shadow: 0 0 0 1px rgb(0 0 0 / 42%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  box-shadow: none;
   cursor: pointer;
 }
 
@@ -132,8 +135,8 @@ html[data-visual-theme="analog"]::after {
 }
 
 .theme-dots button[aria-pressed="true"] {
-  box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px currentColor;
-  transform: scale(1.08);
+  outline: 2px solid currentColor;
+  outline-offset: -10px;
 }
 
 .theme-dots button::after {
@@ -161,6 +164,10 @@ html[data-visual-theme="analog"]::after {
   transform: none;
 }
 
+.theme-dots button:active {
+  transform: scale(0.94);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html[data-visual-theme="field"]::before,
   html[data-visual-theme="coral"]::before,
@@ -171,5 +178,11 @@ html[data-visual-theme="analog"]::after {
   body[data-shell="publication"],
   body[data-story-reader] {
     transition: none;
+  }
+}
+
+@media (max-width: 50rem) {
+  .theme-dots button::after {
+    display: none;
   }
 }

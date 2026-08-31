@@ -41,7 +41,7 @@ body[data-story-reader] a {
   gap: 1rem;
   align-items: center;
   min-height: 68px;
-  padding: 0.7rem clamp(1rem, 2.8vw, 2.7rem);
+  padding: max(0.7rem, env(safe-area-inset-top)) max(clamp(1rem, 2.8vw, 2.7rem), env(safe-area-inset-right)) 0.7rem max(clamp(1rem, 2.8vw, 2.7rem), env(safe-area-inset-left));
   border-bottom: 1px solid currentColor;
   background: color-mix(in srgb, var(--paper) 88%, transparent);
   backdrop-filter: blur(12px);
@@ -94,6 +94,7 @@ body[data-story-reader] a {
   top: 0;
   display: grid;
   min-height: 100svh;
+  height: 100dvh;
   grid-template-columns: minmax(0, 0.95fr) minmax(22rem, 1.05fr);
   gap: clamp(2rem, 6vw, 7rem);
   align-items: center;
@@ -500,12 +501,13 @@ body[data-story-reader] a.next-story {
   letter-spacing: 0.09em;
 }
 
-@media (max-width: 52rem) {
+@media (max-width: 50rem) {
   .story-reader-header {
     grid-template-columns: 1fr auto;
     min-height: 62px;
     gap: 0.5rem;
-    padding-inline: 0.75rem;
+    padding-right: max(20px, env(safe-area-inset-right));
+    padding-left: max(20px, env(safe-area-inset-left));
   }
 
   .story-position,
@@ -529,7 +531,7 @@ body[data-story-reader] a.next-story {
     grid-template-columns: 1fr;
     gap: 1.4rem;
     align-content: center;
-    padding: 5.5rem 1.25rem 1.5rem;
+    padding: max(5.5rem, calc(env(safe-area-inset-top) + 4.75rem)) max(20px, env(safe-area-inset-right)) max(1.5rem, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
   }
 
   .story-opening h1 {
@@ -551,7 +553,7 @@ body[data-story-reader] a.next-story {
 
   .story-lede-stage {
     min-height: 115svh;
-    padding: 5rem 1.25rem;
+    padding: 5rem max(20px, env(safe-area-inset-right)) 5rem max(20px, env(safe-area-inset-left));
   }
 
   .story-lede {
@@ -560,7 +562,7 @@ body[data-story-reader] a.next-story {
 
   .story-media-stage {
     min-height: 130svh;
-    padding: 6rem 1rem;
+    padding: 6rem max(20px, env(safe-area-inset-right)) 6rem max(20px, env(safe-area-inset-left));
   }
 
   .story-media-sticky {
@@ -574,7 +576,7 @@ body[data-story-reader] a.next-story {
   .story-reading-stage {
     grid-template-columns: 1fr;
     gap: 1rem;
-    padding: 5rem 1.25rem;
+    padding: 5rem max(20px, env(safe-area-inset-right)) 5rem max(20px, env(safe-area-inset-left));
   }
 
   .story-judgment {
@@ -606,6 +608,44 @@ body[data-story-reader] a.next-story {
 
   .story-sibling-nav a:nth-child(2) {
     display: none;
+  }
+}
+
+@media (max-width: 29.9375rem) {
+  .story-reader-header,
+  .story-opening-sticky,
+  .story-lede-stage,
+  .story-media-stage,
+  .story-reading-stage,
+  .story-source-list,
+  .story-related {
+    padding-right: max(16px, env(safe-area-inset-right));
+    padding-left: max(16px, env(safe-area-inset-left));
+  }
+}
+
+@media (max-width: 50rem) and (orientation: landscape) {
+  .story-reader-header {
+    min-height: 52px;
+  }
+
+  .story-opening {
+    min-height: 190svh;
+  }
+
+  .story-opening-sticky {
+    grid-template-columns: minmax(0, 1fr) minmax(12rem, 0.72fr);
+    gap: 1rem;
+    padding-top: max(4.25rem, calc(env(safe-area-inset-top) + 3.5rem));
+  }
+
+  .story-opening h1 {
+    font-size: clamp(1.7rem, 5.7vw, 2.7rem);
+  }
+
+  .story-opening-visual {
+    width: min(38vw, 19rem);
+    max-height: 65dvh;
   }
 }
 

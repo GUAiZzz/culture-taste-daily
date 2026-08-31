@@ -310,11 +310,24 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
     const headlineStyle = headline ? getComputedStyle(headline) : null;
     const headlineFontSize = headlineStyle ? Number.parseFloat(headlineStyle.fontSize) : null;
     const headlineLineHeight = headlineStyle ? Number.parseFloat(headlineStyle.lineHeight) : null;
+    const viewportWidth = document.documentElement.clientWidth;
+    const headings = [...document.querySelectorAll("h1, h2, h3")];
+    const controls = [...document.querySelectorAll(".site-header a, .site-footer a, .publication-header a, .story-reader-header a, .issue-nav a, button")]
+      .filter((control) => control.getClientRects().length > 0);
     return {
       main_text_length: mainText.length,
       missing_story_titles: storyTitles.filter((title) => !mainText.includes(title)),
       sources_and_dates: mainText.includes("Sources & Dates"),
       horizontal_overflow: Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth),
+      clipped_headings: headings.filter((heading) => {
+        const rect = heading.getBoundingClientRect();
+        return rect.left < -1 || rect.right > viewportWidth + 1 || heading.scrollWidth > heading.clientWidth + 1;
+      }).map((heading) => heading.id || heading.textContent.trim().slice(0, 40)),
+      controls_below_44px: controls.filter((control) => {
+        const rect = control.getBoundingClientRect();
+        return rect.width < 43.5 || rect.height < 43.5;
+      }).map((control) => control.getAttribute("aria-label") || control.textContent.trim().slice(0, 40)),
+      viewport_fit_cover: document.querySelector('meta[name="viewport"]')?.content.includes("viewport-fit=cover") ?? false,
       broken_images: images
         .filter((image) => image.dataset.externalPreview !== "true" && !isDeferredExternalPreview(image) && (!image.complete || image.naturalWidth === 0))
         .map((image) => image.currentSrc || image.src),
@@ -388,9 +401,14 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
     try {
       const cases = [
         { name: "desktop-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: false },
+        { name: "compact-320x568", width: 320, height: 568, javaScriptEnabled: true, reducedMotion: false },
         { name: "mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false },
+        { name: "mobile-430x932", width: 430, height: 932, javaScriptEnabled: true, reducedMotion: false },
+        { name: "tablet-768x1024", width: 768, height: 1024, javaScriptEnabled: true, reducedMotion: false },
+        { name: "landscape-844x390", width: 844, height: 390, javaScriptEnabled: true, reducedMotion: false },
         { name: "no-js-390x844", width: 390, height: 844, javaScriptEnabled: false, reducedMotion: false },
         { name: "reduced-motion-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: true },
+        { name: "reduced-motion-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: true },
         { name: "home-desktop-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: false, urlPath: "" },
         { name: "home-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: "" },
         { name: "archive-desktop-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: false, urlPath: "archive/", testArchiveFilter: true },
@@ -419,26 +437,34 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
       const keyboard = captures["desktop-1440x900"].facts.keyboard_focus;
       checks.push(result("keyboard_focus", keyboard?.tag === "A" && keyboard.outline_style !== "none" && keyboard.outline_width !== "0px", keyboard));
 
-      for (const [checkId, captureName] of [
-        ["desktop_render", "desktop-1440x900"],
-        ["mobile_render", "mobile-390x844"],
-      ]) {
-        const item = captures[captureName];
-        const ok = item.facts.horizontal_overflow === 0
+      const capturePasses = (item) => item.facts.horizontal_overflow === 0
+          && item.facts.clipped_headings.length === 0
+          && item.facts.controls_below_44px.length === 0
+          && item.facts.viewport_fit_cover
           && item.facts.broken_images.length === 0
-          && item.facts.external_preview_images.every((image) => image.loaded)
+          && (item.facts.external_preview_images.every((image) => image.loaded)
+            || item.facts.deferred_external_previews.length === item.facts.external_preview_images.length)
           && item.facts.image_failed_frames === 0
           && item.consoleErrors.length === 0
           && item.requestFailures.length === 0;
-        checks.push(result(checkId, ok, {
-          ...item.facts,
-          console_errors: item.consoleErrors,
-          request_failures: item.requestFailures,
-          external_preview_failures: item.externalPreviewFailures,
-        }));
-      }
-      const reduced = captures["reduced-motion-1440x900"];
-      checks.push(result("reduced_motion_render", reduced.facts.reduced_motion_matches && reduced.facts.horizontal_overflow === 0, reduced.facts));
+      const desktop = captures["desktop-1440x900"];
+      checks.push(result("desktop_render", capturePasses(desktop), {
+        ...desktop.facts,
+        console_errors: desktop.consoleErrors,
+        request_failures: desktop.requestFailures,
+        external_preview_failures: desktop.externalPreviewFailures,
+      }));
+
+      const mobileNames = ["compact-320x568", "mobile-390x844", "mobile-430x932", "tablet-768x1024", "landscape-844x390"];
+      checks.push(result("mobile_render", mobileNames.every((name) => capturePasses(captures[name])), Object.fromEntries(mobileNames.map((name) => [name, {
+        ...captures[name].facts,
+        console_errors: captures[name].consoleErrors,
+        request_failures: captures[name].requestFailures,
+        external_preview_failures: captures[name].externalPreviewFailures,
+      }]))));
+
+      const reducedNames = ["reduced-motion-1440x900", "reduced-motion-390x844"];
+      checks.push(result("reduced_motion_render", reducedNames.every((name) => captures[name].facts.reduced_motion_matches && capturePasses(captures[name])), Object.fromEntries(reducedNames.map((name) => [name, captures[name].facts]))));
 
       const headlineLayouts = [captures["home-desktop-1440x900"], captures["home-mobile-390x844"]]
         .map((item) => item.facts.headline_layout);
