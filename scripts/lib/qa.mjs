@@ -442,8 +442,8 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
           && item.facts.controls_below_44px.length === 0
           && item.facts.viewport_fit_cover
           && item.facts.broken_images.length === 0
-          && (item.facts.external_preview_images.every((image) => image.loaded)
-            || item.facts.deferred_external_previews.length === item.facts.external_preview_images.length)
+          && item.facts.external_preview_images.every((image) => image.loaded
+            || item.facts.deferred_external_previews.includes(image.url))
           && item.facts.image_failed_frames === 0
           && item.consoleErrors.length === 0
           && item.requestFailures.length === 0;
