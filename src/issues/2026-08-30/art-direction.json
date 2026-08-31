@@ -1,0 +1,17 @@
+{
+  "issue_id": "2026-08-30",
+  "title": "结束不是消失，是把选择逼到眼前 / CLOSING MAKES THE CHOICE VISIBLE",
+  "dominant_mood": "米白色倒计时编辑台：红色截止戳、蓝色裁切线与逐格收窄的留白",
+  "background_logic": "用浅色方格纸与截止标记组织页面，不复用前八期的暗色接力带、地图、房间、proof sheet 或开放矩形",
+  "palette_logic": "paper #F2EBDD, ink #151515, deadline #E84A37, cobalt #2457C5, acid #D5F23B",
+  "type_scale_logic": "超大黑体标题像被裁掉一角，正文保持 18px；每段以倒计时编号进入",
+  "image_behavior": "四张一手官方媒体只在 Preview 外链显示；本地 countdown SVG 明确标记为失图占位",
+  "page_density_and_tempo": "封面压缩，正文逐段扩大留白，最后只保留一条截止线",
+  "core_visual_action": "网格从宽到窄，把浏览逐步压成一次进入或放弃的选择",
+  "cover_composition": "纸色底上四个不等宽时间格向右收紧，红色日期戳覆盖最后一格",
+  "desktop_interaction_mechanic": "原生索引与锚点始终可见，来源和正文不依赖 JavaScript",
+  "behance_viewing_arc": "从材料层次进入缝线结构，再听完整专辑，最后拿起电话",
+  "mobile_translation": "390px 下所有时间格转为横向顶部标尺，正文单列且不裁字",
+  "mobbin_usability_constraint": "交互目标不少于 44px，焦点可见，长链接可换行，外图失败仍显示来源",
+  "quiet_ending": "截止线之后不庆祝，只留下一个已经被做出的选择"
+}
