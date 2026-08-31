@@ -155,7 +155,7 @@ test("repository Preview preserves all three historical originals as non-product
 test("Preview homepage and archive expose the current 2026-08-23/24/25/26/27 fields plus historical issues", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
   const archive = await readFile(path.join(previewDist, "archive/index.html"), "utf8");
-  const current = await readFile(path.join(previewDist, "issues/2026-08-30/index.html"), "utf8");
+  const current = await readFile(path.join(previewDist, "issues/2026-08-31/index.html"), "utf8");
   for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27"]) {
     assert.ok(home.includes(`issues/${date}/`));
     assert.ok(archive.includes(`issues/${date}/`));
@@ -177,16 +177,18 @@ test("Preview homepage and archive expose the current 2026-08-23/24/25/26/27 fie
   assert.match(archive, /assets\/covers\/2026-08-27\.svg/);
   assert.match(home, /assets\/covers\/2026-08-30\.svg/);
   assert.match(archive, /assets\/covers\/2026-08-30\.svg/);
+  assert.match(home, /assets\/covers\/2026-08-31\.svg/);
+  assert.match(archive, /assets\/covers\/2026-08-31\.svg/);
   assert.doesNotMatch(home, /<div class="type-cover"[^>]*><span>THE DAY/);
   await readFile(path.join(previewDist, "assets/culture-taste-earth.png"));
-  for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg", "2026-08-23.svg", "2026-08-25.svg", "2026-08-26.svg", "2026-08-27.svg", "2026-08-30.svg"]) {
+  for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg", "2026-08-23.svg", "2026-08-25.svg", "2026-08-26.svg", "2026-08-27.svg", "2026-08-30.svg", "2026-08-31.svg"]) {
     await readFile(path.join(previewDist, "assets/covers", cover));
   }
 });
 
 test("frontend integration keeps the formal issue intact while adding the supplemental daily radar", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
-  const current = await readFile(path.join(previewDist, "issues/2026-08-30/index.html"), "utf8");
+  const current = await readFile(path.join(previewDist, "issues/2026-08-31/index.html"), "utf8");
   assert.equal((home.match(/<button type="button" data-theme-choice=/g) ?? []).length, 3);
   assert.match(home, /class="wordmark"[\s\S]*<em>Taste<\/em>/);
   assert.doesNotMatch(home, /class="wordmark"[^>]*>[\s\S]{0,240}<img/);
@@ -201,21 +203,21 @@ test("frontend integration keeps the formal issue intact while adding the supple
   assert.doesNotMatch(home, /class="local-art"/);
   assert.doesNotMatch(home, /<span class="radar-visual"[^>]*>[\s\S]*?<i aria-hidden="true"><\/i>/);
   assert.doesNotMatch(home, /class="theme-picker"/);
-  assert.equal((home.match(/issues\/2026-08-30\/stories\/[^/]+\//g) ?? []).length, 4);
+  assert.equal((home.match(/issues\/2026-08-31\/stories\/[^/]+\//g) ?? []).length, 4);
   assert.match(current, /class="reading-progress"/);
   assert.equal((current.match(/<button type="button" data-theme-choice=/g) ?? []).length, 3);
   assert.match(current, /data-content-sha256="[0-9a-f]{64}"/);
   assert.equal((current.match(/class="issue-story"/g) ?? []).length, 5);
   assert.match(current, /data-story="exit"/);
   assert.match(current, /id="sources"/);
-  const storyRoutes = await readdir(path.join(previewDist, "issues/2026-08-30/stories"));
+  const storyRoutes = await readdir(path.join(previewDist, "issues/2026-08-31/stories"));
   assert.equal(storyRoutes.length, 4);
-  for (const storyId of storyRoutes) await readFile(path.join(previewDist, "issues/2026-08-30/stories", storyId, "index.html"));
-  const firstStory = await readFile(path.join(previewDist, "issues/2026-08-30/stories", storyRoutes[0], "index.html"), "utf8");
+  for (const storyId of storyRoutes) await readFile(path.join(previewDist, "issues/2026-08-31/stories", storyId, "index.html"));
+  const firstStory = await readFile(path.join(previewDist, "issues/2026-08-31/stories", storyRoutes[0], "index.html"), "utf8");
   assert.match(firstStory, /class="story-reader-brand"[\s\S]*<em>Taste<\/em>/);
   assert.doesNotMatch(firstStory, /class="story-reader-brand"[^>]*>[\s\S]{0,240}<img/);
   const sitemap = await readFile(path.join(previewDist, "sitemap.xml"), "utf8");
-  for (const storyId of storyRoutes) assert.match(sitemap, new RegExp(`issues/2026-08-30/stories/${storyId}/`));
+  for (const storyId of storyRoutes) assert.match(sitemap, new RegExp(`issues/2026-08-31/stories/${storyId}/`));
 });
 
 test("daily radar has at least two official-media selections in every category without changing the issue manifest", async () => {
@@ -297,7 +299,7 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     await fallbackContext.close();
 
     const retryContext = await browser.newContext();
-    const retryImagePrefix = "https://cdn.uc.assets.prezly.com/2a646848-1ee0-4a6c-a0ea-cfa72bbc2394/";
+    const retryImagePrefix = "https://cdn.shopify.com/s/files/1/0030/4955/4009/files/GWB_AW26_Malick_Bodian_Lookbook_Look_11_4x5_381ce993-5c57-421c-817d-1ad1da576136.jpg";
     let retryAttempts = 0;
     await retryContext.route((url) => url.href.startsWith(retryImagePrefix), async (route) => {
       retryAttempts += 1;
@@ -313,10 +315,10 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     });
     const retryPage = await retryContext.newPage();
     await retryPage.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
-    const retryImage = retryPage.locator('img[alt="Official On THE ROGER Centre Court special-edition shoe image"]');
+    const retryImage = retryPage.locator('img[alt="Official Wales Bonner Morning Raga Autumn Winter 2026 lookbook image"]');
     await retryImage.scrollIntoViewIfNeeded();
     await retryPage.waitForFunction(() => {
-      const image = document.querySelector('img[alt="Official On THE ROGER Centre Court special-edition shoe image"]');
+      const image = document.querySelector('img[alt="Official Wales Bonner Morning Raga Autumn Winter 2026 lookbook image"]');
       return image?.complete && image.naturalWidth > 0 && image.src.includes("ctd_retry=1");
     }, null, { timeout: 10_000 });
     assert.ok(retryAttempts >= 2);
