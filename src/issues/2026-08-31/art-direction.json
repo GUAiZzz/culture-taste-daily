@@ -14,5 +14,6 @@
   "mobile_translation":"390px 下斜撑退到背景边缘，文字保持单列，不造成横向滚动",
   "mobbin_usability_constraint":"交互目标不少于 44px，焦点可见，长链接换行，外图失败不隐藏来源",
   "quiet_ending":"最后一根支撑不被拆掉，提醒方法仍在承担结果",
+  "closing_quotation":{"id":"ct-en-001","language":"en","text":"The last support stays in place. Method is still carrying the result.","credit":"Culture & Taste Editorial"},
   "closing_palette":{"background":"#111B33","foreground":"#F4F0E8","accent":"#78E6C5","rationale":"午夜蓝保留搭建现场，粉笔白让方法可读，薄荷信号色标出仍在承担结果的最后一根支撑。"}
 }

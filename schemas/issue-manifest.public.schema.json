@@ -244,6 +244,17 @@
         "mobile_translation": { "type": "string" },
         "mobbin_usability_constraint": { "type": "string" },
         "quiet_ending": { "type": "string" },
+        "closing_quotation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "language", "text", "credit"],
+          "properties": {
+            "id": { "type": "string", "pattern": "^ct-(?:en|zh)-[0-9]{3}$" },
+            "language": { "enum": ["en", "zh-CN"] },
+            "text": { "type": "string", "minLength": 1 },
+            "credit": { "const": "Culture & Taste Editorial" }
+          }
+        },
         "closing_palette": {
           "type": "object",
           "additionalProperties": false,

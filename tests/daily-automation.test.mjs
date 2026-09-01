@@ -159,6 +159,13 @@ test("daily policy cannot merge, deploy, alter Pages, or touch the legacy reposi
     text_contrast_minimum: 4.5,
     accent_contrast_minimum: 3,
   });
+  assert.deepEqual(policy.closing_quotation_gate, {
+    required: true,
+    effective_from: "2026-08-31",
+    pool: "automation/closing-quotation-pool.json",
+    language_priority: ["en", "zh-CN"],
+    selection_mode: "editor_selected_and_issue_locked",
+  });
   assert.equal(policy.daily_radar.supplemental_to_issue, true);
   assert.equal(policy.daily_radar.changes_issue_selection, false);
   assert.equal(policy.daily_radar.first_party_official_media_required, true);
@@ -167,6 +174,7 @@ test("daily policy cannot merge, deploy, alter Pages, or touch the legacy reposi
   assert.equal(policy.dry_run_base_ref, "preview-build-v1");
   assert.ok(policy.required_runtime_checks.includes("live_public_source_and_media_health"));
   assert.ok(policy.required_runtime_checks.includes("locked_daily_coda_palette"));
+  assert.ok(policy.required_runtime_checks.includes("locked_daily_coda_quotation"));
 });
 
 test("weekly health audit is read-only and aligned to the current publication base", async () => {

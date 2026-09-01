@@ -249,8 +249,9 @@ test("frontend integration keeps the formal issue intact while adding the supple
   for (const storyId of storyRoutes) assert.match(sitemap, new RegExp(`issues/2026-08-31/stories/${storyId}/`));
 });
 
-test("daily coda uses the latest locked slogan and a validated non-repeating palette", async () => {
+test("daily coda uses one issue-locked editorial quotation and a validated non-repeating palette", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
+  const quotationPool = await readJson(path.join(repoRoot, "automation/closing-quotation-pool.json"));
   const nativeIssues = [];
   for (const day of ["23", "24", "25", "26", "27", "28", "29", "30", "31"]) {
     const artDirection = await readJson(path.join(repoRoot, `src/issues/2026-08-${day}/art-direction.json`));
@@ -260,9 +261,22 @@ test("daily coda uses the latest locked slogan and a validated non-repeating pal
     assert.ok(contrastRatio(artDirection.closing_palette.background, artDirection.closing_palette.accent) >= 3);
     nativeIssues.push({ issueId: `2026-08-${day}`, manifest });
   }
+  const latestArtDirection = await readJson(path.join(repoRoot, "src/issues/2026-08-31/art-direction.json"));
+  const selectedQuotation = quotationPool.candidates.find(({ id }) => id === latestArtDirection.closing_quotation.id);
+  assert.ok(selectedQuotation);
+  assert.equal(latestArtDirection.closing_quotation.text, selectedQuotation.text);
+  assert.equal(latestArtDirection.closing_quotation.language, selectedQuotation.language);
+  assert.equal(latestArtDirection.closing_quotation.credit, quotationPool.authorship);
+  assert.deepEqual(quotationPool.language_priority, ["en", "zh-CN"]);
+  assert.equal(quotationPool.selection_mode, "editor_selected_and_issue_locked");
   assert.match(home, /class="daily-coda"/);
-  assert.match(home, /最后一根支撑不被拆掉，提醒方法仍在承担结果/);
+  assert.match(home, /DAILY QUOTATION \/ 2026-W36 · EN/);
+  assert.match(home, /The last support stays in place\. Method is still carrying the result\./);
   assert.match(home, /--coda-bg:#111B33;--coda-fg:#F4F0E8;--coda-accent:#78E6C5/);
+  assert.doesNotMatch(home, /最后一根支撑不被拆掉，提醒方法仍在承担结果/);
+  assert.doesNotMatch(home, /We follow the story into its own visual world/);
+  assert.doesNotMatch(home, /STABLE PRINCIPLES/);
+  assert.doesNotMatch(home, /class="coda-principles"/);
   assert.doesNotMatch(home, /事实先站稳/);
   assert.doesNotMatch(home, /class="editorial-code"/);
   assert.doesNotThrow(() => assertClosingPaletteVariation(nativeIssues, {

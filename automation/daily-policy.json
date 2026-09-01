@@ -78,6 +78,13 @@
     "text_contrast_minimum": 4.5,
     "accent_contrast_minimum": 3
   },
+  "closing_quotation_gate": {
+    "required": true,
+    "effective_from": "2026-08-31",
+    "pool": "automation/closing-quotation-pool.json",
+    "language_priority": ["en", "zh-CN"],
+    "selection_mode": "editor_selected_and_issue_locked"
+  },
   "standing_beats": [
     {
       "id": "supreme-thursday-drop",
@@ -126,6 +133,7 @@
     "detail_level_reference_recheck",
     "seven_issue_variation_review",
     "locked_daily_coda_palette",
+    "locked_daily_coda_quotation",
     "local_cover_and_headline_collision_gate",
     "deterministic_build_and_independent_qa",
     "privacy_scan",

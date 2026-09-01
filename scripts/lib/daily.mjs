@@ -79,12 +79,14 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
 
   const policyPath = path.join(repoRoot, "automation/daily-policy.json");
   const brandRadarPath = path.join(repoRoot, "automation/brand-radar.json");
+  const closingQuotationPoolPath = path.join(repoRoot, "automation/closing-quotation-pool.json");
   const contractDependencyPath = path.join(repoRoot, "dependencies/contract.json");
   const harrytoneDependencyPath = path.join(repoRoot, "dependencies/harrytone.json");
   const previewWorkflowPath = path.join(repoRoot, ".github/workflows/preview.yml");
   const gitignorePath = path.join(repoRoot, ".gitignore");
   const policy = await readJson(policyPath);
   const brandRadar = await readJson(brandRadarPath);
+  const closingQuotationPool = await readJson(closingQuotationPoolPath);
   const contract = await readJson(contractDependencyPath);
   const harrytone = await readJson(harrytoneDependencyPath);
   const shanghai = shanghaiParts(now);
@@ -103,6 +105,17 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
     || closingPaletteGate.text_contrast_minimum < 4.5
     || closingPaletteGate.accent_contrast_minimum < 3) {
     blockers.push("daily closing palette gate must remain locked, contrast-safe, and compared against seven issues");
+  }
+  const closingQuotationGate = policy.closing_quotation_gate;
+  if (!closingQuotationGate?.required
+    || closingQuotationGate.pool !== "automation/closing-quotation-pool.json"
+    || closingQuotationGate.selection_mode !== "editor_selected_and_issue_locked"
+    || closingQuotationPool.authorship !== "Culture & Taste Editorial"
+    || closingQuotationPool.selection_mode !== "editor_selected_and_issue_locked"
+    || !Array.isArray(closingQuotationPool.candidates)
+    || closingQuotationPool.candidates.length < 8
+    || new Set(closingQuotationPool.candidates.map((candidate) => candidate.id)).size !== closingQuotationPool.candidates.length) {
+    blockers.push("daily closing quotation pool must remain original, curated, unique, and issue-locked");
   }
   validateBrandRadar({ policy, radar: brandRadar, blockers });
 

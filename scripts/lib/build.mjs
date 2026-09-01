@@ -67,6 +67,20 @@ function validateClosingPalette({ issueId, artDirection, manifestArtDirection, g
   }
 }
 
+function validateClosingQuotation({ issueId, artDirection, gate, pool }) {
+  if (!gate?.required || issueId < gate.effective_from) return;
+  const quotation = artDirection.closing_quotation;
+  if (!quotation) throw new Error(`${issueId} requires a locked closing quotation`);
+  const candidates = pool?.candidates ?? [];
+  const matches = candidates.filter((candidate) => candidate.id === quotation.id);
+  if (matches.length !== 1) throw new Error(`${issueId} closing quotation must resolve to one pool candidate`);
+  const candidate = matches[0];
+  if (quotation.text !== candidate.text || quotation.language !== candidate.language) {
+    throw new Error(`${issueId} closing quotation does not match its pool candidate`);
+  }
+  if (quotation.credit !== pool.authorship) throw new Error(`${issueId} closing quotation has invalid authorship`);
+}
+
 export function assertClosingPaletteVariation(issues, gate) {
   if (!gate?.required) return;
   const eligible = issues
@@ -266,7 +280,7 @@ function hydrateDailyRadar(radar, manifest, issueId, priorIndex = null) {
   return { ...radar, items, counts };
 }
 
-async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, dailyPolicy, brandRadar }) {
+async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, dailyPolicy, brandRadar, closingQuotationPool }) {
   const issueRoot = path.join(sourceRoot, issueId);
   await assertPublicTree(issueRoot);
 
@@ -293,6 +307,12 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, dailyPolicy, 
     artDirection,
     manifestArtDirection: manifest.art_direction,
     gate: dailyPolicy.closing_palette_gate,
+  });
+  validateClosingQuotation({
+    issueId,
+    artDirection,
+    gate: dailyPolicy.closing_quotation_gate,
+    pool: closingQuotationPool,
   });
   const actualStyleHash = issueCss ? await sha256File(stylePath) : null;
   assertEqual(actualStyleHash, manifest.source_hashes.issue_style_sha256, "issue style source hash");
@@ -424,7 +444,7 @@ export async function buildSite({
   const defaultSourceRoot = path.join(repoRoot, "src/issues");
   const includeHistorical = historicalRoot !== null && !issueId && path.resolve(sourceRoot) === path.resolve(defaultSourceRoot);
   const resolvedHistoricalRoot = historicalRoot ?? path.join(repoRoot, "src/historical");
-  const [baseCss, themesCss, storyCss, siteCss, siteJs, dailyPolicy, brandRadar] = await Promise.all([
+  const [baseCss, themesCss, storyCss, siteCss, siteJs, dailyPolicy, brandRadar, closingQuotationPool] = await Promise.all([
     readFile(path.join(repoRoot, "core/styles/base.css"), "utf8"),
     readFile(path.join(repoRoot, "core/styles/themes.css"), "utf8"),
     readFile(path.join(repoRoot, "core/styles/story.css"), "utf8"),
@@ -432,6 +452,7 @@ export async function buildSite({
     readFile(path.join(repoRoot, "core/site.js"), "utf8"),
     readJson(path.join(repoRoot, "automation/daily-policy.json")),
     readJson(path.join(repoRoot, "automation/brand-radar.json")),
+    readJson(path.join(repoRoot, "automation/closing-quotation-pool.json")),
   ]);
   const issues = [];
 
@@ -443,6 +464,7 @@ export async function buildSite({
       baseCss,
       dailyPolicy,
       brandRadar,
+      closingQuotationPool,
     });
     const issueOut = path.join(outDir, "issues", id);
     await mkdir(issueOut, { recursive: true });

@@ -213,7 +213,11 @@ function archiveSummary(weeks) {
 function dailyCoda(issue) {
   const artDirection = issue.artDirection;
   const palette = artDirection.closing_palette;
-  return `<section class="daily-coda" aria-labelledby="daily-coda-title" style="--coda-bg:${escapeHtml(palette.background)};--coda-fg:${escapeHtml(palette.foreground)};--coda-accent:${escapeHtml(palette.accent)}"><p class="coda-marker"><span>DAILY CODA</span><time datetime="${escapeHtml(issue.publication_date)}">${escapeHtml(issue.publication_date)}</time></p><div class="coda-statement"><p>QUIET ENDING / ${escapeHtml(issue.iso_week)}</p><h2 id="daily-coda-title">${escapeHtml(artDirection.quiet_ending)}</h2><p>We follow the story into its own visual world. References teach; they do not dictate. No JavaScript is required to read. No automated PASS can replace a human judgment.</p></div><div class="coda-principles"><p>STABLE PRINCIPLES</p><dl><div><dt>01</dt><dd><strong>TRUTH</strong><span>可核验的事实</span></dd></div><div><dt>02</dt><dd><strong>AUTHORSHIP</strong><span>独立的表达</span></dd></div><div><dt>03</dt><dd><strong>ACCESS</strong><span>真实可用</span></dd></div></dl></div></section>`;
+  const quotation = artDirection.closing_quotation ?? {
+    language: "zh-CN",
+    text: artDirection.quiet_ending,
+  };
+  return `<section class="daily-coda" aria-labelledby="daily-coda-title" style="--coda-bg:${escapeHtml(palette.background)};--coda-fg:${escapeHtml(palette.foreground)};--coda-accent:${escapeHtml(palette.accent)}"><p class="coda-marker"><span>DAILY CODA</span><time datetime="${escapeHtml(issue.publication_date)}">${escapeHtml(issue.publication_date)}</time></p><div class="coda-statement"><p>DAILY QUOTATION / ${escapeHtml(issue.iso_week)} · ${escapeHtml(quotation.language.toUpperCase())}</p><blockquote><h2 id="daily-coda-title">${escapeHtml(quotation.text)}</h2></blockquote></div></section>`;
 }
 
 function archiveIssueRow(issue, index) {

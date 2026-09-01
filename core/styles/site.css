@@ -421,7 +421,7 @@ body[data-shell="publication"] main {
   position: relative;
   display: grid;
   min-height: 75svh;
-  grid-template-columns: 0.25fr 1.35fr 1fr;
+  grid-template-columns: 0.25fr minmax(0, 1.35fr) minmax(12rem, 0.65fr);
   gap: 3rem;
   padding: clamp(4rem, 9vw, 9rem) 1.25rem;
   overflow: hidden;
@@ -464,15 +464,20 @@ body[data-shell="publication"] main {
 
 .coda-marker time { color: var(--coda-accent); }
 
-.coda-statement,
-.coda-principles { position: relative; z-index: 1; }
+.coda-statement {
+  position: relative;
+  z-index: 1;
+  grid-column: 2 / -1;
+  align-self: center;
+}
 
-.coda-statement > p:first-child,
-.coda-principles > p {
+.coda-statement > p:first-child {
   margin: 0 0 1.5rem;
   font: 700 0.72rem/1.2 ui-monospace, monospace;
   letter-spacing: 0.09em;
 }
+
+.coda-statement blockquote { margin: 0; }
 
 .daily-coda h2 {
   max-width: 12ch;
@@ -483,38 +488,6 @@ body[data-shell="publication"] main {
   letter-spacing: -0.065em;
   line-height: 0.94;
   text-wrap: balance;
-}
-
-.coda-statement > p:last-child {
-  max-width: 42rem;
-  margin: 2rem 0 0;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.coda-principles {
-  align-self: end;
-  padding: 1.25rem;
-  border: 1px solid color-mix(in srgb, currentColor 55%, transparent);
-  background: color-mix(in srgb, var(--coda-bg) 82%, var(--coda-fg));
-}
-
-.coda-principles dl { margin: 0; }
-
-.coda-principles dl div {
-  display: grid;
-  grid-template-columns: 3rem 1fr;
-  padding: 1rem 0;
-  border-top: 1px solid currentColor;
-}
-
-.coda-principles dt,
-.coda-principles dd,
-.coda-principles strong,
-.coda-principles span {
-  display: block;
-  margin: 0;
-  font: 700 0.76rem/1.5 ui-monospace, monospace;
 }
 
 .publication-footer {
@@ -1096,17 +1069,17 @@ body[data-page="facsimile"] .publication-footer {
   .coda-marker {
     flex-direction: row;
     justify-content: space-between;
+    padding-right: 2.5rem;
     writing-mode: initial;
   }
+
+  .coda-statement { grid-column: 1; }
 
   .daily-coda h2 {
     max-width: 11ch;
     font-size: clamp(3rem, 15vw, 5.6rem);
     line-height: 0.98;
   }
-
-  .coda-statement > p:last-child { font-size: 0.9375rem; }
-  .coda-principles { margin-top: 1rem; }
 
   .archive-hero {
     min-height: 72svh;
@@ -1608,7 +1581,6 @@ body[data-page="facsimile"] .publication-footer {
   }
 
   .daily-coda h2 { font-size: clamp(3rem, 7vw, 4.5rem); }
-  .coda-statement > p:last-child { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
