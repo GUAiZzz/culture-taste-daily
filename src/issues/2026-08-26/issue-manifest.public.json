@@ -23,7 +23,7 @@
   },
   "source_hashes": {
     "content_sha256": "e0824fc2ac83dcb067e934b3355d1178afa35e9f882678ac0e47fee2ced1022a",
-    "art_direction_sha256": "d58f659995a6522ba7afc8a628f424bb3ac56b082b9823702113278b38a2bbd7",
+    "art_direction_sha256": "f2f337731050b9c1dc6e6e98a21851d61ba3404f1f2aeaefbcf118599f83249f",
     "issue_style_sha256": "bc6c54204c1a8c57c966155efd41d7fefb00b05441f8127644663b518fce5a73"
   },
   "harrytone": {
@@ -47,7 +47,8 @@
     "behance_viewing_arc": "从熟悉鞋型进入，拉长到五小时电影，再落到公共档案、商业 archive 与有争议的摄影回顾，最后用一句判断收束",
     "mobile_translation": "校准轨退为顶部短索引，五帧全部纵向展开；不同图像比例保留，但不产生横向滚动",
     "mobbin_usability_constraint": "所有来源图明确可点击、焦点可见、点击目标至少 44px；无 JavaScript 时全文、来源与图片说明完整",
-    "quiet_ending": "一条未被涂满的银灰底边与一句：没有换动作，就只是又被擦亮了一次"
+    "quiet_ending": "一条未被涂满的银灰底边与一句：没有换动作，就只是又被擦亮了一次",
+    "closing_palette": {"background":"#D7D6D0","foreground":"#101010","accent":"#A52E12","rationale":"银灰保持 proof sheet 的未完成感，深墨承载判断，暗安全橙只标出真正发生变化的动作。"}
   },
   "variation_review": {
     "comparison_mode": "prior_issues",

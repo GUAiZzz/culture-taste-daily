@@ -176,7 +176,10 @@ function issueCard(issue, pathPrefix, position) {
   const cover = issue.coverAsset
     ? `<img src="${pathPrefix}assets/${escapeHtml(issue.coverAsset)}" alt="${escapeHtml(issue.title_en || issue.title)} issue cover preview" loading="lazy" decoding="async">`
     : `<div class="type-cover" aria-hidden="true"><span>${escapeHtml(coverLead)}</span>${coverTail ? `<b>${escapeHtml(coverTail)}</b>` : ""}<i>${escapeHtml(issue.publication_date.slice(5).replace("-", "/"))}</i></div>`;
-  return `<li class="issue-card" data-kind="${escapeHtml(issue.kind)}" style="--card-index:${position}"><a href="${pathPrefix}issues/${escapeHtml(issue.issue_id)}/" data-theme-link><div class="issue-card-cover">${cover}<span class="open-mark">OPEN ↗</span></div><div class="issue-card-copy"><p>${escapeHtml(issue.publication_date)} · ${escapeHtml(issue.kind === "current" ? "CURRENT FIELD" : "HISTORICAL ORIGINAL")}</p><h3>${escapeHtml(issue.title)}</h3><strong>${escapeHtml(issue.title_en)}</strong><span>${escapeHtml(issue.deck)}</span></div></a></li>`;
+  const status = issue.temporal_status === "current"
+    ? "CURRENT WEEK"
+    : issue.preservation_kind === "historical_original" ? "HISTORICAL · ORIGINAL" : "HISTORICAL";
+  return `<li class="issue-card" data-temporal-status="${escapeHtml(issue.temporal_status)}" style="--card-index:${position}"><a href="${pathPrefix}issues/${escapeHtml(issue.issue_id)}/" data-theme-link><div class="issue-card-cover">${cover}<span class="open-mark">OPEN ↗</span></div><div class="issue-card-copy"><p>${escapeHtml(issue.publication_date)} · ${escapeHtml(status)}</p><h3>${escapeHtml(issue.title)}</h3><strong>${escapeHtml(issue.title_en)}</strong><span>${escapeHtml(issue.deck)}</span></div></a></li>`;
 }
 
 function issueGrid(issues, pathPrefix) {
@@ -192,10 +195,53 @@ function issueRangeLabel(issues) {
   const day = (value) => String(Number(value.slice(8, 10))).padStart(2, "0");
   const firstMonth = monthName(first);
   const lastMonth = monthName(last);
-  const range = firstMonth === lastMonth
+  const range = first === last
+    ? `${day(first)} ${firstMonth}`
+    : firstMonth === lastMonth
     ? `${day(first)}—${day(last)} ${lastMonth}`
     : `${day(first)} ${firstMonth}—${day(last)} ${lastMonth}`;
   return `THE ISSUES / ${range}`;
+}
+
+function archiveSummary(weeks) {
+  const historicalWeeks = weeks.filter((week) => week.temporal_status === "historical");
+  const issueCount = historicalWeeks.reduce((total, week) => total + week.issues.length, 0);
+  if (!historicalWeeks.length) return "Archive begins with this week.";
+  return `${String(historicalWeeks.length).padStart(2, "0")} HISTORICAL WEEKS · ${String(issueCount).padStart(2, "0")} ISSUES`;
+}
+
+function dailyCoda(issue) {
+  const artDirection = issue.artDirection;
+  const palette = artDirection.closing_palette;
+  return `<section class="daily-coda" aria-labelledby="daily-coda-title" style="--coda-bg:${escapeHtml(palette.background)};--coda-fg:${escapeHtml(palette.foreground)};--coda-accent:${escapeHtml(palette.accent)}"><p class="coda-marker"><span>DAILY CODA</span><time datetime="${escapeHtml(issue.publication_date)}">${escapeHtml(issue.publication_date)}</time></p><div class="coda-statement"><p>QUIET ENDING / ${escapeHtml(issue.iso_week)}</p><h2 id="daily-coda-title">${escapeHtml(artDirection.quiet_ending)}</h2><p>We follow the story into its own visual world. References teach; they do not dictate. No JavaScript is required to read. No automated PASS can replace a human judgment.</p></div><div class="coda-principles"><p>STABLE PRINCIPLES</p><dl><div><dt>01</dt><dd><strong>TRUTH</strong><span>可核验的事实</span></dd></div><div><dt>02</dt><dd><strong>AUTHORSHIP</strong><span>独立的表达</span></dd></div><div><dt>03</dt><dd><strong>ACCESS</strong><span>真实可用</span></dd></div></dl></div></section>`;
+}
+
+function archiveIssueRow(issue, index) {
+  const status = issue.temporal_status === "current"
+    ? "CURRENT WEEK"
+    : issue.preservation_kind === "historical_original" ? "HISTORICAL · ORIGINAL" : "HISTORICAL";
+  return `<li><a href="../issues/${escapeHtml(issue.issue_id)}/" data-theme-link><span>${String(index + 1).padStart(2, "0")}</span><time datetime="${escapeHtml(issue.publication_date)}">${escapeHtml(issue.publication_date)}</time><div><strong>${escapeHtml(issue.title)}</strong><small>${escapeHtml(issue.title_en)}</small></div><em>${escapeHtml(status)}</em><i aria-hidden="true">↗</i></a></li>`;
+}
+
+function weekCoverSlivers(week) {
+  const covers = week.issues.filter((issue) => issue.coverAsset).slice(0, 4);
+  return `<span class="week-cover-slivers" aria-hidden="true">${covers.map((issue) => `<span><img src="../assets/${escapeHtml(issue.coverAsset)}" alt="" loading="lazy" decoding="async"></span>`).join("")}</span>`;
+}
+
+function weekDateRange(week) {
+  const dates = week.issues.map((issue) => issue.publication_date).sort();
+  return dates.length === 1 ? dates[0] : `${dates[0]} — ${dates.at(-1)}`;
+}
+
+function weekDossier(week, { current = false } = {}) {
+  const latest = week.issues[0];
+  const judgment = latest.editorial_position ?? latest.deck;
+  const panelId = `panel-${week.key}`;
+  const ledger = `<ol class="week-date-ledger">${week.issues.map(archiveIssueRow).join("")}</ol>`;
+  if (current) {
+    return `<section class="archive-week current-week" id="week-${escapeHtml(week.key)}" data-week="${escapeHtml(week.key)}"><header class="current-week-heading"><p>CURRENT WEEK</p><h2>${escapeHtml(week.key)}</h2><p>${escapeHtml(weekDateRange(week))} · ${String(week.issues.length).padStart(2, "0")} ${week.issues.length === 1 ? "ISSUE" : "ISSUES"}</p></header><div class="current-week-judgment"><p>${escapeHtml(judgment)}</p>${weekCoverSlivers(week)}</div>${ledger}</section>`;
+  }
+  return `<section class="archive-week historical-week" id="week-${escapeHtml(week.key)}" data-week="${escapeHtml(week.key)}" data-week-dossier><h3><button type="button" data-week-toggle aria-expanded="true" aria-controls="${escapeHtml(panelId)}"><span class="week-number">${escapeHtml(week.key)}</span><span class="week-range">${escapeHtml(weekDateRange(week))}<small>${String(week.issues.length).padStart(2, "0")} ${week.issues.length === 1 ? "ISSUE" : "ISSUES"}</small></span><span class="week-judgment">${escapeHtml(judgment)}</span>${weekCoverSlivers(week)}<span class="week-toggle-mark" aria-hidden="true">＋</span></button></h3><div class="week-panel" id="${escapeHtml(panelId)}" data-week-panel>${ledger}</div></section>`;
 }
 
 function routeMap() {
@@ -260,19 +306,28 @@ function dailyIndex(issue) {
   return `<section class="daily-index" aria-labelledby="daily-index-title"><header><p>DAILY SELECTS / ${escapeHtml(issue.publication_date)}</p><div><h2 id="daily-index-title"><b>TODAY'S</b><i>FIELD NOTES.</i></h2></div></header><div class="radar-filters" role="group" aria-label="Filter today's selections">${filters}</div>${groups}</section>`;
 }
 
-export function renderHome({ issues, baseCss, themesCss, siteCss, siteJs }) {
+export function renderHome({ issues, weeks, baseCss, themesCss, siteCss, siteJs }) {
   const latest = [...issues].sort((a, b) => a.publication_date.localeCompare(b.publication_date)).at(-1);
+  const currentWeek = weeks.find((week) => week.temporal_status === "current");
+  const currentIssues = currentWeek.issues;
   const body = `<section class="home-hero" aria-labelledby="latest-title"><div class="hero-copy"><p class="hero-kicker">ISSUE ${String(issues.length).padStart(2, "0")} / ${escapeHtml(latest.publication_date)}</p><h1 id="latest-title"><a href="./issues/${escapeHtml(latest.issue_id)}/" data-theme-link>${escapeHtml(latest.title)}</a></h1><p class="hero-english">${escapeHtml(latest.title_en)}</p><p class="hero-deck">${escapeHtml(latest.deck)}</p><a class="hero-link" href="./issues/${escapeHtml(latest.issue_id)}/" data-theme-link>Read the latest issue <span aria-hidden="true">↗</span></a></div><div class="hero-map">${routeMap()}</div></section>
   ${dailyIndex(latest)}
-  <section class="issue-field" aria-labelledby="field-title"><div class="section-heading"><p>${escapeHtml(issueRangeLabel(issues))}</p><h2 id="field-title">不是同一个模板。<br>是不同的进入。</h2><p>Each issue keeps its own visual grammar. The publication shell only helps you move between them.</p></div>${issueGrid(issues, "./")}</section>
-  <section class="editorial-code" aria-labelledby="code-title"><p class="vertical-label">EDITORIAL CODE</p><div><h2 id="code-title">事实先站稳。<br>形式才开始冒险。</h2><p>We follow the story into its own visual world. References teach; they do not dictate. No JavaScript is required to read. No automated PASS can replace a human judgment.</p></div><dl><div><dt>01</dt><dd>TRUTH<br>可核验的事实</dd></div><div><dt>02</dt><dd>AUTHORSHIP<br>独立的表达</dd></div><div><dt>03</dt><dd>ACCESS<br>真实可用</dd></div></dl></section>`;
+  <section class="issue-field" aria-labelledby="field-title"><div class="section-heading"><p>${escapeHtml(issueRangeLabel(currentIssues))} · ${escapeHtml(currentWeek.key)}</p><h2 id="field-title">这一周，<br>不同的进入。</h2><p>Only the latest published week stays here. Each issue keeps its own visual grammar; earlier weeks move into the archive.</p></div>${issueGrid(currentIssues, "./")}<a class="archive-bridge" href="./archive/" data-theme-link><span>OPEN WEEKLY ARCHIVE</span><strong>${escapeHtml(archiveSummary(weeks))}</strong><i aria-hidden="true">↗</i></a></section>
+  ${dailyCoda(latest)}`;
   return shell({ title: "Culture & Taste Daily — Preview", body, baseCss, themesCss, siteCss, siteJs, page: "home" });
 }
 
-export function renderArchive({ issues, baseCss, themesCss, siteCss, siteJs }) {
-  const sorted = [...issues].sort((a, b) => b.publication_date.localeCompare(a.publication_date));
-  const rows = sorted.map((issue, index) => `<li data-kind="${escapeHtml(issue.kind)}"><a href="../issues/${escapeHtml(issue.issue_id)}/"><span>${String(index + 1).padStart(2, "0")}</span><time datetime="${escapeHtml(issue.publication_date)}">${escapeHtml(issue.publication_date)}</time><div><strong>${escapeHtml(issue.title)}</strong><small>${escapeHtml(issue.title_en)}</small></div><em>${escapeHtml(issue.kind === "current" ? "CURRENT FIELD" : "ORIGINAL")}</em><i aria-hidden="true">↗</i></a></li>`).join("");
-  const body = `<section class="archive-hero"><p>ARCHIVE / ${String(issues.length).padStart(2, "0")} ISSUES</p><h1>ARCHIVE</h1><div class="archive-note"><p>The archive is not a template gallery. It is a record of changing editorial positions, visual systems and constraints.</p><p>历史原件优先保留；无法恢复的部分会明确标注，而不是被新系统补写。</p></div></section><section class="archive-index" aria-labelledby="archive-title"><div class="archive-controls"><h2 id="archive-title">Complete index</h2><div role="group" aria-label="Filter issues"><button type="button" data-filter="all" aria-pressed="true">All</button><button type="button" data-filter="current" aria-pressed="false">Current</button><button type="button" data-filter="historical" aria-pressed="false">Historical</button></div></div><ol>${rows}</ol></section><section class="archive-covers" aria-label="Issue covers">${issueGrid(issues, "../")}</section>`;
+export function renderArchive({ issues, weeks, baseCss, themesCss, siteCss, siteJs }) {
+  const currentWeek = weeks.find((week) => week.temporal_status === "current");
+  const historicalWeeks = weeks.filter((week) => week.temporal_status === "historical");
+  const showYearHeadings = new Set(historicalWeeks.map((week) => week.year)).size > 1;
+  let priorYear = null;
+  const historical = historicalWeeks.map((week) => {
+    const yearHeading = showYearHeadings && priorYear !== week.year ? `<h2 class="archive-year">${week.year}</h2>` : "";
+    priorYear = week.year;
+    return `${yearHeading}${weekDossier(week)}`;
+  }).join("");
+  const body = `<section class="archive-hero"><p>ARCHIVE / ${String(issues.length).padStart(2, "0")} ISSUES · ${String(weeks.length).padStart(2, "0")} WEEKS</p><h1>ARCHIVE</h1><div class="archive-note"><p>The latest published week stays current. Earlier issues are filed as weekly dossiers, while preserved originals keep their provenance.</p><p>当前周与历史周分开；历史原件继续保留标记，但不再决定时间状态。</p></div></section><section class="archive-index" aria-labelledby="archive-title"><h2 id="archive-title" class="archive-index-title">Current / Historical</h2>${weekDossier(currentWeek, { current: true })}<div class="historical-weeks"><header class="historical-weeks-heading"><p>HISTORICAL</p><h2>BY WEEK</h2><span>${escapeHtml(archiveSummary(weeks))}</span></header>${historical || `<p class="empty-archive">Earlier weeks will appear here after the current week closes.</p>`}</div></section>`;
   return shell({ title: "Archive — Culture & Taste Daily Preview", body, baseCss, themesCss, siteCss, siteJs, pathPrefix: "../", page: "archive" });
 }
 

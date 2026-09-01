@@ -147,7 +147,7 @@ html[data-visual-theme="analog"]::after {
 
 .theme-dots button[aria-pressed="true"]::before {
   box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px currentColor;
-  transform: translate(-50%, -50%) scale(1.08);
+  transform: translate(-50%, -50%);
 }
 
 .theme-dots button::after {

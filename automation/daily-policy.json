@@ -71,6 +71,13 @@
     "exact_asset_reuse_forbidden": true,
     "comparison_window_issues": 7
   },
+  "closing_palette_gate": {
+    "required": true,
+    "effective_from": "2026-08-23",
+    "comparison_window_issues": 7,
+    "text_contrast_minimum": 4.5,
+    "accent_contrast_minimum": 3
+  },
   "standing_beats": [
     {
       "id": "supreme-thursday-drop",
@@ -118,6 +125,7 @@
     "image_rights_basis_separate_from_credit",
     "detail_level_reference_recheck",
     "seven_issue_variation_review",
+    "locked_daily_coda_palette",
     "local_cover_and_headline_collision_gate",
     "deterministic_build_and_independent_qa",
     "privacy_scan",

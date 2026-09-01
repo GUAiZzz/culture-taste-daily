@@ -15,7 +15,7 @@ import {
 } from "./files.mjs";
 import { assertPublicTree } from "./privacy.mjs";
 import { validateJsonFile } from "./schema.mjs";
-import { evaluateDateSemantics } from "./dates.mjs";
+import { evaluateDateSemantics, groupIssuesByIsoWeek, isoWeekForDate } from "./dates.mjs";
 import { assertOfficialStoryImages } from "./official-media.mjs";
 import {
   renderArchive,
@@ -35,6 +35,53 @@ const RADAR_CATEGORIES = ["fashion", "music", "objects", "city"];
 
 function assertEqual(actual, expected, label) {
   if (actual !== expected) throw new Error(`${label} mismatch: expected ${expected}, received ${actual}`);
+}
+
+function colorLuminance(hex) {
+  const channels = hex.slice(1).match(/.{2}/g).map((value) => Number.parseInt(value, 16) / 255);
+  const linear = channels.map((value) => value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4);
+  return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
+}
+
+export function contrastRatio(first, second) {
+  const [light, dark] = [colorLuminance(first), colorLuminance(second)].sort((a, b) => b - a);
+  return (light + 0.05) / (dark + 0.05);
+}
+
+function validateClosingPalette({ issueId, artDirection, manifestArtDirection, gate }) {
+  for (const [key, value] of Object.entries(manifestArtDirection)) {
+    if (stableJson(artDirection[key]) !== stableJson(value)) {
+      throw new Error(`${issueId} public art direction does not mirror art-direction.json field ${key}`);
+    }
+  }
+  if (!gate?.required || issueId < gate.effective_from) return;
+  const palette = manifestArtDirection.closing_palette;
+  if (!palette) throw new Error(`${issueId} requires a locked closing palette`);
+  const textContrast = contrastRatio(palette.background, palette.foreground);
+  const accentContrast = contrastRatio(palette.background, palette.accent);
+  if (textContrast < gate.text_contrast_minimum) {
+    throw new Error(`${issueId} closing palette text contrast ${textContrast.toFixed(2)} is below ${gate.text_contrast_minimum}`);
+  }
+  if (accentContrast < gate.accent_contrast_minimum) {
+    throw new Error(`${issueId} closing palette accent contrast ${accentContrast.toFixed(2)} is below ${gate.accent_contrast_minimum}`);
+  }
+}
+
+export function assertClosingPaletteVariation(issues, gate) {
+  if (!gate?.required) return;
+  const eligible = issues
+    .filter((issue) => issue.issueId >= gate.effective_from)
+    .sort((a, b) => a.issueId.localeCompare(b.issueId));
+  for (const [index, issue] of eligible.entries()) {
+    const palette = issue.manifest.art_direction.closing_palette;
+    const signature = [palette.background, palette.foreground, palette.accent].join("/");
+    const previous = eligible.slice(Math.max(0, index - gate.comparison_window_issues), index);
+    const repeated = previous.find((candidate) => {
+      const prior = candidate.manifest.art_direction.closing_palette;
+      return [prior.background, prior.foreground, prior.accent].join("/") === signature;
+    });
+    if (repeated) throw new Error(`${issue.issueId} closing palette exactly repeats ${repeated.issueId}`);
+  }
 }
 
 async function discoverDateDirectories(root, requestedIssue, required = true) {
@@ -241,6 +288,12 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, dailyPolicy, 
   assertEqual(await sha256File(contentPath), manifest.content_lock.sha256, "content lock");
   assertEqual(await sha256File(contentPath), manifest.source_hashes.content_sha256, "content source hash");
   assertEqual(await sha256File(artPath), manifest.source_hashes.art_direction_sha256, "art direction source hash");
+  validateClosingPalette({
+    issueId,
+    artDirection,
+    manifestArtDirection: manifest.art_direction,
+    gate: dailyPolicy.closing_palette_gate,
+  });
   const actualStyleHash = issueCss ? await sha256File(stylePath) : null;
   assertEqual(actualStyleHash, manifest.source_hashes.issue_style_sha256, "issue style source hash");
   await verifyDependencies(repoRoot, manifest);
@@ -347,7 +400,7 @@ async function buildHistoricalIssues({ historicalRoot, outDir, baseCss, themesCs
       title: meta.title,
       title_en: meta.title_en,
       deck: meta.deck,
-      kind: "historical",
+      preservation_kind: "historical_original",
       coverAsset: meta.cover_asset,
       digest,
       migration_mode: meta.migration_mode,
@@ -420,6 +473,7 @@ export async function buildSite({
     issue.issuePayloadDigest = issuePayloadDigest;
     issues.push(issue);
   }
+  assertClosingPaletteVariation(issues, dailyPolicy.closing_palette_gate);
 
   const siteAssets = path.join(repoRoot, "src/site/assets");
   if (await exists(siteAssets)) {
@@ -444,13 +498,15 @@ export async function buildSite({
       title: issue.title,
       title_en: issue.titleEn,
       deck: issue.manifest.editorial_position,
-      kind: "current",
+      preservation_kind: "native_issue",
       coverAsset,
       digest: issue.candidateDigest,
       production_eligible: issue.dateSemantics.production_candidate_valid,
       visibility: issue.manifest.visibility,
       stories: issue.manifest.stories,
       dailyRadar: issue.dailyRadar,
+      artDirection: issue.manifest.art_direction,
+      editorial_position: issue.manifest.editorial_position,
     };
   }));
   const coveredIssues = currentIssues.filter((issue) => issue.coverAsset).sort((a, b) => a.publication_date.localeCompare(b.publication_date));
@@ -464,15 +520,28 @@ export async function buildSite({
       }
     }
   }
-  const publicationIssues = [
+  const publicationBase = [
     ...historical,
     ...currentIssues.filter((issue) => issue.visibility !== "future_draft"),
   ].sort((a, b) => a.publication_date.localeCompare(b.publication_date));
+  const latestWeekKey = isoWeekForDate(publicationBase.at(-1).publication_date).key;
+  const publicationIssues = publicationBase.map((issue) => {
+    const week = isoWeekForDate(issue.publication_date);
+    return {
+      ...issue,
+      iso_week: week.key,
+      temporal_status: week.key === latestWeekKey ? "current" : "historical",
+    };
+  });
+  const archiveWeeks = groupIssuesByIsoWeek(publicationIssues).map((week) => ({
+    ...week,
+    temporal_status: week.key === latestWeekKey ? "current" : "historical",
+  }));
 
   const archiveDir = path.join(outDir, "archive");
   await mkdir(archiveDir, { recursive: true });
-  await writeFile(path.join(outDir, "index.html"), renderHome({ issues: publicationIssues, baseCss, themesCss, siteCss, siteJs }), "utf8");
-  await writeFile(path.join(archiveDir, "index.html"), renderArchive({ issues: publicationIssues, baseCss, themesCss, siteCss, siteJs }), "utf8");
+  await writeFile(path.join(outDir, "index.html"), renderHome({ issues: publicationIssues, weeks: archiveWeeks, baseCss, themesCss, siteCss, siteJs }), "utf8");
+  await writeFile(path.join(archiveDir, "index.html"), renderArchive({ issues: publicationIssues, weeks: archiveWeeks, baseCss, themesCss, siteCss, siteJs }), "utf8");
   await writeFile(path.join(outDir, "rss.xml"), renderRss({ issues: publicationIssues, baseUrl }), "utf8");
   await writeFile(path.join(outDir, "sitemap.xml"), renderSitemap({ issues: publicationIssues, baseUrl }), "utf8");
   const robotsBase = new URL(baseUrl).pathname.replace(/\/$/, "");
@@ -505,6 +574,15 @@ export async function buildSite({
       date_semantics: issue.dateSemantics,
     })),
     historical_issues: historical,
+    archive_weeks: archiveWeeks.map((week) => ({
+      key: week.key,
+      year: week.year,
+      week: week.week,
+      start: week.start,
+      end: week.end,
+      temporal_status: week.temporal_status,
+      issue_ids: week.issues.map((issue) => issue.issue_id),
+    })),
     artifact_digest: artifactDigest,
     artifact_files: artifactFiles,
   };

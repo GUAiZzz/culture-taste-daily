@@ -23,7 +23,7 @@
   },
   "source_hashes": {
     "content_sha256": "7c6182645bb289d3fa8f45c9e707a76ede4f8c6bebd04e9f0dafd9af76754177",
-    "art_direction_sha256": "917c7b300bd21086b31330d94e68dd872926d5eed8d1f6348038001b7fd7413f",
+    "art_direction_sha256": "ff1285b28e280b7be39e4d49dd58475f19d20ea02463a4f6daf434d987c54d2a",
     "issue_style_sha256": "c0a82806402b28680b15b3b7d4b4575b31171107700a26dd37713aadf0a19bd1"
   },
   "harrytone": {
@@ -39,7 +39,7 @@
     "background_logic": "deep indigo holds a sequence of paper, orange, lime and blue signal fields",
     "palette_logic": "indigo for the clock, paper for verification, orange for movement, lime for confirmed windows, blue for open questions",
     "type_scale_logic": "compressed display titles for entry points, readable 18px body copy, monospaced timestamps and source labels",
-    "image_behavior": "source image preview where a publisher image endpoint is available, linked back to the source; original data diagrams only where no source image is safely surfaced",
+    "image_behavior": "one original local SVG information figure per story; no third-party editorial photography",
     "page_density_and_tempo": "dense cover, two release-led majors, tactile signals, explicit runway gap, forward-looking watches, quiet exit",
     "core_visual_action": "a route changes from clock to object to room to city without pretending the signals are one trend",
     "cover_composition": "a large moving-entry title beside a route board connecting drop, release, object, gallery and runway",
@@ -47,7 +47,8 @@
     "behance_viewing_arc": "entry window, release system, object translation, public room, curatorial power, runway gap, future watch",
     "mobile_translation": "single-column figures, two-column index disclosure, shorter display headings, captions retained below every figure",
     "mobbin_usability_constraint": "44px links, scroll-margin for anchored headings, readable source labels, no nested scrolling in the redesigned historical reader",
-    "quiet_ending": "an intentionally unfilled runway radar and one sentence waiting for the next verified drop"
+    "quiet_ending": "an intentionally unfilled runway radar and one sentence waiting for the next verified drop",
+    "closing_palette": {"background":"#1B2452","foreground":"#F4F0E8","accent":"#FF9A32","rationale":"Night indigo keeps the radar deliberately open; orange marks the next verified movement without pretending it has arrived."}
   },
   "variation_review": {
     "comparison_mode": "prior_issues",

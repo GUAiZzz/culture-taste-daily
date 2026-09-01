@@ -71,6 +71,8 @@ The issue may publish none of these when evidence or editorial relevance is weak
 - Chinese carries the complete argument; English adds no unsupported fact or certainty.
 - Run the canonical HarryTone audit before content lock.
 - Compare up to seven previous valid issues before art direction.
+- Generate and lock `closing_palette` from the day's `quiet_ending`, `dominant_mood`, and `palette_logic`; record background, foreground, accent, and a public editorial rationale. This is authored daily input, never browser randomness.
+- Keep body-text contrast at or above 4.5:1, structural accent contrast at or above 3:1, and do not repeat the exact three-color set from the previous seven issues.
 - Lock today's editorial/design problem before visual browsing.
 - Reopen and verify at least one detail-level project, live work, or case-study article; use at most two new deep cases by default.
 - Complete the reference chain: original problem → transferable principle → today's problem → independent expression → do-not-copy surface.

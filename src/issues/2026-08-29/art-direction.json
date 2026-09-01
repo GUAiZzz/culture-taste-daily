@@ -13,5 +13,6 @@
   "behance_viewing_arc": "从衣服的使用语法进入身体差异，再转向录音与城市时间表",
   "mobile_translation": "390px 下竖带收成顶部色条，内容单列，无横向滚动",
   "mobbin_usability_constraint": "交互目标不少于 44px，焦点可见，外图失败仍保留来源与权利说明",
-  "quiet_ending": "新意不宣布胜利，只留下一个可被使用的入口"
+  "quiet_ending": "新意不宣布胜利，只留下一个可被使用的入口",
+  "closing_palette": {"background":"#251936","foreground":"#EAF1F4","accent":"#F1A72B","rationale":"深紫压低胜利宣言，冰白保留清醒阅读，琥珀只照亮那个仍可被使用的入口。"}
 }

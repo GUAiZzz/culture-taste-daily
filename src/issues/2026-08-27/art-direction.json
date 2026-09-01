@@ -13,5 +13,6 @@
   "behance_viewing_arc": "从全球发售的本地时钟开始，进入高山 campaign，再穿过 Vault、黑胶、水瓶、扑克牌，最后回到图书馆和便利店的工作现场",
   "mobile_translation": "地图视觉压缩为纵向坐标条，八个故事全部单列展开；图片保留不同裁切但不制造横向滚动",
   "mobbin_usability_constraint": "所有来源图明确可点击、焦点可见、点击目标至少 44px；无 JavaScript 时全文、来源、图片说明与 Preview 权利提示完整",
-  "quiet_ending": "把现场还给使用者：发布不是终点，是对象第一次被使用的条件"
+  "quiet_ending": "把现场还给使用者：发布不是终点，是对象第一次被使用的条件",
+  "closing_palette": {"background":"#123B40","foreground":"#F4F0E4","accent":"#F2D14C","rationale":"深青保留城市现场的厚度，纸白保证阅读，信号黄把第一次真实使用标成入口而不是终点。"}
 }

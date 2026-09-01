@@ -96,6 +96,14 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
   if (policy.timezone !== "Asia/Shanghai") blockers.push("daily policy timezone must remain Asia/Shanghai");
   if (policy.mode !== "scheduled_dry_run_candidate") blockers.push("daily policy may authorize dry-run candidates only");
   if (policy.dry_run_base_ref !== "preview-build-v1") blockers.push("daily candidates must use the current preview-build-v1 publication base");
+  const closingPaletteGate = policy.closing_palette_gate;
+  if (!closingPaletteGate?.required
+    || !DATE_PATTERN.test(closingPaletteGate.effective_from)
+    || closingPaletteGate.comparison_window_issues !== 7
+    || closingPaletteGate.text_contrast_minimum < 4.5
+    || closingPaletteGate.accent_contrast_minimum < 3) {
+    blockers.push("daily closing palette gate must remain locked, contrast-safe, and compared against seven issues");
+  }
   validateBrandRadar({ policy, radar: brandRadar, blockers });
 
   const currentMinute = minutes(shanghai.time);

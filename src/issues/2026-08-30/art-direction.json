@@ -13,5 +13,6 @@
   "behance_viewing_arc": "从材料层次进入缝线结构，再听完整专辑，最后拿起电话",
   "mobile_translation": "390px 下所有时间格转为横向顶部标尺，正文单列且不裁字",
   "mobbin_usability_constraint": "交互目标不少于 44px，焦点可见，长链接可换行，外图失败仍显示来源",
-  "quiet_ending": "截止线之后不庆祝，只留下一个已经被做出的选择"
+  "quiet_ending": "截止线之后不庆祝，只留下一个已经被做出的选择",
+  "closing_palette": {"background":"#E9E0D2","foreground":"#151515","accent":"#B92F25","rationale":"米白保持截止后的安静，黑色承担既成选择，收暗的红色只作为不可撤回的截止戳。"}
 }

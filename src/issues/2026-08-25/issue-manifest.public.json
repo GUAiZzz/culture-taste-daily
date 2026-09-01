@@ -23,7 +23,7 @@
   },
   "source_hashes": {
     "content_sha256": "74963f0974b01e4c60937865986f2d63b19db2f1a0321aa39d19ec234aac827a",
-    "art_direction_sha256": "983138255c74e03ba8d9a072ede13f1588e7d2dcbdf03497da4a561e311fd3dd",
+    "art_direction_sha256": "3b476e3fae94b1573f8ad15dc3fc3ac9653ca2559dd7bf97e133352cdd4c79c6",
     "issue_style_sha256": "b41b8a6de7f77125ee893114d3a01d488c86c3f9f8265590760a2a21ce404691"
   },
   "harrytone": {
@@ -35,19 +35,20 @@
   "language_mode": "zh-CN_full__en_title_deck_abstract",
   "editorial_position": "The venue is an active editor: it decides who is seen first, who can approach, and where public access turns into commerce.",
   "art_direction": {
-    "dominant_mood": "a late-night cultural programme folded into a bright public floor plan",
-    "background_logic": "each story occupies a differently weighted room in one irregular floor plan; no route line connects them",
-    "palette_logic": "near-black, warm white, swimming-pool cyan, taxi yellow, orchid purple",
-    "type_scale_logic": "oversized narrow display type, readable 18–20px body, monospaced wayfinding labels",
-    "image_behavior": "one verified first-party official image per story in a linked Preview-only figure; local diagrams remain undisplayed supplemental assets and do not impersonate documentary photography",
-    "page_density_and_tempo": "compressed programme cover, extended lead, open major, six uneven signals, narrowed watch, quiet exit",
-    "core_visual_action": "an irregular floor plan changes scale and orientation as each venue redistributes attention",
-    "cover_composition": "an oversized issue title presses against eight differently sized room blocks; there is no map route or clock",
-    "desktop_interaction_mechanic": "progressive-enhancement room index updates by section while anchors and all reading remain available without JavaScript",
-    "behance_viewing_arc": "position, cover conflict, authorship depth, varied signals, unverified watch item, unresolved threshold",
-    "mobile_translation": "floor-plan blocks become a stacked programme; all content remains linear and navigation becomes a scrollable index",
-    "mobbin_usability_constraint": "44px targets, visible focus, no hidden reading, obvious hierarchy and source labels",
-    "quiet_ending": "one unoccupied white room and one unresolved question"
+    "dominant_mood": "深夜文化节目单折进明亮公共平面图：清醒、有张力，但不把商业入口伪装成公共性",
+    "background_logic": "近黑色是场地底图；每章占据一个比例不同的房间块，不再用路线或时钟连接故事",
+    "palette_logic": "near-black #09090B, warm white #F7F4ED, pool cyan #36D7E8, taxi yellow #FFD126, orchid #9B6BFF",
+    "type_scale_logic": "封面使用超大窄体系统字；正文保持 18–20px；章节编号与事实字段使用等宽系统字形成导视层",
+    "image_behavior": "每篇使用与事件对应的一手官方图片；未知使用权只通过可点击的 Preview 外链展示，原创平面图仅作为未展示的本地补充资产而不冒充现场影像",
+    "page_density_and_tempo": "封面像压缩节目单，COVER 拉长，MAJOR 留白，六条 SIGNAL 比例不一，WATCH 收窄，EXIT 安静",
+    "core_visual_action": "不规则平面图随场地权力关系改变比例和方向，而不是让所有故事排进同一条路线",
+    "cover_composition": "超大标题压住八个比例不同的房间块；不复用 8/24 的路线、时钟或 8/23 的日期闭合线",
+    "desktop_interaction_mechanic": "渐进增强的 room index 根据阅读位置更新当前章节；锚点可键盘访问，关闭 JavaScript 时全文与导航仍完整",
+    "behance_viewing_arc": "先给总命题，再以首尔形成主冲突，伦敦加深权力问题，四条信号改变节奏，TMEX 保留待验证项，最后回到门槛",
+    "mobile_translation": "房间块改为纵向节目单，双栏全部改单栏，标题不溢出，索引改为顶部可滚动导览",
+    "mobbin_usability_constraint": "正文不被交互遮挡；点击目标至少 44px；焦点可见；层级、来源和状态标签始终可识别",
+    "quiet_ending": "近黑空场中只保留一间未被占用的白色房间与一句问题",
+    "closing_palette": {"background":"#15111E","foreground":"#F7F4ED","accent":"#36D7E8","rationale":"近黑背景保留空场，暖白承担问题，泳池青只标出那间仍可被进入的房间。"}
   },
   "variation_review": {
     "comparison_mode": "prior_issues",

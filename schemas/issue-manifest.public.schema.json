@@ -227,7 +227,8 @@
         "behance_viewing_arc",
         "mobile_translation",
         "mobbin_usability_constraint",
-        "quiet_ending"
+        "quiet_ending",
+        "closing_palette"
       ],
       "properties": {
         "dominant_mood": { "type": "string" },
@@ -242,7 +243,18 @@
         "behance_viewing_arc": { "type": "string" },
         "mobile_translation": { "type": "string" },
         "mobbin_usability_constraint": { "type": "string" },
-        "quiet_ending": { "type": "string" }
+        "quiet_ending": { "type": "string" },
+        "closing_palette": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["background", "foreground", "accent", "rationale"],
+          "properties": {
+            "background": { "type": "string", "pattern": "^#[0-9A-F]{6}$" },
+            "foreground": { "type": "string", "pattern": "^#[0-9A-F]{6}$" },
+            "accent": { "type": "string", "pattern": "^#[0-9A-F]{6}$" },
+            "rationale": { "type": "string", "minLength": 1 }
+          }
+        }
       }
     },
     "story": {

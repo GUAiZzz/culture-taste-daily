@@ -5,7 +5,8 @@ import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
-import { buildSite } from "../scripts/lib/build.mjs";
+import { assertClosingPaletteVariation, buildSite, contrastRatio } from "../scripts/lib/build.mjs";
+import { groupIssuesByIsoWeek, isoWeekForDate } from "../scripts/lib/dates.mjs";
 import { evaluateGate } from "../scripts/lib/gate.mjs";
 import { readJson, sha256File, writeJson } from "../scripts/lib/files.mjs";
 import { runStaticChecks, runTechnicalQa } from "../scripts/lib/qa.mjs";
@@ -144,6 +145,23 @@ test("mobile protocol and repository skill are present", async () => {
   assert.match(skill, /MOBILE_EDITORIAL_PROTOCOL\.md/);
 });
 
+test("ISO week grouping is deterministic across boundaries, leap days, and missing publication days", () => {
+  assert.deepEqual(isoWeekForDate("2026-08-31"), {
+    key: "2026-W36", year: 2026, week: 36, start: "2026-08-31", end: "2026-09-06",
+  });
+  assert.equal(isoWeekForDate("2021-01-01").key, "2020-W53");
+  assert.equal(isoWeekForDate("2024-02-29").key, "2024-W09");
+  const weeks = groupIssuesByIsoWeek([
+    { issue_id: "a", publication_date: "2026-08-31" },
+    { issue_id: "b", publication_date: "2026-08-28" },
+    { issue_id: "c", publication_date: "2026-08-24" },
+  ]);
+  assert.deepEqual(weeks.map((week) => [week.key, week.issues.map((issue) => issue.issue_id)]), [
+    ["2026-W36", ["a"]],
+    ["2026-W35", ["b", "c"]],
+  ]);
+});
+
 test("repository Preview preserves all three historical originals as non-production issues", async () => {
   assert.deepEqual(previewReport.historical_issues.map((issue) => issue.issue_id), ["2026-08-20", "2026-08-21", "2026-08-22"]);
   assert.ok(previewReport.historical_issues.every((issue) => issue.production_eligible === false));
@@ -161,34 +179,35 @@ test("repository Preview preserves all three historical originals as non-product
   );
 });
 
-test("Preview homepage and archive expose the current 2026-08-23/24/25/26/27 fields plus historical issues", async () => {
+test("Preview homepage is bounded to the current week while Archive exposes every issue once by week", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
   const archive = await readFile(path.join(previewDist, "archive/index.html"), "utf8");
   const current = await readFile(path.join(previewDist, "issues/2026-08-31/index.html"), "utf8");
-  for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27"]) {
-    assert.ok(home.includes(`issues/${date}/`));
-    assert.ok(archive.includes(`issues/${date}/`));
+  for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-29", "2026-08-30", "2026-08-31"]) {
+    assert.equal((archive.match(new RegExp(`href="\\.\\.\\/issues\\/${date}\\/"`, "g")) ?? []).length, 1, date);
   }
+  assert.equal((home.match(/<li class="issue-card"/g) ?? []).length, 1);
+  assert.match(home, /<li class="issue-card"[\s\S]*?issues\/2026-08-31\//);
+  assert.doesNotMatch(home, /<li class="issue-card"[\s\S]*?issues\/2026-08-30\//);
   assert.match(home, /NON-PRODUCTION PREVIEW/);
-  assert.match(home, /THE ISSUES \/ 20—31 AUG/);
+  assert.match(home, /THE ISSUES \/ 31 AUG · 2026-W36/);
+  assert.match(home, /OPEN WEEKLY ARCHIVE/);
   assert.match(home, /meta name="robots" content="noindex,nofollow"/);
   assert.match(home, /rel="icon" type="image\/png" href="\.\/assets\/culture-taste-earth\.png"/);
   assert.match(archive, /rel="icon" type="image\/png" href="\.\.\/assets\/culture-taste-earth\.png"/);
   assert.match(current, /class="issue-brand"[\s\S]*class="brand-type"/);
   assert.doesNotMatch(current, /class="issue-brand"[\s\S]{0,240}<img/);
-  assert.match(home, /SAME FRAME, NEW MOVE/);
-  assert.match(home, /assets\/covers\/2026-08-23\.svg/);
+  assert.doesNotMatch(home, /SAME FRAME, NEW MOVE/);
   assert.match(archive, /assets\/covers\/2026-08-23\.svg/);
-  assert.match(home, /assets\/covers\/2026-08-25\.svg/);
-  assert.match(archive, /assets\/covers\/2026-08-25\.svg/);
-  assert.match(home, /assets\/covers\/2026-08-26\.svg/);
-  assert.match(archive, /assets\/covers\/2026-08-26\.svg/);
-  assert.match(home, /assets\/covers\/2026-08-27\.svg/);
   assert.match(archive, /assets\/covers\/2026-08-27\.svg/);
-  assert.match(home, /assets\/covers\/2026-08-30\.svg/);
   assert.match(archive, /assets\/covers\/2026-08-30\.svg/);
   assert.match(home, /assets\/covers\/2026-08-31\.svg/);
   assert.match(archive, /assets\/covers\/2026-08-31\.svg/);
+  assert.match(archive, /id="week-2026-W36"[\s\S]*?CURRENT WEEK/);
+  assert.match(archive, /id="week-2026-W35"[\s\S]*?HISTORICAL/);
+  assert.match(archive, /id="week-2026-W34"/);
+  assert.doesNotMatch(archive, /data-filter=/);
+  assert.doesNotMatch(archive, /class="archive-covers"/);
   assert.doesNotMatch(home, /<div class="type-cover"[^>]*><span>THE DAY/);
   await readFile(path.join(previewDist, "assets/culture-taste-earth.png"));
   for (const cover of ["2026-08-20.png", "2026-08-21.png", "2026-08-22.jpg", "2026-08-23.svg", "2026-08-25.svg", "2026-08-26.svg", "2026-08-27.svg", "2026-08-30.svg", "2026-08-31.svg"]) {
@@ -230,6 +249,32 @@ test("frontend integration keeps the formal issue intact while adding the supple
   for (const storyId of storyRoutes) assert.match(sitemap, new RegExp(`issues/2026-08-31/stories/${storyId}/`));
 });
 
+test("daily coda uses the latest locked slogan and a validated non-repeating palette", async () => {
+  const home = await readFile(path.join(previewDist, "index.html"), "utf8");
+  const nativeIssues = [];
+  for (const day of ["23", "24", "25", "26", "27", "28", "29", "30", "31"]) {
+    const artDirection = await readJson(path.join(repoRoot, `src/issues/2026-08-${day}/art-direction.json`));
+    const manifest = await readJson(path.join(repoRoot, `src/issues/2026-08-${day}/issue-manifest.public.json`));
+    assert.deepEqual(manifest.art_direction, Object.fromEntries(Object.keys(manifest.art_direction).map((key) => [key, artDirection[key]])));
+    assert.ok(contrastRatio(artDirection.closing_palette.background, artDirection.closing_palette.foreground) >= 4.5);
+    assert.ok(contrastRatio(artDirection.closing_palette.background, artDirection.closing_palette.accent) >= 3);
+    nativeIssues.push({ issueId: `2026-08-${day}`, manifest });
+  }
+  assert.match(home, /class="daily-coda"/);
+  assert.match(home, /最后一根支撑不被拆掉，提醒方法仍在承担结果/);
+  assert.match(home, /--coda-bg:#111B33;--coda-fg:#F4F0E8;--coda-accent:#78E6C5/);
+  assert.doesNotMatch(home, /事实先站稳/);
+  assert.doesNotMatch(home, /class="editorial-code"/);
+  assert.doesNotThrow(() => assertClosingPaletteVariation(nativeIssues, {
+    required: true, effective_from: "2026-08-23", comparison_window_issues: 7,
+  }));
+  const repeated = structuredClone(nativeIssues);
+  repeated.at(-1).manifest.art_direction.closing_palette = structuredClone(repeated.at(-2).manifest.art_direction.closing_palette);
+  assert.throws(() => assertClosingPaletteVariation(repeated, {
+    required: true, effective_from: "2026-08-23", comparison_window_issues: 7,
+  }), /exactly repeats/);
+});
+
 test("theme controls share equal marks while desktop and mobile keep distinct editorial compositions", async () => {
   const server = await startStaticServer(previewDist);
   let browser;
@@ -261,6 +306,45 @@ test("theme controls share equal marks while desktop and mobile keep distinct ed
       assert.deepEqual(layout.dots.map((dot) => dot.hit), [[44, 44], [44, 44], [44, 44]]);
       assert.deepEqual(layout.dots.map((dot) => dot.mark), [["12px", "12px"], ["12px", "12px"], ["12px", "12px"]]);
     }
+  } finally {
+    await browser?.close();
+    await server.close();
+  }
+});
+
+test("weekly Archive progressively enhances into a single-open keyboard accordion with deep links", async () => {
+  const server = await startStaticServer(previewDist);
+  let browser;
+  try {
+    browser = await chromium.launch({ headless: true, channel: process.env.PLAYWRIGHT_CHANNEL ?? "chrome" });
+    const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
+    const page = await context.newPage();
+    await page.goto(`${server.origin}/archive/`, { waitUntil: "domcontentloaded" });
+    const toggles = page.locator("[data-week-toggle]");
+    assert.equal(await toggles.count(), 2);
+    assert.deepEqual(await toggles.evaluateAll((buttons) => buttons.map((button) => button.getAttribute("aria-expanded"))), ["false", "false"]);
+    await toggles.first().focus();
+    await toggles.first().press("Enter");
+    assert.equal(await toggles.first().getAttribute("aria-expanded"), "true");
+    assert.equal(await page.locator("#panel-2026-W35").getAttribute("hidden"), null);
+    assert.equal(await page.evaluate(() => location.hash), "#week-2026-W35");
+    assert.equal(await page.evaluate(() => document.activeElement?.closest("[data-week-dossier]")?.id), "week-2026-W35");
+    await toggles.nth(1).click();
+    assert.equal(await toggles.first().getAttribute("aria-expanded"), "false");
+    assert.equal(await toggles.nth(1).getAttribute("aria-expanded"), "true");
+    assert.equal(await page.locator("#panel-2026-W35").getAttribute("hidden"), "");
+    await page.goto(`${server.origin}/archive/#week-2026-W35`, { waitUntil: "domcontentloaded" });
+    assert.equal(await page.locator('#week-2026-W35 [data-week-toggle]').getAttribute("aria-expanded"), "true");
+    assert.equal(await page.locator("#panel-2026-W35").getAttribute("hidden"), null);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth), 0);
+    await context.close();
+
+    const noJs = await browser.newContext({ viewport: { width: 390, height: 844 }, javaScriptEnabled: false });
+    const noJsPage = await noJs.newPage();
+    await noJsPage.goto(`${server.origin}/archive/`, { waitUntil: "domcontentloaded" });
+    assert.equal(await noJsPage.locator(".week-date-ledger a").count(), 12);
+    assert.equal(await noJsPage.locator("[data-week-panel][hidden]").count(), 0);
+    await noJs.close();
   } finally {
     await browser?.close();
     await server.close();
@@ -416,7 +500,7 @@ test("independent static QA validates historical archive routes and assets", asy
   assert.equal(qa.checks.find((check) => check.id === "internal_links").status, "PASS");
 });
 
-test("current 2026-08-26 Preview exposes one first-party official image per story and becomes the latest feed entry", async () => {
+test("2026-08-26 Preview exposes one first-party official image per story and is filed in its historical week", async () => {
   const current = await readFile(path.join(previewDist, "issues/2026-08-26/index.html"), "utf8");
   const manifest = await readJson(path.join(previewDist, "issues/2026-08-26/issue-manifest.public.json"));
   assert.equal((current.match(/class="story-figure"/g) ?? []).length, 5);
@@ -432,7 +516,8 @@ test("current 2026-08-26 Preview exposes one first-party official image per stor
   assert.match(current, /stussy-jeju-archive-store/);
   assert.match(current, /href="https:\/\/www\.stussy\.com\/blogs\/news\/jeju-archive-store"/);
   assert.match(current, /2026-08-26/);
-  assert.match(await readFile(path.join(previewDist, "index.html"), "utf8"), /issues\/2026-08-26\//);
+  assert.doesNotMatch(await readFile(path.join(previewDist, "index.html"), "utf8"), /<li class="issue-card"[\s\S]*?issues\/2026-08-26\//);
+  assert.match(await readFile(path.join(previewDist, "archive/index.html"), "utf8"), /id="week-2026-W35"[\s\S]*?issues\/2026-08-26\/[\s\S]*?HISTORICAL/);
 });
 
 test("Preview source-image figures remain rights-blocked and click through to their publishers", async () => {

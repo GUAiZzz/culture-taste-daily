@@ -13,5 +13,6 @@
   "behance_viewing_arc": "先给总命题，再以首尔形成主冲突，伦敦加深权力问题，四条信号改变节奏，TMEX 保留待验证项，最后回到门槛",
   "mobile_translation": "房间块改为纵向节目单，双栏全部改单栏，标题不溢出，索引改为顶部可滚动导览",
   "mobbin_usability_constraint": "正文不被交互遮挡；点击目标至少 44px；焦点可见；层级、来源和状态标签始终可识别",
-  "quiet_ending": "近黑空场中只保留一间未被占用的白色房间与一句问题"
+  "quiet_ending": "近黑空场中只保留一间未被占用的白色房间与一句问题",
+  "closing_palette": {"background":"#15111E","foreground":"#F7F4ED","accent":"#36D7E8","rationale":"近黑背景保留空场，暖白承担问题，泳池青只标出那间仍可被进入的房间。"}
 }

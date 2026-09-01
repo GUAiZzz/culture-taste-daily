@@ -179,21 +179,42 @@ for (const group of new Set(storyFilters.map((button) => button.parentElement).f
   enableRailKeyboard(group, "[data-story-filter]");
 }
 
-const filters = [...document.querySelectorAll("[data-filter]")];
-const archiveItems = [...document.querySelectorAll(".archive-index li[data-kind]")];
+const weekDossiers = [...document.querySelectorAll("[data-week-dossier]")];
 
-for (const button of filters) {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.filter;
-    for (const candidate of filters) candidate.setAttribute("aria-pressed", String(candidate === button));
-    for (const item of archiveItems) {
-      item.classList.toggle("is-hidden", filter !== "all" && item.dataset.kind !== filter);
-    }
-  }, { signal: lifecycle.signal });
+function setWeekExpanded(dossier, expanded) {
+  const button = dossier.querySelector("[data-week-toggle]");
+  const panel = dossier.querySelector("[data-week-panel]");
+  if (!button || !panel) return;
+  button.setAttribute("aria-expanded", String(expanded));
+  panel.hidden = !expanded;
+  const mark = button.querySelector(".week-toggle-mark");
+  if (mark) mark.textContent = expanded ? "−" : "＋";
 }
 
-for (const group of new Set(filters.map((button) => button.parentElement).filter(Boolean))) {
-  enableRailKeyboard(group, "[data-filter]");
+function openWeekFromHash({ scroll = false } = {}) {
+  const target = weekDossiers.find((dossier) => `#${dossier.id}` === window.location.hash);
+  for (const dossier of weekDossiers) setWeekExpanded(dossier, dossier === target);
+  if (target && scroll) {
+    window.requestAnimationFrame(() => target.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "start" }));
+  }
+}
+
+if (weekDossiers.length) {
+  openWeekFromHash();
+  for (const dossier of weekDossiers) {
+    const button = dossier.querySelector("[data-week-toggle]");
+    button?.addEventListener("click", () => {
+      const wasExpanded = button.getAttribute("aria-expanded") === "true";
+      for (const candidate of weekDossiers) setWeekExpanded(candidate, false);
+      if (!wasExpanded) {
+        setWeekExpanded(dossier, true);
+        window.history.replaceState(null, "", `#${dossier.id}`);
+      } else if (window.location.hash === `#${dossier.id}`) {
+        window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+      }
+    }, { signal: lifecycle.signal });
+  }
+  window.addEventListener("hashchange", () => openWeekFromHash({ scroll: true }), { signal: lifecycle.signal });
 }
 
 for (const frame of document.querySelectorAll("iframe[data-historical-frame]")) {

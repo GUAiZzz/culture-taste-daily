@@ -12,7 +12,7 @@
   "contract": {"repository":"GUAiZzz/culture-taste-daily","path":"docs/PRODUCTION_CONTRACT_V3.md","commit":"83982d543bb845819b3412cd5b10b273ec3fcf25","activation_commit":"da3842bcd72b6966a35826a38b737f12c9042667"},
   "core_version": "v2",
   "content_lock": {"status":"locked","sha256":"bdde759cd41faf3118df3523ef61a7d4ce973db33ae6e40444d61c2afe4ea70b","locked_at":"2026-08-30T14:20:00+08:00"},
-  "source_hashes": {"content_sha256":"bdde759cd41faf3118df3523ef61a7d4ce973db33ae6e40444d61c2afe4ea70b","art_direction_sha256":"2ca0e3559302c82bcb74334084e247d41beab5283f1816b7606c553f0cb8cbb8","issue_style_sha256":"c25fcf4ea48d9375e8806e6a006ba3bd0f4f684423b022dcb124103dfe9b1fd4"},
+  "source_hashes": {"content_sha256":"bdde759cd41faf3118df3523ef61a7d4ce973db33ae6e40444d61c2afe4ea70b","art_direction_sha256":"dd9df065702e8caaf414b6fa5f9577064ad68cd9c952a31c6a7b2d2c5d7191dd","issue_style_sha256":"c25fcf4ea48d9375e8806e6a006ba3bd0f4f684423b022dcb124103dfe9b1fd4"},
   "harrytone": {"repository":"GUAiZzz/harry-tone","branch":"main","commit":"13cd6b7046bd81be396810d2923f3a5dc818e93f","loaded_at":"2026-08-30T13:55:00+08:00"},
   "language_mode": "zh-CN_full__en_title_deck_abstract",
   "editorial_position": "截止的价值不是制造焦虑，而是取消含糊，让对象和观众都交代下一步。",
@@ -26,10 +26,11 @@
     "core_visual_action":"网格从宽到窄，把浏览逐步压成一次进入或放弃的选择",
     "cover_composition":"纸色底上四个不等宽时间格向右收紧，红色日期戳覆盖最后一格",
     "desktop_interaction_mechanic":"原生索引与锚点始终可见，来源和正文不依赖 JavaScript",
-    "behance_viewing_arc":"从纪念对象进入缝线结构，再听完整专辑，最后拿起电话",
+    "behance_viewing_arc":"从材料层次进入缝线结构，再听完整专辑，最后拿起电话",
     "mobile_translation":"390px 下所有时间格转为横向顶部标尺，正文单列且不裁字",
     "mobbin_usability_constraint":"交互目标不少于 44px，焦点可见，长链接可换行，外图失败仍显示来源",
-    "quiet_ending":"截止线之后不庆祝，只留下一个已经被做出的选择"
+    "quiet_ending":"截止线之后不庆祝，只留下一个已经被做出的选择",
+    "closing_palette":{"background":"#E9E0D2","foreground":"#151515","accent":"#B92F25","rationale":"米白保持截止后的安静，黑色承担既成选择，收暗的红色只作为不可撤回的截止戳。"}
   },
   "variation_review": {"comparison_mode":"prior_issues","compared_issue_dates":["2026-08-23","2026-08-24","2026-08-25","2026-08-26","2026-08-27","2026-08-28","2026-08-29"],"repeated_mechanisms":["accessible section index","first-party source image with linked fallback"],"exception_reason":"可访问索引与一手来源是固定约束；本期浅色倒计时网格、红色截止戳和收窄节奏没有复用最近七期的核心构图。"},
   "stories": [

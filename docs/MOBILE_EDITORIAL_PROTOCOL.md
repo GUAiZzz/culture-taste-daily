@@ -47,6 +47,10 @@ asymmetric rhythm. At 800px and below, make the first reading action continuous
 with the title and summary. Theme buttons remain tactile editorial panels, not
 small radio dots. Daily cards may reduce columns only where readability needs
 it; retain deliberate offsets or alternating geometry above compact width.
+The issue field is bounded to the latest published ISO week so the mobile home
+does not grow indefinitely. The final Daily Coda reads its slogan and locked
+background, foreground, and accent colors from that issue's art direction;
+reader themes may change texture but never replace the locked coda palette.
 
 ### Archive and index rails
 
@@ -54,6 +58,12 @@ Keep filters horizontally scrollable on narrow screens. Announce current state
 with native button semantics and `aria-pressed`, provide keyboard traversal,
 and scroll the active control into view. No filter may be required to access
 content when JavaScript is absent.
+
+The publication Archive separates the latest published ISO week from earlier
+weeks. Historical weeks use inline dossier accordions with one panel open at a
+time, stable `week-YYYY-Www` anchors, native buttons, accurate expanded state,
+and complete date ledgers in the served HTML. Historical-original provenance
+is a separate label and never determines temporal Current/Historical status.
 
 ### Long issue
 

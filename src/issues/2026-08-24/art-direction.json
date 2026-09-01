@@ -11,5 +11,6 @@
   "behance_viewing_arc": "entry window, release system, object translation, public room, curatorial power, runway gap, future watch",
   "mobile_translation": "single-column figures, two-column index disclosure, shorter display headings, captions retained below every figure",
   "mobbin_usability_constraint": "44px links, scroll-margin for anchored headings, readable source labels, no nested scrolling in the redesigned historical reader",
-  "quiet_ending": "an intentionally unfilled runway radar and one sentence waiting for the next verified drop"
+  "quiet_ending": "an intentionally unfilled runway radar and one sentence waiting for the next verified drop",
+  "closing_palette": {"background":"#1B2452","foreground":"#F4F0E8","accent":"#FF9A32","rationale":"Night indigo keeps the radar deliberately open; orange marks the next verified movement without pretending it has arrived."}
 }

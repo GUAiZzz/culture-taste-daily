@@ -12,7 +12,7 @@
   "contract": {"repository":"GUAiZzz/culture-taste-daily","path":"docs/PRODUCTION_CONTRACT_V3.md","commit":"83982d543bb845819b3412cd5b10b273ec3fcf25","activation_commit":"da3842bcd72b6966a35826a38b737f12c9042667"},
   "core_version": "v2",
   "content_lock": {"status":"locked","sha256":"c3c0b69e79d817efef1a02a7c498e8f130bb1533f320bacdb638ddacbf379688","locked_at":"2026-08-29T14:20:00+08:00"},
-  "source_hashes": {"content_sha256":"c3c0b69e79d817efef1a02a7c498e8f130bb1533f320bacdb638ddacbf379688","art_direction_sha256":"20316a1049ea47e0098d210441782a6a515992792032d03854c4fd7c11a40bb2","issue_style_sha256":"bba862f94228c5a85a2c5664ab4f4c45d198739b7ee427e606e3add019fdef9b"},
+  "source_hashes": {"content_sha256":"c3c0b69e79d817efef1a02a7c498e8f130bb1533f320bacdb638ddacbf379688","art_direction_sha256":"d7a94b7ed7fdaafb28164c4b85c4aa5b2a171b981c4cf092d79bc0e452481b4c","issue_style_sha256":"bba862f94228c5a85a2c5664ab4f4c45d198739b7ee427e606e3add019fdef9b"},
   "harrytone": {"repository":"GUAiZzz/harry-tone","branch":"main","commit":"13cd6b7046bd81be396810d2923f3a5dc818e93f","loaded_at":"2026-08-29T13:55:00+08:00"},
   "language_mode": "zh-CN_full__en_title_deck_abstract",
   "editorial_position": "新并不等于多一点；真正有效的发布，会改变衣服、身体、声音与城市时间被人进入的方式。",
@@ -29,7 +29,8 @@
     "behance_viewing_arc":"从衣服的使用语法进入身体差异，再转向录音与城市时间表",
     "mobile_translation":"390px 下竖带收成顶部色条，内容单列，无横向滚动",
     "mobbin_usability_constraint":"交互目标不少于 44px，焦点可见，外图失败仍保留来源与权利说明",
-    "quiet_ending":"新意不宣布胜利，只留下一个可被使用的入口"
+    "quiet_ending":"新意不宣布胜利，只留下一个可被使用的入口",
+    "closing_palette":{"background":"#251936","foreground":"#EAF1F4","accent":"#F1A72B","rationale":"深紫压低胜利宣言，冰白保留清醒阅读，琥珀只照亮那个仍可被使用的入口。"}
   },
   "variation_review": {"comparison_mode":"prior_issues","compared_issue_dates":["2026-08-22","2026-08-23","2026-08-24","2026-08-25","2026-08-26","2026-08-27","2026-08-28"],"repeated_mechanisms":["accessible section index","first-party source image with linked fallback"],"exception_reason":"可访问索引与一手来源是固定约束；本期竖向接力带、暗紫底色和信号交接节奏没有复用最近七期的核心构图。"},
   "stories": [

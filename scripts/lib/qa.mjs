@@ -246,7 +246,7 @@ async function launchChromium() {
   }
 }
 
-async function captureCase({ browser, origin, issueId, evidenceDir, name, width, height, javaScriptEnabled, reducedMotion, manifest, urlPath, testArchiveFilter = false }) {
+async function captureCase({ browser, origin, issueId, evidenceDir, name, width, height, javaScriptEnabled, reducedMotion, manifest, urlPath, testArchiveAccordion = false }) {
   const context = await browser.newContext({
     viewport: { width, height },
     javaScriptEnabled,
@@ -355,16 +355,28 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
         line_height_ratio: headlineLineHeight / headlineFontSize,
         horizontal_overflow: Math.max(0, headline.scrollWidth - headline.clientWidth),
       } : null,
+      archive_issue_links: document.querySelectorAll(".week-date-ledger a").length,
+      archive_hidden_panels: [...document.querySelectorAll("[data-week-panel]")].filter((panel) => panel.hidden).length,
+      archive_week_toggles: document.querySelectorAll("[data-week-toggle]").length,
     };
   }, manifest.stories.map((story) => story.title));
 
-  if (testArchiveFilter) {
-    await page.locator('[data-filter="historical"]').click();
-    facts.archive_filter = await page.evaluate(() => ({
-      historical_visible: [...document.querySelectorAll('.archive-index li[data-kind="historical"]')].every((item) => !item.classList.contains("is-hidden")),
-      current_hidden: [...document.querySelectorAll('.archive-index li[data-kind="current"]')].every((item) => item.classList.contains("is-hidden")),
-    }));
-    await page.locator('[data-filter="all"]').click();
+  if (testArchiveAccordion) {
+    const toggles = page.locator("[data-week-toggle]");
+    const count = await toggles.count();
+    if (count) await toggles.first().click();
+    facts.archive_accordion = await page.evaluate(() => {
+      const buttons = [...document.querySelectorAll("[data-week-toggle]")];
+      if (!buttons.length) return { valid: true, available: false };
+      const expanded = buttons.filter((button) => button.getAttribute("aria-expanded") === "true");
+      const button = expanded[0];
+      const panel = button ? document.getElementById(button.getAttribute("aria-controls")) : null;
+      return {
+        valid: expanded.length === 1 && Boolean(panel) && !panel.hidden && location.hash === `#${button.closest("[data-week-dossier]").id}`,
+        available: true,
+        expanded: expanded.length,
+      };
+    });
   }
 
   if (javaScriptEnabled) {
@@ -418,9 +430,12 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
         { name: "reduced-motion-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: true },
         { name: "home-desktop-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: false, urlPath: "" },
         { name: "home-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: "" },
+        { name: "home-landscape-844x390", width: 844, height: 390, javaScriptEnabled: true, reducedMotion: false, urlPath: "" },
         { name: "story-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: `issues/${issueId}/stories/${staticResult.manifest.stories[0].id}/` },
         { name: "story-landscape-844x390", width: 844, height: 390, javaScriptEnabled: true, reducedMotion: false, urlPath: `issues/${issueId}/stories/${staticResult.manifest.stories[0].id}/` },
-        { name: "archive-desktop-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: false, urlPath: "archive/", testArchiveFilter: true },
+        { name: "archive-desktop-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: false, urlPath: "archive/", testArchiveAccordion: true },
+        { name: "archive-landscape-844x390", width: 844, height: 390, javaScriptEnabled: true, reducedMotion: false, urlPath: "archive/", testArchiveAccordion: true },
+        { name: "archive-no-js-390x844", width: 390, height: 844, javaScriptEnabled: false, reducedMotion: false, urlPath: "archive/" },
         ...(staticResult.buildReport.historical_issues?.length ? [
           { name: "historical-20-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: "issues/2026-08-20/" },
           { name: "historical-21-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: "issues/2026-08-21/" },
@@ -465,7 +480,7 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
         external_preview_failures: desktop.externalPreviewFailures,
       }));
 
-      const mobileNames = ["compact-320x568", "mobile-390x844", "mobile-430x932", "tablet-768x1024", "landscape-844x390", "story-mobile-390x844", "story-landscape-844x390"];
+      const mobileNames = ["compact-320x568", "mobile-390x844", "mobile-430x932", "tablet-768x1024", "landscape-844x390", "home-landscape-844x390", "story-mobile-390x844", "story-landscape-844x390", "archive-landscape-844x390"];
       checks.push(result("mobile_render", mobileNames.every((name) => capturePasses(captures[name])), Object.fromEntries(mobileNames.map((name) => [name, {
         ...captures[name].facts,
         console_errors: captures[name].consoleErrors,
@@ -483,7 +498,7 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
         && headline.horizontal_overflow === 0);
       checks.push(result("headline_layout", headlineOk, headlineLayouts));
 
-      const shellCaptures = [captures["home-desktop-1440x900"], captures["home-mobile-390x844"], captures["archive-desktop-1440x900"], captures["historical-20-mobile-390x844"], captures["historical-21-mobile-390x844"], captures["historical-22-mobile-390x844"]].filter(Boolean);
+      const shellCaptures = [captures["home-desktop-1440x900"], captures["home-mobile-390x844"], captures["home-landscape-844x390"], captures["archive-desktop-1440x900"], captures["archive-landscape-844x390"], captures["archive-no-js-390x844"], captures["historical-20-mobile-390x844"], captures["historical-21-mobile-390x844"], captures["historical-22-mobile-390x844"]].filter(Boolean);
       const shellOk = shellCaptures.every((item) => item.facts.horizontal_overflow === 0
         && item.facts.broken_images.length === 0
         && item.facts.image_failed_frames === 0
@@ -492,8 +507,9 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
         && item.requestFailures.length === 0)
         && captures["home-desktop-1440x900"].facts.external_preview_images.every((image) => image.loaded)
         && captures["home-mobile-390x844"].facts.external_preview_images.every((image) => image.loaded)
-        && captures["archive-desktop-1440x900"].facts.archive_filter?.historical_visible
-        && captures["archive-desktop-1440x900"].facts.archive_filter?.current_hidden;
+        && captures["archive-desktop-1440x900"].facts.archive_accordion?.valid
+        && captures["archive-no-js-390x844"].facts.archive_hidden_panels === 0
+        && captures["archive-no-js-390x844"].facts.archive_issue_links === captures["archive-desktop-1440x900"].facts.archive_issue_links;
       checks.push(result("publication_shell_render", shellOk, {
         home_desktop: captures["home-desktop-1440x900"].facts,
         home_mobile: captures["home-mobile-390x844"].facts,

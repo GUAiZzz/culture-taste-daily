@@ -23,7 +23,7 @@
   },
   "source_hashes": {
     "content_sha256": "600d4cad535e06f2a95a3fd2b4abb940e9af8c07285f3985ebbe27f155a82ecc",
-    "art_direction_sha256": "f50b3e62cca246ce9473e80bb6742f25f744e254e6ec070e28fbd5ad4e13c173",
+    "art_direction_sha256": "af945fb5fc06f4569cedb63de74276f0b51f15e195e5c38893072e31eaa43a5a",
     "issue_style_sha256": "2d934e1554950517809e23b223bb963a1aac1e88fc3d4a5f0981c67226be2fed"
   },
   "harrytone": {
@@ -47,7 +47,8 @@
     "behance_viewing_arc": "date cut, institutional archive, distributed city, changing matter, intimate manuscript, remastered object, QR threshold, domestic afterimage",
     "mobile_translation": "the date rule becomes a left spine, figures retain captions, headings scale down without clipping, and all source links keep 44px targets",
     "mobbin_usability_constraint": "no hidden reading, no nested scroll, visible focus, stable anchors, source-image failure links, and complete no-JS access",
-    "quiet_ending": "a thin black closing rule and one unresolved sentence about what should be edited next"
+    "quiet_ending": "a thin black closing rule and one unresolved sentence about what should be edited next",
+    "closing_palette": {"background":"#F1E8D5","foreground":"#161616","accent":"#A92F25","rationale":"Warm ledger paper holds the unresolved sentence while a restrained vermilion rule marks the edit still to come."}
   },
   "variation_review": {
     "comparison_mode": "prior_issues",
