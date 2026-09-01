@@ -1024,6 +1024,15 @@ body[data-page="facsimile"] .publication-footer {
   .issue-field {
     padding-top: 3rem;
     padding-bottom: 3rem;
+    border-top: 0;
+    background:
+      linear-gradient(
+        180deg,
+        var(--theme-index) 0,
+        color-mix(in srgb, var(--theme-index) 74%, var(--theme-panel)) 10rem,
+        color-mix(in srgb, var(--theme-index) 62%, var(--theme-panel)) 100%
+      );
+    color: var(--ink);
   }
 
   .section-heading,
@@ -1072,37 +1081,82 @@ body[data-page="facsimile"] .publication-footer {
   .issue-card,
   .issue-card:nth-child(n) {
     max-width: 31rem;
-    margin: 0 auto 2rem;
+    margin: 0 auto;
   }
 
-  .issue-card-cover { aspect-ratio: 16 / 9; }
+  .issue-card > a {
+    display: grid;
+    grid-template-areas:
+      "cover meta"
+      "cover title"
+      "cover english"
+      "deck deck";
+    grid-template-columns: clamp(6.75rem, 31vw, 7.75rem) minmax(0, 1fr);
+    gap: 0.35rem 1rem;
+    align-items: start;
+    padding: 1.25rem 0 1.5rem;
+    border-top: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+  }
+
+  .issue-card + .issue-card > a { border-top: 0; }
+
+  .issue-card--earlier > a {
+    grid-template-columns: 5.25rem minmax(0, 1fr);
+  }
+
+  .issue-card-cover {
+    grid-area: cover;
+    aspect-ratio: 4 / 5;
+    border-color: color-mix(in srgb, currentColor 38%, transparent);
+  }
 
   .issue-card-copy {
-    padding-top: 1rem;
+    display: contents;
   }
 
-  .issue-card-copy p { font-size: 0.6875rem; }
+  .issue-card-copy p {
+    grid-area: meta;
+    align-self: end;
+    font-size: 0.6875rem;
+  }
 
   .issue-card-copy h3 {
-    margin-top: 0.5rem;
+    grid-area: title;
+    margin: 0.25rem 0 0;
     font-size: clamp(1.35rem, 5.5vw, 1.6rem);
     line-height: 1.05;
   }
 
+  .issue-card-copy strong {
+    grid-area: english;
+    margin-top: 0.2rem;
+    color: color-mix(in srgb, var(--theme-accent) 66%, var(--ink));
+  }
+
   .issue-card-copy span {
-    margin-top: 0.65rem;
+    grid-area: deck;
+    margin-top: 0.75rem;
+    color: color-mix(in srgb, currentColor 72%, transparent);
     font-size: 0.9375rem;
     line-height: 1.45;
   }
 
   .archive-bridge {
     grid-template-columns: 1fr auto;
-    min-height: 5.5rem;
-    margin-top: 1.5rem;
-    padding: 1rem;
+    min-height: 4.5rem;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-color: color-mix(in srgb, currentColor 40%, transparent);
   }
 
-  .archive-bridge strong { grid-column: 1; }
+  .archive-bridge strong {
+    grid-column: 1;
+    color: color-mix(in srgb, var(--theme-accent) 66%, var(--ink));
+  }
 
   .archive-bridge i {
     grid-column: 2;
@@ -1614,7 +1668,16 @@ body[data-page="facsimile"] .publication-footer {
 
   .archive-hero h1 { font-size: clamp(4rem, 15vw, 7rem); }
 
-  .issue-field { padding-block: 2rem; }
+  .issue-field {
+    padding-block: 2rem;
+    background:
+      linear-gradient(
+        180deg,
+        var(--theme-index) 0,
+        color-mix(in srgb, var(--theme-index) 70%, var(--theme-panel)) 100%
+      );
+    color: var(--ink);
+  }
 
   .section-heading {
     grid-template-columns: 0.6fr 1fr 1.2fr;
@@ -1646,23 +1709,49 @@ body[data-page="facsimile"] .publication-footer {
 
   .issue-card > a {
     display: grid;
-    grid-template-columns: minmax(16rem, 0.8fr) minmax(0, 1.2fr);
-    gap: 1.25rem;
+    grid-template-areas:
+      "cover meta"
+      "cover title"
+      "cover english"
+      "cover deck";
+    grid-template-columns: 10rem minmax(0, 1fr);
+    gap: 0.35rem 1.25rem;
     align-items: start;
+    padding-block: 1rem;
+    border-top: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
   }
 
-  .issue-card-cover { aspect-ratio: 16 / 9; }
-  .issue-card-copy { padding-top: 0; }
-  .issue-card-copy p { font-size: 0.6875rem; }
+  .issue-card-cover {
+    grid-area: cover;
+    aspect-ratio: 4 / 5;
+    border-color: color-mix(in srgb, currentColor 38%, transparent);
+  }
+
+  .issue-card-copy { display: contents; }
+
+  .issue-card-copy p {
+    grid-area: meta;
+    font-size: 0.6875rem;
+  }
 
   .issue-card-copy h3 {
-    margin-top: 0.5rem;
+    grid-area: title;
+    margin: 0.25rem 0 0;
     font-size: clamp(1.35rem, 3vw, 1.65rem);
     line-height: 1.05;
   }
 
+  .issue-card-copy strong {
+    grid-area: english;
+    margin-top: 0.2rem;
+    color: color-mix(in srgb, var(--theme-accent) 66%, var(--ink));
+  }
+
   .issue-card-copy span {
+    grid-area: deck;
     margin-top: 0.65rem;
+    color: color-mix(in srgb, currentColor 72%, transparent);
     font-size: 0.9375rem;
     line-height: 1.4;
   }
@@ -1670,7 +1759,15 @@ body[data-page="facsimile"] .publication-footer {
   .archive-bridge {
     min-height: 4.5rem;
     margin-top: 1.5rem;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 0;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-color: color-mix(in srgb, currentColor 40%, transparent);
+  }
+
+  .archive-bridge strong {
+    color: color-mix(in srgb, var(--theme-accent) 66%, var(--ink));
   }
 
   .current-week {

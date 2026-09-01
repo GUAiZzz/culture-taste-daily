@@ -51,6 +51,11 @@ The issue field is bounded to the latest published ISO week so the mobile home
 does not grow indefinitely. The final Daily Coda reads its slogan and locked
 background, foreground, and accent colors from that issue's art direction;
 reader themes may change texture but never replace the locked coda palette.
+On mobile, the current-week field continues the active theme-index color family
+and uses a folio dossier rather than stacked full-width posters: the latest date
+keeps its complete 4:5 cover beside its metadata and title, earlier dates in the
+same week become smaller dossier rows, and the archive exit remains a compact
+rule-led link. Desktop keeps its wider asymmetric issue composition.
 The visible Daily Coda contains only the dated marker and one issue-locked
 quotation. English is preferred and Chinese is allowed when editorially
 deliberate. The quotation must come from the repository's original editorial

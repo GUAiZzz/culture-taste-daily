@@ -179,7 +179,8 @@ function issueCard(issue, pathPrefix, position) {
   const status = issue.temporal_status === "current"
     ? "CURRENT WEEK"
     : issue.preservation_kind === "historical_original" ? "HISTORICAL · ORIGINAL" : "HISTORICAL";
-  return `<li class="issue-card" data-temporal-status="${escapeHtml(issue.temporal_status)}" style="--card-index:${position}"><a href="${pathPrefix}issues/${escapeHtml(issue.issue_id)}/" data-theme-link><div class="issue-card-cover">${cover}<span class="open-mark">OPEN ↗</span></div><div class="issue-card-copy"><p>${escapeHtml(issue.publication_date)} · ${escapeHtml(status)}</p><h3>${escapeHtml(issue.title)}</h3><strong>${escapeHtml(issue.title_en)}</strong><span>${escapeHtml(issue.deck)}</span></div></a></li>`;
+  const prominence = position === 0 ? "issue-card--lead" : "issue-card--earlier";
+  return `<li class="issue-card ${prominence}" data-temporal-status="${escapeHtml(issue.temporal_status)}" style="--card-index:${position}"><a href="${pathPrefix}issues/${escapeHtml(issue.issue_id)}/" data-theme-link><div class="issue-card-cover">${cover}<span class="open-mark">OPEN ↗</span></div><div class="issue-card-copy"><p>${escapeHtml(issue.publication_date)} · ${escapeHtml(status)}</p><h3>${escapeHtml(issue.title)}</h3><strong>${escapeHtml(issue.title_en)}</strong><span>${escapeHtml(issue.deck)}</span></div></a></li>`;
 }
 
 function issueGrid(issues, pathPrefix) {

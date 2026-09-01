@@ -186,9 +186,10 @@ test("Preview homepage is bounded to the current week while Archive exposes ever
   for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-29", "2026-08-30", "2026-08-31"]) {
     assert.equal((archive.match(new RegExp(`href="\\.\\.\\/issues\\/${date}\\/"`, "g")) ?? []).length, 1, date);
   }
-  assert.equal((home.match(/<li class="issue-card"/g) ?? []).length, 1);
-  assert.match(home, /<li class="issue-card"[\s\S]*?issues\/2026-08-31\//);
-  assert.doesNotMatch(home, /<li class="issue-card"[\s\S]*?issues\/2026-08-30\//);
+  assert.equal((home.match(/<li class="issue-card(?:\s|\")/g) ?? []).length, 1);
+  assert.equal((home.match(/issue-card--lead/g) ?? []).length, 1);
+  assert.match(home, /<li class="issue-card(?:\s|\")[\s\S]*?issues\/2026-08-31\//);
+  assert.doesNotMatch(home, /<li class="issue-card(?:\s|\")[\s\S]*?issues\/2026-08-30\//);
   assert.match(home, /NON-PRODUCTION PREVIEW/);
   assert.match(home, /THE ISSUES \/ 31 AUG · 2026-W36/);
   assert.match(home, /OPEN WEEKLY ARCHIVE/);
@@ -305,6 +306,7 @@ test("theme controls share equal marks while desktop and mobile keep distinct ed
         heroColumns: getComputedStyle(document.querySelector(".home-hero")).gridTemplateColumns,
         radarColumns: getComputedStyle(document.querySelector(".radar-group ol")).gridTemplateColumns,
         issueFieldHeight: document.querySelector(".issue-field").getBoundingClientRect().height,
+        issueCardDisplay: getComputedStyle(document.querySelector(".issue-card > a")).display,
         issueCoverRatio: (() => {
           const rect = document.querySelector(".issue-card-cover").getBoundingClientRect();
           return rect.width / rect.height;
@@ -322,7 +324,9 @@ test("theme controls share equal marks while desktop and mobile keep distinct ed
     assert.notEqual(facts.desktop.heroColumns, facts.mobile.heroColumns);
     assert.notEqual(facts.desktop.radarColumns, facts.mobile.radarColumns);
     assert.ok(facts.desktop.issueCoverRatio < 1);
-    assert.ok(facts.mobile.issueCoverRatio > 1.7);
+    assert.ok(facts.mobile.issueCoverRatio < 1);
+    assert.equal(facts.desktop.issueCardDisplay, "block");
+    assert.equal(facts.mobile.issueCardDisplay, "grid");
     assert.ok(facts.mobile.issueFieldHeight < 844);
     for (const layout of Object.values(facts)) {
       assert.deepEqual(layout.dots.map((dot) => dot.hit), [[44, 44], [44, 44], [44, 44]]);
