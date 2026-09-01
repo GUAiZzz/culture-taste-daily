@@ -1021,6 +1021,11 @@ body[data-page="facsimile"] .publication-footer {
     padding: 1rem;
   }
 
+  .issue-field {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
   .section-heading,
   .archive-hero,
   .history-header,
@@ -1028,6 +1033,27 @@ body[data-page="facsimile"] .publication-footer {
   .publication-footer,
   .migration-note {
     grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-heading > p:first-child {
+    margin-bottom: 0;
+    font-size: 0.6875rem;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(2.25rem, 10vw, 3rem);
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+  }
+
+  .section-heading > p:last-child {
+    font-size: 0.9375rem;
+    line-height: 1.45;
   }
 
   .section-heading > p:last-child,
@@ -1046,11 +1072,34 @@ body[data-page="facsimile"] .publication-footer {
   .issue-card,
   .issue-card:nth-child(n) {
     max-width: 31rem;
-    margin: 0 auto 4rem;
+    margin: 0 auto 2rem;
+  }
+
+  .issue-card-cover { aspect-ratio: 16 / 9; }
+
+  .issue-card-copy {
+    padding-top: 1rem;
+  }
+
+  .issue-card-copy p { font-size: 0.6875rem; }
+
+  .issue-card-copy h3 {
+    margin-top: 0.5rem;
+    font-size: clamp(1.35rem, 5.5vw, 1.6rem);
+    line-height: 1.05;
+  }
+
+  .issue-card-copy span {
+    margin-top: 0.65rem;
+    font-size: 0.9375rem;
+    line-height: 1.45;
   }
 
   .archive-bridge {
     grid-template-columns: 1fr auto;
+    min-height: 5.5rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
   }
 
   .archive-bridge strong { grid-column: 1; }
@@ -1564,6 +1613,65 @@ body[data-page="facsimile"] .publication-footer {
   }
 
   .archive-hero h1 { font-size: clamp(4rem, 15vw, 7rem); }
+
+  .issue-field { padding-block: 2rem; }
+
+  .section-heading {
+    grid-template-columns: 0.6fr 1fr 1.2fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-heading > p:first-child {
+    margin-bottom: 0;
+    font-size: 0.6875rem;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+  }
+
+  .section-heading > p:last-child {
+    font-size: 0.9375rem;
+    line-height: 1.4;
+  }
+
+  .issue-card,
+  .issue-card:nth-child(n) {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+
+  .issue-card > a {
+    display: grid;
+    grid-template-columns: minmax(16rem, 0.8fr) minmax(0, 1.2fr);
+    gap: 1.25rem;
+    align-items: start;
+  }
+
+  .issue-card-cover { aspect-ratio: 16 / 9; }
+  .issue-card-copy { padding-top: 0; }
+  .issue-card-copy p { font-size: 0.6875rem; }
+
+  .issue-card-copy h3 {
+    margin-top: 0.5rem;
+    font-size: clamp(1.35rem, 3vw, 1.65rem);
+    line-height: 1.05;
+  }
+
+  .issue-card-copy span {
+    margin-top: 0.65rem;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+  }
+
+  .archive-bridge {
+    min-height: 4.5rem;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1rem;
+  }
 
   .current-week {
     grid-template-columns: minmax(10rem, 0.65fr) minmax(14rem, 1fr) minmax(0, 2fr);

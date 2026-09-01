@@ -304,6 +304,11 @@ test("theme controls share equal marks while desktop and mobile keep distinct ed
         navigation: getComputedStyle(document.querySelector(".publication-header nav")).display,
         heroColumns: getComputedStyle(document.querySelector(".home-hero")).gridTemplateColumns,
         radarColumns: getComputedStyle(document.querySelector(".radar-group ol")).gridTemplateColumns,
+        issueFieldHeight: document.querySelector(".issue-field").getBoundingClientRect().height,
+        issueCoverRatio: (() => {
+          const rect = document.querySelector(".issue-card-cover").getBoundingClientRect();
+          return rect.width / rect.height;
+        })(),
         dots: [...document.querySelectorAll(".theme-dots button")].map((button) => {
           const rect = button.getBoundingClientRect();
           const mark = getComputedStyle(button, "::before");
@@ -316,6 +321,9 @@ test("theme controls share equal marks while desktop and mobile keep distinct ed
     assert.equal(facts.mobile.navigation, "none");
     assert.notEqual(facts.desktop.heroColumns, facts.mobile.heroColumns);
     assert.notEqual(facts.desktop.radarColumns, facts.mobile.radarColumns);
+    assert.ok(facts.desktop.issueCoverRatio < 1);
+    assert.ok(facts.mobile.issueCoverRatio > 1.7);
+    assert.ok(facts.mobile.issueFieldHeight < 844);
     for (const layout of Object.values(facts)) {
       assert.deepEqual(layout.dots.map((dot) => dot.hit), [[44, 44], [44, 44], [44, 44]]);
       assert.deepEqual(layout.dots.map((dot) => dot.mark), [["12px", "12px"], ["12px", "12px"], ["12px", "12px"]]);
