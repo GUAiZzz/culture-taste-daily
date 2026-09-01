@@ -1087,9 +1087,9 @@ body[data-page="facsimile"] .publication-footer {
 
   .daily-coda h2 {
     max-width: none;
-    font-size: clamp(2.5rem, 12vw, 4.4rem);
-    letter-spacing: -0.045em;
-    line-height: 1.04;
+    font-size: clamp(2.125rem, 10vw, 3.75rem);
+    letter-spacing: -0.035em;
+    line-height: 1.08;
   }
 
   .archive-hero {
@@ -1592,8 +1592,8 @@ body[data-page="facsimile"] .publication-footer {
   }
 
   .daily-coda h2 {
-    font-size: clamp(2.5rem, 6vw, 3.5rem);
-    line-height: 1;
+    font-size: clamp(2.25rem, 5.25vw, 3.25rem);
+    line-height: 1.04;
   }
 }
 
