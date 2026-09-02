@@ -1,0 +1,19 @@
+{
+  "issue_id":"2026-09-02",
+  "title":"当观看允许身体加入，展览才真正开始 / THE EXHIBITION STARTS WHEN THE BODY ENTERS",
+  "dominant_mood":"深青公共空间里的黄色参与轨迹、珊瑚色动作残影与薄荷色身体节点",
+  "background_logic":"以两条互相穿越的曲线和四个身体节点组织暗场，不复用最近七期的脚手架、门槛、地图或倒计时网格",
+  "palette_logic":"deep teal #102A2A, cream #E9F0E7, yellow #FFCF4A, coral #F27A63, mint #90F0D0",
+  "type_scale_logic":"标题像一条需要身体穿过的路径，正文 18px；故事编号落在曲线交叉点旁",
+  "image_behavior":"四张一手官方媒体只在 Preview 外链显示；本地 participation SVG 明确是原创失图占位",
+  "page_density_and_tempo":"封面曲线互穿，正文依次从声音、服装、书页进入周年现场与公共空间，退出处保留一条未闭合轨迹",
+  "core_visual_action":"页面把参与从按钮提升为关系，让颜色、衣服、触摸、动作和表情成为观看证据",
+  "cover_composition":"深青底上两条黄珊瑚曲线互相穿过，薄荷节点标记四个进入动作",
+  "desktop_interaction_mechanic":"原生索引和锚点常驻，所有事实、来源与正文不依赖 JavaScript",
+  "behance_viewing_arc":"从声音的触感进入档案的衣服，再进入书的物质性，最后抵达一座当代艺术博物馆如何用五天打开自己的历史",
+  "mobile_translation":"390px 下曲线退到文本两侧，文字保持单列，不造成横向滚动",
+  "mobbin_usability_constraint":"交互目标不少于 44px，焦点可见，长链接换行，外图失败不隐藏来源",
+  "quiet_ending":"未闭合轨迹指向下一位观众，提醒参与需要关系而不是按钮",
+  "closing_quotation":{"id":"ct-en-005","language":"en","text":"A release begins only when someone can truly enter it.","credit":"Culture & Taste Editorial"},
+  "closing_palette":{"background":"#102A2A","foreground":"#E9F0E7","accent":"#90F0D0","rationale":"深青色保留公共空间的深度，奶油色保证长文可读，薄荷色把可进入性标成持续而非装饰性的信号。"}
+}

@@ -60,7 +60,7 @@ test("A1 allows the final refresh through 15:00 from 2026-08-26", async () => {
   assert.match(afterDeadline.blockers.join("\n"), /outside the publication-day 06:00–15:00/);
 });
 
-test("a missing next-day candidate remains recoverable after 09:30 and before 15:00", async () => {
+test("an existing current candidate remains repairable after 09:30 and before 15:00", async () => {
   const report = await evaluateDailyPreflight({
     repoRoot,
     issueDate: "2026-09-01",
@@ -69,7 +69,7 @@ test("a missing next-day candidate remains recoverable after 09:30 and before 15
 
   assert.equal(report.shanghai_now, "2026-09-01T12:15:00+08:00");
   assert.equal(report.status, "READY_FOR_DRY_RUN");
-  assert.equal(report.candidate_action, "create_new_candidate");
+  assert.equal(report.candidate_action, "repair_or_refresh_existing_candidate");
   assert.equal(report.schedule.recover_when_current_candidate_missing, true);
 });
 
