@@ -182,16 +182,16 @@ test("repository Preview preserves all three historical originals as non-product
 test("Preview homepage is bounded to the current week while Archive exposes every issue once by week", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
   const archive = await readFile(path.join(previewDist, "archive/index.html"), "utf8");
-  const current = await readFile(path.join(previewDist, "issues/2026-09-03/index.html"), "utf8");
+  const current = await readFile(path.join(previewDist, "issues/2026-09-04/index.html"), "utf8");
   for (const date of ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-29", "2026-08-30", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03"]) {
     assert.equal((archive.match(new RegExp(`href="\\.\\.\\/issues\\/${date}\\/"`, "g")) ?? []).length, 1, date);
   }
-  assert.equal((home.match(/<li class="issue-card(?:\s|\")/g) ?? []).length, 4);
+  assert.equal((home.match(/<li class="issue-card(?:\s|\")/g) ?? []).length, 5);
   assert.equal((home.match(/issue-card--lead/g) ?? []).length, 1);
-  assert.match(home, /<li class="issue-card(?:\s|\")[\s\S]*?issues\/2026-09-03\//);
+  assert.match(home, /<li class="issue-card(?:\s|\")[\s\S]*?issues\/2026-09-04\//);
   assert.doesNotMatch(home, /<li class="issue-card(?:\s|\")[\s\S]*?issues\/2026-08-30\//);
   assert.match(home, /NON-PRODUCTION PREVIEW/);
-  assert.match(home, /THE ISSUES \/ 31 AUG—03 SEP · 2026-W36/);
+  assert.match(home, /THE ISSUES \/ 31 AUG—04 SEP · 2026-W36/);
   assert.match(home, /OPEN WEEKLY ARCHIVE/);
   assert.match(home, /meta name="robots" content="noindex,nofollow"/);
   assert.match(home, /rel="icon" type="image\/png" href="\.\/assets\/culture-taste-earth\.png"/);
@@ -202,11 +202,11 @@ test("Preview homepage is bounded to the current week while Archive exposes ever
   assert.match(archive, /assets\/covers\/2026-08-23\.svg/);
   assert.match(archive, /assets\/covers\/2026-08-27\.svg/);
   assert.match(archive, /assets\/covers\/2026-08-30\.svg/);
-  assert.match(home, /assets\/covers\/2026-09-03\.svg/);
-  assert.match(archive, /assets\/covers\/2026-08-31\.svg/);
+  assert.match(home, /assets\/covers\/2026-09-04\.svg/);
   assert.match(archive, /assets\/covers\/2026-09-01\.svg/);
   assert.match(archive, /assets\/covers\/2026-09-02\.svg/);
   assert.match(archive, /assets\/covers\/2026-09-03\.svg/);
+  assert.match(archive, /assets\/covers\/2026-09-04\.svg/);
   assert.match(archive, /id="week-2026-W36"[\s\S]*?CURRENT WEEK/);
   assert.match(archive, /id="week-2026-W35"[\s\S]*?HISTORICAL/);
   assert.match(archive, /id="week-2026-W34"/);
@@ -221,7 +221,7 @@ test("Preview homepage is bounded to the current week while Archive exposes ever
 
 test("frontend integration keeps the formal issue intact while adding the supplemental daily radar", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
-  const current = await readFile(path.join(previewDist, "issues/2026-09-03/index.html"), "utf8");
+  const current = await readFile(path.join(previewDist, "issues/2026-09-04/index.html"), "utf8");
   assert.equal((home.match(/<button type="button" data-theme-choice=/g) ?? []).length, 3);
   assert.match(home, /class="wordmark"[\s\S]*<em>Taste<\/em>/);
   assert.doesNotMatch(home, /class="wordmark"[^>]*>[\s\S]{0,240}<img/);
@@ -231,33 +231,33 @@ test("frontend integration keeps the formal issue intact while adding the supple
   assert.match(home, /01 \/ IN TODAY'S ISSUE/);
   assert.match(home, /02 \/ MORE FROM TODAY/);
   assert.equal((home.match(/data-official-only/g) ?? []).length, 10);
-  assert.equal((home.match(/data-radar-kind="issue"/g) ?? []).length, 4);
-  assert.equal((home.match(/data-radar-kind="extra"/g) ?? []).length, 6);
+  assert.equal((home.match(/data-radar-kind="issue"/g) ?? []).length, 5);
+  assert.equal((home.match(/data-radar-kind="extra"/g) ?? []).length, 5);
   assert.doesNotMatch(home, /class="local-art"/);
   assert.doesNotMatch(home, /<span class="radar-visual"[^>]*>[\s\S]*?<i aria-hidden="true"><\/i>/);
   assert.doesNotMatch(home, /class="theme-picker"/);
-  assert.equal((home.match(/issues\/2026-09-03\/stories\/[^/]+\//g) ?? []).length, 4);
+  assert.equal((home.match(/issues\/2026-09-04\/stories\/[^/]+\//g) ?? []).length, 5);
   assert.match(current, /class="reading-progress"/);
   assert.equal((current.match(/<button type="button" data-theme-choice=/g) ?? []).length, 3);
   assert.match(current, /data-content-sha256="[0-9a-f]{64}"/);
   assert.equal((current.match(/class="issue-story"/g) ?? []).length, 6);
   assert.match(current, /data-story="exit"/);
   assert.match(current, /id="sources"/);
-  const storyRoutes = await readdir(path.join(previewDist, "issues/2026-09-03/stories"));
+  const storyRoutes = await readdir(path.join(previewDist, "issues/2026-09-04/stories"));
   assert.equal(storyRoutes.length, 5);
-  for (const storyId of storyRoutes) await readFile(path.join(previewDist, "issues/2026-09-03/stories", storyId, "index.html"));
-  const firstStory = await readFile(path.join(previewDist, "issues/2026-09-03/stories", storyRoutes[0], "index.html"), "utf8");
+  for (const storyId of storyRoutes) await readFile(path.join(previewDist, "issues/2026-09-04/stories", storyId, "index.html"));
+  const firstStory = await readFile(path.join(previewDist, "issues/2026-09-04/stories", storyRoutes[0], "index.html"), "utf8");
   assert.match(firstStory, /class="story-reader-brand"[\s\S]*<em>Taste<\/em>/);
   assert.doesNotMatch(firstStory, /class="story-reader-brand"[^>]*>[\s\S]{0,240}<img/);
   const sitemap = await readFile(path.join(previewDist, "sitemap.xml"), "utf8");
-  for (const storyId of storyRoutes) assert.match(sitemap, new RegExp(`issues/2026-09-03/stories/${storyId}/`));
+  for (const storyId of storyRoutes) assert.match(sitemap, new RegExp(`issues/2026-09-04/stories/${storyId}/`));
 });
 
 test("daily coda uses one issue-locked editorial quotation and a validated non-repeating palette", async () => {
   const home = await readFile(path.join(previewDist, "index.html"), "utf8");
   const quotationPool = await readJson(path.join(repoRoot, "automation/closing-quotation-pool.json"));
   const nativeIssues = [];
-  for (const issueDate of ["2026-08-23", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-29", "2026-08-30", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03"]) {
+  for (const issueDate of ["2026-08-23", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-29", "2026-08-30", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04"]) {
     const artDirection = await readJson(path.join(repoRoot, `src/issues/${issueDate}/art-direction.json`));
     const manifest = await readJson(path.join(repoRoot, `src/issues/${issueDate}/issue-manifest.public.json`));
     assert.deepEqual(manifest.art_direction, Object.fromEntries(Object.keys(manifest.art_direction).map((key) => [key, artDirection[key]])));
@@ -265,7 +265,7 @@ test("daily coda uses one issue-locked editorial quotation and a validated non-r
     assert.ok(contrastRatio(artDirection.closing_palette.background, artDirection.closing_palette.accent) >= 3);
     nativeIssues.push({ issueId: issueDate, manifest });
   }
-  const latestArtDirection = await readJson(path.join(repoRoot, "src/issues/2026-09-03/art-direction.json"));
+  const latestArtDirection = await readJson(path.join(repoRoot, "src/issues/2026-09-04/art-direction.json"));
   const selectedQuotation = quotationPool.candidates.find(({ id }) => id === latestArtDirection.closing_quotation.id);
   assert.ok(selectedQuotation);
   assert.equal(latestArtDirection.closing_quotation.text, selectedQuotation.text);
@@ -275,8 +275,8 @@ test("daily coda uses one issue-locked editorial quotation and a validated non-r
   assert.equal(quotationPool.selection_mode, "editor_selected_and_issue_locked");
   assert.match(home, /class="daily-coda"/);
   assert.match(home, /DAILY QUOTATION \/ 2026-W36 · EN/);
-  assert.match(home, /Newness begins where an object becomes usable\./);
-  assert.match(home, /--coda-bg:#F2EBDD;--coda-fg:#171717;--coda-accent:#2457C5/);
+  assert.match(home, /Culture lives where an object finds its public\./);
+  assert.match(home, /--coda-bg:#F7F5EF;--coda-fg:#111827;--coda-accent:#2757D6/);
   assert.doesNotMatch(home, /最后一根支撑不被拆掉，提醒方法仍在承担结果/);
   assert.doesNotMatch(home, /We follow the story into its own visual world/);
   assert.doesNotMatch(home, /STABLE PRINCIPLES/);
@@ -371,7 +371,7 @@ test("weekly Archive progressively enhances into a single-open keyboard accordio
     const noJs = await browser.newContext({ viewport: { width: 390, height: 844 }, javaScriptEnabled: false });
     const noJsPage = await noJs.newPage();
     await noJsPage.goto(`${server.origin}/archive/`, { waitUntil: "domcontentloaded" });
-    assert.equal(await noJsPage.locator(".week-date-ledger a").count(), 15);
+    assert.equal(await noJsPage.locator(".week-date-ledger a").count(), 16);
     assert.equal(await noJsPage.locator("[data-week-panel][hidden]").count(), 0);
     await noJs.close();
   } finally {
@@ -459,7 +459,7 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     await fallbackContext.close();
 
     const retryContext = await browser.newContext();
-    const retryImagePrefix = "https://preview.thenewsmarket.com/Previews/ADID/StillAssets/1920x1080/730259_v2.jpg";
+    const retryImagePrefix = "https://preview.thenewsmarket.com/Previews/ADID/StillAssets/1920x1080/730933_v2.jpg";
     let retryAttempts = 0;
     await retryContext.route((url) => url.href.startsWith(retryImagePrefix), async (route) => {
       retryAttempts += 1;
@@ -475,10 +475,10 @@ test("theme selection persists into stories while filtering and no-JavaScript re
     });
     const retryPage = await retryContext.newPage();
     await retryPage.goto(`${server.origin}/`, { waitUntil: "domcontentloaded" });
-    const retryImage = retryPage.locator('img[alt="Official adidas Futurecool 3D-printed shoe image"]');
+    const retryImage = retryPage.locator('img[alt="Official adidas and Simone Rocha Fall/Winter 2026 campaign image"]');
     await retryImage.scrollIntoViewIfNeeded();
     await retryPage.waitForFunction(() => {
-      const image = document.querySelector('img[alt="Official adidas Futurecool 3D-printed shoe image"]');
+      const image = document.querySelector('img[alt="Official adidas and Simone Rocha Fall/Winter 2026 campaign image"]');
       return image?.complete && image.naturalWidth > 0 && image.src.includes("ctd_retry=1");
     }, null, { timeout: 10_000 });
     assert.ok(retryAttempts >= 2);
