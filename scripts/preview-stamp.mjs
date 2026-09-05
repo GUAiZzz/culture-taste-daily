@@ -11,7 +11,7 @@ const files = await fileDigestMap(path.resolve('dist'));
 delete files['preview-release.json'];
 await writeJson('dist/preview-release.json', {
   schema_version: 1, kind: 'non_production_preview_release', repository: identity.repository,
-  source_commit: identity.head, latest_issue: report.issues.at(-1).issue_id,
+  source_commit: identity.head, latest_issue: report.archive_weeks.flatMap(week => week.issue_ids).sort().at(-1),
   artifact_digest: digestMap(files), files,
 });
 console.log(`Stamped non-production Preview ${identity.head}`);

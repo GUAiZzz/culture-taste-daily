@@ -18,6 +18,9 @@ if (branch.startsWith('automation/culture-taste-')) {
     date: branch.slice('automation/culture-taste-'.length), paths: allPaths });
   if (reasons.length) throw new Error(reasons.join(', '));
 }
+for (const file of allPaths) {
+  if (file.startsWith('src/historical/') || file.startsWith('candidate/')) throw new Error(`PRESERVED_ORIGINAL ${file}`);
+}
 const scratch = await mkdtemp(path.join(tmpdir(), 'ctd-public-diff-'));
 try {
   for (const file of paths) {
