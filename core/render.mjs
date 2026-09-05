@@ -14,7 +14,7 @@ function issueTitle(content) {
 }
 
 function themeBootstrap(page = "home") {
-  return `<script>(()=>{const themes=["field","coral","analog"],page=${JSON.stringify(page)};let selected="field";try{const query=new URLSearchParams(location.search).get("theme"),stored=sessionStorage.getItem("ctd-theme"),manual=sessionStorage.getItem("ctd-theme-manual")==="1";if(themes.includes(query))selected=query;else if(page==="home"&&!manual)selected=themes[Math.floor(Math.random()*themes.length)];else if(themes.includes(stored))selected=stored;else selected=themes[Math.floor(Math.random()*themes.length)];sessionStorage.setItem("ctd-theme",selected);}catch{}document.documentElement.dataset.visualTheme=selected;})();</script>`;
+  return `<script>(()=>{const themes=["field","coral","analog"],page=${JSON.stringify(page)};let selected="field";try{const query=new URLSearchParams(location.search).get("theme"),stored=sessionStorage.getItem("ctd-theme"),manual=sessionStorage.getItem("ctd-theme-manual")==="1",preferred=localStorage.getItem("ctd-theme-preference");if(themes.includes(query))selected=query;else if(themes.includes(preferred))selected=preferred;else if(page==="home"&&!manual)selected=themes[Math.floor(Math.random()*themes.length)];else if(themes.includes(stored))selected=stored;else selected=themes[Math.floor(Math.random()*themes.length)];sessionStorage.setItem("ctd-theme",selected);}catch{}document.documentElement.dataset.visualTheme=selected;})();</script>`;
 }
 
 function themeDots() {
@@ -23,7 +23,7 @@ function themeDots() {
     ["coral", "Coral Signal"],
     ["analog", "2000s TV"],
   ];
-  return `<div class="theme-dots" role="group" aria-label="Choose visual theme">${themes.map(([value, label]) => `<button type="button" data-theme-choice="${value}" data-theme-label="${label}" aria-label="${label}" aria-pressed="false"></button>`).join("")}</div>`;
+  return `<div class="theme-dots" role="group" aria-label="Choose visual theme"><span class="theme-current" data-theme-status aria-live="polite">FIELD GREEN</span>${themes.map(([value, label]) => `<button type="button" data-theme-choice="${value}" data-theme-label="${label}" aria-label="${label}" aria-pressed="false"></button>`).join("")}</div>`;
 }
 
 function textWordmark() {
@@ -158,7 +158,7 @@ function shell({ title, body, baseCss, themesCss = "", siteCss, siteJs = "", pat
   <header class="publication-header">
     <a class="wordmark" href="${pathPrefix}" data-theme-home aria-label="Culture &amp; Taste Daily">${textWordmark()}</a>
     <p class="publication-mode">A daily field magazine<br>关于衣服、场地、物件与正在形成的文化</p>
-    <div class="publication-actions"><nav aria-label="Publication"><a href="${pathPrefix}" data-theme-home>Latest</a><a href="${pathPrefix}archive/" data-theme-link>Archive</a></nav>${themeDots()}</div>
+    <div class="publication-actions"><nav aria-label="Publication"><a href="${pathPrefix}" data-theme-home>最新 / Latest</a><a href="${pathPrefix}archive/" data-theme-link>往期 / Archive</a></nav>${themeDots()}</div>
   </header>
   <main id="main-content">${body}</main>
   <footer class="publication-footer"><p>Culture &amp; Taste Daily</p><p>Every issue keeps its own visual world.<br>Preview before production.</p><a href="${pathPrefix}archive/">Open the complete archive ↗</a></footer>
@@ -246,7 +246,7 @@ function weekDossier(week, { current = false } = {}) {
   if (current) {
     return `<section class="archive-week current-week" id="week-${escapeHtml(week.key)}" data-week="${escapeHtml(week.key)}"><header class="current-week-heading"><p>CURRENT WEEK</p><h2>${escapeHtml(week.key)}</h2><p>${escapeHtml(weekDateRange(week))} · ${String(week.issues.length).padStart(2, "0")} ${week.issues.length === 1 ? "ISSUE" : "ISSUES"}</p></header><div class="current-week-judgment"><p>${escapeHtml(judgment)}</p>${weekCoverSlivers(week)}</div>${ledger}</section>`;
   }
-  return `<section class="archive-week historical-week" id="week-${escapeHtml(week.key)}" data-week="${escapeHtml(week.key)}" data-week-dossier><h3><button type="button" data-week-toggle aria-expanded="true" aria-controls="${escapeHtml(panelId)}"><span class="week-number">${escapeHtml(week.key)}</span><span class="week-range">${escapeHtml(weekDateRange(week))}<small>${String(week.issues.length).padStart(2, "0")} ${week.issues.length === 1 ? "ISSUE" : "ISSUES"}</small></span><span class="week-judgment">${escapeHtml(judgment)}</span>${weekCoverSlivers(week)}<span class="week-toggle-mark" aria-hidden="true">＋</span></button></h3><div class="week-panel" id="${escapeHtml(panelId)}" data-week-panel>${ledger}</div></section>`;
+  return `<section class="archive-week historical-week" id="week-${escapeHtml(week.key)}" data-week="${escapeHtml(week.key)}" data-week-dossier><h3><button type="button" data-week-toggle disabled aria-expanded="true" aria-controls="${escapeHtml(panelId)}"><span class="week-number">${escapeHtml(week.key)}</span><span class="week-range">${escapeHtml(weekDateRange(week))}<small>${String(week.issues.length).padStart(2, "0")} ${week.issues.length === 1 ? "ISSUE" : "ISSUES"}</small></span><span class="week-judgment">${escapeHtml(judgment)}</span>${weekCoverSlivers(week)}<span class="week-toggle-mark" aria-hidden="true">＋</span></button></h3><div class="week-panel" id="${escapeHtml(panelId)}" data-week-panel>${ledger}</div></section>`;
 }
 
 function routeMap() {
@@ -301,21 +301,21 @@ function dailyIndex(issue) {
       : "";
     const mediaLabel = item.media?.kind === "video" ? "VIDEO" : "OFFICIAL IMAGE";
     const date = item.event_date ?? item.published_date ?? issue.publication_date;
-    return `<li data-story-card data-story-category="${escapeHtml(item.category)}" data-radar-kind="${inIssue ? "issue" : "extra"}"><a href="${href}" ${linkAttrs}><span class="radar-visual" data-visual-frame data-official-only data-category="${escapeHtml(item.category)}">${media}<span class="official-media-fallback"><b>${escapeHtml(item.publisher)}</b><small>OPEN OFFICIAL MEDIA ↗</small></span><span class="media-kind">${mediaLabel}</span><span class="visual-label">${String(index + 1).padStart(2, "0")}</span></span><span class="radar-meta"><strong>${escapeHtml(item.category)}</strong><span>${inIssue ? "IN ISSUE" : "EXTRA SIGNAL"}</span></span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.deck)}</p><span class="radar-source"><b>${escapeHtml(item.publisher)}</b><time>${escapeHtml(date)}</time></span><span class="radar-link">${inIssue ? "READ STORY" : "OPEN OFFICIAL"} ↗</span></a></li>`;
+    return `<li data-story-card data-story-category="${escapeHtml(item.category)}" data-radar-kind="${inIssue ? "issue" : "extra"}"><a href="${href}" ${linkAttrs}><span class="radar-visual" data-visual-frame data-official-only data-category="${escapeHtml(item.category)}">${media}<span class="official-media-fallback"><b>${escapeHtml(item.publisher)}</b><small>${inIssue ? "图片未载入 · 阅读文章" : "图片未载入 · 打开官方来源 ↗"}</small></span><span class="media-kind">${mediaLabel}</span><span class="visual-label">${String(index + 1).padStart(2, "0")}</span></span><span class="radar-meta"><strong>${escapeHtml(item.category)}</strong><span>${inIssue ? "IN ISSUE" : "EXTRA SIGNAL"}</span></span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.deck)}</p><span class="radar-source"><b>${escapeHtml(item.publisher)}</b><time>${item.event_date ? "事件 " : "发布 "}${escapeHtml(date)}</time></span><span class="radar-link">${inIssue ? "阅读文章 / READ STORY" : "打开官方来源 / OPEN OFFICIAL"} ↗</span></a></li>`;
   };
   let index = 0;
   const groups = [
     ["issue", "01 / IN TODAY'S ISSUE", items.filter((item) => item.included_in_issue !== false && item.included_story_id)],
     ["extra", "02 / MORE FROM TODAY", items.filter((item) => item.included_in_issue === false || !item.included_story_id)],
   ].filter(([, , groupItems]) => groupItems.length).map(([kind, title, groupItems]) => `<section class="radar-group" data-radar-group="${kind}"><header><h3>${title}</h3></header><ol>${groupItems.map((item) => card(item, index++)).join("")}</ol></section>`).join("");
-  return `<section class="daily-index" aria-labelledby="daily-index-title"><header><p>DAILY SELECTS / ${escapeHtml(issue.publication_date)}</p><div><h2 id="daily-index-title"><b>TODAY'S</b><i>FIELD NOTES.</i></h2></div></header><div class="radar-filters" role="group" aria-label="Filter today's selections">${filters}</div>${groups}</section>`;
+  return `<section class="daily-index" aria-labelledby="daily-index-title"><header><p>DAILY SELECTS / ${escapeHtml(issue.publication_date)}</p><div><h2 id="daily-index-title"><b>TODAY'S</b><i>FIELD NOTES.</i></h2></div><p class="daily-index-guide">${issue.stories.length} 篇正式文章，另有 ${items.filter(item => item.included_in_issue === false || !item.included_story_id).length} 条补充信号。先读本期判断，也可以直接看文章；补充信号将在新标签页打开官方来源。</p></header><p class="filter-result" data-filter-result role="status" aria-live="polite"></p><div class="radar-filters" role="group" aria-label="Filter today's selections">${filters}</div>${groups}</section>`;
 }
 
 export function renderHome({ issues, weeks, baseCss, themesCss, siteCss, siteJs }) {
   const latest = [...issues].sort((a, b) => a.publication_date.localeCompare(b.publication_date)).at(-1);
   const currentWeek = weeks.find((week) => week.temporal_status === "current");
   const currentIssues = currentWeek.issues;
-  const body = `<section class="home-hero" aria-labelledby="latest-title"><div class="hero-copy"><p class="hero-kicker">ISSUE ${String(issues.length).padStart(2, "0")} / ${escapeHtml(latest.publication_date)}</p><h1 id="latest-title"><a href="./issues/${escapeHtml(latest.issue_id)}/" data-theme-link>${escapeHtml(latest.title)}</a></h1><p class="hero-english">${escapeHtml(latest.title_en)}</p><p class="hero-deck">${escapeHtml(latest.deck)}</p><a class="hero-link" href="./issues/${escapeHtml(latest.issue_id)}/" data-theme-link>Read the latest issue <span aria-hidden="true">↗</span></a></div><div class="hero-map">${routeMap()}</div></section>
+  const body = `<section class="home-hero" aria-labelledby="latest-title"><div class="hero-copy"><p class="hero-kicker">ISSUE ${String(issues.length).padStart(2, "0")} / ${escapeHtml(latest.publication_date)}</p><h1 id="latest-title"><a href="./issues/${escapeHtml(latest.issue_id)}/" data-theme-link>${escapeHtml(latest.title)}</a></h1><p class="hero-english">${escapeHtml(latest.title_en)}</p><p class="hero-deck">${escapeHtml(latest.deck)}</p><a class="hero-link" href="./issues/${escapeHtml(latest.issue_id)}/" data-theme-link>阅读完整本期 <span aria-hidden="true">↗</span></a></div><div class="hero-map">${routeMap()}</div></section>
   ${dailyIndex(latest)}
   <section class="issue-field" aria-labelledby="field-title"><div class="section-heading"><p>${escapeHtml(issueRangeLabel(currentIssues))} · ${escapeHtml(currentWeek.key)}</p><h2 id="field-title">这一周，<br>不同的进入。</h2><p>Only the latest published week stays here. Each issue keeps its own visual grammar; earlier weeks move into the archive.</p></div>${issueGrid(currentIssues, "./")}<a class="archive-bridge" href="./archive/" data-theme-link><span>OPEN WEEKLY ARCHIVE</span><strong>${escapeHtml(archiveSummary(weeks))}</strong><i aria-hidden="true">↗</i></a></section>
   ${dailyCoda(latest)}`;

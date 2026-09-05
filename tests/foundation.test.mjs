@@ -323,7 +323,7 @@ test("theme controls share equal marks while desktop and mobile keep distinct ed
       await context.close();
     }
     assert.equal(facts.desktop.navigation, "flex");
-    assert.equal(facts.mobile.navigation, "none");
+    assert.equal(facts.mobile.navigation, "flex");
     assert.notEqual(facts.desktop.heroColumns, facts.mobile.heroColumns);
     assert.notEqual(facts.desktop.radarColumns, facts.mobile.radarColumns);
     assert.ok(facts.desktop.issueCoverRatio < 1);
@@ -723,4 +723,55 @@ test("generator manifest PASS cannot bypass failing independent evidence", async
   assert.equal(decision.decision, "BLOCKED");
   assert.equal(decision.selected_release, "release-X");
   assert.ok(decision.reasons.some((reason) => reason.includes("technical evidence did not PASS")));
+});
+
+test("reading controls survive restored pages, remember choices, and degrade honestly", async () => {
+  const server = await startStaticServer(previewDist);
+  const browser = await chromium.launch({ headless: true, channel: process.env.PLAYWRIGHT_CHANNEL ?? "chrome" });
+  try {
+    const context = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: "reduce" });
+    await context.route(/^https:\/\//, route => route.abort());
+    const page = await context.newPage();
+    await page.goto(`${server.origin}/`);
+    assert.ok(await page.locator('.publication-header nav a').last().isVisible());
+    await page.locator('[data-story-filter="music"]').click();
+    assert.equal(new URL(page.url()).searchParams.get('category'), 'music');
+    await page.reload();
+    assert.equal(await page.locator('[data-story-filter="music"]').getAttribute('aria-pressed'), 'true');
+    assert.match(await page.locator('[data-filter-result]').innerText(), /MUSIC/);
+    await page.locator('[data-theme-choice="coral"]').click();
+    // Explicit lifecycle regression: retained pages must retain their listeners.
+    await page.evaluate(() => {
+      dispatchEvent(new PageTransitionEvent('pagehide', { persisted: true }));
+      dispatchEvent(new PageTransitionEvent('pageshow', { persisted: true }));
+    });
+    await page.locator('[data-theme-choice="analog"]').click();
+    assert.equal(await page.locator('html').getAttribute('data-visual-theme'), 'analog');
+    const newTab = await context.newPage();
+    await newTab.goto(server.origin);
+    assert.equal(await newTab.locator('html').getAttribute('data-visual-theme'), 'analog');
+    assert.equal(await newTab.locator('.source-art').first().evaluate(image => getComputedStyle(image).filter), 'none');
+    await newTab.goto(`${server.origin}/?theme=field`);
+    assert.equal(await newTab.locator('html').getAttribute('data-visual-theme'), 'field');
+    for (const width of [320, 390, 430, 768, 844, 1440]) {
+      await page.setViewportSize({ width, height: 844 });
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+      await page.locator('h1').evaluate(h => { h.textContent = '当一段更长的中文标题进入日常阅读与公共文化现场之后'; });
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+    }
+    await context.close();
+    const noJs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
+    await noJs.route(/^https:\/\//, route => route.abort());
+    const staticPage = await noJs.newPage();
+    for (const route of ['', 'archive/', 'issues/2026-09-04/', 'issues/2026-09-04/stories/simone-rocha-adidas-fw26/']) {
+      await staticPage.goto(`${server.origin}/${route}`);
+      assert.equal(await staticPage.locator('.theme-dots').isVisible(), false);
+      assert.ok((await staticPage.locator('main').innerText()).length > 500);
+      if (route === 'archive/') {
+        assert.equal(await staticPage.locator('[data-week-toggle]').first().isEnabled(), false);
+        assert.equal(await staticPage.locator('[data-week-panel][hidden]').count(), 0);
+      }
+    }
+    await noJs.close();
+  } finally { await browser.close(); await server.close(); }
 });
