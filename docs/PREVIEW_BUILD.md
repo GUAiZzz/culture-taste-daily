@@ -8,9 +8,9 @@ The purpose of this phase is to review a real website rather than another archit
 
 ## What readers can inspect
 
-- a designed homepage with a 2026-08-25 latest-issue entry and the historical/current archive covers;
+- a designed homepage with a generated latest-issue entry and the historical/current archive covers;
 - a complete archive with optional JavaScript filtering and a full static fallback;
-- the scoped 2026-08-25 issue world, readable without JavaScript, with one verified first-party official image origin per story; unknown-rights images remain externally linked and production-blocking;
+- dated issue worlds, readable without JavaScript, with first-party official image provenance per story; unknown-rights images remain externally linked and production-blocking;
 - the untouched self-contained 2026-08-20 and 2026-08-21 originals inside a modern Preview context page;
 - a 16-page historical web edition plus the untouched source PDF for 2026-08-22.
 
@@ -34,7 +34,7 @@ Current issue art direction remains in the scoped `src/issues/<date>/issue.css`.
 
 `.github/workflows/preview.yml` runs on pull requests to `main` and `preview-build-v1`. The latter is the current shared publication and daily-candidate base. It installs pinned dependencies, runs the full verification suite, builds with the GitHub Pages base URL, rechecks the exact artifact, and retains review evidence for seven days.
 
-Deployment occurs only through an explicit `workflow_dispatch`. There is no push-triggered deployment, GitHub Actions schedule, production job, custom domain, or redirect. A separate Codex daily task may prepare a dated candidate pull request and a weekly task may audit the site read-only, but neither can dispatch this workflow or update the Pages endpoint. The Pages endpoint is Preview infrastructure only.
+Deployment occurs only through an explicit `workflow_dispatch`. There is no push-triggered deployment, GitHub Actions schedule, production job, custom domain, or redirect. A separate Codex daily task may prepare a dated candidate pull request and a weekly task may audit the site read-only, the daily task can dispatch only after the Preview gate passes; the weekly task remains read-only. The Pages endpoint is Preview infrastructure only.
 
 ## Production blockers intentionally retained
 
@@ -44,5 +44,9 @@ Deployment occurs only through an explicit `workflow_dispatch`. There is no push
 - 2026-08-24 includes five linked, publisher-hosted source-image previews; the public rights summary remains `blocked`, so they are Preview-only and cannot authorize production;
 - 2026-08-25 includes eight linked first-party official source-image previews; the public rights summary remains `blocked`, so they are Preview-only and cannot authorize production;
 - 2026-08-22 lacks selectable accessible source text;
-- named editorial/visual Preview acceptance has not occurred;
+- named editorial/visual Production acceptance is still required;
 - production evidence, rollback, post-deploy verification, and unattended production automation remain unimplemented.
+
+## Current operational authority
+
+Use `npm run ops:state -- --online` to reconcile source, GitHub and live state. The owner-approved [Preview amendment](PREVIEW_AUTONOMY.md) supersedes earlier candidate-only operational descriptions. Policy defines 11:00 start, 13:00/15:00/17:00 recovery and 18:00 final reconciliation in Shanghai. Complete current-day packages may automatically merge and dispatch Preview only after `preview:release` passes. No Production authority is granted. Scheduler availability and next-day unattended execution must be verified independently of local tests.

@@ -23,10 +23,10 @@ Implemented in this stage:
 - designed homepage and interactive-enhanced archive with full no-JavaScript fallback;
 - preview-only historical preservation for 2026-08-20, 2026-08-21, and 2026-08-22;
 - pull-request CI and manually triggered GitHub Pages Preview workflow.
-- continuing daily Codex candidate policy at `09:30` Shanghai time, with same-day manual recovery allowed before the `15:00` deadline;
+- continuing daily Codex candidate policy at `11:00` Shanghai time, with recovery and final closure projected from automation/daily-policy.json;
 - strict public source and official-media availability checks for daily candidates;
 - a weekly read-only whole-site health audit;
-- daily and weekly automation retain no merge or deployment authority.
+- daily Preview authority is separately gated; weekly health remains read-only.
 
 Still not implemented or authorized:
 
@@ -35,8 +35,12 @@ Still not implemented or authorized:
 - unattended production automation;
 - automatic editorial, visual, HarryTone, truth, cultural, or rights approval.
 
-The `2026-08-25` source is the current non-production Preview issue. It remains blocked by missing candidate timing, out-of-window research, and unresolved reuse rights for eight externally linked first-party official images. The image origins are verified for Preview provenance; that verification does not clear production usage rights.
+The historical `2026-08-25` package remains non-production. It remains blocked by missing candidate timing, out-of-window research, and unresolved reuse rights for eight externally linked first-party official images. The image origins are verified for Preview provenance; that verification does not clear production usage rights.
 
 The GitHub Pages endpoint created by the Preview workflow is review infrastructure, not a production release. Build output, manifest `PASS`, technical QA `PASS`, a Preview URL, and a local gate result do not themselves authorize production deployment.
 
-The daily candidate task is separate from GitHub Actions and from deployment. It may create or update a dated branch and pull request after research and QA. A failed or incomplete run returns `BLOCKED` and leaves the current Preview unchanged. Manual production acceptance, private-ledger retention, protected review, deliberate failure proof, rollback proof, and production deployment remain outstanding.
+The daily candidate task is separate from GitHub Actions and from deployment. It may create or update a dated branch and pull request after research and QA. A failing Preview gate records its specific reason and leaves the site unchanged. Eligible packages continue through merge, dispatch and live verification. Manual production acceptance, private-ledger retention, protected review, deliberate failure proof, rollback proof, and production deployment remain outstanding.
+
+## Current operational authority
+
+Use `npm run ops:state -- --online` to reconcile source, GitHub and live state. The owner-approved [Preview amendment](PREVIEW_AUTONOMY.md) supersedes earlier candidate-only operational descriptions. Policy defines 11:00 start, 13:00/15:00/17:00 recovery and 18:00 final reconciliation in Shanghai. Complete current-day packages may automatically merge and dispatch Preview only after `preview:release` passes. No Production authority is granted. Scheduler availability and next-day unattended execution must be verified independently of local tests.

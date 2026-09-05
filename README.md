@@ -4,7 +4,9 @@ Independent source repository for Culture & Taste Daily.
 
 Repository stage: **Preview Build — real site, non-production**
 
-Production Contract V3 is canonical. The repository now builds the real Culture & Taste homepage, archive, the 2026-08-24 current Preview issue, the explicitly excluded 2026-08-25 future draft, and three preserved historical issues into a visibly non-production Preview. A daily Codex dry-run task may produce dated candidate branches and pull requests; production cutover and unattended publication remain disabled.
+Production Contract V3 governs Production. The site is a static, non-production digital magazine. The owner-authorized Preview amendment is [PREVIEW_AUTONOMY](docs/PREVIEW_AUTONOMY.md): complete daily candidates may merge and deploy after the machine gate; Production remains manual.
+
+Read current source, GitHub and live state with `npm run ops:state -- --online`. Do not infer the latest issue from a dated documentation snapshot.
 
 ## What is available
 
@@ -16,11 +18,11 @@ Production Contract V3 is canonical. The repository now builds the real Culture 
 - a local fail-closed gate simulation that has no production authority;
 - deterministic regression and failure-path tests;
 - a designed homepage and filterable archive;
-- one provenance-labeled visual per story in the current issue routes; all eight 2026-08-25 figures now use verified first-party official image origins as Preview-only links and remain blocked from production until rights are cleared;
+- provenance-labeled official image links with readable failure fallbacks; unknown reuse rights remain Production-blocking;
 - preserved 2026-08-20 and 2026-08-21 self-contained HTML originals;
 - an honest 16-page facsimile reader for the supplied 2026-08-22 PDF;
 - manually triggered GitHub Pages Preview hosting after CI verification.
-- a fail-closed daily candidate preflight and auditable runbook with zero deployment authority.
+- a fail-closed daily candidate preflight and auditable runbook with separately gated Preview authority.
 - strict daily live checks for public source pages and official media, plus a weekly read-only site-health audit.
 
 Manifest `status`, generator QA fields, and scores are reporting only. They cannot approve editorial quality or authorize release.
@@ -63,21 +65,19 @@ schemas/             Public manifest and public evidence schemas
 scripts/             Deterministic local build, QA, review-template, and gate tools
 tests/               Regression and fail-closed simulations
 deployment/          Preview-only hosting and disabled production boundary
-automation/          Disabled daily-automation boundary
+automation/          Daily Preview policy and recovery runbooks
 dependencies/        External dependency identities; never copied private source
 docs/                Product, editorial, architecture, and authority decisions
 ```
 
-## Current candidate
+## Current publication state
 
-The `2026-08-25` source is the latest Preview issue. Its missing `candidate_created_at` and out-of-window research lock keep it visibly non-production and ineligible for release. Its eight official source images are externally linked Preview figures with unresolved reuse rights, which is an additional production blocker.
-
-The accepted snapshot at [`candidate/2026-08-25/index.html`](candidate/2026-08-25/index.html) remains unchanged and has never been deployed.
+Run `npm run ops:state -- --online` for dated source, branch, PR, deployment and live marker reconciliation. A successful workflow alone is not live verification; run `npm run preview:live -- --sha <deployed-commit>`.
 
 ## Hard boundaries
 
 - The GitHub Pages site is a non-production Preview only; every page is visibly labeled and `noindex`.
-- Production cutover and unattended production automation remain disabled. The authorized daily task stops at a dated pull request.
+- Production cutover and unattended production automation remain disabled. The daily Preview task is governed by the separate fail-closed Preview gate.
 - Private research/source-ledger instances, credentials, tokens, and canonical HarryTone source remain outside this repository.
 - HarryTone is represented only by an exact dependency identity.
 - `GUAiZzz/GUAiZzz`, its `gh-pages`, the current live site, Library V2, and canonical `GUAiZzz/harry-tone` remain untouched.

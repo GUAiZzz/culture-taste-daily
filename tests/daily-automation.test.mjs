@@ -119,12 +119,12 @@ test("Thursday adds the Supreme drop beat without making it a publication quota"
   assert.equal(policy.standing_beats.find((beat) => beat.id === "supreme-thursday-drop").publication_quota, false);
 });
 
-test("daily policy cannot merge, deploy, alter Pages, or touch the legacy repository", async () => {
+test("daily policy separates authorized Preview from production and repository settings", async () => {
   const policy = JSON.parse(await readFile(path.join(repoRoot, "automation/daily-policy.json"), "utf8"));
   assert.deepEqual(policy.output, {
     open_pull_request: true,
-    merge: false,
-    deploy_preview: false,
+    merge: true,
+    deploy_preview: true,
     deploy_production: false,
     modify_pages_settings: false,
     modify_legacy_repository: false,
@@ -132,8 +132,8 @@ test("daily policy cannot merge, deploy, alter Pages, or touch the legacy reposi
   assert.equal(policy.failure.preserve_previous_good, true);
   assert.equal(policy.failure.allow_partial_publish, false);
   assert.equal(policy.schedule.research_lock_deadline, "15:00");
-  assert.equal(policy.schedule.start_time, "09:30");
-  assert.deepEqual(policy.schedule.recovery_check_times, ["11:30", "13:30", "14:30"]);
+  assert.equal(policy.schedule.start_time, "11:00");
+  assert.deepEqual(policy.schedule.recovery_check_times, ["13:00", "15:00", "17:00"]);
   assert.equal(policy.schedule.recover_when_current_candidate_missing, true);
   assert.equal(policy.schedule.research_lock_deadline_effective_from, "2026-08-26");
   assert.equal(policy.schedule.historical_research_lock_deadline, "08:30");
@@ -282,8 +282,8 @@ test("daily preflight verifies the existing manual-only Preview and privacy defe
   assert.doesNotMatch(report.blockers.join("\n"), /Preview workflow|privacy ignore/);
   assert.equal(report.base_ref, "preview-build-v1");
   assert.deepEqual(report.schedule, {
-    primary: "09:30",
-    recovery_checks: ["11:30", "13:30", "14:30"],
+    primary: "11:00",
+    recovery_checks: ["13:00", "15:00", "17:00"],
     deadline: "08:30",
     recover_when_current_candidate_missing: true,
   });

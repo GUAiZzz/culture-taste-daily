@@ -1,28 +1,20 @@
 # Culture & Taste Daily candidate run
 
-Status: `AUTHORIZED DAILY DRY RUN / NO DEPLOYMENT AUTHORITY`
+Status: `AUTHORIZED DAILY PREVIEW / PRODUCTION DISABLED`
 
-This runbook is the auditable instruction surface for the scheduled Culture & Taste candidate task. It produces a dated review branch and pull request. It never merges, changes Pages, deploys Preview or production, edits the legacy repository, or treats generator output as approval.
+Read `docs/PREVIEW_AUTONOMY.md` for the owner authorization, machine evidence contract and recovery procedure. This supersedes older dry-run-only instructions. `automation/daily-policy.json` is the single schedule authority; do not use memory to override it.
 
-## Schedule and date
+## Schedule and identity
 
-- Start the primary run at `09:30` in `Asia/Shanghai` every day.
-- Recheck at `11:30`, `13:30`, and `14:30`. If today's complete candidate and pull request are missing, stale, or previously blocked, recover automatically before `15:00` on the same dated branch and pull request. Passing the primary start time is never itself a blocker.
-- A same-day manual recovery run is also allowed before `15:00`; it must update the same dated branch and pull request rather than create a duplicate.
-- Run `npm run daily:preflight` before browsing or editing.
-- The target issue date must equal the current Shanghai calendar date.
-- For publication dates on or after `2026-08-26`, research must be refreshed and locked between `06:00` and `15:00` Shanghai time. Earlier dates retain the historical `08:30` deadline and are never reclassified.
-- If the run starts late, misses the window, or cannot finish an honest refresh, report `BLOCKED`; do not backdate timestamps.
+At each configured checkpoint, run `npm run ops:state -- --online` first. A completed live current-day release is a no-op. A merged PR is resumed, not regenerated. The final checkpoint only reconciles and reports missing-day or deployment failure.
 
-## Git boundary
+Use the authenticated GitHub transport that performs the work: the local `gh` CLI scoped explicitly to GUAiZzz/culture-taste-daily. A connector's different permission result does not prove this transport unavailable. Network calls have at most three attempts (2s, 8s backoff); do not retry scope, privacy or technical failures as network errors.
 
-- Stable dry-run base ref: `preview-build-v1`. This is the current shared publication container and front-end baseline.
-- Create or update only `automation/culture-taste-YYYY-MM-DD`.
-- Never commit directly to `main`, `preview-build-v1`, or `gh-pages`.
-- Open or update one pull request from the dated branch to the configured dry-run base ref.
-- Never merge the pull request or dispatch `.github/workflows/preview.yml`.
-- If the base ref, repository identity, or worktree state is ambiguous, stop `BLOCKED`.
-- A daily content run may change only `src/issues/YYYY-MM-DD/` and narrowly required date-specific tests. It must not redesign or modify `core/`, historical issues, schemas, workflows, Pages settings, automation policy, or the publication container.
+Before research, verify origin fetch and push URLs, fetch preview-build-v1, record clean worktree/head/base with `npm run ops:preflight -- --online`, then run `npm run daily:preflight`. Preflight checks alone grant no release authority. Research uses today's actual Shanghai date. A late same-day Preview keeps actual timestamps and Production's original 15:00 deadline result; never backdate.
+
+Create or reuse only `automation/culture-taste-YYYY-MM-DD` and its unique PR to preview-build-v1. Update an existing candidate from the current base without force push. Resolve base changes and rerun checks; never bypass a conflict. Do not directly commit to main/Preview/gh-pages.
+
+The daily allowlist is `src/issues/YYYY-MM-DD/` plus exactly `src/site/assets/covers/YYYY-MM-DD.svg`, which the current renderer requires. No other core, issue, historical, workflow, schema, policy, or publication-shell change belongs to a daily run.
 
 ## Private workspace
 
@@ -123,25 +115,18 @@ npm audit --audit-level=high
 git diff --check
 ```
 
-`health:daily` must verify every public source page, first-party official image, radar image, official video route, and static video poster for the dated issue. It retries transient failures, then uses a real-browser fallback for anti-bot responses. It writes ignored evidence under `.stage4/health/` and fails closed when a required media response or public route is genuinely unavailable. A `REVIEW_REQUIRED` page must be opened and read in the connected interactive browser; record that verification privately or stop `BLOCKED`. Availability does not grant image rights.
+`health:daily` must verify every public source page, first-party official image, radar image, official video route, and static video poster for the dated issue. It retries transient failures, then uses a real-browser fallback for anti-bot responses. It writes ignored evidence under `.stage4/health/` and reports failures honestly. Unverified source pages stop Preview. Temporarily unavailable official media may proceed only with the dated provenance, link and tested fallback records required by PREVIEW_AUTONOMY.md; never convert the health result to PASS. A `REVIEW_REQUIRED` page must be opened and read in the connected interactive browser; record that verification privately or stop `BLOCKED`. Availability does not grant image rights.
 
 Confirm privacy scanning rejects private material and confirm the issue is fully readable on desktop, mobile, reduced motion, and without JavaScript. The QA evidence must include complete desktop and mobile captures of the current homepage and issue plus story-reader coverage. Re-run every dependent check after a material content, source, image, style, or interaction change.
 
 From 2026-08-26 onward, every current issue also needs a local, issue-specific archive cover. Falling back to the generic blue/lime type card is a build failure. Compare the cover against the previous seven issues, and fail visual QA when the homepage Chinese headline uses a line-height below the collision-safe threshold or overflows its container.
 
-## Result
+## Result and guarded Preview publication
 
-On success:
+After complete research, public package, full QA and health/browser review, commit and push only the allowlisted files. Open/update the unique PR and wait for successful CI at the exact head. Fill the private attestation from actual run evidence as specified in `docs/PREVIEW_AUTONOMY.md`.
 
-- commit only the dated public issue and necessary public test updates;
-- push the dated branch;
-- open or update one pull request;
-- report source/issue/artifact digests, live-source health, QA result, unresolved rights, and the exact human decisions still required;
-- stop before merge or deployment.
+Run `npm run preview:release` with both private paths, first without `--execute`. When eligible, rerun with `--execute`; this is continuing owner authorization for non-production Preview, not a new daily approval request. It merges only the validated head, dispatches only the verified Preview base and verifies live route hashes.
 
-On any failure:
+After an interruption use `npm run ops:state -- --online` and `npm run preview:resume`; never create another candidate or PR. Confirm final merge/deploy/live state and append the terminal receipt to this automation's memory. Keep detailed evidence and receipts outside Git.
 
-- report `BLOCKED` with the smallest actionable reason;
-- do not push private or incomplete material;
-- do not change Preview or production;
-- preserve the previous good website exactly as it is.
+Notify only on a non-overridable fault, exhausted transient retries, failed live verification, or final missing-day. Normal no-op checkpoints stay quiet. A transient limitation that is fully handled and honestly represented in Preview is recorded without requiring owner action. Production never runs automatically.

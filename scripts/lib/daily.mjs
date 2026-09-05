@@ -96,7 +96,8 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
   if (!DATE_PATTERN.test(targetDate)) blockers.push("issue date must use YYYY-MM-DD");
   if (targetDate !== shanghai.date) blockers.push("issue date must match the current Asia/Shanghai calendar date");
   if (policy.timezone !== "Asia/Shanghai") blockers.push("daily policy timezone must remain Asia/Shanghai");
-  if (policy.mode !== "scheduled_dry_run_candidate") blockers.push("daily policy may authorize dry-run candidates only");
+  if (policy.mode !== "scheduled_preview_candidate") blockers.push("daily policy must use the explicit Preview-only candidate mode");
+  const previewActive = targetDate >= policy.preview_authority.effective_from;
   if (policy.dry_run_base_ref !== "preview-build-v1") blockers.push("daily candidates must use the current preview-build-v1 publication base");
   const closingPaletteGate = policy.closing_palette_gate;
   if (!closingPaletteGate?.required
@@ -128,7 +129,7 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
       ["start_time", policy.schedule.start_time],
       ...(policy.schedule.recovery_check_times ?? []).map((value, index) => [`recovery_check_times[${index}]`, value]),
     ]) {
-      if (typeof value !== "string" || minutes(value) < windowStart || minutes(value) > windowEnd) {
+      if (typeof value !== "string" || minutes(value) < windowStart || minutes(value) > minutes(policy.schedule.preview_collection_deadline)) {
         blockers.push(`${name} must remain inside the publication-day ${researchWindow.start}–${researchWindow.deadline} final-refresh window`);
       }
     }
@@ -136,7 +137,7 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
       blockers.push("same-day candidate recovery must remain enabled before the final-refresh deadline");
     }
   }
-  if (currentMinute < windowStart || currentMinute > windowEnd) {
+  if (currentMinute < windowStart || currentMinute > (previewActive ? minutes(policy.schedule.preview_collection_deadline) : windowEnd)) {
     blockers.push(`run is outside the publication-day ${researchWindow.start}–${researchWindow.deadline} final-refresh window`);
   }
 
@@ -170,7 +171,7 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
   }
 
   for (const [key, value] of Object.entries(policy.output)) {
-    if (["merge", "deploy_preview", "deploy_production", "modify_pages_settings", "modify_legacy_repository"].includes(key) && value !== false) {
+    if (["deploy_production", "modify_pages_settings", "modify_legacy_repository"].includes(key) && value !== false) {
       blockers.push(`daily dry-run policy cannot authorize ${key}`);
     }
   }
@@ -195,13 +196,14 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
   }
 
   const issueExists = await exists(path.join(repoRoot, "src/issues", targetDate));
-  const status = blockers.length === 0 ? "READY_FOR_DRY_RUN" : "BLOCKED";
+  const status = blockers.length === 0 ? (previewActive ? "READY_FOR_PREVIEW_RESEARCH" : "READY_FOR_DRY_RUN") : "BLOCKED";
   const brandCohort = brandRadar.cohorts.length > 0 ? selectedBrandCohort(brandRadar, targetDate) : null;
   return {
     schema_version: 1,
     kind: "daily_candidate_preflight",
     status,
     production_authority: false,
+    preview_authority_requires_separate_evidence_gate: previewActive,
     target_date: targetDate,
     shanghai_now: `${shanghai.date}T${shanghai.time}:00+08:00`,
     weekday: shanghai.weekday,

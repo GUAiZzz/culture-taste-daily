@@ -22,7 +22,7 @@ production release
 
 The pipeline ends at the non-production Preview today. The production arrow remains inactive and separately gated.
 
-The daily candidate task operates before the public-source layer. It starts from an ephemeral private workspace, uses `preview-build-v1` as the stable current publication container, may promote only publishable issue source to a dated branch, and stops at a pull request. Its scheduled `09:30` run and any same-day manual recovery finish inside the Shanghai `06:00–15:00` window. It does not call the Preview workflow or cross the production arrow.
+The daily candidate task operates before the public-source layer. It starts from an ephemeral private workspace, uses `preview-build-v1` as the stable current publication container, may promote only publishable issue source to a dated branch, and follows the machine-gated Preview state machine in PREVIEW_AUTONOMY.md. The policy owns 11:00 start, 13:00/15:00/17:00 recovery and 18:00 closure. Production retains its original window and review requirements.
 
 A separate weekly read-only task checks automation drift, deterministic QA, live publication routes, and all public source/media links. It writes no repository state and has no pull-request or deployment authority.
 
@@ -54,6 +54,6 @@ The publication homepage/archive uses `core/styles/site.css`, which is never loa
 
 ## Deployment invariant
 
-The current workflow may deploy only a manually requested, visibly labeled Preview after deterministic checks pass. Production remains unimplemented. Any later production deployment must use a distinct protected evidence gate and leave the previous good release untouched on failure.
+The current workflow may deploy only an exact-SHA, visibly labeled Preview authorized by the owner or the daily Preview gate after deterministic checks pass. Production remains unimplemented. Any later production deployment must use a distinct protected evidence gate and leave the previous good release untouched on failure.
 
 `automation/daily-policy.json` and `automation/DAILY_RUN.md` define the externally scheduled candidate boundary. `automation/weekly-health-policy.json` and `automation/WEEKLY_HEALTH.md` define the weekly read-only audit. GitHub Actions still has no cron schedule. Candidate generation, health audit, pull-request verification, Preview dispatch, and production deployment are separate authorities.
