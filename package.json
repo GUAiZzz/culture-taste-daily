@@ -15,7 +15,15 @@
     "review:template": "node scripts/create-review-template.mjs",
     "gate": "node scripts/gate.mjs",
     "test": "node --test --test-concurrency=1 tests/*.test.mjs",
-    "verify": "npm run build && npm run qa && npm test"
+    "verify": "npm run build && npm run ops:check && npm run qa && npm test",
+    "ops:preflight": "node scripts/operation-preflight.mjs",
+    "ops:state": "node scripts/operation-state.mjs",
+    "ops:check": "node scripts/operation-check.mjs",
+    "scope:check": "node scripts/check-public-diff.mjs",
+    "preview:release": "node scripts/preview-release.mjs",
+    "preview:stamp": "node scripts/preview-stamp.mjs",
+    "preview:live": "node scripts/preview-live.mjs",
+    "preview:resume": "node scripts/preview-resume.mjs"
   },
   "devDependencies": {
     "ajv": "8.20.0",

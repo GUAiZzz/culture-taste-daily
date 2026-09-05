@@ -1,16 +1,29 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "kind": "culture_taste_daily_candidate_policy",
   "timezone": "Asia/Shanghai",
-  "mode": "scheduled_dry_run_candidate",
+  "mode": "scheduled_preview_candidate",
   "schedule": {
-    "start_time": "09:30",
-    "recovery_check_times": ["11:30", "13:30", "14:30"],
+    "start_time": "11:00",
+    "recovery_check_times": [
+      "13:00",
+      "15:00",
+      "17:00"
+    ],
     "recover_when_current_candidate_missing": true,
     "research_window_start": "06:00",
     "research_lock_deadline": "15:00",
     "research_lock_deadline_effective_from": "2026-08-26",
-    "historical_research_lock_deadline": "08:30"
+    "historical_research_lock_deadline": "08:30",
+    "final_check_time": "18:00",
+    "preview_collection_deadline": "18:00",
+    "scheduler_hours": [
+      11,
+      13,
+      15,
+      17,
+      18
+    ]
   },
   "freshness_hours": 72,
   "official_image_gate": {
@@ -26,7 +39,12 @@
     "public_file": "daily-radar.public.json",
     "supplemental_to_issue": true,
     "changes_issue_selection": false,
-    "categories": ["fashion", "music", "objects", "city"],
+    "categories": [
+      "fashion",
+      "music",
+      "objects",
+      "city"
+    ],
     "minimum_items_per_category": 2,
     "first_party_official_media_required": true,
     "official_video_preferred_when_available": true,
@@ -34,14 +52,16 @@
     "fresh_event_gate_effective_from": "2026-08-26",
     "deduplication_lookback_days": 2,
     "source_coverage_attestation_required": true,
-    "source_coverage_attestation_effective_from": "2026-08-27"
+    "source_coverage_attestation_effective_from": "2026-08-27",
+    "minimum_items": 10,
+    "maximum_items": 20
   },
   "dry_run_base_ref": "preview-build-v1",
   "branch_prefix": "automation/culture-taste",
   "output": {
     "open_pull_request": true,
-    "merge": false,
-    "deploy_preview": false,
+    "merge": true,
+    "deploy_preview": true,
     "deploy_production": false,
     "modify_pages_settings": false,
     "modify_legacy_repository": false
@@ -82,7 +102,10 @@
     "required": true,
     "effective_from": "2026-08-31",
     "pool": "automation/closing-quotation-pool.json",
-    "language_priority": ["en", "zh-CN"],
+    "language_priority": [
+      "en",
+      "zh-CN"
+    ],
     "selection_mode": "editor_selected_and_issue_locked"
   },
   "standing_beats": [
@@ -138,5 +161,28 @@
     "deterministic_build_and_independent_qa",
     "privacy_scan",
     "named_human_review_pending"
-  ]
+  ],
+  "preview_authority": {
+    "effective_from": "2026-09-06",
+    "owner_authorized_on": "2026-09-05",
+    "scope": "complete_daily_candidate_to_non_production_preview",
+    "production_authority": false,
+    "gate": "scripts/preview-release.mjs",
+    "policy_record": "docs/PREVIEW_AUTONOMY.md"
+  },
+  "retry": {
+    "max_attempts": 3,
+    "backoff_seconds": [
+      2,
+      8
+    ],
+    "terminal_on": [
+      "RESEARCH_INCOMPLETE",
+      "REPOSITORY_IDENTITY",
+      "PUBLIC_PATH_SCOPE",
+      "TECHNICAL_QA",
+      "PRIVATE_MATERIAL"
+    ],
+    "preserve_previous_good": true
+  }
 }

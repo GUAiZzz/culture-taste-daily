@@ -4,4 +4,6 @@
 
 The deployed artifact is visibly marked `NON-PRODUCTION PREVIEW`, carries `noindex,nofollow`, and is rebuilt and rechecked with the repository's pinned tools before upload. GitHub's technical Pages environment name does not grant Culture & Taste production authority.
 
-Production deployment, custom domains, production redirects, old-site changes, and daily automation remain disabled. Any later production design requires separate authorization and exact artifact-bound technical evidence plus named human editorial/visual acceptance.
+Production deployment, custom domains, production redirects, old-site changes, and unattended Production automation remain disabled. Any later production design requires separate authorization and exact artifact-bound technical evidence plus named human editorial/visual acceptance.
+
+Daily non-production dispatch is permitted only through the owner-authorized machine gate in docs/PREVIEW_AUTONOMY.md. The workflow checks the exact Preview SHA and the live verifier checks deployed route hashes.

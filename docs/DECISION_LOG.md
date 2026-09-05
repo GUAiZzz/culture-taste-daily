@@ -608,3 +608,11 @@ These choices must be closed before the named later stage, but do not justify in
 8. **Legal escalation owner** — name before publishing assets whose basis needs jurisdiction-specific judgment.
 
 Until each is resolved, its dependent stage is `BLOCKED`; no silent default expands authority.
+
+## 2026-09-05 owner audit and 2026-09-06 completion
+
+The owner authorized ongoing machine-gated non-production Preview publication and same-day recovery. PREVIEW_AUTONOMY.md and automation/daily-policy.json supersede prior daily candidate-only operational limits; Production contract text stays intact. A failed private/research/identity/technical gate cannot be overridden.
+
+Shared reading improvements preserve dated source and historical originals while changing navigation, theme preference persistence, image treatment and minimum heading spacing across generated routes. Three theme palettes and independent issue art direction remain. Evidence and screenshots are ignored local artifacts. No framework or runtime dependency was added.
+
+External review methods were assessed at pinned commits above 100 Stars and adapted into original project guidance; no upstream tool or binary was installed. Default branch migration, deletion, Pages setting changes and Production cutover remain separate owner decisions.
