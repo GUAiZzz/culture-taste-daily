@@ -13,6 +13,10 @@
 - unknown image rights blocks the gate;
 - manifest/generator `PASS` cannot override independent technical failure;
 - a blocked candidate preserves the named previous-good release.
+- all three supplied historical originals retain their exact source digests and remain explicitly non-production;
+- homepage, archive, local cover assets, historical routes, and PDF facsimile pages resolve in the Preview artifact.
+- pull requests verify automatically, while Pages deployment has no push/schedule trigger and requires manual dispatch.
+- daily preflight enforces the Shanghai window, today's date, Thursday Supreme scan, and the no-merge/no-deploy boundary.
 
 Fixtures are synthetic and contain no production story, private research, private HarryTone material, credential, or historical artifact.
 

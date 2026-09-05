@@ -79,7 +79,23 @@ The routes below are seed entrances. Open the exact detail page used for each ca
 | adidas | <https://news.adidas.com/> | Product, Originals, partnership, release date, official assets | Separate newsroom fact from editorial interpretation |
 | On | <https://press.on-running.com/> | Product, collaboration, retail, innovation, official timing | Company claims and modeled impact require source and method checks |
 
-Extend this family dynamically to the official page of any relevant brand, store, label, designer, artist, or collaborator. Do not maintain a giant static brand list. A Hypebeast or social post about a release triggers an official-page check first.
+Extend this family dynamically to the official page of any relevant brand, store, label, designer, artist, or collaborator. The maintained radar at `automation/brand-radar.json` preserves the owner-selected subjects that must be revisited over time; it is a rotational discovery registry, not a whitelist and not a requirement to publish brand news. A Hypebeast or social post about a release triggers an official-page check first.
+
+#### 3.1.1 Maintained brand-and-culture radar
+
+The public registry separates a durable research obligation from any personal social-media account. It contains the established taste anchors and the newly requested streetwear, Japanese, Korean, Greater China, European, luxury, sport, outdoor, retail, and cultural subjects.
+
+Operating rules:
+
+- every candidate day performs a lightweight official-signal check across the complete active registry, then `npm run daily:preflight` chooses one deterministic cohort for a deeper detail-page review;
+- the daily public radar must attest the complete-registry quick scan, the exact deep-review cohort, the required standing beats, all five regional lanes, and the prior-two-issue deduplication window; the attestation gate applies from 2026-08-27;
+- a radar entry means “check for a relevant new official signal,” not “write about this subject”;
+- official brand, designer, retailer, event, or archive pages may establish only subject-originated facts under P0;
+- cultural impact, reception, breakout status, or trend claims still require independent or direct community evidence appropriate to the claim;
+- the scan must resolve and open the current official detail route rather than treating a saved name, social profile, homepage, or search snippet as evidence;
+- Instagram login and social following are not part of the research contract and must never become runtime dependencies;
+- missing, renamed, ambiguous, inactive, or compromised identities are recorded as access limits and held until reverified;
+- “Daisy” remains excluded from the active rotation until its exact brand and official source identity are supplied; the system must not guess which subject was intended.
 
 ### 3.2 Fashion calendars and runway authority
 
@@ -214,6 +230,8 @@ independent_verification:
 contradictions:
 commercial_label:
 image_origin:
+image_origin_relationship: first_party_official | independent_media | community
+official_image_verified_at:
 image_credit:
 image_usage_rights_basis:
 access_limits:
@@ -276,7 +294,8 @@ By default, `cover` and `major` require:
 - dates and official status checked on the day of lock;
 - commercial relationships recorded;
 - a stated cultural consequence and counter-reading;
-- usable image rights or an intentional text-led visual plan.
+- at least one exact, story-specific image verified from a first-party official source;
+- a separately recorded image usage-rights basis; unknown rights may support only the linked, production-blocked Preview treatment.
 
 If the independent source is not available, narrow the claim and downgrade to `signal` or `watch`.
 
@@ -369,6 +388,7 @@ source relationships and commercial labels recorded: PASS | FAIL
 fact / source rationale / editorial inference separated: PASS | FAIL
 sensitive or trend gates completed where applicable: PASS | FAIL
 image credit and usage-rights basis separated: PASS | FAIL
+first-party official image verified for every selected story: PASS | FAIL
 cover and major evidence gates passed: PASS | FAIL
 ```
 

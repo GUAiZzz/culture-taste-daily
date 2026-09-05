@@ -23,15 +23,19 @@ const CHECK_IDS = [
   "language_and_landmarks",
   "heading_structure",
   "full_article_and_sources",
+  "story_visuals",
   "no_js_reading",
   "assets",
   "internal_links",
+  "historical_archive",
   "private_material_absent",
   "accessibility_structure",
   "keyboard_focus",
   "desktop_render",
   "mobile_render",
   "reduced_motion_render",
+  "headline_layout",
+  "publication_shell_render",
 ];
 
 export const REQUIRED_TECHNICAL_CHECKS = Object.freeze([...CHECK_IDS]);
@@ -105,7 +109,8 @@ export async function runStaticChecks({ repoRoot, distDir, issueId }) {
     actual: currentArtifactDigest,
   }));
 
-  const htmlFiles = (await walkFiles(distDir)).filter((file) => file.endsWith(".html"));
+  const allHtmlFiles = (await walkFiles(distDir)).filter((file) => file.endsWith(".html"));
+  const htmlFiles = allHtmlFiles.filter((file) => path.basename(file) !== "original.html");
   const parseFailures = await htmlValidation(htmlFiles);
   checks.push(result("html_parse", parseFailures.length === 0, parseFailures));
 
@@ -132,19 +137,38 @@ export async function runStaticChecks({ repoRoot, distDir, issueId }) {
     sources_and_dates: hasSources,
   }));
 
+  const storySections = [...issueHtml.matchAll(/<section class="issue-story" data-story="([^"]+)"[\s\S]*?<\/section>/g)].map((match) => match[0]);
+  const visualFailures = manifest.media_required
+    ? manifest.stories.filter((story) => {
+        const section = storySections.find((candidate) => candidate.includes(`data-story="${story.id}"`)) ?? "";
+        const kind = story.media?.kind ?? "original_illustration";
+        return !new RegExp(`<figure class="story-figure"[^>]*data-media-kind="${kind}"[\\s\\S]*?<img\\b[^>]*\\balt="[^"]+"[\\s\\S]*?<figcaption>`).test(section);
+      }).map((story) => story.id)
+    : [];
+  checks.push(result("story_visuals", visualFailures.length === 0, {
+    required: Boolean(manifest.media_required),
+    story_count: manifest.stories.length,
+    visual_failures: visualFailures,
+  }));
+
   const assetErrors = [];
   const linkErrors = [];
-  for (const htmlFile of htmlFiles) {
+  for (const htmlFile of allHtmlFiles) {
     const html = await readFile(htmlFile, "utf8");
     if (/@import\s+(?:url\()?['"]?https?:|url\(\s*['"]?https?:/i.test(html)) {
       assetErrors.push(`${toPosix(path.relative(distDir, htmlFile))}: remote display CSS dependency`);
     }
-    for (const item of htmlTags(html, ["img", "script", "link", "source", "video", "a"])) {
+    for (const item of htmlTags(html, ["img", "script", "link", "source", "video", "iframe", "a"])) {
       const src = item.attributes.src;
       const href = item.attributes.href;
       if (src === "" || href === "") assetErrors.push(`${toPosix(path.relative(distDir, htmlFile))}: empty src/href`);
       const displayReference = src ?? (item.tag.toLowerCase().startsWith("<link") && item.attributes.rel === "stylesheet" ? href : null);
-      if (displayReference && /^https?:/i.test(displayReference)) assetErrors.push(`${toPosix(path.relative(distDir, htmlFile))}: remote display dependency ${displayReference}`);
+      if (displayReference && /^https?:/i.test(displayReference)) {
+        const externalPreview = item.attributes["data-external-preview"] === "true";
+        if (!externalPreview) {
+          assetErrors.push(`${toPosix(path.relative(distDir, htmlFile))}: remote display dependency ${displayReference}`);
+        }
+      }
       if (displayReference) {
         const target = targetForLink(distDir, htmlFile, displayReference);
         if (target) {
@@ -173,6 +197,29 @@ export async function runStaticChecks({ repoRoot, distDir, issueId }) {
   checks.push(result("assets", assetErrors.length === 0, assetErrors));
   checks.push(result("internal_links", linkErrors.length === 0, linkErrors));
 
+  const historicalErrors = [];
+  const historicalIssues = buildReport.historical_issues ?? [];
+  if (historicalIssues.length) {
+    const archiveHtml = await readFile(path.join(distDir, "archive", "index.html"), "utf8");
+    for (const historical of historicalIssues) {
+      const issueRoot = path.join(distDir, "issues", historical.issue_id);
+      for (const requiredPath of [
+        path.join(issueRoot, "index.html"),
+        path.join(issueRoot, historical.migration_mode === "pdf_facsimile" || historical.migration_mode === "historical_web_edition" ? "original.pdf" : "original.html"),
+        path.join(distDir, "assets", historical.coverAsset),
+      ]) {
+        try {
+          await readFile(requiredPath);
+        } catch {
+          historicalErrors.push(`missing historical artifact: ${toPosix(path.relative(distDir, requiredPath))}`);
+        }
+      }
+      if (!archiveHtml.includes(historical.issue_id)) historicalErrors.push(`archive omits historical issue ${historical.issue_id}`);
+      if (historical.production_eligible !== false) historicalErrors.push(`historical issue ${historical.issue_id} is not explicitly non-production`);
+    }
+  }
+  checks.push(result("historical_archive", historicalErrors.length === 0, historicalIssues.length ? historicalErrors : "not included in this isolated fixture build"));
+
   const privateFindings = await scanForPrivateMaterial(distDir);
   checks.push(result("private_material_absent", privateFindings.length === 0, privateFindings));
 
@@ -199,7 +246,7 @@ async function launchChromium() {
   }
 }
 
-async function captureCase({ browser, origin, issueId, evidenceDir, name, width, height, javaScriptEnabled, reducedMotion, manifest }) {
+async function captureCase({ browser, origin, issueId, evidenceDir, name, width, height, javaScriptEnabled, reducedMotion, manifest, urlPath, testArchiveAccordion = false }) {
   const context = await browser.newContext({
     viewport: { width, height },
     javaScriptEnabled,
@@ -210,24 +257,127 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
   const page = await context.newPage();
   const consoleErrors = [];
   const requestFailures = [];
+  const externalPreviewFailures = [];
+  const externalPreviewUrls = new Set(
+    manifest.stories.map((story) => story.media?.external_image_url).filter(Boolean),
+  );
   page.on("console", (message) => {
     if (message.type() === "error") consoleErrors.push(message.text());
   });
-  page.on("requestfailed", (request) => requestFailures.push(`${request.url()} ${request.failure()?.errorText ?? "failed"}`));
-  await page.goto(`${origin}/issues/${issueId}/`, { waitUntil: "networkidle" });
+  page.on("requestfailed", (request) => {
+    const failure = `${request.url()} ${request.failure()?.errorText ?? "failed"}`;
+    if (externalPreviewUrls.has(request.url())) externalPreviewFailures.push(failure);
+    else requestFailures.push(failure);
+  });
+  await page.goto(`${origin}/${urlPath ?? `issues/${issueId}/`}`, { waitUntil: "domcontentloaded" });
+  const resolveExternalPreviews = javaScriptEnabled && (
+    urlPath === ""
+    || name.startsWith("story-")
+    || (!urlPath && ["desktop-1440x900", "mobile-390x844"].includes(name))
+  );
+  if (resolveExternalPreviews) {
+    for (let attempt = 0; attempt < 2; attempt += 1) {
+      await page.evaluate(() => {
+        for (const image of document.querySelectorAll('img[data-external-preview="true"]')) image.loading = "eager";
+      });
+      await page.waitForFunction(
+        () => [...document.querySelectorAll('img[data-external-preview="true"]')].every((image) => image.complete),
+        null,
+        { timeout: 20_000 },
+      ).catch(() => {});
+      const unresolved = await page.evaluate(() => [...document.querySelectorAll('img[data-external-preview="true"]')]
+        .filter((image) => !image.complete || image.naturalWidth === 0)
+        .length);
+      if (unresolved === 0 || attempt === 1) break;
+      await page.reload({ waitUntil: "domcontentloaded" });
+    }
+    await page.evaluate(async () => {
+      const decodeWithTimeout = (image) => Promise.race([
+        image.decode().catch(() => undefined),
+        new Promise((resolve) => setTimeout(resolve, 5_000)),
+      ]);
+      await Promise.all([...document.querySelectorAll('img[data-external-preview="true"]')]
+        .map(decodeWithTimeout));
+    });
+  }
+  await page.waitForTimeout(500);
 
   const facts = await page.evaluate((storyTitles) => {
     const mainText = document.querySelector("main")?.innerText ?? "";
     const images = [...document.images];
+    const isDeferredImage = (image) => image.loading === "lazy" && !image.complete;
+    const isDeferredExternalPreview = (image) => image.loading === "lazy"
+      && image.dataset.externalPreview === "true"
+      && !image.complete;
+    const headline = document.querySelector(".hero-copy h1");
+    const headlineStyle = headline ? getComputedStyle(headline) : null;
+    const headlineFontSize = headlineStyle ? Number.parseFloat(headlineStyle.fontSize) : null;
+    const headlineLineHeight = headlineStyle ? Number.parseFloat(headlineStyle.lineHeight) : null;
+    const viewportWidth = document.documentElement.clientWidth;
+    const headings = [...document.querySelectorAll("h1, h2, h3")];
+    const controls = [...document.querySelectorAll(".site-header a, .site-footer a, .publication-header a, .story-reader-header a, .issue-nav a, button")]
+      .filter((control) => control.getClientRects().length > 0);
     return {
       main_text_length: mainText.length,
       missing_story_titles: storyTitles.filter((title) => !mainText.includes(title)),
       sources_and_dates: mainText.includes("Sources & Dates"),
       horizontal_overflow: Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth),
-      broken_images: images.filter((image) => !image.complete || image.naturalWidth === 0).map((image) => image.currentSrc || image.src),
+      clipped_headings: headings.filter((heading) => {
+        const rect = heading.getBoundingClientRect();
+        return rect.left < -1 || rect.right > viewportWidth + 1 || heading.scrollWidth > heading.clientWidth + 1;
+      }).map((heading) => heading.id || heading.textContent.trim().slice(0, 40)),
+      controls_below_44px: controls.filter((control) => {
+        const rect = control.getBoundingClientRect();
+        return rect.width < 43.5 || rect.height < 43.5;
+      }).map((control) => control.getAttribute("aria-label") || control.textContent.trim().slice(0, 40)),
+      viewport_fit_cover: document.querySelector('meta[name="viewport"]')?.content.includes("viewport-fit=cover") ?? false,
+      broken_images: images
+        .filter((image) => image.dataset.externalPreview !== "true" && !isDeferredImage(image) && (!image.complete || image.naturalWidth === 0))
+        .map((image) => image.currentSrc || image.src),
+      deferred_external_previews: images
+        .filter(isDeferredExternalPreview)
+        .map((image) => image.currentSrc || image.src),
+      external_preview_images: images
+        .filter((image) => image.dataset.externalPreview === "true")
+        .map((image) => ({
+          url: image.currentSrc || image.src,
+          settled: image.complete,
+          loaded: image.complete && image.naturalWidth > 0,
+        })),
+      image_failed_frames: document.querySelectorAll("[data-visual-frame].image-failed").length,
+      story_visual_count: document.querySelectorAll(".issue-story .story-figure").length,
+      issue_index_is_native_disclosure: Boolean(document.querySelector(".issue-nav-panel > summary")),
+      nested_scroll_frames: [...document.querySelectorAll("iframe[data-historical-frame]")].filter((frame) => frame.scrollHeight > frame.clientHeight + 50).length,
       reduced_motion_matches: matchMedia("(prefers-reduced-motion: reduce)").matches,
+      headline_layout: headline ? {
+        font_size: headlineFontSize,
+        line_height: headlineLineHeight,
+        line_height_ratio: headlineLineHeight / headlineFontSize,
+        horizontal_overflow: Math.max(0, headline.scrollWidth - headline.clientWidth),
+      } : null,
+      archive_issue_links: document.querySelectorAll(".week-date-ledger a").length,
+      archive_hidden_panels: [...document.querySelectorAll("[data-week-panel]")].filter((panel) => panel.hidden).length,
+      archive_week_toggles: document.querySelectorAll("[data-week-toggle]").length,
     };
   }, manifest.stories.map((story) => story.title));
+
+  if (testArchiveAccordion) {
+    const toggles = page.locator("[data-week-toggle]");
+    const count = await toggles.count();
+    if (count) await toggles.first().click();
+    facts.archive_accordion = await page.evaluate(() => {
+      const buttons = [...document.querySelectorAll("[data-week-toggle]")];
+      if (!buttons.length) return { valid: true, available: false };
+      const expanded = buttons.filter((button) => button.getAttribute("aria-expanded") === "true");
+      const button = expanded[0];
+      const panel = button ? document.getElementById(button.getAttribute("aria-controls")) : null;
+      return {
+        valid: expanded.length === 1 && Boolean(panel) && !panel.hidden && location.hash === `#${button.closest("[data-week-dossier]").id}`,
+        available: true,
+        expanded: expanded.length,
+      };
+    });
+  }
 
   if (javaScriptEnabled) {
     await page.keyboard.press("Tab");
@@ -255,7 +405,7 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
     reduced_motion: reducedMotion,
   };
   await context.close();
-  return { facts, consoleErrors, requestFailures, render };
+  return { facts, consoleErrors, requestFailures, externalPreviewFailures, render };
 }
 
 export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, createdAt = new Date().toISOString(), capture = true }) {
@@ -270,9 +420,27 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
     try {
       const cases = [
         { name: "desktop-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: false },
+        { name: "compact-320x568", width: 320, height: 568, javaScriptEnabled: true, reducedMotion: false },
         { name: "mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false },
+        { name: "mobile-430x932", width: 430, height: 932, javaScriptEnabled: true, reducedMotion: false },
+        { name: "tablet-768x1024", width: 768, height: 1024, javaScriptEnabled: true, reducedMotion: false },
+        { name: "landscape-844x390", width: 844, height: 390, javaScriptEnabled: true, reducedMotion: false },
         { name: "no-js-390x844", width: 390, height: 844, javaScriptEnabled: false, reducedMotion: false },
         { name: "reduced-motion-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: true },
+        { name: "reduced-motion-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: true },
+        { name: "home-desktop-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: false, urlPath: "" },
+        { name: "home-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: "" },
+        { name: "home-landscape-844x390", width: 844, height: 390, javaScriptEnabled: true, reducedMotion: false, urlPath: "" },
+        { name: "story-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: `issues/${issueId}/stories/${staticResult.manifest.stories[0].id}/` },
+        { name: "story-landscape-844x390", width: 844, height: 390, javaScriptEnabled: true, reducedMotion: false, urlPath: `issues/${issueId}/stories/${staticResult.manifest.stories[0].id}/` },
+        { name: "archive-desktop-1440x900", width: 1440, height: 900, javaScriptEnabled: true, reducedMotion: false, urlPath: "archive/", testArchiveAccordion: true },
+        { name: "archive-landscape-844x390", width: 844, height: 390, javaScriptEnabled: true, reducedMotion: false, urlPath: "archive/", testArchiveAccordion: true },
+        { name: "archive-no-js-390x844", width: 390, height: 844, javaScriptEnabled: false, reducedMotion: false, urlPath: "archive/" },
+        ...(staticResult.buildReport.historical_issues?.length ? [
+          { name: "historical-20-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: "issues/2026-08-20/" },
+          { name: "historical-21-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: "issues/2026-08-21/" },
+          { name: "historical-22-mobile-390x844", width: 390, height: 844, javaScriptEnabled: true, reducedMotion: false, urlPath: "issues/2026-08-22/" },
+        ] : []),
       ];
       const captures = {};
       for (const item of cases) {
@@ -293,22 +461,66 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
       const keyboard = captures["desktop-1440x900"].facts.keyboard_focus;
       checks.push(result("keyboard_focus", keyboard?.tag === "A" && keyboard.outline_style !== "none" && keyboard.outline_width !== "0px", keyboard));
 
-      for (const [checkId, captureName] of [
-        ["desktop_render", "desktop-1440x900"],
-        ["mobile_render", "mobile-390x844"],
-      ]) {
-        const item = captures[captureName];
-        const ok = item.facts.horizontal_overflow === 0 && item.facts.broken_images.length === 0 && item.consoleErrors.length === 0 && item.requestFailures.length === 0;
-        checks.push(result(checkId, ok, { ...item.facts, console_errors: item.consoleErrors, request_failures: item.requestFailures }));
-      }
-      const reduced = captures["reduced-motion-1440x900"];
-      checks.push(result("reduced_motion_render", reduced.facts.reduced_motion_matches && reduced.facts.horizontal_overflow === 0, reduced.facts));
+      const capturePasses = (item) => item.facts.horizontal_overflow === 0
+          && item.facts.clipped_headings.length === 0
+          && item.facts.controls_below_44px.length === 0
+          && item.facts.viewport_fit_cover
+          && item.facts.broken_images.length === 0
+          && item.facts.external_preview_images.every((image) => image.loaded
+            || !image.settled
+            || item.facts.deferred_external_previews.includes(image.url))
+          && item.facts.image_failed_frames === 0
+          && item.consoleErrors.length === 0
+          && item.requestFailures.length === 0;
+      const desktop = captures["desktop-1440x900"];
+      checks.push(result("desktop_render", capturePasses(desktop), {
+        ...desktop.facts,
+        console_errors: desktop.consoleErrors,
+        request_failures: desktop.requestFailures,
+        external_preview_failures: desktop.externalPreviewFailures,
+      }));
+
+      const mobileNames = ["compact-320x568", "mobile-390x844", "mobile-430x932", "tablet-768x1024", "landscape-844x390", "home-landscape-844x390", "story-mobile-390x844", "story-landscape-844x390", "archive-landscape-844x390"];
+      checks.push(result("mobile_render", mobileNames.every((name) => capturePasses(captures[name])), Object.fromEntries(mobileNames.map((name) => [name, {
+        ...captures[name].facts,
+        console_errors: captures[name].consoleErrors,
+        request_failures: captures[name].requestFailures,
+        external_preview_failures: captures[name].externalPreviewFailures,
+      }]))));
+
+      const reducedNames = ["reduced-motion-1440x900", "reduced-motion-390x844"];
+      checks.push(result("reduced_motion_render", reducedNames.every((name) => captures[name].facts.reduced_motion_matches && capturePasses(captures[name])), Object.fromEntries(reducedNames.map((name) => [name, captures[name].facts]))));
+
+      const headlineLayouts = [captures["home-desktop-1440x900"], captures["home-mobile-390x844"]]
+        .map((item) => item.facts.headline_layout);
+      const headlineOk = headlineLayouts.every((headline) => headline
+        && headline.line_height_ratio >= 0.9
+        && headline.horizontal_overflow === 0);
+      checks.push(result("headline_layout", headlineOk, headlineLayouts));
+
+      const shellCaptures = [captures["home-desktop-1440x900"], captures["home-mobile-390x844"], captures["home-landscape-844x390"], captures["archive-desktop-1440x900"], captures["archive-landscape-844x390"], captures["archive-no-js-390x844"], captures["historical-20-mobile-390x844"], captures["historical-21-mobile-390x844"], captures["historical-22-mobile-390x844"]].filter(Boolean);
+      const shellOk = shellCaptures.every((item) => item.facts.horizontal_overflow === 0
+        && item.facts.broken_images.length === 0
+        && item.facts.image_failed_frames === 0
+        && item.facts.nested_scroll_frames === 0
+        && item.consoleErrors.length === 0
+        && item.requestFailures.length === 0)
+        && captures["home-desktop-1440x900"].facts.external_preview_images.every((image) => image.loaded)
+        && captures["home-mobile-390x844"].facts.external_preview_images.every((image) => image.loaded)
+        && captures["archive-desktop-1440x900"].facts.archive_accordion?.valid
+        && captures["archive-no-js-390x844"].facts.archive_hidden_panels === 0
+        && captures["archive-no-js-390x844"].facts.archive_issue_links === captures["archive-desktop-1440x900"].facts.archive_issue_links;
+      checks.push(result("publication_shell_render", shellOk, {
+        home_desktop: captures["home-desktop-1440x900"].facts,
+        home_mobile: captures["home-mobile-390x844"].facts,
+        archive: captures["archive-desktop-1440x900"].facts,
+      }));
     } finally {
       await browser.close();
       await server.close();
     }
   } else {
-    for (const id of ["no_js_reading", "keyboard_focus", "desktop_render", "mobile_render", "reduced_motion_render"]) {
+    for (const id of ["no_js_reading", "keyboard_focus", "desktop_render", "mobile_render", "reduced_motion_render", "headline_layout", "publication_shell_render"]) {
       checks.push(result(id, false, capture ? "render checks skipped because static QA failed" : "render checks not requested"));
     }
   }

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Object entry card</title>
+  <desc id="desc">Original diagram of a red measuring spine, offset black blocks and an acid-green correction mark, drawn for the Culture &amp; Taste Preview.</desc>
+  <rect width="1200" height="800" fill="#f2ebdd"/>
+  <path d="M100 120H1100M100 400H1100M100 680H1100" stroke="#171717" stroke-width="3" opacity=".2"/>
+  <path d="M250 -40L760 840" stroke="#e84a37" stroke-width="24"/>
+  <path d="M300 140h260v120H300zM720 310h300v150H720zM180 540h380v120H180z" fill="#171717"/>
+  <path d="M870 120l130 70-80 110" fill="none" stroke="#d5f23b" stroke-width="26"/>
+  <g fill="#171717" font-family="monospace" font-weight="700" font-size="24"><text x="100" y="78">ENTRY CARD / 09.03</text><text x="100" y="754">USE → TEST → RETURN</text></g>
+</svg>

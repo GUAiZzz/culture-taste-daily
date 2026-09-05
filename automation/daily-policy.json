@@ -1,0 +1,188 @@
+{
+  "schema_version": 2,
+  "kind": "culture_taste_daily_candidate_policy",
+  "timezone": "Asia/Shanghai",
+  "mode": "scheduled_preview_candidate",
+  "schedule": {
+    "start_time": "11:00",
+    "recovery_check_times": [
+      "13:00",
+      "15:00",
+      "17:00"
+    ],
+    "recover_when_current_candidate_missing": true,
+    "research_window_start": "06:00",
+    "research_lock_deadline": "15:00",
+    "research_lock_deadline_effective_from": "2026-08-26",
+    "historical_research_lock_deadline": "08:30",
+    "final_check_time": "18:00",
+    "preview_collection_deadline": "18:00",
+    "scheduler_hours": [
+      11,
+      13,
+      15,
+      17,
+      18
+    ]
+  },
+  "freshness_hours": 72,
+  "official_image_gate": {
+    "required": true,
+    "effective_from": "2026-08-25",
+    "required_origin_authority": "first_party_official",
+    "required_source_relationship": "first_party_official",
+    "original_visual_satisfies": false,
+    "preview_external_allowed": true,
+    "production_requires_cleared_rights": true
+  },
+  "daily_radar": {
+    "public_file": "daily-radar.public.json",
+    "supplemental_to_issue": true,
+    "changes_issue_selection": false,
+    "categories": [
+      "fashion",
+      "music",
+      "objects",
+      "city"
+    ],
+    "minimum_items_per_category": 2,
+    "first_party_official_media_required": true,
+    "official_video_preferred_when_available": true,
+    "included_in_rss": false,
+    "fresh_event_gate_effective_from": "2026-08-26",
+    "deduplication_lookback_days": 2,
+    "source_coverage_attestation_required": true,
+    "source_coverage_attestation_effective_from": "2026-08-27",
+    "minimum_items": 10,
+    "maximum_items": 20
+  },
+  "dry_run_base_ref": "preview-build-v1",
+  "branch_prefix": "automation/culture-taste",
+  "output": {
+    "open_pull_request": true,
+    "merge": true,
+    "deploy_preview": true,
+    "deploy_production": false,
+    "modify_pages_settings": false,
+    "modify_legacy_repository": false
+  },
+  "failure": {
+    "status": "BLOCKED",
+    "preserve_previous_good": true,
+    "allow_partial_publish": false
+  },
+  "required_source_lanes": [
+    "mainland_china_plus_hong_kong_or_taiwan",
+    "japan_or_korea",
+    "continental_europe_or_united_kingdom",
+    "united_states_or_canada",
+    "rotating_global_lane"
+  ],
+  "brand_radar": {
+    "registry": "automation/brand-radar.json",
+    "selection": "full_registry_daily_quick_scan_plus_focus_cohort_and_standing_beats",
+    "full_registry_daily_quick_scan": true,
+    "publication_quota": false,
+    "social_following_required": false
+  },
+  "cover_variation_gate": {
+    "effective_from": "2026-08-26",
+    "local_cover_required": true,
+    "exact_asset_reuse_forbidden": true,
+    "comparison_window_issues": 7
+  },
+  "closing_palette_gate": {
+    "required": true,
+    "effective_from": "2026-08-23",
+    "comparison_window_issues": 7,
+    "text_contrast_minimum": 4.5,
+    "accent_contrast_minimum": 3
+  },
+  "closing_quotation_gate": {
+    "required": true,
+    "effective_from": "2026-08-31",
+    "pool": "automation/closing-quotation-pool.json",
+    "language_priority": [
+      "en",
+      "zh-CN"
+    ],
+    "selection_mode": "editor_selected_and_issue_locked"
+  },
+  "standing_beats": [
+    {
+      "id": "supreme-thursday-drop",
+      "cadence": "thursday",
+      "required_check": true,
+      "publication_quota": false
+    },
+    {
+      "id": "stussy-release-radar",
+      "cadence": "daily",
+      "required_check": true,
+      "publication_quota": false
+    },
+    {
+      "id": "luxury-runway-calendar",
+      "cadence": "daily",
+      "required_check": true,
+      "publication_quota": false
+    },
+    {
+      "id": "exhibition-and-cultural-programme-radar",
+      "cadence": "daily",
+      "required_check": true,
+      "publication_quota": false
+    },
+    {
+      "id": "small-breakout-object-radar",
+      "cadence": "daily",
+      "required_check": true,
+      "publication_quota": false
+    }
+  ],
+  "required_runtime_checks": [
+    "canonical_harrytone_access_and_commit",
+    "private_ephemeral_workspace_outside_repository",
+    "required_regional_lanes",
+    "event_level_deduplication",
+    "previous_two_issue_radar_deduplication",
+    "full_brand_registry_daily_quick_scan",
+    "source_coverage_attestation",
+    "primary_and_independent_source_evidence",
+    "first_party_official_image_for_every_selected_story",
+    "daily_radar_two_per_category_with_first_party_official_media",
+    "live_public_source_and_media_health",
+    "image_rights_basis_separate_from_credit",
+    "detail_level_reference_recheck",
+    "seven_issue_variation_review",
+    "locked_daily_coda_palette",
+    "locked_daily_coda_quotation",
+    "local_cover_and_headline_collision_gate",
+    "deterministic_build_and_independent_qa",
+    "privacy_scan",
+    "named_human_review_pending"
+  ],
+  "preview_authority": {
+    "effective_from": "2026-09-06",
+    "owner_authorized_on": "2026-09-05",
+    "scope": "complete_daily_candidate_to_non_production_preview",
+    "production_authority": false,
+    "gate": "scripts/preview-release.mjs",
+    "policy_record": "docs/PREVIEW_AUTONOMY.md"
+  },
+  "retry": {
+    "max_attempts": 3,
+    "backoff_seconds": [
+      2,
+      8
+    ],
+    "terminal_on": [
+      "RESEARCH_INCOMPLETE",
+      "REPOSITORY_IDENTITY",
+      "PUBLIC_PATH_SCOPE",
+      "TECHNICAL_QA",
+      "PRIVATE_MATERIAL"
+    ],
+    "preserve_previous_good": true
+  }
+}

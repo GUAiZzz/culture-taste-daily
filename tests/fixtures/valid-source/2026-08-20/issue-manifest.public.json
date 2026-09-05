@@ -2,6 +2,7 @@
   "schema_version": 2,
   "issue_id": "2026-08-20",
   "publication_date": "2026-08-20",
+  "visibility": "published_preview",
   "timezone": "Asia/Shanghai",
   "candidate_created_at": "2026-08-19T18:30:00+08:00",
   "research_locked_at": "2026-08-20T08:30:00+08:00",
@@ -21,7 +22,7 @@
   },
   "source_hashes": {
     "content_sha256": "85dab0ecf155aa9c1139b257055bd89049764f08dacc10f3c590d80114afbaa5",
-    "art_direction_sha256": "9a73b172120e15dd6708d639d7087fcf732b879e2449d737e4dc18f0f009403d",
+    "art_direction_sha256": "9decc812aefd7958a1a6a0d70ae6dd7157c59eab7c0a8025ed5001b7a5399e6a",
     "issue_style_sha256": "b82066853a9c1a7c9a1861be9d7d9f3976540dbb572f2c7ed8e90225d17507ca"
   },
   "harrytone": {
@@ -45,7 +46,8 @@
     "behance_viewing_arc": "entry, proof, boundary, release",
     "mobile_translation": "single column",
     "mobbin_usability_constraint": "clear links and visible focus",
-    "quiet_ending": "previous good remains selected"
+    "quiet_ending": "previous good remains selected",
+    "closing_palette": {"background":"#F1F0E8","foreground":"#111111","accent":"#2457C5","rationale":"A quiet paper field keeps the synthetic fixture readable while one blue signal marks the selected previous good."}
   },
   "variation_review": {
     "comparison_mode": "first_issue",

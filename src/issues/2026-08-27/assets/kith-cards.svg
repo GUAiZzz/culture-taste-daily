@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Kith for BMW card deck</title>
+  <desc id="desc">An original diagram of a pair of playing cards and a steering-wheel mark.</desc>
+  <rect width="1200" height="720" fill="#dbe5e7"/><g transform="rotate(-10 450 370)"><rect x="250" y="130" width="330" height="470" rx="18" fill="#f4f0e4" stroke="#111" stroke-width="8"/><text x="285" y="200" fill="#111" font-family="monospace" font-size="40">K</text><text x="410" y="450" fill="#ef5b35" font-family="Arial" font-size="110">♣</text></g><g transform="rotate(10 760 370)"><rect x="620" y="130" width="330" height="470" rx="18" fill="#ef5b35" stroke="#111" stroke-width="8"/><text x="655" y="200" fill="#111" font-family="monospace" font-size="40">B</text><circle cx="785" cy="390" r="90" fill="none" stroke="#111" stroke-width="10"/><path d="M785 300v180M695 390h180" stroke="#111" stroke-width="8"/></g><text x="84" y="84" fill="#111" font-family="monospace" font-size="27" font-weight="700">KITH FOR BMW / PLAY</text>
+</svg>
