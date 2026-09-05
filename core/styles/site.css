@@ -986,12 +986,18 @@ body[data-page="facsimile"] .publication-footer {
   }
 
   .publication-actions {
+    grid-column: 1 / -1;
+    justify-content: space-between;
     gap: 0.4rem;
   }
 
   .publication-header nav {
-    display: none;
+    display: flex;
+    gap: .75rem;
+    font-size: .6875rem;
   }
+
+  .publication-header nav a { display: inline-flex; align-items: center; }
 
   .publication-header .theme-dots {
     gap: 0;
@@ -1809,4 +1815,11 @@ body[data-page="facsimile"] .publication-footer {
     translate: none;
     transition: none;
   }
+}
+
+.daily-index > header .daily-index-guide { grid-column: 1 / -1; max-width: 48rem; font: 400 1rem/1.6 Arial, "PingFang SC", sans-serif; letter-spacing: normal; text-transform: none; }
+.daily-index .filter-result { margin: 1rem 0; font-size: .875rem; }
+@media (max-width: 29.9375rem) {
+  .publication-header nav { gap: .5rem; flex-wrap: wrap; }
+  .publication-actions { flex-wrap: wrap; }
 }

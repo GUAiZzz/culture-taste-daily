@@ -265,3 +265,15 @@ body[data-shell="publication"] main {
     translate: none;
   }
 }
+
+/* Reading invariants apply to generated contexts, never historical originals. */
+body[data-issue] { font-synthesis: none; }
+body[data-issue]:not([data-story-reader]) h1,
+body[data-issue]:not([data-story-reader]) h2 { line-height: 1.12 !important; overflow-wrap: anywhere; }
+.issue-nav ul { display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.issue-nav li { flex: 0 0 auto; }
+.issue-nav a { display: inline-flex; align-items: center; gap: .6rem; }
+.issue-nav a span { font-size: .6875rem; text-transform: uppercase; }
+html:not(.has-js) [data-week-toggle] { cursor: default; color: inherit; opacity: 1; }
+html:not(.has-js) .week-toggle-mark { display: none; }
+.filter-result:empty { display: none; }

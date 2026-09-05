@@ -88,6 +88,7 @@ function applyTheme(theme, { manual = false } = {}) {
   if (manual) {
     try {
       window.sessionStorage.setItem(themeManualKey, "1");
+      window.localStorage.setItem("ctd-theme-preference", safeTheme);
     } catch {
       // The click still applies to the current page when storage is unavailable.
     }
@@ -166,14 +167,27 @@ const storyFilters = [...document.querySelectorAll("[data-story-filter]")];
 const storyCards = [...document.querySelectorAll("[data-story-card]")];
 const radarGroups = [...document.querySelectorAll("[data-radar-group]")];
 
-for (const button of storyFilters) {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.storyFilter;
-    for (const candidate of storyFilters) candidate.setAttribute("aria-pressed", String(candidate === button));
-    for (const card of storyCards) card.hidden = filter !== "all" && card.dataset.storyCategory !== filter;
-    for (const group of radarGroups) group.hidden = ![...group.querySelectorAll("[data-story-card]")].some((card) => !card.hidden);
-  }, { signal: lifecycle.signal });
+function applyStoryFilter(filter, { updateUrl = false } = {}) {
+  const selected = storyFilters.find(button => button.dataset.storyFilter === filter) ?? storyFilters[0];
+  if (!selected) return;
+  const category = selected.dataset.storyFilter;
+  for (const button of storyFilters) button.setAttribute("aria-pressed", String(button === selected));
+  for (const card of storyCards) card.hidden = category !== "all" && card.dataset.storyCategory !== category;
+  for (const group of radarGroups) group.hidden = ![...group.querySelectorAll("[data-story-card]")].some(card => !card.hidden);
+  const status = document.querySelector("[data-filter-result]");
+  if (status) status.textContent = `${category === "all" ? "全部" : category.toUpperCase()} · ${storyCards.filter(card => !card.hidden).length} 条精选`;
+  if (updateUrl) {
+    const url = new URL(location.href);
+    if (category === "all") url.searchParams.delete("category");
+    else url.searchParams.set("category", category);
+    history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+  }
 }
+for (const button of storyFilters) {
+  button.addEventListener("click", () => applyStoryFilter(button.dataset.storyFilter, { updateUrl: true }), { signal: lifecycle.signal });
+}
+applyStoryFilter(new URLSearchParams(location.search).get("category"));
+window.addEventListener("popstate", () => applyStoryFilter(new URLSearchParams(location.search).get("category")), { signal: lifecycle.signal });
 
 for (const group of new Set(storyFilters.map((button) => button.parentElement).filter(Boolean))) {
   enableRailKeyboard(group, "[data-story-filter]");
@@ -203,6 +217,7 @@ if (weekDossiers.length) {
   openWeekFromHash();
   for (const dossier of weekDossiers) {
     const button = dossier.querySelector("[data-week-toggle]");
+    if (button) button.disabled = false;
     button?.addEventListener("click", () => {
       const wasExpanded = button.getAttribute("aria-expanded") === "true";
       for (const candidate of weekDossiers) setWeekExpanded(candidate, false);
@@ -301,7 +316,7 @@ function updateMotion() {
   }
 }
 
-if (storyReader && document.startViewTransition) {
+if (storyReader && document.startViewTransition && !reducedMotion.matches) {
   for (const link of storyReader.querySelectorAll("a.next-story, a.related-card, .story-sibling-nav a")) {
     link.addEventListener("click", (event) => {
       const destination = new URL(link.href, window.location.href);
@@ -368,5 +383,18 @@ function cleanupLifecycle() {
 }
 
 document.addEventListener("visibilitychange", syncDocumentVisibility, { signal: lifecycle.signal });
-window.addEventListener("pagehide", cleanupLifecycle, { once: true });
+window.addEventListener("pagehide", (event) => {
+  if (!event.persisted) cleanupLifecycle();
+  else {
+    document.documentElement.dataset.motionPaused = "true";
+    if (motionFrame) window.cancelAnimationFrame(motionFrame);
+    motionFrame = 0;
+  }
+});
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    syncDocumentVisibility();
+    applyStoryFilter(new URLSearchParams(location.search).get("category"));
+  }
+}, { signal: lifecycle.signal });
 syncDocumentVisibility();
