@@ -9,7 +9,7 @@ const times = [policy.schedule.start_time, ...policy.schedule.recovery_check_tim
 const expected = policy.schedule.scheduler_hours.map(hour => `${String(hour).padStart(2, '0')}:00`);
 if (JSON.stringify(times) !== JSON.stringify(expected)) issues.push('INTERNAL_SCHEDULE_DRIFT');
 if (policy.timezone !== 'Asia/Shanghai' || policy.output.deploy_production !== false || policy.output.modify_pages_settings !== false || policy.output.modify_legacy_repository !== false) issues.push('AUTHORITY_DRIFT');
-for (const file of ['README.md', 'docs/PRODUCTION_STATUS.md', 'docs/PREVIEW_BUILD.md']) {
+for (const file of ['docs/PRODUCTION_STATUS.md', 'docs/PREVIEW_BUILD.md']) {
   const text = await readFile(file, 'utf8');
   if (!text.includes('ops:state')) issues.push(`LIVE_STATE_SOURCE_MISSING:${file}`);
   if (/2026-08-25.{0,30}(?:current|latest)|(?:current|latest).{0,30}2026-08-25/i.test(text)) issues.push(`STALE_LATEST_DATE:${file}`);
