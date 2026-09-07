@@ -512,6 +512,10 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
         && captures["archive-no-js-390x844"].facts.archive_hidden_panels === 0
         && captures["archive-no-js-390x844"].facts.archive_issue_links === captures["archive-desktop-1440x900"].facts.archive_issue_links;
       checks.push(result("publication_shell_render", shellOk, {
+        transport_errors: shellCaptures.filter(item => item.consoleErrors.length || item.requestFailures.length).map(item => ({
+          page: item.render.path, console_errors: item.consoleErrors, request_failures: item.requestFailures,
+          external_preview_failures: item.externalPreviewFailures,
+        })),
         home_desktop: captures["home-desktop-1440x900"].facts,
         home_mobile: captures["home-mobile-390x844"].facts,
         archive: captures["archive-desktop-1440x900"].facts,

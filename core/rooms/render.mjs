@@ -16,7 +16,7 @@ const render=s=>md.render(s).replaceAll('<a href="','<a target="_blank" rel="noo
 const editorialIntros=JSON.parse(await readFile(new URL('editorial-intros.json',assets),'utf8'));
 const mediaCorrections=JSON.parse(await readFile(new URL('media-corrections.json',assets),'utf8'));
 const dates=validatedIssues.filter(i=>i.issueId>='2026-08-25'&&i.manifest.visibility!=='future_draft').map(i=>i.issueId);
-if(!dates.length)return []; 
+if(!dates.length)return [];
 const categories={fashion:'时装',music:'音乐',objects:'物件',city:'城市'};
 const issues=[],proof=[];const routes=[];
 for(const date of dates){
