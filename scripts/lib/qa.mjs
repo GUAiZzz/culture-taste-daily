@@ -137,12 +137,13 @@ export async function runStaticChecks({ repoRoot, distDir, issueId }) {
     sources_and_dates: hasSources,
   }));
 
-  const storySections = [...issueHtml.matchAll(/<section class="issue-story" data-story="([^"]+)"[\s\S]*?<\/section>/g)].map((match) => match[0]);
+  const roomEdition = issueHtml.includes('data-reader="rooms-v2"');
+  const storySections = roomEdition ? [...issueHtml.matchAll(/<article class="issue-story" id="story-([^"]+)"[\s\S]*?<\/article>/g)].map(m=>m[0]) : [...issueHtml.matchAll(/<section class="issue-story" data-story="([^"]+)"[\s\S]*?<\/section>/g)].map(m=>m[0]);
   const visualFailures = manifest.media_required
     ? manifest.stories.filter((story) => {
-        const section = storySections.find((candidate) => candidate.includes(`data-story="${story.id}"`)) ?? "";
+        const section = storySections.find((candidate) => candidate.includes(roomEdition ? `id="story-${story.id}"` : `data-story="${story.id}"`)) ?? "";
         const kind = story.media?.kind ?? "original_illustration";
-        return !new RegExp(`<figure class="story-figure"[^>]*data-media-kind="${kind}"[\\s\\S]*?<img\\b[^>]*\\balt="[^"]+"[\\s\\S]*?<figcaption>`).test(section);
+        return !new RegExp(`<figure class="${roomEdition ? "photo" : "story-figure"}"[^>]*data-media-kind="${kind}"[\\s\\S]*?<img\\b[^>]*\\balt="[^"]+"[\\s\\S]*?<figcaption>`).test(section);
       }).map((story) => story.id)
     : [];
   checks.push(result("story_visuals", visualFailures.length === 0, {
@@ -225,8 +226,8 @@ export async function runStaticChecks({ repoRoot, distDir, issueId }) {
 
   const images = htmlTags(issueHtml, ["img"]);
   const missingAlt = images.filter((image) => image.attributes.alt === undefined).length;
-  const a11yOk = /class="skip-link"/i.test(issueHtml) && /:focus-visible/.test(issueHtml) && missingAlt === 0;
-  checks.push(result("accessibility_structure", a11yOk, { skip_link: /class="skip-link"/i.test(issueHtml), focus_style: /:focus-visible/.test(issueHtml), missing_alt: missingAlt }));
+  const a11yOk = /class="[^"]*\bskip-link\b[^"]*"/i.test(issueHtml) && /:focus-visible/.test(issueHtml) && missingAlt === 0;
+  checks.push(result("accessibility_structure", a11yOk, { skip_link: /class="[^"]*\bskip-link\b[^"]*"/i.test(issueHtml), focus_style: /:focus-visible/.test(issueHtml), missing_alt: missingAlt }));
 
   return { checks, buildReport, issueReport, manifest, currentArtifactDigest };
 }
@@ -320,7 +321,7 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
     return {
       main_text_length: mainText.length,
       missing_story_titles: storyTitles.filter((title) => !mainText.includes(title)),
-      sources_and_dates: mainText.includes("Sources & Dates"),
+      sources_and_dates: /sources & dates/i.test(mainText),
       horizontal_overflow: Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth),
       clipped_headings: headings.filter((heading) => {
         const rect = heading.getBoundingClientRect();

@@ -13,6 +13,7 @@ import {
   stableJson,
   writeJson,
 } from "./files.mjs";
+import { buildRooms } from "../../core/rooms/render.mjs";
 import { assertPublicTree } from "./privacy.mjs";
 import { validateJsonFile } from "./schema.mjs";
 import { evaluateDateSemantics, groupIssuesByIsoWeek, isoWeekForDate } from "./dates.mjs";
@@ -200,7 +201,8 @@ async function priorRadarIndex(sourceRoot, issueId, lookbackDays) {
   const ids = new Map();
   const urls = new Map();
   for (const date of dates) {
-    const radarPath = path.join(sourceRoot, date, PUBLIC_DAILY_RADAR);
+    const ordinaryPath = path.join(sourceRoot, date, PUBLIC_DAILY_RADAR);
+    const radarPath = await exists(ordinaryPath) ? ordinaryPath : path.join(sourceRoot, date, "retrospective-index.public.json");
     const manifestPath = path.join(sourceRoot, date, PUBLIC_MANIFEST);
     if (!(await exists(radarPath))) continue;
     const radar = await readJson(radarPath);
@@ -320,6 +322,21 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, dailyPolicy, 
   assertOfficialStoryImages(manifest, dailyPolicy.official_image_gate);
   let dailyRadar = null;
   let dailyRadarDigest = null;
+  let retrospectiveIndex = null;
+  const retrospectivePath = path.join(issueRoot, "retrospective-index.public.json");
+  if (await exists(retrospectivePath)) {
+    const allowed = await readJson(path.join(repoRoot, "core/rooms/retrospective-issues.json"));
+    const record = allowed[issueId];
+    if (!record || await exists(dailyRadarPath)) throw new Error("Unapproved or ambiguous retrospective: " + issueId);
+    assertEqual(record.content_sha256, manifest.content_lock.sha256, "retrospective content lock");
+    assertEqual(record.index_sha256, await sha256File(retrospectivePath), "retrospective index lock");
+    retrospectiveIndex = await readJson(retrospectivePath);
+    assertEqual(retrospectiveIndex.date, issueId, "retrospective date");
+    assertEqual(retrospectiveIndex.content_sha256, manifest.content_lock.sha256, "retrospective body");
+    assertEqual(retrospectiveIndex.kind, "owner_authorized_retrospective", "retrospective type");
+    const ids = retrospectiveIndex.items.filter(item => item.included_story_id).map(item => item.included_story_id);
+    if (ids.length !== manifest.stories.length || new Set(ids).size !== ids.length || manifest.stories.some(s => !ids.includes(s.id)) || retrospectiveIndex.items.some(i => !["fashion","music","objects","city"].includes(i.category))) throw new Error("Retrospective article index mismatch");
+  }
   if (await exists(dailyRadarPath)) {
     const rawDailyRadar = await readJson(dailyRadarPath);
     await validateJsonFile(rawDailyRadar, path.join(repoRoot, "schemas/daily-radar.public.schema.json"), `${issueId} public daily radar`);
@@ -360,6 +377,7 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, dailyPolicy, 
     "contract/identity": sha256(stableJson(manifest.contract)),
     "harrytone/identity": sha256(stableJson(manifest.harrytone)),
   };
+  if (retrospectiveIndex) inputDigests["retrospective-index.public.json"] = await sha256File(retrospectivePath);
 
   return {
     issueId,
@@ -369,6 +387,7 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, dailyPolicy, 
     manifest,
     dailyRadar,
     dailyRadarDigest,
+    retrospectiveIndex,
     issueCss,
     inputDigests,
     candidateDigest: digestMap(inputDigests),
@@ -438,6 +457,8 @@ export async function buildSite({
   historicalRoot,
   outDir = path.join(repoRoot, "dist"),
   issueId,
+  readerRooms = true,
+  through,
   baseUrl = "https://culture-taste-daily.invalid/",
 } = {}) {
   await resetDirectory(outDir, path.dirname(outDir));
@@ -456,7 +477,7 @@ export async function buildSite({
   ]);
   const issues = [];
 
-  for (const id of await discoverDateDirectories(sourceRoot, issueId)) {
+  for (const id of (await discoverDateDirectories(sourceRoot, issueId)).filter(id => !through || id <= through)) {
     const issue = await loadIssue({
       repoRoot,
       sourceRoot,
@@ -569,6 +590,21 @@ export async function buildSite({
   const robotsBase = new URL(baseUrl).pathname.replace(/\/$/, "");
   await writeFile(path.join(outDir, "robots.txt"), `User-agent: *\nDisallow: ${robotsBase}/issues/*/original.html\nDisallow: ${robotsBase}/issues/*/original.pdf\nDisallow: ${robotsBase}/issues/*/pages/\n`, "utf8");
 
+  if (readerRooms && issues.some(i => i.issueId >= "2026-08-25")) {
+    for (const issue of issues.filter(i => i.issueId >= "2026-08-25")) {
+      const dir = path.join(outDir, "issues", issue.issueId);
+      await writeFile(path.join(dir, "original-edition.html"), await readFile(path.join(dir, "index.html")));
+    }
+    const renderedDates = await buildRooms({ repoRoot, outDir, validatedIssues: issues, publicationIssues });
+    for (const issue of issues.filter(i => renderedDates.includes(i.issueId))) {
+      const dir = path.join(outDir, "issues", issue.issueId);
+      const files = await fileDigestMap(dir, { exclude: [PUBLIC_MANIFEST] });
+      issue.issuePayloadDigest = digestMap(files);
+      issue.builtManifest.artifact_digests.issue_payload_sha256 = issue.issuePayloadDigest;
+      await writeJson(path.join(dir, PUBLIC_MANIFEST), issue.builtManifest);
+    }
+  }
+  if (await exists(path.join(repoRoot,"src/history"))) await copyTree(path.join(repoRoot,"src/history"),path.join(outDir,"history"));
   await assertPublicTree(outDir);
   const artifactFiles = await fileDigestMap(outDir, { exclude: ["build-report.json"] });
   const artifactDigest = digestMap(artifactFiles);

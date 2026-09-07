@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Threshold study</title>
+  <desc id="desc">Original diagram of four entry thresholds, drawn for the Culture &amp; Taste Preview.</desc>
+  <rect width="1200" height="800" fill="#191716"/>
+  <path d="M80 140H1120M80 400H1120M80 660H1120" stroke="#f1dfc5" stroke-width="3" opacity=".45"/>
+  <path d="M150 80V720M420 80V720M690 80V720M960 80V720" stroke="#f1dfc5" stroke-width="2" opacity=".24"/>
+  <path d="M160 140L410 400L680 140L950 400M160 660L410 400L680 660L950 400" fill="none" stroke="#ff5a36" stroke-width="22"/>
+  <path d="M150 400H950" stroke="#76e6cc" stroke-width="8"/>
+  <circle cx="160" cy="140" r="18" fill="#76e6cc"/><circle cx="410" cy="400" r="18" fill="#76e6cc"/><circle cx="680" cy="140" r="18" fill="#76e6cc"/><circle cx="950" cy="400" r="18" fill="#76e6cc"/>
+  <g fill="#f1dfc5" font-family="monospace" font-weight="700" font-size="24"><text x="88" y="112">OPEN / 09.01</text><text x="88" y="755">ARCHIVE → PUBLIC → OBJECT</text><text x="820" y="90">LOCAL FALLBACK / ORIGINAL</text></g>
+</svg>

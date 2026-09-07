@@ -130,3 +130,7 @@ Run `npm run preview:release` with both private paths, first without `--execute`
 After an interruption use `npm run ops:state -- --online` and `npm run preview:resume`; never create another candidate or PR. Confirm final merge/deploy/live state and append the terminal receipt to this automation's memory. Keep detailed evidence and receipts outside Git.
 
 Notify only on a non-overridable fault, exhausted transient retries, failed live verification, or final missing-day. Normal no-op checkpoints stay quiet. A transient limitation that is fully handled and honestly represented in Preview is recorded without requiring owner action. Production never runs automatically.
+
+## Shared reading edition
+
+Read `docs/THREE_ROOMS_RELEASE.md` for the owner-approved shared presentation. Normal daily packages automatically appear in all three rooms after the validated build. The two pinned retrospective entries are maintenance history only; ordinary daily coverage and release gates remain unchanged.

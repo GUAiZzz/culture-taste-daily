@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">TMEX forum lanes</title>
+  <desc id="desc">An original five-lane diagram for music, sustainability, AI, festivals, and sound-image-space.</desc>
+  <rect width="1200" height="720" fill="#d9ff43"/>
+  <g fill="#101552"><rect x="100" y="180" width="170" height="350"/><rect x="320" y="180" width="170" height="350"/><rect x="540" y="180" width="170" height="350"/><rect x="760" y="180" width="170" height="350"/><rect x="980" y="180" width="120" height="350"/></g>
+  <g fill="#f5f0e6" font-family="monospace" font-size="26" font-weight="700"><text x="128" y="250">SOUND</text><text x="339" y="250">GREEN</text><text x="581" y="250">AI</text><text x="785" y="250">FEST</text><text x="1000" y="250">A/V</text></g>
+  <path d="M130 330h110M350 330h110M570 330h110M790 330h110M1005 330h70" stroke="#ff5a1f" stroke-width="14"/>
+  <text x="100" y="100" fill="#101552" font-family="monospace" font-size="30" letter-spacing="4">TMEX / 27—30 AUG</text>
+  <text x="100" y="620" fill="#101552" font-family="Arial, sans-serif" font-size="30" font-weight="700">THE STAGE IS ALSO A SYSTEM</text>
+</svg>
+

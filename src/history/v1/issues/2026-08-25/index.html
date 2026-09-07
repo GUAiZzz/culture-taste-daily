@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" type="image/png" href="../../assets/culture-taste-earth.png">
+  <title>场地也有一票 — Culture &amp; Taste Daily 2026-08-25</title>
+  <script>(()=>{const themes=["field","coral","analog"],page="issue";let selected="field";try{const query=new URLSearchParams(location.search).get("theme"),stored=sessionStorage.getItem("ctd-theme"),manual=sessionStorage.getItem("ctd-theme-manual")==="1",preferred=localStorage.getItem("ctd-theme-preference");if(themes.includes(query))selected=query;else if(themes.includes(preferred))selected=preferred;else if(page==="home"&&!manual)selected=themes[Math.floor(Math.random()*themes.length)];else if(themes.includes(stored))selected=stored;else selected=themes[Math.floor(Math.random()*themes.length)];sessionStorage.setItem("ctd-theme",selected);}catch{}document.documentElement.dataset.visualTheme=selected;})();</script>
+  <style>/* Functional core only: semantic access and responsive safety, not issue art direction. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  text-size-adjust: 100%;
+  --mobile-gutter: 20px;
+  --compact-gutter: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  background: Canvas;
+  color: CanvasText;
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-header a,
+.site-footer a,
+.publication-header a,
+.story-reader-header a,
+.issue-nav a,
+button {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: color-mix(in srgb, currentColor 18%, transparent);
+}
+
+button:active,
+a:active {
+  opacity: 0.78;
+}
+
+.issue-brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.issue-brand {
+  gap: 0.65rem;
+  text-decoration: none;
+}
+
+.brand-type {
+  display: inline-flex;
+  gap: 0.15em;
+  align-items: baseline;
+  color: inherit;
+  font-family: Arial, "Helvetica Neue", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.075em;
+  line-height: 0.9;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.brand-type em {
+  font-family: Georgia, "Times New Roman", "Songti SC", serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+}
+
+.issue-nav {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+.issue-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.issue-nav a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.issue-nav-panel summary,
+.enter-issue,
+.publication-footer a,
+.history-actions a,
+.facsimile-pages figcaption a {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+}
+
+.source-meta {
+  display: block;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* The publication index/archive shell is stable and never styles issue articles. */
+body[data-shell="publication"] {
+  padding-right: max(1rem, env(safe-area-inset-right));
+  padding-left: max(1rem, env(safe-area-inset-left));
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+html[data-motion-paused="true"] *,
+html[data-motion-paused="true"] *::before,
+html[data-motion-paused="true"] *::after {
+  animation-play-state: paused !important;
+}
+
+@media (max-width: 50rem) {
+  body[data-shell="publication"] {
+    padding-right: max(var(--mobile-gutter), env(safe-area-inset-right));
+    padding-left: max(var(--mobile-gutter), env(safe-area-inset-left));
+  }
+
+  body[data-issue] .site-header,
+  body[data-issue] .site-footer,
+  body[data-issue] .issue-nav-panel {
+    padding-right: max(var(--mobile-gutter), env(safe-area-inset-right));
+    padding-left: max(var(--mobile-gutter), env(safe-area-inset-left));
+  }
+
+  body[data-issue] .issue-cover p,
+  body[data-issue] .issue-story > p {
+    font-size: 0.9375rem !important;
+    line-height: 1.55 !important;
+  }
+}
+
+@media (max-width: 29.9375rem) {
+  body[data-shell="publication"] {
+    padding-right: max(var(--compact-gutter), env(safe-area-inset-right));
+    padding-left: max(var(--compact-gutter), env(safe-area-inset-left));
+  }
+
+  body[data-issue] .site-header,
+  body[data-issue] .site-footer,
+  body[data-issue] .issue-nav-panel {
+    padding-right: max(var(--compact-gutter), env(safe-area-inset-right));
+    padding-left: max(var(--compact-gutter), env(safe-area-inset-left));
+  }
+}
+
+body[data-shell="publication"] .site-header,
+body[data-shell="publication"] .site-footer,
+body[data-shell="publication"] main {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+body[data-shell="publication"] .site-header,
+body[data-shell="publication"] .site-footer {
+  padding-block: 1rem;
+}
+
+body[data-shell="publication"] main {
+  padding-block: 2rem;
+}
+
+.reading-progress {
+  position: fixed;
+  z-index: 95;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  pointer-events: none;
+}
+
+.reading-progress span {
+  display: block;
+  width: calc(var(--reading-progress, 0) * 100%);
+  height: 100%;
+  background: currentColor;
+  transform-origin: left center;
+}
+
+.theme-status {
+  white-space: nowrap;
+}
+
+.has-js body[data-issue] .issue-story {
+  opacity: var(--story-opacity, 1);
+  translate: 0 var(--story-shift, 0);
+  transition: opacity 180ms linear, translate 240ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.has-js body[data-issue] .issue-nav a[aria-current="location"] {
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-thickness: 0.18em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .has-js body[data-issue] .issue-story {
+    opacity: 1;
+    translate: none;
+  }
+}
+
+/* Reading invariants apply to generated contexts, never historical originals. */
+body[data-issue] { font-synthesis: none; }
+body[data-issue]:not([data-story-reader]) h1,
+body[data-issue]:not([data-story-reader]) h2 { line-height: 1.12 !important; overflow-wrap: anywhere; }
+.issue-nav ul { display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.issue-nav li { flex: 0 0 auto; }
+.issue-nav a { display: inline-flex; align-items: center; gap: .6rem; }
+.issue-nav a span { font-size: .6875rem; text-transform: uppercase; }
+html:not(.has-js) [data-week-toggle] { cursor: default; color: inherit; opacity: 1; }
+html:not(.has-js) .week-toggle-mark { display: none; }
+.filter-result:empty { display: none; }
+
+/* Shared reader themes. These variables change presentation only. */
+html[data-visual-theme="field"] {
+  --paper: #eef2df;
+  --ink: #10120d;
+  --acid: #d9ff43;
+  --blue: #2448ff;
+  --orange: #326f4a;
+  --pink: #a8dfbd;
+  --theme-hero: #d9ff43;
+  --theme-index: #d8d1ad;
+  --theme-panel: #eef2df;
+  --theme-accent: #326f4a;
+  --theme-signal: #2448ff;
+}
+
+html[data-visual-theme="coral"] {
+  --paper: #f4eadf;
+  --ink: #160d0a;
+  --acid: #ff6840;
+  --blue: #2448ff;
+  --orange: #ff512b;
+  --pink: #f3a8bf;
+  --theme-hero: #ff5a31;
+  --theme-index: #e8c8b1;
+  --theme-panel: #f4eadf;
+  --theme-accent: #c83d25;
+  --theme-signal: #2448ff;
+}
+
+html[data-visual-theme="analog"] {
+  --paper: #d9cdb4;
+  --ink: #171713;
+  --acid: #c8bd91;
+  --blue: #537a7c;
+  --orange: #b74731;
+  --pink: #b8998f;
+  --theme-hero: #c8bd91;
+  --theme-index: #cfc09e;
+  --theme-panel: #e1d7c2;
+  --theme-accent: #a8402e;
+  --theme-signal: #527d80;
+}
+
+body[data-shell="publication"],
+body[data-story-reader] {
+  background: var(--paper);
+  color: var(--ink);
+  transition: background-color 320ms ease, color 320ms ease;
+}
+
+/* Atmosphere stays behind the shell; it never overlays source photographs or text. */
+html[data-visual-theme="field"] .hero-map {
+  background-image: radial-gradient(circle at 12% 18%, rgb(217 255 67 / 34%), transparent 64%);
+}
+html[data-visual-theme="coral"] .hero-map {
+  background-image: linear-gradient(135deg, transparent 52%, rgb(243 168 191 / 24%));
+}
+html[data-visual-theme="analog"] .hero-map {
+  background-image: repeating-linear-gradient(0deg, rgb(10 10 8 / 6%) 0 1px, transparent 1px 3px);
+}
+
+.theme-dots {
+  position: relative;
+  z-index: 110;
+  display: inline-flex;
+  gap: 0.65rem;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 0.35rem;
+  padding-bottom: 1rem;
+}
+
+.theme-dots button {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.theme-dots button[data-theme-choice="field"] { --dot-color: #65a469; }
+.theme-dots button[data-theme-choice="coral"] { --dot-color: #ff512b; }
+.theme-dots button[data-theme-choice="analog"] {
+  --dot-color: repeating-linear-gradient(0deg, #d5c7aa 0 2px, #2a2924 2px 3px);
+}
+
+.theme-dots button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--dot-color);
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 42%);
+  content: "";
+  transform: translate(-50%, -50%);
+  transition: box-shadow 140ms ease, transform 140ms ease;
+}
+
+.theme-dots button[aria-pressed="true"]::before {
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px currentColor;
+  transform: translate(-50%, -50%);
+}
+
+.theme-dots button::after {
+  position: absolute;
+  right: -0.5rem;
+  bottom: -2.25rem;
+  width: max-content;
+  max-width: 10rem;
+  padding: 0.38rem 0.52rem;
+  background: var(--ink);
+  color: var(--paper);
+  content: attr(data-theme-label);
+  font: 700 0.62rem/1 ui-monospace, monospace;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-0.25rem);
+  transition: opacity 140ms ease, transform 140ms ease;
+  white-space: nowrap;
+}
+
+.theme-dots button:hover::after,
+.theme-dots button:focus-visible::after {
+  opacity: 1;
+  transform: none;
+}
+
+.theme-dots button:active {
+  transform: scale(0.94);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-shell="publication"],
+  body[data-story-reader] {
+    transition: none;
+  }
+}
+
+@media (max-width: 50rem) {
+  .theme-dots button::after {
+    display: none;
+  }
+}
+
+/* Controls appear only when their event handlers are available. */
+html:not(.has-js) .theme-dots { display: none; }
+.theme-current { position: absolute; bottom: 0; left: 0; right: 0; text-align: center; font: 700 0.6875rem/1.2 ui-monospace, monospace; white-space: nowrap; }
+
+body[data-issue="2026-08-25"] {
+  background:
+    linear-gradient(90deg, transparent 0 7%, rgba(217, 255, 67, 0.18) 7% 7.2%, transparent 7.2%),
+    #101552;
+  color: #f5f0e6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  font-size: 18px;
+  font-synthesis: none;
+  line-height: 1.75;
+}
+
+body[data-issue="2026-08-25"] a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+body[data-issue="2026-08-25"] .site-header,
+body[data-issue="2026-08-25"] .site-footer,
+body[data-issue="2026-08-25"] .issue-nav,
+body[data-issue="2026-08-25"] main {
+  width: min(100% - 2rem, 90rem);
+  margin-inline: auto;
+}
+
+body[data-issue="2026-08-25"] .site-header,
+body[data-issue="2026-08-25"] .site-footer {
+  padding-block: 1.25rem;
+  color: #d9ff43;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body[data-issue="2026-08-25"] .non-production-label {
+  margin: 0;
+  padding: 0.55rem 1rem;
+  background: #d9ff43;
+  color: #101552;
+  font: 800 0.7rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+body[data-issue="2026-08-25"] .issue-nav {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  color: #d9ff43;
+  border-block: 1px solid currentColor;
+  background: rgba(16, 21, 82, 0.96);
+  backdrop-filter: blur(10px);
+}
+
+body[data-issue="2026-08-25"] .issue-nav ul {
+  gap: 0.2rem;
+  padding-block: 0.45rem;
+}
+
+body[data-issue="2026-08-25"] .issue-nav a {
+  max-width: 17rem;
+  gap: 0.55rem;
+  padding: 0.35rem 0.65rem;
+  overflow: hidden;
+  font-size: 0.72rem;
+  font-weight: 750;
+  text-decoration: none;
+  text-overflow: ellipsis;
+}
+
+body[data-issue="2026-08-25"] .issue-nav a span {
+  color: #b7c9ff;
+  font: 700 0.62rem/1 ui-monospace, monospace;
+  text-transform: uppercase;
+}
+
+body[data-issue="2026-08-25"] main {
+  padding-bottom: clamp(3rem, 8vw, 8rem);
+}
+
+body[data-issue="2026-08-25"] article {
+  width: 100%;
+}
+
+body[data-issue="2026-08-25"] .issue-cover {
+  position: relative;
+  display: grid;
+  min-height: min(54rem, 88svh);
+  grid-template-columns: minmax(0, 1.05fr) minmax(24rem, 0.95fr);
+  gap: clamp(2rem, 5vw, 6rem);
+  align-items: center;
+  padding-block: clamp(4rem, 8vw, 8rem);
+}
+
+body[data-issue="2026-08-25"] .issue-cover-copy {
+  position: relative;
+  z-index: 2;
+}
+
+body[data-issue="2026-08-25"] h1,
+body[data-issue="2026-08-25"] h2,
+body[data-issue="2026-08-25"] h3 {
+  line-height: 1.03;
+  text-wrap: balance;
+}
+
+body[data-issue="2026-08-25"] h1 {
+  max-width: 6ch;
+  margin: 0 0 1.5rem;
+  font-family: "Arial Narrow", Impact, "PingFang SC", sans-serif;
+  font-size: clamp(5rem, 11vw, 10.5rem);
+  font-weight: 900;
+  letter-spacing: -0.09em;
+  line-height: 0.78;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-copy > p:first-of-type {
+  margin: 0 0 1.5rem;
+  color: #d9ff43;
+  font-size: clamp(1.5rem, 2.8vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-copy > p {
+  max-width: 44rem;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-copy > p:nth-last-of-type(-n + 2) {
+  color: #b7c9ff;
+  font-size: 0.9rem;
+}
+
+body[data-issue="2026-08-25"] .enter-issue {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d9ff43;
+  color: #d9ff43;
+  font: 800 0.72rem/1 ui-monospace, monospace;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+body[data-issue="2026-08-25"] .enter-issue:hover,
+body[data-issue="2026-08-25"] .enter-issue:focus-visible {
+  background: #d9ff43;
+  color: #101552;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual {
+  position: relative;
+  aspect-ratio: 1;
+  border: 1px solid #b7c9ff;
+  transform: rotate(2deg);
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual::before,
+body[data-issue="2026-08-25"] .issue-cover-visual::after,
+body[data-issue="2026-08-25"] .issue-cover-visual i {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 2px solid #d9ff43;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual::before {
+  inset: 10% 12% 55% 20%;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual::after {
+  inset: 38% 28% 22% 35%;
+  border-color: #ff6b57;
+  transform: rotate(90deg);
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual i {
+  inset: 68% 8% 7% 58%;
+  border-color: #b7c9ff;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual span {
+  position: absolute;
+  z-index: 2;
+  padding: 0.35rem 0.45rem;
+  background: #101552;
+  color: #d9ff43;
+  font: 800 0.68rem/1 ui-monospace, monospace;
+  letter-spacing: 0.08em;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual span::before {
+  content: "";
+  display: inline-block;
+  width: 0.65rem;
+  height: 0.65rem;
+  margin-right: 0.4rem;
+  border-radius: 50%;
+  background: #ff6b57;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual [data-node="cover"] {
+  top: 8%;
+  left: 16%;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual [data-node="major"] {
+  top: 34%;
+  right: 8%;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual [data-node="signal"] {
+  bottom: 25%;
+  left: 12%;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual [data-node="watch"] {
+  right: 4%;
+  bottom: 4%;
+}
+
+body[data-issue="2026-08-25"] .issue-story {
+  position: relative;
+  width: min(100%, 64rem);
+  margin: 0 auto;
+  padding: clamp(4rem, 9vw, 9rem) clamp(1rem, 4vw, 4rem);
+  border-top: 1px solid #b7c9ff;
+}
+
+body[data-issue="2026-08-25"] .issue-story[data-level="major"] {
+  width: min(100%, 76rem);
+  margin-block: 2rem;
+  background: #f5f0e6;
+  color: #101552;
+}
+
+body[data-issue="2026-08-25"] .issue-story[data-level="signal"]:nth-of-type(even) {
+  transform: translateX(5%);
+}
+
+body[data-issue="2026-08-25"] .issue-story[data-level="watch"] {
+  width: min(90%, 52rem);
+  border: 1px solid #d9ff43;
+  color: #d9ff43;
+}
+
+body[data-issue="2026-08-25"] .story-marker {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  margin: 0;
+  color: #d9ff43;
+  font: 900 clamp(2rem, 5vw, 5rem)/1 ui-monospace, monospace;
+}
+
+body[data-issue="2026-08-25"] [data-level="major"] .story-marker {
+  left: 1rem;
+  color: #ff6b57;
+}
+
+body[data-issue="2026-08-25"] .issue-story h2 {
+  max-width: 16ch;
+  margin: 0 0 2.5rem;
+  font-family: "Arial Narrow", Impact, "PingFang SC", sans-serif;
+  font-size: clamp(2.7rem, 6vw, 6.5rem);
+  font-weight: 900;
+  letter-spacing: -0.075em;
+}
+
+body[data-issue="2026-08-25"] .issue-story p {
+  max-width: 46rem;
+}
+
+body[data-issue="2026-08-25"] .issue-story p:last-child {
+  margin-top: 2.5rem;
+  color: #d9ff43;
+  font-size: 0.82rem;
+}
+
+body[data-issue="2026-08-25"] [data-level="major"] p:last-child {
+  color: #101552;
+}
+
+body[data-issue="2026-08-25"] article a {
+  color: #d9ff43;
+}
+
+body[data-issue="2026-08-25"] [data-level="major"] a {
+  color: #2448ff;
+}
+
+body[data-issue="2026-08-25"] .sources {
+  max-width: 64rem;
+  margin: clamp(6rem, 12vw, 12rem) auto 0;
+  padding: 2rem clamp(1rem, 4vw, 4rem);
+  border: 1px solid #b7c9ff;
+  color: #b7c9ff;
+}
+
+body[data-issue="2026-08-25"] .section-label {
+  font: 700 0.7rem/1 ui-monospace, monospace;
+  letter-spacing: 0.08em;
+}
+
+body[data-issue="2026-08-25"] .sources h2 {
+  margin: 0;
+  color: #f5f0e6;
+  font-size: clamp(2.2rem, 5vw, 5rem);
+  letter-spacing: -0.06em;
+}
+
+body[data-issue="2026-08-25"] .sources li {
+  margin-block: 1rem;
+}
+
+body[data-issue="2026-08-25"] .source-meta {
+  font-size: 0.76rem;
+  opacity: 0.75;
+}
+
+body[data-issue="2026-08-25"] img {
+  display: block;
+}
+
+body[data-issue="2026-08-25"] .issue-nav-panel {
+  width: min(100% - 2rem, 90rem);
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+body[data-issue="2026-08-25"] .issue-nav-panel {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  color: #d9ff43;
+  border-block: 1px solid currentColor;
+  background: rgba(16, 21, 82, 0.96);
+  backdrop-filter: blur(10px);
+}
+
+body[data-issue="2026-08-25"] .issue-nav-panel > summary {
+  display: none;
+}
+
+body[data-issue="2026-08-25"] .story-figure {
+  margin: 0 0 2.4rem;
+  padding: 0;
+  border: 1px solid #b7c9ff;
+  background: #0c1047;
+}
+
+body[data-issue="2026-08-25"] .story-figure img {
+  width: 100%;
+  height: auto;
+}
+
+body[data-issue="2026-08-25"] .story-figure .source-image-link {
+  display: block;
+  overflow: hidden;
+  background: #050509;
+}
+
+body[data-issue="2026-08-25"] .story-figure .source-image-link img {
+  min-height: 14rem;
+  max-height: 46rem;
+  object-fit: cover;
+}
+
+body[data-issue="2026-08-25"] .source-image-fallback {
+  margin: 0;
+  padding: 0.55rem 0.8rem 0;
+  color: #ffd126;
+  font: 700 0.68rem/1.35 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+body[data-issue="2026-08-25"] .source-image-fallback a {
+  color: inherit;
+}
+
+body[data-issue="2026-08-25"] .story-figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0.8rem;
+  color: #b7c9ff;
+  font: 700 0.67rem/1.35 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+body[data-issue="2026-08-25"] .story-figure figcaption span {
+  color: #d9ff43;
+  text-align: right;
+}
+
+body[data-issue="2026-08-25"] .story-english {
+  display: grid;
+  gap: 0.3rem;
+  max-width: 48rem;
+  margin: -1.2rem 0 2rem;
+  color: #b7c9ff;
+  font-family: Georgia, "Songti SC", serif;
+}
+
+body[data-issue="2026-08-25"] .story-english strong {
+  color: #d9ff43;
+  font: 800 0.82rem/1.2 ui-monospace, monospace;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+body[data-issue="2026-08-25"] .story-english span {
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+body[data-issue="2026-08-25"] .story-english small {
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+body[data-issue="2026-08-25"] .issue-story h2,
+body[data-issue="2026-08-25"] .sources h2 {
+  scroll-margin-top: 6rem;
+}
+
+body[data-issue="2026-08-25"] .source-meta {
+  font-size: 0.86rem;
+}
+
+@media (max-width: 58rem) {
+  body[data-issue="2026-08-25"] .issue-cover {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-issue="2026-08-25"] .issue-cover-visual {
+    width: min(100%, 35rem);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 42rem) {
+  body[data-issue="2026-08-25"] {
+    background:
+      linear-gradient(90deg, transparent 0 1rem, rgba(217, 255, 67, 0.3) 1rem 1.08rem, transparent 1.08rem),
+      #101552;
+    font-size: 17px;
+  }
+
+  body[data-issue="2026-08-25"] .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  body[data-issue="2026-08-25"] h1 {
+    font-size: clamp(4.5rem, 23vw, 7rem);
+  }
+
+  body[data-issue="2026-08-25"] .issue-cover {
+    min-height: auto;
+    padding-top: 4rem;
+  }
+
+  body[data-issue="2026-08-25"] .issue-story,
+  body[data-issue="2026-08-25"] .issue-story[data-level="watch"] {
+    width: 100%;
+    padding-inline: 1rem;
+  }
+
+  body[data-issue="2026-08-25"] .issue-story[data-level="signal"]:nth-of-type(even) {
+    transform: none;
+  }
+
+  body[data-issue="2026-08-25"] .issue-story h2 {
+    max-width: 12ch;
+    font-size: clamp(2.1rem, 10vw, 3.5rem);
+    line-height: 1.08;
+  }
+
+  body[data-issue="2026-08-25"] .sources {
+    padding-inline: 1rem;
+  }
+
+  body[data-issue="2026-08-25"] .issue-nav-panel > summary {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    font: 800 0.72rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  body[data-issue="2026-08-25"] .issue-nav-panel:not([open]) .issue-nav {
+    display: none;
+  }
+
+  body[data-issue="2026-08-25"] .issue-nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0.5rem;
+  }
+
+  body[data-issue="2026-08-25"] .issue-nav a {
+    max-width: none;
+    min-height: 44px;
+    white-space: normal;
+  }
+
+  body[data-issue="2026-08-25"] .story-figure figcaption {
+    display: block;
+  }
+
+  body[data-issue="2026-08-25"] .story-figure figcaption span {
+    display: block;
+    margin-top: 0.3rem;
+    text-align: left;
+  }
+}
+
+/* 2026-08-25 issue world: an irregular programme floor, not the prior issue's route/clock. */
+body[data-issue="2026-08-25"] {
+  background: #09090b;
+  color: #f7f4ed;
+}
+
+body[data-issue="2026-08-25"] .site-header,
+body[data-issue="2026-08-25"] .site-footer,
+body[data-issue="2026-08-25"] .issue-cover-copy > p:first-of-type,
+body[data-issue="2026-08-25"] .enter-issue,
+body[data-issue="2026-08-25"] .story-marker,
+body[data-issue="2026-08-25"] .issue-story p:last-child,
+body[data-issue="2026-08-25"] article a,
+body[data-issue="2026-08-25"] .story-figure figcaption span,
+body[data-issue="2026-08-25"] .story-english strong {
+  color: #ffd126;
+}
+
+body[data-issue="2026-08-25"] .non-production-label,
+body[data-issue="2026-08-25"] .enter-issue:hover,
+body[data-issue="2026-08-25"] .enter-issue:focus-visible {
+  background: #ffd126;
+  color: #09090b;
+}
+
+body[data-issue="2026-08-25"] .issue-nav,
+body[data-issue="2026-08-25"] .issue-nav-panel {
+  color: #36d7e8;
+  background: rgba(9, 9, 11, 0.96);
+}
+
+body[data-issue="2026-08-25"] .issue-nav a span,
+body[data-issue="2026-08-25"] .issue-cover-copy > p:nth-last-of-type(-n + 2),
+body[data-issue="2026-08-25"] .sources,
+body[data-issue="2026-08-25"] .story-figure figcaption,
+body[data-issue="2026-08-25"] .story-english {
+  color: #36d7e8;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual {
+  border: 0;
+  transform: none;
+  background:
+    linear-gradient(#f7f4ed 0 0) 0 0 / 47% 46% no-repeat,
+    linear-gradient(#36d7e8 0 0) 51% 0 / 18% 24% no-repeat,
+    linear-gradient(#ffd126 0 0) 72% 0 / 28% 38% no-repeat,
+    linear-gradient(#9b6bff 0 0) 51% 28% / 18% 18% no-repeat,
+    linear-gradient(#36d7e8 0 0) 0 50% / 22% 50% no-repeat,
+    linear-gradient(#ffd126 0 0) 26% 50% / 43% 22% no-repeat,
+    linear-gradient(#f7f4ed 0 0) 26% 76% / 43% 24% no-repeat,
+    linear-gradient(#9b6bff 0 0) 72% 42% / 28% 58% no-repeat;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual::before,
+body[data-issue="2026-08-25"] .issue-cover-visual::after,
+body[data-issue="2026-08-25"] .issue-cover-visual i {
+  display: none;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual span {
+  background: #09090b;
+  color: #f7f4ed;
+}
+
+body[data-issue="2026-08-25"] .issue-cover-visual span::before {
+  background: #ffd126;
+}
+
+body[data-issue="2026-08-25"] .issue-story,
+body[data-issue="2026-08-25"] .sources,
+body[data-issue="2026-08-25"] .story-figure {
+  border-color: #36d7e8;
+}
+
+body[data-issue="2026-08-25"] .issue-story[data-level="major"] {
+  background: #f7f4ed;
+  color: #09090b;
+}
+
+body[data-issue="2026-08-25"] [data-level="major"] .story-marker,
+body[data-issue="2026-08-25"] [data-level="major"] a {
+  color: #9b6bff;
+}
+
+body[data-issue="2026-08-25"] [data-level="major"] p:last-child {
+  color: #09090b;
+}
+
+body[data-issue="2026-08-25"] .story-figure {
+  background: #111115;
+}
+
+body[data-issue="2026-08-25"] .sources h2 {
+  color: #f7f4ed;
+}
+
+@media (max-width: 42rem) {
+  body[data-issue="2026-08-25"] {
+    background: #09090b;
+  }
+}
+</style>
+</head>
+<body data-issue="2026-08-25">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+  <p class="non-production-label">PREVIEW EDITION · NOT PRODUCTION</p>
+  <header class="site-header"><a class="issue-brand" href="../../" data-theme-home aria-label="Culture &amp; Taste Daily"><span class="brand-type"><span>Culture &amp;</span><em>Taste</em><span>Daily</span></span></a><span>2026-08-25 · Asia/Shanghai</span><div class="theme-dots" role="group" aria-label="Choose visual theme"><span class="theme-current" data-theme-status aria-live="polite">FIELD GREEN</span><button type="button" data-theme-choice="field" data-theme-label="Field Green" aria-label="Field Green" aria-pressed="false"></button><button type="button" data-theme-choice="coral" data-theme-label="Coral Signal" aria-label="Coral Signal" aria-pressed="false"></button><button type="button" data-theme-choice="analog" data-theme-label="2000s TV" aria-label="2000s TV" aria-pressed="false"></button></div><a href="../../archive/" data-theme-link>Archive</a></header>
+  <details class="issue-nav-panel" open><summary>Issue index <span aria-hidden="true">＋</span></summary><nav class="issue-nav" aria-label="Issue contents"><ul><li><a href="#seoul-fashion-week-two-city-systems"><span>cover</span>首尔把一场时装周拆成两种城市</a></li><li><a href="#southbank-lived-experience-curation"><span>major</span>谁来策展，先于展了什么改变房间</a></li><li><a href="#musquiqui-life-of-navigation"><span>signal</span>今天开幕的展览，从「如何导航」开始</a></li><li><a href="#arteen-taipei-hotel-rooms"><span>signal</span>酒店房间暂时不再服务住客</a></li><li><a href="#sfmoma-giant-arc"><span>signal</span>七万五千个小单元，让大厅失去空白</a></li><li><a href="#van-cleef-ode-to-nature"><span>signal</span>档案和珠宝，今天最后一次同室出现</a></li><li><a href="#bape-saint-mxxxxxx-can-stool"><span>signal</span>旧感从 T 恤长到一张罐头凳</a></li><li><a href="#tmex-2026-agenda"><span>watch</span>台北音乐博览会，把「舞台之外」列进日程</a></li><li><a href="#sources"><span>index</span>Sources &amp; Dates</a></li></ul></nav></details>
+  <main id="main-content">
+    <article aria-labelledby="issue-title" data-content-sha256="74963f0974b01e4c60937865986f2d63b19db2f1a0321aa39d19ec234aac827a"><header class="issue-cover"><div class="issue-cover-copy"><h1 id="issue-title">场地也有一票</h1>
+<p>THE ROOM HAS A VOTE</p>
+<p>首尔把一场时装周拆到汉江两岸；一位台湾艺术家今天在伦敦开幕；新加坡的珠宝档案展今天闭幕；七万五千个纸鸢单元刚刚填满旧金山一层大厅。场地装着内容，也决定谁先被看见、谁能靠近，以及观看何时变成消费。</p>
+<p>Seoul splits fashion across two city systems; a Taiwanese artist opens in London today; a jewelry archive closes in Singapore today; 75,000 kite units fill a free museum floor in San Francisco. The room is not neutral.</p>
+<p><strong>本期判断</strong></p>
+<p>这几件事还不足以构成全球趋势。把它们放在一起，是因为场地都在重新安排距离：行业与公众的距离、档案与商品的距离、作者与策展权的距离。</p>
+<p>门开得更大，公共性却不会自动增加。要看的是，开门之后谁得到选择、排序和署名的权力。</p>
+<p>资料核验截止：2026-08-25 11:09（Asia/Shanghai）。本期只陈述截止前可核验的信息。</p>
+<a class="enter-issue" href="#seoul-fashion-week-two-city-systems">Enter the issue <span aria-hidden="true">↓</span></a></div><div class="issue-cover-visual" aria-hidden="true"><span data-node="cover">COVER</span><span data-node="major">MAJOR</span><span data-node="signal">SIGNAL</span><span data-node="watch">WATCH</span><i></i></div></header><section class="issue-story" data-story="seoul-fashion-week-two-city-systems" data-level="cover"><p class="story-marker" aria-hidden="true">01</p><h2 id="seoul-fashion-week-two-city-systems">首尔把一场时装周拆成两种城市</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://english.seoul.go.kr/seoul-fashion-week-expands-beyond-ddp-to-lotte-world-tower-turning-seouls-iconic-landmarks-into-runways/" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://news.seoul.go.kr/economy/files/2026/08/6a7c2479a7dd28.29617597.png" alt="Official Seoul Fashion Week 2027 Spring Summer event visual published by Seoul Metropolitan Government" loading="eager" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://english.seoul.go.kr/seoul-fashion-week-expands-beyond-ddp-to-lotte-world-tower-turning-seouls-iconic-landmarks-into-runways/" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> 2027 S/S Seoul Fashion Week official event visual; click through to the official announcement. <span>Seoul Metropolitan Government · Preview-linked official image</span></figcaption></figure><div class="story-english"><strong>RUNWAY AS CITY INTERFACE</strong><span>Seoul puts professional and public fashion access on one route.</span><small>The official plan is a September watch item, not a claim about a show today.</small></div>
+<p>2027 春夏首尔时装周将在 9 月 1 日至 6 日横跨东大门设计广场（DDP）与蚕室乐天世界塔。DDP 继续承担设计师秀、发布与贸易；乐天一侧加入面向公众的秀场、快闪、K-culture 活动与购物。两地隔着汉江，相距超过 13 公里，主办方还安排车辆接驳买手与媒体。</p>
+<p>两套逻辑因此被摆在同一张日程上。DDP 提供行业信用，乐天提供流量、购买和城市节庆。普通人离 K-fashion 更近了，周围也同时出现 QR 即时购买、百货促销和品牌合作。</p>
+<p>首尔这次测试的是：行业事件获得更大的公众界面时，参与权和消费入口会不会一起长出来。「时装走向街头」只说中了前半句。</p>
+<p>9 月开场后，值得盯住两点：公众区域有没有不依赖购物的观看方式；DDP 与乐天两地是否真的各自承担清楚的内容任务。</p>
+<p>来源：<a href="https://english.seoul.go.kr/seoul-fashion-week-expands-beyond-ddp-to-lotte-world-tower-turning-seouls-iconic-landmarks-into-runways/" data-source-link="true">Seoul Metropolitan Government, 2026-08-21</a> · <a href="https://www.koreatimes.co.kr/lifestyle/people-events/20260812/seoul-fashion-week-expands-from-ddp-to-lotte-world-tower-for-2027-ss-season" data-source-link="true">The Korea Times, 2026-08-12</a></p>
+</section><section class="issue-story" data-story="southbank-lived-experience-curation" data-level="major"><p class="story-marker" aria-hidden="true">02</p><h2 id="southbank-lived-experience-curation">谁来策展，先于展了什么改变房间</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://www.southbankcentre.co.uk/whats-on/koestler-arts-rock-paper-scissors/" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://bynder.southbankcentre.co.uk/transform/167d9cc7-7d8e-40f7-b994-a74d58e45d36/Koestler-Arts-Rock-Paper-Scissors-2026?io=transform%3Afill%2Cwidth%3A1500%2Cheight%3A1000" alt="Official image for Koestler Arts Rock Paper Scissors published by Southbank Centre" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://www.southbankcentre.co.uk/whats-on/koestler-arts-rock-paper-scissors/" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> Official exhibition image for Rock, Paper, Scissors; click through to the Southbank Centre programme. <span>Southbank Centre / Koestler Arts · Preview-linked official image</span></figcaption></figure><div class="story-english"><strong>WHEN THE SEAT MOVES</strong><span>Lived experience enters selection and sequence.</span><small>The upcoming exhibition gives five PIC members curatorial responsibility while artist names remain undisclosed.</small></div>
+<p>伦敦 Southbank Centre 将在 10 月 16 日至 11 月 29 日举办《Rock, Paper, Scissors》。展览从 2026 Koestler Awards 的 7,500 多件投稿中选择 200 多件作品。创作者来自监狱、青少年拘留机构、安全医院等刑事司法环境。</p>
+<p>今年做选择的是五位 Parental Imprisonment Collective 成员。他们年龄在 18 至 35 岁之间，都经历过父母入狱。展览沿着童年、家庭、家、禁闭、想象与风景展开。生活经验在这里不只是被展示的素材，它进入了选择作品和组织顺序的过程。</p>
+<p>权力转移到这里又停了一下。按照英国监狱与缓刑管理部门自 2023 年实施的政策，参展艺术家的名字仍不会向观众公开。保护与承认的冲突没有被展陈语言抚平，它会跟作品一起留在房间里。</p>
+<p>一次邀请可以制造「被看见」；选择、排序和署名，才决定一个人有没有真正进入作者的位置。</p>
+<p>来源：<a href="https://www.southbankcentre.co.uk/whats-on/koestler-arts-rock-paper-scissors/" data-source-link="true">Southbank Centre</a> · <a href="https://www.theartnewspaper.com/2026/08/21/young-adults-with-experience-of-having-parents-in-prison-to-curate-southbank-centre-exhibition" data-source-link="true">The Art Newspaper, 2026-08-21</a></p>
+</section><section class="issue-story" data-story="musquiqui-life-of-navigation" data-level="signal"><p class="story-marker" aria-hidden="true">03</p><h2 id="musquiqui-life-of-navigation">今天开幕的展览，从「如何导航」开始</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://www.southbankcentre.co.uk/whats-on/musquiqui-chihying-a-life-of-navigation/" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://bynder.southbankcentre.co.uk/transform/eb1b8655-6d69-4ae5-b675-0b0f8568c12e/The-Toyota_Musquiqui-Chihying?io=transform%3Afill%2Cwidth%3A1500%2Cheight%3A1000" alt="Official Southbank Centre image of Musquiqui Chihying's work The Toyota" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://www.southbankcentre.co.uk/whats-on/musquiqui-chihying-a-life-of-navigation/" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> The Toyota is one of the four works named in A Life of Navigation; click through to the official exhibition page. <span>Southbank Centre · Preview-linked official image</span></figcaption></figure><div class="story-english"><strong>NAVIGATION WITHOUT A MAP</strong><span>Four works ask where people stand inside technological progress.</span><small>The venue confirms the opening, four-work structure and stated themes; the new installations still require firsthand viewing.</small></div>
+<p>台湾艺术家 Musquiqui Chihying 的《A Life of Navigation》今天在伦敦 Southbank Centre 的 HENI Project Space 开幕，展至 10 月 18 日，免费进入。四件作品里，《The Jog》（2014）与《The Toyota》（2015）处理高压城市生活；两件新录像装置转向 AI、游戏文化，以及自动化与手工劳动之间的拉扯。</p>
+<p>主办方明确说，幽默和表演性贯穿四件作品。本期的判断是：这里的「导航」关心人怎样在技术叙事里找到位置。新作究竟如何处理殖民视角与自动化，只能等实际观看后再判断；今天能确认的是展览结构与主办方说明。</p>
+<p>来源：<a href="https://www.southbankcentre.co.uk/whats-on/musquiqui-chihying-a-life-of-navigation/" data-source-link="true">Southbank Centre，展期 2026-08-25—10-18</a></p>
+</section><section class="issue-story" data-story="arteen-taipei-hotel-rooms" data-level="signal"><p class="story-marker" aria-hidden="true">04</p><h2 id="arteen-taipei-hotel-rooms">酒店房间暂时不再服务住客</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://www.moreartgallery.com/moreapply/2026/8/21/2026-arteen-taipei-" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://images.squarespace-cdn.com/content/v1/586382e0d1758e09280f51c4/215a8013-af30-4a81-ac04-a49a7ff77de2/2026Arteen%2BTaipei%E6%B4%BB%E5%8B%95%E7%B0%A1%E7%AB%A0%E5%AE%8C%E6%95%B4%E7%89%88%2B1.png?format=1500w" alt="Official 2026 Arteen Taipei event poster published by organizer More Art Gallery" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://www.moreartgallery.com/moreapply/2026/8/21/2026-arteen-taipei-" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> 2026 Arteen Taipei official event visual; click through to the organizer's event page. <span>More Art Gallery / 墨兒藝術 · Preview-linked official image</span></figcaption></figure><div class="story-english"><strong>HOTEL AS GALLERY</strong><span>A room becomes a temporary author space.</span><small>Arteen Taipei is recorded as a spatial action, not proof of long-term impact.</small></div>
+<p>第二届 Arteen Taipei 在 8 月 21 日至 23 日占用台北诚品行旅 8、9 层。18 岁以下的儿童与青少年参与创作、策展与成果分享；主办方称它「以展览取代竞赛」。</p>
+<p>把房间交给孩子，观看姿势随之改变。观众逐间进入年轻作者暂时接管的小空间，房门保留了每个展间的独立性，逛展更接近一次次拜访。</p>
+<p>现有报道主要沿用主办方叙述。它能确认形式、地点与公开目标，不能证明三天活动已经改变参与者的长期处境。这一格先记空间动作，不替它预支影响力。</p>
+<p>来源：<a href="https://www.verse.com.tw/article/2026-arteen-taipei" data-source-link="true">VERSE, 2026-08-13；活动 2026-08-21—23</a></p>
+</section><section class="issue-story" data-story="sfmoma-giant-arc" data-level="signal"><p class="story-marker" aria-hidden="true">05</p><h2 id="sfmoma-giant-arc">七万五千个小单元，让大厅失去空白</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://www.sfmoma.org/exhibition/jacob-hashimoto-giant-arc/" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://d1hhug17qm51in.cloudfront.net/www-media/2026/01/08155826/Hashimoto.png" alt="Official SFMOMA contextual image of an earlier Jacob Hashimoto installation" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://www.sfmoma.org/exhibition/jacob-hashimoto-giant-arc/" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> CONTEXT, NOT CURRENT INSTALLATION: an earlier Hashimoto work shown by SFMOMA; click through to the current Giant Arc exhibition page. <span>SFMOMA · Preview-linked official contextual image</span></figcaption></figure><div class="story-english"><strong>A CLOUD BEFORE A TICKET</strong><span>Scale changes the first step into the museum.</span><small>SFMOMA describes a free first-floor installation built from nearly 75,000 handmade units.</small></div>
+<p>Jacob Hashimoto 的《Giant Arc》于 8 月 22 日在 SFMOMA 一层 Roberts Family Gallery 开放。美术馆称，这是艺术家目前规模最大的作品：近 75,000 个以竹与日本纸手工制作的风筝单元，从地面延伸至天花和墙面，组成覆盖整个展厅的云状结构。</p>
+<p>它落在一层，而且免费。作品没有把规模感藏进付费展厅深处，而是直接压到入口附近的日常动线上。观众还没决定要看什么，已经先走进作品制造的天气。</p>
+<p>来源：<a href="https://www.sfmoma.org/exhibition/jacob-hashimoto-giant-arc/" data-source-link="true">SFMOMA, opening 2026-08-22</a></p>
+</section><section class="issue-story" data-story="van-cleef-ode-to-nature" data-level="signal"><p class="story-marker" aria-hidden="true">06</p><h2 id="van-cleef-ode-to-nature">档案和珠宝，今天最后一次同室出现</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://www.vancleefarpels.com/us/en/the-maison/exhibitions/an-ode-to-nature-van-cleef-arpels-raffles.html" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://www.vancleefarpels.com/content/dam/vancleefarpels/La-Maison/exhibitions/an-ode-to-nature-raffles/VCA-Exposition--Flora_fauna-cover-desktop-4000x1780.jpg" alt="Official An Ode to Nature exhibition visual published by Van Cleef and Arpels" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://www.vancleefarpels.com/us/en/the-maison/exhibitions/an-ode-to-nature-van-cleef-arpels-raffles.html" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> An Ode to Nature official exhibition visual; click through to the Maison's exhibition page. <span>Van Cleef &amp; Arpels · Preview-linked official image</span></figcaption></figure><div class="story-english"><strong>ARCHIVE BESIDE OBJECT</strong><span>Twenty-eight creations meet seven working documents on the exhibition's final day.</span><small>The brand source confirms dates and contents; audience response is not inferred.</small></div>
+<p>Van Cleef &amp; Arpels 的《An Ode to Nature》今天在新加坡 Raffles Arcade 结束。品牌资料显示，展览把 1940 至 1990 年代的 28 件馆藏作品与 7 份档案文件放在一起，展出叶片、花朵与动物如何在草图、工坊卡和成品之间变化。</p>
+<p>现有可核验资料来自品牌自己，只能确认展期、数量与陈列对象，不能证明观众怎样理解它。本期留下的是陈列关系：档案与成品并列，而非躲在商品后面充当说明牌。一个品牌若要讲「传统」，至少应让形成传统的过程一起出现。</p>
+<p>来源：<a href="https://www.vancleefarpels.com/us/en/the-maison/exhibitions/an-ode-to-nature-van-cleef-arpels-raffles.html" data-source-link="true">Van Cleef &amp; Arpels，展期 2026-04-06—08-25</a></p>
+</section><section class="issue-story" data-story="bape-saint-mxxxxxx-can-stool" data-level="signal"><p class="story-marker" aria-hidden="true">07</p><h2 id="bape-saint-mxxxxxx-can-stool">旧感从 T 恤长到一张罐头凳</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://en.jp.bape.com/blogs/news/saintmxxxxxx-26fw" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://i.shgcdn.com/2c481803-8340-45ca-9719-91918b982fa0/-/format/auto/-/quality/normal/" alt="Official BAPE and Saint Mxxxxxx 2026 Autumn Winter collaboration visual" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://en.jp.bape.com/blogs/news/saintmxxxxxx-26fw" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> Official BAPE × ©SAINT Mxxxxxx release visual; click through to BAPE's release page. <span>BAPE · Preview-linked official image</span></figcaption></figure><div class="story-english"><strong>APPAREL → INTERIOR</strong><span>A worn graphic takes one more step into the room.</span><small>The official release lists a Can Stool beside the apparel and socks in the first drop.</small></div>
+<p>BAPE 与 ©SAINT Mxxxxxx 的 2026 秋冬合作在 8 月 22 日先于 ©SAINT Mxxxxxx 经销渠道发售，8 月 23 日进入 BAPE 门店与官网。做旧图像出现在长袖 T 恤、短袖和袜子上，系列里还有一张 Can Stool。</p>
+<p>同一套旧化语言从穿着移到室内小物，那张凳子处在周边、收藏品和家具之间。它把街头图像留在房间里，也把品牌占据的范围从身体往外推了一小步。</p>
+<p>这一条只记录边界移动，不把一次发售写成生活方式趋势：服装品牌开始用一件小家具，把图像从衣柜带进房间。</p>
+<p>来源：<a href="https://hypebeast.com/2026/8/bape-saint-mxxxxxx-fall-winter-2026-capsule-collaboration-release-info" data-source-link="true">Hypebeast, 2026-08-21</a> · <a href="https://en.jp.bape.com/blogs/news/saintmxxxxxx-26fw" data-source-link="true">BAPE official release information</a></p>
+</section><section class="issue-story" data-story="tmex-2026-agenda" data-level="watch"><p class="story-marker" aria-hidden="true">08</p><h2 id="tmex-2026-agenda">台北音乐博览会，把「舞台之外」列进日程</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://www.tmc.taipei/tw/news/announcement/2FDb231761f9" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://www.tmc.taipei/files/1787396628jvRIKFwQ3t.jpg" alt="Official 2026 TMEX announcement visual published by Taipei Music Center" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://www.tmc.taipei/tw/news/announcement/2FDb231761f9" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> 2026 TMEX official announcement visual; click through to Taipei Music Center's programme notice. <span>Taipei Music Center · Preview-linked official image</span></figcaption></figure><div class="story-english"><strong>THE STAGE IS ALSO A SYSTEM</strong><span>Five forum lanes wait for evidence after the event.</span><small>TMEX publishes a programme spanning sustainability, AI, international marketing, festivals, and sound-image-space.</small></div>
+<p>2026 TMEX 台北音乐博览会将于 8 月 27 日至 30 日在台北流行音乐中心举行。8 月 22 日公布的议程包括五类论坛：可持续演出、国际营销、AI 进入创作流程、国际音乐节策展，以及「声音、影像与空间」中的电子音乐。官方称现场另有 68 个国内外参展品牌和一对一产业媒合。</p>
+<p>现在能确认的是议程。活动结束后再回来看：台上有没有留下具体方法，还是「AI、永续、国际化」只在论坛标题里短暂相遇。</p>
+<p>来源：<a href="https://www.tmc.taipei/tw/news/announcement/2FDb231761f9" data-source-link="true">Taipei Music Center, 2026-08-22</a></p>
+</section><section class="issue-story" data-story="exit" data-level="exit"><p class="story-marker" aria-hidden="true">EXIT</p><h2 id="exit">EXIT / 门开以后</h2>
+<p>有的空间变大，有的空间变满，有的把档案放到成品旁边，有的把位置让给从前只能被描述的人。</p>
+<p>门开了。地板中央还空着一块。谁会走过去？</p>
+</section></article>
+    <section class="sources" id="sources" aria-labelledby="sources-title"><p class="section-label">INDEX / VERIFIED LINKS</p><h2 id="sources-title">Sources &amp; Dates</h2><ol><li><a href="https://english.seoul.go.kr/seoul-fashion-week-expands-beyond-ddp-to-lotte-world-tower-turning-seouls-iconic-landmarks-into-runways/">Seoul Fashion Week Expands Beyond DDP to Lotte World Tower, Turning Seoul's Iconic Landmarks into Runways</a><span class="source-meta">Seoul Metropolitan Government · 2026-08-21 · 2026-09-01/2026-09-06</span></li><li><a href="https://www.koreatimes.co.kr/lifestyle/people-events/20260812/seoul-fashion-week-expands-from-ddp-to-lotte-world-tower-for-2027-ss-season">Seoul Fashion Week expands from DDP to Lotte World Tower for 2027 S/S season</a><span class="source-meta">The Korea Times · 2026-08-12 · 2026-09-01/2026-09-06</span></li><li><a href="https://www.southbankcentre.co.uk/whats-on/koestler-arts-rock-paper-scissors/">Koestler Arts: Rock, Paper, Scissors</a><span class="source-meta">Southbank Centre · 2026-10-16/2026-11-29</span></li><li><a href="https://www.theartnewspaper.com/2026/08/21/young-adults-with-experience-of-having-parents-in-prison-to-curate-southbank-centre-exhibition">Young adults with experience of having parents in prison to curate exhibition at London’s Southbank Centre</a><span class="source-meta">The Art Newspaper · 2026-08-21 · 2026-10-16/2026-11-29</span></li><li><a href="https://www.southbankcentre.co.uk/whats-on/musquiqui-chihying-a-life-of-navigation/">Musquiqui Chihying: A Life of Navigation</a><span class="source-meta">Southbank Centre · 2026-08-25/2026-10-18</span></li><li><a href="https://www.verse.com.tw/article/2026-arteen-taipei">孩子是明日的藝術家！2026 Arteen Taipei 兒少藝術博覽會，以展覽取代競賽登上舞台</a><span class="source-meta">VERSE · 2026-08-13 · 2026-08-21/2026-08-23</span></li><li><a href="https://www.moreartgallery.com/moreapply/2026/8/21/2026-arteen-taipei-">2026 Arteen Taipei</a><span class="source-meta">More Art Gallery / 墨兒藝術 · 2026-08-21 · 2026-08-21/2026-08-23</span></li><li><a href="https://www.sfmoma.org/exhibition/jacob-hashimoto-giant-arc/">Jacob Hashimoto: Giant Arc</a><span class="source-meta">SFMOMA · 2026-08-22</span></li><li><a href="https://www.vancleefarpels.com/us/en/the-maison/exhibitions/an-ode-to-nature-van-cleef-arpels-raffles.html">An Ode to Nature by Van Cleef &amp; Arpels exhibition, in Singapore</a><span class="source-meta">Van Cleef &amp; Arpels · 2026-04-06/2026-08-25</span></li><li><a href="https://hypebeast.com/2026/8/bape-saint-mxxxxxx-fall-winter-2026-capsule-collaboration-release-info">BAPE and ©SAINT Mxxxxxx Serve Up Aged Streetwear and Can Stools</a><span class="source-meta">Hypebeast · 2026-08-21 · 2026-08-22/2026-08-23</span></li><li><a href="https://en.jp.bape.com/blogs/news/saintmxxxxxx-26fw">A BATHING APE® x ©SAINT Mxxxxxx</a><span class="source-meta">BAPE · 2026-08-22/2026-08-23</span></li><li><a href="https://www.tmc.taipei/tw/news/announcement/2FDb231761f9">2026 TMEX臺北音樂博覽會8/27登場　國際論壇匯聚全球產業觀點</a><span class="source-meta">Taipei Music Center · 2026-08-22 · 2026-08-27/2026-08-30</span></li></ol></section>
+  </main>
+  <footer class="site-footer"><a href="../../archive/">All issues</a><span>Static, readable without JavaScript</span></footer>
+  <script>document.documentElement.classList.add("has-js");
+
+const visualThemes = ["field", "coral", "analog"];
+const themeStorageKey = "ctd-theme";
+const themeManualKey = "ctd-theme-manual";
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const mobileViewport = window.matchMedia("(max-width: 50rem)");
+const lifecycle = new AbortController();
+const observers = new Set();
+const cleanupTasks = new Set();
+
+function revealControl(control) {
+  control.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "nearest", inline: "center" });
+}
+
+function enableRailKeyboard(container, selector) {
+  const controls = [...container.querySelectorAll(selector)];
+  if (!controls.length) return;
+  const syncTabStops = () => {
+    const selected = controls.find((control) => control.getAttribute("aria-pressed") === "true") ?? controls[0];
+    for (const control of controls) control.tabIndex = control === selected ? 0 : -1;
+  };
+  syncTabStops();
+  container.addEventListener("keydown", (event) => {
+    const current = controls.indexOf(document.activeElement);
+    if (current < 0 || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const nextIndex = event.key === "Home"
+      ? 0
+      : event.key === "End"
+        ? controls.length - 1
+        : (current + (event.key === "ArrowRight" ? 1 : -1) + controls.length) % controls.length;
+    const next = controls[nextIndex];
+    next.focus();
+    next.click();
+    syncTabStops();
+    revealControl(next);
+  }, { signal: lifecycle.signal });
+  container.addEventListener("click", (event) => {
+    const control = event.target.closest(selector);
+    if (!control || !container.contains(control)) return;
+    syncTabStops();
+    revealControl(control);
+  }, { signal: lifecycle.signal });
+}
+
+function rememberTheme(theme) {
+  try {
+    window.sessionStorage.setItem(themeStorageKey, theme);
+  } catch {
+    // The selected theme still applies to the current page when storage is unavailable.
+  }
+}
+
+function hasManualTheme() {
+  try {
+    return window.sessionStorage.getItem(themeManualKey) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function updateThemeLinks(theme) {
+  for (const link of document.querySelectorAll("a[data-theme-link]")) {
+    const url = new URL(link.href, window.location.href);
+    url.searchParams.set("theme", theme);
+    link.href = `${url.pathname}${url.search}${url.hash}`;
+  }
+  for (const link of document.querySelectorAll("a[data-theme-home]")) {
+    const url = new URL(link.href, window.location.href);
+    if (hasManualTheme()) url.searchParams.set("theme", theme);
+    else url.searchParams.delete("theme");
+    link.href = `${url.pathname}${url.search}${url.hash}`;
+  }
+}
+
+function updateThemeControls(theme) {
+  for (const button of document.querySelectorAll("[data-theme-choice]")) {
+    button.setAttribute("aria-pressed", String(button.dataset.themeChoice === theme));
+  }
+  for (const status of document.querySelectorAll("[data-theme-status]")) {
+    status.textContent = theme === "field" ? "FIELD GREEN" : theme === "coral" ? "CORAL SIGNAL" : "2000s TV";
+  }
+}
+
+function applyTheme(theme, { manual = false } = {}) {
+  const safeTheme = visualThemes.includes(theme) ? theme : "field";
+  if (manual) {
+    try {
+      window.sessionStorage.setItem(themeManualKey, "1");
+      window.localStorage.setItem("ctd-theme-preference", safeTheme);
+    } catch {
+      // The click still applies to the current page when storage is unavailable.
+    }
+  }
+  document.documentElement.dataset.visualTheme = safeTheme;
+  rememberTheme(safeTheme);
+  updateThemeControls(safeTheme);
+  updateThemeLinks(safeTheme);
+}
+
+applyTheme(document.documentElement.dataset.visualTheme);
+
+for (const button of document.querySelectorAll("[data-theme-choice]")) {
+  button.addEventListener("click", () => applyTheme(button.dataset.themeChoice, { manual: true }), { signal: lifecycle.signal });
+}
+
+for (const group of document.querySelectorAll(".theme-dots")) enableRailKeyboard(group, "[data-theme-choice]");
+
+for (const frame of document.querySelectorAll("[data-visual-frame]")) {
+  const image = frame.querySelector("img.source-art");
+  if (!image) continue;
+  const originalSource = image.src;
+  const retryDelays = [1200, 3000];
+  let retryCount = 0;
+  let retryTimer = null;
+  let deadlineTimer = null;
+  const markFailure = () => frame.classList.add("image-failed");
+  const markSuccess = () => {
+    window.clearTimeout(deadlineTimer);
+    frame.classList.remove("image-failed");
+  };
+  const monitorAttempt = () => {
+    window.clearTimeout(deadlineTimer);
+    deadlineTimer = window.setTimeout(() => {
+      if (image.complete && image.naturalWidth) markSuccess();
+      else retryImage();
+    }, 8000);
+  };
+  const retryImage = () => {
+    window.clearTimeout(deadlineTimer);
+    markFailure();
+    if (retryCount >= retryDelays.length || retryTimer !== null) return;
+    const delay = retryDelays[retryCount];
+    retryTimer = window.setTimeout(() => {
+      retryTimer = null;
+      retryCount += 1;
+      const retryUrl = new URL(originalSource, window.location.href);
+      retryUrl.searchParams.set("ctd_retry", String(retryCount));
+      image.src = retryUrl.href;
+      monitorAttempt();
+    }, delay);
+  };
+  image.addEventListener("load", markSuccess, { signal: lifecycle.signal });
+  image.addEventListener("error", retryImage, { signal: lifecycle.signal });
+  if (image.complete && image.naturalWidth) markSuccess();
+  else if (image.complete) retryImage();
+  else if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      observer.disconnect();
+      observers.delete(observer);
+      monitorAttempt();
+    }, { rootMargin: "800px" });
+    observers.add(observer);
+    observer.observe(image);
+  } else {
+    monitorAttempt();
+  }
+  cleanupTasks.add(() => {
+    window.clearTimeout(deadlineTimer);
+    window.clearTimeout(retryTimer);
+  });
+}
+
+const storyFilters = [...document.querySelectorAll("[data-story-filter]")];
+const storyCards = [...document.querySelectorAll("[data-story-card]")];
+const radarGroups = [...document.querySelectorAll("[data-radar-group]")];
+
+function applyStoryFilter(filter, { updateUrl = false } = {}) {
+  const selected = storyFilters.find(button => button.dataset.storyFilter === filter) ?? storyFilters[0];
+  if (!selected) return;
+  const category = selected.dataset.storyFilter;
+  for (const button of storyFilters) button.setAttribute("aria-pressed", String(button === selected));
+  for (const card of storyCards) card.hidden = category !== "all" && card.dataset.storyCategory !== category;
+  for (const group of radarGroups) group.hidden = ![...group.querySelectorAll("[data-story-card]")].some(card => !card.hidden);
+  const status = document.querySelector("[data-filter-result]");
+  if (status) status.textContent = `${category === "all" ? "全部" : category.toUpperCase()} · ${storyCards.filter(card => !card.hidden).length} 条精选`;
+  if (updateUrl) {
+    const url = new URL(location.href);
+    if (category === "all") url.searchParams.delete("category");
+    else url.searchParams.set("category", category);
+    history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+  }
+}
+for (const button of storyFilters) {
+  button.addEventListener("click", () => applyStoryFilter(button.dataset.storyFilter, { updateUrl: true }), { signal: lifecycle.signal });
+}
+applyStoryFilter(new URLSearchParams(location.search).get("category"));
+window.addEventListener("popstate", () => applyStoryFilter(new URLSearchParams(location.search).get("category")), { signal: lifecycle.signal });
+
+for (const group of new Set(storyFilters.map((button) => button.parentElement).filter(Boolean))) {
+  enableRailKeyboard(group, "[data-story-filter]");
+}
+
+const weekDossiers = [...document.querySelectorAll("[data-week-dossier]")];
+
+function setWeekExpanded(dossier, expanded) {
+  const button = dossier.querySelector("[data-week-toggle]");
+  const panel = dossier.querySelector("[data-week-panel]");
+  if (!button || !panel) return;
+  button.setAttribute("aria-expanded", String(expanded));
+  panel.hidden = !expanded;
+  const mark = button.querySelector(".week-toggle-mark");
+  if (mark) mark.textContent = expanded ? "−" : "＋";
+}
+
+function openWeekFromHash({ scroll = false } = {}) {
+  const target = weekDossiers.find((dossier) => `#${dossier.id}` === window.location.hash);
+  for (const dossier of weekDossiers) setWeekExpanded(dossier, dossier === target);
+  if (target && scroll) {
+    window.requestAnimationFrame(() => target.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "start" }));
+  }
+}
+
+if (weekDossiers.length) {
+  openWeekFromHash();
+  for (const dossier of weekDossiers) {
+    const button = dossier.querySelector("[data-week-toggle]");
+    if (button) button.disabled = false;
+    button?.addEventListener("click", () => {
+      const wasExpanded = button.getAttribute("aria-expanded") === "true";
+      for (const candidate of weekDossiers) setWeekExpanded(candidate, false);
+      if (!wasExpanded) {
+        setWeekExpanded(dossier, true);
+        window.history.replaceState(null, "", `#${dossier.id}`);
+      } else if (window.location.hash === `#${dossier.id}`) {
+        window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+      }
+    }, { signal: lifecycle.signal });
+  }
+  window.addEventListener("hashchange", () => openWeekFromHash({ scroll: true }), { signal: lifecycle.signal });
+}
+
+for (const frame of document.querySelectorAll("iframe[data-historical-frame]")) {
+  const resize = () => {
+    try {
+      const documentHeight = frame.contentDocument?.documentElement?.scrollHeight;
+      if (documentHeight) frame.style.height = `${Math.max(documentHeight, 720)}px`;
+    } catch {
+      // Cross-origin frames keep their CSS fallback height.
+    }
+  };
+  frame.addEventListener("load", resize, { signal: lifecycle.signal });
+  window.addEventListener("resize", resize, { passive: true, signal: lifecycle.signal });
+}
+
+const issueBody = document.querySelector("body[data-issue]");
+const issueStories = issueBody ? [...document.querySelectorAll(".issue-story")] : [];
+const issueHeadings = issueBody ? [...document.querySelectorAll(".issue-story h2[id]")] : [];
+const issueNavLinks = issueBody ? [...document.querySelectorAll(".issue-nav a[href^='#']")] : [];
+const storyReader = document.querySelector("body[data-story-reader]");
+const storyOpening = storyReader?.querySelector("[data-story-opening]");
+const storyLedeStage = storyReader?.querySelector(".story-lede-stage");
+const storyLede = storyReader?.querySelector("[data-word-reveal]");
+const storyMediaStage = storyReader?.querySelector("[data-media-stage]");
+let storyWords = [];
+let motionFrame = 0;
+
+function clamp(value, minimum = 0, maximum = 1) {
+  return Math.min(maximum, Math.max(minimum, value));
+}
+
+if (storyLede) {
+  const source = storyLede.textContent.trim();
+  const segments = "Segmenter" in Intl
+    ? [...new Intl.Segmenter("zh-CN", { granularity: "word" }).segment(source)].map((part) => part.segment)
+    : [...source];
+  storyLede.replaceChildren(...segments.map((segment) => {
+    const word = document.createElement("span");
+    word.className = "story-word";
+    word.textContent = segment;
+    return word;
+  }));
+  storyWords = [...storyLede.querySelectorAll(".story-word")];
+  storyReader.dataset.motionReady = "true";
+}
+
+function updateMotion() {
+  motionFrame = 0;
+  if (document.hidden) return;
+  const maximum = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+  const progress = Math.min(1, Math.max(0, window.scrollY / maximum));
+  document.documentElement.style.setProperty("--reading-progress", String(progress));
+  document.documentElement.style.setProperty("--shell-progress", String(Math.min(1, window.scrollY / 320)));
+
+  if (storyReader && !reducedMotion.matches) {
+    if (storyOpening) {
+      const rect = storyOpening.getBoundingClientRect();
+      const openingProgress = clamp(-rect.top / Math.max(1, rect.height - window.innerHeight));
+      document.documentElement.style.setProperty("--opening-progress", String(openingProgress));
+    }
+    if (storyLedeStage && storyWords.length) {
+      const rect = storyLedeStage.getBoundingClientRect();
+      const wordProgress = clamp((window.innerHeight * 0.8 - rect.top) / Math.max(1, rect.height * 0.68));
+      const visible = wordProgress * (storyWords.length + 5);
+      storyWords.forEach((word, index) => word.style.setProperty("--word-visible", String(clamp(visible - index))));
+    }
+    if (storyMediaStage) {
+      const rect = storyMediaStage.getBoundingClientRect();
+      const mediaProgress = clamp((window.innerHeight * 0.82 - rect.top) / Math.max(1, rect.height * 0.58));
+      document.documentElement.style.setProperty("--media-progress", String(mediaProgress));
+    }
+  }
+
+  if (!issueBody || reducedMotion.matches) return;
+  const center = window.innerHeight * 0.58;
+  const shiftLimit = mobileViewport.matches ? 12 : 24;
+  for (const story of issueStories) {
+    const rect = story.getBoundingClientRect();
+    const rawShift = (rect.top - center) * 0.025;
+    const shift = Math.max(-shiftLimit, Math.min(shiftLimit, rawShift));
+    const distance = Math.min(1, Math.abs(rect.top - center) / window.innerHeight);
+    story.style.setProperty("--story-shift", `${Math.round(shift)}px`);
+    story.style.setProperty("--story-opacity", String(1 - distance * 0.22));
+  }
+}
+
+if (storyReader && document.startViewTransition && !reducedMotion.matches) {
+  for (const link of storyReader.querySelectorAll("a.next-story, a.related-card, .story-sibling-nav a")) {
+    link.addEventListener("click", (event) => {
+      const destination = new URL(link.href, window.location.href);
+      if (destination.origin !== window.location.origin || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      document.startViewTransition(() => { window.location.href = destination.href; });
+    }, { signal: lifecycle.signal });
+  }
+}
+
+function scheduleMotion() {
+  if (!motionFrame) motionFrame = window.requestAnimationFrame(updateMotion);
+}
+
+window.addEventListener("scroll", scheduleMotion, { passive: true, signal: lifecycle.signal });
+window.addEventListener("resize", scheduleMotion, { passive: true, signal: lifecycle.signal });
+updateMotion();
+
+if (issueHeadings.length && "IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top))[0];
+    if (!visible) return;
+    for (const link of issueNavLinks) {
+      if (link.getAttribute("href") === `#${visible.target.id}`) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    }
+  }, { rootMargin: "-18% 0px -66%", threshold: [0, 0.25, 0.75] });
+  observers.add(observer);
+  for (const heading of issueHeadings) observer.observe(heading);
+}
+
+const homeHero = document.querySelector(".home-hero");
+if (homeHero && !reducedMotion.matches) {
+  homeHero.addEventListener("pointermove", (event) => {
+    const bounds = homeHero.getBoundingClientRect();
+    homeHero.style.setProperty("--hero-x", String((event.clientX - bounds.left) / bounds.width - 0.5));
+    homeHero.style.setProperty("--hero-y", String((event.clientY - bounds.top) / bounds.height - 0.5));
+  }, { passive: true, signal: lifecycle.signal });
+  homeHero.addEventListener("pointerleave", () => {
+    homeHero.style.setProperty("--hero-x", "0");
+    homeHero.style.setProperty("--hero-y", "0");
+  }, { passive: true, signal: lifecycle.signal });
+}
+
+function syncDocumentVisibility() {
+  document.documentElement.dataset.motionPaused = String(document.hidden);
+  if (document.hidden && motionFrame) {
+    window.cancelAnimationFrame(motionFrame);
+    motionFrame = 0;
+  } else if (!document.hidden) {
+    scheduleMotion();
+  }
+}
+
+function cleanupLifecycle() {
+  lifecycle.abort();
+  if (motionFrame) window.cancelAnimationFrame(motionFrame);
+  for (const observer of observers) observer.disconnect();
+  for (const cleanup of cleanupTasks) cleanup();
+  observers.clear();
+  cleanupTasks.clear();
+}
+
+document.addEventListener("visibilitychange", syncDocumentVisibility, { signal: lifecycle.signal });
+window.addEventListener("pagehide", (event) => {
+  if (!event.persisted) cleanupLifecycle();
+  else {
+    document.documentElement.dataset.motionPaused = "true";
+    if (motionFrame) window.cancelAnimationFrame(motionFrame);
+    motionFrame = 0;
+  }
+});
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    syncDocumentVisibility();
+    applyStoryFilter(new URLSearchParams(location.search).get("category"));
+  }
+}, { signal: lifecycle.signal });
+syncDocumentVisibility();
+</script>
+</body>
+</html>

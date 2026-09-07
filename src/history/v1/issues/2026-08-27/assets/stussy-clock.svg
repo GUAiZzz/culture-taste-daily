@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Local clocks for a global release</title>
+  <desc id="desc">An original diagram showing one release splitting into several local clocks.</desc>
+  <rect width="1200" height="720" fill="#e9e2d6"/><path d="M80 120H1120M80 600H1120" stroke="#121212" stroke-width="5"/>
+  <g fill="none" stroke="#1d3f42" stroke-width="6"><circle cx="260" cy="360" r="128"/><circle cx="600" cy="360" r="128"/><circle cx="940" cy="360" r="128"/></g>
+  <g fill="#121212" font-family="Arial,sans-serif" font-weight="700"><text x="80" y="82" font-size="28">STÜSSY / EYE / 08.28</text><text x="185" y="365" font-size="28">10:00 PST</text><text x="520" y="365" font-size="28">10:00 GMT</text><text x="865" y="365" font-size="28">10:00 JST</text></g>
+  <g stroke="#ef5b35" stroke-width="10" stroke-linecap="round"><path d="M260 360V270M260 360H320"/><path d="M600 360V270M600 360H660"/><path d="M940 360V270M940 360H1000"/></g>
+  <text x="80" y="660" fill="#1d3f42" font-family="monospace" font-size="22">ONE DROP / THREE LOCAL WAITING ROOMS</text>
+</svg>

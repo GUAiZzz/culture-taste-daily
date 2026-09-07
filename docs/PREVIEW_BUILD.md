@@ -1,5 +1,7 @@
 # Culture & Taste Daily — Preview Build
 
+The September 7 shared reading-room and history integration is documented in [Three rooms release](THREE_ROOMS_RELEASE.md).
+
 Status: `PUBLIC NON-PRODUCTION PREVIEW`
 
 Preview endpoint: <https://guaizzz.github.io/culture-taste-daily/>
