@@ -1,0 +1,269 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-09-06",
+  "publication_date": "2026-09-06",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-09-06T13:46:00+08:00",
+  "research_locked_at": "2026-09-07T19:11:33+08:00",
+  "content_locked_at": "2026-09-07T19:11:33+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "cb4475fa9ef7cd72cd5ab3fe1c93ee8e13df3e51feecd69bb78f2f4fafd2c89c",
+    "locked_at": "2026-09-07T19:11:33+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "cb4475fa9ef7cd72cd5ab3fe1c93ee8e13df3e51feecd69bb78f2f4fafd2c89c",
+    "art_direction_sha256": "339cd4a996c1dd7ea413a415e4ed80d53531ca93f1639d7dfee710c6ddbcad8b",
+    "issue_style_sha256": "465148d38e6a05362ef0266f5e11419122062fd6cd0da96cf56383d39de39ce3"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-09-06T13:46:00+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "文化的开放性，不是人人都能来的口号，而是把时间、入口、观看方式和参与路径写进活动本身；路线清楚，公众才有机会把注意力变成一次可完成的公共经验。",
+  "art_direction": {
+    "dominant_mood": "浅蓝纸面上的橙色入口、深墨路线和半透明城市切片",
+    "background_logic": "以浅蓝纸面做连续底色，路线不是网格背景，而是三条从不同边缘进入的错位带；留白给读者先看懂入口，再进入事实密度。",
+    "palette_logic": "paper #EAF0F2 保持开放和空气感，ink #162322 承担正文与结构，accent #F26A3D 只标记入口和日期，support #586B68 负责次级信息；不使用高饱和渐变。",
+    "type_scale_logic": "封面标题以短句和大字号建立判断，故事标题沿路线带分层；正文保持 17–18px，英文只承担标题、deck 与 abstract。",
+    "image_behavior": "五张一手官方媒体仅在 Preview 外链显示；本地 entry-card SVG 是原创的路线图占位，不冒充现场照片。",
+    "page_density_and_tempo": "封面先给一张未完成的公共日程，首篇进入首尔的双场地路径，随后以东京程序表增加密度，广州与香港把观看和容量放慢，退出处回到可检查的入口。",
+    "core_visual_action": "把时间、地点、观看方式和参与条件变成可移动的路线片段，让‘开放’从口号变成一组可以被核对的页面关系。",
+    "cover_composition": "浅蓝底上放置四块错位的半透明日程纸片，橙色圆点标记不同入口，深墨箭头从边缘交汇到一个未闭合的入口框；标题压在纸片之间，不复制任何品牌构图。",
+    "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；时间、地点和证据边界在桌面端形成可回查的纵向路径，所有事实与正文不依赖 JavaScript。",
+    "behance_viewing_arc": "从首尔把专业时装翻译为城市路线开始，进入东京的制作程序，最后以广州的观看提示和香港的容量限制收束。",
+    "mobile_translation": "390px 下路线纸片改为右侧窄栏，箭头变成短标签，正文保持单列；来源长链接可换行，图片失败时不隐藏来源。",
+    "mobbin_usability_constraint": "交互目标不少于 44px，焦点可见，正文无横向滚动；日程信息在移动端先显示日期、地点和入口，不能只靠颜色区分。",
+    "quiet_ending": "退出处保留一个没有闭合的入口框，提醒公开路径必须在现场反馈中继续修正。",
+    "closing_quotation": {
+      "id": "ct-en-007",
+      "language": "en",
+      "text": "A frame matters only when it changes the action.",
+      "credit": "Culture & Taste Editorial"
+    },
+    "closing_palette": {
+      "background": "#162322",
+      "foreground": "#EAF0F2",
+      "accent": "#F26A3D",
+      "rationale": "深墨收束页面，让入口细节从开放的浅蓝纸面转成一条可核对的公共承诺；橙色只保留给未闭合的路线节点，确保结尾仍有行动张力。"
+    }
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": [
+      "2026-08-30",
+      "2026-08-31",
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04"
+    ],
+    "repeated_mechanisms": [
+      "accessible section index",
+      "first-party source image with linked fallback"
+    ],
+    "exception_reason": "可访问索引与一手来源图是固定约束；本期错位日程纸片、路线入口和未闭合入口框没有复用最近七期的工作台、测量脊、坐标点、门槛线、倒计时网格或互穿曲线。"
+  },
+  "stories": [
+    {
+      "id": "seoul-fashion-week-2027-ss",
+      "level": "cover",
+      "title": "首尔：一张可以走进去的时装日程",
+      "sources": [
+        {
+          "title": "DDP·롯데월드타워 잇는 2027 S/S 서울패션위크",
+          "publisher": "Smart Seoul View · Seoul Metropolitan Government",
+          "url": "https://scpm.seoul.go.kr/seoul-policy/evt0302",
+          "published_date": "2026-08-26",
+          "event_date": "2026-09-01/2026-09-06",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Seoul Fashion Week Expands Beyond DDP to Lotte World Tower",
+          "publisher": "Seoul Metropolitan Government",
+          "url": "https://english.seoul.go.kr/seoul-fashion-week-expands-beyond-ddp-to-lotte-world-tower-turning-seouls-iconic-landmarks-into-runways/",
+          "published_date": null,
+          "event_date": "2026-09-01/2026-09-06",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "2027 S/S 서울패션위크",
+          "publisher": "FUN SEOUL · Seoul Metropolitan Government",
+          "url": "https://festival.seoul.go.kr/festival/main/festivalView.do?festacode=338",
+          "published_date": null,
+          "event_date": "2026-09-01/2026-09-06",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Seoul Fashion Week S/S 2027 to turn city landmarks into global runways",
+          "publisher": "The Korea Times",
+          "url": "https://www.koreatimes.co.kr/lifestyle/trends/20260827/seoul-fashion-week-ss-2027-to-turn-city-landmarks-into-global-runways",
+          "published_date": "2026-08-27",
+          "event_date": "2026-09-01/2026-09-06",
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Seoul Metropolitan Government official Seoul Fashion Week poster / Preview-linked",
+      "english": {
+        "title": "A FASHION WEEK YOU CAN WALK INTO",
+        "deck": "Seoul turns a professional fashion calendar into a public route across two landmarks.",
+        "abstract": "Seoul's official brief fixes the 1–6 September dates, DDP and Lotte World Tower venues, runway and trade-show structure, public invitation, livestream and QR shopping. The claim that a professional calendar becomes a public route is editorial interpretation; the independent report is disclosed as AI-assisted and is used only for context."
+      },
+      "media": {
+        "asset": "assets/entry-card.svg",
+        "alt": "Official 2027 S/S Seoul Fashion Week poster",
+        "caption": "Seoul Metropolitan Government official Seoul Fashion Week poster; open the official brief for dates, venues and public access routes.",
+        "credit": "Seoul Metropolitan Government · Preview-linked official image",
+        "kind": "source_image",
+        "origin_url": "https://festival.seoul.go.kr/festival/main/festivalView.do?festacode=338",
+        "external_image_url": "https://scpm.seoul.go.kr/grip/rest/image/70ad018b6237693c448aedb0c3225ed2/17863",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "maker-faire-tokyo-2026",
+      "level": "major",
+      "title": "Maker Faire Tokyo：把制作留给来场的人",
+      "sources": [
+        {
+          "title": "Maker Faire Tokyo 2026",
+          "publisher": "Make: Japan",
+          "url": "https://makezine.jp/event/mft2026/",
+          "published_date": "2026-08-27",
+          "event_date": "2026-09-05/2026-09-06",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Maker Faire Tokyo 2026 press release",
+          "publisher": "Impress Corporation",
+          "url": "https://www.impress.co.jp/newsrelease/2026/08/20260807-02.html",
+          "published_date": "2026-08-07",
+          "event_date": "2026-09-05/2026-09-06",
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Make: Japan official Maker Faire Tokyo image / Preview-linked",
+      "english": {
+        "title": "LEAVE THE MAKING WITH THE VISITOR",
+        "deck": "Maker Faire Tokyo turns the exhibition into a schedule for making, connecting and learning.",
+        "abstract": "Make: Japan fixes the 5–6 September dates, venue, opening hours, ticket bands and the public program guide covering exhibitors, stages and workshops. The claim that the event protects making as the visitor's route is editorial interpretation; no quality or outcome claim is made."
+      },
+      "media": {
+        "asset": "assets/entry-card.svg",
+        "alt": "Official Maker Faire Tokyo 2026 event image",
+        "caption": "Make: Japan official Maker Faire Tokyo 2026 image; open the official event page for the programme guide, hours and ticket information.",
+        "credit": "Make: Japan · Preview-linked official image",
+        "kind": "source_image",
+        "origin_url": "https://makezine.jp/event/mft2026/",
+        "external_image_url": "https://makezine.jp/event/wp-content/themes/makerfairetokyo/mft2026/img/make_ogp.png",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "guangdong-cheng-yifeng-natural-order",
+      "level": "signal",
+      "title": "广州：把自然写成材料秩序",
+      "sources": [
+        {
+          "title": "自然之序——程一峰雕塑作品展",
+          "publisher": "广东美术馆",
+          "url": "https://www.gdmoa.org/Exhibition/Exhibitions/2026/202609/t20260905_18426.shtml",
+          "published_date": "2026-09-05",
+          "event_date": "2026-09-05/2026-10-25",
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "广东美术馆官方展览图 / Preview-linked",
+      "english": {
+        "title": "NATURE WRITTEN AS MATERIAL ORDER",
+        "deck": "Guangdong Museum gives an abstract sculpture exhibition a public route through material, space and looking.",
+        "abstract": "Guangdong Museum fixes Cheng Yifeng's 5 September–25 October exhibition, Hall 21 and public-space locations, and its material and spatial framing. The claim that the exhibition offers a starting route rather than a conclusion is editorial interpretation; visitor response is not evidenced."
+      },
+      "media": {
+        "asset": "assets/entry-card.svg",
+        "alt": "Official Guangdong Museum Cheng Yifeng exhibition image",
+        "caption": "Guangdong Museum official exhibition image; open the exhibition page for the dates, location and curatorial framing.",
+        "credit": "Guangdong Museum · Preview-linked official image",
+        "kind": "source_image",
+        "origin_url": "https://www.gdmoa.org/Exhibition/Exhibitions/2026/202609/t20260905_18426.shtml",
+        "external_image_url": "https://www.gdmoa.org/Exhibition/Exhibitions/2026/202609/W020260905271798580085.jpg",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "hong-kong-national-ecology-day-2026",
+      "level": "signal",
+      "title": "香港：免费不等于没有容量",
+      "sources": [
+        {
+          "title": "National Ecology Day Thematic Exhibition 2026 & Performances",
+          "publisher": "Countryside Conservation Office · HKSAR Government",
+          "url": "https://cco.gov.hk/en/news/ned-2026-exhibition",
+          "published_date": null,
+          "event_date": "2026-09-01/2026-09-06",
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Countryside Conservation Office official exhibition image / Preview-linked",
+      "english": {
+        "title": "FREE DOES NOT MEAN WITHOUT CAPACITY",
+        "deck": "Hong Kong's ecology exhibition makes public access visible through zones, time slots and capacity limits.",
+        "abstract": "The Countryside Conservation Office fixes the 1–6 September free exhibition, eight zones, multimedia and cultural elements, and the 5 September programme with sold-out notices. The claim that open access also requires capacity design is editorial interpretation; attendance and accessibility outcomes are not evidenced."
+      },
+      "media": {
+        "asset": "assets/entry-card.svg",
+        "alt": "Official Hong Kong National Ecology Day thematic exhibition image",
+        "caption": "Countryside Conservation Office official exhibition image; open the event page for the eight zones, programme times and access notes.",
+        "credit": "Countryside Conservation Office · Preview-linked official image",
+        "kind": "source_image",
+        "origin_url": "https://cco.gov.hk/en/news/ned-2026-exhibition",
+        "external_image_url": "https://cco.gov.hk/images/news/ned-2026-exhibition/exhibition-1.jpeg",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ],
+  "rights_summary": {
+    "required_assets": 4,
+    "unknown_required_assets": 4,
+    "status": "blocked"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": null
+  },
+  "evidence_refs": {
+    "technical": [],
+    "editorial_visual": [],
+    "gate": []
+  },
+  "qa": {
+    "html_parse": "unavailable",
+    "assets": "unavailable",
+    "internal_links": "unavailable",
+    "no_js_reading": "unavailable",
+    "desktop_render": "unavailable",
+    "mobile_render": "unavailable",
+    "reduced_motion": "unavailable"
+  },
+  "limitations": [
+    "Owner-authorized September 6 catch-up, revised September 7. Four retained articles and five supplementary links; not represented as complete contemporaneous daily coverage.",
+    "One music-festival story was withheld because its official page could not complete current browser review.",
+    "Unknown external image reuse rights and named Production review remain blocked. Existing Preview-only release."
+  ]
+}

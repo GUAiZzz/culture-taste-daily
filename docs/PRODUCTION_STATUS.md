@@ -1,5 +1,7 @@
 # Production status
 
+The September 7 shared reading-room and history integration is documented in [Three rooms release](THREE_ROOMS_RELEASE.md).
+
 Status: `PREVIEW DEPLOYED / PRODUCTION NOT DEPLOYED`
 
 Current stage: `Preview Build — real site, non-production`

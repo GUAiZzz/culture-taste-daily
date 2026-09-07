@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Arteen Taipei room grid</title>
+  <desc id="desc">An original floor plan showing hotel rooms temporarily becoming separate young artists' galleries.</desc>
+  <rect width="1200" height="720" fill="#101552"/>
+  <g fill="#f5f0e6" stroke="#ff6b57" stroke-width="10"><rect x="110" y="150" width="280" height="200"/><rect x="460" y="150" width="280" height="200"/><rect x="810" y="150" width="280" height="200"/><rect x="110" y="410" width="280" height="200"/><rect x="460" y="410" width="280" height="200"/><rect x="810" y="410" width="280" height="200"/></g>
+  <g fill="#d9ff43" font-family="monospace" font-size="30" font-weight="700"><text x="190" y="265">ROOM 01</text><text x="540" y="265">ROOM 02</text><text x="890" y="265">ROOM 03</text><text x="190" y="525">ROOM 04</text><text x="540" y="525">ROOM 05</text><text x="890" y="525">ROOM 06</text></g>
+  <text x="110" y="90" fill="#b7c9ff" font-family="monospace" font-size="30" letter-spacing="4">ARTEEN / HOTEL AS GALLERY</text>
+</svg>

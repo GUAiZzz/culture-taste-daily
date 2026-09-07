@@ -1,0 +1,290 @@
+{
+  "art_direction": {
+    "background_logic": "银灰纸面贯穿全篇，五个故事像不同尺寸的 contact frame 依次放大；不使用路线、时钟或房间平面图",
+    "behance_viewing_arc": "从熟悉鞋型进入，拉长到五小时电影，再落到公共档案、商业 archive 与有争议的摄影回顾，最后用一句判断收束",
+    "closing_palette": {
+      "accent": "#A52E12",
+      "background": "#D7D6D0",
+      "foreground": "#101010",
+      "rationale": "银灰保持 proof sheet 的未完成感，深墨承载判断，暗安全橙只标出真正发生变化的动作。"
+    },
+    "core_visual_action": "同一条校准轨不变，每一帧的比例、裁切和阅读速度改变，表现旧结构被重新分配动作",
+    "cover_composition": "标题像一张被裁切的 proof label 贴在左上，右侧为五段不等长刻度；不重复最近三期的闭合线、路线钟表或房间块",
+    "desktop_interaction_mechanic": "黏附的 calibration rail 只显示当前章节编号并提供锚点；正文、图片来源和顺序不依赖 JavaScript",
+    "dominant_mood": "一张刚从冲印室出来的银灰 proof sheet：准确、带颗粒，也保留安全橙色的编辑标记",
+    "image_behavior": "五张经核验的一手官方图片使用五种不同裁切比例并点击回到官方来源；若源站阻止热链，对应位置显示本期自有且明确标注为非纪实的图解，不留下空框",
+    "mobbin_usability_constraint": "所有来源图明确可点击、焦点可见、点击目标至少 44px；无 JavaScript 时全文、来源与图片说明完整",
+    "mobile_translation": "校准轨退为顶部短索引，五帧全部纵向展开；不同图像比例保留，但不产生横向滚动",
+    "page_density_and_tempo": "封面短促，Nike 大幅进入，M+ 拉长留黑，RSP 展开文件关系，Stüssy 以高饱和竖幅提速，Atlas 收回黑白近景",
+    "palette_logic": "silver #E9E9E4, ink #101010, chocolate #4A2825, safety orange #FF4D17, signal yellow #F4F600",
+    "quiet_ending": "一条未被涂满的银灰底边与一句：没有换动作，就只是又被擦亮了一次",
+    "type_scale_logic": "封面是超宽压缩标题与细小校准字；正文保持 18–20px；章节编号像胶片边码但不模仿任何品牌字标"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": "2207ea3e35ef58a2c8254f2a71f468eb8a52c0e365c513c3351bcb6f02be8cd5"
+  },
+  "candidate_created_at": "2026-08-26T11:07:27+08:00",
+  "content_lock": {
+    "locked_at": "2026-08-26T11:14:44+08:00",
+    "sha256": "e0824fc2ac83dcb067e934b3355d1178afa35e9f882678ac0e47fee2ced1022a",
+    "status": "locked"
+  },
+  "content_locked_at": "2026-08-26T11:14:44+08:00",
+  "contract": {
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "repository": "GUAiZzz/culture-taste-daily"
+  },
+  "core_version": "v2",
+  "editorial_position": "A familiar form earns another look only when its working behavior changes: movement, duration, archive access, retail sequence, or critical framing.",
+  "evidence_refs": {
+    "editorial_visual": [],
+    "gate": [],
+    "technical": []
+  },
+  "harrytone": {
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-08-26T10:50:00+08:00",
+    "repository": "GUAiZzz/harry-tone"
+  },
+  "issue_id": "2026-08-26",
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "limitations": [
+    "Daily candidate and non-production Preview input only; this manifest cannot authorize deployment.",
+    "Canonical private GUAiZzz/harry-tone main was verified and loaded at pinned commit 13cd6b7046bd81be396810d2923f3a5dc818e93f from an ephemeral workspace; no private material enters this repository.",
+    "All five selected stories prefer externally hosted first-party official images and click through to official origin pages. Their reuse rights remain unknown, so production stays blocked; when a source host blocks hotlinking, a local owned SVG explicitly marked as a non-documentary supplemental diagram remains visible beneath the failed image instead of leaving an empty frame.",
+    "A smaller five-story issue was selected because the official-image and evidence gates rejected weaker candidates; no item was included to fill a quota.",
+    "Named human editorial, visual, cultural-appropriateness, and image-rights review is unresolved. No Preview dispatch, merge, Pages deployment, or production action is authorized."
+  ],
+  "media_required": true,
+  "publication_date": "2026-08-26",
+  "qa": {
+    "accessibility": "pass",
+    "assets": "pass",
+    "desktop_render": "pass",
+    "html_parse": "pass",
+    "internal_links": "pass",
+    "mobile_render": "pass",
+    "no_js_reading": "pass",
+    "reduced_motion": "pass"
+  },
+  "research_locked_at": "2026-08-26T11:05:00+08:00",
+  "rights_summary": {
+    "required_assets": 5,
+    "status": "blocked",
+    "unknown_required_assets": 5
+  },
+  "schema_version": 2,
+  "source_hashes": {
+    "art_direction_sha256": "f2f337731050b9c1dc6e6e98a21851d61ba3404f1f2aeaefbcf118599f83249f",
+    "content_sha256": "e0824fc2ac83dcb067e934b3355d1178afa35e9f882678ac0e47fee2ced1022a",
+    "issue_style_sha256": "bc6c54204c1a8c57c966155efd41d7fefb00b05441f8127644663b518fce5a73"
+  },
+  "status": "BLOCKED",
+  "stories": [
+    {
+      "english": {
+        "abstract": "Nike confirms the August 25 release and structural changes; community discussion is not treated as proof of adoption.",
+        "deck": "A familiar basketball shell is reassigned to skateboarding.",
+        "title": "THE FACE STAYS, THE ACTION MOVES"
+      },
+      "id": "nike-sb-air-force-1-light-chocolate",
+      "image_credit": "Nike official SNKRS product image / Preview-linked",
+      "level": "cover",
+      "media": {
+        "alt": "Official Nike product photograph of the brown and black Nike SB Air Force 1 Low Light Chocolate",
+        "asset": "assets/nike-action-shift.svg",
+        "caption": "Nike SB Air Force 1 Low Light Chocolate official product image; click through to the official launch page.",
+        "credit": "Nike SNKRS · Preview-linked official image",
+        "external_image_url": "https://static.nike.com/a/images/t_prod_ls/w_1920,c_limit/5017445c-5ccc-4e1c-b2dd-867021e420b3/nike-sb-air-force-1-low-light-chocolate-hm8517-201-release-date.jpg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.nike.com/launch/t/nike-sb-air-force-1-low-light-chocolate",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-25",
+          "published_date": "2026-08-25",
+          "publisher": "Nike SNKRS",
+          "relationship": "first_party_official",
+          "title": "Nike SB Air Force 1 Low Light Chocolate",
+          "url": "https://www.nike.com/launch/t/nike-sb-air-force-1-low-light-chocolate"
+        },
+        {
+          "event_date": "2026-08-25",
+          "published_date": "2026-04-07",
+          "publisher": "Nike Newsroom",
+          "relationship": "first_party_official",
+          "title": "Nike Unveils New Grail Skate Shoe: Nike SB Air Force 1",
+          "url": "https://about.nike.com/en/newsroom/releases/nike-unveils-new-grail-skate-shoe-nike-sb-air-force-1"
+        }
+      ],
+      "title": "鞋没换脸，先换了动作"
+    },
+    {
+      "english": {
+        "abstract": "M+ confirms the August 28 screening and explicitly permits sleeping bags, pillows and bedding.",
+        "deck": "Five hours and twenty-one minutes turn a stair into a place to stay.",
+        "title": "A FILM CHANGES THE BODY"
+      },
+      "id": "mplus-warhol-sleep",
+      "image_credit": "M+ official exhibition image / Preview-linked",
+      "level": "major",
+      "media": {
+        "alt": "Official M+ film still of John Giorno in Andy Warhol's Sleep",
+        "asset": "assets/mplus-duration-frame.svg",
+        "caption": "Official film still from Andy Warhol: Screen Tests, Sleep; click through to M+.",
+        "credit": "M+ / The Andy Warhol Museum · Preview-linked official image",
+        "external_image_url": "https://webmedia.mplus.org.hk/original_images/1997-4-113-116_int_01.jpg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.mplus.org.hk/en/exhibitions/andy-warhol-screen-tests-sleep/",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-04/2026-10-04",
+          "published_date": null,
+          "publisher": "M+",
+          "relationship": "first_party_official",
+          "title": "Andy Warhol: Screen Tests, Sleep",
+          "url": "https://www.mplus.org.hk/en/exhibitions/andy-warhol-screen-tests-sleep/"
+        }
+      ],
+      "title": "五小时二十一分钟，观众可以带枕头"
+    },
+    {
+      "english": {
+        "abstract": "Official sources confirm 15 models and a planned donation of selected drawings and design records to the Singapore Architecture Collection.",
+        "deck": "Models draw attention; donated work files extend the exhibition's use.",
+        "title": "ANNIVERSARY → PUBLIC RECORD"
+      },
+      "id": "rsp70-public-archive",
+      "image_credit": "RSP official exhibition image / Preview-linked",
+      "level": "signal",
+      "media": {
+        "alt": "Official RSP rendering of an architectural model displayed for the RSP70 exhibition",
+        "asset": "assets/rsp-public-archive.svg",
+        "caption": "RSP70 official exhibition image; click through to RSP's exhibition and book page.",
+        "credit": "RSP · Preview-linked official image",
+        "external_image_url": "https://rsp.design/wp-content/uploads/image-12.png",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://rsp.design/rsp70/",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-12/2026-10-26",
+          "published_date": null,
+          "publisher": "RSP",
+          "relationship": "first_party_official",
+          "title": "RSP70: Where Design Meets Humanity",
+          "url": "https://rsp.design/rsp70/"
+        },
+        {
+          "event_date": "2026-08-12/2026-10-26",
+          "published_date": null,
+          "publisher": "Urban Redevelopment Authority",
+          "relationship": "first_party_official",
+          "title": "RSP70 — Where Design Meets Humanity",
+          "url": "https://www.ura.gov.sg/get-involved/events-and-exhibitions/rsp70-where-design-meets-humanity-sac/"
+        }
+      ],
+      "title": "周年展最有用的部分，是文件真的被交出去"
+    },
+    {
+      "english": {
+        "abstract": "The official page confirms the final date, address, product mix and daily restocking; it does not claim to be a complete public archive.",
+        "deck": "Current collections and selected vintage share one temporary room.",
+        "title": "ARCHIVE IN THE RETAIL PRESENT"
+      },
+      "id": "stussy-jeju-archive-store",
+      "image_credit": "Stüssy official Jeju Archive Store poster / Preview-linked",
+      "level": "signal",
+      "media": {
+        "alt": "Official yellow and orange Stüssy Jeju Archive Store poster",
+        "asset": "assets/stussy-jeju-proof.svg",
+        "caption": "Jeju Archive Store official visual; click through to Stüssy's announcement.",
+        "credit": "Stüssy · Preview-linked official image",
+        "external_image_url": "https://cdn.shopify.com/s/files/1/0087/6193/3920/files/sync-33639919878341.jpg?v=1784826115&width=1920",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.stussy.com/blogs/news/jeju-archive-store",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-07-31/2026-08-31",
+          "published_date": "2026-07-31",
+          "publisher": "Stüssy",
+          "relationship": "first_party_official",
+          "title": "Jeju Archive Store",
+          "url": "https://www.stussy.com/blogs/news/jeju-archive-store"
+        }
+      ],
+      "title": "Stüssy 在济州，把新货和旧货摆在同一间店"
+    },
+    {
+      "english": {
+        "abstract": "Atlas confirms the dates and contents; Dazed supplies critical context without resolving the ethical dispute.",
+        "deck": "A retrospective can hold technique and the criticism of objectification in the same frame.",
+        "title": "CRAFT DOES NOT END THE ARGUMENT"
+      },
+      "id": "atlas-last-dolls",
+      "image_credit": "Atlas Gallery official exhibition image / Preview-linked",
+      "level": "watch",
+      "media": {
+        "alt": "Official Atlas Gallery exhibition image of Bob Carlos Clarke's Back Flip",
+        "asset": "assets/atlas-contact-frame.svg",
+        "caption": "Back Flip from The Last Dolls official exhibition page; click through to Atlas Gallery. The article discusses erotic photography and objectification.",
+        "credit": "Atlas Gallery · Preview-linked official image",
+        "external_image_url": "https://www.atlasgallery.com/wp-content/uploads/2026/07/Back-Flip-%C2%A9-The-Estate-of-Bob-Carlos-Clarke-768x596.jpg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.atlasgallery.com/exhibition/the-last-dolls-by-bob-carlos-clarke",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-09-05/2026-09-26",
+          "published_date": null,
+          "publisher": "Atlas Gallery",
+          "relationship": "first_party_official",
+          "title": "The Last Dolls by Bob Carlos Clarke",
+          "url": "https://www.atlasgallery.com/exhibition/the-last-dolls-by-bob-carlos-clarke"
+        },
+        {
+          "event_date": "2026-09-05/2026-09-26",
+          "published_date": "2026-08-24",
+          "publisher": "Dazed",
+          "relationship": "independent_reporting",
+          "title": "In pictures: Bob Carlos Clarke’s darkly charged erotica",
+          "url": "https://www.dazeddigital.com/art-photography/article/70841/1/bob-carlos-clarke-last-dolls-exhibition-london-erotica-photography"
+        }
+      ],
+      "title": "别再只用「挑衅」替一位摄影师结案"
+    }
+  ],
+  "timezone": "Asia/Shanghai",
+  "variation_review": {
+    "compared_issue_dates": [
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22",
+      "2026-08-23",
+      "2026-08-24",
+      "2026-08-25"
+    ],
+    "comparison_mode": "prior_issues",
+    "exception_reason": "The repeated index and official-image rule are usability and provenance constraints. The pale proof sheet, five unequal crops, calibration marks, chocolate/orange palette, and asymmetrical reading tempo do not repeat the 2026-08-23 closing line, 2026-08-24 route/clock, or 2026-08-25 floor-plan rooms.",
+    "repeated_mechanisms": [
+      "navigation remains an accessible section index",
+      "one first-party official source image per selected story"
+    ]
+  },
+  "visibility": "published_preview"
+}

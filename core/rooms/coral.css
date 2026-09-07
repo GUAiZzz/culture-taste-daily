@@ -1,0 +1,48 @@
+/* Coral uses cool paper and coloured ink. Source photographs stay outside this layer. */
+:root[data-theme=coral]{--accent:#943e31;--bright:#cf6955;--bg:#e8dfdd;--panel:#dbcecd;--paper:#e8dfdd;--ink:#392b32;--brand:#392b32;--muted:#64515a;--line:#b7a4ab;--deep:#392b32;--on-deep:#e8dfdd;--poster-ink:#1d1519;--print-fill:#cdb9bf}
+:root[data-theme=coral][data-palette=ash]{--bg:#e5e5dc;--panel:#d7d9ce;--paper:#e5e5dc;--ink:#29302c;--brand:#29302c;--muted:#505b53;--line:#a7aea2;--accent:#943e31;--bright:#cf6955;--deep:#29302c;--on-deep:#e5e5dc;--poster-ink:#141a16;--print-fill:#c3cbb8}
+:root[data-theme=coral][data-palette=mist]{--bg:#e1e6e7;--panel:#d1dade;--paper:#e1e6e7;--ink:#28353c;--brand:#28353c;--muted:#4d5e67;--line:#a2b1b9;--deep:#28353c;--on-deep:#e1e6e7;--poster-ink:#131a20;--print-fill:#bac9d0}
+:root[data-theme=coral][data-palette=rose]{--bg:#e8dfdd;--panel:#dbcecd;--paper:#e8dfdd;--ink:#392b32;--brand:#392b32;--muted:#64515a;--line:#b7a4ab;--deep:#392b32;--on-deep:#e8dfdd;--poster-ink:#1d1519;--print-fill:#cdb9bf}
+:root[data-theme=coral] .hero{color:var(--poster-ink);background-color:var(--bright)}
+:root[data-theme=coral] .hero :is(.hero-copy,.hero-art,.hero-link,.material-controls button,.material-caption){color:var(--poster-ink)}
+:root[data-theme=coral] .doodle-scene{color:var(--poster-ink);--doodle-paper:var(--paper);--doodle-fill:var(--print-fill)}
+:root[data-theme=coral] .coda{background:var(--deep);color:var(--on-deep)}
+:root[data-theme=coral] .sources a{background-image:linear-gradient(var(--panel),var(--panel))}
+:root[data-theme=coral] :is(.hero h1,.archive-title h1,.article-header h1,.issue-story-body h2,.section-heading h2){font-family:Georgia,'Songti SC','STSong',serif;font-weight:700}
+:root[data-theme=coral] .brand{font-family:Georgia,'Songti SC',serif;letter-spacing:-1.5px}
+:root[data-theme=coral] .paper-atmosphere:before,:root[data-theme=coral] .paper-atmosphere:after{background:none}
+/* Fine ink dropout within display letters, never a blur or a moving overlay. */
+@supports (mask-image:url('./text-ink.svg')){
+ :root[data-theme=coral] :is(.hero h1,.hero-en,.archive-title h1,.article-header h1,.section-heading h2,.story-card h3,.issue-card h3,.issue-story-body h2,.coda blockquote){mask-image:url('./text-ink.svg');mask-size:220px 220px;mask-repeat:repeat}
+ :root[data-theme=coral] :is(h1,h2,h3):focus-within{mask-image:none}
+}
+.coral-palette{display:none;border:0;border-top:1px solid var(--line);margin:20px 0;padding:18px 0 0;min-width:0}
+:root[data-theme=coral] .coral-palette{display:block}
+.coral-palette legend{font-size:13px;padding-right:12px}
+.palette-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.palette-options button{display:grid;text-align:left;gap:8px;padding:12px;border:1px solid transparent;border-bottom:2px solid var(--line);background:transparent;color:var(--ink);min-height:100px;font:13px/1.4 var(--body)}
+.palette-options button[aria-pressed=true]{border-bottom-color:var(--accent);background:var(--panel)}
+.palette-options small{font-size:11px;color:var(--muted)}
+.palette-chip{display:block;height:20px;width:100%;background:linear-gradient(90deg,#cf6955 0 50%,#e5e5dc 50% 85%,#29302c 85%)}
+.palette-mist{background:linear-gradient(90deg,#cf6955 0 50%,#e1e6e7 50% 85%,#28353c 85%)}
+.palette-rose{background:linear-gradient(90deg,#cf6955 0 50%,#e8dfdd 50% 85%,#392b32 85%)}
+@media(max-width:600px){.palette-options{gap:6px}.palette-options button{padding:8px 5px;font-size:11px}.palette-options small{font-size:10px}.room-panel{max-height:calc(100dvh - 32px);overflow-y:auto}}
+@media(forced-colors:active){:root[data-theme=coral] :is(h1,h2,h3,.hero-en,.coda blockquote){mask-image:none}}
+@media print{:root[data-theme=coral] :is(h1,h2,h3,.hero-en,.coda blockquote){mask-image:none}}
+/* Rose paper continues through every reading surface; photos retain their own pixels. */
+:root[data-theme=coral] :is(.daily-stories,.extras,.week-section,.catalog,.archive-title,.issue-body,.article-main,.issue-toc){background-color:var(--bg);background-image:url('./print-stock.svg')}
+:root[data-theme=coral] :is(.daily-stories,.extras,.week-section,.catalog,.archive-title,.issue-toc){border-color:var(--line)}
+:root[data-theme=coral] .coda{--on-deep:var(--paper);border-top:5px solid var(--bright)}
+.print-join,.print-mark{display:none}
+:root[data-theme=coral] .print-join{display:block;height:48px;position:relative;overflow:hidden;background:var(--bg) url('./print-stock.svg');margin-top:-1px}
+:root[data-theme=coral] .print-edge{display:block;width:100%;height:48px;fill:var(--bright)}
+:root[data-theme=coral] .print-edge .print-register{fill:var(--accent);opacity:.24}
+:root[data-theme=coral] :is(.section-heading,.article-header,.archive-title){position:relative}
+:root[data-theme=coral] .print-mark{display:block;position:absolute;width:78px;height:18px;left:0;bottom:-22px;overflow:visible;fill:none;stroke:var(--accent);stroke-width:1.3;stroke-linecap:round;pointer-events:none;mask-image:url('./text-ink.svg')}
+:root[data-theme=coral] .print-mark .print-register{stroke:var(--muted);opacity:.55}
+:root[data-theme=coral] .print-join>.print-mark{left:var(--gutter);bottom:0}
+:root[data-theme=coral] .archive-title>.print-mark{left:var(--gutter);bottom:14px}
+:root[data-theme=coral] .coda>.print-mark{left:auto;right:var(--gutter);bottom:18px;stroke:var(--paper)}
+:root[data-theme=coral] .coda>.print-mark .print-register{stroke:var(--bright)}
+:root[data-theme=coral] .print-join+.daily-stories{border-top:0;padding-top:42px}
+@media(max-width:600px){:root[data-theme=coral] .print-join{height:36px}:root[data-theme=coral] .print-edge{height:36px}:root[data-theme=coral] .print-mark{width:62px}:root[data-theme=coral] .print-join+.daily-stories{padding-top:32px}}

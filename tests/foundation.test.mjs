@@ -84,7 +84,9 @@ before(async () => {
   });
   approvedReview = reviewFor(buildReport);
   previewDist = path.join(workspace, "dist-repository-preview");
-  previewReport = await buildSite({ repoRoot, outDir: previewDist });
+  // This suite preserves the released V1 layout contract against its fixed editorial snapshot.
+  // The current, growing rooms edition is verified in rooms.test.mjs and native QA.
+  previewReport = await buildSite({ repoRoot, outDir: previewDist, readerRooms: false, through: "2026-09-04" });
 });
 
 after(async () => {

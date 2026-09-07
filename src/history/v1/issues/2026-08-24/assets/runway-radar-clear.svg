@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Runway radar with an open slot</title>
+  <desc id="desc">An original radar card marking the luxury-house runway lane as monitored but not filled without verified news.</desc>
+  <rect width="1200" height="720" fill="#ff5a1f"/>
+  <circle cx="600" cy="350" r="220" fill="none" stroke="#101552" stroke-width="6"/><circle cx="600" cy="350" r="140" fill="none" stroke="#101552" stroke-width="4"/><circle cx="600" cy="350" r="60" fill="none" stroke="#101552" stroke-width="3"/>
+  <path d="M600 350L820 180" stroke="#d9ff43" stroke-width="12"/><circle cx="820" cy="180" r="18" fill="#d9ff43"/>
+  <path d="M380 350H820M600 130V570" stroke="#101552" stroke-width="2" opacity=".6"/>
+  <text x="80" y="90" fill="#101552" font-family="monospace" font-size="30" letter-spacing="4">RUNWAY RADAR / 24 AUG</text>
+  <text x="80" y="650" fill="#101552" font-family="Arial, sans-serif" font-size="32" font-weight="700">NO VERIFIED NEW LUXURY-HOUSE SHOW IN THIS WINDOW</text>
+</svg>

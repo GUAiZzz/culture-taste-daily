@@ -1,5 +1,7 @@
 # Source architecture
 
+The September 7 shared reading-room and history integration is documented in [Three rooms release](THREE_ROOMS_RELEASE.md).
+
 ## Boundary
 
 `GUAiZzz/culture-taste-daily` is the source of truth for Culture & Taste Daily code, public issue source, historical Preview objects, build configuration, and non-production Preview configuration.

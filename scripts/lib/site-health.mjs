@@ -79,7 +79,8 @@ export async function collectPublicHealthTargets({ repoRoot, scope = "weekly", i
       }
     }
 
-    const radarPath = path.join(issueRoot, "daily-radar.public.json");
+    const ordinaryPath = path.join(issueRoot, "daily-radar.public.json");
+    const radarPath = await exists(ordinaryPath) ? ordinaryPath : path.join(issueRoot, "retrospective-index.public.json");
     if (await exists(radarPath)) {
       const radar = await readJson(radarPath);
       for (const item of radar.items ?? []) {

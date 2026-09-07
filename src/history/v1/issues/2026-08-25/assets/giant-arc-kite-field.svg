@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Giant Arc field of units</title>
+  <desc id="desc">An original field diagram showing many small kite units turning a gallery into a cloud.</desc>
+  <rect width="1200" height="720" fill="#b7c9ff"/>
+  <path d="M70 590C220 250 400 330 540 150s300-10 590 250" fill="none" stroke="#101552" stroke-width="20"/>
+  <g fill="#f5f0e6" stroke="#101552" stroke-width="3">
+    <path d="M150 500l32-42 32 42-32 42zM230 390l32-42 32 42-32 42zM310 300l32-42 32 42-32 42zM390 240l32-42 32 42-32 42zM480 205l32-42 32 42-32 42zM570 180l32-42 32 42-32 42zM660 205l32-42 32 42-32 42zM750 240l32-42 32 42-32 42zM840 310l32-42 32 42-32 42zM930 370l32-42 32 42-32 42zM1020 430l32-42 32 42-32 42z"/>
+  </g>
+  <text x="72" y="90" fill="#101552" font-family="monospace" font-size="30" font-weight="700" letter-spacing="4">75,000 UNITS / FREE FLOOR</text>
+  <text x="72" y="665" fill="#101552" font-family="monospace" font-size="24">A CLOUD BEFORE A TICKET</text>
+</svg>
+
