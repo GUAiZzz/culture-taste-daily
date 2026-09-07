@@ -55,3 +55,7 @@ At 18:00 finish existing deployment verification; do not start new research. Mis
 Local scheduled tasks need the computer on and app running. Multiple local recovery points reduce missed runs but cannot detect a completely offline machine. An independent always-on monitor remains a future infrastructure decision, not an implemented uptime guarantee.
 
 Final local receipt is `.stage4/operations/YYYY-MM-DD.json`; live verification is `.stage4/operations/live.json`. At completion append a small final operational entry to the task's own memory with date, commit, PR, merge SHA, run ID, live result and unresolved state. Never include research or secrets. GitHub + live hashes outrank old memory. The global Codex memory registry is not the automation state store.
+
+## Live verification transport
+
+The live verifier first uses bounded HTTPS requests. If the local command-line transport repeatedly fails to connect, it may use the installed Chromium browser for the same fixed public project origin. Browser requests outside that project origin are blocked. HTTP failures, unexpected final URLs, source-SHA mismatches, manifest/digest mismatches and page-hash mismatches still fail verification. The terminal receipt records use of the fallback; browser availability is not treated as proof until the same bytes and identities are checked.

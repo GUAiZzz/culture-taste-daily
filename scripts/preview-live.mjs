@@ -3,20 +3,13 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { REPOSITORY, SHA, DIGEST } from './lib/preview-policy.mjs';
 import { digestMap } from './lib/files.mjs';
+import { createLiveTransport } from './lib/live-transport.mjs';
 const { values } = parseArgs({ options: { sha: { type: 'string' }, date: { type: 'string' } } });
 if (!SHA.test(values.sha ?? '')) throw new Error('An exact --sha is required');
 const origin = 'https://guaizzz.github.io/culture-taste-daily/';
-async function get(file) {
-  let last;
-  for (let attempt = 0; attempt < 3; attempt++) {
-    try {
-      const response = await fetch(new URL(file, origin), { signal: AbortSignal.timeout(20000), cache: 'no-store' });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      return Buffer.from(await response.arrayBuffer());
-    } catch (error) { last = error; if (attempt < 2) await new Promise(resolve => setTimeout(resolve, [2000, 8000][attempt])); }
-  }
-  throw new Error(`LIVE_ROUTE_UNAVAILABLE ${file}: ${last.message}`);
-}
+const transport = createLiveTransport();
+const get = transport.get;
+try {
 const stamp = JSON.parse((await get('preview-release.json')).toString('utf8'));
 if (stamp.repository !== REPOSITORY || stamp.source_commit !== values.sha || !DIGEST.test(stamp.artifact_digest ?? '')) throw new Error('LIVE_IDENTITY_MISMATCH');
 if (!stamp.files || typeof stamp.files !== 'object' || Array.isArray(stamp.files) || digestMap(stamp.files) !== stamp.artifact_digest) throw new Error('LIVE_MANIFEST_DIGEST_MISMATCH');
@@ -33,7 +26,9 @@ for (const file of targets) {
   if (!/noindex/.test(bytes.toString()) || !bytes.toString().includes(date)) throw new Error(`LIVE_PREVIEW_LABEL_OR_DATE ${file}`);
 }
 const receipt = { state: 'PREVIEW_DEPLOYED', production_eligible: false, source_commit: values.sha,
-  artifact_digest: stamp.artifact_digest, date, verified_at: new Date().toISOString(), routes: targets, origin };
+  artifact_digest: stamp.artifact_digest, date, verified_at: new Date().toISOString(), routes: targets, origin,
+  transport_fallbacks: transport.events };
 await mkdir('.stage4/operations', { recursive: true });
 await writeFile('.stage4/operations/live.json', JSON.stringify(receipt, null, 2)+'\n');
 console.log(JSON.stringify(receipt, null, 2));
+} finally { await transport.close(); }
