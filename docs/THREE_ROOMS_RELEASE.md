@@ -29,3 +29,11 @@ September 5 is a three-article retrospective assembled September 7. September 6 
 The owner's explicit catch-up request authorizes these two bounded maintenance exceptions. `core/rooms/retrospective-issues.json` pins their exact content and reading-index hashes. Future ordinary daily issues still require the existing complete daily radar, coverage, source, deadline and automatic release gates; this exception is not an automatic backfill policy. Retrospective entries participate in subsequent issue deduplication and source-health checks.
 
 The archive includes all structured articles, including the August 23–24 originals. August 20–22 remain intact historical documents accessed through their issue entries, without pretending to have a reconstructed article index.
+
+## September 8 mobile reading revision
+
+The owner's mobile review consolidates global navigation into current article selection and the archive; the brand returns home and the room control holds appearance settings. The duplicated homepage shortcut block is removed. The issue cover retains its reading action and date.
+
+Analog channel 00 explicitly means the cover, not all articles. The single-row channel selector precedes the picture, with bounded horizontal overflow for longer schedules and keyboard selection kept in view. Redundant previous/next channel controls and repeated visible channel titles are removed. The underlying channel identity, URL state and reduced-motion behavior are preserved.
+
+All three rooms use two article columns on phones in both the homepage and the article archive. Source captions, title sizes and reading links follow the same mobile constraints, while room colors and material treatment remain distinct. Archive search and month controls share one row. Article pages keep one compact issue return above the title; secondary original-edition access remains below the article. Original issue content, source credits and historical presentations are unchanged.
