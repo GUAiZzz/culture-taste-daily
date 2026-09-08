@@ -33,3 +33,39 @@ test('200 explicitly synthetic archive entries paginate, search and sort without
  await p.locator('#catalog-search').fill('SYNTHETIC ONLY');assert.equal(await p.locator('[data-catalog="articles"] [data-catalog-item]:visible').count(),24);assert.match(await p.locator('.catalog-status').innerText(),/200/);assert.match(await p.locator('.catalog-status').innerText(),/9/);await p.locator('#catalog-search').fill('UNMATCHED');assert.ok(await p.locator('.empty-state').isVisible());await c.close();
 });
 test('homepage keeps editorial order and empty categories do not occupy a card',async()=>{const c=await browser.newContext();await c.route(/^https:\/\//,r=>r.abort());const p=await c.newPage();await p.goto(server.origin+'/culture-taste-daily/?theme=coral');const latest=index.issues.at(-1),m=JSON.parse(await readFile(path.join(repoRoot,'src/issues',latest.date,'issue-manifest.public.json')));assert.deepEqual(await p.locator('.category-board .story-card').evaluateAll(es=>es.map(e=>e.id.replace(/^card-\d{4}-\d{2}-\d{2}-/,''))),m.stories.map(s=>s.id));await p.locator('[data-home-category="city"]').click();const expected=index.articles.filter(s=>s.date===latest.date&&s.category==='city').length;assert.equal(await p.locator('.category-board .story-card:visible').count(),expected);if(!expected)assert.ok(await p.locator('.home-empty').isVisible());await c.close();});
+
+test('compact shared navigation keeps all four home actions on one row inside every room',async()=>{
+ const base=server.origin+'/culture-taste-daily';
+ for(const theme of ['field','coral','analog']){
+  const c=await browser.newContext({reducedMotion:'reduce'});await c.route(/^https:\/\//,r=>r.abort());const p=await c.newPage();
+  for(const [width,height] of [[320,568],[390,844],[430,932],[768,1024],[844,390],[1440,900]]){
+   await p.setViewportSize({width,height});await p.goto(base+'/?theme='+theme);
+   const geometry=await p.evaluate(()=>{
+    const box=e=>{const r=e.getBoundingClientRect();return {y:r.y,height:r.height,width:r.width,right:r.right};};
+    return {links:[...document.querySelectorAll('.reading-start a')].map(box),header:box(document.querySelector('.masthead')),entry:box(document.querySelector('.reading-start')),overflow:document.documentElement.scrollWidth-innerWidth};
+   });
+   assert.equal(geometry.overflow,0,`${theme} ${width}: document overflow`);
+   assert.equal(geometry.links.length,4);assert.equal(new Set(geometry.links.map(x=>x.y)).size,1,`${theme} ${width}: wrapped action`);
+   for(const link of geometry.links){assert.ok(link.height>=44);assert.ok(link.width>=44);assert.ok(link.right<=width);}
+   if(width<=479){
+    assert.ok(geometry.header.height<=92);assert.ok(geometry.entry.height<=115);
+    const cover=theme==='analog'?'.broadcast-cover':'.home-hero';
+    const heading=p.locator(cover+' h1');assert.ok(await heading.evaluate(e=>parseFloat(getComputedStyle(e).fontSize)<=48));
+    if(theme==='analog'){
+     const art=await p.locator('.broadcast-art').boundingBox(),paragraph=await p.locator('.broadcast-position').boundingBox();
+     assert.ok(paragraph.y>=art.y+art.height);assert.ok(paragraph.width>art.width);
+     assert.equal(await p.locator('.broadcast-art').evaluate(e=>getComputedStyle(e).float),'none');
+    }
+   }
+  }
+  await p.setViewportSize({width:390,height:844});
+  for(const route of ['/','/archive/',index.issues.at(-1).url,index.articles[0].url]){
+   await p.goto(base+route+'?theme='+theme);
+   const header=p.locator('.masthead');assert.ok((await header.boundingBox()).height<=92);
+   await p.evaluate(()=>scrollTo(0,450));const frame=await header.boundingBox();assert.ok(frame.y>=0&&frame.y<=16);
+   await p.locator('[data-open-dialog]').focus();await p.keyboard.press('Enter');assert.ok(await p.locator('#room-dialog').isVisible());await p.keyboard.press('Escape');
+  }
+  await p.goto(base+'/?theme='+theme);await p.locator('.reading-start a').last().click();assert.match(p.url(),/\/archive\//);assert.equal(await p.locator('html').getAttribute('data-theme'),theme);
+  await c.close();
+ }
+});
