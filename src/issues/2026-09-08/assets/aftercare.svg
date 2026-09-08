@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Aftercare field diagram</title>
+  <desc id="desc">Original diagram of a product aftercare rail with repair marks, use notes and an open return path.</desc>
+  <rect width="1200" height="800" fill="#E9E7E1"/>
+  <path d="M92 182H1110M92 398H1110M92 614H1110" stroke="#171918" stroke-width="3" opacity=".25"/>
+  <path d="M152 108V692M364 108V692M578 108V692M790 108V692M1002 108V692" stroke="#304A54" stroke-width="8"/>
+  <path d="M128 214C276 132 404 280 546 210S820 144 1076 260" fill="none" stroke="#A84B32" stroke-width="16"/>
+  <path d="M128 214C276 132 404 280 546 210S820 144 1076 260" fill="none" stroke="#D7F000" stroke-width="5" stroke-dasharray="18 20"/>
+  <rect x="202" y="350" width="244" height="112" fill="#171918" transform="rotate(-4 202 350)"/>
+  <rect x="686" y="458" width="270" height="120" fill="#D7F000" transform="rotate(5 686 458)"/>
+  <circle cx="152" cy="214" r="24" fill="#D7F000"/><circle cx="578" cy="210" r="24" fill="#A84B32"/><circle cx="1002" cy="260" r="24" fill="#D7F000"/>
+  <path d="M936 612l44 34-44 34" fill="none" stroke="#171918" stroke-width="14"/>
+  <g fill="#171918" font-family="monospace" font-weight="700" font-size="24"><text x="92" y="78">USE / REPAIR / RETURN</text><text x="92" y="748">CULTURE &amp; TASTE / 09.08</text></g>
+  <g fill="#E9E7E1" font-family="monospace" font-weight="700" font-size="22"><text x="230" y="420">REPAIR LOG</text></g>
+  <g fill="#171918" font-family="monospace" font-weight="700" font-size="22"><text x="720" y="528">NEXT USE</text></g>
+</svg>
