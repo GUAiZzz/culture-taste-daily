@@ -156,12 +156,6 @@ html[data-theme] .hero h1{ text-wrap:balance; }
 
 /* Shared phone navigation stays compact across every reading room. */
 .mobile-original-edition{display:none}
-.tv-guide{display:block;transform:none;margin-top:14px;padding-top:10px}
-.tv-guide-label,.tv-guide:after{display:none}
-.television.has-channel-overflow .tv-guide:after{content:'左右滑动切台 →';display:block;position:static;margin-top:3px;font:11px/1.5 var(--mono);color:var(--muted)}
-.tv-channel-buttons{position:relative;display:flex;flex-wrap:nowrap;gap:4px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;padding-bottom:4px}
-.tv-channel-buttons button{flex:1 0 auto;min-width:60px;min-height:44px;white-space:nowrap;padding:8px;font-size:12px}
-.tv-channel-status{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .home-filter-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 @media(min-width:600px) and (max-width:1199px){html[data-theme=analog] main :is(.category-board,.article-catalog){grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:599px){
@@ -183,10 +177,6 @@ html[data-theme] .hero h1{ text-wrap:balance; }
   html[data-theme=analog] .page-issue .material-print:before,html[data-theme=analog] .page-issue .material-print:after{display:none}
   html[data-theme=analog] .page-issue .art-surface{border:0;border-radius:0;box-shadow:none}
   html[data-theme=analog] .page-issue .material-controls{display:none}
-  .broadcast-copy h1{font-size:clamp(28px,8vw,36px);line-height:1.2;letter-spacing:-.8px;text-wrap:balance;margin:14px 0}
-  .broadcast-copy .broadcast-en{font:16px/1.65 var(--body);margin-top:10px}
-  .broadcast-photo .photo-window{height:clamp(160px,50vw,220px);min-height:0;aspect-ratio:auto}
-  .broadcast-photo .photo-window>img{max-height:220px}
   html[data-theme] main :is(.uniform-stories,.article-catalog) .card-copy{display:contents}
   html[data-theme] main :is(.uniform-stories,.article-catalog) .story-card{border:0!important;border-radius:0;background:none!important;box-shadow:none;margin:0;width:100%}
   html[data-theme] main :is(.uniform-stories,.article-catalog) .deck{display:none}

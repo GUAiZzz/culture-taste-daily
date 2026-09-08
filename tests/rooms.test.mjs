@@ -71,7 +71,7 @@ test('two distinct navigation destinations leave the mobile cover immediately be
  }
 });
 
-test('mobile browsing is two columns in every room, with single-row channel and category controls',async()=>{
+test('mobile browsing is two columns in every room, with single-row category controls',async()=>{
  const base=server.origin+'/culture-taste-daily';
  for(const theme of ['field','coral','analog']){
   const c=await browser.newContext();await c.route(/^https:\/\//,r=>r.abort());const p=await c.newPage();
@@ -79,14 +79,7 @@ test('mobile browsing is two columns in every room, with single-row channel and 
    await p.setViewportSize({width,height:844});await p.goto(base+'/?theme='+theme);
    assert.equal(await p.locator('.category-board').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length),2);assert.ok(await p.locator('.category-board .entry-label').first().isVisible());assert.equal(await p.locator('.category-board figcaption').first().evaluate(e=>getComputedStyle(e).flexWrap),'nowrap');
    assert.equal(new Set(await p.locator('[data-home-category]').evaluateAll(es=>es.map(e=>e.getBoundingClientRect().y))).size,1);
-   if(theme==='analog'){
-    assert.match(await p.locator('[data-channel="0"]').innerText(),/封面/);
-    assert.equal(await p.locator('.tv-zap').count(),0);
-    assert.equal(new Set(await p.locator('[data-channel]').evaluateAll(es=>es.map(e=>e.getBoundingClientRect().y))).size,1);
-    assert.ok((await p.locator('.tv-guide').boundingBox()).y<(await p.locator('.tv-stage').boundingBox()).y);
-    await p.locator('[data-channel="1"]').click();assert.ok(await p.locator('.broadcast-story').isVisible());assert.equal(await p.locator('[data-channel="1"]').getAttribute('aria-pressed'),'true');
-    await p.locator('[data-channel="0"]').click();assert.ok(await p.locator('.broadcast-cover').isVisible());
-   }
+   assert.equal(await p.locator('[data-channel],.tv-guide,.tv-osd').count(),0);
    await p.getByRole('navigation',{name:'主要导航'}).getByRole('link',{name:'往期档案'}).click();await p.locator('[data-view="articles"]').click();
    assert.equal(await p.locator('.article-catalog').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length),2);
    assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth-innerWidth),0);
@@ -95,15 +88,16 @@ test('mobile browsing is two columns in every room, with single-row channel and 
  }
 });
 
-test('a long explicitly synthetic TV schedule stays on one rail and keyboard selection remains visible',async()=>{
- const c=await browser.newContext({viewport:{width:320,height:568}});await c.route(/^https:\/\//,r=>r.abort());const p=await c.newPage();
- let html=await readFile(path.join(temp,'culture-taste-daily/index.html'),'utf8');
- const count=index.issues.at(-1).stories+1;
- const templates=Array.from({length:10},(_,i)=>`<template data-channel-template="${count+i}"><h1>SYNTHETIC CHANNEL ${i}</h1></template>`).join('');
- const buttons=Array.from({length:10},(_,i)=>`<button data-channel="${count+i}" aria-pressed="false">TEST ${i}</button>`).join('');
- html=html.replace('</body>',templates+'</body>').replace(/(<div class="tv-channel-buttons"[^>]*>)([\s\S]*?)(<\/div>)/,(_,a,b,d)=>a+b+buttons+d);
- await p.route('**/culture-taste-daily/?theme=analog',r=>r.fulfill({contentType:'text/html',body:html}));
- await p.goto(server.origin+'/culture-taste-daily/?theme=analog');await p.locator('[data-channel="0"]').focus();await p.keyboard.press('End');
- const visible=await p.locator('.tv-channel-buttons').evaluate(e=>{const r=e.getBoundingClientRect(),s=e.querySelector('[aria-pressed=true]').getBoundingClientRect();return {left:s.left>=r.left-1,right:s.right<=r.right+1,overflow:document.documentElement.scrollWidth-innerWidth};});
- assert.deepEqual(visible,{left:true,right:true,overflow:0});assert.match(await p.locator('.tv-stage').innerText(),/SYNTHETIC CHANNEL 9/);await c.close();
+test('retired channel URLs and session state cannot replace the cover or hide article access',async()=>{
+ const base=server.origin+'/culture-taste-daily';
+ for(const javaScriptEnabled of [true,false]){
+  const c=await browser.newContext({javaScriptEnabled,viewport:{width:390,height:844}});await c.route(/^https:\/\//,r=>r.abort());
+  await c.addInitScript(date=>sessionStorage.setItem('ct-art-direction-channel-'+date,'1'),index.issues.at(-1).date);
+  const p=await c.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
+  await p.goto(base+'/?theme=analog&channel=1');
+  assert.ok(await p.locator(javaScriptEnabled?'.broadcast-cover':'.home-hero').isVisible());
+  assert.equal(await p.locator('[data-channel],.tv-guide,.tv-osd,[data-channel-template],.broadcast-story').count(),0);
+  assert.equal(await p.locator('.category-board .story-card').count(),index.issues.at(-1).stories);
+  await p.locator(javaScriptEnabled?'.broadcast-read':'.home-hero .hero-link').click();assert.ok(await p.locator('.issue-toc').isVisible());assert.deepEqual(errors,[]);await c.close();
+ }
 });
