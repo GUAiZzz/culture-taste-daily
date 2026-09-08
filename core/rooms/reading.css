@@ -158,6 +158,7 @@ html[data-theme] .hero h1{ text-wrap:balance; }
 .mobile-original-edition{display:none}
 .tv-guide{display:block;transform:none;margin-top:14px;padding-top:10px}
 .tv-guide-label,.tv-guide:after{display:none}
+.television.has-channel-overflow .tv-guide:after{content:'左右滑动切台 →';display:block;position:static;margin-top:3px;font:11px/1.5 var(--mono);color:var(--muted)}
 .tv-channel-buttons{position:relative;display:flex;flex-wrap:nowrap;gap:4px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;padding-bottom:4px}
 .tv-channel-buttons button{flex:1 0 auto;min-width:60px;min-height:44px;white-space:nowrap;padding:8px;font-size:12px}
 .tv-channel-status{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
