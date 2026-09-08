@@ -39,8 +39,6 @@ html[data-theme=analog]{--rim-top:28px;--rim-right:36px;--rim-bottom:34px;--rim-
 [data-theme=analog] .tv-screen-edge{display:block;position:fixed;inset:var(--rim-top) var(--rim-right) var(--rim-bottom) var(--rim-left);border:1px solid #343027;border-radius:22px 17px 23px 19px;pointer-events:none;z-index:44;box-shadow:0 0 0 12px #726b5c,inset 3px 3px 12px #0007,inset -3px -2px 9px #0008}
 @media(max-width:800px){[data-theme=analog] .tv-screen-edge{border-radius:12px 10px 13px 11px;box-shadow:0 0 0 7px #726b5c,inset 2px 2px 8px #0007}}
 [data-theme=analog] .masthead{min-height:68px;padding-inline:35px}
-[data-theme=analog] .brand{font:bold 27px Georgia,serif;letter-spacing:-1px;text-shadow:1px 0 #b9665d,-1px 0 #6b858d}
-[data-theme=analog] .brand small{font-size:16px}
-@media(max-width:800px){[data-theme=analog] .masthead{padding-inline:20px}[data-theme=analog] .brand{font-size:25px}}
-@media(max-width:479px){[data-theme=analog] .masthead{padding-inline:13px}[data-theme=analog] .brand{font-size:22px}}
+@media(max-width:800px){[data-theme=analog] .masthead{padding-inline:20px}}
+@media(max-width:479px){[data-theme=analog] .masthead{padding-inline:13px}}
 [data-theme=coral] .hero-art{outline:none}
