@@ -9,7 +9,6 @@
 :root[data-theme=coral] .coda{background:var(--deep);color:var(--on-deep)}
 :root[data-theme=coral] .sources a{background-image:linear-gradient(var(--panel),var(--panel))}
 :root[data-theme=coral] :is(.hero h1,.archive-title h1,.article-header h1,.issue-story-body h2,.section-heading h2){font-family:Georgia,'Songti SC','STSong',serif;font-weight:700}
-:root[data-theme=coral] .brand{font-family:Georgia,'Songti SC',serif;letter-spacing:-1.5px}
 :root[data-theme=coral] .paper-atmosphere:before,:root[data-theme=coral] .paper-atmosphere:after{background:none}
 /* Fine ink dropout within display letters, never a blur or a moving overlay. */
 @supports (mask-image:url('./text-ink.svg')){

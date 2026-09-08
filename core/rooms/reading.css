@@ -199,7 +199,6 @@ html[data-theme] .hero h1{ text-wrap:balance; }
 }
 @media(max-width:479px){
   html[data-theme] .masthead{min-height:0;padding-block:0;row-gap:0}
-  .masthead .brand{display:block;min-height:44px;padding-block:0;font-size:clamp(21px,6.1vw,25px);line-height:44px}
   .masthead .room-trigger{min-height:44px;padding-block:0}
   .masthead nav{font-size:12px}
   .masthead nav a+a{border-left:0}
@@ -227,3 +226,16 @@ html[data-theme] .hero h1{ text-wrap:balance; }
   .broadcast-cover>p:first-child{font-size:11px}
   .tv-stage{padding-block:20px 16px}
 }
+
+/* One wordmark scale across rooms and page types; only its colour and texture vary. */
+.masthead .brand{
+  display:block;flex-shrink:0;width:max-content;min-height:44px;padding:0;
+  font:700 32px/44px Georgia,'Times New Roman',serif;
+  letter-spacing:-1.3px;white-space:nowrap;color:var(--brand);
+}
+.masthead .brand i{font:inherit}
+.masthead .brand small{font:italic 18px/44px Georgia,'Times New Roman',serif;letter-spacing:-.6px;margin-left:5px}
+[data-theme=analog] .masthead .brand{text-shadow:1px 0 #b9665d,-1px 0 #6b858d}
+@media(max-width:1100px){.masthead .brand{font-size:30px}.masthead .brand small{display:none}}
+@media(max-width:800px){.masthead .brand{font-size:26px}}
+@media(max-width:479px){.masthead .brand{font-size:clamp(21px,6.1vw,25px);letter-spacing:-1px}}

@@ -101,3 +101,26 @@ test('retired channel URLs and session state cannot replace the cover or hide ar
   await p.locator(javaScriptEnabled?'.broadcast-read':'.home-hero .hero-link').click();assert.ok(await p.locator('.issue-toc').isVisible());assert.deepEqual(errors,[]);await c.close();
  }
 });
+
+test('the masthead wordmark has identical geometry across rooms and reading pages at each viewport',async()=>{
+ const base=server.origin+'/culture-taste-daily',expected=new Map();
+ const routes=['/','/archive/',index.issues.at(-1).url,index.articles[0].url];
+ for(const theme of ['field','coral','analog']){
+  const c=await browser.newContext();await c.route(/^https:\/\//,r=>r.abort());const p=await c.newPage();
+  for(const [width,height] of [[320,568],[390,844],[430,932],[768,1024],[844,390],[1024,768],[1440,900]]){
+   await p.setViewportSize({width,height});
+   for(const route of routes){
+    await p.goto(base+route+'?theme='+theme);
+    const metrics=await p.locator('.masthead .brand').evaluate(e=>{
+     const style=n=>{const s=getComputedStyle(n);return Object.fromEntries(['fontFamily','fontSize','fontWeight','fontStyle','lineHeight','letterSpacing','display'].map(k=>[k,s[k]]))};
+     const r=e.getBoundingClientRect();return {brand:style(e),ampersand:style(e.querySelector('i')),daily:style(e.querySelector('small')),width:r.width,height:r.height};
+    });
+    if(!expected.has(width))expected.set(width,metrics);
+    assert.deepEqual(metrics,expected.get(width),`${theme} ${route} ${width}: wordmark changed`);
+    assert.ok(metrics.height>=44);assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth-innerWidth),0);
+    const overlap=await p.evaluate(()=>{const a=document.querySelector('.brand').getBoundingClientRect(),b=document.querySelector('.room-trigger').getBoundingClientRect();return a.right>b.left&&a.left<b.right&&a.bottom>b.top&&a.top<b.bottom});assert.equal(overlap,false,`${theme} ${route} ${width}: room control overlaps brand`);
+   }
+  }
+  await c.close();
+ }
+});
