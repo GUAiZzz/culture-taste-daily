@@ -1,0 +1,132 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-09-10",
+  "publication_date": "2026-09-10",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-09-10T11:20:00+08:00",
+  "research_locked_at": "2026-09-10T11:49:00+08:00",
+  "content_locked_at": "2026-09-10T11:49:00+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "21feb3d732b6504f1202c8a72062c67c2f31d570eba70fefc7d8b7c11425dca1",
+    "locked_at": "2026-09-10T11:49:00+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "21feb3d732b6504f1202c8a72062c67c2f31d570eba70fefc7d8b7c11425dca1",
+    "art_direction_sha256": "6a9a78363d9a2fd3fff93af82b6490077da0bf7e4984f49053998659aa707e79",
+    "issue_style_sha256": "59f85d7ac993509d10b3a2c6e4ceccc5e239f661058b291f5ddc8b0b3fd248e6"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-09-10T10:55:00+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "作品并不在被发布或被展示时完成；真正的观看和聆听，会被作品自己设定的空间、尺度、节奏与限制改变。今天值得看的不是文化对象有多沉浸，而是它如何把观众的行动写进材料。",
+  "art_direction": {
+    "dominant_mood": "深午夜底上的骨白文字、信号橙切口和电光青窗口，像一组正在校准观众位置的展厅测试片",
+    "background_logic": "把页面当成一面由多个孔径组成的观看墙：窗口彼此错位，背景在每次切换时改变可见范围，不复用最近七期的门槛、曲线、物件/参与、测量脊、证明表、脚手架、日历轴或节目单轨道。",
+    "palette_logic": "midnight #101826, bone #F4F0E8, signal orange #FF7A45, electric cyan #4BC0C8, ultraviolet #8E7CFF；午夜承载页面和长文，骨白负责阅读，橙色只标记动作，青色负责窗口，紫色只作为远处的回声，不承载小字号文字。",
+    "type_scale_logic": "标题像贴在展厅墙上的大号校准标签，正文 18px；故事编号靠近窗口边缘，英文只承担标题、deck 与 abstract。",
+    "image_behavior": "五张一手官方媒体只在 Preview 外链显示；本地 aperture-field SVG 是原创的孔径结构图，不冒充纪实照片。",
+    "page_density_and_tempo": "封面先给出四个彼此错位的观看窗口，正文从声音的空间约束进入颜色的相邻节奏，再经过材料展会、邮局路径与针织身体，退出处把判断交回读者。",
+    "core_visual_action": "页面用一组可见范围不同的 aperture field 改变读者看到的信息顺序：每个窗口既遮蔽一部分，也把下一条事实推到前景。",
+    "cover_composition": "午夜底上叠放四个不对齐的骨白矩形框，橙色短线像裁切标记，电光青从框内穿出，紫色只留在最深处；编号贴在框的外沿，不把它们连成轨道。",
+    "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 元素提供可关闭的 aperture notes，正文、事实与来源不依赖 JavaScript。",
+    "behance_viewing_arc": "先看坂本龙一如何让声音带着时间进入房间，再看 Whitney 如何让颜色安排视线，转向东京把趋势拆成材料关系，进入 Dublin 让邮局成为身体路径，最后停在 Zankov 把品牌交接压回针织的尺度。",
+    "mobile_translation": "390px 下四个窗口压缩为左侧连续的窄框，橙色裁切标记变成边缘标签，正文保持单列并允许来源长链接换行。",
+    "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点可见，长链接换行，外图失败不隐藏来源，移动端无横向滚动；窗口装饰不遮挡正文。",
+    "quiet_ending": "退出处只保留一个没有文字的骨白孔径，让读者确认自己看见了什么、还需要亲自进入什么。",
+    "closing_quotation": {"id":"ct-en-007","language":"en","text":"A frame matters only when it changes the action.","credit":"Culture & Taste Editorial"},
+    "closing_palette": {"background":"#101826","foreground":"#F4F0E8","accent":"#4BC0C8","rationale":"午夜底让骨白长文保持稳定对比，电光青作为结构性窗口在深底上清楚可见；信号橙只承担动作标记，紫色只作远景回声，不把小字号交给低对比装饰色。"}
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": ["2026-09-03","2026-09-04","2026-09-05","2026-09-06","2026-09-07","2026-09-08","2026-09-09"],
+    "repeated_mechanisms": ["accessible section index","first-party source image with linked fallback"],
+    "exception_reason": "可访问索引与一手来源图是固定约束；本期以错位孔径、可见范围切换、青色窗口和橙色裁切标记作为核心构图，没有复用最近七期的门槛线、互穿曲线、物件/参与关系图、测量脊、证明表、脚手架、日历刻度或节目单轨道。"
+  },
+  "stories": [
+    {
+      "id": "ryuichi-sakamoto-seeing-sound-2026",
+      "level": "cover",
+      "title": "坂本龙一：声音先把空间改写",
+      "sources": [
+        {"title":"Opening of the exhibition Ryuichi Sakamoto — Seeing Sound, Hearing Time","publisher":"Hamburger Bahnhof / Staatliche Museen zu Berlin","url":"https://www.smb.museum/en/events/detail/opening-of-the-exhibition-ryuichi-sakamoto-seeing-sound-hearing-time-2026-09-10-190000-161025/","published_date":null,"event_date":"2026-09-10","relationship":"first_party_official"},
+        {"title":"Ryuichi Sakamoto exhibition handout","publisher":"Museum of Contemporary Art Tokyo","url":"https://www.mot-art-museum.jp/en/exhibitions/RS_Handout_EN.pdf","published_date":null,"event_date":null,"relationship":"first_party_official"}
+      ],
+      "image_credit": "Hamburger Bahnhof 官方图片 / Preview-linked",
+      "english": {"title":"THE SOUND REWRITES THE ROOM","deck":"Ryuichi Sakamoto’s exhibition makes listening answer to installation, data and bodily position.","abstract":"Hamburger Bahnhof fixes seven works across five large-scale installations for the 10 September opening. An earlier museum handout adds context on Sakamoto’s data-linked sound-image practice; visitor response remains open."},
+      "media": {"asset":"assets/aperture-field.svg","alt":"Ryuichi Sakamoto Seeing Sound Hearing Time 官方展览图片","caption":"Hamburger Bahnhof 官方图片；打开开幕页查看展览日期、装置数量与入场信息。","credit":"Hamburger Bahnhof / Staatliche Museen zu Berlin · Preview-linked official image","kind":"source_image","origin_url":"https://www.smb.museum/en/events/detail/opening-of-the-exhibition-ryuichi-sakamoto-seeing-sound-hearing-time-2026-09-10-190000-161025/","external_image_url":"https://www.smb.museum/uploads/tx_smb/events/event_90274/ryuichi-sakamoto-async-immersion_xl.jpg","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id": "stanley-whitney-hong-kong-2026",
+      "level": "major",
+      "title": "Stanley Whitney：颜色在互相叫下一格",
+      "sources": [
+        {"title":"Stanley Whitney: Isn’t Love the Strangest Thing","publisher":"Gagosian Hong Kong","url":"https://gagosian.com/exhibitions/2026/stanley-whitney-isnt-love-the-strangest-thing/","published_date":null,"event_date":"2026-09-10/2026-11-07","relationship":"first_party_official"}
+      ],
+      "image_credit": "Gagosian 官方图片 / Preview-linked",
+      "english": {"title":"COLOUR CALLS THE NEXT SQUARE","deck":"Stanley Whitney lets adjacent colour, loose grids and horizontal bands choreograph the eye.","abstract":"Gagosian fixes Whitney’s first solo exhibition in Asia for Hong Kong from 10 September to 7 November and describes colour calling to colour in new rhythms. The reading of adjacent blocks as instructions is editorial interpretation."},
+      "media": {"asset":"assets/aperture-field.svg","alt":"Stanley Whitney Isn’t Love the Strangest Thing 官方展览图片","caption":"Gagosian 官方图片；打开展览页查看香港展期、作品结构与艺术家说明。","credit":"Gagosian · Preview-linked official image","kind":"source_image","origin_url":"https://gagosian.com/exhibitions/2026/stanley-whitney-isnt-love-the-strangest-thing/","external_image_url":"https://gagosian.com/media/images/exhibitions/2026/stanley-whitney-isnt-love-the-strangest-thing/BEo6q8jzs5Pn_1200x1200.jpg","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id": "tranoi-denim-premiere-vision-tokyo-2026",
+      "level": "major",
+      "title": "东京商展：cool 不是答案，是材料关系",
+      "sources": [
+        {"title":"TRANOÏ TOKYO","publisher":"TRANOÏ","url":"https://www.tranoi.com/e/tokyo","published_date":null,"event_date":"2026-09-09/2026-09-10","relationship":"first_party_official"},
+        {"title":"Denim Première Vision in Tokyo","publisher":"TRANOÏ","url":"https://www.tranoi.com/en/articles/201cd719-d7aa-f111-9b33-000d3a4c7d4d/denim-premiere-vision-in-tokyo","published_date":"2026-09-07","event_date":"2026-09-09/2026-09-10","relationship":"first_party_official"}
+      ],
+      "image_credit": "TRANOÏ 官方图片 / Preview-linked",
+      "english": {"title":"COOL IS A MATERIAL RELATION","deck":"TRANOÏ TOKYO and Denim Première Vision turn trend language back into materials, makers and direct encounters.","abstract":"The official programme fixes the Tokyo venue, the 9–10 September dates, 250 brands and a materials-to-business frame. The cultural value of the fair remains a bounded editorial reading."},
+      "media": {"asset":"assets/aperture-field.svg","alt":"TRANOÏ TOKYO 与 Denim Première Vision 官方活动图片","caption":"TRANOÏ 官方图片；打开东京活动页查看档案、品牌、对谈与材料内容。","credit":"TRANOÏ · Preview-linked official image","kind":"source_image","origin_url":"https://www.tranoi.com/e/tokyo","external_image_url":"https://api-frontassets.inwink.com/event/f2bff45a-8e26-f111-9a49-0022487fb441/asset/94d389c2-9a38-f111-8ef2-6045bd954320/file/tranoi-20tokyo-20noir","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id": "dublin-ifw-postmarked-2026",
+      "level": "signal",
+      "title": "Dublin Independent Fashion Week：邮局把走路写进时装",
+      "sources": [
+        {"title":"Dublin Independent Fashion Week","publisher":"Dublin Independent Fashion Week","url":"https://www.dublin-ifw.com/","published_date":null,"event_date":"2026-09-10/2026-09-16","relationship":"first_party_official"},
+        {"title":"Inside Dublin Independent Fashion Week 2026","publisher":"Image.ie","url":"https://www.image.ie/style/fashion/inside-dublin-independent-fashion-week-2026-1000087","published_date":null,"event_date":"2026-09-10/2026-09-16","relationship":"independent_reporting"}
+      ],
+      "image_credit": "Dublin Independent Fashion Week 官方标识 / Preview-linked",
+      "english": {"title":"THE POST OFFICE BECOMES A RUNWAY","deck":"Dublin Independent Fashion Week writes movement, community and public space into the clothes.","abstract":"DIFW’s official homepage fixes the platform’s designer-led, community-first position; Image.ie reports POSTMARKED at Dublin’s GPO as a live fashion exhibition with 60 looks and a 40-event programme. The building’s effect on movement is editorial interpretation, not a claim about attendance."},
+      "media": {"asset":"assets/aperture-field.svg","alt":"Dublin Independent Fashion Week 官方标识","caption":"DIFW 官方标识；打开官网查看平台背景，再打开报道查看 POSTMARKED 的场地、日期与节目说明。","credit":"Dublin Independent Fashion Week · Preview-linked official image","kind":"source_image","origin_url":"https://www.dublin-ifw.com/","external_image_url":"https://images.squarespace-cdn.com/content/v1/69e2396af520c472fcdfb47c/f085016b-d179-4db0-9877-0283bd8e5741/DIFW%2B-%2BLOGO%2B1%2BWHITE%2B%281%29.png?format=1500w","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id": "henry-zankov-dvf-nyfw-2026",
+      "level": "signal",
+      "title": "Henry Zankov × DVF：品牌换手，先看针织怎样接管舞台",
+      "sources": [
+        {"title":"View the Preliminary September 2026 Official NYFW Schedule","publisher":"Council of Fashion Designers of America","url":"https://cfda.com/news/view-the-preliminary-september-2026-official-nyfw-schedule/","published_date":null,"event_date":"2026-09-10/2026-09-16","relationship":"first_party_official"},
+        {"title":"Women’s Fashion Week SS 2027: What to expect","publisher":"Wallpaper*","url":"https://www.wallpaper.com/fashion-beauty/womens-fashion-week-ss-2027-what-to-expect-schedule-calendar","published_date":null,"event_date":"2026-09-10/2026-09-16","relationship":"independent_reporting"}
+      ],
+      "image_credit": "CFDA 官方图片 / Preview-linked",
+      "english": {"title":"A BRAND HANDOVER MEETS KNIT","deck":"Henry Zankov’s DVF debut makes a brand transition answer to material, movement and bodily scale.","abstract":"CFDA places Zankov’s first show as Diane von Furstenberg’s artistic director on 10 September within a 70-show SS27 calendar. Wallpaper supplies knitwear context; the collection itself has not yet been seen, so evaluation stays open."},
+      "media": {"asset":"assets/aperture-field.svg","alt":"Henry Zankov Diane von Furstenberg NYFW 官方日程图片","caption":"CFDA 官方图片；打开纽约时装周日程查看首秀位置与周程说明。","credit":"CFDA · Preview-linked official image","kind":"source_image","origin_url":"https://cfda.com/news/view-the-preliminary-september-2026-official-nyfw-schedule/","external_image_url":"https://cfda.com/wp-content/uploads/2026/06/IMG_0322-scaled.jpeg","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    }
+  ],
+  "rights_summary": {"required_assets":5,"unknown_required_assets":5,"status":"blocked"},
+  "artifact_digests": {"issue_payload_sha256":null},
+  "evidence_refs": {"technical":[],"editorial_visual":[],"gate":[]},
+  "qa": {"html_parse":"pass","assets":"pass","internal_links":"pass","no_js_reading":"pass","desktop_render":"pass","mobile_render":"pass","reduced_motion":"pass"},
+  "limitations": [
+    "Non-production Preview candidate only; this manifest cannot authorize production deployment.",
+    "Canonical private GUAiZzz/harry-tone main was verified at pinned commit 13cd6b7046bd81be396810d2923f3a5dc818e93f; no private material enters this repository.",
+    "All selected stories use externally hosted first-party official images. Reuse rights remain unknown, so candidate status stays BLOCKED and Preview displays source links with a local non-documentary fallback.",
+    "All five regional lanes, the full 99-subject registry quick scan, the drop_streetwear focus cohort, Thursday standing beats and the prior-two-issue lookback were checked; the public radar contains 10 distinct items with at least two per category.",
+    "Named editorial, visual and rights review remains unresolved; the owner’s current task authorizes the existing non-production Preview only after technical and privacy gates pass."
+  ]
+}

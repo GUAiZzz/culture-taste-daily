@@ -1,0 +1,17 @@
+{
+  "dominant_mood": "深午夜底上的骨白文字、信号橙切口和电光青窗口，像一组正在校准观众位置的展厅测试片",
+  "background_logic": "把页面当成一面由多个孔径组成的观看墙：窗口彼此错位，背景在每次切换时改变可见范围，不复用最近七期的门槛、曲线、物件/参与、测量脊、证明表、脚手架、日历轴或节目单轨道。",
+  "palette_logic": "midnight #101826, bone #F4F0E8, signal orange #FF7A45, electric cyan #4BC0C8, ultraviolet #8E7CFF；午夜承载页面和长文，骨白负责阅读，橙色只标记动作，青色负责窗口，紫色只作为远处的回声，不承载小字号文字。",
+  "type_scale_logic": "标题像贴在展厅墙上的大号校准标签，正文 18px；故事编号靠近窗口边缘，英文只承担标题、deck 与 abstract。",
+  "image_behavior": "五张一手官方媒体只在 Preview 外链显示；本地 aperture-field SVG 是原创的孔径结构图，不冒充纪实照片。",
+  "page_density_and_tempo": "封面先给出四个彼此错位的观看窗口，正文从声音的空间约束进入颜色的相邻节奏，再经过材料展会、邮局路径与针织身体，退出处把判断交回读者。",
+  "core_visual_action": "页面用一组可见范围不同的 aperture field 改变读者看到的信息顺序：每个窗口既遮蔽一部分，也把下一条事实推到前景。",
+  "cover_composition": "午夜底上叠放四个不对齐的骨白矩形框，橙色短线像裁切标记，电光青从框内穿出，紫色只留在最深处；编号贴在框的外沿，不把它们连成轨道。",
+  "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 元素提供可关闭的 aperture notes，正文、事实与来源不依赖 JavaScript。",
+  "behance_viewing_arc": "先看坂本龙一如何让声音带着时间进入房间，再看 Whitney 如何让颜色安排视线，转向东京把趋势拆成材料关系，进入 Dublin 让邮局成为身体路径，最后停在 Zankov 把品牌交接压回针织的尺度。",
+  "mobile_translation": "390px 下四个窗口压缩为左侧连续的窄框，橙色裁切标记变成边缘标签，正文保持单列并允许来源长链接换行。",
+  "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点可见，长链接换行，外图失败不隐藏来源，移动端无横向滚动；窗口装饰不遮挡正文。",
+  "quiet_ending": "退出处只保留一个没有文字的骨白孔径，让读者确认自己看见了什么、还需要亲自进入什么。",
+  "closing_quotation": {"id":"ct-en-007","language":"en","text":"A frame matters only when it changes the action.","credit":"Culture & Taste Editorial"},
+  "closing_palette": {"background":"#101826","foreground":"#F4F0E8","accent":"#4BC0C8","rationale":"午夜底让骨白长文保持稳定对比，电光青作为结构性窗口在深底上清楚可见；信号橙只承担动作标记，紫色只作远景回声，不把小字号交给低对比装饰色。"}
+}
