@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-27",
+  "coverage": {
+    "verified_at": "2026-08-27T11:46:08+08:00",
+    "regional_lanes_checked": [
+      "mainland_china_plus_hong_kong_or_taiwan",
+      "japan_or_korea",
+      "continental_europe_or_united_kingdom",
+      "united_states_or_canada",
+      "rotating_global_lane"
+    ],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "drop_streetwear",
+    "focus_subjects_checked": [
+      "Supreme", "Stüssy", "Palace", "Brain Dead", "Aimé Leon Dore", "Noah", "Corteiz", "Denim Tears", "Kith", "CLOT", "Gallery Dept.", "Heron Preston", "Praying", "Youth of Paris", "YZY", "October's Very Own", "Unavailable", "Uniform Display", "Unsound Rags", "Prototypes"
+    ],
+    "standing_beats_checked": [
+      "supreme-thursday-drop",
+      "stussy-release-radar",
+      "luxury-runway-calendar",
+      "exhibition-and-cultural-programme-radar",
+      "small-breakout-object-radar"
+    ],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {
+      "id": "stussy-eye-junya-watanabe-fw26",
+      "category": "fashion",
+      "included_story_id": "stussy-eye-junya-watanabe-fw26",
+      "title": "同一场发售，先切成几个本地时钟",
+      "deck": "A global capsule becomes a chain of local 10 a.m. appointments.",
+      "publisher": "Stüssy",
+      "official_url": "https://www.stussy.com/blogs/news/stussy-eye-junya-watanabe-man",
+      "published_date": "2026-08-25",
+      "event_date": "2026-08-28",
+      "media": {"kind": "image", "url": "https://www.stussy.com/cdn/shop/files/sync-33951488573637.jpg?v=1787673190&width=1920", "alt": "Official Stüssy image for the eYe JUNYA WATANABE MAN collaboration", "credit": "Stüssy · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "loewe-fw26-mont-blanc",
+      "category": "fashion",
+      "included_story_id": "loewe-fw26-mont-blanc",
+      "title": "LOEWE 把秋冬系列放到海拔上",
+      "deck": "LOEWE places its new season against the Mont Blanc Massif.",
+      "publisher": "LOEWE",
+      "official_url": "https://www.loewe.com/int/en/pd/stories-collection/fw26-collection-campaign.html",
+      "published_date": "2026-08-27",
+      "event_date": "2026-08-27",
+      "media": {"kind": "image", "url": "https://www.loewe.com/dw/image/v2/BBPC_PRD/on/demandware.static/-/Library-Sites-LOW_SharedLibrary/default/dw23ab6aab/00000%20FW26%20RUNWAY/MAIN%20CAMPAIGN/LOEWE_FW26_MAIN_CAMPAIGN_COSIMA_STILL_LIFE_MODEL_CROPPED_RGB_23_3x4.jpg?sfrm=jpg&sw=533", "alt": "Official LOEWE Fall Winter 2026 campaign image from the Mont Blanc Massif", "credit": "LOEWE · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "prince-timeless-vault",
+      "category": "music",
+      "included_story_id": "prince-timeless-vault",
+      "title": "Prince 的新作从保管库里出来，但不是从过去里回来",
+      "deck": "Ten unreleased recordings turn an archive into a present-tense album.",
+      "publisher": "Sony Music Japan",
+      "official_url": "https://www.sonymusic.co.jp/artist/PRINCE/info/583962",
+      "published_date": "2026-06-05",
+      "event_date": "2026-08-28",
+      "media": {"kind": "image", "url": "https://www.sonymusic.co.jp/img/common/artist_image/71003000/71003784/images/202606050956460.jpg", "alt": "Official Prince Timeless album cover image", "credit": "Sony Music Japan · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "la-priest-into-the-sky",
+      "category": "music",
+      "included_story_id": "la-priest-into-the-sky",
+      "title": "LA Priest 让自制机器走到舞池",
+      "deck": "LA Priest turns handmade electronics into a dance record.",
+      "publisher": "Domino",
+      "official_url": "https://www.dominomusic.com/news/us/la-priest-announces-new-album-into-the-sky-due-aug-28th",
+      "published_date": "2026-06-29",
+      "event_date": "2026-08-28",
+      "media": {"kind": "image", "url": "https://www.dominomusic.com/res/0qnL/800_800/LA_Priest_-_Into_The_Sky_-_Packshot_WIG551D.jpg", "alt": "Official LA Priest Into The Sky release image", "credit": "Domino · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "brain-dead-sound-fury-nalgene-2026",
+      "category": "objects",
+      "included_story_id": "brain-dead-sound-fury-nalgene-2026",
+      "title": "音乐节散场以后，水瓶还在继续工作",
+      "deck": "A festival bottle keeps a two-day scene in circulation.",
+      "publisher": "Brain Dead",
+      "official_url": "https://wearebraindead.com/products/brain-dead-x-sound-fury-2026-nalgene-brown",
+      "published_date": null,
+      "event_date": "2026-08-15/2026-08-16",
+      "media": {"kind": "image", "url": "https://wearebraindead.com/cdn/shop/files/Sound_and_Fury_Nalgene_Bottle_320z_Amber_Front_optimized.jpg?v=1784151699&width=1024", "alt": "Official Brain Dead x Sound and Fury 2026 Nalgene bottle image", "credit": "Brain Dead · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "kith-fall-2026-poker-deck",
+      "category": "objects",
+      "included_story_id": "kith-fall-2026-poker-deck",
+      "title": "Kith 把一段汽车关系做成一副牌",
+      "deck": "Kith for BMW shrinks a car-fashion relationship to a deck of cards.",
+      "publisher": "Kith",
+      "official_url": "https://kith.com/collections/kith-fall-2026",
+      "published_date": null,
+      "event_date": "2026-08-28",
+      "media": {"kind": "image", "url": "https://kith.com/cdn/shop/files/KHLA270074-906-Detail.jpg?v=1786636455&width=1920", "alt": "Official Kith for BMW Poker Card Deck product image", "credit": "Kith · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "hong-kong-sui-tang-modern-design",
+      "category": "city",
+      "included_story_id": "hong-kong-sui-tang-modern-design",
+      "title": "香港中央图书馆先借一个下午，给隋唐服饰",
+      "deck": "A library hosts reconstructed attire, contemporary fashion and digital culture.",
+      "publisher": "香港文聯",
+      "official_url": "https://www.hkwl.org/article/36729-ccf2026-004/",
+      "published_date": null,
+      "event_date": "2026-08-27/2026-09-06",
+      "media": {"kind": "image", "url": "https://www.hkwl.org/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-09-at-10.51.28-600x239.jpeg", "alt": "Official Hong Kong Literature and Art Association visual for Echoes of the Sui and Tang", "credit": "香港文聯 · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "familymart-new-uniform-famima-code",
+      "category": "city",
+      "included_story_id": "familymart-new-uniform-famima-code",
+      "title": "FamilyMart 先换工作人员的衣服，再谈便利店是谁的地方",
+      "deck": "A convenience chain changes the worker-facing layer of the everyday city.",
+      "publisher": "FamilyMart",
+      "official_url": "https://www.family.co.jp/company/news_releases/2026/20260826_01.html",
+      "published_date": "2026-08-26",
+      "event_date": "2026-09-01",
+      "media": {"kind": "image", "url": "https://www.family.co.jp/content/dam/family/company/news_releases/2026/20260826_uniform_all_.jpg", "alt": "Official FamilyMart image of the new T-shirt uniform", "credit": "FamilyMart · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    }
+  ]
+}

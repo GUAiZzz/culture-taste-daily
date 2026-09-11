@@ -1,0 +1,17 @@
+{
+  "dominant_mood": "白纸上的黑色节目单、钴蓝入口标记和橙色返场线，像一份正在被观众使用的现场记录",
+  "background_logic": "把页面当成一张被折开的节目单：蓝色线条标出进入路径，橙色回线把每个事件的下一步带回读者，不复用最近七期的阈值、曲线、物件/参与、测量脊、证明表、脚手架或日历轴。",
+  "palette_logic": "paper #F3F1EA, ink #111111, cobalt #1746D1, orange #F06432, moss #65735B；黑色负责阅读，钴蓝负责入口和索引，橙色负责回看与行动，苔绿只作为安静的辅助面，不承担小字号文字。",
+  "type_scale_logic": "标题像贴在节目单外侧的现场标签，正文 18px；故事编号沿入口线固定，英文只承担标题、deck 与 abstract。",
+  "image_behavior": "五张一手官方媒体只在 Preview 外链显示；本地 programme-score SVG 是原创的节目单结构图，不冒充纪实照片。",
+  "page_density_and_tempo": "封面先给出一个尚未填满的观众入口，正文从城市里的多场活动进入，再经过声音、服装、唱片与家具，退出处把选择权交还给读者。",
+  "core_visual_action": "页面把活动的进入、停留和回返画成一条 programme rail，让文化判断停在观众如何被接住，而不是活动声量。",
+  "cover_composition": "米白纸面上，一条钴蓝折线穿过五个空心节点；橙色返场线从右下回到左上，黑色节目编号压住当前节点，留出一个未被填满的公共入口。",
+  "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻，所有事实、正文与来源不依赖 JavaScript。",
+  "behance_viewing_arc": "从曼彻斯特把城市场地编成节目开始，进入日本发行页的日期与封面，再到 Critical Costume 的身体入口、Marclay 把唱片封套变成取景器，最后落到上海展会把家具放回产业与生活之间。",
+  "mobile_translation": "390px 下节目单折线收进左侧窄栏，钴蓝节点变成边缘标签，正文保持单列并允许来源长链接换行。",
+  "mobbin_usability_constraint": "交互目标不少于 44px，焦点可见，长链接换行，外图失败不隐藏来源，移动端无横向滚动。",
+  "quiet_ending": "退出处留下一个没有填字的节目格，提醒读者真正的文化入口不是看过，而是下一步仍然清楚。",
+  "closing_quotation": {"id":"ct-zh-001","language":"zh-CN","text":"空间不是背景，它决定谁能留下。","credit":"Culture & Taste Editorial"},
+  "closing_palette": {"background":"#F3F1EA","foreground":"#111111","accent":"#1746D1","rationale":"米白纸面降低长文阅读疲劳，黑色保证正文对比度，钴蓝在浅底上提供清晰的入口标记；橙色和苔绿只承担结构分层，不承载小字号信息。"}
+}

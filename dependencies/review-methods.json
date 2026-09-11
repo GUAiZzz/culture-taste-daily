@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "minimum_stars": 100,
+  "policy": "Pinned references; no remote execution, automatic installation, copied upstream code or private data upload. Reverify before adopting an update.",
+  "sources": [
+    {
+      "repository": "anthropics/skills",
+      "stars_verified_2026_09_05": 174319,
+      "commit": "41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f",
+      "license_metadata": "unverified",
+      "mode": "method_reference_only",
+      "installed": false
+    },
+    {
+      "repository": "vercel-labs/agent-skills",
+      "stars_verified_2026_09_05": 30856,
+      "commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "license_metadata": "unverified",
+      "mode": "method_reference_only",
+      "installed": false
+    },
+    {
+      "repository": "obra/superpowers",
+      "stars_verified_2026_09_05": 281910,
+      "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "license_metadata": "MIT",
+      "mode": "method_reference_only",
+      "installed": false
+    },
+    {
+      "repository": "firecrawl/cli",
+      "stars_verified_2026_09_05": 620,
+      "commit": "06e2fd59d3a78051c8fcb05223b00aaff131267c",
+      "license_metadata": "unverified",
+      "mode": "method_reference_only",
+      "installed": false
+    },
+    {
+      "repository": "pbakaus/impeccable",
+      "stars_verified_2026_09_05": 65700,
+      "commit": "8dac6ae7e020c43ab10ce9b41939f6fd42627b96",
+      "license_metadata": "Apache-2.0",
+      "mode": "method_reference_only",
+      "installed": false
+    },
+    {
+      "repository": "openai/skills",
+      "stars_verified_2026_09_05": 25423,
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "license_metadata": "unverified",
+      "mode": "method_reference_only",
+      "installed": false
+    }
+  ]
+}

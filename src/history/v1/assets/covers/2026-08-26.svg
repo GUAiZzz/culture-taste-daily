@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Culture &amp; Taste Daily 2026-08-26 cover</title>
+  <desc id="desc">A silver proof sheet with safety-orange, chocolate, yellow and cyan calibration frames.</desc>
+  <rect width="800" height="1000" fill="#e9e9e4"/>
+  <rect x="28" y="28" width="744" height="944" rx="4" fill="none" stroke="#101010" stroke-width="3"/>
+  <path d="M56 88H744M56 918H744" stroke="#101010" stroke-width="3"/>
+  <text x="56" y="69" fill="#101010" font-family="monospace" font-size="18" font-weight="700" letter-spacing="3">CTD / PROOF 07 / 2026.08.26</text>
+  <rect x="56" y="124" width="420" height="330" fill="#ff4d17"/>
+  <rect x="500" y="124" width="244" height="154" fill="#4a2825"/>
+  <rect x="500" y="300" width="244" height="154" fill="#f4f600"/>
+  <rect x="56" y="478" width="210" height="214" fill="#4a2825"/>
+  <rect x="288" y="478" width="456" height="214" fill="#101010"/>
+  <rect x="56" y="716" width="688" height="166" fill="#58c8d7"/>
+  <g fill="#101010" font-family="Arial Narrow, Arial, sans-serif" font-weight="900">
+    <text x="78" y="236" font-size="76" letter-spacing="-4">SAME FRAME,</text>
+    <text x="78" y="324" font-size="92" letter-spacing="-6">NEW MOVE</text>
+  </g>
+  <g fill="#e9e9e4" font-family="monospace" font-size="16" font-weight="700" letter-spacing="2">
+    <text x="522" y="160">01 / ACTION</text>
+    <text x="522" y="194">02 / DURATION</text>
+    <text x="522" y="228">03 / ARCHIVE</text>
+  </g>
+  <g fill="#101010" font-family="monospace" font-size="15" font-weight="700" letter-spacing="2">
+    <text x="522" y="342">04 / RETAIL</text>
+    <text x="522" y="378">05 / FRAME</text>
+  </g>
+  <text x="78" y="542" fill="#e9e9e4" font-family="monospace" font-size="16" font-weight="700" letter-spacing="3">CONTACT / 08.26</text>
+  <text x="312" y="566" fill="#e9e9e4" font-family="Arial Narrow, Arial, sans-serif" font-size="64" font-weight="900" letter-spacing="-4">旧骨架，</text>
+  <text x="312" y="640" fill="#ff4d17" font-family="Arial Narrow, Arial, sans-serif" font-size="72" font-weight="900" letter-spacing="-5">换动作</text>
+  <g stroke="#101010" stroke-width="3">
+    <path d="M78 758H720"/>
+    <path d="M78 798H618"/>
+    <path d="M78 838H682"/>
+  </g>
+  <g fill="#101010">
+    <circle cx="96" cy="758" r="9"/>
+    <circle cx="448" cy="798" r="9"/>
+    <circle cx="652" cy="838" r="9"/>
+  </g>
+  <text x="56" y="950" fill="#101010" font-family="monospace" font-size="16" font-weight="700" letter-spacing="2">CULTURE &amp; TASTE DAILY / FIELD EDITION</text>
+</svg>

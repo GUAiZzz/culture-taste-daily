@@ -1,0 +1,27 @@
+{
+  "schema_version":1,
+  "date":"2026-08-29",
+  "coverage":{
+    "verified_at":"2026-08-29T14:20:00+08:00",
+    "regional_lanes_checked":["mainland_china_plus_hong_kong_or_taiwan","japan_or_korea","continental_europe_or_united_kingdom","united_states_or_canada","rotating_global_lane"],
+    "full_registry_daily_quick_scan":true,
+    "registry_subject_count":99,
+    "registry_digest":"a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id":"japan",
+    "focus_subjects_checked":["Human Made","Kapital","NIGO","UNDERCOVER","WTAPS","NEIGHBORHOOD","sacai","Needles","visvim","AURALEE","Hender Scheme"],
+    "standing_beats_checked":["stussy-release-radar","luxury-runway-calendar","exhibition-and-cultural-programme-radar","small-breakout-object-radar"],
+    "deduplication_lookback_days":2
+  },
+  "items":[
+    {"id":"neighborhood-aw26-aug29","category":"fashion","included_story_id":"neighborhood-aw26-aug29"},
+    {"id":"spotify-equal-recordings","category":"music","included_story_id":"spotify-equal-recordings"},
+    {"id":"kamelot-dark-asylum","category":"music","title":"Kamelot 把 Dark Asylum 交到完整专辑里","deck":"An official album page fixes the release to 28 August.","publisher":"Apple Music / Kamelot","official_url":"https://music.apple.com/us/album/dark-asylum/6781275561","published_date":"2026-08-28","event_date":"2026-08-28","media":{"kind":"image","url":"https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5c/30/31/5c3031dc-bd82-095d-2c01-de9e010f1408/810221171607.jpg/1000x1000bb.jpg","alt":"Official Kamelot Dark Asylum album artwork","credit":"Apple Music / Kamelot · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}},
+    {"id":"tiktok-alex-warren-wildchild","category":"music","title":"Alex Warren 把新歌先放进一场 TikTok Live","deck":"A platform event makes performance part of the release route.","publisher":"TikTok","official_url":"https://newsroom.tiktok.com/alex-warren-tiktok-live-wildchild-experience?lang=en","published_date":"2026-08-27","event_date":"2026-08-27","media":{"kind":"image","url":"https://p16-ttark.tiktokcdn-us.com/tos-useast5-i-1rzkm2vceq-tx/5002cc3820f8ea046a7c26133eef6a7b.png~tplv-1rzkm2vceq-default:0:0:q75.image","alt":"Official TikTok Alex Warren Wildchild event image","credit":"TikTok · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}},
+    {"id":"asics-bloomstride-fit","category":"fashion","included_story_id":"asics-bloomstride-fit"},
+    {"id":"mplus-design-ah-objects","category":"objects","title":"M+ 把筷子、牙刷与交通灯重新交给手和脚","deck":"Twenty-one stations make everyday design available through use.","publisher":"M+","official_url":"https://www.mplus.org.hk/en/exhibitions/design-ah-experience-the-wonder-of-everyday-design/","published_date":"2026-06-27","event_date":"2026-06-27/2027-01-10","media":{"kind":"image","url":"https://www.mplus.org.hk/api/images/14465/width-1200%7Cformat-jpeg/","alt":"Official M+ Design Ah exhibition image","credit":"M+ · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}},
+    {"id":"venice-films-become-time","category":"city","included_story_id":"venice-films-become-time"},
+    {"id":"mplus-warhol-sleep","category":"city","title":"M+ 允许观众带着寝具进入 Warhol 的五小时","deck":"A museum turns duration into a public condition for viewing.","publisher":"M+","official_url":"https://www.mplus.org.hk/en/exhibitions/andy-warhol-screen-tests-sleep/","published_date":"2026-08-04","event_date":"2026-08-04/2026-10-04","media":{"kind":"image","url":"https://www.mplus.org.hk/api/images/14778/width-1200%7Cformat-png/","alt":"Official M+ Andy Warhol Screen Tests Sleep image","credit":"M+ · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}},
+    {"id":"on-sao-paulo-stores","category":"objects","title":"On 在圣保罗把两家店拆成两个不同入口","deck":"Opening dates translate a retail announcement into two designed retail objects.","publisher":"On","official_url":"https://press.on-running.com/on-announces-opening-dates-for-its-first-two-stores-in-sao-paulo","published_date":"2026-08-25","event_date":"2026-09","media":{"kind":"image","url":"https://cdn.uc.assets.prezly.com/86343493-1cb4-4f23-9b60-746a1d64a55b/-/preview/600x600/","alt":"Official On São Paulo store image","credit":"On · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}},
+    {"id":"mplus-forty-part-motet","category":"city","title":"四十只扬声器把合唱重新放进人的步行路径","deck":"Janet Cardiff’s installation constructs a room from individual voices.","publisher":"M+","official_url":"https://www.mplus.org.hk/en/exhibitions/janet-cardiff-the-forty-part-motet/","published_date":"2026-08-15","event_date":"2026-08-15/ongoing","media":{"kind":"image","url":"https://www.mplus.org.hk/api/images/12667/width-1200%7Cformat-jpeg/","alt":"Official M+ Janet Cardiff Forty Part Motet exhibition image","credit":"M+ · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}}
+  ]
+}

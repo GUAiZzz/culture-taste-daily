@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" type="image/png" href="../../assets/culture-taste-earth.png">
+  <title>对象一旦可用，文化才真正开始 — Culture &amp; Taste Daily 2026-09-03</title>
+  <script>(()=>{const themes=["field","coral","analog"],page="issue";let selected="field";try{const query=new URLSearchParams(location.search).get("theme"),stored=sessionStorage.getItem("ctd-theme"),manual=sessionStorage.getItem("ctd-theme-manual")==="1",preferred=localStorage.getItem("ctd-theme-preference");if(themes.includes(query))selected=query;else if(themes.includes(preferred))selected=preferred;else if(page==="home"&&!manual)selected=themes[Math.floor(Math.random()*themes.length)];else if(themes.includes(stored))selected=stored;else selected=themes[Math.floor(Math.random()*themes.length)];sessionStorage.setItem("ctd-theme",selected);}catch{}document.documentElement.dataset.visualTheme=selected;})();</script>
+  <style>/* Functional core only: semantic access and responsive safety, not issue art direction. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  text-size-adjust: 100%;
+  --mobile-gutter: 20px;
+  --compact-gutter: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  background: Canvas;
+  color: CanvasText;
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-header a,
+.site-footer a,
+.publication-header a,
+.story-reader-header a,
+.issue-nav a,
+button {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: color-mix(in srgb, currentColor 18%, transparent);
+}
+
+button:active,
+a:active {
+  opacity: 0.78;
+}
+
+.issue-brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.issue-brand {
+  gap: 0.65rem;
+  text-decoration: none;
+}
+
+.brand-type {
+  display: inline-flex;
+  gap: 0.15em;
+  align-items: baseline;
+  color: inherit;
+  font-family: Arial, "Helvetica Neue", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.075em;
+  line-height: 0.9;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.brand-type em {
+  font-family: Georgia, "Times New Roman", "Songti SC", serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+}
+
+.issue-nav {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+.issue-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.issue-nav a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.issue-nav-panel summary,
+.enter-issue,
+.publication-footer a,
+.history-actions a,
+.facsimile-pages figcaption a {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+}
+
+.source-meta {
+  display: block;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* The publication index/archive shell is stable and never styles issue articles. */
+body[data-shell="publication"] {
+  padding-right: max(1rem, env(safe-area-inset-right));
+  padding-left: max(1rem, env(safe-area-inset-left));
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+html[data-motion-paused="true"] *,
+html[data-motion-paused="true"] *::before,
+html[data-motion-paused="true"] *::after {
+  animation-play-state: paused !important;
+}
+
+@media (max-width: 50rem) {
+  body[data-shell="publication"] {
+    padding-right: max(var(--mobile-gutter), env(safe-area-inset-right));
+    padding-left: max(var(--mobile-gutter), env(safe-area-inset-left));
+  }
+
+  body[data-issue] .site-header,
+  body[data-issue] .site-footer,
+  body[data-issue] .issue-nav-panel {
+    padding-right: max(var(--mobile-gutter), env(safe-area-inset-right));
+    padding-left: max(var(--mobile-gutter), env(safe-area-inset-left));
+  }
+
+  body[data-issue] .issue-cover p,
+  body[data-issue] .issue-story > p {
+    font-size: 0.9375rem !important;
+    line-height: 1.55 !important;
+  }
+}
+
+@media (max-width: 29.9375rem) {
+  body[data-shell="publication"] {
+    padding-right: max(var(--compact-gutter), env(safe-area-inset-right));
+    padding-left: max(var(--compact-gutter), env(safe-area-inset-left));
+  }
+
+  body[data-issue] .site-header,
+  body[data-issue] .site-footer,
+  body[data-issue] .issue-nav-panel {
+    padding-right: max(var(--compact-gutter), env(safe-area-inset-right));
+    padding-left: max(var(--compact-gutter), env(safe-area-inset-left));
+  }
+}
+
+body[data-shell="publication"] .site-header,
+body[data-shell="publication"] .site-footer,
+body[data-shell="publication"] main {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+body[data-shell="publication"] .site-header,
+body[data-shell="publication"] .site-footer {
+  padding-block: 1rem;
+}
+
+body[data-shell="publication"] main {
+  padding-block: 2rem;
+}
+
+.reading-progress {
+  position: fixed;
+  z-index: 95;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  pointer-events: none;
+}
+
+.reading-progress span {
+  display: block;
+  width: calc(var(--reading-progress, 0) * 100%);
+  height: 100%;
+  background: currentColor;
+  transform-origin: left center;
+}
+
+.theme-status {
+  white-space: nowrap;
+}
+
+.has-js body[data-issue] .issue-story {
+  opacity: var(--story-opacity, 1);
+  translate: 0 var(--story-shift, 0);
+  transition: opacity 180ms linear, translate 240ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.has-js body[data-issue] .issue-nav a[aria-current="location"] {
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-thickness: 0.18em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .has-js body[data-issue] .issue-story {
+    opacity: 1;
+    translate: none;
+  }
+}
+
+/* Reading invariants apply to generated contexts, never historical originals. */
+body[data-issue] { font-synthesis: none; }
+body[data-issue]:not([data-story-reader]) h1,
+body[data-issue]:not([data-story-reader]) h2 { line-height: 1.12 !important; overflow-wrap: anywhere; }
+.issue-nav ul { display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.issue-nav li { flex: 0 0 auto; }
+.issue-nav a { display: inline-flex; align-items: center; gap: .6rem; }
+.issue-nav a span { font-size: .6875rem; text-transform: uppercase; }
+html:not(.has-js) [data-week-toggle] { cursor: default; color: inherit; opacity: 1; }
+html:not(.has-js) .week-toggle-mark { display: none; }
+.filter-result:empty { display: none; }
+
+/* Shared reader themes. These variables change presentation only. */
+html[data-visual-theme="field"] {
+  --paper: #eef2df;
+  --ink: #10120d;
+  --acid: #d9ff43;
+  --blue: #2448ff;
+  --orange: #326f4a;
+  --pink: #a8dfbd;
+  --theme-hero: #d9ff43;
+  --theme-index: #d8d1ad;
+  --theme-panel: #eef2df;
+  --theme-accent: #326f4a;
+  --theme-signal: #2448ff;
+}
+
+html[data-visual-theme="coral"] {
+  --paper: #f4eadf;
+  --ink: #160d0a;
+  --acid: #ff6840;
+  --blue: #2448ff;
+  --orange: #ff512b;
+  --pink: #f3a8bf;
+  --theme-hero: #ff5a31;
+  --theme-index: #e8c8b1;
+  --theme-panel: #f4eadf;
+  --theme-accent: #c83d25;
+  --theme-signal: #2448ff;
+}
+
+html[data-visual-theme="analog"] {
+  --paper: #d9cdb4;
+  --ink: #171713;
+  --acid: #c8bd91;
+  --blue: #537a7c;
+  --orange: #b74731;
+  --pink: #b8998f;
+  --theme-hero: #c8bd91;
+  --theme-index: #cfc09e;
+  --theme-panel: #e1d7c2;
+  --theme-accent: #a8402e;
+  --theme-signal: #527d80;
+}
+
+body[data-shell="publication"],
+body[data-story-reader] {
+  background: var(--paper);
+  color: var(--ink);
+  transition: background-color 320ms ease, color 320ms ease;
+}
+
+/* Atmosphere stays behind the shell; it never overlays source photographs or text. */
+html[data-visual-theme="field"] .hero-map {
+  background-image: radial-gradient(circle at 12% 18%, rgb(217 255 67 / 34%), transparent 64%);
+}
+html[data-visual-theme="coral"] .hero-map {
+  background-image: linear-gradient(135deg, transparent 52%, rgb(243 168 191 / 24%));
+}
+html[data-visual-theme="analog"] .hero-map {
+  background-image: repeating-linear-gradient(0deg, rgb(10 10 8 / 6%) 0 1px, transparent 1px 3px);
+}
+
+.theme-dots {
+  position: relative;
+  z-index: 110;
+  display: inline-flex;
+  gap: 0.65rem;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 0.35rem;
+  padding-bottom: 1rem;
+}
+
+.theme-dots button {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.theme-dots button[data-theme-choice="field"] { --dot-color: #65a469; }
+.theme-dots button[data-theme-choice="coral"] { --dot-color: #ff512b; }
+.theme-dots button[data-theme-choice="analog"] {
+  --dot-color: repeating-linear-gradient(0deg, #d5c7aa 0 2px, #2a2924 2px 3px);
+}
+
+.theme-dots button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--dot-color);
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 42%);
+  content: "";
+  transform: translate(-50%, -50%);
+  transition: box-shadow 140ms ease, transform 140ms ease;
+}
+
+.theme-dots button[aria-pressed="true"]::before {
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px currentColor;
+  transform: translate(-50%, -50%);
+}
+
+.theme-dots button::after {
+  position: absolute;
+  right: -0.5rem;
+  bottom: -2.25rem;
+  width: max-content;
+  max-width: 10rem;
+  padding: 0.38rem 0.52rem;
+  background: var(--ink);
+  color: var(--paper);
+  content: attr(data-theme-label);
+  font: 700 0.62rem/1 ui-monospace, monospace;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-0.25rem);
+  transition: opacity 140ms ease, transform 140ms ease;
+  white-space: nowrap;
+}
+
+.theme-dots button:hover::after,
+.theme-dots button:focus-visible::after {
+  opacity: 1;
+  transform: none;
+}
+
+.theme-dots button:active {
+  transform: scale(0.94);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-shell="publication"],
+  body[data-story-reader] {
+    transition: none;
+  }
+}
+
+@media (max-width: 50rem) {
+  .theme-dots button::after {
+    display: none;
+  }
+}
+
+/* Controls appear only when their event handlers are available. */
+html:not(.has-js) .theme-dots { display: none; }
+.theme-current { position: absolute; bottom: 0; left: 0; right: 0; text-align: center; font: 700 0.6875rem/1.2 ui-monospace, monospace; white-space: nowrap; }
+
+body[data-issue="2026-09-03"]{--paper:#f2ebdd;--ink:#171717;--brick:#e84a37;--acid:#d5f23b;--blue:#2457c5;background:var(--paper);color:var(--ink);font:18px/1.75 "Helvetica Neue","PingFang SC",sans-serif}body[data-issue="2026-09-03"] a{color:inherit;text-underline-offset:.22em}body[data-issue="2026-09-03"] .site-header,body[data-issue="2026-09-03"] .site-footer,body[data-issue="2026-09-03"] .issue-nav-panel,body[data-issue="2026-09-03"] main{width:min(100% - 2rem,82rem);margin-inline:auto}body[data-issue="2026-09-03"] .non-production-label{padding:.6rem;text-align:center;background:var(--brick);color:var(--paper);font:800 .7rem ui-monospace,monospace}body[data-issue="2026-09-03"] .issue-cover{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(20rem,.8fr);gap:4vw;min-height:82svh;align-items:center;padding:6rem 0;overflow:hidden}body[data-issue="2026-09-03"] h1,body[data-issue="2026-09-03"] h2{font-family:Arial,"PingFang SC",sans-serif;font-weight:900;line-height:.94;text-wrap:balance}body[data-issue="2026-09-03"] h1{position:relative;z-index:2;max-width:8ch;color:var(--ink);font-size:clamp(4rem,9.5vw,8.8rem);letter-spacing:-.075em}body[data-issue="2026-09-03"] .issue-cover-visual{position:relative;min-height:36rem;overflow:hidden;border:2px solid var(--ink);background:repeating-linear-gradient(0deg,transparent 0 5rem,rgba(23,23,23,.15) 5rem calc(5rem + 2px)),linear-gradient(110deg,transparent 0 54%,rgba(36,87,197,.12) 54% 55%,transparent 55%)}body[data-issue="2026-09-03"] .issue-cover-visual::before{content:"USE / TEST / RETURN";position:absolute;left:1rem;bottom:1rem;padding:.45rem;background:var(--ink);color:var(--paper);font:900 .75rem ui-monospace,monospace}body[data-issue="2026-09-03"] .issue-cover-visual::after{content:"OBJECT LOG / 09.03";position:absolute;right:1rem;top:1rem;padding:.45rem;background:var(--acid);color:var(--ink);font:900 .75rem ui-monospace,monospace}body[data-issue="2026-09-03"] .issue-cover-visual span{position:absolute;padding:.35rem;background:var(--paper);border:2px solid var(--ink);font:800 .65rem ui-monospace,monospace}body[data-issue="2026-09-03"] .issue-cover-visual [data-node="cover"]{top:12%;left:5%}body[data-issue="2026-09-03"] .issue-cover-visual [data-node="major"]{top:36%;left:42%}body[data-issue="2026-09-03"] .issue-cover-visual [data-node="signal"]{top:62%;left:18%}body[data-issue="2026-09-03"] .issue-cover-visual [data-node="watch"]{bottom:12%;right:5%}body[data-issue="2026-09-03"] .issue-cover-visual i{position:absolute;left:26%;top:-10%;width:1.2rem;height:130%;background:var(--brick);transform:rotate(13deg);box-shadow:10rem 11rem 0 -4px var(--acid)}body[data-issue="2026-09-03"] .issue-story{position:relative;overflow:hidden;max-width:64rem;margin:0 auto;padding:clamp(5rem,11vw,10rem) clamp(1rem,5vw,5rem);border-top:2px solid var(--ink)}body[data-issue="2026-09-03"] .issue-story::before{content:"";position:absolute;top:0;right:8%;width:18%;height:100%;border-right:7px solid rgba(232,74,55,.42);transform:skewX(9deg);pointer-events:none}body[data-issue="2026-09-03"] .issue-story h2{position:relative;max-width:15ch;color:var(--blue);font-size:clamp(2.7rem,6vw,5.6rem);letter-spacing:-.06em}body[data-issue="2026-09-03"] .story-marker{position:relative;z-index:2;color:var(--brick);font:900 1rem ui-monospace,monospace}body[data-issue="2026-09-03"] .story-figure{position:relative;border:2px solid var(--ink);background:#fffaf0}body[data-issue="2026-09-03"] .story-figure img{display:block;width:100%;max-height:44rem;object-fit:cover}body[data-issue="2026-09-03"] .story-figure figcaption{display:flex;justify-content:space-between;gap:1rem;padding:.75rem;background:var(--ink);color:var(--paper);font:700 .68rem ui-monospace,monospace}body[data-issue="2026-09-03"] .story-english{position:relative;margin:1rem 0 2rem;color:var(--brick);font-weight:700}body[data-issue="2026-09-03"] .sources{margin:7rem auto 0;padding:2rem;border:2px solid var(--blue);max-width:68rem}body[data-issue="2026-09-03"] .issue-nav-panel{position:sticky;top:0;z-index:5;background:rgba(242,235,221,.97);border-block:2px solid var(--ink)}body[data-issue="2026-09-03"] .issue-nav a{min-height:44px}@media(max-width:42rem){body[data-issue="2026-09-03"]{font-size:17px}body[data-issue="2026-09-03"] .issue-cover{grid-template-columns:1fr;min-height:auto;padding-top:4rem}body[data-issue="2026-09-03"] .issue-cover-visual{min-height:19rem}body[data-issue="2026-09-03"] .issue-story{padding-inline:1rem}body[data-issue="2026-09-03"] .issue-story::before{right:1%;width:12%}body[data-issue="2026-09-03"] .story-figure figcaption{display:block;overflow-wrap:anywhere}}@media(prefers-reduced-motion:reduce){body[data-issue="2026-09-03"] *,body[data-issue="2026-09-03"] *::before,body[data-issue="2026-09-03"] *::after{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body data-issue="2026-09-03">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+  <p class="non-production-label">PREVIEW EDITION · NOT PRODUCTION</p>
+  <header class="site-header"><a class="issue-brand" href="../../" data-theme-home aria-label="Culture &amp; Taste Daily"><span class="brand-type"><span>Culture &amp;</span><em>Taste</em><span>Daily</span></span></a><span>2026-09-03 · Asia/Shanghai</span><div class="theme-dots" role="group" aria-label="Choose visual theme"><span class="theme-current" data-theme-status aria-live="polite">FIELD GREEN</span><button type="button" data-theme-choice="field" data-theme-label="Field Green" aria-label="Field Green" aria-pressed="false"></button><button type="button" data-theme-choice="coral" data-theme-label="Coral Signal" aria-label="Coral Signal" aria-pressed="false"></button><button type="button" data-theme-choice="analog" data-theme-label="2000s TV" aria-label="2000s TV" aria-pressed="false"></button></div><a href="../../archive/" data-theme-link>Archive</a></header>
+  <details class="issue-nav-panel" open><summary>Issue index <span aria-hidden="true">＋</span></summary><nav class="issue-nav" aria-label="Issue contents"><ul><li><a href="#sfmoma-in-between"><span>cover</span>熟悉的物件失去用途，观看才开始有问题</a></li><li><a href="#bape-golden-era"><span>major</span>BAPE 把黄金年代做成一套重新可穿的语法</a></li><li><a href="#hieroglyphics-all-said-and-done"><span>signal</span>一张唱片的发布，也可以重新安排谁能进入</a></li><li><a href="#helsinki-hdw-lab"><span>signal</span>城市工作坊不替人设计未来，先把提案交回来</a></li><li><a href="#dyson-unveiled-2026-berlin"><span>watch</span>Dyson 在柏林把九件新机器做成可进入的演示现场</a></li><li><a href="#sources"><span>index</span>Sources &amp; Dates</a></li></ul></nav></details>
+  <main id="main-content">
+    <article aria-labelledby="issue-title" data-content-sha256="726bcd1fcad7a868ca5129f8a6f337a2f9f72565060edad392bdbda5f92cdbcf"><header class="issue-cover"><div class="issue-cover-copy"><h1 id="issue-title">对象一旦可用，文化才真正开始</h1>
+<p>NEWNESS BEGINS WHEN THE OBJECT BECOMES USABLE</p>
+<p>9 月 3 日的文化现场，都在把“发布”往后推一步：展览让三轮车和缝纫机失去原用途，衣服把 2000 年代的代码重新穿回今天，唱片把署名和进入方式写进包装，城市工作坊则让 AI 参与公共空间的提案。对象不再只是被展示，它要让人知道下一步怎么进入。</p>
+<p><strong>本期判断</strong></p>
+<p>文化项目的关键，不是把对象说得更新，而是把使用条件交代清楚。谁能进入、何时进入、需要触摸什么、谁可以留下自己的痕迹，决定了一个发布会不会从消息变成公共生活。可用性不是把判断磨平，而是把判断交给真实的行动来检验。</p>
+<p>资料核验截止：2026-09-03 11:25（Asia/Shanghai）。外部图片复用权未知，候选状态保持 BLOCKED；本候选仅保留既有非生产 Preview 路径，并保留来源回链与本地非纪实占位。</p>
+<a class="enter-issue" href="#sfmoma-in-between">Enter the issue <span aria-hidden="true">↓</span></a></div><div class="issue-cover-visual" aria-hidden="true"><span data-node="cover">COVER</span><span data-node="major">MAJOR</span><span data-node="signal">SIGNAL</span><span data-node="watch">WATCH</span><i></i></div></header><section class="issue-story" data-story="sfmoma-in-between" data-level="cover"><p class="story-marker" aria-hidden="true">01</p><h2 id="sfmoma-in-between">熟悉的物件失去用途，观看才开始有问题</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://www.sfmoma.org/exhibition/in-between/" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://d1hhug17qm51in.cloudfront.net/www-media/2026/08/27112616/In_Between_Koret_IMG_0738-1024x768.jpg" alt="Official SFMOMA In Between installation image" loading="eager" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://www.sfmoma.org/exhibition/in-between/" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> SFMOMA official installation image; open the exhibition page for the objects, dates and venue. <span>SFMOMA · Preview-linked official image</span></figcaption></figure><div class="story-english"><strong>WHEN USE DISAPPEARS, LOOKING STARTS</strong><span>SFMOMA makes familiar tools strange enough to ask for a second reading.</span><small>SFMOMA fixes the free installation window, Koret Education Center, familiar objects and craft/collaboration frame; The Dissent independently fixes the free 3 September opening programme. The claim about a delayed judgement is editorial interpretation.</small></div>
+<p>SFMOMA 的 In Between 于 9 月 3 日起在 Koret Education Center 免费展出，持续至 2027 年 5 月。馆方介绍，Ramekon O’Arwisters 把三轮车、缝纫机和乐器放进一个由纺织、手工与即兴协作组织的空间；物件脱离原本的关联，观众需要重新看、重新命名。</p>
+<p>这不是把日常物件做成一组奇观，而是把“用途”暂时拿走，让观看承担一次判断。物件一旦不再替你解释自己，观众就必须决定它还能怎样被使用、被照顾，或被共同完成。展览的入口因此不在墙上的说明，而在那一秒钟的迟疑里。</p>
+<p>独立的 The Dissent 另行报道了 9 月 3 日的免费开幕活动：冥想、现场蓝调与打击乐被排进同一个晚上。它补充了一个重要事实——这不是只有物件的静态装置，也有一段被身体占用的公共时间。</p>
+<p>来源：<a href="https://www.sfmoma.org/exhibition/in-between/" data-source-link="true">SFMOMA 官方展览页</a>；<a href="https://thedissentsf.com/article/a-quieter-sfmoma-night-meditation-then-blues-for-ramekon-o-arwisters-s-in-betwee" data-source-link="true">The Dissent 独立报道</a></p>
+</section><section class="issue-story" data-story="bape-golden-era" data-level="major"><p class="story-marker" aria-hidden="true">02</p><h2 id="bape-golden-era">BAPE 把黄金年代做成一套重新可穿的语法</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://en.jp.bape.com/blogs/news/ss26-collection" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://jp.bape.com/cdn/shop/articles/002_6f6661a9-d5dc-4f48-8746-e5fd64d4668b_1200x.jpg?v=1766993837" alt="Official BAPE SS26 Golden Era campaign image" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://en.jp.bape.com/blogs/news/ss26-collection" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> BAPE official SS26 image; open the release page for design codes and availability. <span>BAPE · Preview-linked official image</span></figcaption></figure><div class="story-english"><strong>A GOLDEN ERA BECOMES WEARABLE</strong><span>BAPE turns archive codes into a release that has to work on today's body.</span><small>BAPE fixes the SS26 theme, design codes, campaign locations and 3 September release sequence; VERSE supplies cultural background only. The claim about archive becoming usable is editorial interpretation.</small></div>
+<p>BAPE 官方把 Spring/Summer 2026 命名为 “Golden Era”，并写明 9 月 3 日起陆续发售。系列用 Multi Pixel Camo、Glitch Woodland Camo 和 Line Camo 等设计代码，把早期 2000 年代的街头、音乐、体育与日式工艺线索放回新的服装里；官方也列出东京街道、日式旧屋与屋顶等三处 campaign 场景。</p>
+<p>这里最有意思的不是“复古”两个字，而是代码如何重新获得穿着条件。像素、故障、靛蓝和足球围巾各自带着不同的记忆，但最终都要落到今天的身体上。档案只有被重新穿上，才不只是品牌自己的过去，而成为公众仍然能使用的现在。</p>
+<p>VERSE 台湾的背景报道把这次系列放回 2000 年代街头文化的扩散语境；它是外部语境，不替 BAPE 官方补充商品、价格或发售细节。事实留在官方页面，文化判断留在服装被重新穿回生活的那一刻。</p>
+<p>来源：<a href="https://en.jp.bape.com/blogs/news/ss26-collection" data-source-link="true">BAPE 官方 SS26 “Golden Era”</a>；<a href="https://www.verse.com.tw/article/bape-ss26-2000s" data-source-link="true">VERSE 台湾背景报道</a></p>
+</section><section class="issue-story" data-story="hieroglyphics-all-said-and-done" data-level="signal"><p class="story-marker" aria-hidden="true">03</p><h2 id="hieroglyphics-all-said-and-done">一张唱片的发布，也可以重新安排谁能进入</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://open.spotify.com/album/7endkM664etu5IoLmGiZ47" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e022ce53a2c51b7df907d68170d" alt="Official Hieroglyphics All Said And Done album artwork" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://open.spotify.com/album/7endkM664etu5IoLmGiZ47" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> Official album artwork via Spotify; open Hieroglyphics for the release and supporter details. <span>Hieroglyphics / Spotify · Preview-linked official image</span></figcaption></figure><div class="story-english"><strong>A RELEASE REWRITES THE ENTRANCE</strong><span>Hieroglyphics puts date, tracklist and supporter identity inside the album object.</span><small>The artist site fixes the public release and supporter packaging; Spotify fixes the 16-track album page and date. No claim about sales, reach or audience scale is made; the reading of an explicit entrance condition is editorial.</small></div>
+<p>Hieroglyphics 官方站点把新专辑《All Said And Done》的公开发行日定在 9 月 3 日；Spotify 的官方专辑页补充了 16 首曲目的发行信息。官方支持者页面还把不同支持层级写入专辑包装：支持者可以把名字与面孔带进唱片的物理外壳。</p>
+<p>这让“发布”不再只是把音频放到平台上。声音先被听见，但署名、包装和支持关系把听众推到作品的边缘，让他们知道自己以什么方式进入。它不是把所有人都伪装成创作者，而是把参与的边界写明白：谁支持、谁被记录、谁只听见。</p>
+<p>这里的判断只建立在官方公开的发行、曲目和包装层级上，不推断销量、影响力或听众规模。能被核验的进入方式，已经足够说明这张唱片如何把“公众”写进对象。</p>
+<p>来源：<a href="https://hieroglyphics.com/" data-source-link="true">Hieroglyphics 官方站点</a>；<a href="https://open.spotify.com/album/7endkM664etu5IoLmGiZ47" data-source-link="true">Spotify 官方专辑页</a></p>
+</section><section class="issue-story" data-story="helsinki-hdw-lab" data-level="signal"><p class="story-marker" aria-hidden="true">04</p><h2 id="helsinki-hdw-lab">城市工作坊不替人设计未来，先把提案交回来</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://helsinkidesignweek.com/events/workshop-how-to-revive-the-city-center/?lang=en" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://helsinkidesignweek.com/wp-content/uploads/2026/06/Johanna-Gullichsen-mikado-2-630x420.jpg" alt="Official Helsinki Design Week Lab workshop image" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://helsinkidesignweek.com/events/workshop-how-to-revive-the-city-center/?lang=en" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> Helsinki Design Week official image; open the Lab page for sessions, language and registration. <span>Helsinki Design Week · Preview-linked official image</span></figcaption></figure><div class="story-english"><strong>THE CITY GETS THE PROPOSAL BACK</strong><span>A Helsinki workshop uses AI to return urban ideas to the people who must test them.</span><small>Helsinki Design Week fixes the 2–4 September Lab, 3 September street-space session and possible 2027 testing; the City of Helsinki corroborates the festival's public-space collaboration. The claim about AI's proper role is editorial interpretation.</small></div>
+<p>Helsinki Design Week Lab 于 9 月 2–4 日在 Kluuvikatu 3 举行。官方日程把 9 月 3 日的 Aleksanterinkatu 公共街道空间讨论安排在 15:00–17:00，并以 AI 作为生成更有活力、更好用的城市中心提案的工具；有价值的想法可能在 2027 年被测试。</p>
+<p>这个安排把 AI 放在一个更准确的位置：不是替城市发言的答案机，而是把提案更快交回给经营者、产权方与使用者的草稿工具。真正需要被设计的，不是一个听起来聪明的未来，而是街道何时可停留、商铺如何被看见、谁会为下一步负责。</p>
+<p>赫尔辛基市政府对整届设计周的主题与城市协作有独立官方说明，确认这不是一个孤立的产品演示，而是公共空间议题的一部分。AI 的价值仍需后续实践证明；今天能确定的，是提案被放回现场讨论。</p>
+<p>来源：<a href="https://helsinkidesignweek.com/events/workshop-how-to-revive-the-city-center/?lang=en" data-source-link="true">Helsinki Design Week Lab 官方日程</a>；<a href="https://www.hel.fi/fi/uutiset/helsinki-design-week-tuo-keskustaan-tapahtumia-ja-installaatioita" data-source-link="true">赫尔辛基市政府官方说明</a></p>
+</section><section class="issue-story" data-story="dyson-unveiled-2026-berlin" data-level="watch"><p class="story-marker" aria-hidden="true">05</p><h2 id="dyson-unveiled-2026-berlin">Dyson 在柏林把九件新机器做成可进入的演示现场</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://www.dyson.com/discover/news/latest/dyson-unveiled-2026" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/campaigns/unveiled-2026/rcc/web_newsroom_unveiled_2026_hero.jpg?%24responsive%24=" alt="Official Dyson Unveiled 2026 event image" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://www.dyson.com/discover/news/latest/dyson-unveiled-2026" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> Dyson official event image; open the newsroom release for the programme and product context. <span>Dyson Newsroom · Preview-linked official image</span></figcaption></figure><div class="story-english"><strong>THE MACHINE NEEDS A ROOM</strong><span>Dyson stages nine new machines as a hands-on event in Berlin.</span><small>Dyson fixes the 3 September Berlin event, product areas and nine-machine programme; the claim that a product needs a room to become usable is editorial interpretation.</small></div>
+<p>Dyson 把 9 月 3 日的 Unveiled 2026 放在柏林举行，官方 newsroom 列出 floorcare、robotics、air treatment 与 beauty 等产品方向，以及九件新机器。现场强调 hands-on experience，机器不只在新闻稿里被命名，而要在一个房间里被看见、被比较、被问问题。</p>
+<p>产品发布经常把“新”压缩成参数，但真正的使用从来需要一个空间：光线、距离、手感和对照关系都会影响判断。Dyson 这次活动的价值还不能由现场之外的销量或长期使用证明；今天可以确定的是，它把机器从清单移到可进入的演示场。</p>
+<p>来源：<a href="https://www.dyson.com/discover/news/latest/dyson-unveiled-2026" data-source-link="true">Dyson 官方 newsroom</a></p>
+</section><section class="issue-story" data-story="exit" data-level="exit"><p class="story-marker" aria-hidden="true">EXIT</p><h2 id="exit">退出 / 可用性不是妥协，是对象的第二次发布</h2>
+<p>从展览里的缝纫机，到街头服装的迷彩、唱片的署名和城市的提案，今天的对象都在把“发布”交给使用条件。新鲜感只负责让人转身；真正的文化判断，要等到有人能进入、触摸、穿上、留下意见，才开始发生。</p>
+</section></article>
+    <section class="sources" id="sources" aria-labelledby="sources-title"><p class="section-label">INDEX / VERIFIED LINKS</p><h2 id="sources-title">Sources &amp; Dates</h2><ol><li><a href="https://www.sfmoma.org/exhibition/in-between/">In Between</a><span class="source-meta">SFMOMA · 2026-09-03/2027-05-31</span></li><li><a href="https://thedissentsf.com/article/a-quieter-sfmoma-night-meditation-then-blues-for-ramekon-o-arwisters-s-in-betwee">A Quieter SFMOMA Night: Meditation, Then Blues, for Ramekon O'Arwisters's In Between</a><span class="source-meta">The Dissent · 2026-08-16 · 2026-09-03</span></li><li><a href="https://en.jp.bape.com/blogs/news/ss26-collection">A BATHING APE Spring/Summer 2026 “Golden Era”</a><span class="source-meta">BAPE · 2026-09-03</span></li><li><a href="https://www.verse.com.tw/article/bape-ss26-2000s">BAPE SS26 春夏：回到 2000s 的黃金年代，把街頭文化重新穿回當下</a><span class="source-meta">VERSE · 2026-01-15</span></li><li><a href="https://hieroglyphics.com/">All Said And Done</a><span class="source-meta">Hieroglyphics · 2026-09-03</span></li><li><a href="https://open.spotify.com/album/7endkM664etu5IoLmGiZ47">All Said And Done</a><span class="source-meta">Spotify / Hieroglyphics · 2026-09-03 · 2026-09-03</span></li><li><a href="https://helsinkidesignweek.com/events/workshop-how-to-revive-the-city-center/?lang=en">Workshop: How to Revive the City Center?</a><span class="source-meta">Helsinki Design Week · 2026-09-02/2026-09-04</span></li><li><a href="https://www.hel.fi/fi/uutiset/helsinki-design-week-tuo-keskustaan-tapahtumia-ja-installaatioita">Helsinki Design Week tuo keskustaan tapahtumia ja installaatioita</a><span class="source-meta">City of Helsinki · 2026-08-28/2026-09-06</span></li><li><a href="https://www.dyson.com/discover/news/latest/dyson-unveiled-2026">Dyson Unveiled 2026</a><span class="source-meta">Dyson Newsroom · 2026-08-21 · 2026-09-03</span></li></ol></section>
+  </main>
+  <footer class="site-footer"><a href="../../archive/">All issues</a><span>Static, readable without JavaScript</span></footer>
+  <script>document.documentElement.classList.add("has-js");
+
+const visualThemes = ["field", "coral", "analog"];
+const themeStorageKey = "ctd-theme";
+const themeManualKey = "ctd-theme-manual";
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const mobileViewport = window.matchMedia("(max-width: 50rem)");
+const lifecycle = new AbortController();
+const observers = new Set();
+const cleanupTasks = new Set();
+
+function revealControl(control) {
+  control.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "nearest", inline: "center" });
+}
+
+function enableRailKeyboard(container, selector) {
+  const controls = [...container.querySelectorAll(selector)];
+  if (!controls.length) return;
+  const syncTabStops = () => {
+    const selected = controls.find((control) => control.getAttribute("aria-pressed") === "true") ?? controls[0];
+    for (const control of controls) control.tabIndex = control === selected ? 0 : -1;
+  };
+  syncTabStops();
+  container.addEventListener("keydown", (event) => {
+    const current = controls.indexOf(document.activeElement);
+    if (current < 0 || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const nextIndex = event.key === "Home"
+      ? 0
+      : event.key === "End"
+        ? controls.length - 1
+        : (current + (event.key === "ArrowRight" ? 1 : -1) + controls.length) % controls.length;
+    const next = controls[nextIndex];
+    next.focus();
+    next.click();
+    syncTabStops();
+    revealControl(next);
+  }, { signal: lifecycle.signal });
+  container.addEventListener("click", (event) => {
+    const control = event.target.closest(selector);
+    if (!control || !container.contains(control)) return;
+    syncTabStops();
+    revealControl(control);
+  }, { signal: lifecycle.signal });
+}
+
+function rememberTheme(theme) {
+  try {
+    window.sessionStorage.setItem(themeStorageKey, theme);
+  } catch {
+    // The selected theme still applies to the current page when storage is unavailable.
+  }
+}
+
+function hasManualTheme() {
+  try {
+    return window.sessionStorage.getItem(themeManualKey) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function updateThemeLinks(theme) {
+  for (const link of document.querySelectorAll("a[data-theme-link]")) {
+    const url = new URL(link.href, window.location.href);
+    url.searchParams.set("theme", theme);
+    link.href = `${url.pathname}${url.search}${url.hash}`;
+  }
+  for (const link of document.querySelectorAll("a[data-theme-home]")) {
+    const url = new URL(link.href, window.location.href);
+    if (hasManualTheme()) url.searchParams.set("theme", theme);
+    else url.searchParams.delete("theme");
+    link.href = `${url.pathname}${url.search}${url.hash}`;
+  }
+}
+
+function updateThemeControls(theme) {
+  for (const button of document.querySelectorAll("[data-theme-choice]")) {
+    button.setAttribute("aria-pressed", String(button.dataset.themeChoice === theme));
+  }
+  for (const status of document.querySelectorAll("[data-theme-status]")) {
+    status.textContent = theme === "field" ? "FIELD GREEN" : theme === "coral" ? "CORAL SIGNAL" : "2000s TV";
+  }
+}
+
+function applyTheme(theme, { manual = false } = {}) {
+  const safeTheme = visualThemes.includes(theme) ? theme : "field";
+  if (manual) {
+    try {
+      window.sessionStorage.setItem(themeManualKey, "1");
+      window.localStorage.setItem("ctd-theme-preference", safeTheme);
+    } catch {
+      // The click still applies to the current page when storage is unavailable.
+    }
+  }
+  document.documentElement.dataset.visualTheme = safeTheme;
+  rememberTheme(safeTheme);
+  updateThemeControls(safeTheme);
+  updateThemeLinks(safeTheme);
+}
+
+applyTheme(document.documentElement.dataset.visualTheme);
+
+for (const button of document.querySelectorAll("[data-theme-choice]")) {
+  button.addEventListener("click", () => applyTheme(button.dataset.themeChoice, { manual: true }), { signal: lifecycle.signal });
+}
+
+for (const group of document.querySelectorAll(".theme-dots")) enableRailKeyboard(group, "[data-theme-choice]");
+
+for (const frame of document.querySelectorAll("[data-visual-frame]")) {
+  const image = frame.querySelector("img.source-art");
+  if (!image) continue;
+  const originalSource = image.src;
+  const retryDelays = [1200, 3000];
+  let retryCount = 0;
+  let retryTimer = null;
+  let deadlineTimer = null;
+  const markFailure = () => frame.classList.add("image-failed");
+  const markSuccess = () => {
+    window.clearTimeout(deadlineTimer);
+    frame.classList.remove("image-failed");
+  };
+  const monitorAttempt = () => {
+    window.clearTimeout(deadlineTimer);
+    deadlineTimer = window.setTimeout(() => {
+      if (image.complete && image.naturalWidth) markSuccess();
+      else retryImage();
+    }, 8000);
+  };
+  const retryImage = () => {
+    window.clearTimeout(deadlineTimer);
+    markFailure();
+    if (retryCount >= retryDelays.length || retryTimer !== null) return;
+    const delay = retryDelays[retryCount];
+    retryTimer = window.setTimeout(() => {
+      retryTimer = null;
+      retryCount += 1;
+      const retryUrl = new URL(originalSource, window.location.href);
+      retryUrl.searchParams.set("ctd_retry", String(retryCount));
+      image.src = retryUrl.href;
+      monitorAttempt();
+    }, delay);
+  };
+  image.addEventListener("load", markSuccess, { signal: lifecycle.signal });
+  image.addEventListener("error", retryImage, { signal: lifecycle.signal });
+  if (image.complete && image.naturalWidth) markSuccess();
+  else if (image.complete) retryImage();
+  else if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      observer.disconnect();
+      observers.delete(observer);
+      monitorAttempt();
+    }, { rootMargin: "800px" });
+    observers.add(observer);
+    observer.observe(image);
+  } else {
+    monitorAttempt();
+  }
+  cleanupTasks.add(() => {
+    window.clearTimeout(deadlineTimer);
+    window.clearTimeout(retryTimer);
+  });
+}
+
+const storyFilters = [...document.querySelectorAll("[data-story-filter]")];
+const storyCards = [...document.querySelectorAll("[data-story-card]")];
+const radarGroups = [...document.querySelectorAll("[data-radar-group]")];
+
+function applyStoryFilter(filter, { updateUrl = false } = {}) {
+  const selected = storyFilters.find(button => button.dataset.storyFilter === filter) ?? storyFilters[0];
+  if (!selected) return;
+  const category = selected.dataset.storyFilter;
+  for (const button of storyFilters) button.setAttribute("aria-pressed", String(button === selected));
+  for (const card of storyCards) card.hidden = category !== "all" && card.dataset.storyCategory !== category;
+  for (const group of radarGroups) group.hidden = ![...group.querySelectorAll("[data-story-card]")].some(card => !card.hidden);
+  const status = document.querySelector("[data-filter-result]");
+  if (status) status.textContent = `${category === "all" ? "全部" : category.toUpperCase()} · ${storyCards.filter(card => !card.hidden).length} 条精选`;
+  if (updateUrl) {
+    const url = new URL(location.href);
+    if (category === "all") url.searchParams.delete("category");
+    else url.searchParams.set("category", category);
+    history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+  }
+}
+for (const button of storyFilters) {
+  button.addEventListener("click", () => applyStoryFilter(button.dataset.storyFilter, { updateUrl: true }), { signal: lifecycle.signal });
+}
+applyStoryFilter(new URLSearchParams(location.search).get("category"));
+window.addEventListener("popstate", () => applyStoryFilter(new URLSearchParams(location.search).get("category")), { signal: lifecycle.signal });
+
+for (const group of new Set(storyFilters.map((button) => button.parentElement).filter(Boolean))) {
+  enableRailKeyboard(group, "[data-story-filter]");
+}
+
+const weekDossiers = [...document.querySelectorAll("[data-week-dossier]")];
+
+function setWeekExpanded(dossier, expanded) {
+  const button = dossier.querySelector("[data-week-toggle]");
+  const panel = dossier.querySelector("[data-week-panel]");
+  if (!button || !panel) return;
+  button.setAttribute("aria-expanded", String(expanded));
+  panel.hidden = !expanded;
+  const mark = button.querySelector(".week-toggle-mark");
+  if (mark) mark.textContent = expanded ? "−" : "＋";
+}
+
+function openWeekFromHash({ scroll = false } = {}) {
+  const target = weekDossiers.find((dossier) => `#${dossier.id}` === window.location.hash);
+  for (const dossier of weekDossiers) setWeekExpanded(dossier, dossier === target);
+  if (target && scroll) {
+    window.requestAnimationFrame(() => target.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "start" }));
+  }
+}
+
+if (weekDossiers.length) {
+  openWeekFromHash();
+  for (const dossier of weekDossiers) {
+    const button = dossier.querySelector("[data-week-toggle]");
+    if (button) button.disabled = false;
+    button?.addEventListener("click", () => {
+      const wasExpanded = button.getAttribute("aria-expanded") === "true";
+      for (const candidate of weekDossiers) setWeekExpanded(candidate, false);
+      if (!wasExpanded) {
+        setWeekExpanded(dossier, true);
+        window.history.replaceState(null, "", `#${dossier.id}`);
+      } else if (window.location.hash === `#${dossier.id}`) {
+        window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+      }
+    }, { signal: lifecycle.signal });
+  }
+  window.addEventListener("hashchange", () => openWeekFromHash({ scroll: true }), { signal: lifecycle.signal });
+}
+
+for (const frame of document.querySelectorAll("iframe[data-historical-frame]")) {
+  const resize = () => {
+    try {
+      const documentHeight = frame.contentDocument?.documentElement?.scrollHeight;
+      if (documentHeight) frame.style.height = `${Math.max(documentHeight, 720)}px`;
+    } catch {
+      // Cross-origin frames keep their CSS fallback height.
+    }
+  };
+  frame.addEventListener("load", resize, { signal: lifecycle.signal });
+  window.addEventListener("resize", resize, { passive: true, signal: lifecycle.signal });
+}
+
+const issueBody = document.querySelector("body[data-issue]");
+const issueStories = issueBody ? [...document.querySelectorAll(".issue-story")] : [];
+const issueHeadings = issueBody ? [...document.querySelectorAll(".issue-story h2[id]")] : [];
+const issueNavLinks = issueBody ? [...document.querySelectorAll(".issue-nav a[href^='#']")] : [];
+const storyReader = document.querySelector("body[data-story-reader]");
+const storyOpening = storyReader?.querySelector("[data-story-opening]");
+const storyLedeStage = storyReader?.querySelector(".story-lede-stage");
+const storyLede = storyReader?.querySelector("[data-word-reveal]");
+const storyMediaStage = storyReader?.querySelector("[data-media-stage]");
+let storyWords = [];
+let motionFrame = 0;
+
+function clamp(value, minimum = 0, maximum = 1) {
+  return Math.min(maximum, Math.max(minimum, value));
+}
+
+if (storyLede) {
+  const source = storyLede.textContent.trim();
+  const segments = "Segmenter" in Intl
+    ? [...new Intl.Segmenter("zh-CN", { granularity: "word" }).segment(source)].map((part) => part.segment)
+    : [...source];
+  storyLede.replaceChildren(...segments.map((segment) => {
+    const word = document.createElement("span");
+    word.className = "story-word";
+    word.textContent = segment;
+    return word;
+  }));
+  storyWords = [...storyLede.querySelectorAll(".story-word")];
+  storyReader.dataset.motionReady = "true";
+}
+
+function updateMotion() {
+  motionFrame = 0;
+  if (document.hidden) return;
+  const maximum = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+  const progress = Math.min(1, Math.max(0, window.scrollY / maximum));
+  document.documentElement.style.setProperty("--reading-progress", String(progress));
+  document.documentElement.style.setProperty("--shell-progress", String(Math.min(1, window.scrollY / 320)));
+
+  if (storyReader && !reducedMotion.matches) {
+    if (storyOpening) {
+      const rect = storyOpening.getBoundingClientRect();
+      const openingProgress = clamp(-rect.top / Math.max(1, rect.height - window.innerHeight));
+      document.documentElement.style.setProperty("--opening-progress", String(openingProgress));
+    }
+    if (storyLedeStage && storyWords.length) {
+      const rect = storyLedeStage.getBoundingClientRect();
+      const wordProgress = clamp((window.innerHeight * 0.8 - rect.top) / Math.max(1, rect.height * 0.68));
+      const visible = wordProgress * (storyWords.length + 5);
+      storyWords.forEach((word, index) => word.style.setProperty("--word-visible", String(clamp(visible - index))));
+    }
+    if (storyMediaStage) {
+      const rect = storyMediaStage.getBoundingClientRect();
+      const mediaProgress = clamp((window.innerHeight * 0.82 - rect.top) / Math.max(1, rect.height * 0.58));
+      document.documentElement.style.setProperty("--media-progress", String(mediaProgress));
+    }
+  }
+
+  if (!issueBody || reducedMotion.matches) return;
+  const center = window.innerHeight * 0.58;
+  const shiftLimit = mobileViewport.matches ? 12 : 24;
+  for (const story of issueStories) {
+    const rect = story.getBoundingClientRect();
+    const rawShift = (rect.top - center) * 0.025;
+    const shift = Math.max(-shiftLimit, Math.min(shiftLimit, rawShift));
+    const distance = Math.min(1, Math.abs(rect.top - center) / window.innerHeight);
+    story.style.setProperty("--story-shift", `${Math.round(shift)}px`);
+    story.style.setProperty("--story-opacity", String(1 - distance * 0.22));
+  }
+}
+
+if (storyReader && document.startViewTransition && !reducedMotion.matches) {
+  for (const link of storyReader.querySelectorAll("a.next-story, a.related-card, .story-sibling-nav a")) {
+    link.addEventListener("click", (event) => {
+      const destination = new URL(link.href, window.location.href);
+      if (destination.origin !== window.location.origin || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      document.startViewTransition(() => { window.location.href = destination.href; });
+    }, { signal: lifecycle.signal });
+  }
+}
+
+function scheduleMotion() {
+  if (!motionFrame) motionFrame = window.requestAnimationFrame(updateMotion);
+}
+
+window.addEventListener("scroll", scheduleMotion, { passive: true, signal: lifecycle.signal });
+window.addEventListener("resize", scheduleMotion, { passive: true, signal: lifecycle.signal });
+updateMotion();
+
+if (issueHeadings.length && "IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top))[0];
+    if (!visible) return;
+    for (const link of issueNavLinks) {
+      if (link.getAttribute("href") === `#${visible.target.id}`) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    }
+  }, { rootMargin: "-18% 0px -66%", threshold: [0, 0.25, 0.75] });
+  observers.add(observer);
+  for (const heading of issueHeadings) observer.observe(heading);
+}
+
+const homeHero = document.querySelector(".home-hero");
+if (homeHero && !reducedMotion.matches) {
+  homeHero.addEventListener("pointermove", (event) => {
+    const bounds = homeHero.getBoundingClientRect();
+    homeHero.style.setProperty("--hero-x", String((event.clientX - bounds.left) / bounds.width - 0.5));
+    homeHero.style.setProperty("--hero-y", String((event.clientY - bounds.top) / bounds.height - 0.5));
+  }, { passive: true, signal: lifecycle.signal });
+  homeHero.addEventListener("pointerleave", () => {
+    homeHero.style.setProperty("--hero-x", "0");
+    homeHero.style.setProperty("--hero-y", "0");
+  }, { passive: true, signal: lifecycle.signal });
+}
+
+function syncDocumentVisibility() {
+  document.documentElement.dataset.motionPaused = String(document.hidden);
+  if (document.hidden && motionFrame) {
+    window.cancelAnimationFrame(motionFrame);
+    motionFrame = 0;
+  } else if (!document.hidden) {
+    scheduleMotion();
+  }
+}
+
+function cleanupLifecycle() {
+  lifecycle.abort();
+  if (motionFrame) window.cancelAnimationFrame(motionFrame);
+  for (const observer of observers) observer.disconnect();
+  for (const cleanup of cleanupTasks) cleanup();
+  observers.clear();
+  cleanupTasks.clear();
+}
+
+document.addEventListener("visibilitychange", syncDocumentVisibility, { signal: lifecycle.signal });
+window.addEventListener("pagehide", (event) => {
+  if (!event.persisted) cleanupLifecycle();
+  else {
+    document.documentElement.dataset.motionPaused = "true";
+    if (motionFrame) window.cancelAnimationFrame(motionFrame);
+    motionFrame = 0;
+  }
+});
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    syncDocumentVisibility();
+    applyStoryFilter(new URLSearchParams(location.search).get("category"));
+  }
+}, { signal: lifecycle.signal });
+syncDocumentVisibility();
+</script>
+</body>
+</html>

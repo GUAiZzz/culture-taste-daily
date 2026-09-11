@@ -1,0 +1,202 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-09-05",
+  "publication_date": "2026-09-05",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-09-07T19:06:34+08:00",
+  "research_locked_at": "2026-09-07T19:06:34+08:00",
+  "content_locked_at": "2026-09-07T19:06:34+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "2c6bb97cf580e7f2d489f735ed26ac8132f1fb6caec4456e12c31105a3cdcb67",
+    "locked_at": "2026-09-07T19:06:34+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "2c6bb97cf580e7f2d489f735ed26ac8132f1fb6caec4456e12c31105a3cdcb67",
+    "art_direction_sha256": "32e87a48277057dd2618c1faaade0eea7e3f4eb66e8beb5c0af6222771df1a78",
+    "issue_style_sha256": "14b97e892bdfd6ae27fb3b8aa1adfb2d1cf4a88da7cf22cfc1c74365106dc5ee"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-09-07T11:07:45+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "把作品放到公众面前，陈列就已经开始做判断。贸易展、珠宝展与音乐节目，分别通过进入方式、相邻对象和出场顺序，改变我们理解文化的条件。",
+  "art_direction": {
+    "dominant_mood": "藕灰纸面上的朱红括号与梅墨字",
+    "background_logic": "两枚朝内的宽括号围住不居中的色面，把并置关系留在纸上。",
+    "palette_logic": "藕灰 #E6DBE1、梅墨 #392C35、朱红 #AA392D；以轻纸感承载清楚的阅读。",
+    "type_scale_logic": "大标题与紧凑编号建立层级，正文稳定，短标签保留印刷笔触。",
+    "image_behavior": "一手外链图片保持原色；肖像和展览图均明确出处，不冒充现场报道。",
+    "page_density_and_tempo": "三篇依次从时装、珠宝到音乐，以相邻关系串起陈列的判断。",
+    "core_visual_action": "括号把不相同的对象放在同一视野，中央空白邀请读者作比较。",
+    "cover_composition": "两枚不对称朱红括号夹住三张小色片，刻意留出宽阔空白；原创构图。",
+    "desktop_interaction_mechanic": "沿用三种阅读房间与原生链接；正文无需动态效果。",
+    "behance_viewing_arc": "公众入口、观看位置、节目相邻关系，最后回到读者自己的选择。",
+    "mobile_translation": "封面括号收窄，文章选读双栏；全文单栏。",
+    "mobbin_usability_constraint": "保留 44px 操作、键盘焦点和图片失败回链。",
+    "quiet_ending": "末尾保留开放的括号，让选择继续。",
+    "closing_quotation": {
+      "id": "ct-en-008",
+      "language": "en",
+      "text": "An entrance is already an editorial decision.",
+      "credit": "Culture & Taste Editorial"
+    },
+    "closing_palette": {
+      "background": "#E6DBE1",
+      "foreground": "#392C35",
+      "accent": "#AA392D",
+      "rationale": "藕灰和梅墨保持正文对比，朱红用作小标题与括号；与前后期的纸色和图形不同。"
+    }
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": [
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04"
+    ],
+    "repeated_mechanisms": [
+      "accessible source links"
+    ],
+    "exception_reason": "Owner-authorized retrospective edition uses open brackets and juxtaposed slips. Shared reading-room presentation follows the approved maintenance release."
+  },
+  "stories": [
+    {
+      "id": "centrestage-public-floor",
+      "level": "cover",
+      "title": "CENTRESTAGE：买手之外，谁能进入时装",
+      "sources": [
+        {
+          "title": "CENTRESTAGE 2026 开幕新闻稿",
+          "publisher": "香港贸易发展局",
+          "url": "https://mediaroom.hktdc.com/sc/pressrelease/detail/21025/",
+          "published_date": "2026-09-02",
+          "event_date": "2026-09-02/2026-09-05",
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "香港贸易发展局",
+      "english": {
+        "title": "WHO GETS ONTO THE FLOOR?",
+        "deck": "CENTRESTAGE opens its trade floor to a public that can browse, try and buy.",
+        "abstract": "The organiser scheduled CENTRESTAGE for 2–5 September and opened it to both buyers and the public. Its Hype² and fragrance sections widen the ways visitors can encounter fashion. Public access alone does not establish design quality or commercial success."
+      },
+      "media": {
+        "asset": "assets/entry-card.svg",
+        "alt": "香港贸发局 CENTRESTAGE 2026 官方开幕图片",
+        "caption": "香港贸发局 CENTRESTAGE 2026 官方开幕图片；官方来源外链。",
+        "credit": "香港贸易发展局",
+        "kind": "source_image",
+        "origin_url": "https://mediaroom.hktdc.com/sc/pressrelease/detail/21025/",
+        "external_image_url": "https://mediaroom.hktdc.com/cms/Data/images/albums/2026/09/23234/20260902174757/resize/1_feature_wall_230x153.jpeg",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "kaleidos-colour-context",
+      "level": "major",
+      "title": "万花绮镜：珠宝换了一个观看位置",
+      "sources": [
+        {
+          "title": "宝格丽 KALEIDOS 万花绮镜：色彩·文化·匠艺",
+          "publisher": "上海当代艺术博物馆",
+          "url": "https://www.powerstationofart.com/whats-on/exhibitions/bvlgari-kaleidos",
+          "published_date": null,
+          "event_date": "2026-09-05/2026-10-31",
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "上海当代艺术博物馆",
+      "english": {
+        "title": "JEWELLERY IN A DIFFERENT FRAME",
+        "deck": "Kaleidos places jewellery alongside questions of colour, culture and light.",
+        "abstract": "PSA lists Kaleidos from 5 September to 31 October 2026 on its second floor. Three chapters organise jewellery and contemporary works through colour, symbolism and light. The exhibition offers a viewing context; its brand-led narrative is not an independent verdict on cultural value."
+      },
+      "media": {
+        "asset": "assets/entry-card.svg",
+        "alt": "上海当代艺术博物馆公布的万花绮镜展览图片",
+        "caption": "上海当代艺术博物馆公布的万花绮镜展览图片；官方来源外链。",
+        "credit": "上海当代艺术博物馆",
+        "kind": "source_image",
+        "origin_url": "https://www.powerstationofart.com/whats-on/exhibitions/bvlgari-kaleidos",
+        "external_image_url": "https://psa-1302280212.cos.ap-shanghai.myqcloud.com/feed/feed/0000003805/image/1600x/%E5%AE%9D%E6%A0%BC%E4%B8%BD%E2%80%9CKALEIDOS%E4%B8%87%E8%8A%B1%E7%BB%AE%E9%95%9C%EF%BC%9A%E8%89%B2%E5%BD%A9%C2%B7%E6%96%87%E5%8C%96%C2%B7%E5%8C%A0%E8%89%BA%E2%80%9D%E7%89%B9%E5%B1%95%20%288%29.jpg",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "grand-canyon-quartet-programme",
+      "level": "signal",
+      "title": "同一组弦乐，装得下几种传统",
+      "sources": [
+        {
+          "title": "Nicholas Johnson and Friends — Concert Repertoire",
+          "publisher": "Grand Canyon Music Festival",
+          "url": "https://grandcanyonmusicfest.org/nicholas-johnson-and-friends/",
+          "published_date": null,
+          "event_date": "2026-09-05",
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Grand Canyon Music Festival",
+      "english": {
+        "title": "ONE QUARTET, SEVERAL TRADITIONS",
+        "deck": "A Grand Canyon programme places Mendelssohn, Eleanor Alberga and Jerod Tate together.",
+        "abstract": "The festival lists Nicholas Johnson and Friends for 5 September at 7:30 p.m., with works by Mendelssohn, Eleanor Alberga and Jerod Impichchaachaaha’ Tate. The programme supports a reading of juxtaposition, not a claim about how the performance sounded. The image is a composer portrait, not a concert photograph."
+      },
+      "media": {
+        "asset": "assets/entry-card.svg",
+        "alt": "音乐节节目页刊载的作曲家 Eleanor Alberga 肖像",
+        "caption": "音乐节节目页刊载的作曲家 Eleanor Alberga 肖像；官方来源外链。",
+        "credit": "Grand Canyon Music Festival",
+        "kind": "source_image",
+        "origin_url": "https://grandcanyonmusicfest.org/nicholas-johnson-and-friends/",
+        "external_image_url": "https://grandcanyonmusicfest.org/wp-content/uploads/2026/05/95-eleanor-alberga.jpg",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ],
+  "rights_summary": {
+    "required_assets": 3,
+    "unknown_required_assets": 3,
+    "status": "blocked"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": null
+  },
+  "evidence_refs": {
+    "technical": [],
+    "editorial_visual": [],
+    "gate": []
+  },
+  "qa": {
+    "html_parse": "unavailable",
+    "assets": "unavailable",
+    "internal_links": "unavailable",
+    "no_js_reading": "unavailable",
+    "desktop_render": "unavailable",
+    "mobile_render": "unavailable",
+    "reduced_motion": "unavailable"
+  },
+  "limitations": [
+    "Owner-authorized retrospective for September 5, assembled on September 7. No claim of same-day reporting or complete daily-registry coverage.",
+    "Three official source pages and their linked images were inspected in the browser; announced programmes are not treated as evidence of completed performances.",
+    "Existing non-production Preview only. External image reuse rights and separate Production review remain unresolved."
+  ]
+}

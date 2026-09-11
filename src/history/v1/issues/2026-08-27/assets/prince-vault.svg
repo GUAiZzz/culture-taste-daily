@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Prince Timeless vault timeline</title>
+  <desc id="desc">An original timeline diagram for a collection spanning 1977 to 2016.</desc>
+  <rect width="1200" height="720" fill="#17152b"/><g stroke="#d9dbd1" stroke-width="4"><path d="M110 360H1090"/><path d="M180 330V390M360 330V390M540 330V390M720 330V390M900 330V390M1050 330V390"/></g>
+  <g fill="#ffdc58" font-family="monospace" font-weight="700" font-size="26"><text x="85" y="250">1977</text><text x="1010" y="250">2016</text><text x="520" y="250">VAULT</text></g><circle cx="600" cy="360" r="26" fill="#ef5b35"/><path d="M600 330V210M600 210h135" stroke="#ef5b35" stroke-width="7" fill="none"/>
+  <text x="85" y="650" fill="#d9dbd1" font-family="Arial,sans-serif" font-size="34" font-weight="800">TIMELESS / 10 RECORDINGS / 08.28</text>
+</svg>

@@ -1,0 +1,321 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-08-23",
+  "publication_date": "2026-08-23",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-08-24T20:59:58+08:00",
+  "research_locked_at": "2026-08-24T21:00:01+08:00",
+  "content_locked_at": "2026-08-24T21:00:01+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "600d4cad535e06f2a95a3fd2b4abb940e9af8c07285f3985ebbe27f155a82ecc",
+    "locked_at": "2026-08-24T21:00:01+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "600d4cad535e06f2a95a3fd2b4abb940e9af8c07285f3985ebbe27f155a82ecc",
+    "art_direction_sha256": "af945fb5fc06f4569cedb63de74276f0b51f15e195e5c38893072e31eaa43a5a",
+    "issue_style_sha256": "2d934e1554950517809e23b223bb963a1aac1e88fc3d4a5f0981c67226be2fed"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-08-24T20:59:58+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "23 August is read as one honest cut between exhibitions closing and an object entering release, without treating either action as proof of cultural impact.",
+  "art_direction": {
+    "dominant_mood": "a Sunday closing ledger interrupted by one bright product opening",
+    "background_logic": "warm paper carries black closing rules while cobalt image fields and one halo-white interruption mark openings",
+    "palette_logic": "warm paper and carbon for the ledger, cobalt for active rooms, vermilion for final-day stamps, white for the release interruption",
+    "type_scale_logic": "large editorial Chinese headlines sit against compact date stamps; body copy stays at a readable 18px with restrained line length",
+    "image_behavior": "one source-led preview image per story where a publisher endpoint can be safely surfaced; original local closing-card visuals remain as accessible fallbacks",
+    "page_density_and_tempo": "a broad cover, three spacious closing rooms, faster object and interaction signals, one bounded architecture watch, then a quiet ledger close",
+    "core_visual_action": "a vertical date rule repeatedly crosses story images, turning the same day into a sequence of doors closing and one box opening",
+    "cover_composition": "an oversized 23 is cut by a horizontal closing line with OPEN and CLOSE labels held apart",
+    "desktop_interaction_mechanic": "the functional issue index stays available while stories alternate between full-width image rooms and narrower ledger notes without requiring JavaScript",
+    "behance_viewing_arc": "date cut, institutional archive, distributed city, changing matter, intimate manuscript, remastered object, QR threshold, domestic afterimage",
+    "mobile_translation": "the date rule becomes a left spine, figures retain captions, headings scale down without clipping, and all source links keep 44px targets",
+    "mobbin_usability_constraint": "no hidden reading, no nested scroll, visible focus, stable anchors, source-image failure links, and complete no-JS access",
+    "quiet_ending": "a thin black closing rule and one unresolved sentence about what should be edited next",
+    "closing_palette": {"background":"#F1E8D5","foreground":"#161616","accent":"#A92F25","rationale":"Warm ledger paper holds the unresolved sentence while a restrained vermilion rule marks the edit still to come."}
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-24", "2026-08-25"],
+    "repeated_mechanisms": [],
+    "exception_reason": null
+  },
+  "stories": [
+    {
+      "id": "cartier-general-exhibition",
+      "level": "cover",
+      "title": "四十年，不该被压成一张年表",
+      "english": {
+        "title": "THE ARCHIVE CHANGES WITH THE ORDER",
+        "deck": "Four decades return as a new map, not a chronological proof of age.",
+        "abstract": "Fondation Cartier closes an inaugural exhibition of nearly 600 works by more than 100 artists on 23 August."
+      },
+      "sources": [
+        {
+          "title": "Exposition Générale",
+          "publisher": "Fondation Cartier pour l’art contemporain",
+          "url": "https://www.fondationcartier.com/programme/exposition/exposition-generale",
+          "published_date": null,
+          "event_date": "2025-10-25/2026-08-23"
+        },
+        {
+          "title": "Fondation Cartier 2026 programme",
+          "publisher": "Fondation Cartier pour l’art contemporain",
+          "url": "https://www.fondationcartier.com/storage/uploads/e400ddac-6566-4707-9dc9-3655ca2d9e07/FC_PR_2026_PROGRAMMING_EN.pdf",
+          "published_date": null,
+          "event_date": "2026-08-23"
+        }
+      ],
+      "image_credit": "Culture & Taste original information visual; official page did not expose a stable source image endpoint during verification",
+      "media": {
+        "asset": "assets/cartier-closing-ledger.svg",
+        "alt": "A blue closing ledger showing forty years, nearly six hundred works and more than one hundred artists",
+        "caption": "40 YEARS / ≈600 WORKS / 100+ ARTISTS / FINAL DAY",
+        "credit": "Original Culture & Taste information visual",
+        "kind": "data_diagram",
+        "origin_url": null,
+        "rights_basis": "owned_original"
+      }
+    },
+    {
+      "id": "rothko-three-florence-rooms",
+      "level": "major",
+      "title": "同一场 Rothko，故意不待在一栋楼里",
+      "english": {
+        "title": "ONE EXHIBITION, THREE ROOMS",
+        "deck": "The city becomes part of the viewing sequence.",
+        "abstract": "More than 70 works span Palazzo Strozzi, Museo di San Marco and Biblioteca Medicea Laurenziana through 23 August."
+      },
+      "sources": [
+        {
+          "title": "Mark Rothko",
+          "publisher": "Fondazione Palazzo Strozzi",
+          "url": "https://www.palazzostrozzi.org/en/exhibition/mark-rothko/",
+          "published_date": null,
+          "event_date": "2026-03-14/2026-08-23"
+        }
+      ],
+      "image_credit": "Fondazione Palazzo Strozzi source image preview / click through to source",
+      "media": {
+        "asset": "assets/rothko-three-rooms.svg",
+        "alt": "Mark Rothko No. 3 No. 13 as shown by the linked Palazzo Strozzi exhibition source",
+        "caption": "SOURCE IMAGE / click through to the official exhibition page",
+        "credit": "Fondazione Palazzo Strozzi · Preview-only external image",
+        "kind": "source_image",
+        "origin_url": "https://www.palazzostrozzi.org/en/exhibition/mark-rothko/",
+        "rights_basis": "preview_user_authorized_external",
+        "external_image_url": "https://www.palazzostrozzi.org/wp-content/uploads/2025/08/Mark-Rothko_No.3-No.13_MoMA-768x1017.jpg"
+      }
+    },
+    {
+      "id": "hammer-living-materials",
+      "level": "major",
+      "title": "有些材料，不负责永恒",
+      "english": {
+        "title": "MATERIALS KEEP THEIR OWN TIME",
+        "deck": "Avocado, cacao, cochineal and clay continue changing inside the museum.",
+        "abstract": "The Hammer’s 22-artist exhibition closes on 23 August while its living materials resist a fixed final form."
+      },
+      "sources": [
+        {
+          "title": "Several Eternities in a Day: Form in the Age of Living Materials",
+          "publisher": "Hammer Museum",
+          "url": "https://hammer.ucla.edu/exhibitions/2026/several-eternities-day-form-age-living-materials",
+          "published_date": null,
+          "event_date": "2026-04-05/2026-08-23"
+        }
+      ],
+      "image_credit": "Hammer Museum source image preview / click through to source",
+      "media": {
+        "asset": "assets/hammer-living-materials.svg",
+        "alt": "Installation image for Several Eternities in a Day from the linked Hammer Museum page",
+        "caption": "SOURCE IMAGE / click through to the official exhibition page",
+        "credit": "Hammer Museum · Preview-only external image",
+        "kind": "source_image",
+        "origin_url": "https://hammer.ucla.edu/exhibitions/2026/several-eternities-day-form-age-living-materials",
+        "rights_basis": "preview_user_authorized_external",
+        "external_image_url": "https://hammer.ucla.edu/sites/default/files/styles/hero_r_large/public/2026-03/SE_Web_Header.jpg?h=44b879e5&itok=UghAxff8"
+      }
+    },
+    {
+      "id": "walters-medieval-mindscapes",
+      "level": "signal",
+      "title": "一本小书，也能把人吸进另一个房间",
+      "english": {
+        "title": "SMALL BOOK, LARGE ROOM",
+        "deck": "Immersion existed before the screen grew large.",
+        "abstract": "Twenty manuscripts show how portraits, open scenes and marginal illusions invited readers into private devotional worlds."
+      },
+      "sources": [
+        {
+          "title": "Medieval Mindscapes",
+          "publisher": "The Walters Art Museum",
+          "url": "https://thewalters.org/exhibitions/medieval-mindscapes/",
+          "published_date": null,
+          "event_date": "2026-02-25/2026-08-23"
+        }
+      ],
+      "image_credit": "Culture & Taste original information visual; source site access was partial during image-endpoint verification",
+      "media": {
+        "asset": "assets/walters-mindscape.svg",
+        "alt": "An open manuscript creating a larger imagined room around it",
+        "caption": "SMALL BOOK / LARGE ROOM",
+        "credit": "Original Culture & Taste information visual",
+        "kind": "original_illustration",
+        "origin_url": null,
+        "rights_basis": "owned_original"
+      }
+    },
+    {
+      "id": "nike-kobe-10-halo",
+      "level": "signal",
+      "title": "Kobe 10 回来，要动的比外形更多",
+      "english": {
+        "title": "RETAIN / REMASTER",
+        "deck": "Recognition stays; mesh, cushioning and traction move forward.",
+        "abstract": "Nike lists the Kobe 10 Protro Halo for 23 August and documents the performance changes rather than presenting a simple reprint."
+      },
+      "sources": [
+        {
+          "title": "Kobe 10 Protro ‘Halo’ release",
+          "publisher": "Nike SNKRS",
+          "url": "https://www.nike.com/launch/t/kobe-10-protro-halo",
+          "published_date": null,
+          "event_date": "2026-08-23"
+        },
+        {
+          "title": "The Nike Kobe 10 Protro: Remastering the 2015 Design",
+          "publisher": "Nike",
+          "url": "https://www.nike.com/a/nike-kobe-10-protro-release-date-colorways",
+          "published_date": "2026-08-04",
+          "event_date": "2026-08-23"
+        }
+      ],
+      "image_credit": "Nike SNKRS source image preview / click through to source",
+      "media": {
+        "asset": "assets/nike-kobe-halo.svg",
+        "alt": "Nike Kobe 10 Protro Halo product image from the linked Nike SNKRS source",
+        "caption": "SOURCE IMAGE / click through to the official SNKRS release page",
+        "credit": "Nike · Preview-only external image",
+        "kind": "source_image",
+        "origin_url": "https://www.nike.com/launch/t/kobe-10-protro-halo",
+        "rights_basis": "preview_user_authorized_external",
+        "external_image_url": "https://static.nike.com/a/images/t_prod_ls/w_1920,c_limit/7851d79e-6142-49ee-8b61-9b9366c77159/kobe-10-protro-halo-io3415-100-release-date.jpg"
+      }
+    },
+    {
+      "id": "parco-dinosaur-qr",
+      "level": "signal",
+      "title": "东京把“看展”藏进十多个 QR 入口",
+      "english": {
+        "title": "BONE → PHONE → BODY",
+        "deck": "Stitched dinosaurs and QR layers keep their seams visible.",
+        "abstract": "Shibuya PARCO’s final-day exhibition combines wearable dinosaur sculptures with more than ten QR-triggered videos and AR moments."
+      },
+      "sources": [
+        {
+          "title": "下田昌克 恐竜人間展—骨とQRコード—",
+          "publisher": "Shibuya PARCO",
+          "url": "https://shibuya.parco.jp/event/detail/?id=848",
+          "published_date": null,
+          "event_date": "2026-07-25/2026-08-23"
+        },
+        {
+          "title": "CHAOS CULTURE GEEK",
+          "publisher": "FASHIONSNAP",
+          "url": "https://www.fashionsnap.com/article/2026-07-31/shibuyaparco-chaos-culture-geek/",
+          "published_date": "2026-07-31",
+          "event_date": "2026-08-07/2026-08-23"
+        }
+      ],
+      "image_credit": "FASHIONSNAP source image preview / click through to the supporting report",
+      "media": {
+        "asset": "assets/parco-qr-bones.svg",
+        "alt": "Shibuya PARCO Chaos Culture Geek campaign image from the linked FASHIONSNAP report",
+        "caption": "SOURCE IMAGE / click through to the supporting report; event facts use the official PARCO page",
+        "credit": "FASHIONSNAP · Preview-only external image",
+        "kind": "source_image",
+        "origin_url": "https://www.fashionsnap.com/article/2026-07-31/shibuyaparco-chaos-culture-geek/",
+        "rights_basis": "preview_user_authorized_external",
+        "external_image_url": "https://fashionsnap-assets.com/asset/format=auto,width=1280,height=670,gravity=auto,fit=pad/article/images/2026/07/b481bdb4-82d5-407c-932f-bd8d99241b61.jpg"
+      }
+    },
+    {
+      "id": "dka-blue-thresholds",
+      "level": "watch",
+      "title": "一道蓝色门框，把一百平方米分成几种速度",
+      "english": {
+        "title": "THE THRESHOLD DOES THE EDITING",
+        "deck": "Repeated blue joinery meets an existing brick-vault rhythm.",
+        "abstract": "A readers-submitted Designboom report offers a bounded visual observation, not proof of the architect’s stated intent."
+      },
+      "sources": [
+        {
+          "title": "Blue portals and brick vaults shape DKA’s apartment renovation in Rome",
+          "publisher": "Designboom",
+          "url": "https://www.designboom.com/architecture/blue-portals-and-brick-vaults-shape-dkas-apartment-renovation-in-rome/",
+          "published_date": "2026-08-23",
+          "event_date": null
+        }
+      ],
+      "image_credit": "Designboom source image preview / click through to source",
+      "media": {
+        "asset": "assets/dka-blue-thresholds.svg",
+        "alt": "DKA A12 apartment interior image with blue thresholds from the linked Designboom report",
+        "caption": "SOURCE IMAGE / readers-submitted project report; click through to source",
+        "credit": "Designboom / images courtesy of DKA · Preview-only external image",
+        "kind": "source_image",
+        "origin_url": "https://www.designboom.com/architecture/blue-portals-and-brick-vaults-shape-dkas-apartment-renovation-in-rome/",
+        "rights_basis": "preview_user_authorized_external",
+        "external_image_url": "https://www.designboom.com/twitterimages/dbsub/463105/2026-08-18/a-contemporary-interior-defined-by-colour-rhythm-and-identity-3-6a846681626f3.jpg"
+      }
+    }
+  ],
+  "rights_summary": {
+    "required_assets": 7,
+    "unknown_required_assets": 5,
+    "status": "blocked"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": null
+  },
+  "evidence_refs": {
+    "technical": [],
+    "editorial_visual": [],
+    "gate": []
+  },
+  "qa": {
+    "html_parse": "pass",
+    "assets": "pass",
+    "internal_links": "pass",
+    "no_js_reading": "pass",
+    "accessibility": "pass",
+    "desktop_render": "pass",
+    "mobile_render": "pass",
+    "reduced_motion": "pass"
+  },
+  "limitations": [
+    "This issue is a retrospective non-production Preview: publication date is 2026-08-23, while research and content work are truthfully timestamped on 2026-08-24 after the canonical production window.",
+    "Manifest status and QA fields are reporting only and cannot authorize deployment.",
+    "Five source-image previews are displayed from publisher-hosted endpoints with click-through attribution; they are user-authorized for Preview display only and remain blocked for production rights.",
+    "The Fondation Cartier and Walters stories use original local information visuals because stable official source-image endpoints were not safely available during verification.",
+    "Designboom labels the DKA article as a readers submission; the issue separates page observation from any unsupported claim about the architect’s intent.",
+    "No qualifying new luxury-house runway event was added merely to satisfy a category quota, and 2026-08-24 Supreme, Stüssy and TMEX coverage was not repeated."
+  ]
+}
