@@ -1,0 +1,143 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-09-11",
+  "publication_date": "2026-09-11",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-09-11T11:05:00+08:00",
+  "research_locked_at": "2026-09-11T11:42:00+08:00",
+  "content_locked_at": "2026-09-11T11:42:00+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "553fd7a867fef07e5de8ac1a3c66a1390b717c8566fcf1e888a1dce6a22393a0",
+    "locked_at": "2026-09-11T11:42:00+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "553fd7a867fef07e5de8ac1a3c66a1390b717c8566fcf1e888a1dce6a22393a0",
+    "art_direction_sha256": "5d53dc5c95d980a067c4a317b5d764da600ccda1bf95a49e956e49db842c39c6",
+    "issue_style_sha256": "1690d23029f7fbe677170d308dfd663d08cc395862bc7a997df7f8efae849d12"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-09-11T10:32:00+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "入口从来不是中性的。座位、说明、时间、版本、材质与编排，会先于作品本身告诉你应该怎样靠近它；今天值得看的，是谁把进入条件写进作品的基础设施。",
+  "art_direction": {
+    "dominant_mood": "暖纸色底上的深墨绿、朱砂红和酸橙线，像一张把入口、休息点与身体路径标出来的现场平面图",
+    "background_logic": "页面不再模拟被观看的对象，而把入口画成一种可读的基础设施：错开的门框、短促的定位线和留给身体的空白共同组成路线；不复用最近七期的门槛、曲线、物件/参与关系图、测量脊、证明表、脚手架、日历轴、节目单轨道或孔径窗口。",
+    "palette_logic": "warm paper #F3E9DC, deep ink #123C3A, vermilion #E45B3C, acid lime #B7CF73, graphite #1D2422；纸色承载阅读，墨绿负责结构，朱砂只标记动作，酸橙只标记入口和停顿，不把低对比装饰色交给正文。",
+    "type_scale_logic": "标题像贴在门口的方向牌，正文保持 18px；编号采用等宽字贴近路径边缘，英文只承担标题、deck 与 abstract。",
+    "image_behavior": "六张一手官方媒体以 Preview 外链显示；C/O Berlin 的官方编辑许可已单独核验，并保留一份本地回退图；所有图片都保留来源回链，外图失败时回到本地原创非纪实入口图。",
+    "page_density_and_tempo": "封面先给一条断开的进入路线，正文从休息与触摸的基础设施开始，经过图像展览的开场、运动服的集体画面、专辑的可编辑版本，再进入漫画展与深圳的跨传统音乐编排，最后把路线留空。",
+    "core_visual_action": "用错位的门框和有意留出的空白，让读者先看到入口条件，再看到对象本身；每个故事都像路线图上的一个可停靠节点，而不是被连成单一轨道。",
+    "cover_composition": "纸色底上叠放四个不对齐的深墨绿门框，朱砂红标记一个刚被打开的转角，酸橙线只指向下一步，深色短线把路线切断而不闭合成迷宫。",
+    "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 提供可关闭的 route notes，正文、事实、来源和外图回链不依赖 JavaScript。",
+    "behance_viewing_arc": "先进入一个愿意让人坐下的展览，再看 C/O Berlin 如何为图像安排开场，转到 Simone Rocha 把运动鞋放进集体画面，听 Sylvan Esso 把专辑交付成一套可继续工作的格式，最后在京都和深圳看不同传统如何找到公共入口。",
+    "mobile_translation": "390px 下门框压缩为左侧连续的错位竖线，朱砂转角变成边缘标签，正文保持单列，图片说明与长链接允许自然换行。",
+    "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点可见，长链接换行，外图失败不隐藏来源，移动端无横向滚动；装饰路径不覆盖正文和图片说明。",
+    "quiet_ending": "退出处只保留一条没有箭头的酸橙短线和一块空纸色，让读者判断下一步是否需要亲自进入。",
+    "closing_quotation": {"id":"ct-en-008","language":"en","text":"An entrance is already an editorial decision.","credit":"Culture & Taste Editorial"},
+    "closing_palette": {"background":"#F3E9DC","foreground":"#123C3A","accent":"#C84B30","rationale":"暖纸色与深墨绿构成稳定的长文对比，深朱砂只承担行动提示；酸橙用于稀疏结构标记，避免让小字号文字承受低对比装饰色。"}
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": ["2026-09-04","2026-09-05","2026-09-06","2026-09-07","2026-09-08","2026-09-09","2026-09-10"],
+    "repeated_mechanisms": ["accessible section index","first-party source image with linked fallback"],
+    "exception_reason": "可访问索引与一手来源图是固定约束；本期改用暖纸色入口地图、错位门框、断开的路径与休息空白作为核心构图，没有复用最近七期的门槛线、互穿曲线、物件/参与关系图、测量脊、证明表、脚手架、日历刻度、节目单轨道或孔径窗口。"
+  },
+  "stories": [
+    {
+      "id": "finnegan-shannon-no-me-without-you-2026",
+      "level": "cover",
+      "title": "Finnegan Shannon：先让作品来到你身边",
+      "sources": [
+        {"title":"There's no me without you","publisher":"Pioneer Works","url":"https://pioneerworks.org/exhibitions/finnegan-shannon-there-is-no-me-without-you","published_date":null,"event_date":"2026-09-12/2026-12-20","relationship":"first_party_official"},
+        {"title":"Pioneer Works Calendar","publisher":"Pioneer Works","url":"https://pioneerworks.org/calendar","published_date":null,"event_date":"2026-09-11","relationship":"first_party_official"}
+      ],
+      "image_credit": "Pioneer Works / artist courtesy · Preview-linked",
+      "english": {"title":"LET THE WORK COME TO YOU","deck":"Finnegan Shannon turns exhibition access into a conveyor-belt infrastructure for rest, touch, sight and sound.","abstract":"Pioneer Works opens There's no me without you on 12 September, with a 12-foot mechanized conveyor belt carrying artworks toward seated visitors. Its access statement makes rest, touch and audio description part of the exhibition's operating conditions."},
+      "media": {"asset":"assets/entry-map.svg","alt":"Finnegan Shannon There’s no me without you 官方展览页面的入口地图占位图","caption":"Pioneer Works 官方展览页；本地入口地图为原创非纪实占位，打开来源查看展览结构与 access statement。","credit":"Pioneer Works · Preview-linked official image","kind":"source_image","origin_url":"https://pioneerworks.org/exhibitions/finnegan-shannon-there-is-no-me-without-you","external_image_url":"https://cdn.sanity.io/images/vgvol637/production/528f7260d28617154b523ed55a2a88c251807ffa-1000x667.jpg?w=2000","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id": "carrie-mae-weems-heart-of-matter-2026",
+      "level": "major",
+      "title": "Carrie Mae Weems：图像先有一个公共地址",
+      "sources": [
+        {"title":"Press material: Carrie Mae Weems . The Heart of the Matter","publisher":"C/O Berlin","url":"https://co-berlin.org/en/press/press-material-carrie-mae-weems","published_date":null,"event_date":"2026-09-12/2027-02-03","relationship":"first_party_official"}
+      ],
+      "image_credit": "© Carrie Mae Weems and reproduced courtesy the artist and Gladstone, New York, Fraenkel Gallery, San Francisco, and Galerie Barbara Thumm, Berlin; C/O Berlin",
+      "english": {"title":"AN IMAGE NEEDS A PUBLIC ADDRESS","deck":"Carrie Mae Weems enters C/O Berlin with an exhibition whose image conditions are part of the invitation.","abstract":"C/O Berlin opens The Heart of the Matter on 11 September before the exhibition runs from 12 September to 3 February. Its press material makes artist, exhibition, copyright and editorial-use conditions explicit."},
+      "media": {"asset":"assets/carrie-mae-weems.jpg","alt":"Carrie Mae Weems Painting the Town 4, 2021, from The Heart of the Matter at C/O Berlin","caption":"Untitled (Man Reading Newspaper), 1990; from the Kitchen Table Series. C/O Berlin 的官方 Press Material 规定编辑报道使用、署名及不得裁切条件。","credit":"© Carrie Mae Weems and reproduced courtesy the artist and Gladstone, New York, Fraenkel Gallery, San Francisco, and Galerie Barbara Thumm, Berlin; C/O Berlin","kind":"source_image","origin_url":"https://co-berlin.org/en/press/press-material-carrie-mae-weems","external_image_url":"https://co-berlin.org/sites/default/files/styles/ct_press_kit_download/public/2026-08/01_Carrie_Mae_Weems_Painting_the_Town_4_2021_The_Heart_of_the_Matter.jpg?itok=SCi6yXDe","rights_basis":"preview_user_authorized_external","origin_authority":"first_party_official"}
+    },
+    {
+      "id": "adidas-simone-rocha-fw26-2026",
+      "level": "major",
+      "title": "adidas × Simone Rocha：运动语言被放进共同画面",
+      "sources": [
+        {"title":"adidas Originals and Simone Rocha Introduce their Fall/Winter 2026 Collection","publisher":"adidas","url":"https://news.adidas.com/originals/adidas-originals-and-simone-rocha-introduce-their-fall-winter-2026-collection/s/2f9928fa-e59e-4da9-9735-2979c41b4de3","published_date":"2026-09-03","event_date":"2026-09-10","relationship":"first_party_official"},
+        {"title":"Simone Rocha and adidas Originals","publisher":"AnOther","url":"https://www.anothermag.com/fashion-beauty/17433/simone-rocha-interview-adidas-originals-another-magazine-autumn-winter-2026","published_date":"2026-09-10","event_date":"2026-09-10","relationship":"independent_reporting"}
+      ],
+      "image_credit": "adidas Originals / Justine Kurland · Preview-linked",
+      "english": {"title":"SPORT ENTERS THE GROUP PICTURE","deck":"Simone Rocha places adidas Originals icons inside a campaign built from intimacy, gesture and collective scene.","abstract":"The Fall/Winter 2026 adidas Originals by Simone Rocha collection launched globally on 10 September. adidas describes its film as moving from close portraits to a wider shared landscape; the editorial reading stays with that change of entry."},
+      "media": {"asset":"assets/entry-map.svg","alt":"adidas Originals by Simone Rocha Fall Winter 2026 官方 campaign 图片占位图","caption":"adidas 官方发布页；本地入口地图为原创非纪实占位，打开来源查看系列、campaign 与发售日期。","credit":"adidas Originals / Justine Kurland · Preview-linked official image","kind":"source_image","origin_url":"https://news.adidas.com/originals/adidas-originals-and-simone-rocha-introduce-their-fall-winter-2026-collection/s/2f9928fa-e59e-4da9-9735-2979c41b4de3","external_image_url":"https://preview.thenewsmarket.com/Previews/ADID/StillAssets/320x320/730933_v2.jpg","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id": "sylvan-esso-ow-2026",
+      "level": "major",
+      "title": "Sylvan Esso：一张专辑交付成一套可继续工作的格式",
+      "sources": [
+        {"title":"Ow ∞","publisher":"Sylvan Esso / Bandcamp","url":"https://sylvanesso.bandcamp.com/album/ow","published_date":null,"event_date":"2026-09-11","relationship":"first_party_official"},
+        {"title":"Sylvan Esso Line Up New Album Ow ∞","publisher":"Pitchfork","url":"https://pitchfork.com/story/sylvan-esso-line-up-new-album-ow/","published_date":"2026-07-21","event_date":"2026-09-11","relationship":"independent_reporting"},
+        {"title":"Sylvan Esso on the making of Ow ∞","publisher":"MusicRadar","url":"https://www.musicradar.com/artists/it-feels-like-the-most-us-thing-weve-ever-done-suno-isnt-coming-up-with-that-anytime-soon-sylvan-esso-on-the-making-of-ow-their-self-built-bettys-studio-and-why-they-pulled-their-music-from-spotify","published_date":"2026-08-06","event_date":"2026-09-11","relationship":"independent_reporting"}
+      ],
+      "image_credit": "Sylvan Esso / Eric Timothy Carlson · Preview-linked",
+      "english": {"title":"A RECORD THAT LEAVES THE PARTS OUT","deck":"Sylvan Esso release Ow ∞ with stems, instrumentals, booklets and physical editions that keep the format open.","abstract":"Ow ∞ releases on 11 September through Sylvan Esso's official Bandcamp. Its deluxe digital edition includes stems, instrumentals, a lyric booklet, images and posters; the album's wider context comes from Pitchfork and MusicRadar."},
+      "media": {"asset":"assets/entry-map.svg","alt":"Sylvan Esso Ow infinity 官方专辑封面占位图","caption":"Sylvan Esso 官方 Bandcamp 页面；本地入口地图为原创非纪实占位，打开来源查看发行格式与版本信息。","credit":"Sylvan Esso / Eric Timothy Carlson · Preview-linked official image","kind":"source_image","origin_url":"https://sylvanesso.bandcamp.com/album/ow","external_image_url":"https://f4.bcbits.com/img/a0712120107_5.jpg","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id": "kyoto-yoake-no-uta-two-million-stars-2026",
+      "level": "signal",
+      "title": "京都《夜明けの唄》：纸上的关系先被带进房间",
+      "sources": [
+        {"title":"Lullaby of the Dawn Exhibition [Two Million Stars]","publisher":"Kyoto International Manga Museum","url":"https://kyotomm.jp/en/ee/yoakenouta/","published_date":null,"event_date":"2026-09-11/2026-10-27","relationship":"first_party_official"}
+      ],
+      "image_credit": "©Yuno Ichika／ShuCream · Preview-linked",
+      "english": {"title":"A PAGE ENTERS THE ROOM","deck":"Kyoto International Manga Museum moves Yoake no uta from page rhythm into a small exhibition with images, materials and live drawing.","abstract":"The Kyoto International Manga Museum presents Two Million Stars from 11 September to 27 October. The official page lists full-colour illustrations, digital artwork printouts, related materials and a live drawing by Yuno Ichika."},
+      "media": {"asset":"assets/entry-map.svg","alt":"Lullaby of the Dawn Two Million Stars 京都国际漫画博物馆官方展览图片占位图","caption":"京都国际漫画博物馆官方展览页；本地入口地图为原创非纪实占位，打开来源查看展期、展品类型与入场条件。","credit":"©Yuno Ichika／ShuCream · Preview-linked official image","kind":"source_image","origin_url":"https://kyotomm.jp/en/ee/yoakenouta/","external_image_url":"https://kyotomm.jp/dwp/wp-content/uploads/2026/07/yoakenouta_sp.jpg","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id": "shenzhen-belt-road-music-season-2026",
+      "level": "signal",
+      "title": "深圳“一带一路”国际音乐季：把不同传统排进同一晚",
+      "sources": [
+        {"title":"深圳“一带一路”国际音乐季9月11日在龙岗启幕","publisher":"深圳市人民政府门户网站","url":"https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12923613.html","published_date":"2026-08-05","event_date":"2026-09-11","relationship":"first_party_official"}
+      ],
+      "image_credit": "深圳市人民政府门户网站 · Preview-linked",
+      "english": {"title":"ONE NIGHT, SEVERAL MUSICAL ENTRANCES","deck":"Shenzhen's Belt and Road Music Season places classics, a commissioned work and a city symphonic story in one opening programme.","abstract":"The Shenzhen government portal confirms the 11 September opening at Longgang International Arts Center, with Pretty Yende, Wang Kang, Lin Daye and Shenzhen Symphony Orchestra. The programme moves from Smetana to a commissioned suona concerto and Shenzhen Story."},
+      "media": {"asset":"assets/entry-map.svg","alt":"深圳一带一路国际音乐季官方开幕演出图片占位图","caption":"深圳市人民政府门户网站官方活动报道；本地入口地图为原创非纪实占位，打开来源查看阵容、场地与节目单。","credit":"深圳市人民政府门户网站 · Preview-linked official image","kind":"source_image","origin_url":"https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12923613.html","external_image_url":"https://www.sz.gov.cn/img/4/4468/4468889/12923613.jpg","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    }
+  ],
+  "rights_summary": {"required_assets":6,"unknown_required_assets":6,"status":"blocked"},
+  "artifact_digests": {"issue_payload_sha256":null},
+  "evidence_refs": {"technical":[],"editorial_visual":[],"gate":[]},
+  "qa": {"html_parse":"pass","assets":"pass","internal_links":"pass","no_js_reading":"pass","desktop_render":"pass","mobile_render":"pass","reduced_motion":"pass"},
+  "limitations": [
+    "Non-production Preview candidate only; this manifest cannot authorize production deployment.",
+    "Canonical private GUAiZzz/harry-tone main was verified at pinned commit 13cd6b7046bd81be396810d2923f3a5dc818e93f; no private material enters this repository.",
+    "Six selected stories use externally hosted first-party official images. Reuse rights remain unknown, so candidate status stays BLOCKED and Preview displays source links with a local non-documentary fallback; C/O Berlin's retained local press copy is additionally restricted to the official editorial-use terms.",
+    "All five regional lanes, the full 99-subject registry quick scan, the luxury_runway focus cohort, Thursday standing beats and the prior-two-issue lookback were checked; the public radar contains 10 distinct items with at least two per category.",
+    "Named editorial, visual and rights review remains unresolved; the owner's current task authorizes the existing non-production Preview only after technical and privacy gates pass."
+  ]
+}
