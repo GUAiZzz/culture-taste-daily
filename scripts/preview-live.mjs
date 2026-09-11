@@ -10,7 +10,12 @@ const origin = 'https://guaizzz.github.io/culture-taste-daily/';
 const transport = createLiveTransport();
 const get = transport.get;
 try {
-const stamp = JSON.parse((await get('preview-release.json')).toString('utf8'));
+let stamp;
+for(let attempt=0;attempt<8;attempt++){
+ stamp=JSON.parse((await get('preview-release.json')).toString('utf8'));
+ if(stamp.source_commit===values.sha)break;
+ if(attempt<7)await new Promise(resolve=>setTimeout(resolve,5000));
+}
 if (stamp.repository !== REPOSITORY || stamp.source_commit !== values.sha || !DIGEST.test(stamp.artifact_digest ?? '')) throw new Error('LIVE_IDENTITY_MISMATCH');
 if (!stamp.files || typeof stamp.files !== 'object' || Array.isArray(stamp.files) || digestMap(stamp.files) !== stamp.artifact_digest) throw new Error('LIVE_MANIFEST_DIGEST_MISMATCH');
 if (Object.keys(stamp.files).some(file => file.includes('..') || file.startsWith('/') || file.includes('\\') || !DIGEST.test(stamp.files[file]))) throw new Error('LIVE_FILE_SCOPE');
@@ -23,9 +28,20 @@ for (const file of targets) {
   const bytes = await get(file);
   const hash = createHash('sha256').update(bytes).digest('hex');
   if (hash !== stamp.files[file]) throw new Error(`LIVE_CONTENT_MISMATCH ${file}`);
-  if (!/noindex/.test(bytes.toString()) || !bytes.toString().includes(date)) throw new Error(`LIVE_PREVIEW_LABEL_OR_DATE ${file}`);
+  const formal=(stamp.approved_routes??[]).includes(file);
+  if ((formal ? !bytes.toString().includes('PUBLISHED EDITION') || /noindex/.test(bytes.toString()) : !/noindex/.test(bytes.toString())) || !bytes.toString().includes(file==='index.html'&&stamp.published_issue?stamp.published_issue:date)) throw new Error(`LIVE_PREVIEW_LABEL_OR_DATE ${file}`);
 }
-const receipt = { state: 'PREVIEW_DEPLOYED', production_eligible: false, source_commit: values.sha,
+if(stamp.published_issue){
+ const descriptorBytes=await get('production-release.json');
+ if(createHash('sha256').update(descriptorBytes).digest('hex')!==stamp.files['production-release.json'])throw Error('LIVE_PUBLICATION_IDENTITY');
+ const publication=JSON.parse(descriptorBytes);
+ if(publication.latest_issue!==stamp.published_issue)throw Error('LIVE_APPROVED_DATE');
+ for(const asset of publication.media){
+  if(stamp.files[asset.path]!==asset.sha256)throw Error('LIVE_ASSET_REGISTRY');
+  if(createHash('sha256').update(await get(asset.path)).digest('hex')!==asset.sha256)throw Error('LIVE_OFFICIAL_IMAGE '+asset.path);
+ }
+}
+const receipt = { state: stamp.published_issue?'PUBLICATION_DEPLOYED':'PREVIEW_DEPLOYED', published_issue:stamp.published_issue??null, production_eligible: Boolean(stamp.published_issue), source_commit: values.sha,
   artifact_digest: stamp.artifact_digest, date, verified_at: new Date().toISOString(), routes: targets, origin,
   transport_fallbacks: transport.events };
 await mkdir('.stage4/operations', { recursive: true });
