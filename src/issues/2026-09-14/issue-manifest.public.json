@@ -1,0 +1,143 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-09-14",
+  "publication_date": "2026-09-14",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-09-14T10:57:13+08:00",
+  "research_locked_at": "2026-09-14T10:57:13+08:00",
+  "content_locked_at": "2026-09-14T10:57:13+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "b71a3ed82539ba097709998bd582c2df6359bc6451da8d888ca6aa0fc7790d97",
+    "locked_at": "2026-09-14T10:57:13+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "b71a3ed82539ba097709998bd582c2df6359bc6451da8d888ca6aa0fc7790d97",
+    "art_direction_sha256": "751bac1d8c3fe79db2ef324d02a39f10e6f11d26b2dbd25312762332ffcfb2a3",
+    "issue_style_sha256": "b9b91014d8ebda990b967e7656fbb8327d08a7146e5909c1319d8519e3e09fa7"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-09-14T10:57:13+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "规模不是最后再加上的数字。它会改变作品怎么被生产、怎么被组织、怎么被观看，也会暴露一个计划真正依赖什么：许可、场地、动线、材料链，还是一个城市愿不愿意把自己的公共表面借出来。今天值得看的，不是谁把场面做得更大，而是谁在限制出现之后，重新选择了一个仍然能工作的尺度。",
+  "art_direction": {
+    "dominant_mood": "浅灰纸面上的钴蓝、砖红与荧光黄，像把场地、材料链和城市屏幕压在同一张工作台上",
+    "background_logic": "页面不模拟任何单一活动，而把尺度当作可拆装的构件：窄长矩形、压缩网格、局部放大的刻度和被截断的边界共同提示不同规模之间的转换；不复用最近七期的门槛线、互穿曲线、关系图、测量脊、证明表、脚手架、日历轴、节目单轨道或孔径窗口。",
+    "palette_logic": "mist #E7E7E2, cobalt #1246A0, brick #B84735, fluorescent yellow #D9FF55, graphite #202326；灰底承载长文，钴蓝标记系统，砖红标记风险与转向，荧光黄只标记尺度读数，不把装饰色交给正文小字号。",
+    "type_scale_logic": "标题像贴在运输箱上的尺寸标签，正文保持 18px；编号采用等宽字，英文只承担标题、deck 与 abstract，长标题允许自然断行。",
+    "image_behavior": "六张一手官方媒体以 Preview 外链显示；所有复用权利仍未知，保留来源回链和本地原创非纪实尺度图；外图失败时不隐藏来源，回退图只说明结构，不冒充现场。",
+    "page_density_and_tempo": "封面先给一个被压缩的尺度场，正文从场地变更进入展会总量，再缩到材料链，扩散进博物馆动线，最后落到城市屏幕与地方影像；每一段留出可读的空白，不把六个故事串成单一成功叙事。",
+    "core_visual_action": "用不同宽度的蓝色矩形互相挤压，再以砖红短线标出许可、材料、场地和屏幕的转换点；读者看到的是尺度如何被重新分配，而不是一个被装饰的数字。",
+    "cover_composition": "灰纸底上叠放三组宽度不同的蓝色矩形，最窄的一组被砖红线切开，荧光黄刻度穿过中段但不闭合；标题占据左侧，右侧留出一块像空展馆的白场。",
+    "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 只提供可关闭的尺度注记，正文、事实和外图回链不依赖 JavaScript。",
+    "behance_viewing_arc": "先看一个被许可与场地改写的音乐节，再进入四馆七区的设计展会，缩到材料链，沿博物馆动线游走，最后站到纽约屏幕和大阪街道前。",
+    "mobile_translation": "390px 下宽矩形折叠为左侧的蓝色尺寸栏，砖红转向点变成边缘标记，荧光黄刻度只出现在标题与索引附近；正文单列，图片说明与长链接自然换行。",
+    "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点可见，长链接换行，外图失败不隐藏来源，移动端无横向滚动；尺度装饰不覆盖正文和图片说明。",
+    "quiet_ending": "退出处只留下三条不同长度的蓝线和一小段荧光黄刻度，不给箭头，让读者把数字还给真实空间。",
+    "closing_quotation": {"id":"ct-en-004","language":"en","text":"Newness begins where an object becomes usable.","credit":"Culture & Taste Editorial"},
+    "closing_palette": {"background":"#E7E7E2","foreground":"#202326","accent":"#1246A0","rationale":"浅灰与石墨构成长文阅读底，钴蓝承担结构信息，砖红只提示风险和转向，荧光黄保留给少量刻度与结束动作。"}
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": ["2026-09-04","2026-09-05","2026-09-06","2026-09-07","2026-09-08","2026-09-09","2026-09-10","2026-09-11"],
+    "repeated_mechanisms": ["accessible section index","first-party source image with linked fallback"],
+    "exception_reason": "可访问索引与一手来源图是固定约束；本期改用不同宽度的尺度场、压缩网格、断裂边界与局部刻度作为核心构图，讨论规模如何被许可、材料、博物馆动线和城市表面重新分配，没有复用最近七期的门槛线、互穿曲线、关系图、测量脊、证明表、脚手架、日历轴、节目单轨道或孔径窗口。"
+  },
+  "stories": [
+    {
+      "id": "waterworks-extended-2026",
+      "level": "cover",
+      "title": "Waterworks Extended：一座公园被压进七个空间",
+      "sources": [
+        {"title":"Waterworks Festival","publisher":"Waterworks","url":"https://waterworksfestival.co.uk/","published_date":null,"event_date":"2026-09-12/2026-09-13","relationship":"first_party_official"},
+        {"title":"Venue change announcement","publisher":"Waterworks","url":"https://waterworksfestival.co.uk/venue-change","published_date":null,"event_date":"2026-09-12/2026-09-13","relationship":"first_party_official"}
+      ],
+      "image_credit": "Waterworks Festival · Preview-linked",
+      "english": {"title":"A PARK, PRESSED INTO SEVEN ROOMS","deck":"Waterworks changes venue, duration and spatial rhythm without pretending that planning constraints are invisible.","abstract":"After planning permission blocked the original Gunnersbury Park plan, Waterworks moved to The Cause for a one-off 36-hour event across seven spaces on 12–13 September. Tickets remained valid and refunds were offered; the story is about the material scale of keeping a promise."},
+      "media": {"asset":"assets/scale-field.svg","alt":"Waterworks Extended 官方活动页面的尺度场原创占位图","caption":"Waterworks 官方活动与场地变更页面；本地尺度场为原创非纪实占位，打开来源查看迁址、时长、空间与票务安排。","credit":"Waterworks Festival · Preview-linked official image","kind":"source_image","origin_url":"https://waterworksfestival.co.uk/venue-change","external_image_url":"https://waterworksfestival.co.uk/_app/immutable/assets/ww26-cause-bg.DG0HuUXf.png","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id": "maison-objet-pulse-2026",
+      "level": "major",
+      "title": "Maison＆Objet Pulse：1700 个品牌如何被编排成“运动”",
+      "sources": [
+        {"title":"Visit the fair · Maison&Objet Pulse September 2026","publisher":"Maison&Objet","url":"https://www.maison-objet.com/en/paris/visit","published_date":null,"event_date":"2026-09-10/2026-09-14","relationship":"first_party_official"},
+        {"title":"Pulse in Motion","publisher":"Maison&Objet","url":"https://www.maison-objet.com/en/paris/program/pulse-in-motion","published_date":null,"event_date":"2026-09-10/2026-09-14","relationship":"first_party_official"}
+      ],
+      "image_credit": "Maison&Objet / Studio Masquespacio · Preview-linked",
+      "english": {"title":"1700 BRANDS, ARRANGED AS MOTION","deck":"Maison&Objet turns a four-hall trade fair into a navigable pulse across seven design universes.","abstract":"Maison&Objet Pulse runs from 10–14 September in Paris Nord Villepinte, with 1700 brands, 49 countries, 450 new brands and seven sectors across four halls. Its scale is not just attendance; it is an editorial and navigation problem."},
+      "media": {"asset":"assets/scale-field.svg","alt":"Maison&Objet Pulse 2026 官方展会图片的尺度场原创占位图","caption":"Maison&Objet 官方展会页；本地尺度场为原创非纪实占位，打开来源查看品牌数量、展馆、分区与 Pulse in Motion 主题。","credit":"Maison&Objet / Studio Masquespacio · Preview-linked official image","kind":"source_image","origin_url":"https://www.maison-objet.com/en/paris/visit","external_image_url":"https://mo-production-public.s3.eu-west-3.amazonaws.com/s3fs-public/2026-03/670x485_image_KV-PulseInMotion-MasquespacioS26.jpg","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id": "future-matter-crafting-sustainable-futures-2026",
+      "level": "major",
+      "title": "Future Matter：把一件物品的生命缩回材料链",
+      "sources": [
+        {"title":"Future Matter: Crafting Sustainable Futures","publisher":"London Design Festival / Nest – A Lab","url":"https://londondesignfestival.com/activities/future-matter-crafting-sustainable-futures","published_date":null,"event_date":"2026-09-12/2026-09-14","relationship":"first_party_official"},
+        {"title":"Future Matter: Crafting Sustainable Futures press release","publisher":"Nest – A Lab","url":"https://ldf.fra1.cdn.digitaloceanspaces.com/pressrelease/1002/file/759ca157e8801f730a7d80d0562de3f3.pdf","published_date":null,"event_date":"2026-09-12/2026-09-14","relationship":"first_party_official"}
+      ],
+      "image_credit": "London Design Festival / Nest – A Lab · Preview-linked",
+      "english": {"title":"SHRINK AN OBJECT BACK TO ITS MATERIAL CHAIN","deck":"Future Matter follows objects from sourcing and experimentation to making, craft and everyday use.","abstract":"Future Matter is a free exhibition at ASC Handbag Factory from 12–14 September, presented by Nest – A Lab as part of London Design Festival. Nine makers and researchers turn an object's journey into the exhibition's organising scale."},
+      "media": {"asset":"assets/scale-field.svg","alt":"Future Matter 官方材料展图片的尺度场原创占位图","caption":"London Design Festival 官方 Future Matter 页面；本地尺度场为原创非纪实占位，打开来源查看材料、对象、原型与免费展览信息。","credit":"London Design Festival / Nest – A Lab · Preview-linked official image","kind":"source_image","origin_url":"https://londondesignfestival.com/activities/future-matter-crafting-sustainable-futures","external_image_url":"https://ldf.fra1.cdn.digitaloceanspaces.com/activityimage/10793/image/cropped-xl-98be1074ace0c40e54155e861349245f.jpg","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id": "va-awakenings-2026",
+      "level": "major",
+      "title": "V＆A x LDF: Awakenings：把节展拆进博物馆的动线",
+      "sources": [
+        {"title":"V&A x LDF: Awakenings","publisher":"Victoria and Albert Museum","url":"https://www.vam.ac.uk/festival/2026/london-design-festival-2026","published_date":null,"event_date":"2026-09-12/2026-10-18","relationship":"first_party_official"},
+        {"title":"V&A What's On · 14 September 2026","publisher":"Victoria and Albert Museum","url":"https://www.vam.ac.uk/whatson/2026/09/14/day","published_date":null,"event_date":"2026-09-14","relationship":"first_party_official"}
+      ],
+      "image_credit": "© Victoria and Albert Museum, London · Preview-linked",
+      "english": {"title":"A FESTIVAL CUT INTO THE MUSEUM ROUTE","deck":"V&A x LDF: Awakenings distributes design, craft and technology across an existing museum path.","abstract":"Awakenings runs from 12 September to 18 October at V&A South Kensington. Its official programme spreads installations and interventions through the museum, with a 25-minute trail and events including a Global Design Forum and Craft x Tech workshop on 14 September."},
+      "media": {"asset":"assets/scale-field.svg","alt":"V&A x LDF Awakenings 官方节展图片的尺度场原创占位图","caption":"V&A 官方 Awakenings 页面；本地尺度场为原创非纪实占位，打开来源查看展陈节点、trail 与 9 月 14 日活动。","credit":"© Victoria and Albert Museum, London · Preview-linked official image","kind":"source_image","origin_url":"https://www.vam.ac.uk/festival/2026/london-design-festival-2026","external_image_url":"https://assets-cdn.vam.ac.uk/2026/08/26/09/13/00/00d9cc41-11ad-44f0-b680-2d62e23c2836/320.jpg","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id": "nyfw-live-rockefeller-center-2026",
+      "level": "signal",
+      "title": "NYFW Live at Rockefeller Center：秀场先成为城市屏幕",
+      "sources": [
+        {"title":"NYFW Live at Rockefeller Center Returns with Partner Genesys","publisher":"Council of Fashion Designers of America","url":"https://cfda.com/news/nyfw-live-at-rockefeller-center-returns-with-partner-genesys/","published_date":"2026-09-09","event_date":"2026-09-10/2026-09-15","relationship":"first_party_official"}
+      ],
+      "image_credit": "CFDA / Rockefeller Center · Preview-linked",
+      "english": {"title":"THE RUNWAY BECOMES A CITY SCREEN","deck":"NYFW Live turns a 27-by-28-foot Rockefeller Center screen into a public front row for six days.","abstract":"CFDA confirms NYFW Live at Rockefeller Center will run from 10–15 September on a large screen at The Rink, streaming shows from American designers and brands. The format adds a chance encounter to the tightly scheduled runway system."},
+      "media": {"asset":"assets/scale-field.svg","alt":"NYFW Live at Rockefeller Center 官方图片的尺度场原创占位图","caption":"CFDA 官方报道；本地尺度场为原创非纪实占位，打开来源查看屏幕尺寸、日期与参与品牌。","credit":"CFDA / Rockefeller Center · Preview-linked official image","kind":"source_image","origin_url":"https://cfda.com/news/nyfw-live-at-rockefeller-center-returns-with-partner-genesys/","external_image_url":"https://cfda.com/wp-content/uploads/2026/09/IMG_6156-scaled.jpeg","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id": "stussy-osaka-kris-burkhardt-2026",
+      "level": "signal",
+      "title": "Stüssy Osaka：把店铺变成一个地方的观看单位",
+      "sources": [
+        {"title":"News · OSAKA BY KRIS BURKHARDT","publisher":"Stüssy","url":"https://www.stussy.com/blogs/news","published_date":"2026-09-09","event_date":"2026-09-09","relationship":"first_party_official"}
+      ],
+      "image_credit": "Stüssy / Kris Burkhardt · Preview-linked",
+      "english": {"title":"A STORE BECOMES A LOCAL UNIT OF VIEWING","deck":"Stüssy’s Osaka feature lets place, people and the brand’s release rhythm share one frame.","abstract":"Stüssy’s official News page updated Osaka by Kris Burkhardt on 9 September with photography and moving-image material. The signal is deliberately small: a city becomes part of how a product is remembered, without claiming that community has already been built."},
+      "media": {"asset":"assets/scale-field.svg","alt":"Stüssy Osaka by Kris Burkhardt 官方影像的尺度场原创占位图","caption":"Stüssy 官方 News 页面；本地尺度场为原创非纪实占位，打开来源查看大阪影像、摄影师与当前品牌发布节奏。","credit":"Stüssy / Kris Burkhardt · Preview-linked official image","kind":"source_image","origin_url":"https://www.stussy.com/blogs/news","external_image_url":"https://www.stussy.com/cdn/shop/files/sync-34065967087813.jpg?v=1788977419&width=1920","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    }
+  ],
+  "rights_summary": {"required_assets":6,"unknown_required_assets":6,"status":"blocked"},
+  "artifact_digests": {"issue_payload_sha256":null},
+  "evidence_refs": {"technical":[],"editorial_visual":[],"gate":[]},
+  "qa": {"html_parse":"unavailable","assets":"unavailable","internal_links":"unavailable","no_js_reading":"unavailable","desktop_render":"unavailable","mobile_render":"unavailable","reduced_motion":"unavailable"},
+  "limitations": [
+    "Non-production Preview candidate only; this manifest cannot authorize production deployment.",
+    "Canonical private GUAiZzz/harry-tone main was verified at pinned commit 13cd6b7046bd81be396810d2923f3a5dc818e93f; no private material enters this repository.",
+    "Six selected stories use externally hosted first-party official images. Reuse rights remain unknown, so candidate status stays BLOCKED and Preview displays source links with a local non-documentary fallback.",
+    "All five regional lanes, the full 99-subject registry quick scan, the european_contemporary focus cohort, the four daily standing beats and the prior-two-issue lookback were checked; the public radar contains 10 distinct items with at least two per category.",
+    "Named editorial, visual and rights review remains unresolved; the owner’s current task authorizes the existing non-production Preview only after technical and privacy gates pass."
+  ]
+}
