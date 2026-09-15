@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Folded registration sheets</title>
+  <desc id="desc">An original non-documentary composition of offset paper sheets, a fold, and registration marks.</desc>
+  <rect width="1200" height="800" fill="#eceae4"/>
+  <path d="M80 120H1110M80 680H1110" stroke="#202326" stroke-width="2" opacity=".22"/>
+  <path d="M120 92v56m-28-28h56M1080 652v56m-28-28h56" stroke="#b94b37" stroke-width="4"/>
+  <path d="M176 164h620l174 132-618 0z" fill="#1646a0" opacity=".94"/>
+  <path d="M352 296h618L796 520H178z" fill="#1646a0"/>
+  <path d="M796 296l174 132-174 92z" fill="#d8f24b"/>
+  <path d="M796 296v224" stroke="#202326" stroke-width="4" stroke-dasharray="12 12"/>
+  <path d="M160 588h610M160 612h340" stroke="#b94b37" stroke-width="10"/>
+  <path d="M160 642h240" stroke="#1646a0" stroke-width="4"/>
+  <g fill="#202326" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700">
+    <text x="120" y="94">ARRIVAL / FOLD / REGISTER</text>
+    <text x="824" y="590">09.15 / 2026</text>
+  </g>
+  <circle cx="796" cy="296" r="8" fill="#b94b37"/>
+  <circle cx="796" cy="520" r="8" fill="#b94b37"/>
+</svg>
