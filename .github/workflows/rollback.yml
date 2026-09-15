@@ -1,0 +1,62 @@
+name: Restore previous verified publication
+on:
+  workflow_dispatch:
+    inputs:
+      expected_sha:
+        description: Exact current release-tooling commit on preview-build-v1
+        type: string
+        required: true
+concurrency:
+  group: culture-taste-preview-deploy
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Verify manual dispatch scope
+        env:
+          EXPECTED_SHA: ${{ inputs.expected_sha }}
+        run: |
+          test "$GITHUB_REPOSITORY" = GUAiZzz/culture-taste-daily
+          test "$GITHUB_REF" = refs/heads/preview-build-v1
+          test "$GITHUB_SHA" = "$EXPECTED_SHA"
+      - name: Retrieve immutable previous-good release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG=$(node -p "require('./deployment/production-issues.json').previous_good_release")
+          gh release download "$TAG" --repo GUAiZzz/culture-taste-daily --pattern artifact.tar --dir .stage4/rollback-download
+          python3 scripts/extract-rollback.py .stage4/rollback-download/artifact.tar .stage4/production/rollback-check
+          node scripts/verify-rollback.mjs
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: .stage4/production/rollback-check/
+  deploy:
+    needs: restore
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v6
+      - id: deployment
+        uses: actions/deploy-pages@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: Verify restored publication
+        run: |
+          SHA=$(node -p "require('./deployment/production-issues.json').previous_good_source_commit")
+          npm run preview:live -- --sha "$SHA"

@@ -279,14 +279,14 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
   if (resolveExternalPreviews) {
     for (let attempt = 0; attempt < 2; attempt += 1) {
       await page.evaluate(() => {
-        for (const image of document.querySelectorAll('img[data-external-preview="true"]')) image.loading = "eager";
+        for (const image of document.querySelectorAll('img[data-external-preview="true"],img[data-official-local="true"]')) image.loading = "eager";
       });
       await page.waitForFunction(
-        () => [...document.querySelectorAll('img[data-external-preview="true"]')].every((image) => image.complete),
+        () => [...document.querySelectorAll('img[data-external-preview="true"],img[data-official-local="true"]')].every((image) => image.complete),
         null,
         { timeout: 20_000 },
       ).catch(() => {});
-      const unresolved = await page.evaluate(() => [...document.querySelectorAll('img[data-external-preview="true"]')]
+      const unresolved = await page.evaluate(() => [...document.querySelectorAll('img[data-external-preview="true"],img[data-official-local="true"]')]
         .filter((image) => !image.complete || image.naturalWidth === 0)
         .length);
       if (unresolved === 0 || attempt === 1) break;
@@ -297,7 +297,7 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
         image.decode().catch(() => undefined),
         new Promise((resolve) => setTimeout(resolve, 5_000)),
       ]);
-      await Promise.all([...document.querySelectorAll('img[data-external-preview="true"]')]
+      await Promise.all([...document.querySelectorAll('img[data-external-preview="true"],img[data-official-local="true"]')]
         .map(decodeWithTimeout));
     });
   }
