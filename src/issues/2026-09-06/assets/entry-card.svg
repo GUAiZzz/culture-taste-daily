@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Public route entry card</title>
+  <desc id="desc">Original diagram of an open public route with translucent schedule sheets, orange entry points and a dark unfinished frame, drawn for the Culture &amp; Taste Preview.</desc>
+  <rect width="1200" height="800" fill="#eaf0f2"/>
+  <path d="M100 170H1100M100 400H1100M100 650H1100" stroke="#162322" stroke-width="3" opacity=".16"/>
+  <path d="M160 260H960" stroke="#6aa7a1" stroke-width="28" opacity=".8"/>
+  <path d="M250 120L920 660" stroke="#162322" stroke-width="16" opacity=".7"/>
+  <path d="M420 120L1040 520" stroke="#f26a3d" stroke-width="12" opacity=".78"/>
+  <rect x="160" y="205" width="290" height="155" fill="#ffffff" fill-opacity=".68" stroke="#162322" stroke-width="4" transform="rotate(-7 160 205)"/>
+  <rect x="650" y="355" width="315" height="170" fill="#ffffff" fill-opacity=".56" stroke="#162322" stroke-width="4" transform="rotate(7 650 355)"/>
+  <circle cx="160" cy="260" r="22" fill="#f26a3d"/><circle cx="960" cy="260" r="22" fill="#f26a3d"/>
+  <circle cx="420" cy="120" r="14" fill="#162322"/><circle cx="1040" cy="520" r="14" fill="#162322"/>
+  <path d="M850 145h180v112H850z" fill="#162322"/><path d="M910 177l58 30-58 31" fill="none" stroke="#eaf0f2" stroke-width="13"/>
+  <g fill="#162322" font-family="monospace" font-weight="700" font-size="24"><text x="100" y="85">PUBLIC ROUTE / 09.06</text><text x="100" y="754">OPEN → CHOOSE → ENTER</text></g>
+</svg>

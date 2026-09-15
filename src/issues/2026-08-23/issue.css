@@ -1,0 +1,435 @@
+body[data-issue="2026-08-23"] {
+  --paper: #f3ead8;
+  --ink: #171717;
+  --blue: #2145d8;
+  --red: #f0442d;
+  --white: #fffdf6;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Songti SC", "Noto Serif CJK SC", serif;
+  font-size: 18px;
+  font-synthesis: none;
+  line-height: 1.78;
+}
+
+body[data-issue="2026-08-23"] a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+body[data-issue="2026-08-23"] .non-production-label {
+  margin: 0;
+  padding: 0.6rem 1rem;
+  background: var(--red);
+  color: var(--white);
+  font: 800 0.7rem/1.3 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.12em;
+  text-align: center;
+}
+
+body[data-issue="2026-08-23"] .site-header,
+body[data-issue="2026-08-23"] .site-footer,
+body[data-issue="2026-08-23"] .issue-nav-panel,
+body[data-issue="2026-08-23"] main {
+  width: min(100% - 2rem, 88rem);
+  margin-inline: auto;
+}
+
+body[data-issue="2026-08-23"] .site-header,
+body[data-issue="2026-08-23"] .site-footer {
+  border-color: var(--ink);
+  color: var(--ink);
+  font: 750 0.72rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body[data-issue="2026-08-23"] .issue-nav-panel {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  overflow: hidden;
+  border-block: 1px solid var(--ink);
+  background: rgba(243, 234, 216, 0.96);
+  backdrop-filter: blur(10px);
+}
+
+body[data-issue="2026-08-23"] .issue-nav-panel > summary {
+  display: none;
+}
+
+body[data-issue="2026-08-23"] .issue-nav ul {
+  gap: 0.2rem;
+  padding-block: 0.45rem;
+}
+
+body[data-issue="2026-08-23"] .issue-nav a {
+  max-width: 16rem;
+  gap: 0.55rem;
+  min-height: 44px;
+  padding: 0.45rem 0.65rem;
+  overflow: hidden;
+  color: var(--ink);
+  font: 750 0.7rem/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-decoration: none;
+  text-overflow: ellipsis;
+}
+
+body[data-issue="2026-08-23"] .issue-nav a span {
+  color: var(--red);
+  font: 800 0.6rem/1 ui-monospace, monospace;
+  text-transform: uppercase;
+}
+
+body[data-issue="2026-08-23"] .issue-cover {
+  position: relative;
+  display: grid;
+  min-height: min(58rem, 90svh);
+  grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.82fr);
+  gap: clamp(2rem, 6vw, 7rem);
+  align-items: center;
+  padding-block: clamp(4rem, 8vw, 8rem);
+  border-bottom: 2px solid var(--ink);
+}
+
+body[data-issue="2026-08-23"] .issue-cover-copy {
+  position: relative;
+  z-index: 2;
+}
+
+body[data-issue="2026-08-23"] h1,
+body[data-issue="2026-08-23"] h2 {
+  text-wrap: balance;
+}
+
+body[data-issue="2026-08-23"] h1 {
+  max-width: 8ch;
+  margin: 0 0 1.5rem;
+  font-family: "Arial Black", "PingFang SC", sans-serif;
+  font-size: clamp(4.4rem, 10vw, 9.5rem);
+  font-weight: 900;
+  letter-spacing: -0.085em;
+  line-height: 0.88;
+}
+
+body[data-issue="2026-08-23"] .issue-cover-copy > p:first-of-type {
+  display: inline-block;
+  margin: 0 0 1.5rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--ink);
+  color: var(--paper);
+  font: 800 clamp(1rem, 2vw, 1.5rem)/1.2 ui-monospace, monospace;
+  letter-spacing: 0.06em;
+}
+
+body[data-issue="2026-08-23"] .issue-cover-copy > p {
+  max-width: 44rem;
+}
+
+body[data-issue="2026-08-23"] .issue-cover-copy > p:nth-last-of-type(-n + 2) {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+  font-size: 0.9rem;
+}
+
+body[data-issue="2026-08-23"] .enter-issue {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--ink);
+  font: 800 0.72rem/1 ui-monospace, monospace;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+body[data-issue="2026-08-23"] .enter-issue:hover,
+body[data-issue="2026-08-23"] .enter-issue:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+body[data-issue="2026-08-23"] .issue-cover-visual {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 2px solid var(--ink);
+  background: var(--blue);
+}
+
+body[data-issue="2026-08-23"] .issue-cover-visual::before {
+  content: "23";
+  position: absolute;
+  right: -0.08em;
+  bottom: -0.2em;
+  color: var(--paper);
+  font: 900 clamp(12rem, 27vw, 26rem)/0.8 "Arial Black", sans-serif;
+  letter-spacing: -0.13em;
+}
+
+body[data-issue="2026-08-23"] .issue-cover-visual::after {
+  content: "CLOSE — OPEN";
+  position: absolute;
+  right: 0;
+  top: 47%;
+  left: 0;
+  padding: 0.45rem 0.75rem;
+  border-block: 2px solid var(--ink);
+  background: var(--red);
+  color: var(--white);
+  font: 900 clamp(0.8rem, 1.6vw, 1.25rem)/1 ui-monospace, monospace;
+  letter-spacing: 0.12em;
+  text-align: center;
+}
+
+body[data-issue="2026-08-23"] .issue-cover-visual span,
+body[data-issue="2026-08-23"] .issue-cover-visual i {
+  display: none;
+}
+
+body[data-issue="2026-08-23"] article {
+  position: relative;
+}
+
+body[data-issue="2026-08-23"] .issue-story {
+  position: relative;
+  width: min(100%, 70rem);
+  margin-inline: auto;
+  padding: clamp(5rem, 10vw, 10rem) clamp(1rem, 5vw, 5rem);
+  border-bottom: 1px solid var(--ink);
+}
+
+body[data-issue="2026-08-23"] .issue-story::before {
+  content: "23 AUG / FINAL DAY";
+  position: absolute;
+  top: 1.4rem;
+  right: 1rem;
+  padding: 0.25rem 0.45rem;
+  border: 1px solid currentColor;
+  color: var(--red);
+  font: 800 0.62rem/1 ui-monospace, monospace;
+  letter-spacing: 0.08em;
+}
+
+body[data-issue="2026-08-23"] .issue-story[data-story="nike-kobe-10-halo"]::before {
+  content: "23 AUG / RELEASE";
+  color: var(--blue);
+}
+
+body[data-issue="2026-08-23"] .issue-story[data-level="major"] {
+  width: min(100%, 82rem);
+}
+
+body[data-issue="2026-08-23"] .issue-story[data-level="signal"] {
+  width: min(92%, 62rem);
+}
+
+body[data-issue="2026-08-23"] .issue-story[data-level="watch"] {
+  width: min(86%, 54rem);
+  margin-block: 4rem;
+  border: 2px solid var(--blue);
+  background: var(--white);
+}
+
+body[data-issue="2026-08-23"] .story-marker {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  margin: 0;
+  color: var(--ink);
+  font: 900 clamp(2rem, 5vw, 5rem)/1 ui-monospace, monospace;
+}
+
+body[data-issue="2026-08-23"] .issue-story h2 {
+  max-width: 15ch;
+  margin: 0 0 2.5rem;
+  font-family: "Arial Black", "PingFang SC", sans-serif;
+  font-size: clamp(2.8rem, 6vw, 6.2rem);
+  font-weight: 900;
+  letter-spacing: -0.07em;
+  line-height: 1.02;
+}
+
+body[data-issue="2026-08-23"] .issue-story p {
+  max-width: 44rem;
+}
+
+body[data-issue="2026-08-23"] .issue-story p:last-child {
+  margin-top: 2.4rem;
+  font: 700 0.82rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+}
+
+body[data-issue="2026-08-23"] .story-english {
+  display: grid;
+  max-width: 44rem;
+  gap: 0.35rem;
+  margin: -1rem 0 2.5rem;
+  color: var(--blue);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body[data-issue="2026-08-23"] .story-english strong {
+  font: 900 0.85rem/1 ui-monospace, monospace;
+  letter-spacing: 0.08em;
+}
+
+body[data-issue="2026-08-23"] .story-english span {
+  font-weight: 750;
+}
+
+body[data-issue="2026-08-23"] .story-english small {
+  opacity: 0.78;
+}
+
+body[data-issue="2026-08-23"] .story-figure {
+  position: relative;
+  margin: 0 0 3rem;
+  padding: 0;
+  border: 2px solid var(--ink);
+  background: var(--blue);
+  box-shadow: 0.75rem 0.75rem 0 var(--red);
+}
+
+body[data-issue="2026-08-23"] .story-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 46rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+body[data-issue="2026-08-23"] .story-figure figcaption {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-top: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  font: 700 0.68rem/1.45 ui-monospace, monospace;
+}
+
+body[data-issue="2026-08-23"] .story-figure figcaption strong {
+  color: var(--red);
+}
+
+body[data-issue="2026-08-23"] .story-figure figcaption span {
+  grid-column: 1 / -1;
+  padding-top: 0.25rem;
+  border-top: 1px solid rgba(23, 23, 23, 0.25);
+  text-align: left;
+}
+
+body[data-issue="2026-08-23"] .source-image-link {
+  display: block;
+  background: var(--blue);
+}
+
+body[data-issue="2026-08-23"] .source-image-fallback {
+  margin: 0;
+  padding: 0.65rem 0.75rem;
+  background: var(--ink);
+  color: var(--white);
+  font: 700 0.7rem/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body[data-issue="2026-08-23"] .sources {
+  max-width: 70rem;
+  margin: clamp(6rem, 12vw, 12rem) auto;
+  padding: 2rem clamp(1rem, 4vw, 4rem);
+  border: 2px solid var(--ink);
+  background: var(--white);
+}
+
+body[data-issue="2026-08-23"] .section-label,
+body[data-issue="2026-08-23"] .source-meta {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+body[data-issue="2026-08-23"] .sources h2 {
+  margin: 0;
+  font-family: "Arial Black", sans-serif;
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  letter-spacing: -0.06em;
+}
+
+body[data-issue="2026-08-23"] .sources li {
+  margin-block: 1rem;
+}
+
+body[data-issue="2026-08-23"] .source-meta {
+  font-size: 0.72rem;
+}
+
+@media (max-width: 760px) {
+  body[data-issue="2026-08-23"] {
+    font-size: 17px;
+  }
+
+  body[data-issue="2026-08-23"] .issue-cover {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    padding-top: 4rem;
+  }
+
+  body[data-issue="2026-08-23"] .issue-cover-visual {
+    width: min(100%, 28rem);
+    justify-self: end;
+  }
+
+  body[data-issue="2026-08-23"] .issue-nav-panel > summary {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.65rem;
+    cursor: pointer;
+    font: 800 0.72rem/1 ui-monospace, monospace;
+    text-transform: uppercase;
+  }
+
+  body[data-issue="2026-08-23"] .issue-nav-panel:not([open]) .issue-nav {
+    display: none;
+  }
+
+  body[data-issue="2026-08-23"] .issue-nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  body[data-issue="2026-08-23"] .issue-story,
+  body[data-issue="2026-08-23"] .issue-story[data-level="signal"],
+  body[data-issue="2026-08-23"] .issue-story[data-level="watch"] {
+    width: 100%;
+    padding-inline: 1rem;
+  }
+
+  body[data-issue="2026-08-23"] .issue-story::before {
+    right: 0;
+  }
+
+  body[data-issue="2026-08-23"] .story-figure {
+    box-shadow: 0.4rem 0.4rem 0 var(--red);
+  }
+
+  body[data-issue="2026-08-23"] .story-figure figcaption {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-issue="2026-08-23"] .story-figure figcaption span {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-issue="2026-08-23"] *,
+  body[data-issue="2026-08-23"] *::before,
+  body[data-issue="2026-08-23"] *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}

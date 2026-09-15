@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" type="image/png" href="../../assets/culture-taste-earth.png">
+  <title>文化正在换入口 — Culture &amp; Taste Daily 2026-08-24</title>
+  <script>(()=>{const themes=["field","coral","analog"],page="issue";let selected="field";try{const query=new URLSearchParams(location.search).get("theme"),stored=sessionStorage.getItem("ctd-theme"),manual=sessionStorage.getItem("ctd-theme-manual")==="1",preferred=localStorage.getItem("ctd-theme-preference");if(themes.includes(query))selected=query;else if(themes.includes(preferred))selected=preferred;else if(page==="home"&&!manual)selected=themes[Math.floor(Math.random()*themes.length)];else if(themes.includes(stored))selected=stored;else selected=themes[Math.floor(Math.random()*themes.length)];sessionStorage.setItem("ctd-theme",selected);}catch{}document.documentElement.dataset.visualTheme=selected;})();</script>
+  <style>/* Functional core only: semantic access and responsive safety, not issue art direction. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  text-size-adjust: 100%;
+  --mobile-gutter: 20px;
+  --compact-gutter: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  background: Canvas;
+  color: CanvasText;
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-header a,
+.site-footer a,
+.publication-header a,
+.story-reader-header a,
+.issue-nav a,
+button {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: color-mix(in srgb, currentColor 18%, transparent);
+}
+
+button:active,
+a:active {
+  opacity: 0.78;
+}
+
+.issue-brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.issue-brand {
+  gap: 0.65rem;
+  text-decoration: none;
+}
+
+.brand-type {
+  display: inline-flex;
+  gap: 0.15em;
+  align-items: baseline;
+  color: inherit;
+  font-family: Arial, "Helvetica Neue", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.075em;
+  line-height: 0.9;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.brand-type em {
+  font-family: Georgia, "Times New Roman", "Songti SC", serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+}
+
+.issue-nav {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+.issue-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.issue-nav a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.issue-nav-panel summary,
+.enter-issue,
+.publication-footer a,
+.history-actions a,
+.facsimile-pages figcaption a {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+}
+
+.source-meta {
+  display: block;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* The publication index/archive shell is stable and never styles issue articles. */
+body[data-shell="publication"] {
+  padding-right: max(1rem, env(safe-area-inset-right));
+  padding-left: max(1rem, env(safe-area-inset-left));
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+html[data-motion-paused="true"] *,
+html[data-motion-paused="true"] *::before,
+html[data-motion-paused="true"] *::after {
+  animation-play-state: paused !important;
+}
+
+@media (max-width: 50rem) {
+  body[data-shell="publication"] {
+    padding-right: max(var(--mobile-gutter), env(safe-area-inset-right));
+    padding-left: max(var(--mobile-gutter), env(safe-area-inset-left));
+  }
+
+  body[data-issue] .site-header,
+  body[data-issue] .site-footer,
+  body[data-issue] .issue-nav-panel {
+    padding-right: max(var(--mobile-gutter), env(safe-area-inset-right));
+    padding-left: max(var(--mobile-gutter), env(safe-area-inset-left));
+  }
+
+  body[data-issue] .issue-cover p,
+  body[data-issue] .issue-story > p {
+    font-size: 0.9375rem !important;
+    line-height: 1.55 !important;
+  }
+}
+
+@media (max-width: 29.9375rem) {
+  body[data-shell="publication"] {
+    padding-right: max(var(--compact-gutter), env(safe-area-inset-right));
+    padding-left: max(var(--compact-gutter), env(safe-area-inset-left));
+  }
+
+  body[data-issue] .site-header,
+  body[data-issue] .site-footer,
+  body[data-issue] .issue-nav-panel {
+    padding-right: max(var(--compact-gutter), env(safe-area-inset-right));
+    padding-left: max(var(--compact-gutter), env(safe-area-inset-left));
+  }
+}
+
+body[data-shell="publication"] .site-header,
+body[data-shell="publication"] .site-footer,
+body[data-shell="publication"] main {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+body[data-shell="publication"] .site-header,
+body[data-shell="publication"] .site-footer {
+  padding-block: 1rem;
+}
+
+body[data-shell="publication"] main {
+  padding-block: 2rem;
+}
+
+.reading-progress {
+  position: fixed;
+  z-index: 95;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  pointer-events: none;
+}
+
+.reading-progress span {
+  display: block;
+  width: calc(var(--reading-progress, 0) * 100%);
+  height: 100%;
+  background: currentColor;
+  transform-origin: left center;
+}
+
+.theme-status {
+  white-space: nowrap;
+}
+
+.has-js body[data-issue] .issue-story {
+  opacity: var(--story-opacity, 1);
+  translate: 0 var(--story-shift, 0);
+  transition: opacity 180ms linear, translate 240ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.has-js body[data-issue] .issue-nav a[aria-current="location"] {
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-thickness: 0.18em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .has-js body[data-issue] .issue-story {
+    opacity: 1;
+    translate: none;
+  }
+}
+
+/* Reading invariants apply to generated contexts, never historical originals. */
+body[data-issue] { font-synthesis: none; }
+body[data-issue]:not([data-story-reader]) h1,
+body[data-issue]:not([data-story-reader]) h2 { line-height: 1.12 !important; overflow-wrap: anywhere; }
+.issue-nav ul { display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.issue-nav li { flex: 0 0 auto; }
+.issue-nav a { display: inline-flex; align-items: center; gap: .6rem; }
+.issue-nav a span { font-size: .6875rem; text-transform: uppercase; }
+html:not(.has-js) [data-week-toggle] { cursor: default; color: inherit; opacity: 1; }
+html:not(.has-js) .week-toggle-mark { display: none; }
+.filter-result:empty { display: none; }
+
+/* Shared reader themes. These variables change presentation only. */
+html[data-visual-theme="field"] {
+  --paper: #eef2df;
+  --ink: #10120d;
+  --acid: #d9ff43;
+  --blue: #2448ff;
+  --orange: #326f4a;
+  --pink: #a8dfbd;
+  --theme-hero: #d9ff43;
+  --theme-index: #d8d1ad;
+  --theme-panel: #eef2df;
+  --theme-accent: #326f4a;
+  --theme-signal: #2448ff;
+}
+
+html[data-visual-theme="coral"] {
+  --paper: #f4eadf;
+  --ink: #160d0a;
+  --acid: #ff6840;
+  --blue: #2448ff;
+  --orange: #ff512b;
+  --pink: #f3a8bf;
+  --theme-hero: #ff5a31;
+  --theme-index: #e8c8b1;
+  --theme-panel: #f4eadf;
+  --theme-accent: #c83d25;
+  --theme-signal: #2448ff;
+}
+
+html[data-visual-theme="analog"] {
+  --paper: #d9cdb4;
+  --ink: #171713;
+  --acid: #c8bd91;
+  --blue: #537a7c;
+  --orange: #b74731;
+  --pink: #b8998f;
+  --theme-hero: #c8bd91;
+  --theme-index: #cfc09e;
+  --theme-panel: #e1d7c2;
+  --theme-accent: #a8402e;
+  --theme-signal: #527d80;
+}
+
+body[data-shell="publication"],
+body[data-story-reader] {
+  background: var(--paper);
+  color: var(--ink);
+  transition: background-color 320ms ease, color 320ms ease;
+}
+
+/* Atmosphere stays behind the shell; it never overlays source photographs or text. */
+html[data-visual-theme="field"] .hero-map {
+  background-image: radial-gradient(circle at 12% 18%, rgb(217 255 67 / 34%), transparent 64%);
+}
+html[data-visual-theme="coral"] .hero-map {
+  background-image: linear-gradient(135deg, transparent 52%, rgb(243 168 191 / 24%));
+}
+html[data-visual-theme="analog"] .hero-map {
+  background-image: repeating-linear-gradient(0deg, rgb(10 10 8 / 6%) 0 1px, transparent 1px 3px);
+}
+
+.theme-dots {
+  position: relative;
+  z-index: 110;
+  display: inline-flex;
+  gap: 0.65rem;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 0.35rem;
+  padding-bottom: 1rem;
+}
+
+.theme-dots button {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.theme-dots button[data-theme-choice="field"] { --dot-color: #65a469; }
+.theme-dots button[data-theme-choice="coral"] { --dot-color: #ff512b; }
+.theme-dots button[data-theme-choice="analog"] {
+  --dot-color: repeating-linear-gradient(0deg, #d5c7aa 0 2px, #2a2924 2px 3px);
+}
+
+.theme-dots button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--dot-color);
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 42%);
+  content: "";
+  transform: translate(-50%, -50%);
+  transition: box-shadow 140ms ease, transform 140ms ease;
+}
+
+.theme-dots button[aria-pressed="true"]::before {
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px currentColor;
+  transform: translate(-50%, -50%);
+}
+
+.theme-dots button::after {
+  position: absolute;
+  right: -0.5rem;
+  bottom: -2.25rem;
+  width: max-content;
+  max-width: 10rem;
+  padding: 0.38rem 0.52rem;
+  background: var(--ink);
+  color: var(--paper);
+  content: attr(data-theme-label);
+  font: 700 0.62rem/1 ui-monospace, monospace;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-0.25rem);
+  transition: opacity 140ms ease, transform 140ms ease;
+  white-space: nowrap;
+}
+
+.theme-dots button:hover::after,
+.theme-dots button:focus-visible::after {
+  opacity: 1;
+  transform: none;
+}
+
+.theme-dots button:active {
+  transform: scale(0.94);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-shell="publication"],
+  body[data-story-reader] {
+    transition: none;
+  }
+}
+
+@media (max-width: 50rem) {
+  .theme-dots button::after {
+    display: none;
+  }
+}
+
+/* Controls appear only when their event handlers are available. */
+html:not(.has-js) .theme-dots { display: none; }
+.theme-current { position: absolute; bottom: 0; left: 0; right: 0; text-align: center; font: 700 0.6875rem/1.2 ui-monospace, monospace; white-space: nowrap; }
+
+body[data-issue="2026-08-24"] {
+  background:
+    linear-gradient(90deg, transparent 0 7%, rgba(217, 255, 67, 0.18) 7% 7.2%, transparent 7.2%),
+    #101552;
+  color: #f5f0e6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  font-size: 18px;
+  font-synthesis: none;
+  line-height: 1.75;
+}
+
+body[data-issue="2026-08-24"] a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+body[data-issue="2026-08-24"] .site-header,
+body[data-issue="2026-08-24"] .site-footer,
+body[data-issue="2026-08-24"] .issue-nav,
+body[data-issue="2026-08-24"] main {
+  width: min(100% - 2rem, 90rem);
+  margin-inline: auto;
+}
+
+body[data-issue="2026-08-24"] .site-header,
+body[data-issue="2026-08-24"] .site-footer {
+  padding-block: 1.25rem;
+  color: #d9ff43;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body[data-issue="2026-08-24"] .non-production-label {
+  margin: 0;
+  padding: 0.55rem 1rem;
+  background: #d9ff43;
+  color: #101552;
+  font: 800 0.7rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+body[data-issue="2026-08-24"] .issue-nav-panel {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  color: #d9ff43;
+  border-block: 1px solid currentColor;
+  background: rgba(16, 21, 82, 0.96);
+  backdrop-filter: blur(10px);
+}
+
+body[data-issue="2026-08-24"] .issue-nav ul {
+  gap: 0.2rem;
+  padding-block: 0.45rem;
+}
+
+body[data-issue="2026-08-24"] .issue-nav a {
+  max-width: 17rem;
+  gap: 0.55rem;
+  padding: 0.35rem 0.65rem;
+  overflow: hidden;
+  font-size: 0.72rem;
+  font-weight: 750;
+  text-decoration: none;
+  text-overflow: ellipsis;
+}
+
+body[data-issue="2026-08-24"] .issue-nav a span {
+  color: #b7c9ff;
+  font: 700 0.62rem/1 ui-monospace, monospace;
+  text-transform: uppercase;
+}
+
+body[data-issue="2026-08-24"] main {
+  padding-bottom: clamp(3rem, 8vw, 8rem);
+}
+
+body[data-issue="2026-08-24"] article {
+  width: 100%;
+}
+
+body[data-issue="2026-08-24"] .issue-cover {
+  position: relative;
+  display: grid;
+  min-height: min(54rem, 88svh);
+  grid-template-columns: minmax(0, 1.05fr) minmax(24rem, 0.95fr);
+  gap: clamp(2rem, 5vw, 6rem);
+  align-items: center;
+  padding-block: clamp(4rem, 8vw, 8rem);
+}
+
+body[data-issue="2026-08-24"] .issue-cover-copy {
+  position: relative;
+  z-index: 2;
+}
+
+body[data-issue="2026-08-24"] h1,
+body[data-issue="2026-08-24"] h2,
+body[data-issue="2026-08-24"] h3 {
+  line-height: 1.03;
+  text-wrap: balance;
+}
+
+body[data-issue="2026-08-24"] h1 {
+  max-width: 6ch;
+  margin: 0 0 1.5rem;
+  font-family: "Arial Narrow", Impact, "PingFang SC", sans-serif;
+  font-size: clamp(5rem, 11vw, 10.5rem);
+  font-weight: 900;
+  letter-spacing: -0.09em;
+  line-height: 0.78;
+}
+
+body[data-issue="2026-08-24"] .issue-cover-copy > p:first-of-type {
+  margin: 0 0 1.5rem;
+  color: #d9ff43;
+  font-size: clamp(1.5rem, 2.8vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
+body[data-issue="2026-08-24"] .issue-cover-copy > p {
+  max-width: 44rem;
+}
+
+body[data-issue="2026-08-24"] .issue-cover-copy > p:nth-last-of-type(-n + 2) {
+  color: #b7c9ff;
+  font-size: 0.9rem;
+}
+
+body[data-issue="2026-08-24"] .enter-issue {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d9ff43;
+  color: #d9ff43;
+  font: 800 0.72rem/1 ui-monospace, monospace;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+body[data-issue="2026-08-24"] .enter-issue:hover,
+body[data-issue="2026-08-24"] .enter-issue:focus-visible {
+  background: #d9ff43;
+  color: #101552;
+}
+
+body[data-issue="2026-08-24"] .issue-cover-visual {
+  position: relative;
+  aspect-ratio: 1;
+  border: 1px solid #b7c9ff;
+  transform: rotate(2deg);
+}
+
+body[data-issue="2026-08-24"] .issue-cover-visual::before,
+body[data-issue="2026-08-24"] .issue-cover-visual::after,
+body[data-issue="2026-08-24"] .issue-cover-visual i {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 2px solid #d9ff43;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+body[data-issue="2026-08-24"] .issue-cover-visual::before {
+  inset: 10% 12% 55% 20%;
+}
+
+body[data-issue="2026-08-24"] .issue-cover-visual::after {
+  inset: 38% 28% 22% 35%;
+  border-color: #ff6b57;
+  transform: rotate(90deg);
+}
+
+body[data-issue="2026-08-24"] .issue-cover-visual i {
+  inset: 68% 8% 7% 58%;
+  border-color: #b7c9ff;
+}
+
+body[data-issue="2026-08-24"] .issue-cover-visual span {
+  position: absolute;
+  z-index: 2;
+  padding: 0.35rem 0.45rem;
+  background: #101552;
+  color: #d9ff43;
+  font: 800 0.68rem/1 ui-monospace, monospace;
+  letter-spacing: 0.08em;
+}
+
+body[data-issue="2026-08-24"] .issue-cover-visual span::before {
+  content: "";
+  display: inline-block;
+  width: 0.65rem;
+  height: 0.65rem;
+  margin-right: 0.4rem;
+  border-radius: 50%;
+  background: #ff6b57;
+}
+
+body[data-issue="2026-08-24"] .issue-cover-visual [data-node="cover"] {
+  top: 8%;
+  left: 16%;
+}
+
+body[data-issue="2026-08-24"] .issue-cover-visual [data-node="major"] {
+  top: 34%;
+  right: 8%;
+}
+
+body[data-issue="2026-08-24"] .issue-cover-visual [data-node="signal"] {
+  bottom: 25%;
+  left: 12%;
+}
+
+body[data-issue="2026-08-24"] .issue-cover-visual [data-node="watch"] {
+  right: 4%;
+  bottom: 4%;
+}
+
+body[data-issue="2026-08-24"] .issue-story {
+  position: relative;
+  width: min(100%, 64rem);
+  margin: 0 auto;
+  padding: clamp(4rem, 9vw, 9rem) clamp(1rem, 4vw, 4rem);
+  border-top: 1px solid #b7c9ff;
+}
+
+body[data-issue="2026-08-24"] .issue-story[data-level="major"] {
+  width: min(100%, 76rem);
+  margin-block: 2rem;
+  background: #f5f0e6;
+  color: #101552;
+}
+
+body[data-issue="2026-08-24"] .issue-story[data-level="signal"]:nth-of-type(even) {
+  transform: translateX(5%);
+}
+
+body[data-issue="2026-08-24"] .issue-story[data-level="watch"] {
+  width: min(90%, 52rem);
+  border: 1px solid #d9ff43;
+  color: #d9ff43;
+}
+
+body[data-issue="2026-08-24"] .story-marker {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  margin: 0;
+  color: #d9ff43;
+  font: 900 clamp(2rem, 5vw, 5rem)/1 ui-monospace, monospace;
+}
+
+body[data-issue="2026-08-24"] [data-level="major"] .story-marker {
+  left: 1rem;
+  color: #ff6b57;
+}
+
+body[data-issue="2026-08-24"] .issue-story h2 {
+  max-width: 16ch;
+  margin: 0 0 2.5rem;
+  font-family: "Arial Narrow", Impact, "PingFang SC", sans-serif;
+  font-size: clamp(2.7rem, 6vw, 6.5rem);
+  font-weight: 900;
+  letter-spacing: -0.075em;
+}
+
+body[data-issue="2026-08-24"] .issue-story p {
+  max-width: 46rem;
+}
+
+body[data-issue="2026-08-24"] .issue-story p:last-child {
+  margin-top: 2.5rem;
+  color: #d9ff43;
+  font-size: 0.82rem;
+}
+
+body[data-issue="2026-08-24"] [data-level="major"] p:last-child {
+  color: #101552;
+}
+
+body[data-issue="2026-08-24"] article a {
+  color: #d9ff43;
+}
+
+body[data-issue="2026-08-24"] [data-level="major"] a {
+  color: #2448ff;
+}
+
+body[data-issue="2026-08-24"] .sources {
+  max-width: 64rem;
+  margin: clamp(6rem, 12vw, 12rem) auto 0;
+  padding: 2rem clamp(1rem, 4vw, 4rem);
+  border: 1px solid #b7c9ff;
+  color: #b7c9ff;
+}
+
+body[data-issue="2026-08-24"] .section-label {
+  font: 700 0.7rem/1 ui-monospace, monospace;
+  letter-spacing: 0.08em;
+}
+
+body[data-issue="2026-08-24"] .sources h2 {
+  margin: 0;
+  color: #f5f0e6;
+  font-size: clamp(2.2rem, 5vw, 5rem);
+  letter-spacing: -0.06em;
+}
+
+body[data-issue="2026-08-24"] .sources li {
+  margin-block: 1rem;
+}
+
+body[data-issue="2026-08-24"] .source-meta {
+  font-size: 0.76rem;
+  opacity: 0.75;
+}
+
+body[data-issue="2026-08-24"] img {
+  display: block;
+}
+
+body[data-issue="2026-08-24"] .issue-nav-panel {
+  width: min(100% - 2rem, 90rem);
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+body[data-issue="2026-08-24"] .issue-nav-panel {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  color: #d9ff43;
+  border-block: 1px solid currentColor;
+  background: rgba(16, 21, 82, 0.96);
+  backdrop-filter: blur(10px);
+}
+
+body[data-issue="2026-08-24"] .issue-nav-panel > summary {
+  display: none;
+}
+
+body[data-issue="2026-08-24"] .story-figure {
+  margin: 0 0 2.4rem;
+  padding: 0;
+  border: 1px solid #b7c9ff;
+  background: #0c1047;
+}
+
+body[data-issue="2026-08-24"] .story-figure img {
+  width: 100%;
+  height: auto;
+}
+
+body[data-issue="2026-08-24"] .story-figure .source-image-link {
+  display: block;
+  background: #05082e;
+}
+
+body[data-issue="2026-08-24"] .story-figure .source-image-link img {
+  min-height: 12rem;
+  object-fit: cover;
+}
+
+body[data-issue="2026-08-24"] .source-image-fallback {
+  margin: 0;
+  padding: 0.55rem 0.8rem 0;
+  color: #d9ff43;
+  font: 700 0.68rem/1.35 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+body[data-issue="2026-08-24"] .source-image-fallback a {
+  color: inherit;
+}
+
+body[data-issue="2026-08-24"] .story-figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0.8rem;
+  color: #b7c9ff;
+  font: 700 0.67rem/1.35 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+body[data-issue="2026-08-24"] .story-figure figcaption span {
+  color: #d9ff43;
+  text-align: right;
+}
+
+body[data-issue="2026-08-24"] .story-english {
+  display: grid;
+  gap: 0.3rem;
+  max-width: 48rem;
+  margin: -1.2rem 0 2rem;
+  color: #b7c9ff;
+  font-family: Georgia, "Songti SC", serif;
+}
+
+body[data-issue="2026-08-24"] .story-english strong {
+  color: #d9ff43;
+  font: 800 0.82rem/1.2 ui-monospace, monospace;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+body[data-issue="2026-08-24"] .story-english span {
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+body[data-issue="2026-08-24"] .story-english small {
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+body[data-issue="2026-08-24"] .issue-story h2,
+body[data-issue="2026-08-24"] .sources h2 {
+  scroll-margin-top: 6rem;
+}
+
+body[data-issue="2026-08-24"] .issue-story p {
+  max-width: 46rem;
+}
+
+body[data-issue="2026-08-24"] .source-meta {
+  font-size: 0.86rem;
+}
+
+@media (max-width: 58rem) {
+  body[data-issue="2026-08-24"] .issue-cover {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-issue="2026-08-24"] .issue-cover-visual {
+    width: min(100%, 35rem);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 42rem) {
+  body[data-issue="2026-08-24"] {
+    background:
+      linear-gradient(90deg, transparent 0 1rem, rgba(217, 255, 67, 0.3) 1rem 1.08rem, transparent 1.08rem),
+      #101552;
+    font-size: 17px;
+  }
+
+  body[data-issue="2026-08-24"] .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  body[data-issue="2026-08-24"] h1 {
+    font-size: clamp(4.5rem, 23vw, 7rem);
+  }
+
+  body[data-issue="2026-08-24"] .issue-cover {
+    min-height: auto;
+    padding-top: 4rem;
+  }
+
+  body[data-issue="2026-08-24"] .issue-story,
+  body[data-issue="2026-08-24"] .issue-story[data-level="watch"] {
+    width: 100%;
+    padding-inline: 1rem;
+  }
+
+  body[data-issue="2026-08-24"] .issue-story[data-level="signal"]:nth-of-type(even) {
+    transform: none;
+  }
+
+  body[data-issue="2026-08-24"] .issue-story h2 {
+    max-width: 12ch;
+    font-size: clamp(2.1rem, 10vw, 3.5rem);
+    line-height: 1.08;
+  }
+
+  body[data-issue="2026-08-24"] .sources {
+    padding-inline: 1rem;
+  }
+
+  body[data-issue="2026-08-24"] .issue-nav-panel > summary {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    font: 800 0.72rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  body[data-issue="2026-08-24"] .issue-nav-panel:not([open]) .issue-nav {
+    display: none;
+  }
+
+  body[data-issue="2026-08-24"] .issue-nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0.5rem;
+  }
+
+  body[data-issue="2026-08-24"] .issue-nav a {
+    max-width: none;
+    min-height: 44px;
+    white-space: normal;
+  }
+
+  body[data-issue="2026-08-24"] .story-figure figcaption {
+    display: block;
+  }
+
+  body[data-issue="2026-08-24"] .story-figure figcaption span {
+    display: block;
+    margin-top: 0.3rem;
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body data-issue="2026-08-24">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+  <p class="non-production-label">PREVIEW EDITION · NOT PRODUCTION</p>
+  <header class="site-header"><a class="issue-brand" href="../../" data-theme-home aria-label="Culture &amp; Taste Daily"><span class="brand-type"><span>Culture &amp;</span><em>Taste</em><span>Daily</span></span></a><span>2026-08-24 · Asia/Shanghai</span><div class="theme-dots" role="group" aria-label="Choose visual theme"><span class="theme-current" data-theme-status aria-live="polite">FIELD GREEN</span><button type="button" data-theme-choice="field" data-theme-label="Field Green" aria-label="Field Green" aria-pressed="false"></button><button type="button" data-theme-choice="coral" data-theme-label="Coral Signal" aria-label="Coral Signal" aria-pressed="false"></button><button type="button" data-theme-choice="analog" data-theme-label="2000s TV" aria-label="2000s TV" aria-pressed="false"></button></div><a href="../../archive/" data-theme-link>Archive</a></header>
+  <details class="issue-nav-panel" open><summary>Issue index <span aria-hidden="true">＋</span></summary><nav class="issue-nav" aria-label="Issue contents"><ul><li><a href="#supreme-drop-window"><span>cover</span>Supreme 把星期四变成一只公共钟表</a></li><li><a href="#stussy-fall-26-release"><span>major</span>Stüssy 把同一场发售切成五个时区</a></li><li><a href="#bape-can-stool"><span>signal</span>BAPE 的旧感从 T 恤长到一张罐头凳</a></li><li><a href="#sfmoma-giant-arc"><span>signal</span>七万五千个小单元，让免费大厅变成一片云</a></li><li><a href="#southbank-curatorial-seat"><span>signal</span>谁来策展，先于展了什么改变房间</a></li><li><a href="#seoul-runway-map"><span>watch</span>首尔把时装周从一栋楼搬成一条城市线路</a></li><li><a href="#runway-radar-clear"><span>watch</span>奢侈品牌秀场：这一轮先不硬凑</a></li><li><a href="#tmex-forum-lanes"><span>watch</span>台北音乐博览会，把“舞台之外”列进日程</a></li><li><a href="#sources"><span>index</span>Sources &amp; Dates</a></li></ul></nav></details>
+  <main id="main-content">
+    <article aria-labelledby="issue-title" data-content-sha256="7c6182645bb289d3fa8f45c9e707a76ede4f8c6bebd04e9f0dafd9af76754177"><header class="issue-cover"><div class="issue-cover-copy"><h1 id="issue-title">文化正在换入口</h1>
+<p>THE ENTRY POINT IS MOVING</p>
+<p>Supreme 把每周的发售时间做成一种公共钟表；Stüssy 把同一批秋季商品切成不同地区的十点；BAPE 与 ©SAINT Mxxxxxx 把做旧图像推到一张罐头凳；SFMOMA 用七万五千个小单元占领免费大厅。文化新闻这几天反复出现同一个动作：内容不只被发布，它还在重新安排人们进入的时间、地点和距离。</p>
+<p>Supreme turns a weekly release into a public clock; Stüssy splits one seasonal drop across regional tens; BAPE and ©SAINT Mxxxxxx move a worn graphic onto a can stool; SFMOMA fills a free hall with 75,000 small units. The signal is not a single trend. It is a change in the entry point.</p>
+<p><strong>本期判断</strong></p>
+<p>本期只选择能在官方页面或明确署名的报道中重新核验的动作。品牌发售、展览、论坛和即将到来的时装周被放在同一张地图上，但不被强行说成一个趋势。没有找到足够新的奢侈品牌秀场，就保留空位，不用旧图或模糊消息填满雷达。</p>
+<p>这是一份 8 月 24 日的现场版预览，不是 8 月 25 日候选稿的提前上线。资料核验与内容锁定均发生在 2026-08-24（Asia/Shanghai）；因错过 V3 的 06:00–08:30 生产刷新窗口，本期只作为非生产 Preview。</p>
+<a class="enter-issue" href="#supreme-drop-window">Enter the issue <span aria-hidden="true">↓</span></a></div><div class="issue-cover-visual" aria-hidden="true"><span data-node="cover">COVER</span><span data-node="major">MAJOR</span><span data-node="signal">SIGNAL</span><span data-node="watch">WATCH</span><i></i></div></header><section class="issue-story" data-story="supreme-drop-window" data-level="cover"><p class="story-marker" aria-hidden="true">01</p><h2 id="supreme-drop-window">01 / COVER — Supreme 把星期四变成一只公共钟表</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://hypebeast.com/2026/8/supreme-fall-winter-2026-collection" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F08%2F17%2Fsupreme-fall-winter-2026-collection-0.jpg?w=960&amp;cbr=1&amp;q=90&amp;fit=max" alt="Supreme Fall/Winter 2026 collection image from the linked Hypebeast source" loading="eager" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://hypebeast.com/2026/8/supreme-fall-winter-2026-collection" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> SOURCE IMAGE / click through to the Hypebeast report <span>Hypebeast · Preview-only external image</span></figcaption></figure><div class="story-english"><strong>THE PUBLIC CLOCK</strong><span>A weekly drop is also a shared time zone.</span><small>Official store states confirm the window; cultural impact remains an open question.</small></div>
+<p>Supreme 官方商店在纽约时间 8 月 20 日 07:07 留下 Fall/Winter 2026 即将重开的提示；8 月 23 日的官方 New 页面已经显示新一轮商品。对熟悉它的人来说，星期四不是一个普通日期，而是一种反复出现的等待、刷新和售罄节奏。</p>
+<p>这里值得记录的不是某一件外套有多快售罄，而是时间本身被做成了产品界面。它把分散在不同城市的注意力压到一个共同窗口，也让“我有没有赶上”成为参与感的一部分。我们只能确认页面状态和发售窗口，不能从页面直接推出销量或文化影响。</p>
+<p>本周的潮流地图因此从“买什么”先移到“什么时候一起看”。</p>
+<p>来源：<a href="https://us.supreme.com/collections/new?order=1113564120" data-source-link="true">Supreme official store, 2026-08-20/23</a> · <a href="https://hypebeast.com/2026/8/supreme-fall-winter-2026-collection" data-source-link="true">Supreme Fall/Winter 2026, Hypebeast</a></p>
+</section><section class="issue-story" data-story="stussy-fall-26-release" data-level="major"><p class="story-marker" aria-hidden="true">02</p><h2 id="stussy-fall-26-release">02 / MAJOR — Stüssy 把同一场发售切成五个时区</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://www.stussy.com/blogs/news/fall-26-collection" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://www.stussy.com/cdn/shop/files/sync-33854868947141.jpg?v=1787064187&amp;width=1920" alt="Stüssy Fall 26 collection image from the linked official source" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://www.stussy.com/blogs/news/fall-26-collection" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> SOURCE IMAGE / click through to the official Stüssy release note <span>Stüssy · Preview-only external image</span></figcaption></figure><div class="story-english"><strong>FIVE TENS</strong><span>One collection, split into regional now-times.</span><small>The official release note clarifies channels and time zones without promising inventory or impact.</small></div>
+<p>Stüssy 官方在 8 月 18 日公布 Fall ’26 Collection，并把全球发售固定在 8 月 21 日星期五上午十点：北美 PST、英国 GMT、欧洲 CET、日本与韩国 JST/KST。它不是一场秀，而是一套非常清楚的地域化发布节奏。</p>
+<p>同一个系列被拆成多个“现在”。对品牌来说，这是库存与社区的安排；对读者来说，它把全球街头服饰的想象变成了一张可以自己对时的地图。重要的是，官方页面只承诺指定 Chapter stores 与 stussy.com 的发售，不替我们保证每个地区的库存或热度。</p>
+<p>发售做得越像一场全球广播，编辑越需要把时区、渠道和“已确认/未确认”分开写。</p>
+<p>来源：<a href="https://www.stussy.com/blogs/news/fall-26-collection" data-source-link="true">Stüssy Fall ’26 Collection, 2026-08-18</a></p>
+</section><section class="issue-story" data-story="bape-can-stool" data-level="signal"><p class="story-marker" aria-hidden="true">03</p><h2 id="bape-can-stool">03 / SIGNAL — BAPE 的旧感从 T 恤长到一张罐头凳</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://en.jp.bape.com/blogs/news/saintmxxxxxx-26fw" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://i.shgcdn.com/2c481803-8340-45ca-9719-91918b982fa0/-/format/auto/-/quality/normal/" alt="BAPE and ©SAINT Mxxxxxx collection image from the linked official source" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://en.jp.bape.com/blogs/news/saintmxxxxxx-26fw" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> SOURCE IMAGE / click through to the official BAPE release note <span>BAPE · Preview-only external image</span></figcaption></figure><div class="story-english"><strong>APPAREL → INTERIOR</strong><span>A worn graphic takes one more step into the room.</span><small>The official release lists a Can Stool beside the apparel and socks in the first drop.</small></div>
+<p>BAPE 与 ©SAINT Mxxxxxx 的 Fall/Winter 2026 合作分两段发布：8 月 22 日先进入授权零售商，8 月 23 日进入 BAPE 门店与官网。官方列出的 DROP1 同时有图像 T 恤、长袖、袜子和 Can Stool。</p>
+<p>这张凳子不是“生活方式已经改变”的证据，它只是一个清楚的边界移动：一套从 1990 年代美国音乐、时尚与艺术取来的做旧图像，不再只停在身体上，也进入房间。服装、周边和家具之间的距离被压缩，品牌的世界观因此多占了一块地面。</p>
+<p>来源：<a href="https://en.jp.bape.com/blogs/news/saintmxxxxxx-26fw" data-source-link="true">BAPE official release information, 2026-08-22/23</a> · <a href="https://hypebeast.com/2026/8/bape-saint-mxxxxxx-fall-winter-2026-capsule-collaboration-release-info" data-source-link="true">BAPE × ©SAINT Mxxxxxx, Hypebeast</a></p>
+</section><section class="issue-story" data-story="sfmoma-giant-arc" data-level="signal"><p class="story-marker" aria-hidden="true">04</p><h2 id="sfmoma-giant-arc">04 / SIGNAL — 七万五千个小单元，让免费大厅变成一片云</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://www.sfmoma.org/exhibition/jacob-hashimoto-giant-arc/" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://d1hhug17qm51in.cloudfront.net/www-media/2026/05/15165415/Jacob_Hashimoto_230515083637-4235-TobinRogers-1024x683.jpg" alt="Jacob Hashimoto Giant Arc installation image from the linked SFMOMA source" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://www.sfmoma.org/exhibition/jacob-hashimoto-giant-arc/" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> SOURCE IMAGE / click through to the SFMOMA exhibition page <span>SFMOMA · Preview-only external image</span></figcaption></figure><div class="story-english"><strong>A CLOUD BEFORE A TICKET</strong><span>Scale changes the first step into the museum.</span><small>SFMOMA describes a free first-floor installation built from nearly 75,000 handmade units.</small></div>
+<p>SFMOMA 的 Jacob Hashimoto: Giant Arc 于 8 月 22 日在一层 Roberts Family Gallery 开放。美术馆称作品由近 75,000 个竹与日本纸制成的风筝单元构成，从地面延伸到天花与墙面；所在楼层对公众免费开放。</p>
+<p>它的公共性不是一句“欢迎大家”就结束了。作品先占据入口附近的日常动线，观众在决定要不要购票、要不要深入之前，已经被迫经过一片人工天气。规模在这里不是炫技，而是改变第一眼的顺序。</p>
+<p>来源：<a href="https://www.sfmoma.org/exhibition/jacob-hashimoto-giant-arc/" data-source-link="true">SFMOMA, Jacob Hashimoto: Giant Arc</a></p>
+</section><section class="issue-story" data-story="southbank-curatorial-seat" data-level="signal"><p class="story-marker" aria-hidden="true">05</p><h2 id="southbank-curatorial-seat">05 / SIGNAL — 谁来策展，先于展了什么改变房间</h2><figure class="story-figure" data-media-kind="data_diagram"><img src="./assets/southbank-curatorial-seat.svg" alt="Three seats shifting selection, order and credit in a curatorial room diagram" loading="lazy" decoding="async" width="1200" height="720"><figcaption><strong>ORIGINAL DATA DIAGRAM</strong> SELECTION / ORDER / CREDIT <span>Original Culture &amp; Taste visual</span></figcaption></figure><div class="story-english"><strong>WHEN THE SEAT MOVES</strong><span>Lived experience enters selection and sequence.</span><small>The upcoming Southbank exhibition gives five PIC members curatorial responsibility while artist names remain undisclosed.</small></div>
+<p>Southbank Centre 将在 10 月 16 日至 11 月 29 日呈现《Rock, Paper, Scissors》。展览从 2026 Koestler Awards 的投稿中选择作品，由五位有父母入狱经历的 Parental Imprisonment Collective 成员共同策展。公开报道同时说明，参展艺术家的姓名仍不会向观众公开。</p>
+<p>这条新闻还没有发生在现场，所以今天只记录它提出的结构：生活经验进入选择与排序的位置，却没有自动获得署名。一次邀请可以制造“被看见”，但作者位置需要更具体的权力。展览开幕后，才有资格复查这个承诺是否真的在房间里成立。</p>
+<p>来源：<a href="https://www.theartnewspaper.com/2026/08/21/young-adults-with-experience-of-having-parents-in-prison-to-curate-southbank-centre-exhibition" data-source-link="true">The Art Newspaper, 2026-08-21</a> · <a href="https://www.southbankcentre.co.uk/" data-source-link="true">Southbank Centre programme</a></p>
+</section><section class="issue-story" data-story="seoul-runway-map" data-level="watch"><p class="story-marker" aria-hidden="true">06</p><h2 id="seoul-runway-map">06 / WATCH — 首尔把时装周从一栋楼搬成一条城市线路</h2><figure class="story-figure" data-media-kind="data_diagram"><img src="./assets/seoul-runway-map.svg" alt="A route connecting DDP industry programming to Lotte public programming" loading="lazy" decoding="async" width="1200" height="720"><figcaption><strong>ORIGINAL DATA DIAGRAM</strong> DDP / INDUSTRY → LOTTE / PUBLIC <span>Original Culture &amp; Taste visual</span></figcaption></figure><div class="story-english"><strong>RUNWAY AS CITY INTERFACE</strong><span>DDP and Lotte carry different kinds of fashion access.</span><small>The September Seoul Fashion Week plan is a watch item, not a claim about a new luxury-house show today.</small></div>
+<p>首尔市政府公布的 2027 春夏首尔时装周将在 9 月 1 日至 6 日横跨 DDP 与蚕室乐天世界塔：DDP 继续承担设计师秀、发布与贸易；乐天一侧加入面向公众的秀场、快闪、购物与 K-culture 活动。</p>
+<p>这不是今天刚发生的奢侈品牌大秀，因此不把它冒充成“本周 runway 新闻”。它是一条即将打开的观察线：专业信用与公众入口被放进两个场地，行业事件会不会因此真的多出一种观看方式，还是只多出一层消费路径。</p>
+<p>来源：<a href="https://world.seoul.go.kr/seoul-fashion-week-expands-beyond-ddp-to-lotte-world-tower-turning-seouls-iconic-landmarks-into-runways/" data-source-link="true">Seoul Metropolitan Government, 2026-08-21</a></p>
+</section><section class="issue-story" data-story="runway-radar-clear" data-level="watch"><p class="story-marker" aria-hidden="true">07</p><h2 id="runway-radar-clear">07 / WATCH — 奢侈品牌秀场：这一轮先不硬凑</h2><figure class="story-figure" data-media-kind="data_diagram"><img src="./assets/runway-radar-clear.svg" alt="A radar card with an open slot for a verified new luxury-house show" loading="lazy" decoding="async" width="1200" height="720"><figcaption><strong>ORIGINAL DATA DIAGRAM</strong> NO VERIFIED NEW LUXURY-HOUSE SHOW IN THIS WINDOW <span>Original Culture &amp; Taste visual</span></figcaption></figure><div class="story-english"><strong>KEEP THE SLOT OPEN</strong><span>A radar gap is better than a recycled runway.</span><small>The latest official indexes were scanned; no single new luxury-house show met the 22–24 August threshold.</small></div>
+<p>我们重新查看了 Vogue 的当季秀场索引与日本时装周官方日程，没有找到 8 月 22—24 日之间可以由品牌或主办方直接核验、且足以作为“最新奢侈品牌秀场”发布的单一事件。这个空位本身值得保留：旧照片、二手标题和提前很久结束的系列，不能伪装成今天的现场。</p>
+<p>下一次扫描会继续沿着品牌官网、官方周历和主办方页面复查。若出现可核验的新秀场，再把品牌、城市、发布时间和现场观察补进来；在此之前，雷达写“未确认”，比写一条漂亮但过期的新闻更诚实。</p>
+<p>来源：<a href="https://www.vogue.com/fashion-shows" data-source-link="true">Vogue Fashion Shows index</a> · <a href="https://rakutenfashionweektokyo.com/en/schedule/" data-source-link="true">Rakuten Fashion Week TOKYO official schedule</a></p>
+</section><section class="issue-story" data-story="tmex-forum-lanes" data-level="watch"><p class="story-marker" aria-hidden="true">08</p><h2 id="tmex-forum-lanes">08 / WATCH — 台北音乐博览会，把“舞台之外”列进日程</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://www.tmc.taipei/tw/news/announcement/2FDb231761f9" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://www.tmc.taipei/files/20260822190550501.jpg" alt="Taipei Music Expo announcement image from the linked official source" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://www.tmc.taipei/tw/news/announcement/2FDb231761f9" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> SOURCE IMAGE / click through to the Taipei Music Center announcement <span>Taipei Music Center · Preview-only external image</span></figcaption></figure><div class="story-english"><strong>THE STAGE IS ALSO A SYSTEM</strong><span>Five forum lanes wait for evidence after the event.</span><small>TMEX publishes a programme spanning sustainability, AI, international marketing, festivals, and sound-image-space.</small></div>
+<p>2026 TMEX 台北音乐博览会将于 8 月 27 日至 30 日在台北流行音乐中心举行。官方公布的论坛覆盖可持续演出、国际营销、AI 进入创作流程、国际音乐节策展，以及“声音、影像与空间”中的电子音乐，并列出 68 个国内外参展品牌和一对一产业媒合。</p>
+<p>现在能确认的是议程，不是结果。活动结束后再回看：论坛有没有留下具体方法，展商和媒合有没有改变创作者进入产业的路径。对于潮流地图来说，音乐产业的“舞台之外”同样是文化正在换入口的地方。</p>
+<p>来源：<a href="https://www.tmc.taipei/tw/news/announcement/2FDb231761f9" data-source-link="true">Taipei Music Center, 2026-08-22</a></p>
+</section><section class="issue-story" data-story="exit" data-level="exit"><p class="story-marker" aria-hidden="true">EXIT</p><h2 id="exit">EXIT / 入口移动以后</h2>
+<p>发售有时间，展览有房间，秀场有城市，论坛有一张尚未兑现的日程。</p>
+<p>今天没有把它们压成一个趋势。先把入口标出来，等现场自己说话。</p>
+</section></article>
+    <section class="sources" id="sources" aria-labelledby="sources-title"><p class="section-label">INDEX / VERIFIED LINKS</p><h2 id="sources-title">Sources &amp; Dates</h2><ol><li><a href="https://us.supreme.com/collections/new?order=1113564120">Supreme official store — New</a><span class="source-meta">Supreme · 2026-08-23 · 2026-08-20</span></li><li><a href="https://hypebeast.com/2026/8/supreme-fall-winter-2026-collection">Supreme Fall/Winter 2026 collection</a><span class="source-meta">Hypebeast · 2026-08-20 · 2026-08-20</span></li><li><a href="https://www.stussy.com/blogs/news/fall-26-collection">Stüssy Fall '26 Collection</a><span class="source-meta">Stüssy · 2026-08-18 · 2026-08-21</span></li><li><a href="https://en.jp.bape.com/blogs/news/saintmxxxxxx-26fw">A BATHING APE® x ©SAINT Mxxxxxx</a><span class="source-meta">BAPE · 2026-08-22/2026-08-23</span></li><li><a href="https://hypebeast.com/2026/8/bape-saint-mxxxxxx-fall-winter-2026-capsule-collaboration-release-info">BAPE × ©SAINT Mxxxxxx Fall/Winter 2026</a><span class="source-meta">Hypebeast · 2026-08-21 · 2026-08-22/2026-08-23</span></li><li><a href="https://www.sfmoma.org/exhibition/jacob-hashimoto-giant-arc/">Jacob Hashimoto: Giant Arc</a><span class="source-meta">SFMOMA · 2026-08-22</span></li><li><a href="https://www.theartnewspaper.com/2026/08/21/young-adults-with-experience-of-having-parents-in-prison-to-curate-southbank-centre-exhibition">Young adults with experience of having parents in prison to curate exhibition</a><span class="source-meta">The Art Newspaper · 2026-08-21 · 2026-10-16/2026-11-29</span></li><li><a href="https://www.southbankcentre.co.uk/">Southbank Centre programme</a><span class="source-meta">Southbank Centre · 2026-10-16/2026-11-29</span></li><li><a href="https://world.seoul.go.kr/seoul-fashion-week-expands-beyond-ddp-to-lotte-world-tower-turning-seouls-iconic-landmarks-into-runways/">Seoul Fashion Week expands beyond DDP to Lotte World Tower</a><span class="source-meta">Seoul Metropolitan Government · 2026-08-21 · 2026-09-01/2026-09-06</span></li><li><a href="https://www.vogue.com/fashion-shows">Fashion Shows index</a><span class="source-meta">Vogue</span></li><li><a href="https://rakutenfashionweektokyo.com/en/schedule/">Rakuten Fashion Week TOKYO official schedule</a><span class="source-meta">Japan Fashion Week Organization · 2026-08-24</span></li><li><a href="https://www.tmc.taipei/tw/news/announcement/2FDb231761f9">2026 TMEX 台北音樂博覽會 8/27 登場</a><span class="source-meta">Taipei Music Center · 2026-08-22 · 2026-08-27/2026-08-30</span></li></ol></section>
+  </main>
+  <footer class="site-footer"><a href="../../archive/">All issues</a><span>Static, readable without JavaScript</span></footer>
+  <script>document.documentElement.classList.add("has-js");
+
+const visualThemes = ["field", "coral", "analog"];
+const themeStorageKey = "ctd-theme";
+const themeManualKey = "ctd-theme-manual";
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const mobileViewport = window.matchMedia("(max-width: 50rem)");
+const lifecycle = new AbortController();
+const observers = new Set();
+const cleanupTasks = new Set();
+
+function revealControl(control) {
+  control.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "nearest", inline: "center" });
+}
+
+function enableRailKeyboard(container, selector) {
+  const controls = [...container.querySelectorAll(selector)];
+  if (!controls.length) return;
+  const syncTabStops = () => {
+    const selected = controls.find((control) => control.getAttribute("aria-pressed") === "true") ?? controls[0];
+    for (const control of controls) control.tabIndex = control === selected ? 0 : -1;
+  };
+  syncTabStops();
+  container.addEventListener("keydown", (event) => {
+    const current = controls.indexOf(document.activeElement);
+    if (current < 0 || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const nextIndex = event.key === "Home"
+      ? 0
+      : event.key === "End"
+        ? controls.length - 1
+        : (current + (event.key === "ArrowRight" ? 1 : -1) + controls.length) % controls.length;
+    const next = controls[nextIndex];
+    next.focus();
+    next.click();
+    syncTabStops();
+    revealControl(next);
+  }, { signal: lifecycle.signal });
+  container.addEventListener("click", (event) => {
+    const control = event.target.closest(selector);
+    if (!control || !container.contains(control)) return;
+    syncTabStops();
+    revealControl(control);
+  }, { signal: lifecycle.signal });
+}
+
+function rememberTheme(theme) {
+  try {
+    window.sessionStorage.setItem(themeStorageKey, theme);
+  } catch {
+    // The selected theme still applies to the current page when storage is unavailable.
+  }
+}
+
+function hasManualTheme() {
+  try {
+    return window.sessionStorage.getItem(themeManualKey) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function updateThemeLinks(theme) {
+  for (const link of document.querySelectorAll("a[data-theme-link]")) {
+    const url = new URL(link.href, window.location.href);
+    url.searchParams.set("theme", theme);
+    link.href = `${url.pathname}${url.search}${url.hash}`;
+  }
+  for (const link of document.querySelectorAll("a[data-theme-home]")) {
+    const url = new URL(link.href, window.location.href);
+    if (hasManualTheme()) url.searchParams.set("theme", theme);
+    else url.searchParams.delete("theme");
+    link.href = `${url.pathname}${url.search}${url.hash}`;
+  }
+}
+
+function updateThemeControls(theme) {
+  for (const button of document.querySelectorAll("[data-theme-choice]")) {
+    button.setAttribute("aria-pressed", String(button.dataset.themeChoice === theme));
+  }
+  for (const status of document.querySelectorAll("[data-theme-status]")) {
+    status.textContent = theme === "field" ? "FIELD GREEN" : theme === "coral" ? "CORAL SIGNAL" : "2000s TV";
+  }
+}
+
+function applyTheme(theme, { manual = false } = {}) {
+  const safeTheme = visualThemes.includes(theme) ? theme : "field";
+  if (manual) {
+    try {
+      window.sessionStorage.setItem(themeManualKey, "1");
+      window.localStorage.setItem("ctd-theme-preference", safeTheme);
+    } catch {
+      // The click still applies to the current page when storage is unavailable.
+    }
+  }
+  document.documentElement.dataset.visualTheme = safeTheme;
+  rememberTheme(safeTheme);
+  updateThemeControls(safeTheme);
+  updateThemeLinks(safeTheme);
+}
+
+applyTheme(document.documentElement.dataset.visualTheme);
+
+for (const button of document.querySelectorAll("[data-theme-choice]")) {
+  button.addEventListener("click", () => applyTheme(button.dataset.themeChoice, { manual: true }), { signal: lifecycle.signal });
+}
+
+for (const group of document.querySelectorAll(".theme-dots")) enableRailKeyboard(group, "[data-theme-choice]");
+
+for (const frame of document.querySelectorAll("[data-visual-frame]")) {
+  const image = frame.querySelector("img.source-art");
+  if (!image) continue;
+  const originalSource = image.src;
+  const retryDelays = [1200, 3000];
+  let retryCount = 0;
+  let retryTimer = null;
+  let deadlineTimer = null;
+  const markFailure = () => frame.classList.add("image-failed");
+  const markSuccess = () => {
+    window.clearTimeout(deadlineTimer);
+    frame.classList.remove("image-failed");
+  };
+  const monitorAttempt = () => {
+    window.clearTimeout(deadlineTimer);
+    deadlineTimer = window.setTimeout(() => {
+      if (image.complete && image.naturalWidth) markSuccess();
+      else retryImage();
+    }, 8000);
+  };
+  const retryImage = () => {
+    window.clearTimeout(deadlineTimer);
+    markFailure();
+    if (retryCount >= retryDelays.length || retryTimer !== null) return;
+    const delay = retryDelays[retryCount];
+    retryTimer = window.setTimeout(() => {
+      retryTimer = null;
+      retryCount += 1;
+      const retryUrl = new URL(originalSource, window.location.href);
+      retryUrl.searchParams.set("ctd_retry", String(retryCount));
+      image.src = retryUrl.href;
+      monitorAttempt();
+    }, delay);
+  };
+  image.addEventListener("load", markSuccess, { signal: lifecycle.signal });
+  image.addEventListener("error", retryImage, { signal: lifecycle.signal });
+  if (image.complete && image.naturalWidth) markSuccess();
+  else if (image.complete) retryImage();
+  else if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      observer.disconnect();
+      observers.delete(observer);
+      monitorAttempt();
+    }, { rootMargin: "800px" });
+    observers.add(observer);
+    observer.observe(image);
+  } else {
+    monitorAttempt();
+  }
+  cleanupTasks.add(() => {
+    window.clearTimeout(deadlineTimer);
+    window.clearTimeout(retryTimer);
+  });
+}
+
+const storyFilters = [...document.querySelectorAll("[data-story-filter]")];
+const storyCards = [...document.querySelectorAll("[data-story-card]")];
+const radarGroups = [...document.querySelectorAll("[data-radar-group]")];
+
+function applyStoryFilter(filter, { updateUrl = false } = {}) {
+  const selected = storyFilters.find(button => button.dataset.storyFilter === filter) ?? storyFilters[0];
+  if (!selected) return;
+  const category = selected.dataset.storyFilter;
+  for (const button of storyFilters) button.setAttribute("aria-pressed", String(button === selected));
+  for (const card of storyCards) card.hidden = category !== "all" && card.dataset.storyCategory !== category;
+  for (const group of radarGroups) group.hidden = ![...group.querySelectorAll("[data-story-card]")].some(card => !card.hidden);
+  const status = document.querySelector("[data-filter-result]");
+  if (status) status.textContent = `${category === "all" ? "全部" : category.toUpperCase()} · ${storyCards.filter(card => !card.hidden).length} 条精选`;
+  if (updateUrl) {
+    const url = new URL(location.href);
+    if (category === "all") url.searchParams.delete("category");
+    else url.searchParams.set("category", category);
+    history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+  }
+}
+for (const button of storyFilters) {
+  button.addEventListener("click", () => applyStoryFilter(button.dataset.storyFilter, { updateUrl: true }), { signal: lifecycle.signal });
+}
+applyStoryFilter(new URLSearchParams(location.search).get("category"));
+window.addEventListener("popstate", () => applyStoryFilter(new URLSearchParams(location.search).get("category")), { signal: lifecycle.signal });
+
+for (const group of new Set(storyFilters.map((button) => button.parentElement).filter(Boolean))) {
+  enableRailKeyboard(group, "[data-story-filter]");
+}
+
+const weekDossiers = [...document.querySelectorAll("[data-week-dossier]")];
+
+function setWeekExpanded(dossier, expanded) {
+  const button = dossier.querySelector("[data-week-toggle]");
+  const panel = dossier.querySelector("[data-week-panel]");
+  if (!button || !panel) return;
+  button.setAttribute("aria-expanded", String(expanded));
+  panel.hidden = !expanded;
+  const mark = button.querySelector(".week-toggle-mark");
+  if (mark) mark.textContent = expanded ? "−" : "＋";
+}
+
+function openWeekFromHash({ scroll = false } = {}) {
+  const target = weekDossiers.find((dossier) => `#${dossier.id}` === window.location.hash);
+  for (const dossier of weekDossiers) setWeekExpanded(dossier, dossier === target);
+  if (target && scroll) {
+    window.requestAnimationFrame(() => target.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "start" }));
+  }
+}
+
+if (weekDossiers.length) {
+  openWeekFromHash();
+  for (const dossier of weekDossiers) {
+    const button = dossier.querySelector("[data-week-toggle]");
+    if (button) button.disabled = false;
+    button?.addEventListener("click", () => {
+      const wasExpanded = button.getAttribute("aria-expanded") === "true";
+      for (const candidate of weekDossiers) setWeekExpanded(candidate, false);
+      if (!wasExpanded) {
+        setWeekExpanded(dossier, true);
+        window.history.replaceState(null, "", `#${dossier.id}`);
+      } else if (window.location.hash === `#${dossier.id}`) {
+        window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+      }
+    }, { signal: lifecycle.signal });
+  }
+  window.addEventListener("hashchange", () => openWeekFromHash({ scroll: true }), { signal: lifecycle.signal });
+}
+
+for (const frame of document.querySelectorAll("iframe[data-historical-frame]")) {
+  const resize = () => {
+    try {
+      const documentHeight = frame.contentDocument?.documentElement?.scrollHeight;
+      if (documentHeight) frame.style.height = `${Math.max(documentHeight, 720)}px`;
+    } catch {
+      // Cross-origin frames keep their CSS fallback height.
+    }
+  };
+  frame.addEventListener("load", resize, { signal: lifecycle.signal });
+  window.addEventListener("resize", resize, { passive: true, signal: lifecycle.signal });
+}
+
+const issueBody = document.querySelector("body[data-issue]");
+const issueStories = issueBody ? [...document.querySelectorAll(".issue-story")] : [];
+const issueHeadings = issueBody ? [...document.querySelectorAll(".issue-story h2[id]")] : [];
+const issueNavLinks = issueBody ? [...document.querySelectorAll(".issue-nav a[href^='#']")] : [];
+const storyReader = document.querySelector("body[data-story-reader]");
+const storyOpening = storyReader?.querySelector("[data-story-opening]");
+const storyLedeStage = storyReader?.querySelector(".story-lede-stage");
+const storyLede = storyReader?.querySelector("[data-word-reveal]");
+const storyMediaStage = storyReader?.querySelector("[data-media-stage]");
+let storyWords = [];
+let motionFrame = 0;
+
+function clamp(value, minimum = 0, maximum = 1) {
+  return Math.min(maximum, Math.max(minimum, value));
+}
+
+if (storyLede) {
+  const source = storyLede.textContent.trim();
+  const segments = "Segmenter" in Intl
+    ? [...new Intl.Segmenter("zh-CN", { granularity: "word" }).segment(source)].map((part) => part.segment)
+    : [...source];
+  storyLede.replaceChildren(...segments.map((segment) => {
+    const word = document.createElement("span");
+    word.className = "story-word";
+    word.textContent = segment;
+    return word;
+  }));
+  storyWords = [...storyLede.querySelectorAll(".story-word")];
+  storyReader.dataset.motionReady = "true";
+}
+
+function updateMotion() {
+  motionFrame = 0;
+  if (document.hidden) return;
+  const maximum = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+  const progress = Math.min(1, Math.max(0, window.scrollY / maximum));
+  document.documentElement.style.setProperty("--reading-progress", String(progress));
+  document.documentElement.style.setProperty("--shell-progress", String(Math.min(1, window.scrollY / 320)));
+
+  if (storyReader && !reducedMotion.matches) {
+    if (storyOpening) {
+      const rect = storyOpening.getBoundingClientRect();
+      const openingProgress = clamp(-rect.top / Math.max(1, rect.height - window.innerHeight));
+      document.documentElement.style.setProperty("--opening-progress", String(openingProgress));
+    }
+    if (storyLedeStage && storyWords.length) {
+      const rect = storyLedeStage.getBoundingClientRect();
+      const wordProgress = clamp((window.innerHeight * 0.8 - rect.top) / Math.max(1, rect.height * 0.68));
+      const visible = wordProgress * (storyWords.length + 5);
+      storyWords.forEach((word, index) => word.style.setProperty("--word-visible", String(clamp(visible - index))));
+    }
+    if (storyMediaStage) {
+      const rect = storyMediaStage.getBoundingClientRect();
+      const mediaProgress = clamp((window.innerHeight * 0.82 - rect.top) / Math.max(1, rect.height * 0.58));
+      document.documentElement.style.setProperty("--media-progress", String(mediaProgress));
+    }
+  }
+
+  if (!issueBody || reducedMotion.matches) return;
+  const center = window.innerHeight * 0.58;
+  const shiftLimit = mobileViewport.matches ? 12 : 24;
+  for (const story of issueStories) {
+    const rect = story.getBoundingClientRect();
+    const rawShift = (rect.top - center) * 0.025;
+    const shift = Math.max(-shiftLimit, Math.min(shiftLimit, rawShift));
+    const distance = Math.min(1, Math.abs(rect.top - center) / window.innerHeight);
+    story.style.setProperty("--story-shift", `${Math.round(shift)}px`);
+    story.style.setProperty("--story-opacity", String(1 - distance * 0.22));
+  }
+}
+
+if (storyReader && document.startViewTransition && !reducedMotion.matches) {
+  for (const link of storyReader.querySelectorAll("a.next-story, a.related-card, .story-sibling-nav a")) {
+    link.addEventListener("click", (event) => {
+      const destination = new URL(link.href, window.location.href);
+      if (destination.origin !== window.location.origin || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      document.startViewTransition(() => { window.location.href = destination.href; });
+    }, { signal: lifecycle.signal });
+  }
+}
+
+function scheduleMotion() {
+  if (!motionFrame) motionFrame = window.requestAnimationFrame(updateMotion);
+}
+
+window.addEventListener("scroll", scheduleMotion, { passive: true, signal: lifecycle.signal });
+window.addEventListener("resize", scheduleMotion, { passive: true, signal: lifecycle.signal });
+updateMotion();
+
+if (issueHeadings.length && "IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top))[0];
+    if (!visible) return;
+    for (const link of issueNavLinks) {
+      if (link.getAttribute("href") === `#${visible.target.id}`) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    }
+  }, { rootMargin: "-18% 0px -66%", threshold: [0, 0.25, 0.75] });
+  observers.add(observer);
+  for (const heading of issueHeadings) observer.observe(heading);
+}
+
+const homeHero = document.querySelector(".home-hero");
+if (homeHero && !reducedMotion.matches) {
+  homeHero.addEventListener("pointermove", (event) => {
+    const bounds = homeHero.getBoundingClientRect();
+    homeHero.style.setProperty("--hero-x", String((event.clientX - bounds.left) / bounds.width - 0.5));
+    homeHero.style.setProperty("--hero-y", String((event.clientY - bounds.top) / bounds.height - 0.5));
+  }, { passive: true, signal: lifecycle.signal });
+  homeHero.addEventListener("pointerleave", () => {
+    homeHero.style.setProperty("--hero-x", "0");
+    homeHero.style.setProperty("--hero-y", "0");
+  }, { passive: true, signal: lifecycle.signal });
+}
+
+function syncDocumentVisibility() {
+  document.documentElement.dataset.motionPaused = String(document.hidden);
+  if (document.hidden && motionFrame) {
+    window.cancelAnimationFrame(motionFrame);
+    motionFrame = 0;
+  } else if (!document.hidden) {
+    scheduleMotion();
+  }
+}
+
+function cleanupLifecycle() {
+  lifecycle.abort();
+  if (motionFrame) window.cancelAnimationFrame(motionFrame);
+  for (const observer of observers) observer.disconnect();
+  for (const cleanup of cleanupTasks) cleanup();
+  observers.clear();
+  cleanupTasks.clear();
+}
+
+document.addEventListener("visibilitychange", syncDocumentVisibility, { signal: lifecycle.signal });
+window.addEventListener("pagehide", (event) => {
+  if (!event.persisted) cleanupLifecycle();
+  else {
+    document.documentElement.dataset.motionPaused = "true";
+    if (motionFrame) window.cancelAnimationFrame(motionFrame);
+    motionFrame = 0;
+  }
+});
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    syncDocumentVisibility();
+    applyStoryFilter(new URLSearchParams(location.search).get("category"));
+  }
+}, { signal: lifecycle.signal });
+syncDocumentVisibility();
+</script>
+</body>
+</html>

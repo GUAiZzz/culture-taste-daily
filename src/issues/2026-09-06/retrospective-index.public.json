@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "kind": "owner_authorized_retrospective",
+  "date": "2026-09-06",
+  "assembled_at": "2026-09-07T19:11:33+08:00",
+  "content_sha256": "cb4475fa9ef7cd72cd5ab3fe1c93ee8e13df3e51feecd69bb78f2f4fafd2c89c",
+  "coverage_note": "Four retained stories and five verified supplementary links. One story withheld; not a complete daily radar.",
+  "items": [
+    {
+      "id": "seoul-fashion-week-2027-ss",
+      "category": "fashion",
+      "included_story_id": "seoul-fashion-week-2027-ss"
+    },
+    {
+      "id": "nike-air-jordan-4-tour-yellow-september-five",
+      "category": "fashion",
+      "title": "Air Jordan 4 Retro ‘Tour Yellow’",
+      "deck": "Nike brings the Rare Air tongue-label system back to a 5 September release, with the archive detail left visible on the object.",
+      "publisher": "Nike SNKRS",
+      "official_url": "https://www.nike.com/launch/t/air-jordan-4-rare-air-tour-yellow",
+      "published_date": null,
+      "event_date": "2026-09-05",
+      "media": {
+        "kind": "image",
+        "url": "https://static.nike.com/a/images/w_320%2Cq_auto%2Cf_auto/bd90385f-03ae-4dc7-a2c1-df5f7e30a67e/air-jordan-4-tour-yellow-io2463-102-release-date.jpg",
+        "alt": "Official Nike Air Jordan 4 Tour Yellow product image",
+        "credit": "Nike SNKRS · Preview-linked official image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "artms-world-tour-seoul-september-six",
+      "category": "music",
+      "title": "ARTMS World Tour < Art of BLUE BLOOD > in Seoul",
+      "deck": "The 6 September Seoul date is fixed at YES24 LIVE HALL, with Ticketlink exposing time, price and booking limits.",
+      "publisher": "Ticketlink",
+      "official_url": "https://facility.ticketlink.co.kr/help/notice/65439",
+      "published_date": null,
+      "event_date": "2026-09-06",
+      "media": {
+        "kind": "image",
+        "url": "https://image.toast.com/aaaaab/ticketlink/TKL_10/ARTMS_OPEN.jpg",
+        "alt": "Official ARTMS World Tour in Seoul event image",
+        "credit": "Ticketlink · Preview-linked official image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "maker-faire-tokyo-2026",
+      "category": "objects",
+      "included_story_id": "maker-faire-tokyo-2026"
+    },
+    {
+      "id": "guangdong-cheng-yifeng-natural-order",
+      "category": "objects",
+      "included_story_id": "guangdong-cheng-yifeng-natural-order"
+    },
+    {
+      "id": "hong-kong-national-ecology-day-2026",
+      "category": "city",
+      "included_story_id": "hong-kong-national-ecology-day-2026"
+    },
+    {
+      "id": "jamsugyo-car-free-bridge-festival-2026",
+      "category": "city",
+      "title": "Car-Free Jamsugyo Bridge Festival",
+      "deck": "Seoul opens Jamsugyo Bridge to an eight-Sunday public programme from 6 September, pairing food, performance and media art with the river crossing.",
+      "publisher": "Seoul Metropolitan Government",
+      "official_url": "https://english.seoul.go.kr/car-free-jamsugyo-bridge-festival-with-cumulative-visitors-of-6-47-million-returns-with-weekly-themes-for-fall-2026/",
+      "published_date": "2026-08-24",
+      "event_date": "2026-09-06/2026-10-25",
+      "media": {
+        "kind": "image",
+        "url": "https://english.seoul.go.kr/wp-content/uploads/2026/08/carless-jamsu-bridge-festival01.jpg",
+        "alt": "Official Seoul Car-Free Jamsugyo Bridge Festival image",
+        "credit": "Seoul Metropolitan Government · Preview-linked official image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "seoul-light-ddp-2026",
+      "category": "city",
+      "title": "Seoul Light DDP 2026: K-Original Light",
+      "deck": "The DDP media facade turns 3–13 September into a free nightly light programme, with 6 September's performance by HYPNOSIS THERAPY.",
+      "publisher": "Seoul Metropolitan Government",
+      "official_url": "https://festival.seoul.go.kr/festival/main/festivalView.do?festacode=451",
+      "published_date": "2026-08-20",
+      "event_date": "2026-09-03/2026-09-13",
+      "media": {
+        "kind": "image",
+        "url": "https://festival.seoul.go.kr/cmmn/file/getImage.do?atchFileId=bace63d794c84ba7ac09ef77496c79a7&thumb=Y",
+        "alt": "Official Seoul Light DDP 2026 programme image",
+        "credit": "Seoul Metropolitan Government · Preview-linked official image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "seoul-upcycle-festival-2026",
+      "category": "city",
+      "title": "Seoul Upcycle Festival 2026",
+      "deck": "Seoul Upcycling Plaza keeps 4–6 September open with repair, market, public participation and a free entry route.",
+      "publisher": "Seoul Metropolitan Government",
+      "official_url": "https://festival.seoul.go.kr/festival/main/festivalView.do?festacode=825",
+      "published_date": "2026-08-13",
+      "event_date": "2026-09-04/2026-09-06",
+      "media": {
+        "kind": "image",
+        "url": "https://festival.seoul.go.kr/resources/culture/img/editor/culture/editor_20260813134033_02633.jpg",
+        "alt": "Official Seoul Upcycle Festival 2026 image",
+        "credit": "Seoul Metropolitan Government · Preview-linked official image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ]
+}

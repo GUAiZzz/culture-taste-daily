@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "issue_id": "2026-08-20",
+  "publication_date": "2026-08-20",
+  "title": "文化需要一个地方",
+  "title_en": "CULTURE NEEDS A PLACE.",
+  "deck": "从 local market、Sephora、网络与零售现场，看文化如何获得一个可以发生的位置。",
+  "migration_mode": "preserved_self_contained_html",
+  "original_file": "original.html",
+  "cover_asset": "covers/2026-08-20.png",
+  "source_sha256": "b4b42d072a36f85a5490d9f1cbc0b0c4b4d148282fe379f4022dd08fb1074fd2",
+  "preview_rights_status": "historical_artifact_under_human_review",
+  "production_eligible": false,
+  "limitations": [
+    "The supplied self-contained historical HTML is preserved rather than normalized into the current renderer.",
+    "Embedded historical media and its reuse basis require human review before any production cutover."
+  ]
+}
