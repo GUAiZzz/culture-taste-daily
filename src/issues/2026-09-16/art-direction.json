@@ -1,0 +1,17 @@
+{
+  "dominant_mood": "骨白底上的深靛、朱砂红和硫磺黄，像一座把物件轮廓投到墙上的临时剧场：安静阅读，突然被一个清晰的剪影打断",
+  "background_logic": "页面把‘公共’做成一组错位的剪影框、投影面和注册针脚：对象先有轮廓，再有材料，最后才有进入条件；不复用最近七期的日历轴、节目单轨道、孔径窗口、尺度矩形场、折页结构、门框路线或 aftercare rail",
+  "palette_logic": "bone #F3EFE3, indigo #172033, ultramarine #243B8A, vermilion #C74A36, sulfur #E1D454；骨白承载长文，深靛承载正文，钴蓝标记索引，朱砂提示判断转换，硫磺黄只留给剪影内面和少量注册针脚，不把装饰色交给正文小字号",
+  "type_scale_logic": "标题像剧场入口旁的硬纸标签，正文保持 18px；编号用等宽字，英文只承担标题、deck 与 abstract，长标题自然断行，不为视觉压缩事实",
+  "image_behavior": "四张一手官方媒体以 Preview 外链显示；所有复用权利仍未知，保留来源回链和本地原创非纪实剪影舞台图；外图失败时不隐藏来源，回退图只说明轮廓关系，不冒充现场",
+  "page_density_and_tempo": "封面先给出几块不对齐的投影面，正文从娃娃的可移动身体进入纺织的时间，再进入画作获得建筑身体的瞬间，最后落在工艺继续变形的条件；每段留出可读空白，不把四个项目串成单一成功叙事",
+  "core_visual_action": "用三个错位的剪影框制造‘对象—材料—公众’的三段距离，蓝色注册针在框边停住，朱砂小标签只在故事切换时出现；读者看到的是对象被翻译到公众面前的瞬间，而不是一条被装饰的路线",
+  "cover_composition": "骨白底上叠放三块深靛投影面，最上层切出一块硫磺黄内面，朱砂注册线穿过边界后停住；标题占据左侧，右侧留出像尚未有人站入的舞台空白",
+  "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 只提供可关闭的‘剪影注记’，正文、事实和外图回链不依赖 JavaScript",
+  "behance_viewing_arc": "先看衣服如何借娃娃获得可移动的身体，再看手工如何拒绝只做质感，接着进入绘画如何让建筑承担感知，最后回到传统如何保留改变自己的权利",
+  "mobile_translation": "390px 下三块投影面收成左侧窄剪影，注册线变成边缘针脚，硫磺黄只出现在标题与索引附近；正文单列，图片说明和长链接自然换行",
+  "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点可见，长链接换行，外图失败不隐藏来源，移动端无横向滚动；剪影装饰不覆盖正文和图片说明",
+  "quiet_ending": "退出处留下一个未站人的剪影框和一枚停住的注册针，不给箭头，让读者把公共性继续带出页面",
+  "closing_quotation": {"id": "ct-en-006", "language": "en", "text": "Culture lives where an object finds its public.", "credit": "Culture & Taste Editorial"},
+  "closing_palette": {"background": "#F3EFE3", "foreground": "#172033", "accent": "#243B8A", "rationale": "骨白与深靛形成可读长文底，靛蓝承担结构信息，朱砂提示转换与不确定，硫磺黄只保留给剪影内面和少量注册针脚。"}
+}
