@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">The Eternal Smile silhouette stage</title><desc id="desc">An original abstract layered textile-like silhouette in bone, vermilion and indigo.</desc>
+  <rect width="1200" height="800" fill="#F3EFE3"/><path d="M102 604C178 210 358 82 558 154c201 73 245 284 511 180v266H102z" fill="#243B8A"/>
+  <path d="M236 658c-6-188 75-326 192-365 126-42 225 74 216 365z" fill="#C74A36" opacity=".94"/><path d="M428 626c-32-206 19-342 112-403 94-61 158 37 177 403z" fill="#E1D454" opacity=".95"/>
+  <path d="M155 681h845M193 721h629" stroke="#172033" stroke-width="7" stroke-dasharray="19 18"/><path d="M776 151c88-45 170-34 256 15" fill="none" stroke="#C74A36" stroke-width="9"/><circle cx="1024" cy="166" r="16" fill="#172033"/>
+</svg>
