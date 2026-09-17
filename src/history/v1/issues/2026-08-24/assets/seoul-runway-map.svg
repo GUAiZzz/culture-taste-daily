@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Seoul Fashion Week two venue map</title>
+  <desc id="desc">An original route map connecting DDP professional programming with Lotte World Tower public programming.</desc>
+  <rect width="1200" height="720" fill="#101552"/>
+  <path d="M165 445C350 280 490 500 650 330S865 225 1035 330" fill="none" stroke="#d9ff43" stroke-width="10" stroke-dasharray="18 18"/>
+  <circle cx="165" cy="445" r="48" fill="#ff6b57"/><circle cx="1035" cy="330" r="48" fill="#b7c9ff"/>
+  <text x="104" y="555" fill="#d9ff43" font-family="monospace" font-size="30" font-weight="700">DDP / INDUSTRY</text>
+  <text x="860" y="250" fill="#b7c9ff" font-family="monospace" font-size="30" font-weight="700">LOTTE / PUBLIC</text>
+  <text x="80" y="100" fill="#f5f0e6" font-family="monospace" font-size="30" letter-spacing="4">SEOUL / 01—06 SEP 2026</text>
+  <text x="80" y="660" fill="#b7c9ff" font-family="Arial, sans-serif" font-size="34">RUNWAY AS CITY INTERFACE</text>
+</svg>

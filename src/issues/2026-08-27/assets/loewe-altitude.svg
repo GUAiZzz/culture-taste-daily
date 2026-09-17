@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">A garment tested against altitude</title>
+  <desc id="desc">An original mountain diagram for the official Loewe Fall Winter 2026 campaign.</desc>
+  <rect width="1200" height="720" fill="#c9d7d0"/><path d="M0 560L240 330 420 505 700 180 1200 560V720H0Z" fill="#27494b"/><path d="M0 560L240 330 420 505 700 180 1200 560" fill="none" stroke="#f0e7d6" stroke-width="8"/>
+  <path d="M700 180L632 252h132Z" fill="#f0e7d6"/><circle cx="980" cy="128" r="62" fill="#ef5b35"/><text x="80" y="90" fill="#101010" font-family="Arial,sans-serif" font-size="32" font-weight="800">LOEWE / FW26 / HIGH ALTITUDE</text><text x="80" y="660" fill="#f0e7d6" font-family="monospace" font-size="23">THE BACKDROP STARTS TO DO THE WORK</text>
+</svg>

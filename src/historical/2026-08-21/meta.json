@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "issue_id": "2026-08-21",
+  "publication_date": "2026-08-21",
+  "title": "八套具体的规则",
+  "title_en": "$5 SHOES. 700 SLEEVES. 6-SECOND LOOPS.",
+  "deck": "八个场景不追求一个统一 aesthetic，而是追问谁能进入、如何拿到、什么被隐藏。",
+  "migration_mode": "preserved_self_contained_html",
+  "original_file": "original.html",
+  "cover_asset": "covers/2026-08-21.png",
+  "source_sha256": "f85bf5678c20363df68930488e61a02b610268b67e12ce7a7e2cdd2441994041",
+  "preview_rights_status": "historical_artifact_under_human_review",
+  "production_eligible": false,
+  "limitations": [
+    "The supplied self-contained historical HTML is preserved rather than normalized into the current renderer.",
+    "Embedded historical media and its reuse basis require human review before any production cutover."
+  ]
+}

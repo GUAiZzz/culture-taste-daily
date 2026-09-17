@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Programme is part of the work</title>
+  <desc id="desc">An original cover graphic showing a blue audience route and an orange return path through five programme nodes.</desc>
+  <rect width="1200" height="760" fill="#F3F1EA"/>
+  <path d="M72 164H1128M72 304H1128M72 444H1128M72 584H1128" stroke="#111111" stroke-width="2" opacity=".18"/>
+  <path d="M78 110C210 110 194 234 338 234S444 104 578 104s110 202 252 202 104-138 292-138" fill="none" stroke="#1746D1" stroke-width="18"/>
+  <path d="M1128 170C1008 170 1028 390 864 390S752 570 590 570s-132-160-284-160-120 112-228 112" fill="none" stroke="#F06432" stroke-width="11" stroke-dasharray="20 16"/>
+  <g fill="#F3F1EA" stroke="#111111" stroke-width="8"><circle cx="78" cy="110" r="24"/><circle cx="338" cy="234" r="24"/><circle cx="578" cy="104" r="24"/><circle cx="830" cy="306" r="24"/><circle cx="1130" cy="168" r="24"/></g>
+  <g fill="#111111" font-family="Arial, sans-serif" font-weight="800"><text x="70" y="72" font-size="30">01</text><text x="328" y="294" font-size="30">02</text><text x="568" y="64" font-size="30">03</text><text x="820" y="364" font-size="30">04</text><text x="1110" y="128" font-size="30">05</text><text x="78" y="684" font-size="24" letter-spacing="5">THE PROGRAMME IS PART OF THE WORK</text></g>
+  <rect x="896" y="608" width="236" height="46" fill="#1746D1"/><text x="918" y="638" fill="#F3F1EA" font-family="monospace" font-size="18" font-weight="700">OPEN PUBLIC SLOT</text>
+</svg>

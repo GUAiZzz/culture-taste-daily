@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Can stool object diagram</title>
+  <desc id="desc">An original cutaway drawing of a can-shaped stool moving a graphic language from shirt to room.</desc>
+  <rect width="1200" height="720" fill="#101552"/>
+  <ellipse cx="600" cy="180" rx="190" ry="55" fill="#d9ff43" stroke="#f5f0e6" stroke-width="8"/>
+  <path d="M410 180v300c0 55 85 100 190 100s190-45 190-100V180" fill="#ff6b57" stroke="#f5f0e6" stroke-width="8"/>
+  <ellipse cx="600" cy="480" rx="190" ry="55" fill="#ff6b57" stroke="#f5f0e6" stroke-width="8"/>
+  <path d="M460 315h280M470 380h260" stroke="#101552" stroke-width="18"/>
+  <circle cx="520" cy="250" r="22" fill="#101552"/><circle cx="680" cy="250" r="22" fill="#101552"/>
+  <text x="76" y="100" fill="#b7c9ff" font-family="monospace" font-size="28" letter-spacing="5">APPAREL → INTERIOR</text>
+  <text x="76" y="650" fill="#d9ff43" font-family="monospace" font-size="24">ORIGINAL EDITORIAL OBJECT STUDY / NOT PRODUCT PHOTOGRAPHY</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Participation study</title>
+  <desc id="desc">Original diagram of four linked fields, drawn for the Culture &amp; Taste Preview.</desc>
+  <rect width="1200" height="800" fill="#102a2a"/>
+  <path d="M80 170H1120M80 400H1120M80 630H1120" stroke="#e9f0e7" stroke-width="3" opacity=".4"/>
+  <path d="M180 100V700M430 100V700M680 100V700M930 100V700" stroke="#e9f0e7" stroke-width="2" opacity=".22"/>
+  <path d="M180 170C350 170 350 630 520 630S690 170 860 170s170 460 260 460" fill="none" stroke="#ffcf4a" stroke-width="26"/>
+  <path d="M180 630C350 630 350 170 520 170s170 460 340 460" fill="none" stroke="#f27a63" stroke-width="10"/>
+  <circle cx="180" cy="170" r="20" fill="#90f0d0"/><circle cx="520" cy="630" r="20" fill="#90f0d0"/><circle cx="860" cy="170" r="20" fill="#90f0d0"/><circle cx="1120" cy="630" r="20" fill="#90f0d0"/>
+  <g fill="#e9f0e7" font-family="monospace" font-weight="700" font-size="24"><text x="88" y="112">ENTER / 09.02</text><text x="88" y="755">BODY ↔ OBJECT ↔ PUBLIC</text><text x="820" y="90">LOCAL FALLBACK / ORIGINAL</text></g>
+</svg>

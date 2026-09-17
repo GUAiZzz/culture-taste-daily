@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-04",
+  "coverage": {
+    "verified_at": "2026-09-04T14:22:00+08:00",
+    "regional_lanes_checked": ["mainland_china_plus_hong_kong_or_taiwan", "japan_or_korea", "continental_europe_or_united_kingdom", "united_states_or_canada", "rotating_global_lane"],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "luxury_runway",
+    "focus_subjects_checked": ["Balenciaga", "Bode", "Cartier", "Casablanca", "Chanel", "Chrome Hearts", "Givenchy", "Goyard", "Kenzo", "Loro Piana", "Marni", "Bottega Veneta", "Prada", "Tiffany & Co.", "Loewe", "Miu Miu", "Rick Owens", "SKIMS", "HOMME PLISSÉ ISSEY MIYAKE", "Entire Studios"],
+    "standing_beats_checked": ["stussy-release-radar", "luxury-runway-calendar", "exhibition-and-cultural-programme-radar", "small-breakout-object-radar"],
+    "deduplication_lookback_days": 2
+  },
+  "dominant_mood": "白纸工作台上的深蓝结构线、橙红校准点与银灰材料切片",
+  "background_logic": "以一张被折起的工作台和四条不等长的制作轨迹组织页面，不复用最近七期的测量脊、坐标点、门槛线、倒计时网格、脚手架或互穿曲线",
+  "palette_logic": "paper #F7F5EF, ink #111827, orange #F05A3C, cobalt #2757D6, silver #C9CED6, mint #B9F4D1",
+  "type_scale_logic": "标题像贴在制作样本上的大号批注，正文 18px；故事编号沿工作台边缘排列，英文只承担标题、deck 与 abstract",
+  "image_behavior": "五张一手官方媒体只在 Preview 外链显示；本地 entry-card SVG 是原创的工作台占位，不冒充纪实照片",
+  "page_density_and_tempo": "封面先露出一张未收好的工作台，正文从服装合作进入流行工业，再落到机器传感和城市议事，退出处把方法留给下一位验证者",
+  "core_visual_action": "页面把材料、参与者、规格、地址与时段分成可回查的批注层，令文化判断停在制作过程而非成品表面",
+  "cover_composition": "白纸底上横置一张深蓝工作台，橙红校准点压住日期，银灰切片与薄荷绿标注从边缘伸出，标题像贴在样本上的标签",
+  "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻，所有事实、正文与来源不依赖 JavaScript",
+  "behance_viewing_arc": "从合作服装的材料与档案进入流行音乐的工业透明度，再进入机器的边角工程，最后回到城市里谁来制作未来",
+  "mobile_translation": "390px 下工作台缩成右侧窄栏，批注变成边缘标签，正文保持单列并允许来源长链接换行",
+  "mobbin_usability_constraint": "交互目标不少于 44px，焦点可见，长链接换行，外图失败不隐藏来源，移动端无横向滚动",
+  "quiet_ending": "退出处留下一个未封口的橙红校准点，提醒方法必须交给下一位使用者完成",
+  "closing_quotation": {"id": "ct-en-006", "language": "en", "text": "Culture lives where an object finds its public.", "credit": "Culture & Taste Editorial"},
+  "closing_palette": {"background": "#F7F5EF", "foreground": "#111827", "accent": "#2757D6", "rationale": "白纸底让事实和来源保持清洁，深蓝建立阅读秩序，橙红只作为校准信号，银灰和薄荷绿负责材料层级而不承担小字号文字。"}
+}

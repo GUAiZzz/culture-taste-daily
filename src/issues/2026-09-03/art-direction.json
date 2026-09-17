@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-03",
+  "coverage": {
+    "verified_at": "2026-09-03T11:25:00+08:00",
+    "regional_lanes_checked": ["mainland_china_plus_hong_kong_or_taiwan", "japan_or_korea", "continental_europe_or_united_kingdom", "united_states_or_canada", "rotating_global_lane"],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "drop_streetwear",
+    "focus_subjects_checked": ["Supreme", "Stüssy", "Palace", "Brain Dead", "Aimé Leon Dore", "Noah", "Corteiz", "Denim Tears", "Kith", "CLOT", "Gallery Dept.", "Heron Preston", "Praying", "Youth of Paris", "YZY", "October's Very Own", "Unavailable", "Uniform Display", "Unsound Rags", "Prototypes"],
+    "standing_beats_checked": ["supreme-thursday-drop", "stussy-release-radar", "luxury-runway-calendar", "exhibition-and-cultural-programme-radar", "small-breakout-object-radar"],
+    "deduplication_lookback_days": 2
+  },
+  "dominant_mood": "奶油纸面上的黑色测量脊、酸绿色修正线与砖红色对象标记",
+  "background_logic": "以一条贯穿页面的测量脊和四组错位黑块组织纸面，不复用最近七期的坐标点、门槛线、倒计时网格、脚手架或互穿曲线",
+  "palette_logic": "paper #F2EBDD, ink #171717, brick #E84A37, acid #D5F23B, blue #2457C5",
+  "type_scale_logic": "标题像贴在物件上的工作标签，正文 18px；故事编号沿测量脊固定，英文只承担标题、deck 与 abstract",
+  "image_behavior": "五张一手官方媒体只在 Preview 外链显示；本地 entry-card SVG 明确是原创失图占位，不冒充纪实照片",
+  "page_density_and_tempo": "封面先给出一条可读的测量脊，正文从展览物件进入服装代码，再进入唱片包装和城市提案，退出处留下可执行的使用条件",
+  "core_visual_action": "页面把新ness从表面拉回使用，把对象、署名、地址、时段与下一步动作排成同一条可检查的线",
+  "cover_composition": "奶油底上黑色测量脊从左下穿过四组错位黑块，砖红标记压住日期，酸绿色修正线指向下一步",
+  "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻，所有事实、正文与来源不依赖 JavaScript",
+  "behance_viewing_arc": "从失去用途的熟悉物件进入可穿的街头代码，再进入唱片包装的署名关系，最后把 AI 提案交回城市现场",
+  "mobile_translation": "390px 下测量脊退到文本右侧，黑块缩成边缘标记，正文保持单列并允许来源长链接换行",
+  "mobbin_usability_constraint": "交互目标不少于 44px，焦点可见，长链接换行，外图失败不隐藏来源，移动端无横向滚动",
+  "quiet_ending": "退出处只保留酸绿色修正线，提醒对象的下一次发布由真实使用来完成",
+  "closing_quotation": {"id": "ct-en-004", "language": "en", "text": "Newness begins where an object becomes usable.", "credit": "Culture & Taste Editorial"},
+  "closing_palette": {"background": "#F2EBDD", "foreground": "#171717", "accent": "#2457C5", "rationale": "奶油纸面让长文和来源先站稳，黑色负责阅读秩序，蓝色作为可读的执行信号；酸绿色只留在构图里做修正，不承担小字号文字。"}
+}

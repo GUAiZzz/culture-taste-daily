@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Doll Dressing silhouette stage</title><desc id="desc">An original abstract scene with an indigo cutout figure and a yellow garment shape.</desc>
+  <rect width="1200" height="800" fill="#F3EFE3"/><rect x="84" y="86" width="930" height="570" fill="#172033" transform="rotate(-4 84 86)"/>
+  <path d="M275 604c18-135 19-269 4-399l76-56 74 56c-15 130-14 264 4 399z" fill="#E1D454"/>
+  <circle cx="317" cy="167" r="54" fill="#F3EFE3"/><path d="M193 648h273M195 690h780" stroke="#C74A36" stroke-width="8" stroke-dasharray="24 20"/>
+  <path d="M830 118h174v174H830z" fill="#243B8A"/><path d="M854 142h126v126H854z" fill="#F3EFE3"/><text x="862" y="210" fill="#172033" font-family="monospace" font-size="24">CHANGE / BODY</text>
+  <path d="M1050 96l80 42-42 80-80-42z" fill="#C74A36"/><circle cx="1074" cy="150" r="11" fill="#F3EFE3"/>
+</svg>

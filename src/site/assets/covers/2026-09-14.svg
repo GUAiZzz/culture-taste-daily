@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Culture &amp; Taste 2026-09-14 cover</title>
+  <desc id="desc">Original abstract cover showing cultural scale as nested blue fields, a red turn and a yellow measurement line.</desc>
+  <rect width="1600" height="900" fill="#e7e7e2"/>
+  <g fill="none" stroke="#1246a0" stroke-width="28">
+    <rect x="124" y="142" width="1150" height="180" transform="rotate(-4 124 142)"/>
+    <rect x="358" y="412" width="846" height="264" transform="rotate(6 358 412)"/>
+  </g>
+  <path d="M1080 84v720" stroke="#d9ff55" stroke-width="36"/>
+  <path d="M198 740l320-280" stroke="#b84735" stroke-width="36"/>
+  <path d="M1360 146v550" stroke="#202326" stroke-width="10" stroke-dasharray="20 22"/>
+  <circle cx="1080" cy="84" r="30" fill="#202326"/>
+  <circle cx="1080" cy="804" r="30" fill="#202326"/>
+</svg>

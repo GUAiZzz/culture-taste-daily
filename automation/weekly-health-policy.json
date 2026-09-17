@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "kind": "culture_taste_weekly_health_policy",
+  "timezone": "Asia/Shanghai",
+  "schedule": {
+    "weekday": "Sunday",
+    "start_time": "16:30"
+  },
+  "base_ref": "preview-build-v1",
+  "mode": "read_only_health_audit",
+  "required_checks": [
+    "daily_automation_active_and_schedule_aligned",
+    "latest_frontend_base_is_current",
+    "deterministic_build_and_independent_qa",
+    "all_published_source_and_media_links",
+    "live_home_archive_issue_and_story_routes",
+    "desktop_mobile_no_js_and_reduced_motion",
+    "theme_randomization_and_session_inheritance",
+    "privacy_and_no_deploy_boundaries"
+  ],
+  "output": {
+    "modify_repository": false,
+    "open_pull_request": false,
+    "merge": false,
+    "deploy_preview": false,
+    "deploy_production": false,
+    "modify_pages_settings": false
+  },
+  "failure": {
+    "status": "BLOCKED",
+    "preserve_previous_good": true,
+    "notify_with_exact_failures": true
+  }
+}

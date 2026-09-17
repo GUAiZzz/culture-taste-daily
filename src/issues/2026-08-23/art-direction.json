@@ -1,0 +1,16 @@
+{
+  "dominant_mood": "a Sunday closing ledger interrupted by one bright product opening",
+  "background_logic": "warm paper carries black closing rules while cobalt image fields and one halo-white interruption mark openings",
+  "palette_logic": "warm paper and carbon for the ledger, cobalt for active rooms, vermilion for final-day stamps, white for the release interruption",
+  "type_scale_logic": "large editorial Chinese headlines sit against compact date stamps; body copy stays at a readable 18px with restrained line length",
+  "image_behavior": "one source-led preview image per story where a publisher endpoint can be safely surfaced; original local closing-card visuals remain as accessible fallbacks",
+  "page_density_and_tempo": "a broad cover, three spacious closing rooms, faster object and interaction signals, one bounded architecture watch, then a quiet ledger close",
+  "core_visual_action": "a vertical date rule repeatedly crosses story images, turning the same day into a sequence of doors closing and one box opening",
+  "cover_composition": "an oversized 23 is cut by a horizontal closing line with OPEN and CLOSE labels held apart",
+  "desktop_interaction_mechanic": "the functional issue index stays available while stories alternate between full-width image rooms and narrower ledger notes without requiring JavaScript",
+  "behance_viewing_arc": "date cut, institutional archive, distributed city, changing matter, intimate manuscript, remastered object, QR threshold, domestic afterimage",
+  "mobile_translation": "the date rule becomes a left spine, figures retain captions, headings scale down without clipping, and all source links keep 44px targets",
+  "mobbin_usability_constraint": "no hidden reading, no nested scroll, visible focus, stable anchors, source-image failure links, and complete no-JS access",
+  "quiet_ending": "a thin black closing rule and one unresolved sentence about what should be edited next",
+  "closing_palette": {"background":"#F1E8D5","foreground":"#161616","accent":"#A92F25","rationale":"Warm ledger paper holds the unresolved sentence while a restrained vermilion rule marks the edit still to come."}
+}
