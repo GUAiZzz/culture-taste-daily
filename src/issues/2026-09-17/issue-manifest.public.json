@@ -1,0 +1,215 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-09-17",
+  "publication_date": "2026-09-17",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-09-17T12:24:00+08:00",
+  "research_locked_at": "2026-09-17T12:24:00+08:00",
+  "content_locked_at": "2026-09-17T13:14:44+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {"status": "locked", "sha256": "ae34730c8f49d19ac46a28deea2699cbd1302ee541b50a9388b4ed339604c702", "locked_at": "2026-09-17T13:14:44+08:00"},
+  "source_hashes": {
+    "content_sha256": "ae34730c8f49d19ac46a28deea2699cbd1302ee541b50a9388b4ed339604c702",
+    "art_direction_sha256": "a64d379a9280cc19d2317b2b824949c9e7b77dbb8f3f20b030197a9ff21fe28c",
+    "issue_style_sha256": "15706e0554e5a13e5c616a1b352d9cca9d8a83266280edc2fd0090af51e19dca"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-09-17T11:55:00+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "作品完成以后，真正困难的部分才开始：它要公开自己怎样被保存、被触摸、被再使用，或者被重新解释。数字图像的生产痕迹、服装的穿戴动作、废料的来源链和街头文化的作者关系，共同构成作品的下一次进入。",
+  "art_direction": {
+    "dominant_mood": "烟灰白底上的墨黑、氧化蓝和安全橙，像一张把作品拆开、把背面也翻到桌面上的工作台：安静阅读，但每一件物件都带着可追溯的接缝",
+    "background_logic": "页面使用错开的材料样片、回收标签和一条没有闭合的蓝色线，把“对象—来源—下一次进入”三层关系放在同一张桌面上；不复用最近七期的日历轴、节目单轨道、孔径窗口、尺度矩形场、折页结构、门框路线、afterlife rail 或剪影框",
+    "palette_logic": "ash #E8E4DA, ink #171A1F, oxide #254C63, orange #D86A3A, chalk #F7F4EC；灰白承载长文，墨黑承载正文，氧化蓝标记来源和结构，橙色只标出材料转换，粉笔白留给封面中的未完成背面",
+    "type_scale_logic": "标题像材料样本上的大号工艺标签，正文保持 18px；编号用等宽字，英文只承担标题、deck 与 abstract，长标题自然断行，不为视觉压缩事实",
+    "image_behavior": "四张一手官方媒体以 Preview 外链显示；所有复用权利仍未知，保留来源回链和本地原创非纪实材料图；外图失败时不隐藏来源，回退图只说明关系，不冒充现场",
+    "page_density_and_tempo": "封面先把四种材料并排摆在桌面，正文从数字图像的印刷痕迹进入穿戴动作，再进入废料的来源链，最后落在街头文化进入档案后的作者责任；每段保留停顿，不把四个项目串成一条成功主义的循环叙事",
+    "core_visual_action": "用折返的蓝线连接四张材料样片，橙色标签只在对象跨过一次媒介时出现；线不闭合，提醒读者 afterlife 不是自动发生的闭环，而是需要人继续维护的关系",
+    "cover_composition": "烟灰白底上叠放四块不同纹理的深色材料样片：一块像打印浮雕，一块像可穿戴片材，一块像回收皮革，一块像档案卡；蓝线穿过边界后停住，标题占据左侧，右侧留下可被再次使用的空白",
+    "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 只提供可关闭的“材料注记”，正文、事实和外图回链不依赖 JavaScript",
+    "behance_viewing_arc": "先看数字图像如何重新获得身体，再看身体如何重新定义衣服，接着看材料如何从废弃物流回到手里，最后看档案如何承担作者关系",
+    "mobile_translation": "390px 下四块材料样片收成左侧窄标签，蓝线变成边缘接缝，橙色只出现在标题与来源附近；正文单列，图片说明和长链接自然换行",
+    "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点可见，长链接换行，外图失败不隐藏来源，移动端无横向滚动；材料装饰不覆盖正文和图片说明",
+    "quiet_ending": "退出处留下一块没有被贴上的材料标签和一条未闭合的蓝线，不给箭头，让读者把作品的下一次进入继续带出页面",
+    "closing_quotation": {"id": "ct-en-007", "language": "en", "text": "A frame matters only when it changes the action.", "credit": "Culture & Taste Editorial"},
+    "closing_palette": {"background": "#E8E4DA", "foreground": "#171A1F", "accent": "#254C63", "rationale": "烟灰白与墨黑形成可读长文底，氧化蓝承担来源和结构信息，橙色只提示材料转换，粉笔白保留给封面未完成的背面。"}
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": ["2026-09-16", "2026-09-15", "2026-09-14", "2026-09-11", "2026-09-10", "2026-09-09", "2026-09-08"],
+    "repeated_mechanisms": ["accessible section index", "first-party source image with linked fallback"],
+    "exception_reason": "可访问索引与一手来源图是固定约束；本期改用材料样片、回收标签和未闭合蓝线作为核心构图，讨论作品如何交代下一次进入，没有复用最近七期的日历轴、节目单轨道、孔径窗口、尺度矩形场、折页结构、门框路线、afterlife rail 或剪影框。"
+  },
+  "rights_summary": {"required_assets": 4, "unknown_required_assets": 4, "status": "blocked"},
+  "artifact_digests": {"issue_payload_sha256": null},
+  "evidence_refs": {"technical": [], "editorial_visual": [], "gate": []},
+  "qa": {
+    "html_parse": "unavailable",
+    "assets": "unavailable",
+    "internal_links": "unavailable",
+    "no_js_reading": "unavailable",
+    "desktop_render": "unavailable",
+    "mobile_render": "unavailable",
+    "reduced_motion": "unavailable"
+  },
+  "limitations": [
+    "Non-production Preview candidate only; this manifest cannot authorize production deployment.",
+    "Canonical private GUAiZzz/harry-tone main was verified at pinned commit 13cd6b7046bd81be396810d2923f3a5dc818e93f; no private material enters this repository.",
+    "Four selected stories use externally hosted first-party official images. Reuse rights remain unknown, so candidate status stays BLOCKED and Preview displays source links with local non-documentary fallbacks.",
+    "All five regional lanes, the full 99-subject registry quick scan, the drop_streetwear focus cohort, the five daily standing beats and the prior-two-issue lookback were checked; the public radar contains 10 distinct items with at least two per category.",
+    "Named editorial, visual and rights review remains unresolved; the owner’s current task authorizes the existing non-production Preview only after technical and privacy gates pass."
+  ],
+  "stories": [
+    {
+      "id": "digital-aura-tokyo-2026",
+      "level": "cover",
+      "title": "Digital Aura Tokyo：数字图像不再假装自己没有身体",
+      "image_credit": "Sun-M Color · Preview-linked official image",
+      "english": {
+        "title": "DIGITAL IMAGES ADMIT THEIR BODIES",
+        "deck": "Digital Aura Tokyo turns printing, relief and production decisions into part of the image.",
+        "abstract": "Digital Aura Tokyo runs from 17 to 27 September 2026 at BONUS TRACK GALLERY 1 in Tokyo. The reading of aura as a chain of production choices is editorial interpretation."
+      },
+      "sources": [
+        {"title": "Digital Aura Tokyo", "publisher": "IMA Online", "url": "https://imaonline.jp/news/exhibition/20260823/", "published_date": "2026-08-23", "event_date": "2026-09-17", "relationship": "independent_reporting"},
+        {"title": "Digital Aura Tokyo", "publisher": "Tokyo Art Beat", "url": "https://www.tokyoartbeat.com/events/-/Digital-Aura-Tokyo-Exhibition/B4-A63-EF0/2026-09-17", "published_date": null, "event_date": "2026-09-17", "relationship": "independent_reporting"},
+        {"title": "Kenta Cobayashi", "publisher": "TAV Gallery", "url": "https://tavgallery.com/kentacobayashi/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "FOAM / portfolio", "publisher": "Kenta Cobayashi", "url": "https://www.kentacobayashi.com/portfolio-foam", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "Official home", "publisher": "Kenta Cobayashi", "url": "https://www.kentacobayashi.com/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "Ornament Survival", "publisher": "√K", "url": "https://root-k.jp/exhibitions/emi-kusano_ornamentsurvival/", "published_date": null, "event_date": "2026-01-01", "relationship": "first_party_official"},
+        {"title": "Official site", "publisher": "Emi Kusano", "url": "https://www.emikusano.art/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "Biography", "publisher": "Minori Murata", "url": "https://minorimurata.wiki/biography/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "Official home", "publisher": "Minori Murata", "url": "https://minorimurata.wiki/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "Teppei Kaneuji", "publisher": "precog", "url": "https://precog-jp.net/artists/teppei-kaneuji/", "published_date": null, "event_date": null, "relationship": "independent_reporting"}
+      ],
+      "media": {
+        "asset": "assets/digital-aura-stage.svg",
+        "alt": "An original editorial illustration of a digital image becoming a layered printed object",
+        "caption": "Kenta Cobayashi 官方作品页；本地材料图为原创非纪实占位，打开来源查看艺术家作品与制作痕迹。",
+        "credit": "Kenta Cobayashi · Preview-linked official image",
+        "kind": "source_image",
+        "origin_url": "https://www.kentacobayashi.com/portfolio-foam",
+        "external_image_url": "https://format.creatorcdn.com/fc9fb22d-ac78-4abc-b4f5-0cc4be6104c3/0/0/0/0%2C0%2C3000%2C2000%2C3000%2C1200/0-0-0/dbb4caaf-f1c0-4cda-8124-dc0d75366a2f/1/1/2109_COBAYASHI_001_4756.jpg?fjkss=exp%3D2104942884~hmac%3Ddad2065d34ce259f7251707adebe1e7c8cf032b96964ea02342a83d6e15b6f03",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "next-form-paris-2026",
+      "level": "major",
+      "title": "NEXT FORM：服装先把身体当作问题，而不是答案",
+      "image_credit": "HEAD – Genève · Preview-linked official image",
+      "english": {
+        "title": "CLOTHES START WITH THE BODY AS A QUESTION",
+        "deck": "NEXT FORM treats wearable design as research into movement, handling, identity and material.",
+        "abstract": "NEXT FORM runs from 17 to 20 September 2026 at Dover Street Market Paris. The reading of wearability as a sustained design condition is editorial interpretation."
+      },
+      "sources": [
+        {"title": "NEXT FORM official event", "publisher": "HEAD – Genève", "url": "https://head.hesge.ch/en/event/2026/next-form", "published_date": null, "event_date": "2026-09-17", "relationship": "first_party_official"},
+        {"title": "NEXT FORM project detail", "publisher": "HEAD – Genève", "url": "https://head.hesge.ch/projet/next-form-paris-design-week", "published_date": "2026-08-01", "event_date": "2026-09-17", "relationship": "first_party_official"},
+        {"title": "School home", "publisher": "HEAD – Genève", "url": "https://head.hesge.ch/en", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "All events", "publisher": "HEAD – Genève", "url": "https://head.hesge.ch/evenements/all/all", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "Student projects catalog", "publisher": "HEAD Genève Show", "url": "https://www.head-geneve.show/en", "published_date": null, "event_date": "2026-09-17", "relationship": "first_party_official"},
+        {"title": "Maya Le Bars project", "publisher": "HEAD – Genève", "url": "https://www.hesge.ch/head/en/event/2026/maya-bars-2026-winner-ducastel-prize", "published_date": null, "event_date": "2026-01-01", "relationship": "first_party_official"},
+        {"title": "HEAD takes over Dover Street Market Paris", "publisher": "La Promesse d’un Style", "url": "https://lapromessedunstyle.fr/la-head-geneve-investit-dover-street-market-paris-au-coeur-du-marais/", "published_date": "2026-09-01", "event_date": "2026-09-17", "relationship": "independent_reporting"},
+        {"title": "Open Windows", "publisher": "Dover Street Market Paris", "url": "https://www.doverstreetmarketparis.com/pages/open-windows", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "Official site", "publisher": "Dover Street Market Paris", "url": "https://www.doverstreetmarketparis.com/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "Official site", "publisher": "USM", "url": "https://www.usm.com/en", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "NEXT FORM announcement", "publisher": "HEAD – Genève", "url": "https://www.linkedin.com/posts/head-geneva-university-art-design_next-form-dover-street-market-paris-activity-7501594389161558016-Me1o", "published_date": "2026-09-01", "event_date": "2026-09-17", "relationship": "first_party_official"}
+      ],
+      "media": {
+        "asset": "assets/next-form-stage.svg",
+        "alt": "An original editorial illustration of a body, a handle and overlapping wearable forms",
+        "caption": "HEAD – Genève 官方活动页；本地材料图为原创非纪实占位，打开来源查看项目、场景和公开时间。",
+        "credit": "HEAD – Genève · Preview-linked official image",
+        "kind": "source_image",
+        "origin_url": "https://head.hesge.ch/en/event/2026/next-form",
+        "external_image_url": "https://head.hesge.ch/sites/default/files/projet/media/next_form_exhibition.png",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "root-cause-london-2026",
+      "level": "major",
+      "title": "Root Cause：废料不是故事的结尾，而是设计的起点",
+      "image_credit": "Exiled · Preview-linked official image",
+      "english": {
+        "title": "WASTE IS A DESIGN BEGINNING",
+        "deck": "Root Cause makes discarded materials, repair and the work of reuse visible during LFW26.",
+        "abstract": "Root Cause runs from 17 to 20 September 2026 at Fabrica X in London. The claim that material provenance must remain visible is editorial interpretation."
+      },
+      "sources": [
+        {"title": "Root Cause at LFW26", "publisher": "Exiled", "url": "https://exiled.com/blogs/news/rootcause", "published_date": "2026-08-19", "event_date": "2026-09-17", "relationship": "first_party_official"},
+        {"title": "Root Cause at Fabrica X", "publisher": "The Mills Fabrica", "url": "https://www.themillsfabrica.com/events/root-cause-at-fabrica-x-london/", "published_date": null, "event_date": "2026-09-17", "relationship": "first_party_official"},
+        {"title": "Official schedule", "publisher": "London Fashion Week", "url": "https://londonfashionweek.co.uk/schedule", "published_date": null, "event_date": "2026-09-17", "relationship": "first_party_official"},
+        {"title": "Official site", "publisher": "London Fashion Week", "url": "https://londonfashionweek.co.uk/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "Official site", "publisher": "Exiled", "url": "https://exiled.com/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "London’s fashion footprint", "publisher": "ReLondon / UCL", "url": "https://relondon.gov.uk/wp-content/uploads/2023/06/Londons-fashion-footprint_report.pdf", "published_date": "2023-06-01", "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Fashion and the circular economy", "publisher": "Ellen MacArthur Foundation", "url": "https://www.ellenmacarthurfoundation.org/fashion-and-the-circular-economy-deep-dive", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Fashion overview", "publisher": "Ellen MacArthur Foundation", "url": "https://www.ellenmacarthurfoundation.org/topics/fashion/overview", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Importing and exporting waste and non-waste textiles", "publisher": "GOV.UK", "url": "https://www.gov.uk/guidance/importing-and-exporting-waste-and-non-waste-textiles", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Waste Prevention Programme for England", "publisher": "GOV.UK", "url": "https://www.gov.uk/government/publications/waste-prevention-programme-for-england-maximising-resources-minimising-waste/the-waste-prevention-programme-for-england-maximising-resources-minimising-waste", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Textiles and the environment: the role of design", "publisher": "European Environment Agency", "url": "https://www.eea.europa.eu/en/analysis/publications/textiles-and-the-environment-the-role-of-design-in-europes-circular-economy-1", "published_date": null, "event_date": null, "relationship": "independent_reporting"}
+      ],
+      "media": {
+        "asset": "assets/root-cause-stage.svg",
+        "alt": "An original editorial illustration of a recovered textile label, a repaired seam and a second use",
+        "caption": "Exiled 官方活动文章；本地材料图为原创非纪实占位，打开来源查看材料、工作坊和活动安排。",
+        "credit": "Exiled · Preview-linked official image",
+        "kind": "source_image",
+        "origin_url": "https://exiled.com/blogs/news/rootcause",
+        "external_image_url": "https://exiled.com/cdn/shop/articles/Rootcause_x_Fabrica_-_1600x800_b9b2a574-3ef5-412c-a622-9e8970163387.jpg?v=1787124052&width=1600",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "styled-by-the-streets-2026",
+      "level": "signal",
+      "title": "Styled by the Streets：当街头风格进入档案，作者不能被一起收进玻璃柜",
+      "image_credit": "Museum of Pop Culture · Preview-linked official image",
+      "english": {
+        "title": "THE ARCHIVE MUST KEEP THE AUTHOR VISIBLE",
+        "deck": "Styled by the Streets places Black women’s Hip-Hop fashion inside a permanent collection without making authorship optional.",
+        "abstract": "Styled by the Streets opens 19 September 2026 at MOPOP as part of its permanent collection. The claim that archival responsibility includes continued correction is editorial interpretation."
+      },
+      "sources": [
+        {"title": "Styled by the Streets", "publisher": "Museum of Pop Culture", "url": "https://www.mopop.org/exhibitions/styled-by-the-streets", "published_date": null, "event_date": "2026-09-19", "relationship": "first_party_official"},
+        {"title": "Official press release", "publisher": "Museum of Pop Culture", "url": "https://www.mopop.org/press/mopop-announces-styled-by-the-streets-black-women-in-hip-hop-fashion", "published_date": "2026-09-16", "event_date": "2026-09-19", "relationship": "first_party_official"},
+        {"title": "Member Preview Day", "publisher": "Museum of Pop Culture", "url": "https://www.mopop.org/events/styled-by-the-streets-member-preview", "published_date": null, "event_date": "2026-09-18", "relationship": "first_party_official"},
+        {"title": "Archive", "publisher": "Hip Hop Fashion Museum", "url": "https://www.hiphopfashionmuseum.org/archive/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "About", "publisher": "Hip Hop Fashion Museum", "url": "https://www.hiphopfashionmuseum.org/about/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "Official home", "publisher": "Hip Hop Fashion Museum", "url": "https://www.hiphopfashionmuseum.org/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "The Sequence", "publisher": "National Museum of African American Music", "url": "https://www.nmaam.org/exhibit/the-sequence/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "My Mic Sounds Nice", "publisher": "Museum of Pop Culture", "url": "https://www.mopop.org/exhibitions/my-mic-sounds-nice-hip-hop-feminism-in-history", "published_date": "2023-04-26", "event_date": "2023-04-26", "relationship": "first_party_official"},
+        {"title": "Black women in hip-hop", "publisher": "The Cultural Producer", "url": "https://www.theculturalproducer.com/theexhibition-26", "published_date": null, "event_date": "2026-09-01", "relationship": "independent_reporting"},
+        {"title": "Official site", "publisher": "Justice for Black Girls", "url": "https://www.justiceforblackgirls.com/", "published_date": null, "event_date": null, "relationship": "first_party_official"}
+      ],
+      "media": {
+        "asset": "assets/styled-streets-stage.svg",
+        "alt": "An original editorial illustration of a garment, a nail set and a museum archive card",
+        "caption": "MOPOP 官方展览页；本地材料图为原创非纪实占位，打开来源查看展览章节、物件与作者合作关系。",
+        "credit": "Museum of Pop Culture · Preview-linked official image",
+        "kind": "source_image",
+        "origin_url": "https://www.mopop.org/exhibitions/styled-by-the-streets",
+        "external_image_url": "https://cdn.prod.website-files.com/66a00e48c726b5c85469ae46/6a5fff11f7edcd5e9298e7ee_SBTS26_Web%20Events%20Page_800x533_2026.06.24.png",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ]
+}
