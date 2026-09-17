@@ -16,7 +16,7 @@ Sun-M Color 的 **Digital Aura Tokyo** 于 9 月 17 日至 27 日在东京 BONUS
 
 所以这里的“第二次生命”不是给数字图像加一层稀奇的表面，而是让它承认自己必须经过材料、设备和判断才能抵达别人。打印不是把屏幕内容降格为纸面，它让“谁做了什么决定”重新变成作品的一部分。数字时代的 aura 也许不在唯一的原件里，而在一连串不可被完全抹平的生产选择里——这仍是一个需要继续争论的命题，不是展览已经证明的结论。
 
-来源：[IMA Online：Digital Aura Tokyo](https://imaonline.jp/news/exhibition/20260823/)；[TAV Gallery：Kenta Cobayashi](https://tavgallery.com/kentacobayashi/)；[Kenta Cobayashi：FOAM / portfolio](https://www.kentacobayashi.com/portfolio-foam)；[Kenta Cobayashi：official home](https://www.kentacobayashi.com/)；[Emi Kusano：Ornament Survival](https://root-k.jp/exhibitions/emi-kusano_ornamentsurvival/)；[Emi Kusano：official site](https://www.emikusano.art/)；[Minori Murata：biography](https://minorimurata.wiki/biography/)；[Minori Murata：official home](https://minorimurata.wiki/)；[precog：Teppei Kaneuji](https://precog-jp.net/artists/teppei-kaneuji/)；[Teppei Kaneuji：official site](https://teppeikaneuji.site/)
+来源：[IMA Online：Digital Aura Tokyo](https://imaonline.jp/news/exhibition/20260823/)；[Tokyo Art Beat：Digital Aura Tokyo](https://www.tokyoartbeat.com/events/-/Digital-Aura-Tokyo-Exhibition/B4-A63-EF0/2026-09-17)；[TAV Gallery：Kenta Cobayashi](https://tavgallery.com/kentacobayashi/)；[Kenta Cobayashi：FOAM / portfolio](https://www.kentacobayashi.com/portfolio-foam)；[Kenta Cobayashi：official home](https://www.kentacobayashi.com/)；[Emi Kusano：Ornament Survival](https://root-k.jp/exhibitions/emi-kusano_ornamentsurvival/)；[Emi Kusano：official site](https://www.emikusano.art/)；[Minori Murata：biography](https://minorimurata.wiki/biography/)；[Minori Murata：official home](https://minorimurata.wiki/)；[precog：Teppei Kaneuji](https://precog-jp.net/artists/teppei-kaneuji/)
 
 ## NEXT FORM：服装先把身体当作问题，而不是答案
 

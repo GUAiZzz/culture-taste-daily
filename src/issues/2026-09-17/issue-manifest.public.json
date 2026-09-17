@@ -6,7 +6,7 @@
   "timezone": "Asia/Shanghai",
   "candidate_created_at": "2026-09-17T12:24:00+08:00",
   "research_locked_at": "2026-09-17T12:24:00+08:00",
-  "content_locked_at": "2026-09-17T12:24:00+08:00",
+  "content_locked_at": "2026-09-17T13:14:44+08:00",
   "status": "BLOCKED",
   "media_required": true,
   "contract": {
@@ -16,9 +16,9 @@
     "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
   },
   "core_version": "v2",
-  "content_lock": {"status": "locked", "sha256": "5b66a653049094e6bd6a88d492ea37cdddff1a06f9141da876458cce09512ce9", "locked_at": "2026-09-17T12:24:00+08:00"},
+  "content_lock": {"status": "locked", "sha256": "ae34730c8f49d19ac46a28deea2699cbd1302ee541b50a9388b4ed339604c702", "locked_at": "2026-09-17T13:14:44+08:00"},
   "source_hashes": {
-    "content_sha256": "5b66a653049094e6bd6a88d492ea37cdddff1a06f9141da876458cce09512ce9",
+    "content_sha256": "ae34730c8f49d19ac46a28deea2699cbd1302ee541b50a9388b4ed339604c702",
     "art_direction_sha256": "a64d379a9280cc19d2317b2b824949c9e7b77dbb8f3f20b030197a9ff21fe28c",
     "issue_style_sha256": "15706e0554e5a13e5c616a1b352d9cca9d8a83266280edc2fd0090af51e19dca"
   },
@@ -85,6 +85,7 @@
       },
       "sources": [
         {"title": "Digital Aura Tokyo", "publisher": "IMA Online", "url": "https://imaonline.jp/news/exhibition/20260823/", "published_date": "2026-08-23", "event_date": "2026-09-17", "relationship": "independent_reporting"},
+        {"title": "Digital Aura Tokyo", "publisher": "Tokyo Art Beat", "url": "https://www.tokyoartbeat.com/events/-/Digital-Aura-Tokyo-Exhibition/B4-A63-EF0/2026-09-17", "published_date": null, "event_date": "2026-09-17", "relationship": "independent_reporting"},
         {"title": "Kenta Cobayashi", "publisher": "TAV Gallery", "url": "https://tavgallery.com/kentacobayashi/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
         {"title": "FOAM / portfolio", "publisher": "Kenta Cobayashi", "url": "https://www.kentacobayashi.com/portfolio-foam", "published_date": null, "event_date": null, "relationship": "first_party_official"},
         {"title": "Official home", "publisher": "Kenta Cobayashi", "url": "https://www.kentacobayashi.com/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
@@ -92,8 +93,7 @@
         {"title": "Official site", "publisher": "Emi Kusano", "url": "https://www.emikusano.art/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
         {"title": "Biography", "publisher": "Minori Murata", "url": "https://minorimurata.wiki/biography/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
         {"title": "Official home", "publisher": "Minori Murata", "url": "https://minorimurata.wiki/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
-        {"title": "Teppei Kaneuji", "publisher": "precog", "url": "https://precog-jp.net/artists/teppei-kaneuji/", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
-        {"title": "Official site", "publisher": "Teppei Kaneuji", "url": "https://teppeikaneuji.site/", "published_date": null, "event_date": null, "relationship": "first_party_official"}
+        {"title": "Teppei Kaneuji", "publisher": "precog", "url": "https://precog-jp.net/artists/teppei-kaneuji/", "published_date": null, "event_date": null, "relationship": "independent_reporting"}
       ],
       "media": {
         "asset": "assets/digital-aura-stage.svg",
