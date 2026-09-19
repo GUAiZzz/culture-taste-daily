@@ -40,7 +40,7 @@
     "publication_date": { "type": "string", "format": "date" },
     "visibility": {
       "description": "Publication routing only. Future drafts are excluded from the public latest/archive feed; this field never authorizes deployment.",
-      "enum": ["published_preview", "future_draft"]
+      "enum": ["published_preview", "future_draft", "published"]
     },
     "timezone": { "const": "Asia/Shanghai" },
     "candidate_created_at": {

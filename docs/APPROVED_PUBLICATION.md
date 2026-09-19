@@ -1,0 +1,13 @@
+# Approved publication — 2026-09-08
+
+The repository owner explicitly confirmed permission for the five September 8 story images and instructed formal publication of the already reviewed edition. This is the scoped operational amendment to the previous Preview-only restriction; the canonical contracts remain preserved.
+
+`deployment/production-issues.json` binds that approval to the exact content, art direction, pinned writing dependency, and five official image byte hashes. The confirmation is the recorded rights basis, not a claim of an independently inspected license document. Supplemental thumbnail images are not covered and are omitted from the approved edition; their official links and text remain. Historical editions retain Preview status. This release implementation accepts only September 8. New or changed issues require a separate owner instruction and reviewed code change; adding a registry entry alone is rejected.
+
+`npm run production:build` validates the registry before composing the public site. The homepage is the latest approved edition, while pending and historical issues remain separately marked in the archive. Default `npm run build` is still a preparation Preview. Both manual deployment entrypoints build the approved composition so a later daily Preview cannot demote the approved homepage. The daily automation policy itself retains Preview-only authority for new material.
+
+`.github/workflows/production.yml` is the manual formal entrypoint. It requires the exact reviewed base SHA, runs the full existing verification plus QA of the final artifact, stamps all deployed files, and uploads an immutable GitHub Pages artifact before deployment. The existing Pages environment and repository remain unchanged. Local build reports alone grant no deployment authority. Run `npm run preview:live -- --sha <merged-sha> --date 2026-09-08` after deployment; the receipt distinguishes formal publication from Preview.
+
+Previous good deployment: run 34191825176, source 0a0e2268487216a22f1afe29e860f84c5402a5b4. Its immutable artifact and the preserved `history/` site are the rollback/history reference. Never rebuild the old source and pretend that is the original deployed artifact.
+
+The previous-good artifact is retained durably as the GitHub release `site-before-production-2026-09-08` (`artifact.tar`). `rollback.yml` downloads that fixed release, validates every file against its original deployment stamp, and restores it without rebuilding. It shares the deployment mutex and verifies the restored public routes. The local rollback drill validated all 458 original files before cutover.
