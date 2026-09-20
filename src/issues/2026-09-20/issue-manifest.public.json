@@ -1,0 +1,130 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-09-20",
+  "publication_date": "2026-09-20",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-09-20T14:14:00+08:00",
+  "research_locked_at": "2026-09-20T14:27:00+08:00",
+  "content_locked_at": "2026-09-20T14:27:00+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {"repository": "GUAiZzz/culture-taste-daily", "path": "docs/PRODUCTION_CONTRACT_V3.md", "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25", "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"},
+  "core_version": "v2",
+  "content_lock": {"status": "locked", "sha256": "b27dd89de8c63d7797d917020fe13aaa580a048e230b13942c9366736de321b7", "locked_at": "2026-09-20T14:27:00+08:00"},
+  "source_hashes": {"content_sha256": "b27dd89de8c63d7797d917020fe13aaa580a048e230b13942c9366736de321b7", "art_direction_sha256": "0d8ec57ff429c4868fa80627debf1182d8c3beef92862bd0cba13b5b2f6947c6", "issue_style_sha256": "1ae33237c9a033993f52da89bf2b2f2fc07f59c67b459d0e653544331718a136"},
+  "harrytone": {"repository": "GUAiZzz/harry-tone", "branch": "main", "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f", "loaded_at": "2026-09-20T14:14:00+08:00"},
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "文化不是一张海报，而是一套被安排出来的关系：时间、对象、机构与靠近方式共同决定我们先看见什么。",
+  "art_direction": {
+    "dominant_mood": "乳白纸面上的深靛、赭红和薄荷绿，像四张被不同机构重新排版的文化地图：冷静、开放，允许声音彼此不重合",
+    "background_logic": "页面把日历格、工作台、收音机刻度和书架柜格拆成四种边缘符号，不把它们合成单一叙事；最近七期的轨道、折页、门框、剪影、材料样片与 afterlife rail 不再复用",
+    "palette_logic": "paper #F3F0E8, ink #182A3A, rust #B84A35, mint #C8DED2, lilac #D9D0E8；纸面承载长文，深靛承载正文，赭红标记判断，薄荷绿和淡紫只负责分隔四种关系",
+    "type_scale_logic": "中文标题以短而硬的判断为主，英文只承担 title、deck 与 abstract；正文 18px，来源区保持较小但可读，长标题自然断行，不为构图压缩事实",
+    "image_behavior": "四张一手官方媒体以 Preview 外链显示；本地 SVG 是原创非纪实回退图，外图失败时仍保留来源链接、图片 credit 和事实说明",
+    "page_density_and_tempo": "先用一张大封面给出四种关系，再依次进入城市日历、私人档案、跨国平台和知识柜格；段落之间留出足够空白，让来源与判断不混成一团",
+    "core_visual_action": "四个独立的符号系统只在页面边缘相遇：日历线不进入书架，收音机刻度不替代机构判断，柜格只承载对象，不制造一条虚构的共同主线",
+    "cover_composition": "乳白底上四个不等宽的彩色模块像被临时贴在地图上的工作标签，深靛线从左侧日历格出发，在右侧书架前停下；标题占据左上，右下保留空白",
+    "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 只补充“怎么读这一期”的注记，正文和来源不依赖 JavaScript",
+    "behance_viewing_arc": "先看城市如何安排文化，再看收藏怎样成为方法，随后听见多个区域的不同频率，最后把知识放回它的愿望与秩序里",
+    "mobile_translation": "390px 下四个封面模块改为纵向标签，深靛线贴近左边缘，图片与来源自然单列；外链长文本允许断行，装饰不抢正文",
+    "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点清晰，来源链接可见且可复制，移动端无横向滚动，外图失败不隐藏证据路径",
+    "quiet_ending": "退出处只留一条深靛线和一个未填满的格子，不给箭头；读者可以把今天看到的关系带回自己的城市、收藏或书架",
+    "closing_quotation": {"id": "ct-en-008", "language": "en", "text": "An entrance is already an editorial decision.", "credit": "Culture & Taste Editorial"},
+    "closing_palette": {"background": "#F3F0E8", "foreground": "#182A3A", "accent": "#B84A35", "rationale": "乳白纸面保持长文的安静，深靛提供稳定对比，赭红只标记判断与转折，薄荷绿和淡紫让四种文化安排各自保留声部。"}
+  },
+  "variation_review": {"comparison_mode": "prior_issues", "compared_issue_dates": ["2026-09-19", "2026-09-18", "2026-09-17", "2026-09-16", "2026-09-15", "2026-09-14", "2026-09-11"], "repeated_mechanisms": ["accessible section index", "first-party source image with linked fallback"], "exception_reason": "可访问索引与一手来源图是固定约束；本期改用日历格、工作台、收音机刻度与书架柜格作为四种独立构图，讨论文化如何被安排，不复用最近七期的轨道、折页、门框、剪影、材料样片或 afterlife rail。"},
+  "rights_summary": {"required_assets": 4, "unknown_required_assets": 4, "status": "blocked"},
+  "artifact_digests": {"issue_payload_sha256": null},
+  "evidence_refs": {"technical": [], "editorial_visual": [], "gate": []},
+  "qa": {"html_parse": "unavailable", "assets": "unavailable", "internal_links": "unavailable", "no_js_reading": "unavailable", "desktop_render": "unavailable", "mobile_render": "unavailable", "reduced_motion": "unavailable"},
+  "limitations": [
+    "Non-production Preview candidate only; this manifest cannot authorize production deployment.",
+    "Canonical private GUAiZzz/harry-tone main was verified at pinned commit 13cd6b7046bd81be396810d2923f3a5dc818e93f; no private material enters this repository.",
+    "Four selected stories use externally hosted first-party official images. Reuse rights remain unknown, so candidate status stays BLOCKED and Preview displays source links with local non-documentary fallbacks.",
+    "All five regional lanes, the full 99-subject registry quick scan, the deterministic focus cohort, the five daily standing beats and the prior-two-issue lookback were checked; the public radar contains 10 distinct items with at least two per category.",
+    "Named editorial, visual and rights review remains unresolved; this candidate does not authorize production deployment."
+  ],
+  "stories": [
+    {
+      "id": "london-rebuilds-calendar-2026",
+      "level": "cover",
+      "title": "伦敦把时装周重新排成一张城市日历",
+      "image_credit": "British Fashion Council · Preview-linked official image",
+      "english": {"title": "LONDON REBUILDS ITS CALENDAR", "deck": "London Fashion Week makes brands, support, retail and public culture visible on one city schedule.", "abstract": "London Fashion Week runs 17–21 September 2026. The reading of the schedule as cultural infrastructure is editorial interpretation."},
+      "sources": [
+        {"title": "London Fashion Week September 2026", "publisher": "British Fashion Council", "url": "https://www.britishfashioncouncil.co.uk/BFCNews/5105/LONDON-FASHION-WEEK-SEPTEMBER-2026-IS-A-CELEBRATION-OF-BRITISH-FASHION", "published_date": "2026-09-17", "event_date": "2026-09-17", "relationship": "first_party_official"},
+        {"title": "Official schedule", "publisher": "London Fashion Week", "url": "https://londonfashionweek.co.uk/schedule", "published_date": null, "event_date": "2026-09-17", "relationship": "first_party_official"},
+        {"title": "London Fashion Week", "publisher": "British Fashion Council", "url": "https://www.britishfashioncouncil.co.uk/London-Fashion-Week", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "About London Fashion Week", "publisher": "London Fashion Week", "url": "https://londonfashionweek.co.uk/about", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "Mulberry appoints Christopher Kane", "publisher": "Mulberry", "url": "https://www.mulberry.com/plugins/investor_relations/pdf/CK_ANNOUNCEMENT_Press%20Release_EN.pdf", "published_date": "2026-05-01", "event_date": "2026-09-17", "relationship": "first_party_official"},
+        {"title": "Mulberry", "publisher": "London Fashion Week", "url": "https://londonfashionweek.co.uk/designers/mulberry", "published_date": null, "event_date": "2026-09-20", "relationship": "first_party_official"},
+        {"title": "London Fashion Week SS27", "publisher": "Wallpaper", "url": "https://www.wallpaper.com/fashion-beauty/london-fashion-week-ss-2027-schedule-what-to-expect", "published_date": "2026-09-15", "event_date": "2026-09-17", "relationship": "independent_reporting"},
+        {"title": "Alexander McQueen is coming home", "publisher": "Country Life", "url": "https://www.countrylife.co.uk/lifestyle/fashion/alexander-mcqueen-is-coming-home-the-way-football-never-could-this-seasons-it-item-is-the-runway-itself", "published_date": "2026-09-17", "event_date": "2026-09-20", "relationship": "independent_reporting"},
+        {"title": "Alexander McQueen returns to London", "publisher": "Vogue", "url": "https://www.vogue.com/article/alexander-mcqueen-will-return-to-london-for-spring-summer-2027", "published_date": "2026-06-01", "event_date": "2026-09-20", "relationship": "independent_reporting"},
+        {"title": "Funding boost for British fashion talent", "publisher": "GOV.UK", "url": "https://www.gov.uk/government/news/funding-boost-for-next-generation-of-british-fashion-talent", "published_date": "2026-09-18", "event_date": null, "relationship": "first_party_official"}
+      ],
+      "media": {"asset": "assets/calendar.svg", "alt": "Original illustration of a fashion calendar becoming a city map", "caption": "British Fashion Council 官方发布；本地 SVG 为原创非纪实回退图，打开来源查看正式日程。", "credit": "British Fashion Council · Preview-linked official image", "kind": "source_image", "origin_url": "https://www.britishfashioncouncil.co.uk/BFCNews/5105/LONDON-FASHION-WEEK-SEPTEMBER-2026-IS-A-CELEBRATION-OF-BRITISH-FASHION", "rights_basis": "preview_user_authorized_external", "external_image_url": "https://www.britishfashioncouncil.co.uk/uploads/files/1//Screenshot-2026-09-16-at-15.18.16.png?w=815&h=815&mode=crop&anchor=topcenter", "origin_authority": "first_party_official"}
+    },
+    {
+      "id": "nigo-archive-workshop-2026",
+      "level": "major",
+      "title": "NIGO 的展览把街头风格装进一间工作室",
+      "image_credit": "Design Museum · Preview-linked official image",
+      "english": {"title": "THE ARCHIVE IS A WORKSHOP", "deck": "NIGO’s retrospective treats collecting as a method for making culture portable.", "abstract": "NIGO: From Japan with Love runs 1 May–4 October 2026 at the Design Museum. The reading of the archive as a workshop is editorial interpretation."},
+      "sources": [
+        {"title": "NIGO: From Japan with Love", "publisher": "Design Museum", "url": "https://beta.designmuseum.org/exhibitions/nigo-from-japan-with-love", "published_date": null, "event_date": "2026-05-01", "relationship": "first_party_official"},
+        {"title": "Press material", "publisher": "Design Museum", "url": "https://designmuseum.org/asset/download?id=ce8cd2d0-859e-49ca-b673-0e68a5084c44", "published_date": null, "event_date": "2026-05-01", "relationship": "first_party_official"},
+        {"title": "Press release", "publisher": "Design Museum", "url": "https://designmuseum.org/asset/download?id=8a167e0a-bc1e-4eac-acfa-d7cbfe6b06c9", "published_date": null, "event_date": "2026-05-01", "relationship": "first_party_official"},
+        {"title": "NIGO at the Design Museum", "publisher": "LVMH", "url": "https://www.lvmh.com/en/news-lvmh/nigo-at-the-design-museum-in-london", "published_date": "2026-05-01", "event_date": "2026-05-01", "relationship": "first_party_official"},
+        {"title": "NIGO interview", "publisher": "GQ", "url": "https://www.gq.com/story/nigo-design-museum-london-interview", "published_date": "2026-05-01", "event_date": null, "relationship": "independent_reporting"},
+        {"title": "NIGO exhibition review", "publisher": "Ian Visits", "url": "https://www.ianvisits.co.uk/articles/temple-nigo-design-museum-show-feels-more-like-brand-showcase-than-exhibition-89437", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "NIGO: From Japan with Love", "publisher": "Time Out", "url": "https://www.timeout.com/london/things-to-do/nigo-from-japan-with-love", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "NIGO at the Design Museum", "publisher": "10 Magazine", "url": "https://10magazine.com/nigo-design-museum/", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "NIGO: From Japan with Love at the Design Museum", "publisher": "Japan Nakama", "url": "https://www.japannakama.co.uk/events/nigo-from-japan-with-love/", "published_date": "2026-07-15", "event_date": null, "relationship": "independent_reporting"},
+        {"title": "NIGO biography", "publisher": "Universal Music Japan", "url": "https://www.universal-music.co.jp/nigo/biography/", "published_date": null, "event_date": null, "relationship": "first_party_official"}
+      ],
+      "media": {"asset": "assets/workshop.svg", "alt": "Original illustration of collected objects arranged on a worktable", "caption": "Design Museum 官方展览页；本地 SVG 为原创非纪实回退图，打开来源查看展览与物件。", "credit": "Design Museum · Preview-linked official image", "kind": "source_image", "origin_url": "https://beta.designmuseum.org/exhibitions/nigo-from-japan-with-love", "rights_basis": "preview_user_authorized_external", "external_image_url": "https://beta.designmuseum.org/image/99c15c6b-3cb7-4524-a380-01d3c63653ed?height=606&width=980", "origin_authority": "first_party_official"}
+    },
+    {
+      "id": "art-spectrum-no-single-frequency-2026",
+      "level": "major",
+      "title": "没有主频的亚洲展览，先把机构的声音调低",
+      "image_credit": "Palais de Tokyo · Preview-linked official image",
+      "english": {"title": "NO SINGLE FREQUENCY", "deck": "Art Spectrum 2026 keeps Asian voices adjacent without forcing them into one identity.", "abstract": "Art Spectrum 2026 runs 1 September–27 December 2026. The reading of the platform as a multi-frequency arrangement is editorial interpretation."},
+      "sources": [
+        {"title": "Art Spectrum 2026", "publisher": "Palais de Tokyo", "url": "https://palaisdetokyo.com/exposition/art-spectrum-2026/", "published_date": null, "event_date": "2026-09-01", "relationship": "first_party_official"},
+        {"title": "Art Spectrum 2026", "publisher": "Hoam Museum", "url": "https://www.leeumhoam.org/hoam/info/news/66?params=Y", "published_date": null, "event_date": "2026-09-01", "relationship": "first_party_official"},
+        {"title": "140 years of France–Korea relations", "publisher": "French Embassy in Korea", "url": "https://kr.ambafrance-culture.org/140ans/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "Joint statement between France and Korea", "publisher": "Élysée", "url": "https://www.elysee.fr/en/emmanuel-macron/2026/04/03/joint-statement-between-the-president-of-the-french-republic-and-the-president-of-the-republic-of-korea", "published_date": "2026-04-03", "event_date": null, "relationship": "first_party_official"},
+        {"title": "France–South Korea bilateral relations", "publisher": "French Ministry for Europe and Foreign Affairs", "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/coree-du-sud/relations-bilaterales", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "140th anniversary cultural programme", "publisher": "Korea.net", "url": "https://french.korea.net/NewsFocus/Culture/view?articleId=286323", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "2026 Art Spectrum", "publisher": "Korean Ministry of Culture", "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22238", "published_date": null, "event_date": "2026-09-01", "relationship": "first_party_official"},
+        {"title": "Korea Foundation exhibition programme", "publisher": "Korea Foundation", "url": "https://kf.or.kr/kf/ru/cnts.do?mi=15351&resveMasterSn=14441", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "K-ompletely Korea", "publisher": "Musée Guimet", "url": "https://www.guimet.fr/en/k-ompletely-korea-year-0", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "South Korean president visits France", "publisher": "Le Monde", "url": "https://www.lemonde.fr/en/international/article/2026/09/07/as-south-korea-president-visits-france-he-calls-for-cooperation-among-countries-sharing-common-values_6757242_4.html", "published_date": "2026-09-07", "event_date": "2026-09-07", "relationship": "independent_reporting"}
+      ],
+      "media": {"asset": "assets/frequency.svg", "alt": "Original illustration of three radio dials tuned to different frequencies", "caption": "Palais de Tokyo 官方展览页；本地 SVG 为原创非纪实回退图，打开来源查看艺术家与机构说明。", "credit": "Palais de Tokyo · Preview-linked official image", "kind": "source_image", "origin_url": "https://palaisdetokyo.com/exposition/art-spectrum-2026/", "rights_basis": "preview_user_authorized_external", "external_image_url": "https://admin.palaisdetokyo.com/wp-content/uploads/2026/09/04_Ria-Choi-1920x1440.jpg", "origin_authority": "first_party_official"}
+    },
+    {
+      "id": "guimet-library-desire-2026",
+      "level": "signal",
+      "title": "把知识画成一个愿望柜",
+      "image_credit": "Musée Guimet · Preview-linked official image",
+      "english": {"title": "A LIBRARY YOU CAN LOOK AT", "deck": "Korean chaekgeori turns books, objects and learning into a visible architecture of desire.", "abstract": "Trompe-l’œil of Knowledge runs 16 September 2026–4 January 2027 at Musée Guimet. The reading of the painted library as a social arrangement is editorial interpretation."},
+      "sources": [
+        {"title": "Trompe-l’œil of Knowledge", "publisher": "Musée Guimet", "url": "https://www.guimet.fr/en/exhibitions/trompe-loeil-knowledge-korea-18th-20th-century", "published_date": null, "event_date": "2026-09-16", "relationship": "first_party_official"},
+        {"title": "Le savoir en trompe-l’œil", "publisher": "Musée Guimet", "url": "https://www.guimet.fr/fr/expositions/le-savoir-en-trompe-loeil-coree-18e-20e-s", "published_date": null, "event_date": "2026-09-16", "relationship": "first_party_official"},
+        {"title": "K-ompletely Korea press release", "publisher": "Musée Guimet", "url": "https://www.guimet.fr/sites/default/files/2026-03/cp_k-ompletely_korea.pdf", "published_date": null, "event_date": "2026-09-16", "relationship": "first_party_official"},
+        {"title": "Musée Guimet press room", "publisher": "Musée Guimet", "url": "https://www.guimet.fr/fr/espace-presse", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "K-ompletely Korea", "publisher": "Musée Guimet", "url": "https://www.guimet.fr/en/k-ompletely-korea-year-0", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "The Korean art of trompe-l’œil libraries", "publisher": "Le Monde", "url": "https://www.lemonde.fr/en/culture/article/2026/09/19/at-the-guimet-museum-in-paris-the-korean-art-of-trompe-l-il-libraries_6757696_30.html", "published_date": "2026-09-19", "event_date": "2026-09-16", "relationship": "independent_reporting"},
+        {"title": "140th anniversary cultural programme", "publisher": "Korea.net", "url": "https://french.korea.net/NewsFocus/Culture/view?articleId=286323", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "140 years of France–Korea relations", "publisher": "French Embassy in Korea", "url": "https://kr.ambafrance-culture.org/140ans/", "published_date": null, "event_date": null, "relationship": "first_party_official"},
+        {"title": "Trompe-l’œil Knowledge press release", "publisher": "Musée Guimet", "url": "https://www.guimet.fr/sites/default/files/2026-06/communique-de-presse-le-savoir-en-trompe-loeil.-coree-18e-20e-siecle.pdf", "published_date": null, "event_date": "2026-09-16", "relationship": "first_party_official"},
+        {"title": "Musée Guimet agenda", "publisher": "Musée Guimet", "url": "https://www.guimet.fr/fr/agenda", "published_date": null, "event_date": null, "relationship": "first_party_official"}
+      ],
+      "media": {"asset": "assets/shelf.svg", "alt": "Original illustration of a cabinet filled with books and objects", "caption": "Musée Guimet 官方展览页；本地 SVG 为原创非纪实回退图，打开来源查看作品、借展与策展说明。", "credit": "Musée Guimet · Preview-linked official image", "kind": "source_image", "origin_url": "https://www.guimet.fr/en/exhibitions/trompe-loeil-knowledge-korea-18th-20th-century", "rights_basis": "preview_user_authorized_external", "external_image_url": "https://www.guimet.fr/sites/default/files/styles/header_1440/public/2026-06/paravent-a-dix-panneaux-representant-une-bibliotheque-musee-national-de-coree.jpg?h=0d140c4b&itok=aacNnVGv", "origin_authority": "first_party_official"}
+    }
+  ]
+}
