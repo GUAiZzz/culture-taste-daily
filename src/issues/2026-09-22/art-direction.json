@@ -1,0 +1,17 @@
+{
+  "dominant_mood": "奶油白纸面上的墨黑、深海蓝与安全橙，像一张仍在校准的公共工作台：两套证据靠透明叠片重合，细节清楚但结论保留余地。",
+  "background_logic": "页面把上海的技能入口与芝加哥的鸟类尺度拆成两张可叠放的证据平面，用注册标记、细蓝线和橙色警示点把事实与判断分开；不复用最近七期的日历轴、节目单轨道、孔径窗口、尺度矩形场、折页结构、门框路线、剪影框或材料样片。",
+  "palette_logic": "bone #F0EDE6, ink #17212B, deep_blue #174A6E, safety_orange #E56A3C, signal_blue #2A5BFF, moss #9DBA86；骨白承载长文，墨黑承载正文，深蓝组织标题，橙色只提示风险与权利未决，信号蓝只用于注册线与链接，苔绿用于少量公共入口状态。",
+  "type_scale_logic": "标题像公共设施图纸上的大号校准注记，正文保持 18px；编号和时间使用等宽字，英文只承担 title、deck 与 abstract，长标题自然断行，不为视觉压缩事实。",
+  "image_behavior": "两张一手官方媒体以 Preview 外链显示；本地 SVG 是原创非纪实校准图，外图失败时仍保留来源链接、图片 credit 和事实说明；未知权利不被写成已获授权。",
+  "page_density_and_tempo": "封面先给出两张尚未完全重合的证据平面，正文从上海的公共入口推进到芝加哥的材料风险，再在结尾把判断留回读者；段落之间保留校准空白，不把两件事强行写成同一个成功故事。",
+  "core_visual_action": "每个故事都有一条透明蓝色注册线和一枚橙色校准点：注册线把事实对齐，校准点提示读者回到来源，不让装饰替结论背书。",
+  "cover_composition": "骨白底上叠放两张错开 6 度的深蓝证据平面，黑色注册十字穿过边缘，橙色校准点只落在交叠处；标题压在左侧，右侧保留一块没有填写的测量区。",
+  "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 只提供可关闭的校准注记，正文、事实和外图回链不依赖 JavaScript。",
+  "behance_viewing_arc": "先看技能如何被拆成可进入的城市接口，再看一块玻璃如何被重新放回迁徙生态，最后在空白校准区停住，不替读者宣布影响已经发生。",
+  "mobile_translation": "390px 下两张证据平面改为纵向叠片，注册十字缩到边缘刻点，橙色只出现在标题、时间与来源提示附近；正文单列，图片说明和长链接自然换行。",
+  "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点可见，长链接换行，移动端无横向滚动；校准装饰不覆盖正文和图片说明，外图失败不隐藏来源。",
+  "quiet_ending": "退出处留下一条未闭合的蓝色注册线和一枚未落定的橙色点，不给箭头，让下一步回到真实的场馆、玻璃和使用者。",
+  "closing_quotation": {"id":"ct-en-005","language":"en","text":"A release begins only when someone can truly enter it.","credit":"Culture & Taste Editorial"},
+  "closing_palette": {"background":"#F0EDE6","foreground":"#17212B","accent":"#B74725","rationale":"骨白与墨黑构成长文阅读底，深蓝组织证据平面，信号蓝承担注册线与来源锚点，深橙只提示风险、判断和权利未决，并满足结尾文字对比度门禁。"}
+}
