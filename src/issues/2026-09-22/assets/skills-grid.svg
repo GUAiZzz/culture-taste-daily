@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">WorldSkills calibration grid</title>
+  <desc id="desc">An original non-documentary illustration of a public skills interface.</desc>
+  <rect width="1200" height="760" fill="#F0EDE6"/>
+  <rect x="64" y="62" width="1072" height="636" fill="#174A6E" transform="rotate(-2 600 380)"/>
+  <g fill="none" stroke="#2A5BFF" stroke-width="3" opacity=".85">
+    <path d="M120 180H1080M120 280H1080M120 380H1080M120 480H1080M120 580H1080"/>
+    <path d="M220 100V660M420 100V660M620 100V660M820 100V660M1020 100V660"/>
+  </g>
+  <g fill="none" stroke="#F0EDE6" stroke-width="8">
+    <path d="M120 120h52M120 120v52M1080 120h-52M1080 120v52M120 640h52M120 640v-52M1080 640h-52M1080 640v-52"/>
+    <circle cx="620" cy="380" r="88"/>
+  </g>
+  <circle cx="620" cy="380" r="18" fill="#E56A3C"/>
+  <rect x="150" y="590" width="236" height="54" fill="#E56A3C"/>
+  <text x="170" y="626" fill="#17212B" font-family="monospace" font-size="22" letter-spacing="3">TRY / MAKE / MOVE</text>
+</svg>
