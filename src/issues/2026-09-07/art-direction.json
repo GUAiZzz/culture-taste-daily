@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-07",
+  "coverage": {
+    "verified_at": "2026-09-07T11:32:00+08:00",
+    "regional_lanes_checked": ["mainland_china_plus_hong_kong_or_taiwan", "japan_or_korea", "continental_europe_or_united_kingdom", "united_states_or_canada", "rotating_global_lane"],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "european_contemporary",
+    "focus_subjects_checked": ["Our Legacy", "Stone Island", "C.P. Company", "Martine Rose", "Wales Bonner", "Dries Van Noten", "Lemaire"],
+    "standing_beats_checked": ["stussy-release-radar", "luxury-runway-calendar", "exhibition-and-cultural-programme-radar", "small-breakout-object-radar"],
+    "deduplication_lookback_days": 2
+  },
+  "dominant_mood": "奶油黄纸面上的蓝色时间刻度、品红批注和薄荷绿空档",
+  "background_logic": "把页面当成一张被折开的节目表：横向日期线承载入口，纵向空档承载停留，不复用最近七期的路线箭头、工作台、测量脊、门槛线、倒计时网格、脚手架或互穿曲线",
+  "palette_logic": "butter #FFF4C7, navy #111827, electric blue #0047FF, magenta #D12B6A, mint #BCE8D3；蓝色负责时间秩序，品红标记选择，薄荷绿只负责留白和转场",
+  "type_scale_logic": "标题像印在总节目表边缘的大号栏目名，正文 18px；故事编号沿时间线固定，英文只承担标题、deck 与 abstract",
+  "image_behavior": "三张一手官方媒体只在 Preview 外链显示；本地 entry-card SVG 是原创的日程图，不冒充纪实照片",
+  "page_density_and_tempo": "封面先给出一条未填满的日期轴，正文依次从八天、九天与三个月的安排进入，退出处把日程还给下一步行动",
+  "core_visual_action": "页面把日期、地点、时段、参与者和进入条件排成可回查的时间刻度，让文化判断停在可行动的条件而不是活动数量",
+  "cover_composition": "奶油黄底上横置一条深蓝时间轴，蓝色大刻度切开日期，品红方块像已选入口，薄荷绿空格保留尚未发生的现场",
+  "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻，所有事实、正文与来源不依赖 JavaScript",
+  "behance_viewing_arc": "从北京的八天产业编排进入伦敦的城市多入口，再进入香港把多种声音排进秋天的节目表，最后退出到下一步行动",
+  "mobile_translation": "390px 下时间轴折为右侧窄栏，品红选择标记变成边缘标签，正文保持单列并允许来源长链接换行",
+  "mobbin_usability_constraint": "交互目标不少于 44px，焦点可见，长链接换行，外图失败不隐藏来源，移动端无横向滚动",
+  "quiet_ending": "退出处留下一个未填满的薄荷绿时段，提醒日程的价值是把下一次行动留给读者",
+  "closing_quotation": {"id": "ct-en-003", "language": "en", "text": "A deadline earns meaning when it makes the next action visible.", "credit": "Culture & Taste Editorial"},
+  "closing_palette": {"background": "#FFF4C7", "foreground": "#111827", "accent": "#0047FF", "rationale": "奶油黄保留纸面与日历的轻感，深蓝确保正文和刻度清楚，电光蓝在浅底上保持高对比并承担时间秩序；品红、薄荷绿只作大面积视觉标记，不承担小字号文字。"}
+}

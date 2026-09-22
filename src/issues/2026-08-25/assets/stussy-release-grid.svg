@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Stüssy release grid</title>
+  <desc id="desc">An original typographic grid mapping a simultaneous seasonal release across regions.</desc>
+  <rect width="1200" height="720" fill="#efeee7"/>
+  <rect x="60" y="72" width="1080" height="576" fill="#ff5a1f"/>
+  <g fill="#101010" font-family="Arial, sans-serif" font-weight="900"><text x="92" y="170" font-size="110">FALL</text><text x="92" y="275" font-size="110">’26</text><text x="700" y="172" font-size="30" letter-spacing="5">WORLDWIDE / 10:00</text><text x="700" y="230" font-size="28">PST · GMT · CET · JST/KST</text></g>
+  <path d="M92 370H1080M92 470H1080M92 570H1080" stroke="#101010" stroke-width="3"/>
+  <g fill="#101010" font-family="monospace" font-size="25"><text x="92" y="425">NORTH AMERICA</text><text x="460" y="425">UK / EUROPE</text><text x="830" y="425">JAPAN / KOREA</text><text x="92" y="525">SELECT CHAPTERS</text><text x="460" y="525">STUSSY.COM</text><text x="830" y="525">FRIDAY 21 AUG</text></g>
+</svg>
+

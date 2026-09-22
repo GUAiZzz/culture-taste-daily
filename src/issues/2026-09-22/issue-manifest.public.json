@@ -1,0 +1,122 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-09-22",
+  "publication_date": "2026-09-22",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-09-22T11:36:00+08:00",
+  "research_locked_at": "2026-09-22T12:11:22+08:00",
+  "content_locked_at": "2026-09-22T12:15:00+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "1e3453ed87fffa39d42004daf6172b84fe02e428e5fa3723637b8bb1a79db5f5",
+    "locked_at": "2026-09-22T12:15:00+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "1e3453ed87fffa39d42004daf6172b84fe02e428e5fa3723637b8bb1a79db5f5",
+    "art_direction_sha256": "994b8c4d6b2307cb377fcd705c90329d430e7888f340a8bc939b88be14977edd",
+    "issue_style_sha256": "364fb6e3ac36e5df59dfa47d147075c9f307b2200e1bb0d63117267ffe8dc710"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-09-22T11:38:00+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "文化项目开始有价值的地方，是它把专业判断翻译成公众可以走进去、试一下、再带回去的条件。",
+  "art_direction": {
+    "dominant_mood": "奶油白纸面上的墨黑、深海蓝与安全橙，像一张仍在校准的公共工作台：两套证据靠透明叠片重合，细节清楚但结论保留余地。",
+    "background_logic": "页面把上海的技能入口与芝加哥的鸟类尺度拆成两张可叠放的证据平面，用注册标记、细蓝线和橙色警示点把事实与判断分开；不复用最近七期的日历轴、节目单轨道、孔径窗口、尺度矩形场、折页结构、门框路线、剪影框或材料样片。",
+    "palette_logic": "bone #F0EDE6, ink #17212B, deep_blue #174A6E, safety_orange #E56A3C, signal_blue #2A5BFF, moss #9DBA86；骨白承载长文，墨黑承载正文，深蓝组织标题，橙色只提示风险与权利未决，信号蓝只用于注册线与链接，苔绿用于少量公共入口状态。",
+    "type_scale_logic": "标题像公共设施图纸上的大号校准注记，正文保持 18px；编号和时间使用等宽字，英文只承担 title、deck 与 abstract，长标题自然断行，不为视觉压缩事实。",
+    "image_behavior": "两张一手官方媒体以 Preview 外链显示；本地 SVG 是原创非纪实校准图，外图失败时仍保留来源链接、图片 credit 和事实说明；未知权利不被写成已获授权。",
+    "page_density_and_tempo": "封面先给出两张尚未完全重合的证据平面，正文从上海的公共入口推进到芝加哥的材料风险，再在结尾把判断留回读者；段落之间保留校准空白，不把两件事强行写成同一个成功故事。",
+    "core_visual_action": "每个故事都有一条透明蓝色注册线和一枚橙色校准点：注册线把事实对齐，校准点提示读者回到来源，不让装饰替结论背书。",
+    "cover_composition": "骨白底上叠放两张错开 6 度的深蓝证据平面，黑色注册十字穿过边缘，橙色校准点只落在交叠处；标题压在左侧，右侧保留一块没有填写的测量区。",
+    "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 只提供可关闭的校准注记，正文、事实和外图回链不依赖 JavaScript。",
+    "behance_viewing_arc": "先看技能如何被拆成可进入的城市接口，再看一块玻璃如何被重新放回迁徙生态，最后在空白校准区停住，不替读者宣布影响已经发生。",
+    "mobile_translation": "390px 下两张证据平面改为纵向叠片，注册十字缩到边缘刻点，橙色只出现在标题、时间与来源提示附近；正文单列，图片说明和长链接自然换行。",
+    "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点可见，长链接换行，移动端无横向滚动；校准装饰不覆盖正文和图片说明，外图失败不隐藏来源。",
+    "quiet_ending": "退出处留下一条未闭合的蓝色注册线和一枚未落定的橙色点，不给箭头，让下一步回到真实的场馆、玻璃和使用者。",
+    "closing_quotation": {"id":"ct-en-005","language":"en","text":"A release begins only when someone can truly enter it.","credit":"Culture & Taste Editorial"},
+    "closing_palette": {"background":"#F0EDE6","foreground":"#17212B","accent":"#B74725","rationale":"骨白与墨黑构成长文阅读底，深蓝组织证据平面，信号蓝承担注册线与来源锚点，深橙只提示风险、判断和权利未决，并满足结尾文字对比度门禁。"}
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": ["2026-09-21","2026-09-20","2026-09-17","2026-09-16","2026-09-15","2026-09-14","2026-09-11"],
+    "repeated_mechanisms": ["accessible section index","first-party source image with linked fallback"],
+    "exception_reason": "可访问索引与一手来源图是固定约束；本期改用透明叠片、注册十字、蓝色校准线和橙色校准点，把事实与判断分开，不复用最近七期的日历、轨道、孔径、尺度、折页、门框、剪影或材料样片。"
+  },
+  "rights_summary": {"required_assets": 2,"unknown_required_assets": 2,"status":"blocked"},
+  "artifact_digests": {"issue_payload_sha256": null},
+  "evidence_refs": {"technical": [],"editorial_visual": [],"gate": []},
+  "qa": {"html_parse":"unavailable","assets":"unavailable","internal_links":"unavailable","no_js_reading":"unavailable","desktop_render":"unavailable","mobile_render":"unavailable","reduced_motion":"unavailable"},
+  "limitations": [
+    "Non-production Preview candidate only; this manifest cannot authorize production deployment.",
+    "Canonical private GUAiZzz/harry-tone main was verified at pinned commit 13cd6b7046bd81be396810d2923f3a5dc818e93f; no private material enters this repository.",
+    "Two selected stories use externally hosted first-party official images. Reuse rights remain unknown, so candidate status stays BLOCKED and Preview displays source links with local non-documentary fallbacks.",
+    "Both formal articles include at least ten distinct substantive source URLs in the public package; duplicate URLs and image credits are not counted.",
+    "All five regional lanes, the full 99-subject registry quick scan, the deterministic Tuesday focus cohort, the four daily standing beats and the prior-two-issue lookback were checked; the public radar contains ten distinct items with at least two per category.",
+    "Named editorial, visual, technical and rights review remains unresolved; this candidate does not authorize production deployment."
+  ],
+  "stories": [
+    {
+      "id": "worldskills-shanghai-public-interface-2026",
+      "level": "cover",
+      "title": "世界技能大赛把“会做”改成一种可进入的城市体验",
+      "image_credit": "WorldSkills · Preview-linked official image",
+      "english": {"title":"SKILL BECOMES A PUBLIC INTERFACE","deck":"Shanghai turns competition, Expo, Try-a-Skill and city services into several ways to enter expertise.","abstract":"WorldSkills Shanghai 2026 opens on 22 September and runs through 27 September. Reading its public programme as an interface is editorial interpretation."},
+      "sources": [
+        {"title":"WorldSkills","publisher":"WorldSkills","url":"https://worldskills.org/","published_date":null,"event_date":"2026-09-22/2026-09-27","relationship":"first_party_official"},
+        {"title":"Shanghai services guide for WorldSkills Shanghai 2026","publisher":"Shanghai Municipal Government","url":"https://english.shanghai.gov.cn/en-WorldSkillsServicesGuides/20260921/07f9240dccc542458fb757c5bd756944.html","published_date":"2026-09-21","event_date":"2026-09-22/2026-09-27","relationship":"first_party_official"},
+        {"title":"Schedule","publisher":"WorldSkills Shanghai 2026","url":"https://worldskills2026.com/schedule","published_date":null,"event_date":"2026-09-22/2026-09-27","relationship":"first_party_official"},
+        {"title":"Registration and free admission guide","publisher":"Shanghai Municipal Government","url":"https://english.shanghai.gov.cn/en-WorldSkills2026Latest/20260902/406b33ebde59405298a9767b9fc5170d.html","published_date":"2026-09-02","event_date":"2026-09-22/2026-09-27","relationship":"first_party_official"},
+        {"title":"WorldSkills Shanghai 2026 media registration","publisher":"WorldSkills","url":"https://worldskills.org/media/news/worldskills-shanghai-2026-media-registration-now-open","published_date":null,"event_date":"2026-09-22/2026-09-27","relationship":"first_party_official"},
+        {"title":"技能五轮国际大会","publisher":"Shanghai Human Resources and Social Security Bureau","url":"https://rsj.sh.gov.cn/tworldskills2026_17886/index.html","published_date":null,"event_date":"2026-09-22/2026-09-27","relationship":"first_party_official"},
+        {"title":"WorldSkills Shanghai 2026","publisher":"WorldSkills Shanghai 2026","url":"https://worldskills2026.com/","published_date":null,"event_date":"2026-09-22/2026-09-27","relationship":"first_party_official"},
+        {"title":"Seven new skills confirmed for WorldSkills Competition 2026","publisher":"WorldSkills","url":"https://worldskills.org/media/news/seven-new-skills-confirmed-worldskills-competition-2026/","published_date":null,"event_date":"2026-09-22/2026-09-27","relationship":"first_party_official"},
+        {"title":"Official App","publisher":"WorldSkills Shanghai 2026","url":"https://www.worldskills2026.com/official-app/","published_date":null,"event_date":"2026-09-22/2026-09-27","relationship":"first_party_official"},
+        {"title":"Together for WorldSkills","publisher":"WorldSkills Shanghai 2026","url":"https://worldskills2026.com/citywide-together-for-worldskills-series-brings-skills-to-life-on-world-youth-skills-day/","published_date":null,"event_date":"2026-09-22/2026-09-27","relationship":"first_party_official"},
+        {"title":"Free admission: 64 skill competitions","publisher":"WorldSkills Shanghai 2026","url":"https://worldskills2026.com/free-admission-watch-top-young-professionals-compete-across-64-skill-competitions-at-worldskills-shanghai-2026-this-september/","published_date":null,"event_date":"2026-09-22/2026-09-27","relationship":"first_party_official"},
+        {"title":"Competition Preparation Week","publisher":"WorldSkills","url":"https://worldskills.org/media/news/competition-preparation-week-sets-stage-worldskills-shanghai-2026/","published_date":null,"event_date":"2026-09-22/2026-09-27","relationship":"first_party_official"},
+        {"title":"第 48 届世界技能大赛背景发布","publisher":"WorldSkills Shanghai 2026","url":"https://worldskills2026.com.cn/release/2701/","published_date":null,"event_date":"2026-09-22/2026-09-27","relationship":"first_party_official"},
+        {"title":"Technical Description: Digital and Graphic Design","publisher":"Japan Vocational Ability Development Association","url":"https://www.javada.or.jp/jigyou/gino/kokusai/48/teigi/WSC2026_TD40_en.pdf","published_date":null,"event_date":"2026-09-22/2026-09-27","relationship":"first_party_official"},
+        {"title":"WorldSkills Conference 2026","publisher":"WorldSkills","url":"https://api.worldskills.org/resources/download/28998","published_date":null,"event_date":"2026-09-23/2026-09-25","relationship":"first_party_official"},
+        {"title":"Register for WorldSkills Shanghai 2026","publisher":"WorldSkills","url":"https://worldskills.org/media/news/worldskills-shanghai-2026-visitor-registration-live","published_date":"2026-09-20","event_date":"2026-09-22/2026-09-27","relationship":"first_party_official"}
+      ],
+      "media": {"asset":"assets/skills-grid.svg","alt":"Original calibration-grid illustration for WorldSkills Shanghai 2026","caption":"上海市人民政府官方观众指南媒体；本地 SVG 为原创非纪实校准回退图，打开来源查看赛程、Expo、App 与公众进入条件。","credit":"Shanghai Municipal Government · Preview-linked official image","kind":"source_image","origin_url":"https://english.shanghai.gov.cn/en-WorldSkillsServicesGuides/20260921/07f9240dccc542458fb757c5bd756944.html","rights_basis":"preview_user_authorized_external","external_image_url":"https://english.shanghai.gov.cn/cmsres/c3/c38e96d47748456588fb38b2b4a8a3c9/1679091c5a880faf6fb5e6087eb1b2dc.jpg","origin_authority":"first_party_official"}
+    },
+    {
+      "id": "flyway-city-glass-answers-2026",
+      "level": "major",
+      "title": "芝加哥把玻璃从背景改成鸟的共同问题",
+      "image_credit": "Chicago Architecture Center · Preview-linked official image",
+      "english": {"title":"THE GLASS HAS TO ANSWER TO THE FLYWAY","deck":"Flyway City turns bird-safe architecture into models, materials, public action and a question for the city.","abstract":"Flyway City: Architecture for a Flourishing Ecosystem opened at the Chicago Architecture Center on 11 June 2026 and runs through January 2027. Reading it as a translation device is editorial interpretation."},
+      "sources": [
+        {"title":"Flyway City announcement","publisher":"Openlands","url":"https://openlands.org/2026/04/22/studio-gang-and-the-chicago-architecture-center-spotlight-bird-friendly-architecture-design-in-inspiring-new-exhibition-flyway-city/","published_date":"2026-04-22","event_date":"2026-06-11/2027-01-31","relationship":"first_party_official"},
+        {"title":"Chicago Architecture Center","publisher":"Chicago Architecture Center","url":"https://www.architecture.org/","published_date":null,"event_date":"2026-06-11/2027-01-31","relationship":"first_party_official"},
+        {"title":"Studio Gang Flyway City announcement","publisher":"Studio Gang","url":"https://studiogang.com/now/flyway-city-announcement/","published_date":null,"event_date":"2026-06-11/2027-01-31","relationship":"first_party_official"},
+        {"title":"Flyway City exhibition graphics","publisher":"Span studio","url":"https://span.studio/projects/flyway-city","published_date":null,"event_date":"2026-06-11/2027-01-31","relationship":"first_party_official"},
+        {"title":"Jeanne Gang on bird-safe design","publisher":"WBEZ","url":"https://www.wbez.org/in-the-loop-with-sasha-ann-simons/2026/08/18/as-southern-migration-season-begins-jeanne-gang-promotes-bird-safe-design-in-chicago","published_date":"2026-08-18","event_date":"2026-06-11/2027-01-31","relationship":"independent_reporting"},
+        {"title":"Building collaboration to reduce bird collisions","publisher":"BOMA Chicago","url":"https://www.bomachicago.org/2026/07/30/building-collaboration-to-reduce-bird-collisions/","published_date":"2026-07-30","event_date":null,"relationship":"first_party_official"},
+        {"title":"Studio Gang firm award","publisher":"AIA Chicago","url":"https://aiachicago.org/studio-gang-firm-award/","published_date":null,"event_date":null,"relationship":"first_party_official"},
+        {"title":"Chicago buildings and Flyway City","publisher":"WTTW","url":"https://news.wttw.com/2026/06/10/chicago-buildings-keep-killing-birds-new-flyway-city-exhibit-architect-jeanne-gang-s","published_date":"2026-06-10","event_date":"2026-06-11/2027-01-31","relationship":"independent_reporting"},
+        {"title":"Flyway City: Architecture for a Flourishing Ecosystem","publisher":"Chicago Architecture Center","url":"https://www.architecture.org/visit-the-center/exhibitions/flyway-city","published_date":null,"event_date":"2026-06-11/2027-01-03","relationship":"first_party_official"},
+        {"title":"Bird-safe buildings in Chicago","publisher":"CBS Chicago","url":"https://www.cbsnews.com/chicago/news/bird-safe-buildings-chicago/","published_date":null,"event_date":null,"relationship":"independent_reporting"},
+        {"title":"Flyway City listing","publisher":"Time Out Chicago","url":"https://www.timeout.com/chicago/things-to-do/flyway-city-architecture-for-a-flourishing-ecosystem","published_date":null,"event_date":"2026-06-11/2027-01-31","relationship":"independent_reporting"},
+        {"title":"Flyway City: Bird Sculpture Studio","publisher":"Chicago Architecture Center","url":"https://www.architecture.org/events-programs/flyway-city-bird-sculpture-studio-2026-06","published_date":null,"event_date":"2026-06-11/2027-01-03","relationship":"first_party_official"}
+      ],
+      "media": {"asset":"assets/flyway-glass.svg","alt":"Original transparent-grid illustration for Flyway City","caption":"Chicago Architecture Center 官方媒体；本地 SVG 为原创非纪实玻璃与迁徙回退图，打开来源查看展览、模型、材料和公众工作坊。","credit":"Chicago Architecture Center · Preview-linked official image","kind":"source_image","origin_url":"https://www.architecture.org/","rights_basis":"preview_user_authorized_external","external_image_url":"https://images.architecture.org/api/v1/image/assets%2Fe61abde79d954ddab2b6092044c4b5a1%2F47dd0b9e2cfe4689beae5fbb79bdb5b6","origin_authority":"first_party_official"}
+    }
+  ]
+}

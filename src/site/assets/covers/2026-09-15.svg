@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Culture &amp; Taste 2026-09-15 cover</title>
+  <desc id="desc">An original folded registration-sheet composition for the Culture &amp; Taste daily issue.</desc>
+  <rect width="1600" height="1000" fill="#eceae4"/>
+  <rect x="115" y="116" width="1030" height="670" fill="#202326" opacity=".08"/>
+  <path d="M170 170h810l280 180H450z" fill="#1646a0"/>
+  <path d="M450 350h810L980 790H170z" fill="#1646a0"/>
+  <path d="M980 350l280 180-280 260z" fill="#d8f24b"/>
+  <path d="M980 350v440" stroke="#202326" stroke-width="7" stroke-dasharray="18 16"/>
+  <path d="M162 170v-42m-21 21h42M1260 790v42m-21-21h42" stroke="#b94b37" stroke-width="7"/>
+  <path d="M170 850h450M170 876h290" stroke="#b94b37" stroke-width="16"/>
+  <g fill="#202326" font-family="Arial, Helvetica, sans-serif" font-weight="900">
+    <text x="1170" y="170" font-size="28" text-anchor="end">09.15 / 2026</text>
+    <text x="1340" y="430" font-size="92" transform="rotate(90 1340 430)">ARRIVE</text>
+  </g>
+  <g fill="#eceae4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700">
+    <text x="190" y="236">FOLD / REGISTER</text>
+    <text x="190" y="270">OBJECTS NEED A PUBLIC FORM</text>
+  </g>
+  <circle cx="980" cy="350" r="12" fill="#b94b37"/>
+  <circle cx="980" cy="790" r="12" fill="#b94b37"/>
+</svg>

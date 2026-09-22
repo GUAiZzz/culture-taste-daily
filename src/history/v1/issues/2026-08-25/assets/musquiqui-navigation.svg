@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Navigation without a map</title>
+  <desc id="desc">Four screens named city, AI, game and hand surround a small human position marker.</desc>
+  <rect width="1200" height="720" fill="#09090b"/>
+  <g fill="none" stroke="#36d7e8" stroke-width="6">
+    <rect x="70" y="80" width="430" height="210" rx="10"/>
+    <rect x="700" y="80" width="430" height="210" rx="10"/>
+    <rect x="70" y="430" width="430" height="210" rx="10"/>
+    <rect x="700" y="430" width="430" height="210" rx="10"/>
+  </g>
+  <g fill="#f7f4ed" font-family="ui-monospace, monospace" font-size="44" font-weight="700">
+    <text x="105" y="145">CITY</text><text x="735" y="145">AI</text>
+    <text x="105" y="495">GAME</text><text x="735" y="495">HAND</text>
+  </g>
+  <circle cx="600" cy="360" r="56" fill="#ffd126"/>
+  <path d="M600 245v-74M600 549v-74M485 360h-74M789 360h-74" stroke="#9b6bff" stroke-width="10"/>
+  <text x="600" y="372" text-anchor="middle" fill="#09090b" font-family="ui-monospace, monospace" font-size="30" font-weight="900">YOU</text>
+</svg>

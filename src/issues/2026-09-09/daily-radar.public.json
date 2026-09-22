@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-09",
+  "coverage": {
+    "verified_at": "2026-09-09T11:28:00+08:00",
+    "regional_lanes_checked": ["mainland_china_plus_hong_kong_or_taiwan","japan_or_korea","continental_europe_or_united_kingdom","united_states_or_canada","rotating_global_lane"],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "culture_retail_creative",
+    "focus_subjects_checked": ["AWGE","Blonded","Boardroom","Coachella","Dover Street Market Los Angeles","Hidden.NY","Homer","Infinite Archives","JJJJound","KAWS","Rolling Loud","SLAM Kicks","StockX","UpscaleHype","Virgil Abloh Archive"],
+    "standing_beats_checked": ["stussy-release-radar","luxury-runway-calendar","exhibition-and-cultural-programme-radar","small-breakout-object-radar"],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {"id":"manchester-fashion-week-2026","category":"fashion","included_story_id":"manchester-fashion-week-2026"},
+    {"id":"critical-costume-2026","category":"fashion","included_story_id":"critical-costume-exhibition-2026"},
+    {"id":"warner-japan-2026-09-09","category":"music","included_story_id":"warner-japan-2026-09-09"},
+    {"id":"tangible-sound-chicago-2026","category":"music","title":"Tangible Sound：把即兴音乐变成颜色和动作","deck":"Chicago’s free public exhibition translates improvised music into color, texture and movement.","publisher":"Choose Chicago / Department of Cultural Affairs and Special Events","official_url":"https://www.choosechicago.com/event/tangible-sound-arrival-to-a-higher-ground/2026-09-09/","published_date":"2026-09-09","event_date":"2026-09-09/2026-09-27","media":{"kind":"image","url":"https://cdn.choosechicago.com/uploads/2026/05/tangiblesound.jpg","alt":"Official Tangible Sound exhibition image","credit":"Choose Chicago · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}},
+    {"id":"warner-japan-2026-09-09-releases","category":"music","title":"日本新发行：唱片仍在给今天标日期","deck":"Warner Music Japan’s 9 September release list keeps the album object visible alongside the digital release cycle.","publisher":"Warner Music Japan","official_url":"https://wmg.jp/newrelease","published_date":"2026-09-09","event_date":"2026-09-09","media":{"kind":"image","url":"https://prod-v2-assets.wmg.jp/uploads/aimyon_best_shokai_H1_2e82d9c3ad.jpg","alt":"Official Warner Music Japan album artwork for Aimyon’s 9 September release","credit":"Warner Music Japan · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}},
+    {"id":"christian-marclay-paris-2026","category":"objects","included_story_id":"christian-marclay-paris-2026"},
+    {"id":"furniture-china-2026","category":"objects","included_story_id":"furniture-china-maison-shanghai-2026"},
+    {"id":"seoul-craft-companion-path-remains-2026","category":"city","title":"首尔工艺同行：一条在橱窗里留下的路","deck":"Seoul’s official culture portal lists The Path that Remains at the Seoul Museum of Craft Art from 9 September to 11 October.","publisher":"Seoul Culture Portal","official_url":"https://culture.seoul.go.kr/culture/main/main.do?ready=Y","published_date":"2026-09-09","event_date":"2026-09-09/2026-10-11","media":{"kind":"image","url":"https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=d88e74e099aac8a1e61fd3d1394b96fbf103e4f951bdb41415c05b3c35ccc003&streFileNm=c39cf13b5d2034d0944093cfdabeb37d52e2f1440befb29c34155b70a7ef77fe","alt":"Official Seoul Culture Portal image for the Seoul Museum of Craft Art programme","credit":"Seoul Culture Portal · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}},
+    {"id":"seoul-chamber-classics-v-2026","category":"city","title":"首尔室内古典 V：旧乐章也需要一场现场","deck":"Seoul’s official culture portal lists the Seoul Philharmonic’s Chamber Classics V at Sejong Chamber Hall on 9 September.","publisher":"Seoul Culture Portal / Seoul Philharmonic Orchestra","official_url":"https://culture.seoul.go.kr/night/sub/program/view.do?pgmId=6918&pageIndex=1","published_date":null,"event_date":"2026-09-09","media":{"kind":"image","url":"https://culture.seoul.go.kr/resources/culture/img/editor/culture/editor_20260812110953_58807.jpg","alt":"Official Seoul Philharmonic Chamber Classics V programme image","credit":"Seoul Culture Portal · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}},
+    {"id":"try-everything-seoul-2026","category":"city","title":"Try Everything：城市把创业也做成现场","deck":"Seoul’s official festival calendar lists Try Everything 2026 at DDP on 9–10 September with talks, exhibitions, meetups and networking.","publisher":"Seoul Metropolitan Government","official_url":"https://festival.seoul.go.kr/festival/main/festivalView.do?festacode=815","published_date":null,"event_date":"2026-09-09/2026-09-10","media":{"kind":"image","url":"https://festival.seoul.go.kr/cmmn/file/getImage.do?atchFileId=dc51c4eca5274f438ca97150aade7b0e&thumb=Y","alt":"Official Try Everything 2026 Seoul festival poster","credit":"Seoul Metropolitan Government · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}}
+  ]
+}

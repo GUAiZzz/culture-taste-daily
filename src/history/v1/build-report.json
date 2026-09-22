@@ -1,0 +1,537 @@
+{
+  "archive_weeks": [
+    {
+      "end": "2026-09-06",
+      "issue_ids": [
+        "2026-09-04",
+        "2026-09-03",
+        "2026-09-02",
+        "2026-09-01",
+        "2026-08-31"
+      ],
+      "key": "2026-W36",
+      "start": "2026-08-31",
+      "temporal_status": "current",
+      "week": 36,
+      "year": 2026
+    },
+    {
+      "end": "2026-08-30",
+      "issue_ids": [
+        "2026-08-30",
+        "2026-08-29",
+        "2026-08-28",
+        "2026-08-27",
+        "2026-08-26",
+        "2026-08-25",
+        "2026-08-24"
+      ],
+      "key": "2026-W35",
+      "start": "2026-08-24",
+      "temporal_status": "historical",
+      "week": 35,
+      "year": 2026
+    },
+    {
+      "end": "2026-08-23",
+      "issue_ids": [
+        "2026-08-23",
+        "2026-08-22",
+        "2026-08-21",
+        "2026-08-20"
+      ],
+      "key": "2026-W34",
+      "start": "2026-08-17",
+      "temporal_status": "historical",
+      "week": 34,
+      "year": 2026
+    }
+  ],
+  "artifact_digest": "288732bc635275b32c0f432e43861391e0e3ffa598e184e1fbb0a36d3c44f415",
+  "artifact_files": {
+    "archive/index.html": "0ee392c33c2994d31a522c502d1ad1deb76e1e6ac8d8cc7f5e807ef48292043e",
+    "assets/covers/2026-08-20.png": "498dfc2f237a22974e48e5cca2c497c6777c94043fa2bd5471b98359f95fc0df",
+    "assets/covers/2026-08-21.png": "b019c01b37ace963369aa4eae2aa4ceb9a7e9e73d559b50591353f935862a744",
+    "assets/covers/2026-08-22.jpg": "008cf209b92592839a5ce240fbf0c110f93af4469260010437fd05421a98eb85",
+    "assets/covers/2026-08-23.svg": "15c1daa96908e1715f65de572ea131e9922a951f6e3e0e1091a726a432eae3f0",
+    "assets/covers/2026-08-25.svg": "3126af0d1b49497ca85d014d3eb5095871be50aeedf0a7e4c4db6786efeb83e5",
+    "assets/covers/2026-08-26.svg": "793525a75da9c702e16c00ceb1dcc1b2ee693047c96d58ff228c6d87f486f541",
+    "assets/covers/2026-08-27.svg": "eab83185398b630a2792f0b47ec2dd3a9b2da3832de9edcbe5827f0422cc859c",
+    "assets/covers/2026-08-28.svg": "d9ed1c79cfe59f8ecc64294f3cd87638c96479e0861768d1e3a4f75ea3ef2229",
+    "assets/covers/2026-08-29.svg": "0d987f6efc0d259db1f692e531d8133567bf56fa56f3d1c82d269c7472f11a79",
+    "assets/covers/2026-08-30.svg": "98f0fd0ca1a6a5522e020d885e2bbdb2277e945db91acc979377acf99bde01a7",
+    "assets/covers/2026-08-31.svg": "eda9ea752464176f44a588f57e6e81576ecee5210cb9d600fbc29d6515770fca",
+    "assets/covers/2026-09-01.svg": "75b9058bfbca4b337f05d55ef924e96c1b640ce15e210687e97dc9b8d2c7c12d",
+    "assets/covers/2026-09-02.svg": "c580da164e13410dd1a46bc5fd62a06d2243fdf3e9762eed0ab019484201c6c6",
+    "assets/covers/2026-09-03.svg": "25e05706888f2c38c243833575ba73a056a07fc862a74449053b1677997444a6",
+    "assets/covers/2026-09-04.svg": "c0952727a5c573ae740dca718bde9b1c68fcd495b2262ca8eccef6d02d60435d",
+    "assets/culture-taste-earth.png": "8d746b8e37b67d2a26bbba5de4c897186d69fc59ae8950bbcf42a59660847cf3",
+    "index.html": "2941914803e630665efaf27d52ebc68b0663ba4b881dc33922317c20951de78a",
+    "issues/2026-08-20/index.html": "5b935fb81433067ce530369bac78307f98f378ecf9271594c04cd7aff1daf1ba",
+    "issues/2026-08-20/original.html": "b4b42d072a36f85a5490d9f1cbc0b0c4b4d148282fe379f4022dd08fb1074fd2",
+    "issues/2026-08-21/index.html": "52fe1b64b487a7987a4a1d1e627553f2e30f37475c8cf3903c3ed8e845563f41",
+    "issues/2026-08-21/original.html": "f85bf5678c20363df68930488e61a02b610268b67e12ce7a7e2cdd2441994041",
+    "issues/2026-08-22/index.html": "982a3ad62717663463e2cce0416e319ac0e7fd6fda0062746380adaec7bb363e",
+    "issues/2026-08-22/original.pdf": "2c3785f03eabfa45905c5240b6961b57b7d43fb36802b1e47ba30dbc3f7b7ffe",
+    "issues/2026-08-22/pages/page-000.jpg": "008cf209b92592839a5ce240fbf0c110f93af4469260010437fd05421a98eb85",
+    "issues/2026-08-22/pages/page-001.jpg": "6e82ccb8e3e1981ef307bf031f06beddd9f651b19be21f8e643b965ac29dd1f9",
+    "issues/2026-08-22/pages/page-002.jpg": "5ba1ada44399409675227407a676bc3980c78d32cbb58d93bd4b1bc50c62ceb7",
+    "issues/2026-08-22/pages/page-003.jpg": "a69f8f762f1fbdef48dcf2c68f79676c797b928d8999006ff9a049fe50fc177e",
+    "issues/2026-08-22/pages/page-004.jpg": "97b76d04019c28ed79e271f948df756fabbe5b3cc1bbff15dc18a594e56e364b",
+    "issues/2026-08-22/pages/page-005.jpg": "bd405666620243930b6ac9f8714d4eda1c8779d7f08df7d6532ed6e037051853",
+    "issues/2026-08-22/pages/page-006.jpg": "55a2670192b9e7fda8b9d5e67ba8348348b477d3f83bdc61706b55b4407e9087",
+    "issues/2026-08-22/pages/page-007.jpg": "16706350dc967ca433febf2c52cf0d6d856e8e6b2836d9b94701830ecacf97f4",
+    "issues/2026-08-22/pages/page-008.jpg": "0dbe90458b6b339ebd88253038808b7c82c740b8fd3032451bd1e9061ee11757",
+    "issues/2026-08-22/pages/page-009.jpg": "4f2769585e7a04f96aa361fde2a2b7ffb87c33a3ec81846b0dcd7385b338829d",
+    "issues/2026-08-22/pages/page-010.jpg": "376b8451df41216c6f73d2214637943adc9004d4b88dde70e367d2bd935d0719",
+    "issues/2026-08-22/pages/page-011.jpg": "b9371efb2d76c7d24db9b642f5b006696f7a2bf91233424702f4f9fb28a5962c",
+    "issues/2026-08-22/pages/page-012.jpg": "bb2282f0930901cfc06d29b472a44b44971fe6a8c5d79fcc8545c26b45a541c7",
+    "issues/2026-08-22/pages/page-013.jpg": "0416e9cae8d5a1224b289e89fc06c43cdf18841a7a80c7cc02e56e769a81967a",
+    "issues/2026-08-22/pages/page-014.jpg": "5b16ac296b0be622f6e677065449bda3bf31debbde2e8614a489a94488c10a81",
+    "issues/2026-08-22/pages/page-015.jpg": "5c6073b0f81fcca1cb807029452a2ca1df7d759c26bd40380081c7aad98bdc86",
+    "issues/2026-08-23/assets/cartier-closing-ledger.svg": "3fe8123ceda064c8550345998eaca7bea6be9a256a6883a1fc9cf2d233242967",
+    "issues/2026-08-23/assets/dka-blue-thresholds.svg": "e88c564b3e93cb54df79879b942cd884773a57a8b8bc5a6f0bcda102e8345a67",
+    "issues/2026-08-23/assets/hammer-living-materials.svg": "c6b03ea6d8322cf43849ddda25baae8a6fc2a5b5e7e3ae857f1f2f230072cb71",
+    "issues/2026-08-23/assets/nike-kobe-halo.svg": "e19d6079c3e4cc04816d6fb83702a6a97491904bd7d56a67997874b3f15fd8a2",
+    "issues/2026-08-23/assets/parco-qr-bones.svg": "93e00c3e2c7c70fd52a0f3c05620cabc6cc8111196efde9faf5358c4c0547622",
+    "issues/2026-08-23/assets/rothko-three-rooms.svg": "78fbcceefc774466175f492835a5204227ab12ed722549a01b3c4794402a005c",
+    "issues/2026-08-23/assets/walters-mindscape.svg": "b1178e20a1aaa34e049ab400072ea9a9353997238de7cc5c4d29635408076a10",
+    "issues/2026-08-23/index.html": "fd3a40db189391dfae9a7b560f191300bd46622f4c1cb2284612fe85d747db0b",
+    "issues/2026-08-23/issue-manifest.public.json": "87b289b1d7f32eb4bc74bcd5721cd5561beca77474f42093ccf6e9ec523800c1",
+    "issues/2026-08-23/stories/cartier-general-exhibition/index.html": "c41cc281e1a740ee3028815c0458e92ac35fc5b21612d6fa3eb788e4577ab225",
+    "issues/2026-08-23/stories/dka-blue-thresholds/index.html": "732e66a8c27c423b3f082ba1616e8e4beaf4af06246ec9d7d1b567b4773a844b",
+    "issues/2026-08-23/stories/hammer-living-materials/index.html": "05005390893aa21722bfa0f10e1de962f30693d403539d9f1c3a7c102405356c",
+    "issues/2026-08-23/stories/nike-kobe-10-halo/index.html": "a7671d836239173c44201f414232f1a35c0debbbb909ce92016d71655c8c00c7",
+    "issues/2026-08-23/stories/parco-dinosaur-qr/index.html": "a4240b957dc731dda38581ae7e71803421bb17513aca542480f88b0c5397c394",
+    "issues/2026-08-23/stories/rothko-three-florence-rooms/index.html": "d87c3382c32170c3f07a12228b7f03face758bdb0bed51626709ac7dbde39df3",
+    "issues/2026-08-23/stories/walters-medieval-mindscapes/index.html": "d371ee73b41b7976c5e38eeb387d1c03e6e7bfe9bbf7b0f0613d9dcfe4f50c60",
+    "issues/2026-08-24/assets/bape-can-stool.svg": "e136a5aea65b08caf24a6c7597523d25bacd249b6f87b8c45d9b53927a4a72ea",
+    "issues/2026-08-24/assets/giant-arc-kite-field.svg": "ac506b3630212624d20c8a3d19ea498212ae97580174d33a6e6aebef43177dfc",
+    "issues/2026-08-24/assets/runway-radar-clear.svg": "1a3456edade232551222fdf5cea4bb82faf17cc6eafebd1853e36a2a7fd01bdc",
+    "issues/2026-08-24/assets/seoul-runway-map.svg": "99eff97b8ca1e0d1bfd70896181ea9fc5c9a1e1841fed0ee0b09f1e624aafda4",
+    "issues/2026-08-24/assets/southbank-curatorial-seat.svg": "e1718ad41267c62a20eda8630d14be1ecbe340df5d86f7696fbbe083409d1183",
+    "issues/2026-08-24/assets/stussy-release-grid.svg": "8bfb3b0c8a1b94e939cb945b7d0f78d6cdc4c9244bb770dc1011981b1025f20c",
+    "issues/2026-08-24/assets/supreme-drop-window.svg": "5ee254f077c036b8cad7b465b3d8f1e696aa9b8721b633d3781518886dfead0d",
+    "issues/2026-08-24/assets/tmex-forum-lanes.svg": "274b766585364b15e2e9d8abdd54b0a1e3a20efe788f2260d98a944ed8eff6f3",
+    "issues/2026-08-24/index.html": "6620a77822b25252027268ab54cb9d75390ec8a72fd61802f8f325335ec45e7a",
+    "issues/2026-08-24/issue-manifest.public.json": "d80e60f79d97a01d35284549c0eea3c536408262af4b3a68752335b0b3250f13",
+    "issues/2026-08-24/stories/bape-can-stool/index.html": "1254524ea7c1181d39d6696915bf0c523cc308418624e80b32459f826392b3ec",
+    "issues/2026-08-24/stories/runway-radar-clear/index.html": "6ec11ebd9360af5a3a0bb3a3a060133bbad54688d1c1786a245acafe2a0a01fd",
+    "issues/2026-08-24/stories/seoul-runway-map/index.html": "989c3bbefc3db5067c0a861bfe01321a5ead5fe50faa7ce767ad36cb2a8b7231",
+    "issues/2026-08-24/stories/sfmoma-giant-arc/index.html": "d8ce1c911671a82dc4257154a7427a9438400ae617de4e011a50e5042d55b5b8",
+    "issues/2026-08-24/stories/southbank-curatorial-seat/index.html": "316441a8d4baa1dda3f643786a30fea0b8239b85dc57cf2344e6bccd7bd3fb0b",
+    "issues/2026-08-24/stories/stussy-fall-26-release/index.html": "2956b63ab438f2e998f102d1591dcd2882a68d77a24569d64b06845e99543fe2",
+    "issues/2026-08-24/stories/supreme-drop-window/index.html": "ecd112c671332e35b1d16ee5bc9f0258f48b021e31faf790c04b2c66a70ceebf",
+    "issues/2026-08-24/stories/tmex-forum-lanes/index.html": "8723a894225642baa6daff110bfda346879f6f6bb93880e238bf745b86081db4",
+    "issues/2026-08-25/assets/arteen-room-grid.svg": "b82903705a461dbf67d409c33e27bff397827abfa6edd549e9925e4507f62e15",
+    "issues/2026-08-25/assets/bape-can-stool.svg": "bb6abe993250439b3c7458c57a39ad16ece51d7a2cb5eeb1d293bc6a75bad5e0",
+    "issues/2026-08-25/assets/giant-arc-kite-field.svg": "80e4c5befafe913272b13bba0e453e9fbfb2d4a10b292c1a7419fcfdb341447d",
+    "issues/2026-08-25/assets/musquiqui-navigation.svg": "696415886ec9c474e2f5ef299368fdcf1b373498afebcb81a3a4431437fd3029",
+    "issues/2026-08-25/assets/seoul-runway-map.svg": "7bbc9e798ef167fa7de5b754b4ebbd63db1fad1d4e4616365324603a0c2b4e0a",
+    "issues/2026-08-25/assets/southbank-curatorial-seat.svg": "71782871a51c9bc70647d48f9ee0da1fdb412821b8458f282fe1fbd0b0916625",
+    "issues/2026-08-25/assets/stussy-release-grid.svg": "8baea80fb4c54e7ad175db1c942bc9eda88e5f4c9e7887b93ed1830152fe1204",
+    "issues/2026-08-25/assets/supreme-drop-window.svg": "ed4fe7f5106171b7d10c23e37bde057c298959e504a1cb5c559455761ccbe72f",
+    "issues/2026-08-25/assets/tmex-forum-lanes.svg": "c086d4d8004e4161d19f8d61745a833fb4024b0f9944a03e8cf4f8f3e7f7bf9e",
+    "issues/2026-08-25/assets/van-cleef-archive.svg": "d57b1235957286c8f0a251ef3393d0284d167887e8cf9728ab74d42f9ab22830",
+    "issues/2026-08-25/index.html": "2a9fdddaa56f7741516b14fd9911b51a3478fa446b6eb0eff0bfcf811e72bcf6",
+    "issues/2026-08-25/issue-manifest.public.json": "3ffd1d95c90a8f6c3d437e614fd54a5be98170bf53ae9c28de9d9ac0bfe861b9",
+    "issues/2026-08-25/stories/arteen-taipei-hotel-rooms/index.html": "a4a94125f2959f260c393c89bdf1349bd53f0176448cc5c84585d2a93c95fc20",
+    "issues/2026-08-25/stories/bape-saint-mxxxxxx-can-stool/index.html": "dcf0765d8a69ba2e3a251f4fb03d7ed770e325f6ecdd30694bc821b1f228d392",
+    "issues/2026-08-25/stories/musquiqui-life-of-navigation/index.html": "6abcd9053a516c181a98c3630e9cd5ff73c1cd315bfe2845d88af979ffa7a9d2",
+    "issues/2026-08-25/stories/seoul-fashion-week-two-city-systems/index.html": "42f901bc721212f05b29eb0db068df377ba18f10bcaf8be0b7d5f2f2cc2c7e0b",
+    "issues/2026-08-25/stories/sfmoma-giant-arc/index.html": "d7d1e14444e9d975e3185ae5dc647b2793034aad3a5025af00bb9bf088084d46",
+    "issues/2026-08-25/stories/southbank-lived-experience-curation/index.html": "689f9e886f9ac88f8a369ef60257f5becbecafc1497166159a5ea4275a50c6a8",
+    "issues/2026-08-25/stories/tmex-2026-agenda/index.html": "91c19f8c9413756052dd1aa696dd6f05bbdacfe604d306f458650b3d782e6b63",
+    "issues/2026-08-25/stories/van-cleef-ode-to-nature/index.html": "42bba4574ece721fc1f86bd9997e9e40c99d40ee576769215dc02724478bd0a6",
+    "issues/2026-08-26/assets/atlas-contact-frame.svg": "11f9fc9ac84c03df02720133085b5b63bd8048fef7499abe4e1d182477b524f7",
+    "issues/2026-08-26/assets/mplus-duration-frame.svg": "7e2aa5930aa5bc38877805bc77bba905ce237215b4aa5e1570b75480d65581c2",
+    "issues/2026-08-26/assets/nike-action-shift.svg": "4f9ceccd98e59eef13d7b7427023397fd4f6d0648a44b323432909ac50ed497a",
+    "issues/2026-08-26/assets/rsp-public-archive.svg": "0cad9d18ab686d083e2312aac07f8e3a13815b6c47afb6ac197fc002a61924d9",
+    "issues/2026-08-26/assets/stussy-jeju-proof.svg": "6a7e835b12cb1c780bbaed09482243ae06c5a3c3d59fdfc29a14f928d4c424ea",
+    "issues/2026-08-26/index.html": "dc036bbe4697342fe4989eb47abc8fd4f93c88258af4db4640af4b23031ae938",
+    "issues/2026-08-26/issue-manifest.public.json": "aa3ad589c8abc3bd4552afaac54bdb5892a7926f526ac36736ca490714bd67eb",
+    "issues/2026-08-26/stories/atlas-last-dolls/index.html": "bbbe497677ddbdfbd40186ae287962b4f59e2f294a110d1074f248a8491658f5",
+    "issues/2026-08-26/stories/mplus-warhol-sleep/index.html": "7f705860951f1720dc44b46b969499ca23feb043fa94addf172a2edb30c8a1dc",
+    "issues/2026-08-26/stories/nike-sb-air-force-1-light-chocolate/index.html": "221a10ff9abb96785ae42d8cc1cd5ea6741f0018a7eeda870fef6f0be31ccc83",
+    "issues/2026-08-26/stories/rsp70-public-archive/index.html": "bdb6247aa0b53e60c293031febfc09533bec844e05bdbe7884b10c981be4a802",
+    "issues/2026-08-26/stories/stussy-jeju-archive-store/index.html": "c28a741ad89f1b41c2cff925c3564a6a339b7ad0996f9ee587ac39e8d0fb17eb",
+    "issues/2026-08-27/assets/brain-dead-bottle.svg": "686f95539c13db389d8efd7d344e5ad08145b2f9035448281a86ee5f06ff7689",
+    "issues/2026-08-27/assets/familymart-uniform.svg": "df61bd1a0190a9a4324829174239547e2d9d03c55f1e23c580e983d9a8a232eb",
+    "issues/2026-08-27/assets/hong-kong-attire.svg": "b810d3ac925d4c4ea2780a0262bad4ffdfa2523e5db19c61e3dc89df57715ec0",
+    "issues/2026-08-27/assets/kith-cards.svg": "9469300ccbf079c43ac80cad923e0e88696742cf88c2ae0d4cb6da7694f23354",
+    "issues/2026-08-27/assets/la-priest-synth.svg": "7287ba4843c91ee70dc6dfb843a0ddf4c0f066c4c44d29d24fdf033b4091fe34",
+    "issues/2026-08-27/assets/loewe-altitude.svg": "a7993f1e740b109891536b4338cea7d03ab41d216d9d051c9a93f35267cbbd05",
+    "issues/2026-08-27/assets/prince-vault.svg": "a3448713a4716ac90a43973aaf08568f88ea1298d7d729ad7b08a0d98a062a86",
+    "issues/2026-08-27/assets/stussy-clock.svg": "de2d8b23133aa98ca3ce710b083c4f9bfa55ee7a5baa1a65e313d9fb34f86d56",
+    "issues/2026-08-27/index.html": "05e1d45c67d7069475688c968d82d1a082bf5d6d13ef4a1e8193240b1eccb4cf",
+    "issues/2026-08-27/issue-manifest.public.json": "d50153cb88b214aedd8a263f5bbe98c88389e6351672ec56f73ccfb8f8d73f67",
+    "issues/2026-08-27/stories/brain-dead-sound-fury-nalgene-2026/index.html": "82d7c9f705a4d5e46c542033cf59578a4190508d35fc4412f2adb8ef54fe4ec3",
+    "issues/2026-08-27/stories/familymart-new-uniform-famima-code/index.html": "e440285af02062a7615ec144572857395a2300d8911abe2ee6ea49de711636d1",
+    "issues/2026-08-27/stories/hong-kong-sui-tang-modern-design/index.html": "0929bd88e99ad7edcdf38ff78e9edae273c95112c3b0dce0611863cf06f46bb3",
+    "issues/2026-08-27/stories/kith-fall-2026-poker-deck/index.html": "29174b7498449ed2e626f13662ac94b924a500bc7a7ad539dca5f33c11a6dd59",
+    "issues/2026-08-27/stories/la-priest-into-the-sky/index.html": "ded04b9488118c2325ef3b703f8aefd8a2266aee4717b7648c9bf7f6bafc8d32",
+    "issues/2026-08-27/stories/loewe-fw26-mont-blanc/index.html": "c41684ed8432982dc4a824fe19c212d34789c4612edef6e42a21150bcfa7c82c",
+    "issues/2026-08-27/stories/prince-timeless-vault/index.html": "2c90797a6575f3bdc82a4c8e5be6196a18463148cc4c751654199e9b06b48ad1",
+    "issues/2026-08-27/stories/stussy-eye-junya-watanabe-fw26/index.html": "55f6862ad6da4a2f588807d7f476773df8f43e8aef83cccc7edddacce45a6008",
+    "issues/2026-08-28/assets/ambient-async.svg": "52bd93ff836902ea20f1e353d89c247c869d33a485846e5fad509476b63b41d4",
+    "issues/2026-08-28/assets/asics-skate.svg": "852ffa1f248ff18971c3ac7f8d95dd8de4d235cc489df2e55cb363d88641a77b",
+    "issues/2026-08-28/assets/erykah-stage.svg": "975491bfeebe864ad17ad0ce2ee9839d111ac87f54a8c0ca83655d7178752223",
+    "issues/2026-08-28/assets/fotografiska-care.svg": "9173fe156db92b7a413fc5829e2a913f4d5f942b74deff9d8caf0318d6aceef5",
+    "issues/2026-08-28/assets/lauren-stages.svg": "d280a39706409cee79dca7ec389d9261197e7aea1b94f8130270fabd3ef450eb",
+    "issues/2026-08-28/assets/nars-residency.svg": "ab1a7dff8e7c0c2a9cf1680ce173c618a5ba9781dc568e60ea8a64a7914bf82d",
+    "issues/2026-08-28/assets/pensacola-steam.svg": "341138675e52353f9ae91d8f79584514fcfb1050795074dcf572e54ecfd74d84",
+    "issues/2026-08-28/assets/warning-vinyl.svg": "c57b16c870afd0daeec9405a6a4f795e0b992207ede78250d99916bd27cc9dba",
+    "issues/2026-08-28/index.html": "bd811b8eca3482545d7e5738968d5f6912d94870b0c1b892f879b8f1df232dc2",
+    "issues/2026-08-28/issue-manifest.public.json": "0e7797c84f20de3a56672ac70a557a021abae445d26c7085426a1c7a6ca13a81",
+    "issues/2026-08-28/stories/ambient-kyoto-tokyo/index.html": "197a49f10700a1d40362c3a922e8e3421f6c5266f59fb20321c802b9d2478912",
+    "issues/2026-08-28/stories/asics-late-nite-stars-flexkee/index.html": "1b029fabb372ac7a4db1d9b382938ac75c5f631f74c202a972c967642d756a4b",
+    "issues/2026-08-28/stories/erykah-badu-before-world-blows/index.html": "a8acbf08a2cbc9f84b21721e5087c0a2e400fabdbcee3872f193d3723c3f972a",
+    "issues/2026-08-28/stories/fotografiska-the-unmeasurable/index.html": "6767c7f8947d4b5352686b6de86bda783b7704288a70374bf0b3dc1ca6ea8c2c",
+    "issues/2026-08-28/stories/lauren-alaina-stages/index.html": "a5a2454ec03fee56d5bcfb493113b41fd365858b524df846583ad6598f8f4c3b",
+    "issues/2026-08-28/stories/nars-subject-to/index.html": "a5ee4874b7b0a30cad0c2d7cce39daee306d6c5c8a5a343c6747b48fe7741403",
+    "issues/2026-08-28/stories/pensacola-steam2026/index.html": "376b92edbe8cac139223f4a452cb7dce46020c3e945cc0777b7ddde287dba09e",
+    "issues/2026-08-28/stories/the-warning-everythings-falling/index.html": "51b13c91ff90b2b61d7d8578c21f29350d7ad8d81b460d2dca49c13ca6dc025a",
+    "issues/2026-08-29/assets/relay.svg": "5965941442b54214d8ea31d9209eef0d4d011d95c64398045b563c0fe11688e3",
+    "issues/2026-08-29/index.html": "09d7f9980c978ce24d8a9d1cf8539d809e423074f3b410afa02f8c6f365ea2af",
+    "issues/2026-08-29/issue-manifest.public.json": "f356ec88335b2f637fcde25facf68c110a61c74fea955a513d506f8f5df40294",
+    "issues/2026-08-29/stories/asics-bloomstride-fit/index.html": "8d37159a54d5128e7a80cca4e172d7a8bf2fc73d388b4312605003d16ec1a17d",
+    "issues/2026-08-29/stories/neighborhood-aw26-aug29/index.html": "b9f2fdd3190e5c0db4f67012f58070d9e49034904af1ed7ceb951bb58c3f38cc",
+    "issues/2026-08-29/stories/spotify-equal-recordings/index.html": "d8e29f15afa1f9fa12a95ba7c5c51a03fa66d114993bd789be2e9ad5935eb6e7",
+    "issues/2026-08-29/stories/venice-films-become-time/index.html": "5f4692d6f9eda7207e5d70e0bb78cd63f32e70e9a861aff20efa0b625c6a110b",
+    "issues/2026-08-30/assets/countdown.svg": "3522e77adf607ddd334588e114821b7d7e7c085c88972cbdc06a1a73096e0e46",
+    "issues/2026-08-30/index.html": "5f2af4f0212cb3a8ee1bc0ce3472cc5debe69cf12822097f119c566f924c048d",
+    "issues/2026-08-30/issue-manifest.public.json": "25e8b34b8bf5cad0ee357b3b00c2cdb5ef26d4dafbf9e168f1a6b1fdcb93c5cc",
+    "issues/2026-08-30/stories/ader-birkenstock-second/index.html": "c9120d4de25f77c7660655cad4f9853e60de747e15a4f3b6df9bd44778e6cd46",
+    "issues/2026-08-30/stories/beartooth-pure-ecstasy/index.html": "a0b3122aca429986858f9762f176beb338c47f8da2ca827a4856cfe0dc73fac3",
+    "issues/2026-08-30/stories/mplus-dial-a-poem-close/index.html": "69f389f1ab26a61961af3b78a8ddbb867f508fc725fdb200462f14a52dfecefd",
+    "issues/2026-08-30/stories/on-roger-centre-court/index.html": "0fa0c598ed25e097d6bdbd38012aabe4c2c8498011d17e97fe6268106db0970a",
+    "issues/2026-08-31/assets/scaffold.svg": "cfc032465cd9bce18a94cdb788b20bff3e5642307759aa82e9b33f19dd12e5e7",
+    "issues/2026-08-31/index.html": "ea3c47b39d6c35d512f6b00fe6e9aa422ae1cd42f1fae8f391d1b04d455f1571",
+    "issues/2026-08-31/issue-manifest.public.json": "888773ba2938db72e68cfacf71ad661191546c674e0bc74afc9a0dd8ad464c9d",
+    "issues/2026-08-31/stories/fat-jon-black-time-circle/index.html": "8147491d80a10ac3405405ddd5dd012f1000f8f9638b3d6ec7d4a89fd7bb1c05",
+    "issues/2026-08-31/stories/nike-acg-picklejus-tests/index.html": "4d0facae76e02879e0096e605393fb8c4c3f77dfd690fdf14c7474051cc4e8bd",
+    "issues/2026-08-31/stories/venice-immersive-setup/index.html": "c6b5dd70d66b9e5e7ff379b4f942bc91abd36185e757a0cdc2ff4a39dbdbbd5b",
+    "issues/2026-08-31/stories/wales-bonner-morning-raga/index.html": "7445dfdf9317b190ace691ef9ee64fc1d2388060db49bc4590901522ebbc2665",
+    "issues/2026-09-01/assets/threshold.svg": "075ae9a0f80104b169e0144d65198176b36cfedc792139de0aeade67818d104f",
+    "issues/2026-09-01/index.html": "5262398a1f360cfda2df2739fab756d5282c0c29ee73025dbff75e92d1696188",
+    "issues/2026-09-01/issue-manifest.public.json": "57e5a9dfd98da363d76c421b333dd822e58a378297c7cdd8d5cfd1f6b11364e4",
+    "issues/2026-09-01/stories/biz-markie-archive-entrance/index.html": "cce0d703cef0735783991df8ac48a776fffb8efd97895a80b1887e840bc72b28",
+    "issues/2026-09-01/stories/kyoto-tatsuuma-day-address/index.html": "a1a206bf07ac34a740b9bfad06865b2a66a334a408152f2d36d5960c8a5dbaf5",
+    "issues/2026-09-01/stories/this-land-listening-room/index.html": "dd5c61ff2826f148edcc5b542118f241972d0b67202cede8d4c89df2461c9ad3",
+    "issues/2026-09-01/stories/wildside-needles-time-bound/index.html": "cbd3b980f39f5bf88fa5cefb50751ccb8fa3b2bcb35cbc8dc1d3c40405f15aeb",
+    "issues/2026-09-02/assets/participation.svg": "2aa51ef6d8bc1cbe4b61de1fb0c1ec010e62b83f2e56cb574d654c5abdd9862f",
+    "issues/2026-09-02/index.html": "7acc14ec4107eb9772f84ff197e6a924c3630a49b63a0e6596819726acce6581",
+    "issues/2026-09-02/issue-manifest.public.json": "d2ffd6ff3c6fcebea5a6783d499ce7336076d3fbc49f530b10c03d51ce5f3145",
+    "issues/2026-09-02/stories/cca-closer-reading-book-object/index.html": "00f675a35e96314f06ddf1721e08fde76670a094f8f873d4f08a05b6d75f7005",
+    "issues/2026-09-02/stories/snoopy-style-fashion-archive/index.html": "fb63202f9375aa97b1a4c87f91638dbf6f18fdf6de7ce84b1e36e4172551c2b7",
+    "issues/2026-09-02/stories/tangible-sound-body-landscape/index.html": "8e6ed083e4177b41a1b386e8579eb243072e9d80ce9f4e11d4e1f1a383f1baf4",
+    "issues/2026-09-02/stories/wroclaw-open-museum-fifteen-years/index.html": "44391025dcaf6de7454c1b18181eebb9ce58055884e152f2d9e4ae282815d3b1",
+    "issues/2026-09-03/assets/entry-card.svg": "7f84d4a8f4be1458a2e9b5c81d586dd730b753544df8c010be0a46c7e8f6c8a2",
+    "issues/2026-09-03/index.html": "83e58476465d30ea89d8cca935cf9a5a72231a7312eb3713d7accf78501038ca",
+    "issues/2026-09-03/issue-manifest.public.json": "fdd722f4cea166f7d753607ab54e7740c5f9c6d867359a0233a9cac5376727e9",
+    "issues/2026-09-03/stories/bape-golden-era/index.html": "26a35c400e869345b159a8b48811d7d858d0c2bda89f56b6877756f30685907f",
+    "issues/2026-09-03/stories/dyson-unveiled-2026-berlin/index.html": "b1443e3eadaec2f2b2b806fe302cdf17b78256cdb3ce48afc096af197a06fce2",
+    "issues/2026-09-03/stories/helsinki-hdw-lab/index.html": "166360c11f1eec2a20de63e10eb89989d4abf7b48852fcce3cb4b6d5cedf1af2",
+    "issues/2026-09-03/stories/hieroglyphics-all-said-and-done/index.html": "e1be1cb8ba0280e24fbf642924793e08e655a34c8864b6b88b988203c4e8efb1",
+    "issues/2026-09-03/stories/sfmoma-in-between/index.html": "b300e8d9738ad37ab0350ee1e6bdee5b1ee5bdea2b9d4321b43a292d43dc9c85",
+    "issues/2026-09-04/assets/entry-card.svg": "9aa63c7af2cf59d7710ca175d03508b270d08415186251fa37ef47836a82fe75",
+    "issues/2026-09-04/index.html": "c0175bbe95c94984bab937065cf3b5d09cb27dbd265a5aa02a19eb82c640f70a",
+    "issues/2026-09-04/issue-manifest.public.json": "b5cf25e3c736146bb7e719fbdb7105cb16e0a37df7dd81b22b5d8def41f2357c",
+    "issues/2026-09-04/stories/adela-prima-release/index.html": "12ca7795d0d94d9c749844131de45942f06409a7c65afdeb4307dbd9fb137131",
+    "issues/2026-09-04/stories/detroit-global-diasporas-design/index.html": "7d76ff88caaf77599ec1ff9cbe27e96a06580eb45353dd9c53de7f1078a97ed0",
+    "issues/2026-09-04/stories/dyson-nurovi-method/index.html": "86bd0c7723ca2450e0fe77699553b37724899a137ab39e55dc0d3af67fd77a5b",
+    "issues/2026-09-04/stories/prishtina-materials-futures/index.html": "58a7f34a2b6665651a3bfcc79771cd5810cd8b0ed480c819aad32cded59849cd",
+    "issues/2026-09-04/stories/simone-rocha-adidas-fw26/index.html": "847c31ccc8de32494423799173a1eb647a84224d7004f87f9db67a88c9bf1c9d",
+    "robots.txt": "46f38c47f8f7f92279fdf746869d5f2589519139b784b158736e760b4c7c64a5",
+    "rss.xml": "57a05ba0a4c8d158041b9ce58871bfa09cee8374f8fb1a479736705db3e2234a",
+    "sitemap.xml": "1d1b09d4db8da20761ecf4cae9eeb0bf875870476ec01fed325ade8ad78a020e"
+  },
+  "base_url": "https://guaizzz.github.io/culture-taste-daily/",
+  "contract": {
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667",
+    "amendments": [
+      {
+        "commit": "43e72da4c7beb1a0bf5ae756ed7c339c1eb2accb",
+        "effective_from": "2026-08-26",
+        "id": "A1",
+        "path": "docs/PRODUCTION_CONTRACT_V3_A1.md",
+        "sha256": "6fe974bf6ccf9ee443a87af2f4d8742cfc0c8d0afebd6816785217d190e2bccc"
+      },
+      {
+        "commit": "fef6481517d67a0099612bd7f97573ea907cf299",
+        "effective_from": "2026-08-25",
+        "id": "A2",
+        "path": "docs/PRODUCTION_CONTRACT_V3_A2.md",
+        "sha256": "c3c4d145d2ace2d48a083fe9a12eb3584d36966aeb6f4727e5b44fb2d29ce31e"
+      }
+    ],
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "repository": "GUAiZzz/culture-taste-daily",
+    "sha256": "7ed55419ac723b9eda668a4bf280b696caccf172ee35a20f5a859c39937eebd3"
+  },
+  "historical_issues": [
+    {
+      "coverAsset": "covers/2026-08-20.png",
+      "deck": "从 local market、Sephora、网络与零售现场，看文化如何获得一个可以发生的位置。",
+      "digest": "13bda41b6e226982aa2f5d31b8310925ebfa6674bd77e077f9a5cc565e546815",
+      "issue_id": "2026-08-20",
+      "limitations": [
+        "The supplied self-contained historical HTML is preserved rather than normalized into the current renderer.",
+        "Embedded historical media and its reuse basis require human review before any production cutover."
+      ],
+      "migration_mode": "preserved_self_contained_html",
+      "preservation_kind": "historical_original",
+      "production_eligible": false,
+      "publication_date": "2026-08-20",
+      "source_sha256": "b4b42d072a36f85a5490d9f1cbc0b0c4b4d148282fe379f4022dd08fb1074fd2",
+      "title": "文化需要一个地方",
+      "title_en": "CULTURE NEEDS A PLACE."
+    },
+    {
+      "coverAsset": "covers/2026-08-21.png",
+      "deck": "八个场景不追求一个统一 aesthetic，而是追问谁能进入、如何拿到、什么被隐藏。",
+      "digest": "25adac9fa776167599dc25df2ceea63b718df7c90512fd0b9bbb6295c3fe9a1a",
+      "issue_id": "2026-08-21",
+      "limitations": [
+        "The supplied self-contained historical HTML is preserved rather than normalized into the current renderer.",
+        "Embedded historical media and its reuse basis require human review before any production cutover."
+      ],
+      "migration_mode": "preserved_self_contained_html",
+      "preservation_kind": "historical_original",
+      "production_eligible": false,
+      "publication_date": "2026-08-21",
+      "source_sha256": "f85bf5678c20363df68930488e61a02b610268b67e12ce7a7e2cdd2441994041",
+      "title": "八套具体的规则",
+      "title_en": "$5 SHOES. 700 SLEEVES. 6-SECOND LOOPS."
+    },
+    {
+      "coverAsset": "covers/2026-08-22.jpg",
+      "deck": "一份以移动端页面截图保存下来的历史刊：空间、观看与公共界面的 16 个连续画面。",
+      "digest": "046b56b8dd15b181e839b5ad456d5611493173f61a3f9d97d8da779c32441b47",
+      "issue_id": "2026-08-22",
+      "limitations": [
+        "The supplied PDF contains raster screenshots rather than selectable article text.",
+        "Preview uses an honest facsimile reader and retains the original PDF; accessible source reconstruction remains blocked until original web source is recovered.",
+        "Historical media reuse basis requires human review before any production cutover."
+      ],
+      "migration_mode": "historical_web_edition",
+      "preservation_kind": "historical_original",
+      "production_eligible": false,
+      "publication_date": "2026-08-22",
+      "source_sha256": "2c3785f03eabfa45905c5240b6961b57b7d43fb36802b1e47ba30dbc3f7b7ffe",
+      "title": "门开了，文化才开始",
+      "title_en": "THE DOOR OPENS. CULTURE BEGINS."
+    }
+  ],
+  "issues": [
+    {
+      "candidate_digest": "a8a939b3d7025a83197f7dc54ac178ef98f347d123ca02812edef728731671ca",
+      "daily_radar_sha256": null,
+      "date_semantics": {
+        "production_candidate_valid": false,
+        "reasons": [
+          "research lock is outside the publication-day 06:00–08:30 final-refresh window"
+        ]
+      },
+      "issue_id": "2026-08-23",
+      "issue_payload_digest": "3cba12e2e1bc7aa200d26b586cba132172028fc8a2a229b27ac5b76cfd17358b",
+      "source_hashes": {
+        "art_direction_sha256": "af945fb5fc06f4569cedb63de74276f0b51f15e195e5c38893072e31eaa43a5a",
+        "content_sha256": "600d4cad535e06f2a95a3fd2b4abb940e9af8c07285f3985ebbe27f155a82ecc",
+        "issue_style_sha256": "2d934e1554950517809e23b223bb963a1aac1e88fc3d4a5f0981c67226be2fed"
+      }
+    },
+    {
+      "candidate_digest": "ad1965cb69ab3fa322ab0227eb6f17eaa495f8d9cd5413817fe4c8f49b7fafce",
+      "daily_radar_sha256": null,
+      "date_semantics": {
+        "production_candidate_valid": false,
+        "reasons": [
+          "research lock is outside the publication-day 06:00–08:30 final-refresh window"
+        ]
+      },
+      "issue_id": "2026-08-24",
+      "issue_payload_digest": "33ee7586e2bbb7892539770adb00839b87d2c6d8013dc399ff62ed4e72fe22b9",
+      "source_hashes": {
+        "art_direction_sha256": "ff1285b28e280b7be39e4d49dd58475f19d20ea02463a4f6daf434d987c54d2a",
+        "content_sha256": "7c6182645bb289d3fa8f45c9e707a76ede4f8c6bebd04e9f0dafd9af76754177",
+        "issue_style_sha256": "c0a82806402b28680b15b3b7d4b4575b31171107700a26dd37713aadf0a19bd1"
+      }
+    },
+    {
+      "candidate_digest": "656bb1e64f917fcbee657450397daeea7eb018ec4bdb8963b9499ac15630a817",
+      "daily_radar_sha256": "52455d08a13fe006c71c2412f4e41e66e6cbe671986a414b5837b634325afb29",
+      "date_semantics": {
+        "production_candidate_valid": false,
+        "reasons": [
+          "candidate_created_at is unavailable",
+          "research lock is outside the publication-day 06:00–08:30 final-refresh window"
+        ]
+      },
+      "issue_id": "2026-08-25",
+      "issue_payload_digest": "db18e20eab843852ad6e6f2dd9f766c3c1a13e051c5827c1d591e18796f60944",
+      "source_hashes": {
+        "art_direction_sha256": "3b476e3fae94b1573f8ad15dc3fc3ac9653ca2559dd7bf97e133352cdd4c79c6",
+        "content_sha256": "74963f0974b01e4c60937865986f2d63b19db2f1a0321aa39d19ec234aac827a",
+        "issue_style_sha256": "b41b8a6de7f77125ee893114d3a01d488c86c3f9f8265590760a2a21ce404691"
+      }
+    },
+    {
+      "candidate_digest": "842005a0244dfac93f46f8ef6afc353a0ff61e6a636cdd9c83f6cbb842429c7d",
+      "daily_radar_sha256": "411229255217198c82981405071bc2582d989cf6713c21352e0b97ee96fd8ea3",
+      "date_semantics": {
+        "production_candidate_valid": true,
+        "reasons": []
+      },
+      "issue_id": "2026-08-26",
+      "issue_payload_digest": "2207ea3e35ef58a2c8254f2a71f468eb8a52c0e365c513c3351bcb6f02be8cd5",
+      "source_hashes": {
+        "art_direction_sha256": "f2f337731050b9c1dc6e6e98a21851d61ba3404f1f2aeaefbcf118599f83249f",
+        "content_sha256": "e0824fc2ac83dcb067e934b3355d1178afa35e9f882678ac0e47fee2ced1022a",
+        "issue_style_sha256": "bc6c54204c1a8c57c966155efd41d7fefb00b05441f8127644663b518fce5a73"
+      }
+    },
+    {
+      "candidate_digest": "f13342da993cbe4e915d15d1dd08126632822aba13e84b558120e8829a9b5b98",
+      "daily_radar_sha256": "cd7df9a09f069025649b1d7864d028bbcffae6b86204e0e2ed0f0931c81d4c0e",
+      "date_semantics": {
+        "production_candidate_valid": true,
+        "reasons": []
+      },
+      "issue_id": "2026-08-27",
+      "issue_payload_digest": "9e2b11e33611e64f5b9baa16b0e125949c0c9482ded08e1453a895d1e2d4bce9",
+      "source_hashes": {
+        "art_direction_sha256": "71abd9b46b6800c44c8f4ecd033951526b447ec4803fb77f47d0ae5798baa3ac",
+        "content_sha256": "6fb951c28722f93e02d7104a4ae1b96a2a0e57a10bda1f00a8fe24f08597408f",
+        "issue_style_sha256": "536fe6723c68593adadc8ec430ed508aa76c789b423707fb481865b2a3d0e338"
+      }
+    },
+    {
+      "candidate_digest": "b67607e885a8e41534f2d64f40806887c116faff4aa51ca7bea612012bcaf22f",
+      "daily_radar_sha256": "8b9fbb7a18de94819d4ab5bbcde218d4a5ca8b31dbfd3b83994f73ad310c2d65",
+      "date_semantics": {
+        "production_candidate_valid": true,
+        "reasons": []
+      },
+      "issue_id": "2026-08-28",
+      "issue_payload_digest": "b63b65eab0ff92dce45947a7b6631df0ac5b18ded022b9e70ac02d5bfc08565f",
+      "source_hashes": {
+        "art_direction_sha256": "e2310fc7a560433f5714a2225ddec858601b11a64422112b0b4a9e765c8714c9",
+        "content_sha256": "3b025dae0bb6b278fe4ed50c2d69ad247abaec23fbfbe25fc408bcffeb159c8e",
+        "issue_style_sha256": "12ac3e3983038269c57ab81038341bce4c8930a8c0c89a8a2b4b944aa1f2fdd6"
+      }
+    },
+    {
+      "candidate_digest": "03d577f45fcb61f06f0dcd2ece3f7941e4e2fbe027c28e5bd17713f2f38fcde9",
+      "daily_radar_sha256": "e6d1ad1237dd1d7588311a8212016324fc6c6e369d665d32a01b5578c3d0e294",
+      "date_semantics": {
+        "production_candidate_valid": true,
+        "reasons": []
+      },
+      "issue_id": "2026-08-29",
+      "issue_payload_digest": "6e1dbd29a474b9d1ec88084b46b1b8b5d76f6411ae4823008ca67f6dcf5f8332",
+      "source_hashes": {
+        "art_direction_sha256": "d7a94b7ed7fdaafb28164c4b85c4aa5b2a171b981c4cf092d79bc0e452481b4c",
+        "content_sha256": "c3c0b69e79d817efef1a02a7c498e8f130bb1533f320bacdb638ddacbf379688",
+        "issue_style_sha256": "bba862f94228c5a85a2c5664ab4f4c45d198739b7ee427e606e3add019fdef9b"
+      }
+    },
+    {
+      "candidate_digest": "6c74595a2295a30d57e9a9d9fe0a9ba070b4aaa37048745cac9024bea17814f1",
+      "daily_radar_sha256": "d61a2e978a1984a4f62152a046fe3f83914a39349058691a0d8cfebd3f496245",
+      "date_semantics": {
+        "production_candidate_valid": true,
+        "reasons": []
+      },
+      "issue_id": "2026-08-30",
+      "issue_payload_digest": "6d2b6fe4af35b751596da8a9c897f6475f5235177ed7cbea2838ddc4413bf622",
+      "source_hashes": {
+        "art_direction_sha256": "dd9df065702e8caaf414b6fa5f9577064ad68cd9c952a31c6a7b2d2c5d7191dd",
+        "content_sha256": "bdde759cd41faf3118df3523ef61a7d4ce973db33ae6e40444d61c2afe4ea70b",
+        "issue_style_sha256": "c25fcf4ea48d9375e8806e6a006ba3bd0f4f684423b022dcb124103dfe9b1fd4"
+      }
+    },
+    {
+      "candidate_digest": "ec18a62829cccbc2004dd09226304d17eb55c7a97061396b2643718b4b954c8e",
+      "daily_radar_sha256": "b535a1bc5c55358f8994b94d014ca8f2e0c3b1b3dd01f3d2cc47ecdde156125e",
+      "date_semantics": {
+        "production_candidate_valid": true,
+        "reasons": []
+      },
+      "issue_id": "2026-08-31",
+      "issue_payload_digest": "08953b0b79365235c281e95628c803c85aed17bfde924a4809ea027bc1a78067",
+      "source_hashes": {
+        "art_direction_sha256": "43857ced36b16a00e8f32bd4a57271b73e2e4bae42d50e0bead44e1ed7825ef7",
+        "content_sha256": "53f6a929646af50c53adbd528bbeb4eb067e622b2488f48bbc04910bcc6f35d0",
+        "issue_style_sha256": "976c0b34c10099954bfa0bd854ab5c75770d5881e6b20e502af59af0df32ed2a"
+      }
+    },
+    {
+      "candidate_digest": "71b2c20314c645c608a959477becb6baff0b3a8f2764a00f458bbf2f9ee14dc3",
+      "daily_radar_sha256": "8cb20640bea8ec4668c1f534e3c4922ebcb1b09471a747f90ff8a97a8ccfecf7",
+      "date_semantics": {
+        "production_candidate_valid": false,
+        "reasons": [
+          "research lock is outside the publication-day 06:00–15:00 final-refresh window"
+        ]
+      },
+      "issue_id": "2026-09-01",
+      "issue_payload_digest": "4204c5680e7cccabb7e7a19cba1bb1e2aaf18ac675ea15e80f6a7f2b93838528",
+      "source_hashes": {
+        "art_direction_sha256": "0f7620f54cad73e145e698fb433809842690c48e168184f97cef565b46f17d00",
+        "content_sha256": "5a252d243316b0e9ef5f234c4010d8c69c612f0d4e0ca4efdd8913659f654251",
+        "issue_style_sha256": "54e81ae5f094128c6969732e87a41669dfe0aa1d02d0915d954b75e6987e6abf"
+      }
+    },
+    {
+      "candidate_digest": "b0c9e229f7456134775e9e7d01c4eef570fec48b602fa90ecb234660677f5c54",
+      "daily_radar_sha256": "8d0acfcf42698ef1d2d0b1f01fa8c2164ec7778040b3f7a27a35dd7cb0fd0275",
+      "date_semantics": {
+        "production_candidate_valid": true,
+        "reasons": []
+      },
+      "issue_id": "2026-09-02",
+      "issue_payload_digest": "921f053410e1dee1d1eb9e1cefe9431491bb2ee7b5d98e22250dc2ea51e6848f",
+      "source_hashes": {
+        "art_direction_sha256": "80786d574254914e7eba24777839bc43222caed04aa64dacab57f8dde1b14528",
+        "content_sha256": "f825403489ac898354cdff825c87f717a785bce160fd8e9772af8c94dc45b8a6",
+        "issue_style_sha256": "8ef1547b61812569b70c3681a17cae14a143a49d7c36c4a7130011972b7ceda4"
+      }
+    },
+    {
+      "candidate_digest": "a913503b737ab988b93a693e0135a96b4e7f5344031045c83de37e8e02f51d53",
+      "daily_radar_sha256": "52b6f68220bd19b0c9263fa32a97584a472d034e0bcc40e44808f470fba6da77",
+      "date_semantics": {
+        "production_candidate_valid": true,
+        "reasons": []
+      },
+      "issue_id": "2026-09-03",
+      "issue_payload_digest": "eda9be42583f6626bb5bd36915a348fcb8ac32bc0d52bd9ee9acb35a436daefe",
+      "source_hashes": {
+        "art_direction_sha256": "bba6a21258684f347c1dcf9fd76b7c044380349840ba7e71dd7d34829d2613af",
+        "content_sha256": "726bcd1fcad7a868ca5129f8a6f337a2f9f72565060edad392bdbda5f92cdbcf",
+        "issue_style_sha256": "d1f53dc7fd27a117f880cc8af0467c028f6076e2e46d9656c50d3a755da88cf7"
+      }
+    },
+    {
+      "candidate_digest": "9b5df3e44d612b11f6a9e7e9b38b91ff703e5f4992d57f03604b7741e54714f5",
+      "daily_radar_sha256": "b57b66f6c373da726ed498224c11d6884db078fe1ba9ea8be412da045b421246",
+      "date_semantics": {
+        "production_candidate_valid": true,
+        "reasons": []
+      },
+      "issue_id": "2026-09-04",
+      "issue_payload_digest": "6022019b938cd8a3b7999691dd1d7128e606bedc2e442eec72c2138146bf620c",
+      "source_hashes": {
+        "art_direction_sha256": "ba98127ce95ccd8cbb8d3cfde232835dca31932b625ab9a20ca8903ef84c54bc",
+        "content_sha256": "81ca3a99ffe07f1adb66f066d881b572b0bee22403c91f93581a57937c62e81b",
+        "issue_style_sha256": "d1f565334be4759af3901480c9dec776f11df67b953483b6af68d72e9f570bf3"
+      }
+    }
+  ],
+  "kind": "generator_build_report",
+  "production_authority": false,
+  "schema_version": 1,
+  "scope": "local_non_production_preview"
+}

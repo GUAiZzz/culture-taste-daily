@@ -1,0 +1,145 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-09-16",
+  "publication_date": "2026-09-16",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-09-16T11:30:08+08:00",
+  "research_locked_at": "2026-09-16T11:42:00+08:00",
+  "content_locked_at": "2026-09-16T11:42:00+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {"status": "locked", "sha256": "53e41610c54a4d7d4f781e68b3b9f8233d4be903381abe8c9b52d008f885ea54", "locked_at": "2026-09-16T11:42:00+08:00"},
+  "source_hashes": {"content_sha256": "53e41610c54a4d7d4f781e68b3b9f8233d4be903381abe8c9b52d008f885ea54", "art_direction_sha256": "50610d489169ff57ac26b54e2569d170df5aae26b4ef6d5b009145bcdbc4f16e", "issue_style_sha256": "36024e7d687f9c988a68b4060c1bafc0df877cf213866bca183bca8492bc5b46"},
+  "harrytone": {"repository": "GUAiZzz/harry-tone", "branch": "main", "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f", "loaded_at": "2026-09-16T11:04:58+08:00"},
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "作品不是做完才开始与人发生关系。它必须找到一个可以被观看、被使用、被讨论或被重新组织的入口。娃娃不是时装的缩小版，纺织物也不只是质感，永久建筑更不等于公共性；但这些中间层会暴露一个对象真正怎样把自己交给公众。",
+  "art_direction": {
+    "dominant_mood": "骨白底上的深靛、朱砂红和硫磺黄，像一座把物件轮廓投到墙上的临时剧场：安静阅读，突然被一个清晰的剪影打断",
+    "background_logic": "页面把‘公共’做成一组错位的剪影框、投影面和注册针脚：对象先有轮廓，再有材料，最后才有进入条件；不复用最近七期的日历轴、节目单轨道、孔径窗口、尺度矩形场、折页结构、门框路线或 aftercare rail",
+    "palette_logic": "bone #F3EFE3, indigo #172033, ultramarine #243B8A, vermilion #C74A36, sulfur #E1D454；骨白承载长文，深靛承载正文，钴蓝标记索引，朱砂提示判断转换，硫磺黄只留给剪影内面和少量注册针脚，不把装饰色交给正文小字号",
+    "type_scale_logic": "标题像剧场入口旁的硬纸标签，正文保持 18px；编号用等宽字，英文只承担标题、deck 与 abstract，长标题自然断行，不为视觉压缩事实",
+    "image_behavior": "四张一手官方媒体以 Preview 外链显示；所有复用权利仍未知，保留来源回链和本地原创非纪实剪影舞台图；外图失败时不隐藏来源，回退图只说明轮廓关系，不冒充现场",
+    "page_density_and_tempo": "封面先给出几块不对齐的投影面，正文从娃娃的可移动身体进入纺织的时间，再进入画作获得建筑身体的瞬间，最后落在工艺继续变形的条件；每段留出可读空白，不把四个项目串成单一成功叙事",
+    "core_visual_action": "用三个错位的剪影框制造‘对象—材料—公众’的三段距离，蓝色注册针在框边停住，朱砂小标签只在故事切换时出现；读者看到的是对象被翻译到公众面前的瞬间，而不是一条被装饰的路线",
+    "cover_composition": "骨白底上叠放三块深靛投影面，最上层切出一块硫磺黄内面，朱砂注册线穿过边界后停住；标题占据左侧，右侧留出像尚未有人站入的舞台空白",
+    "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 只提供可关闭的‘剪影注记’，正文、事实和外图回链不依赖 JavaScript",
+    "behance_viewing_arc": "先看衣服如何借娃娃获得可移动的身体，再看手工如何拒绝只做质感，接着进入绘画如何让建筑承担感知，最后回到传统如何保留改变自己的权利",
+    "mobile_translation": "390px 下三块投影面收成左侧窄剪影，注册线变成边缘针脚，硫磺黄只出现在标题与索引附近；正文单列，图片说明和长链接自然换行",
+    "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点可见，长链接换行，外图失败不隐藏来源，移动端无横向滚动；剪影装饰不覆盖正文和图片说明",
+    "quiet_ending": "退出处留下一个未站人的剪影框和一枚停住的注册针，不给箭头，让读者把公共性继续带出页面",
+    "closing_quotation": {"id": "ct-en-006", "language": "en", "text": "Culture lives where an object finds its public.", "credit": "Culture & Taste Editorial"},
+    "closing_palette": {"background": "#F3EFE3", "foreground": "#172033", "accent": "#243B8A", "rationale": "骨白与深靛形成可读长文底，靛蓝承担结构信息，朱砂提示转换与不确定，硫磺黄只保留给剪影内面和少量注册针脚。"}
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": ["2026-09-15", "2026-09-14", "2026-09-11", "2026-09-10", "2026-09-09", "2026-09-08", "2026-09-07"],
+    "repeated_mechanisms": ["accessible section index", "first-party source image with linked fallback"],
+    "exception_reason": "可访问索引与一手来源图是固定约束；本期改用剪影框、投影面、注册针脚和未站人的舞台空白作为核心构图，讨论对象如何获得进入公共生活的条件，没有复用最近七期的日历轴、节目单轨道、孔径窗口、尺度矩形场、折页结构、门框路线或 aftercare rail。"
+  },
+  "stories": [
+    {
+      "id": "doll-dressing-2026",
+      "level": "cover",
+      "title": "Doll Dressing：时装终于承认，玩具也会教人穿衣",
+      "sources": [
+        {"title": "Doll Dressing", "publisher": "The Museum at FIT", "url": "https://www.fitnyc.edu/museum/exhibitions/doll-dressing/index.php", "published_date": null, "event_date": "2026-09-16/2027-01-03", "relationship": "first_party_official"},
+        {"title": "Exhibition: Doll Dressing opens", "publisher": "FIT Events", "url": "https://events.fitnyc.edu/event/exhibition-doll-dressing-opens/", "published_date": null, "event_date": "2026-09-16", "relationship": "first_party_official"},
+        {"title": "Doll Dressing press release", "publisher": "The Museum at FIT", "url": "https://www.fitnyc.edu/museum/documents/doll-dressing-mfit-press-release-final.pdf", "published_date": null, "event_date": "2026-09-16/2027-01-03", "relationship": "first_party_official"},
+        {"title": "The History of Paper Dolls and Popular Culture", "publisher": "National Women's History Museum", "url": "https://www.womenshistory.org/articles/history-paper-dolls-and-popular-culture", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Paper Dolls", "publisher": "Cooper Hewitt", "url": "https://www.cooperhewitt.org/2017/08/16/paper-dolls/", "published_date": "2017-08-16", "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Posing Paper Dolls: Fashions 1750–1900", "publisher": "Kent State University Museum", "url": "https://www.kent.edu/museum/posing-paper-dolls-fashions-1750-1900", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Les Paper Dolls", "publisher": "Musée Yves Saint Laurent Paris", "url": "https://museeyslparis.com/en/biography/les-paper-dolls", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "How Barbies come to life: Linda Kyaw interview", "publisher": "Wallpaper*", "url": "https://www.wallpaper.com/art/how-barbies-come-to-life-linda-kyaw-interview", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Paper Fashions and Paper Dolls collection", "publisher": "University of North Texas", "url": "https://texashistory.unt.edu/explore/collections/PFPD/", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Fashion doll record", "publisher": "Smithsonian SOVA", "url": "https://sova.si.edu/record/nmah.ac.1110", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Barbie Fashion Designer Papers guide", "publisher": "The Strong National Museum of Play", "url": "https://www.museumofplay.org/app/uploads/2024/05/Guide-to-the-Barbie-Fashion-Designer-Papers.pdf", "published_date": "2024-05-01", "event_date": null, "relationship": "independent_reporting"}
+      ],
+      "image_credit": "The Museum at FIT · Preview-linked",
+      "english": {"title": "WHEN TOYS TEACH US HOW TO DRESS", "deck": "FIT places fashion dolls, full-size garments and design history in the same moving frame.", "abstract": "Doll Dressing runs from 16 September 2026 to 3 January 2027 at The Museum at FIT with more than 170 objects. The reading of dolls as a movable fashion-learning device is editorial interpretation."},
+      "media": {"asset": "assets/doll-dressing-stage.svg", "alt": "An original indigo silhouette stage with a small cutout figure and yellow garment shape", "caption": "FIT 官方展览页；本地剪影图为原创非纪实占位，打开来源查看 170 多件物件、章节和设计师名单。", "credit": "The Museum at FIT · Preview-linked official image", "kind": "source_image", "origin_url": "https://www.fitnyc.edu/museum/exhibitions/doll-dressing/index.php", "external_image_url": "https://www.fitnyc.edu/museum/images/doll-dressing-mfit-exhibition-banner.jpg", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "eternal-smile-2026",
+      "level": "major",
+      "title": "The Eternal Smile：把手工从“质感”里解救出来",
+      "sources": [
+        {"title": "The Eternal Smile", "publisher": "Designmuseum Danmark", "url": "https://designmuseum.dk/en/exhibition/nikoline-liv-andersen/", "published_date": null, "event_date": "2026-05-01/2026-09-27", "relationship": "first_party_official"},
+        {"title": "Nikoline Liv Andersen press room", "publisher": "Designmuseum Danmark", "url": "https://designmuseum.dk/nikoline-liv-andersen/", "published_date": null, "event_date": "2026-05-01/2026-09-27", "relationship": "first_party_official"},
+        {"title": "Det Evige Smil: artist conversation", "publisher": "Designmuseum Danmark", "url": "https://designmuseum.dk/event/kun-med-aarskort-det-evige-smil/", "published_date": null, "event_date": "2026-05-14", "relationship": "first_party_official"},
+        {"title": "The Eternal Smile", "publisher": "Formkraft", "url": "https://formkraft.dk/en/the-eternal-smile/", "published_date": null, "event_date": "2026-05-01/2026-09-27", "relationship": "independent_reporting"},
+        {"title": "The Eternal Smile", "publisher": "Håndværk Bookazine", "url": "https://www.haandvaerkbookazine.com/the-eternal-smile/", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Nikoline Liv Andersen interview", "publisher": "Randers Kunstmuseum", "url": "https://randerskunstmuseum.dk/wp-content/uploads/2026/01/104222_RKM_indhold_22x30_2026-final_opslag.pdf", "published_date": "2026-01-01", "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Copenhagen Now: September 2026", "publisher": "My World of Interiors", "url": "https://myworldofinteriors.com/2026/09/11/copenhagen-now-september-2026/", "published_date": "2026-09-11", "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Designmuseum Danmark exhibitions", "publisher": "MutualArt", "url": "https://www.mutualart.com/Organization/Designmuseum-Danmark/3EBF152A85451E11/Exhibitions", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Nikoline Liv Andersen", "publisher": "Yatzer", "url": "https://www.yatzer.com/nikoline-liv-andersen", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "The secret universe of Nikoline Liv Andersen", "publisher": "ART Territory", "url": "https://arterritory.com/en/architecture_design--fashion/interviews/9634-the_secret_universe_of_nikoline_liv_andersen/", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Dark Matter exhibition text", "publisher": "Horsens Kunstmuseum", "url": "https://horsenskunstmuseum.dk/wp-content/uploads/2019/11/NLA-CRD-ENG-tekst.pdf", "published_date": "2019-11-01", "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Red Threads: old and new stories in art and design", "publisher": "TextielMuseum", "url": "https://textielmuseum.nl/en/exhibitions/coming-soon-red-threads-old-and-new-stories-in-art-and-design", "published_date": null, "event_date": null, "relationship": "independent_reporting"}
+      ],
+      "image_credit": "Designmuseum Danmark · Preview-linked",
+      "english": {"title": "SAVE HANDMADE FROM BECOMING A TEXTURE", "deck": "Nikoline Liv Andersen turns embroidery, weaving and knitting into a landscape of life cycles.", "abstract": "The Eternal Smile runs through 27 September 2026 at Designmuseum Danmark. All works were made specifically for the exhibition; the reading of craft as a time structure is editorial interpretation."},
+      "media": {"asset": "assets/eternal-smile-stage.svg", "alt": "An original bone and vermilion silhouette stage with layered textile-like shapes", "caption": "Designmuseum 官方展览页；本地剪影图为原创非纪实占位，打开来源查看作品、材料和展期。", "credit": "Designmuseum Danmark · Preview-linked official image", "kind": "source_image", "origin_url": "https://designmuseum.dk/en/exhibition/nikoline-liv-andersen/", "external_image_url": "https://designmuseum.dk/en/wp-content/uploads/sites/5/2025/09/thumbnail_image005-2-e1757418867796.jpg", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "doha-pavilion-richter-2026",
+      "level": "major",
+      "title": "Doha Pavilion：当一幅画开始要求城市替它站立",
+      "sources": [
+        {"title": "Gerhard Richter Doha Pavilion announcement", "publisher": "Qatar News Agency", "url": "https://qna.org.qa/en/news/news-details?date=10/09/2026&id=qt-announces-permanent-artwork-for-mia-park-created-by-german-artist-gerhard-richter", "published_date": "2026-09-10", "event_date": "2026-11-20", "relationship": "first_party_official"},
+        {"title": "Design unveiled for Doha Pavilion", "publisher": "Selldorf Architects", "url": "https://www.selldorf.com/news/design-unveiled-for-doha-pavilion-gerhard-richter", "published_date": "2026-09-14", "event_date": "2026-11-20", "relationship": "first_party_official"},
+        {"title": "Gerhard Richter’s mosaic-like Doha Pavilion", "publisher": "The Art Newspaper", "url": "https://www.theartnewspaper.com/2026/09/11/gerhard-richters-mosaic-like-doha-pavilion-will-open-in-november", "published_date": "2026-09-11", "event_date": "2026-11-20", "relationship": "independent_reporting"},
+        {"title": "Gerhard Richter Doha Pavilion and Strip paintings", "publisher": "FAD Magazine", "url": "https://fadmagazine.com/2026/09/10/gerhard-richter-doha-pavilion-strip-paintings/", "published_date": "2026-09-10", "event_date": "2026-11-20", "relationship": "independent_reporting"},
+        {"title": "Gerhard Richter Doha Pavilion", "publisher": "Artnet News", "url": "https://news.artnet.com/art-world/gerhard-richiter-doha-pavilion-qatar-2809486", "published_date": null, "event_date": "2026-11-20", "relationship": "independent_reporting"},
+        {"title": "Richter pavilion in Doha", "publisher": "ORF", "url": "https://orf.at/stories/3441795/", "published_date": null, "event_date": "2026-11-20", "relationship": "independent_reporting"},
+        {"title": "Richter pavilion to light up Doha's art scene", "publisher": "Gulf Times", "url": "https://www.gulf-times.com/article/733012/qatar/richter-pavilion-to-light-up-dohas-art-scene/amp", "published_date": null, "event_date": "2026-11-20", "relationship": "independent_reporting"},
+        {"title": "Gerhard Richter 2024", "publisher": "David Zwirner", "url": "https://www.davidzwirner.com/exhibitions/2024/gerhard-richter", "published_date": "2024-01-01", "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Gerhard Richter 2025", "publisher": "David Zwirner", "url": "https://www.davidzwirner.com/exhibitions/2025/gerhard-richter", "published_date": "2025-01-01", "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Gerhard Richter: Strip Tower", "publisher": "David Zwirner", "url": "https://www.davidzwirner.com/news/2026/gerhard-richter-strip-tower", "published_date": "2026-01-01", "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Gerhard Richter survey", "publisher": "David Zwirner", "url": "https://www.davidzwirner.com/artists/gerhard-richter/survey", "published_date": null, "event_date": null, "relationship": "independent_reporting"}
+      ],
+      "image_credit": "Selldorf Architects · Preview-linked",
+      "english": {"title": "WHEN A PAINTING ASKS A CITY TO STAND FOR IT", "deck": "Richter’s Doha Pavilion translates image, pattern and perception into a permanent public body.", "abstract": "The pavilion is planned for MIA Park and is designed by Richter with Selldorf Architects, opening on 20 November 2026. The claim that permanence alone cannot guarantee publicness is editorial interpretation."},
+      "media": {"asset": "assets/doha-pavilion-stage.svg", "alt": "An original indigo hexagonal silhouette stage with a vermilion mirror-like center", "caption": "Selldorf Architects 官方项目消息；本地剪影图为原创非纪实占位，打开来源查看亭子结构、作品构成与揭幕日期。", "credit": "Selldorf Architects · Preview-linked official image", "kind": "source_image", "origin_url": "https://www.selldorf.com/news/design-unveiled-for-doha-pavilion-gerhard-richter", "external_image_url": "https://www.selldorf.com/wp-content/uploads/2026/09/5-interior-rendering-of-doha-pavilion-gerhard-richter-copy-selldorf-architects.jpg", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "reviving-craft-2026",
+      "level": "signal",
+      "title": "Reviving Craft：工艺的下一步，不是被保存，而是继续变形",
+      "sources": [
+        {"title": "Reviving Craft: Reflection of the Mind", "publisher": "Somerset House", "url": "https://www.somersethouse.org.uk/whats-on/reviving-craft-reflection-of-the-mind", "published_date": null, "event_date": "2026-09-16/2026-09-27", "relationship": "first_party_official"},
+        {"title": "The Future of Tradition", "publisher": "London Design Festival", "url": "https://londondesignfestival.com/stories/the-future-of-tradition/", "published_date": null, "event_date": "2026-09-12/2026-09-20", "relationship": "first_party_official"},
+        {"title": "London Design Festival 2026 programme", "publisher": "London Design Festival", "url": "https://londondesignfestival.com/programme?activity_discipline%5B%5D=2&activity_discipline%5B%5D=8&categories%5B%5D=global_design_forum&categories%5B%5D=ldf_projects&design_district%5B%5D=1&design_district%5B%5D=14&design_district%5B%5D=16&design_district%5B%5D=2&design_district%5B%5D=7&is_filter=true&letter=A&page=1&tab=images", "published_date": null, "event_date": "2026-09-12/2026-09-20", "relationship": "first_party_official"},
+        {"title": "A first look at London Design Festival 2026", "publisher": "Informare", "url": "https://www.informare.co.uk/2026/07/06/a-first-look-at-london-design-festival-2026/", "published_date": "2026-07-06", "event_date": "2026-09-12/2026-09-20", "relationship": "independent_reporting"},
+        {"title": "London Design Festival 2026 preview", "publisher": "Livingetc", "url": "https://www.livingetc.com/features/london-design-festival-2026-preview", "published_date": null, "event_date": "2026-09-12/2026-09-20", "relationship": "independent_reporting"},
+        {"title": "Reviving Craft: Reflection of the Mind", "publisher": "ArtPlugged", "url": "https://artplugged.co.uk/reviving-craft-reflection-of-the-mind-somerset-house/", "published_date": null, "event_date": "2026-09-16/2026-09-27", "relationship": "independent_reporting"},
+        {"title": "Reviving Craft in Milan", "publisher": "Italy China Foundation", "url": "https://www.italychina.org/en/reviving-craft-on-show-in-milan-from-3-to-12-october/", "published_date": null, "event_date": "2026-10-03/2026-10-12", "relationship": "independent_reporting"},
+        {"title": "Reviving Craft: la Chine créative", "publisher": "Airs de Paris", "url": "https://www.airsdeparis.fr/design/reviving-craft-la-chine-creative/", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Reviving Craft exhibition project", "publisher": "BeFlow", "url": "https://www.beflowparis.com/rcpr", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Estelle Yanfeng Li projects", "publisher": "Estelle Yanfeng Li", "url": "https://estelle-li.com/projects/", "published_date": null, "event_date": null, "relationship": "independent_reporting"},
+        {"title": "Intangible Cultural Heritage and craft context", "publisher": "UNESCO", "url": "https://ich.unesco.org/doc/src/70142-EN.pdf", "published_date": null, "event_date": null, "relationship": "independent_reporting"}
+      ],
+      "image_credit": "Somerset House · Preview-linked",
+      "english": {"title": "CRAFT SHOULD KEEP ITS RIGHT TO CHANGE", "deck": "Reviving Craft brings Chinese materials, techniques and new narratives into a London public programme.", "abstract": "Reviving Craft: Reflection of the Mind runs from 16 to 27 September 2026 at Somerset House with around 70 artists and digital and immersive work. The reading of craft as a right to transform is editorial interpretation."},
+      "media": {"asset": "assets/reviving-craft-stage.svg", "alt": "Zhi Min, Moon, shown as a ceramic and metal work in Reviving Craft", "caption": "London Design Festival 官方专题图；本地剪影图为原创非纪实占位，打开来源查看工艺材料、艺术家与展览语境。", "credit": "London Design Festival · Preview-linked official image", "kind": "source_image", "origin_url": "https://londondesignfestival.com/stories/the-future-of-tradition/", "external_image_url": "https://a.storyblok.com/f/158031/1920x1280/d66c0bce51/xue-xiaodong.jpg/m/1500x0/filters%3Aformat%28webp%29", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    }
+  ],
+  "rights_summary": {"required_assets": 4, "unknown_required_assets": 4, "status": "blocked"},
+  "artifact_digests": {"issue_payload_sha256": null},
+  "evidence_refs": {"technical": [], "editorial_visual": [], "gate": []},
+  "qa": {"html_parse": "unavailable", "assets": "unavailable", "internal_links": "unavailable", "no_js_reading": "unavailable", "desktop_render": "unavailable", "mobile_render": "unavailable", "reduced_motion": "unavailable"},
+  "limitations": [
+    "Non-production Preview candidate only; this manifest cannot authorize production deployment.",
+    "Canonical private GUAiZzz/harry-tone main was verified at pinned commit 13cd6b7046bd81be396810d2923f3a5dc818e93f; no private material enters this repository.",
+    "Four selected stories use externally hosted first-party official images. Reuse rights remain unknown, so candidate status stays BLOCKED and Preview displays source links with local non-documentary fallbacks.",
+    "All five regional lanes, the full 99-subject registry quick scan, the culture_retail_creative focus cohort, the four daily standing beats and the prior-two-issue lookback were checked; the public radar contains 10 distinct items with at least two per category.",
+    "Named editorial, visual and rights review remains unresolved; the owner’s current task authorizes the existing non-production Preview only after technical and privacy gates pass."
+  ]
+}

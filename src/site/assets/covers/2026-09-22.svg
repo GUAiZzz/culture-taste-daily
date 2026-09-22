@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">When skill becomes a public interface</title>
+  <desc id="desc">An original calibration-bench cover illustration with two transparent evidence planes.</desc>
+  <rect width="1600" height="1000" fill="#F0EDE6"/>
+  <g transform="translate(910 160) rotate(6)">
+    <rect width="520" height="640" fill="#174A6E"/>
+    <path d="M60 100H460M60 200H460M60 300H460M60 400H460M60 500H460M120 40V580M260 40V580M400 40V580" fill="none" stroke="#2A5BFF" stroke-width="3" opacity=".9"/>
+    <circle cx="260" cy="300" r="92" fill="none" stroke="#F0EDE6" stroke-width="8"/>
+    <circle cx="260" cy="300" r="18" fill="#B74725"/>
+    <text x="54" y="600" fill="#F0EDE6" font-family="monospace" font-size="24" letter-spacing="5">EVIDENCE / 02</text>
+  </g>
+  <g transform="translate(610 260) rotate(-6)">
+    <rect width="520" height="640" fill="#17212B" fill-opacity=".96"/>
+    <path d="M60 100H460M60 200H460M60 300H460M60 400H460M60 500H460M120 40V580M260 40V580M400 40V580" fill="none" stroke="#9DBA86" stroke-width="3" opacity=".8"/>
+    <path d="M0 160C180 60 320 240 520 100M0 450C200 330 350 570 520 420" fill="none" stroke="#2A5BFF" stroke-width="5"/>
+    <circle cx="260" cy="300" r="18" fill="#B74725"/>
+    <text x="54" y="600" fill="#F0EDE6" font-family="monospace" font-size="24" letter-spacing="5">PUBLIC / 01</text>
+  </g>
+  <g stroke="#17212B" stroke-width="8">
+    <path d="M150 180h110M205 125v110M1480 790h-110M1425 735v110"/>
+  </g>
+  <rect x="118" y="720" width="430" height="86" fill="#B74725"/>
+  <text x="148" y="776" fill="#F0EDE6" font-family="Arial, sans-serif" font-weight="700" font-size="32" letter-spacing="3">ENTER / TEST / RETURN</text>
+</svg>

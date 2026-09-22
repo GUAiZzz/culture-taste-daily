@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Entry map with offset door frames</title>
+  <desc id="desc">A warm paper field with four offset dark green door frames, a vermilion turn and a lime line indicating the next step.</desc>
+  <rect width="1200" height="800" fill="#f3e9dc"/>
+  <path d="M0 102H1200M0 626H1200" stroke="#123c3a" stroke-width="3" opacity=".18"/>
+  <path d="M89 70h310v490H89zM442 164h376v540H442zM796 34h315v476H796z" fill="none" stroke="#123c3a" stroke-width="20"/>
+  <path d="M181 561h290v92" fill="none" stroke="#e45b3c" stroke-width="19"/>
+  <path d="M712 706h301" fill="none" stroke="#b7cf73" stroke-width="12"/>
+  <path d="M918 706l-28-19v38z" fill="#b7cf73"/>
+  <path d="M414 91v90M832 520v96M1132 222v130" stroke="#e45b3c" stroke-width="9"/>
+  <g fill="#123c3a" font-family="monospace" font-size="24" font-weight="700">
+    <text x="95" y="48">01 / MAKE ROOM</text>
+    <text x="451" y="144">02 / STAY</text>
+    <text x="804" y="28">03 / ENTER</text>
+  </g>
+  <g fill="#e45b3c" font-family="Arial, sans-serif" font-size="72" font-weight="900">
+    <text x="967" y="672">09.11</text>
+  </g>
+</svg>

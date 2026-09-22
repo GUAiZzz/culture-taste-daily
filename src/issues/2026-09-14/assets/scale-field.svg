@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Scale field</title>
+  <desc id="desc">An original non-documentary diagram of nested rectangles, measurement marks and a split boundary.</desc>
+  <rect width="1200" height="760" fill="#e7e7e2"/>
+  <g fill="none" stroke="#1246a0" stroke-width="16">
+    <rect x="96" y="122" width="920" height="170" transform="rotate(-5 96 122)"/>
+    <rect x="228" y="326" width="716" height="224" transform="rotate(4 228 326)"/>
+    <rect x="422" y="108" width="330" height="542" transform="rotate(11 422 108)"/>
+  </g>
+  <path d="M86 607H1080" stroke="#202326" stroke-width="4" stroke-dasharray="18 20"/>
+  <path d="M270 584v46m150-46v46m150-46v46m150-46v46m150-46v46" stroke="#b84735" stroke-width="8"/>
+  <path d="M810 96v530" stroke="#d9ff55" stroke-width="22"/>
+  <circle cx="810" cy="96" r="18" fill="#202326"/>
+  <circle cx="810" cy="626" r="18" fill="#202326"/>
+  <text x="88" y="690" fill="#202326" font-family="monospace" font-size="24" letter-spacing="3">LOCAL FALLBACK / NOT DOCUMENTARY</text>
+</svg>

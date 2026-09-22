@@ -1,0 +1,126 @@
+body[data-issue="2026-08-27"] {
+  --paper: #f4f0e4;
+  --ink: #111515;
+  --teal: #123b40;
+  --green: #3e9c91;
+  --orange: #ef5b35;
+  --yellow: #f2d14c;
+  background: radial-gradient(circle at 20% 8%, rgba(239,91,53,.12), transparent 18rem), var(--paper);
+  color: var(--ink);
+  font-family: "Helvetica Neue", "PingFang SC", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+}
+body[data-issue="2026-08-27"] a { color: inherit; text-decoration-thickness: .09em; text-underline-offset: .2em; }
+body[data-issue="2026-08-27"] .site-header,
+body[data-issue="2026-08-27"] .site-footer,
+body[data-issue="2026-08-27"] .issue-nav-panel,
+body[data-issue="2026-08-27"] main { width: min(100% - 2rem, 88rem); margin-inline: auto; }
+body[data-issue="2026-08-27"] .site-header,
+body[data-issue="2026-08-27"] .site-footer { padding-block: 1rem; font: 750 .72rem/1.4 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+body[data-issue="2026-08-27"] .non-production-label { margin: 0; padding: .6rem 1rem; background: var(--orange); color: #fff; font: 800 .7rem/1.4 ui-monospace, monospace; letter-spacing: .08em; text-align: center; }
+body[data-issue="2026-08-27"] .issue-nav-panel { position: sticky; z-index: 10; top: 0; overflow: hidden; border-block: 2px solid var(--ink); background: rgba(244,240,228,.95); backdrop-filter: blur(8px); }
+body[data-issue="2026-08-27"] .issue-nav-panel > summary { display: none; }
+body[data-issue="2026-08-27"] .issue-nav ul { gap: 0; padding: 0; }
+body[data-issue="2026-08-27"] .issue-nav li { border-right: 1px solid var(--ink); }
+body[data-issue="2026-08-27"] .issue-nav a { min-height: 44px; max-width: 14rem; gap: .55rem; padding: .55rem .72rem; overflow: hidden; font-size: .67rem; font-weight: 750; text-decoration: none; text-overflow: ellipsis; }
+body[data-issue="2026-08-27"] .issue-nav a span { color: var(--orange); font: 800 .62rem/1 ui-monospace, monospace; }
+body[data-issue="2026-08-27"] main { padding-bottom: clamp(4rem, 10vw, 10rem); }
+body[data-issue="2026-08-27"] article { width: 100%; }
+body[data-issue="2026-08-27"] .issue-cover { display: grid; min-height: min(54rem, 90svh); grid-template-columns: minmax(0,.95fr) minmax(20rem,1.05fr); gap: clamp(2rem,6vw,7rem); align-items: end; padding: clamp(4rem,10vw,9rem) 0 clamp(3rem,7vw,6rem); }
+body[data-issue="2026-08-27"] h1,
+body[data-issue="2026-08-27"] h2 { font-family: "Arial Narrow", "Roboto Condensed", "PingFang SC", sans-serif; font-weight: 900; text-wrap: balance; }
+body[data-issue="2026-08-27"] h1 { max-width: 8ch; margin: 0 0 1.5rem; color: var(--teal); font-size: clamp(4.8rem,11vw,10.5rem); letter-spacing: -.1em; line-height: .8; }
+body[data-issue="2026-08-27"] .issue-cover-copy > p:first-of-type { margin: 0 0 2rem; color: var(--orange); font: 800 clamp(1.2rem,2.5vw,2.4rem)/1.05 ui-monospace, monospace; letter-spacing: -.045em; }
+body[data-issue="2026-08-27"] .issue-cover-copy > p { max-width: 48rem; }
+body[data-issue="2026-08-27"] .issue-cover-copy > p:nth-last-of-type(-n + 2) { max-width: 42rem; color: #526061; font-size: .86rem; }
+body[data-issue="2026-08-27"] .enter-issue { display: inline-flex; min-height: 44px; align-items: center; gap: 4rem; margin-top: 2rem; padding: .6rem .8rem; border: 2px solid var(--ink); background: var(--yellow); font: 800 .7rem/1 ui-monospace, monospace; text-decoration: none; text-transform: uppercase; }
+body[data-issue="2026-08-27"] .enter-issue:hover,
+body[data-issue="2026-08-27"] .enter-issue:focus-visible { background: var(--teal); color: var(--yellow); }
+body[data-issue="2026-08-27"] .issue-cover-visual { position: relative; min-height: 36rem; overflow: hidden; border: 2px solid var(--ink); background: var(--teal); }
+body[data-issue="2026-08-27"] .issue-cover-visual::before { content: "FIELD MAP / 08.27 / 08 COORDINATES"; position: absolute; z-index: 2; top: 1rem; left: 1rem; padding: .35rem .45rem; background: var(--yellow); color: var(--ink); font: 800 .64rem/1 ui-monospace, monospace; letter-spacing: .05em; }
+body[data-issue="2026-08-27"] .issue-cover-visual::after { content: "PLACE"; position: absolute; right: -2rem; bottom: 7rem; color: rgba(244,240,228,.1); font: 900 12rem/.7 Arial,sans-serif; letter-spacing: -.1em; transform: rotate(-90deg); }
+body[data-issue="2026-08-27"] .issue-cover-visual span { position: absolute; z-index: 3; padding: .28rem .4rem; border: 1px solid var(--paper); background: var(--orange); color: var(--ink); font: 800 .62rem/1 ui-monospace, monospace; }
+body[data-issue="2026-08-27"] .issue-cover-visual [data-node="cover"] { top: 20%; right: 12%; }
+body[data-issue="2026-08-27"] .issue-cover-visual [data-node="major"] { top: 42%; left: 18%; }
+body[data-issue="2026-08-27"] .issue-cover-visual [data-node="signal"] { right: 20%; bottom: 30%; }
+body[data-issue="2026-08-27"] .issue-cover-visual [data-node="watch"] { bottom: 10%; left: 12%; }
+body[data-issue="2026-08-27"] .issue-cover-visual i { position: absolute; inset: 18% 12% 12%; border: 2px solid var(--green); border-radius: 50%; transform: rotate(-19deg) scaleY(.72); }
+body[data-issue="2026-08-27"] .issue-cover-visual i::before,
+body[data-issue="2026-08-27"] .issue-cover-visual i::after { content: ""; position: absolute; background: var(--green); }
+body[data-issue="2026-08-27"] .issue-cover-visual i::before { width: 100%; height: 2px; top: 50%; left: 0; }
+body[data-issue="2026-08-27"] .issue-cover-visual i::after { width: 2px; height: 100%; top: 0; left: 50%; }
+body[data-issue="2026-08-27"] .issue-story { position: relative; width: min(100%,68rem); margin: 0 auto; padding: clamp(4.5rem,10vw,10rem) clamp(1rem,4vw,4rem); border-top: 1px solid var(--ink); }
+body[data-issue="2026-08-27"] .issue-story[data-level="cover"] { width: min(100%,82rem); padding-left: clamp(1rem,10vw,9rem); }
+body[data-issue="2026-08-27"] .issue-story[data-level="major"] { width: min(92%,58rem); margin-right: 0; padding-block: clamp(8rem,16vw,15rem); background: var(--teal); color: var(--paper); }
+body[data-issue="2026-08-27"] .issue-story[data-level="signal"]:nth-of-type(even) { width: min(90%,62rem); margin-left: 0; background: rgba(62,156,145,.09); }
+body[data-issue="2026-08-27"] .issue-story[data-level="watch"] { width: min(88%,53rem); margin-left: 7%; border: 2px solid var(--green); }
+body[data-issue="2026-08-27"] .story-marker { position: absolute; top: 1rem; left: 0; margin: 0; color: var(--orange); font: 900 clamp(2rem,5vw,5rem)/1 ui-monospace, monospace; }
+body[data-issue="2026-08-27"] .issue-story h2 { max-width: 15ch; margin: 0 0 2.2rem; color: var(--teal); font-size: clamp(2.6rem,6.5vw,6.8rem); letter-spacing: -.075em; line-height: .98; }
+body[data-issue="2026-08-27"] [data-level="major"] h2 { color: var(--yellow); }
+body[data-issue="2026-08-27"] .issue-story p { max-width: 45rem; }
+body[data-issue="2026-08-27"] .issue-story p:last-child { margin-top: 2.5rem; color: #526061; font-size: .82rem; }
+body[data-issue="2026-08-27"] [data-level="major"] p:last-child,
+body[data-issue="2026-08-27"] [data-level="major"] a { color: var(--yellow); }
+body[data-issue="2026-08-27"] .story-figure { margin: 0 0 2.4rem; padding: 0; border: 1px solid currentColor; background: var(--teal); }
+body[data-issue="2026-08-27"] .story-figure .source-image-link { display: block; min-height: 14rem; overflow: hidden; background: var(--teal); }
+body[data-issue="2026-08-27"] .issue-story:nth-of-type(1) .source-image-link { background: var(--paper) url("./assets/stussy-clock.svg") center/cover no-repeat; }
+body[data-issue="2026-08-27"] .issue-story:nth-of-type(2) .source-image-link { background: #c9d7d0 url("./assets/loewe-altitude.svg") center/cover no-repeat; }
+body[data-issue="2026-08-27"] .issue-story:nth-of-type(3) .source-image-link { background: var(--teal) url("./assets/prince-vault.svg") center/cover no-repeat; }
+body[data-issue="2026-08-27"] .issue-story:nth-of-type(4) .source-image-link { background: var(--paper) url("./assets/la-priest-synth.svg") center/cover no-repeat; }
+body[data-issue="2026-08-27"] .issue-story:nth-of-type(5) .source-image-link { background: #d6d8cb url("./assets/brain-dead-bottle.svg") center/cover no-repeat; }
+body[data-issue="2026-08-27"] .issue-story:nth-of-type(6) .source-image-link { background: #dbe5e7 url("./assets/kith-cards.svg") center/cover no-repeat; }
+body[data-issue="2026-08-27"] .issue-story:nth-of-type(7) .source-image-link { background: #efe7d1 url("./assets/hong-kong-attire.svg") center/cover no-repeat; }
+body[data-issue="2026-08-27"] .issue-story:nth-of-type(8) .source-image-link { background: #eef0dc url("./assets/familymart-uniform.svg") center/cover no-repeat; }
+body[data-issue="2026-08-27"] .story-figure img { display: block; width: 100%; min-height: 14rem; max-height: 48rem; object-fit: cover; }
+body[data-issue="2026-08-27"] .issue-story:nth-of-type(1) .story-figure img { aspect-ratio: 16/9; }
+body[data-issue="2026-08-27"] .issue-story:nth-of-type(2) .story-figure img { aspect-ratio: 3/4; object-position: 50% 35%; }
+body[data-issue="2026-08-27"] .issue-story:nth-of-type(3) .story-figure img { aspect-ratio: 1/1; }
+body[data-issue="2026-08-27"] .issue-story:nth-of-type(4) .story-figure img { aspect-ratio: 4/3; }
+body[data-issue="2026-08-27"] .issue-story:nth-of-type(5) .story-figure img { aspect-ratio: 3/2; }
+body[data-issue="2026-08-27"] .issue-story:nth-of-type(6) .story-figure img { aspect-ratio: 5/4; }
+body[data-issue="2026-08-27"] .issue-story:nth-of-type(7) .story-figure img { aspect-ratio: 16/10; }
+body[data-issue="2026-08-27"] .issue-story:nth-of-type(8) .story-figure img { aspect-ratio: 4/5; }
+body[data-issue="2026-08-27"] .source-image-fallback { margin: 0; padding: .55rem .8rem 0; color: var(--yellow); font: 700 .68rem/1.35 ui-monospace, monospace; }
+body[data-issue="2026-08-27"] .story-figure figcaption { display: flex; justify-content: space-between; gap: 1rem; padding: .75rem .85rem; background: var(--ink); color: var(--paper); font: 700 .67rem/1.4 ui-monospace, monospace; }
+body[data-issue="2026-08-27"] .story-figure figcaption span { color: var(--yellow); text-align: right; }
+body[data-issue="2026-08-27"] .story-english { display: grid; gap: .35rem; max-width: 45rem; margin: -1rem 0 2rem; font-family: Georgia,"Songti SC",serif; }
+body[data-issue="2026-08-27"] .story-english strong { color: var(--orange); font: 800 .8rem/1.2 ui-monospace,monospace; letter-spacing: .05em; text-transform: uppercase; }
+body[data-issue="2026-08-27"] .story-english span { font-size: 1.06rem; font-weight: 700; }
+body[data-issue="2026-08-27"] .story-english small { font-size: .88rem; line-height: 1.5; }
+body[data-issue="2026-08-27"] .sources { max-width: 68rem; margin: clamp(6rem,12vw,12rem) auto 0; padding: clamp(2rem,5vw,4rem); border: 2px solid var(--ink); background: rgba(62,156,145,.06); }
+body[data-issue="2026-08-27"] .section-label,
+body[data-issue="2026-08-27"] .source-meta { font: 700 .72rem/1.45 ui-monospace,monospace; }
+body[data-issue="2026-08-27"] .sources h2 { margin: 0; color: var(--teal); font-size: clamp(2.5rem,6vw,6rem); letter-spacing: -.07em; }
+body[data-issue="2026-08-27"] .sources li { margin-block: 1rem; }
+body[data-issue="2026-08-27"] .issue-story h2,
+body[data-issue="2026-08-27"] .sources h2 { scroll-margin-top: 6rem; }
+@media (max-width:56rem) {
+  body[data-issue="2026-08-27"] .issue-cover { grid-template-columns: 1fr; }
+  body[data-issue="2026-08-27"] .issue-cover-visual { min-height: 23rem; }
+}
+@media (max-width:42rem) {
+  body[data-issue="2026-08-27"] { background: radial-gradient(circle at 80% 8%, rgba(239,91,53,.15), transparent 12rem), var(--paper); font-size: 17px; }
+  body[data-issue="2026-08-27"] .site-header { align-items: flex-start; flex-direction: column; }
+  body[data-issue="2026-08-27"] h1 { max-width: 9ch; font-size: clamp(4rem,20vw,6.6rem); line-height: .83; }
+  body[data-issue="2026-08-27"] .issue-cover { min-height: auto; padding-top: 4rem; }
+  body[data-issue="2026-08-27"] .issue-cover-visual { min-height: 18rem; }
+  body[data-issue="2026-08-27"] .issue-story,
+  body[data-issue="2026-08-27"] .issue-story[data-level="cover"],
+  body[data-issue="2026-08-27"] .issue-story[data-level="major"],
+  body[data-issue="2026-08-27"] .issue-story[data-level="signal"]:nth-of-type(even),
+  body[data-issue="2026-08-27"] .issue-story[data-level="watch"] { width: 100%; margin-left: 0; padding-inline: 1rem; }
+  body[data-issue="2026-08-27"] .issue-story h2 { max-width: 13ch; font-size: clamp(2.2rem,11vw,3.8rem); }
+  body[data-issue="2026-08-27"] .issue-nav-panel > summary { display: flex; min-height: 44px; align-items: center; justify-content: space-between; padding: .45rem .75rem; cursor: pointer; font: 800 .7rem/1 ui-monospace,monospace; letter-spacing: .06em; text-transform: uppercase; }
+  body[data-issue="2026-08-27"] .issue-nav-panel:not([open]) .issue-nav { display: none; }
+  body[data-issue="2026-08-27"] .issue-nav ul { display: grid; grid-template-columns: 1fr 1fr; }
+  body[data-issue="2026-08-27"] .issue-nav li { border-bottom: 1px solid var(--ink); }
+  body[data-issue="2026-08-27"] .issue-nav a { max-width: none; white-space: normal; }
+  body[data-issue="2026-08-27"] .story-figure figcaption { display: block; }
+  body[data-issue="2026-08-27"] .story-figure figcaption span { display: block; margin-top: .35rem; text-align: left; }
+}
+@media (prefers-reduced-motion:reduce) {
+  body[data-issue="2026-08-27"] *,
+  body[data-issue="2026-08-27"] *::before,
+  body[data-issue="2026-08-27"] *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}

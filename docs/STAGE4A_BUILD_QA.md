@@ -70,6 +70,8 @@ The public manifest and build report describe what the generator produced. They 
 - mobile `390×844`;
 - mobile `390×844` with JavaScript disabled;
 - desktop `1440×900` with reduced motion.
+- Preview homepage at desktop and mobile widths;
+- Preview archive at desktop width, including filter interaction.
 
 Technical evidence explicitly cannot judge factual/editorial quality, HarryTone, cultural appropriateness, visual authorship, viewing rhythm, reference integrity, or rights rationale.
 

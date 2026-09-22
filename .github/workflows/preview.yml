@@ -1,0 +1,114 @@
+name: Preview build
+
+on:
+  pull_request:
+    branches: [main, preview-build-v1]
+  workflow_dispatch:
+    inputs:
+      expected_sha:
+        description: Exact verified Preview base commit
+        required: true
+        type: string
+
+concurrency:
+  group: ${{ github.event_name == 'workflow_dispatch' && 'culture-taste-preview-deploy' || format('culture-taste-pr-{0}', github.event.pull_request.number) }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Build and verify Preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Verify dispatch identity
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          EXPECTED_SHA: ${{ inputs.expected_sha }}
+        run: |
+          test "$GITHUB_REPOSITORY" = 'GUAiZzz/culture-taste-daily'
+          test "$GITHUB_REF" = 'refs/heads/preview-build-v1'
+          test "$EXPECTED_SHA" = "$GITHUB_SHA"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install pinned dependencies
+        run: npm ci
+
+      - name: Install browser used by technical QA
+        run: npx playwright install --with-deps chromium
+
+      - name: Verify public change scope
+        if: github.event_name == 'pull_request'
+        env:
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          PR_BRANCH: ${{ github.head_ref }}
+        run: npm run scope:check -- --base "$PR_BASE" --branch "$PR_BRANCH"
+
+      - name: Verify operation policy consistency
+        run: npm run ops:check
+
+      - name: Run complete local-equivalent verification
+        env:
+          PLAYWRIGHT_CHANNEL: chromium
+        run: npm run verify
+
+      - name: Build the GitHub Pages Preview artifact
+        run: npm run build -- --base-url https://guaizzz.github.io/culture-taste-daily/
+
+      - name: Recheck the exact Preview artifact
+        env:
+          PLAYWRIGHT_CHANNEL: chromium
+        run: npm run qa
+
+      - name: Retain non-production review evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: preview-evidence-${{ github.run_id }}
+          path: .stage4/evidence/
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Stamp exact Preview artifact identity
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          EXPECTED_SHA: ${{ inputs.expected_sha }}
+        run: npm run preview:stamp -- --sha "$EXPECTED_SHA"
+
+      - name: Package Pages artifact for an explicit manual Preview run
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist/
+
+  deploy-preview:
+    name: Deploy non-production Preview
+    if: github.event_name == 'workflow_dispatch'
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v6
+
+      - name: Deploy Preview artifact
+        id: deployment
+        uses: actions/deploy-pages@v5

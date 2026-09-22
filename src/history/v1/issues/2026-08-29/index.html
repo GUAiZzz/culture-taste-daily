@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" type="image/png" href="../../assets/culture-taste-earth.png">
+  <title>新东西不是多一点，而是换一种进入方式 — Culture &amp; Taste Daily 2026-08-29</title>
+  <script>(()=>{const themes=["field","coral","analog"],page="issue";let selected="field";try{const query=new URLSearchParams(location.search).get("theme"),stored=sessionStorage.getItem("ctd-theme"),manual=sessionStorage.getItem("ctd-theme-manual")==="1",preferred=localStorage.getItem("ctd-theme-preference");if(themes.includes(query))selected=query;else if(themes.includes(preferred))selected=preferred;else if(page==="home"&&!manual)selected=themes[Math.floor(Math.random()*themes.length)];else if(themes.includes(stored))selected=stored;else selected=themes[Math.floor(Math.random()*themes.length)];sessionStorage.setItem("ctd-theme",selected);}catch{}document.documentElement.dataset.visualTheme=selected;})();</script>
+  <style>/* Functional core only: semantic access and responsive safety, not issue art direction. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  text-size-adjust: 100%;
+  --mobile-gutter: 20px;
+  --compact-gutter: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  background: Canvas;
+  color: CanvasText;
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-header a,
+.site-footer a,
+.publication-header a,
+.story-reader-header a,
+.issue-nav a,
+button {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: color-mix(in srgb, currentColor 18%, transparent);
+}
+
+button:active,
+a:active {
+  opacity: 0.78;
+}
+
+.issue-brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.issue-brand {
+  gap: 0.65rem;
+  text-decoration: none;
+}
+
+.brand-type {
+  display: inline-flex;
+  gap: 0.15em;
+  align-items: baseline;
+  color: inherit;
+  font-family: Arial, "Helvetica Neue", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.075em;
+  line-height: 0.9;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.brand-type em {
+  font-family: Georgia, "Times New Roman", "Songti SC", serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+}
+
+.issue-nav {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+.issue-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.issue-nav a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.issue-nav-panel summary,
+.enter-issue,
+.publication-footer a,
+.history-actions a,
+.facsimile-pages figcaption a {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+}
+
+.source-meta {
+  display: block;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* The publication index/archive shell is stable and never styles issue articles. */
+body[data-shell="publication"] {
+  padding-right: max(1rem, env(safe-area-inset-right));
+  padding-left: max(1rem, env(safe-area-inset-left));
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+html[data-motion-paused="true"] *,
+html[data-motion-paused="true"] *::before,
+html[data-motion-paused="true"] *::after {
+  animation-play-state: paused !important;
+}
+
+@media (max-width: 50rem) {
+  body[data-shell="publication"] {
+    padding-right: max(var(--mobile-gutter), env(safe-area-inset-right));
+    padding-left: max(var(--mobile-gutter), env(safe-area-inset-left));
+  }
+
+  body[data-issue] .site-header,
+  body[data-issue] .site-footer,
+  body[data-issue] .issue-nav-panel {
+    padding-right: max(var(--mobile-gutter), env(safe-area-inset-right));
+    padding-left: max(var(--mobile-gutter), env(safe-area-inset-left));
+  }
+
+  body[data-issue] .issue-cover p,
+  body[data-issue] .issue-story > p {
+    font-size: 0.9375rem !important;
+    line-height: 1.55 !important;
+  }
+}
+
+@media (max-width: 29.9375rem) {
+  body[data-shell="publication"] {
+    padding-right: max(var(--compact-gutter), env(safe-area-inset-right));
+    padding-left: max(var(--compact-gutter), env(safe-area-inset-left));
+  }
+
+  body[data-issue] .site-header,
+  body[data-issue] .site-footer,
+  body[data-issue] .issue-nav-panel {
+    padding-right: max(var(--compact-gutter), env(safe-area-inset-right));
+    padding-left: max(var(--compact-gutter), env(safe-area-inset-left));
+  }
+}
+
+body[data-shell="publication"] .site-header,
+body[data-shell="publication"] .site-footer,
+body[data-shell="publication"] main {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+body[data-shell="publication"] .site-header,
+body[data-shell="publication"] .site-footer {
+  padding-block: 1rem;
+}
+
+body[data-shell="publication"] main {
+  padding-block: 2rem;
+}
+
+.reading-progress {
+  position: fixed;
+  z-index: 95;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  pointer-events: none;
+}
+
+.reading-progress span {
+  display: block;
+  width: calc(var(--reading-progress, 0) * 100%);
+  height: 100%;
+  background: currentColor;
+  transform-origin: left center;
+}
+
+.theme-status {
+  white-space: nowrap;
+}
+
+.has-js body[data-issue] .issue-story {
+  opacity: var(--story-opacity, 1);
+  translate: 0 var(--story-shift, 0);
+  transition: opacity 180ms linear, translate 240ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.has-js body[data-issue] .issue-nav a[aria-current="location"] {
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-thickness: 0.18em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .has-js body[data-issue] .issue-story {
+    opacity: 1;
+    translate: none;
+  }
+}
+
+/* Reading invariants apply to generated contexts, never historical originals. */
+body[data-issue] { font-synthesis: none; }
+body[data-issue]:not([data-story-reader]) h1,
+body[data-issue]:not([data-story-reader]) h2 { line-height: 1.12 !important; overflow-wrap: anywhere; }
+.issue-nav ul { display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.issue-nav li { flex: 0 0 auto; }
+.issue-nav a { display: inline-flex; align-items: center; gap: .6rem; }
+.issue-nav a span { font-size: .6875rem; text-transform: uppercase; }
+html:not(.has-js) [data-week-toggle] { cursor: default; color: inherit; opacity: 1; }
+html:not(.has-js) .week-toggle-mark { display: none; }
+.filter-result:empty { display: none; }
+
+/* Shared reader themes. These variables change presentation only. */
+html[data-visual-theme="field"] {
+  --paper: #eef2df;
+  --ink: #10120d;
+  --acid: #d9ff43;
+  --blue: #2448ff;
+  --orange: #326f4a;
+  --pink: #a8dfbd;
+  --theme-hero: #d9ff43;
+  --theme-index: #d8d1ad;
+  --theme-panel: #eef2df;
+  --theme-accent: #326f4a;
+  --theme-signal: #2448ff;
+}
+
+html[data-visual-theme="coral"] {
+  --paper: #f4eadf;
+  --ink: #160d0a;
+  --acid: #ff6840;
+  --blue: #2448ff;
+  --orange: #ff512b;
+  --pink: #f3a8bf;
+  --theme-hero: #ff5a31;
+  --theme-index: #e8c8b1;
+  --theme-panel: #f4eadf;
+  --theme-accent: #c83d25;
+  --theme-signal: #2448ff;
+}
+
+html[data-visual-theme="analog"] {
+  --paper: #d9cdb4;
+  --ink: #171713;
+  --acid: #c8bd91;
+  --blue: #537a7c;
+  --orange: #b74731;
+  --pink: #b8998f;
+  --theme-hero: #c8bd91;
+  --theme-index: #cfc09e;
+  --theme-panel: #e1d7c2;
+  --theme-accent: #a8402e;
+  --theme-signal: #527d80;
+}
+
+body[data-shell="publication"],
+body[data-story-reader] {
+  background: var(--paper);
+  color: var(--ink);
+  transition: background-color 320ms ease, color 320ms ease;
+}
+
+/* Atmosphere stays behind the shell; it never overlays source photographs or text. */
+html[data-visual-theme="field"] .hero-map {
+  background-image: radial-gradient(circle at 12% 18%, rgb(217 255 67 / 34%), transparent 64%);
+}
+html[data-visual-theme="coral"] .hero-map {
+  background-image: linear-gradient(135deg, transparent 52%, rgb(243 168 191 / 24%));
+}
+html[data-visual-theme="analog"] .hero-map {
+  background-image: repeating-linear-gradient(0deg, rgb(10 10 8 / 6%) 0 1px, transparent 1px 3px);
+}
+
+.theme-dots {
+  position: relative;
+  z-index: 110;
+  display: inline-flex;
+  gap: 0.65rem;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 0.35rem;
+  padding-bottom: 1rem;
+}
+
+.theme-dots button {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.theme-dots button[data-theme-choice="field"] { --dot-color: #65a469; }
+.theme-dots button[data-theme-choice="coral"] { --dot-color: #ff512b; }
+.theme-dots button[data-theme-choice="analog"] {
+  --dot-color: repeating-linear-gradient(0deg, #d5c7aa 0 2px, #2a2924 2px 3px);
+}
+
+.theme-dots button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--dot-color);
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 42%);
+  content: "";
+  transform: translate(-50%, -50%);
+  transition: box-shadow 140ms ease, transform 140ms ease;
+}
+
+.theme-dots button[aria-pressed="true"]::before {
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px currentColor;
+  transform: translate(-50%, -50%);
+}
+
+.theme-dots button::after {
+  position: absolute;
+  right: -0.5rem;
+  bottom: -2.25rem;
+  width: max-content;
+  max-width: 10rem;
+  padding: 0.38rem 0.52rem;
+  background: var(--ink);
+  color: var(--paper);
+  content: attr(data-theme-label);
+  font: 700 0.62rem/1 ui-monospace, monospace;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-0.25rem);
+  transition: opacity 140ms ease, transform 140ms ease;
+  white-space: nowrap;
+}
+
+.theme-dots button:hover::after,
+.theme-dots button:focus-visible::after {
+  opacity: 1;
+  transform: none;
+}
+
+.theme-dots button:active {
+  transform: scale(0.94);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-shell="publication"],
+  body[data-story-reader] {
+    transition: none;
+  }
+}
+
+@media (max-width: 50rem) {
+  .theme-dots button::after {
+    display: none;
+  }
+}
+
+/* Controls appear only when their event handlers are available. */
+html:not(.has-js) .theme-dots { display: none; }
+.theme-current { position: absolute; bottom: 0; left: 0; right: 0; text-align: center; font: 700 0.6875rem/1.2 ui-monospace, monospace; white-space: nowrap; }
+
+body[data-issue="2026-08-29"]{--bg:#251936;--ink:#eaf1f4;--amber:#f1a72b;--coral:#f35e49;--moss:#8aa46e;background:var(--bg);color:var(--ink);font:18px/1.75 "Helvetica Neue","PingFang SC",sans-serif}body[data-issue="2026-08-29"] a{color:inherit;text-underline-offset:.2em}body[data-issue="2026-08-29"] .site-header,body[data-issue="2026-08-29"] .site-footer,body[data-issue="2026-08-29"] .issue-nav-panel,body[data-issue="2026-08-29"] main{width:min(100% - 2rem,82rem);margin-inline:auto}body[data-issue="2026-08-29"] .non-production-label{padding:.6rem;text-align:center;background:var(--coral);color:#111;font:800 .7rem ui-monospace,monospace}body[data-issue="2026-08-29"] .issue-cover{display:grid;grid-template-columns:minmax(0,1fr) minmax(18rem,.75fr);gap:4vw;min-height:82svh;align-items:center;padding:6rem 0}body[data-issue="2026-08-29"] h1,body[data-issue="2026-08-29"] h2{font-family:"Arial Narrow","PingFang SC",sans-serif;font-weight:900;line-height:.95;text-wrap:balance}body[data-issue="2026-08-29"] h1{max-width:9ch;color:var(--amber);font-size:clamp(4rem,10vw,9rem);letter-spacing:-.08em}body[data-issue="2026-08-29"] .issue-cover-visual{position:relative;min-height:34rem;border:1px solid var(--ink);background:linear-gradient(90deg,var(--amber) 0 17%,transparent 17% 28%,var(--coral) 28% 49%,transparent 49% 61%,var(--moss) 61% 78%,transparent 78%)}body[data-issue="2026-08-29"] .issue-cover-visual::after{content:"RELAY / 08.29";position:absolute;right:1rem;bottom:1rem;font:800 .75rem ui-monospace,monospace}body[data-issue="2026-08-29"] .issue-cover-visual span{position:absolute;padding:.35rem;background:var(--ink);color:var(--bg);font:800 .65rem ui-monospace,monospace}body[data-issue="2026-08-29"] .issue-cover-visual [data-node="cover"]{top:15%;left:6%}body[data-issue="2026-08-29"] .issue-cover-visual [data-node="major"]{top:38%;left:32%}body[data-issue="2026-08-29"] .issue-cover-visual [data-node="signal"]{top:62%;left:65%}body[data-issue="2026-08-29"] .issue-cover-visual [data-node="watch"]{bottom:8%;right:4%}body[data-issue="2026-08-29"] .issue-story{max-width:62rem;margin:0 auto;padding:clamp(5rem,11vw,10rem) clamp(1rem,5vw,5rem);border-top:1px solid rgba(234,241,244,.45)}body[data-issue="2026-08-29"] .issue-story:nth-of-type(even){transform:translateX(5%)}body[data-issue="2026-08-29"] .issue-story h2{max-width:16ch;color:var(--amber);font-size:clamp(2.6rem,6vw,5.8rem);letter-spacing:-.06em}body[data-issue="2026-08-29"] .story-marker{color:var(--coral);font:900 1rem ui-monospace,monospace}body[data-issue="2026-08-29"] .story-figure{border:1px solid var(--ink);background:#342548}body[data-issue="2026-08-29"] .story-figure img{display:block;width:100%;max-height:44rem;object-fit:cover}body[data-issue="2026-08-29"] .story-figure figcaption{display:flex;justify-content:space-between;gap:1rem;padding:.75rem;background:var(--ink);color:var(--bg);font:700 .68rem ui-monospace,monospace}body[data-issue="2026-08-29"] .story-english{margin:1rem 0 2rem;color:var(--moss)}body[data-issue="2026-08-29"] .sources{margin:7rem auto 0;padding:2rem;border:1px solid var(--amber);max-width:68rem}body[data-issue="2026-08-29"] .issue-nav-panel{position:sticky;top:0;z-index:5;background:rgba(37,25,54,.96);border-block:1px solid var(--ink)}body[data-issue="2026-08-29"] .issue-nav a{min-height:44px} @media(max-width:42rem){body[data-issue="2026-08-29"]{font-size:17px}body[data-issue="2026-08-29"] .issue-cover{grid-template-columns:1fr;min-height:auto;padding-top:4rem}body[data-issue="2026-08-29"] .issue-cover-visual{min-height:18rem}body[data-issue="2026-08-29"] .issue-story:nth-of-type(even){transform:none}body[data-issue="2026-08-29"] .issue-story{padding-inline:1rem}body[data-issue="2026-08-29"] .story-figure figcaption{display:block;overflow-wrap:anywhere}}@media(prefers-reduced-motion:reduce){body[data-issue="2026-08-29"] *,body[data-issue="2026-08-29"] *::before,body[data-issue="2026-08-29"] *::after{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body data-issue="2026-08-29">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+  <p class="non-production-label">PREVIEW EDITION · NOT PRODUCTION</p>
+  <header class="site-header"><a class="issue-brand" href="../../" data-theme-home aria-label="Culture &amp; Taste Daily"><span class="brand-type"><span>Culture &amp;</span><em>Taste</em><span>Daily</span></span></a><span>2026-08-29 · Asia/Shanghai</span><div class="theme-dots" role="group" aria-label="Choose visual theme"><span class="theme-current" data-theme-status aria-live="polite">FIELD GREEN</span><button type="button" data-theme-choice="field" data-theme-label="Field Green" aria-label="Field Green" aria-pressed="false"></button><button type="button" data-theme-choice="coral" data-theme-label="Coral Signal" aria-label="Coral Signal" aria-pressed="false"></button><button type="button" data-theme-choice="analog" data-theme-label="2000s TV" aria-label="2000s TV" aria-pressed="false"></button></div><a href="../../archive/" data-theme-link>Archive</a></header>
+  <details class="issue-nav-panel" open><summary>Issue index <span aria-hidden="true">＋</span></summary><nav class="issue-nav" aria-label="Issue contents"><ul><li><a href="#neighborhood-aw26-aug29"><span>cover</span>一张发售表，也在重新安排日常对象</a></li><li><a href="#asics-bloomstride-fit"><span>major</span>一双鞋先承认脚并不只有一种标准</a></li><li><a href="#spotify-equal-recordings"><span>signal</span>五年之后，计划需要留下可以被听见的版本</a></li><li><a href="#venice-films-become-time"><span>watch</span>片单公布之后，电影节才开始变成时间</a></li><li><a href="#sources"><span>index</span>Sources &amp; Dates</a></li></ul></nav></details>
+  <main id="main-content">
+    <article aria-labelledby="issue-title" data-content-sha256="c3c0b69e79d817efef1a02a7c498e8f130bb1533f320bacdb638ddacbf379688"><header class="issue-cover"><div class="issue-cover-copy"><h1 id="issue-title">新东西不是多一点，而是换一种进入方式</h1>
+<p>NEWNESS CHANGES THE WAY IN</p>
+<p>8 月最后一个周末，几条看似分散的信号撞在一起：NEIGHBORHOOD 把新一批衣服和焚香器放进同一张发售表，ASICS 从女性脚型与日常移动重做一双跑鞋，Spotify 把五年的 EQUAL 计划压进一组录音，威尼斯电影节则把完整片单交到观众手里。它们共同提醒我们，新并不等于堆叠更多东西；新要改变人怎样进入。</p>
+<p><strong>本期判断</strong></p>
+<p>真正有效的发布，会把一个入口做得更清楚：衣服如何被穿，鞋如何容纳不同的脚，声音如何被重新录下，片单如何变成可以安排的时间。事实与官方表述先站稳，判断只往前走半步；热度、影响和未来不替来源预支。</p>
+<p>资料核验截止：2026-08-29 14:20（Asia/Shanghai）。本期为补刊 Preview，图片权利未知，均以可见回链和本地失图说明呈现。</p>
+<a class="enter-issue" href="#neighborhood-aw26-aug29">Enter the issue <span aria-hidden="true">↓</span></a></div><div class="issue-cover-visual" aria-hidden="true"><span data-node="cover">COVER</span><span data-node="major">MAJOR</span><span data-node="signal">SIGNAL</span><span data-node="watch">WATCH</span><i></i></div></header><section class="issue-story" data-story="neighborhood-aw26-aug29" data-level="cover"><p class="story-marker" aria-hidden="true">01</p><h2 id="neighborhood-aw26-aug29">一张发售表，也在重新安排日常对象</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://www.neighborhood.jp/en/collections/aw26-aug29-release" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://cdn.shopify.com/s/files/1/0222/9796/8717/files/251KIKIN-AC04_01_f41c4792-cd0d-4a27-ab28-4d7bd5ab2128.webp?v=1787985941" alt="Official NEIGHBORHOOD AW26 August 29 product image" loading="eager" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://www.neighborhood.jp/en/collections/aw26-aug29-release" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> NEIGHBORHOOD official product image; open the release page for the full list. <span>NEIGHBORHOOD · Preview-linked official image</span></figcaption></figure><div class="story-english"><strong>A RELEASE LIST REORDERS DAILY LIFE</strong><span>Clothing and incense arrive as one sequence of use.</span><small>NEIGHBORHOOD lists the products, prices and release state; this issue reads the grouping without inferring cultural impact.</small></div>
+<p>NEIGHBORHOOD 的官方 AW26 8 月 29 日发售页，把风衣、牛仔裤与 CAULDRON INCENSE CHAMBER、线香、锥香和空间喷雾放在同一批次。页面能确认商品、价格和发售状态，不负责替这些对象宣布生活方式的影响力。</p>
+<p>有意思的是，衣服与气味没有被分成两个宇宙。品牌把穿着、焚香和房间里的空气放进同一张进入清单，说明“系列”不是一个造型，而是一组会在不同时间被使用的对象。新东西因此不是多一件，而是日常被重新排了一次顺序。</p>
+<p>来源：<a href="https://www.neighborhood.jp/en/collections/aw26-aug29-release" data-source-link="true">NEIGHBORHOOD AW26 8 月 29 日官方发售页</a></p>
+</section><section class="issue-story" data-story="asics-bloomstride-fit" data-level="major"><p class="story-marker" aria-hidden="true">02</p><h2 id="asics-bloomstride-fit">一双鞋先承认脚并不只有一种标准</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://corp3.asics.com/en/press/article/asics-introduces-bloomstridetm-a-new-era-of-running-comfort-designed-for-her-every-move-" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://assets.asics.com/system/media_libraries/25982/file.press.jpg?20260826215641" alt="Official ASICS BLOOMSTRIDE press image" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://corp3.asics.com/en/press/article/asics-introduces-bloomstridetm-a-new-era-of-running-comfort-designed-for-her-every-move-" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> ASICS official press image; open the release for full specifications. <span>ASICS · Preview-linked official image</span></figcaption></figure><div class="story-english"><strong>FIT STARTS WITH DIFFERENCE</strong><span>A shoe begins by admitting that the standard foot is a fiction.</span><small>ASICS cites its scan base, fit logic and launch date; an independent specification page confirms the product details without making a universal performance claim.</small></div>
+<p>ASICS 的官方资料说明，BLOOMSTRIDE 的开发参考了 Move Her Mind 项目与超过两百万次脚型扫描，并采用女性优先的楦型、为脚趾留出空间，同时用新的 FF LUXE 缓震材料连接跑步与日常移动。产品计划于 9 月 1 日全球上市。</p>
+<p>这些数据不能自动证明它适合每个人，但它们至少改变了设计问题的起点：不是先做出一双“标准鞋”，再把尺寸缩小，而是先承认身体差异，再决定鞋面、脚趾空间和中底怎样配合。对象的诚意，往往藏在它先承认了什么。</p>
+<p>来源：<a href="https://corp3.asics.com/en/press/article/asics-introduces-bloomstridetm-a-new-era-of-running-comfort-designed-for-her-every-move-" data-source-link="true">ASICS 官方新闻稿，2026-08-26</a></p>
+</section><section class="issue-story" data-story="spotify-equal-recordings" data-level="signal"><p class="story-marker" aria-hidden="true">03</p><h2 id="spotify-equal-recordings">五年之后，计划需要留下可以被听见的版本</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://newsroom.spotify.com/2026-08-26/spotify-singles-equal-anniversary/" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://storage.googleapis.com/pr-newsroom-wp/1/2026/08/equal-header-238042384023-1024x583.png" alt="Official Spotify EQUAL fifth anniversary artist image" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://newsroom.spotify.com/2026-08-26/spotify-singles-equal-anniversary/" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> Spotify Newsroom official image; open the source for participating artists. <span>Spotify · Preview-linked official image</span></figcaption></figure><div class="story-english"><strong>A PROGRAM NEEDS A RECORDING</strong><span>Five years become useful when they leave something we can hear again.</span><small>Spotify lists the participating artists and recording concept; this issue treats the series as documentation, not proof that structural inequity is solved.</small></div>
+<p>Spotify 在 EQUAL 五周年页面公布一组 Spotify Singles，由不同地区的女性与非二元音乐人参与。官方页面能确认的是计划时间、参与者和录音形式；它不能证明行业结构已经被改变，也不该把一组歌曲写成完成式答案。</p>
+<p>但录音仍然重要。一个长期项目如果只剩年度口号，时间很快会把它磨平；把参与者交给具体的录音、编曲和声音，至少让计划留下可以反复进入的对象。庆祝不是终点，它应该留下下一次判断所需的材料。</p>
+<p>来源：<a href="https://newsroom.spotify.com/2026-08-26/spotify-singles-equal-anniversary/" data-source-link="true">Spotify Newsroom，2026-08-26</a></p>
+</section><section class="issue-story" data-story="venice-films-become-time" data-level="watch"><p class="story-marker" aria-hidden="true">04</p><h2 id="venice-films-become-time">片单公布之后，电影节才开始变成时间</h2><figure class="story-figure" data-media-kind="source_image" data-external-preview="true"><a class="source-image-link" href="https://www.labiennale.org/en/news/films-biennale-cinema-2026" target="_blank" rel="noreferrer noopener"><img data-external-preview="true" src="https://static.labiennale.org/files/styles/seo_thumbnail/public/cinema/2025/750x500/sala-grande-venezia82.jpg?itok=F_aEkmkb" alt="Official La Biennale cinema venue image" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1200" height="720"></a><p class="source-image-fallback"><a href="https://www.labiennale.org/en/news/films-biennale-cinema-2026" target="_blank" rel="noreferrer noopener">图片加载失败？在来源页面查看原图 ↗</a></p><figcaption><strong>SOURCE IMAGE · PREVIEW ONLY</strong> La Biennale official image; open the selection page for the programme. <span>La Biennale di Venezia · Preview-linked official image</span></figcaption></figure><div class="story-english"><strong>A LINEUP BECOMES TIME</strong><span>A festival starts when its name is translated into choices and hours.</span><small>La Biennale publishes the official selection and dates; independent reporting adds pre-opening context without predicting critical outcomes.</small></div>
+<p>La Biennale 在 8 月 29 日发布第 83 届威尼斯国际电影节的完整片单入口，电影节将于 9 月 2 日至 12 日在 Lido 举行。官方页面按单元组织影片，并把节目表交给公众；在观众真正抵达之前，这仍是一份安排，而不是关于作品成败的结论。</p>
+<p>片单的价值，是把抽象的“电影节”拆成选择：哪一天、哪一个单元、哪一场放映。一个城市文化事件只有被翻译成可进入的时间，才从品牌名变成公共生活的一部分。</p>
+<p>来源：<a href="https://www.labiennale.org/en/news/films-biennale-cinema-2026" data-source-link="true">La Biennale di Venezia 官方片单，2026-08-29</a></p>
+</section><section class="issue-story" data-story="exit" data-level="exit"><p class="story-marker" aria-hidden="true">EXIT</p><h2 id="exit">EXIT / 新意要留下一个能被使用的入口</h2>
+<p>衣服、鞋、录音与片单都没有替人完成判断。它们只是把入口做得更具体：穿上、走动、听见、安排，然后由使用本身决定什么值得留下。</p>
+</section></article>
+    <section class="sources" id="sources" aria-labelledby="sources-title"><p class="section-label">INDEX / VERIFIED LINKS</p><h2 id="sources-title">Sources &amp; Dates</h2><ol><li><a href="https://www.neighborhood.jp/en/collections/aw26-aug29-release">AW26 COLLECTION｜AUG. 29 RELEASE</a><span class="source-meta">NEIGHBORHOOD · 2026-08-29 · 2026-08-29</span></li><li><a href="https://corp3.asics.com/en/press/article/asics-introduces-bloomstridetm-a-new-era-of-running-comfort-designed-for-her-every-move-">ASICS Introduces BLOOMSTRIDE</a><span class="source-meta">ASICS · 2026-08-26 · 2026-09-01</span></li><li><a href="https://runningshoedb.com/en/shoes/asics-bloomstride/">ASICS BLOOMSTRIDE specs</a><span class="source-meta">Running Shoe DB · 2026-08-30 · 2026-09-01</span></li><li><a href="https://newsroom.spotify.com/2026-08-26/spotify-singles-equal-anniversary/">New Spotify Singles Honor Iconic Women in Music</a><span class="source-meta">Spotify · 2026-08-26 · 2026-08-26</span></li><li><a href="https://www.labiennale.org/en/news/films-biennale-cinema-2026">The films of the Biennale Cinema 2026</a><span class="source-meta">La Biennale di Venezia · 2026-08-29 · 2026-09-02/2026-09-12</span></li><li><a href="https://apnews.com/article/96e199af7b769e8bb07e7e9150802846">Movie stars and awards hopefuls convene at Venice</a><span class="source-meta">Associated Press · 2026-08-30 · 2026-09-02/2026-09-12</span></li></ol></section>
+  </main>
+  <footer class="site-footer"><a href="../../archive/">All issues</a><span>Static, readable without JavaScript</span></footer>
+  <script>document.documentElement.classList.add("has-js");
+
+const visualThemes = ["field", "coral", "analog"];
+const themeStorageKey = "ctd-theme";
+const themeManualKey = "ctd-theme-manual";
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const mobileViewport = window.matchMedia("(max-width: 50rem)");
+const lifecycle = new AbortController();
+const observers = new Set();
+const cleanupTasks = new Set();
+
+function revealControl(control) {
+  control.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "nearest", inline: "center" });
+}
+
+function enableRailKeyboard(container, selector) {
+  const controls = [...container.querySelectorAll(selector)];
+  if (!controls.length) return;
+  const syncTabStops = () => {
+    const selected = controls.find((control) => control.getAttribute("aria-pressed") === "true") ?? controls[0];
+    for (const control of controls) control.tabIndex = control === selected ? 0 : -1;
+  };
+  syncTabStops();
+  container.addEventListener("keydown", (event) => {
+    const current = controls.indexOf(document.activeElement);
+    if (current < 0 || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const nextIndex = event.key === "Home"
+      ? 0
+      : event.key === "End"
+        ? controls.length - 1
+        : (current + (event.key === "ArrowRight" ? 1 : -1) + controls.length) % controls.length;
+    const next = controls[nextIndex];
+    next.focus();
+    next.click();
+    syncTabStops();
+    revealControl(next);
+  }, { signal: lifecycle.signal });
+  container.addEventListener("click", (event) => {
+    const control = event.target.closest(selector);
+    if (!control || !container.contains(control)) return;
+    syncTabStops();
+    revealControl(control);
+  }, { signal: lifecycle.signal });
+}
+
+function rememberTheme(theme) {
+  try {
+    window.sessionStorage.setItem(themeStorageKey, theme);
+  } catch {
+    // The selected theme still applies to the current page when storage is unavailable.
+  }
+}
+
+function hasManualTheme() {
+  try {
+    return window.sessionStorage.getItem(themeManualKey) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function updateThemeLinks(theme) {
+  for (const link of document.querySelectorAll("a[data-theme-link]")) {
+    const url = new URL(link.href, window.location.href);
+    url.searchParams.set("theme", theme);
+    link.href = `${url.pathname}${url.search}${url.hash}`;
+  }
+  for (const link of document.querySelectorAll("a[data-theme-home]")) {
+    const url = new URL(link.href, window.location.href);
+    if (hasManualTheme()) url.searchParams.set("theme", theme);
+    else url.searchParams.delete("theme");
+    link.href = `${url.pathname}${url.search}${url.hash}`;
+  }
+}
+
+function updateThemeControls(theme) {
+  for (const button of document.querySelectorAll("[data-theme-choice]")) {
+    button.setAttribute("aria-pressed", String(button.dataset.themeChoice === theme));
+  }
+  for (const status of document.querySelectorAll("[data-theme-status]")) {
+    status.textContent = theme === "field" ? "FIELD GREEN" : theme === "coral" ? "CORAL SIGNAL" : "2000s TV";
+  }
+}
+
+function applyTheme(theme, { manual = false } = {}) {
+  const safeTheme = visualThemes.includes(theme) ? theme : "field";
+  if (manual) {
+    try {
+      window.sessionStorage.setItem(themeManualKey, "1");
+      window.localStorage.setItem("ctd-theme-preference", safeTheme);
+    } catch {
+      // The click still applies to the current page when storage is unavailable.
+    }
+  }
+  document.documentElement.dataset.visualTheme = safeTheme;
+  rememberTheme(safeTheme);
+  updateThemeControls(safeTheme);
+  updateThemeLinks(safeTheme);
+}
+
+applyTheme(document.documentElement.dataset.visualTheme);
+
+for (const button of document.querySelectorAll("[data-theme-choice]")) {
+  button.addEventListener("click", () => applyTheme(button.dataset.themeChoice, { manual: true }), { signal: lifecycle.signal });
+}
+
+for (const group of document.querySelectorAll(".theme-dots")) enableRailKeyboard(group, "[data-theme-choice]");
+
+for (const frame of document.querySelectorAll("[data-visual-frame]")) {
+  const image = frame.querySelector("img.source-art");
+  if (!image) continue;
+  const originalSource = image.src;
+  const retryDelays = [1200, 3000];
+  let retryCount = 0;
+  let retryTimer = null;
+  let deadlineTimer = null;
+  const markFailure = () => frame.classList.add("image-failed");
+  const markSuccess = () => {
+    window.clearTimeout(deadlineTimer);
+    frame.classList.remove("image-failed");
+  };
+  const monitorAttempt = () => {
+    window.clearTimeout(deadlineTimer);
+    deadlineTimer = window.setTimeout(() => {
+      if (image.complete && image.naturalWidth) markSuccess();
+      else retryImage();
+    }, 8000);
+  };
+  const retryImage = () => {
+    window.clearTimeout(deadlineTimer);
+    markFailure();
+    if (retryCount >= retryDelays.length || retryTimer !== null) return;
+    const delay = retryDelays[retryCount];
+    retryTimer = window.setTimeout(() => {
+      retryTimer = null;
+      retryCount += 1;
+      const retryUrl = new URL(originalSource, window.location.href);
+      retryUrl.searchParams.set("ctd_retry", String(retryCount));
+      image.src = retryUrl.href;
+      monitorAttempt();
+    }, delay);
+  };
+  image.addEventListener("load", markSuccess, { signal: lifecycle.signal });
+  image.addEventListener("error", retryImage, { signal: lifecycle.signal });
+  if (image.complete && image.naturalWidth) markSuccess();
+  else if (image.complete) retryImage();
+  else if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      observer.disconnect();
+      observers.delete(observer);
+      monitorAttempt();
+    }, { rootMargin: "800px" });
+    observers.add(observer);
+    observer.observe(image);
+  } else {
+    monitorAttempt();
+  }
+  cleanupTasks.add(() => {
+    window.clearTimeout(deadlineTimer);
+    window.clearTimeout(retryTimer);
+  });
+}
+
+const storyFilters = [...document.querySelectorAll("[data-story-filter]")];
+const storyCards = [...document.querySelectorAll("[data-story-card]")];
+const radarGroups = [...document.querySelectorAll("[data-radar-group]")];
+
+function applyStoryFilter(filter, { updateUrl = false } = {}) {
+  const selected = storyFilters.find(button => button.dataset.storyFilter === filter) ?? storyFilters[0];
+  if (!selected) return;
+  const category = selected.dataset.storyFilter;
+  for (const button of storyFilters) button.setAttribute("aria-pressed", String(button === selected));
+  for (const card of storyCards) card.hidden = category !== "all" && card.dataset.storyCategory !== category;
+  for (const group of radarGroups) group.hidden = ![...group.querySelectorAll("[data-story-card]")].some(card => !card.hidden);
+  const status = document.querySelector("[data-filter-result]");
+  if (status) status.textContent = `${category === "all" ? "全部" : category.toUpperCase()} · ${storyCards.filter(card => !card.hidden).length} 条精选`;
+  if (updateUrl) {
+    const url = new URL(location.href);
+    if (category === "all") url.searchParams.delete("category");
+    else url.searchParams.set("category", category);
+    history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+  }
+}
+for (const button of storyFilters) {
+  button.addEventListener("click", () => applyStoryFilter(button.dataset.storyFilter, { updateUrl: true }), { signal: lifecycle.signal });
+}
+applyStoryFilter(new URLSearchParams(location.search).get("category"));
+window.addEventListener("popstate", () => applyStoryFilter(new URLSearchParams(location.search).get("category")), { signal: lifecycle.signal });
+
+for (const group of new Set(storyFilters.map((button) => button.parentElement).filter(Boolean))) {
+  enableRailKeyboard(group, "[data-story-filter]");
+}
+
+const weekDossiers = [...document.querySelectorAll("[data-week-dossier]")];
+
+function setWeekExpanded(dossier, expanded) {
+  const button = dossier.querySelector("[data-week-toggle]");
+  const panel = dossier.querySelector("[data-week-panel]");
+  if (!button || !panel) return;
+  button.setAttribute("aria-expanded", String(expanded));
+  panel.hidden = !expanded;
+  const mark = button.querySelector(".week-toggle-mark");
+  if (mark) mark.textContent = expanded ? "−" : "＋";
+}
+
+function openWeekFromHash({ scroll = false } = {}) {
+  const target = weekDossiers.find((dossier) => `#${dossier.id}` === window.location.hash);
+  for (const dossier of weekDossiers) setWeekExpanded(dossier, dossier === target);
+  if (target && scroll) {
+    window.requestAnimationFrame(() => target.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "start" }));
+  }
+}
+
+if (weekDossiers.length) {
+  openWeekFromHash();
+  for (const dossier of weekDossiers) {
+    const button = dossier.querySelector("[data-week-toggle]");
+    if (button) button.disabled = false;
+    button?.addEventListener("click", () => {
+      const wasExpanded = button.getAttribute("aria-expanded") === "true";
+      for (const candidate of weekDossiers) setWeekExpanded(candidate, false);
+      if (!wasExpanded) {
+        setWeekExpanded(dossier, true);
+        window.history.replaceState(null, "", `#${dossier.id}`);
+      } else if (window.location.hash === `#${dossier.id}`) {
+        window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+      }
+    }, { signal: lifecycle.signal });
+  }
+  window.addEventListener("hashchange", () => openWeekFromHash({ scroll: true }), { signal: lifecycle.signal });
+}
+
+for (const frame of document.querySelectorAll("iframe[data-historical-frame]")) {
+  const resize = () => {
+    try {
+      const documentHeight = frame.contentDocument?.documentElement?.scrollHeight;
+      if (documentHeight) frame.style.height = `${Math.max(documentHeight, 720)}px`;
+    } catch {
+      // Cross-origin frames keep their CSS fallback height.
+    }
+  };
+  frame.addEventListener("load", resize, { signal: lifecycle.signal });
+  window.addEventListener("resize", resize, { passive: true, signal: lifecycle.signal });
+}
+
+const issueBody = document.querySelector("body[data-issue]");
+const issueStories = issueBody ? [...document.querySelectorAll(".issue-story")] : [];
+const issueHeadings = issueBody ? [...document.querySelectorAll(".issue-story h2[id]")] : [];
+const issueNavLinks = issueBody ? [...document.querySelectorAll(".issue-nav a[href^='#']")] : [];
+const storyReader = document.querySelector("body[data-story-reader]");
+const storyOpening = storyReader?.querySelector("[data-story-opening]");
+const storyLedeStage = storyReader?.querySelector(".story-lede-stage");
+const storyLede = storyReader?.querySelector("[data-word-reveal]");
+const storyMediaStage = storyReader?.querySelector("[data-media-stage]");
+let storyWords = [];
+let motionFrame = 0;
+
+function clamp(value, minimum = 0, maximum = 1) {
+  return Math.min(maximum, Math.max(minimum, value));
+}
+
+if (storyLede) {
+  const source = storyLede.textContent.trim();
+  const segments = "Segmenter" in Intl
+    ? [...new Intl.Segmenter("zh-CN", { granularity: "word" }).segment(source)].map((part) => part.segment)
+    : [...source];
+  storyLede.replaceChildren(...segments.map((segment) => {
+    const word = document.createElement("span");
+    word.className = "story-word";
+    word.textContent = segment;
+    return word;
+  }));
+  storyWords = [...storyLede.querySelectorAll(".story-word")];
+  storyReader.dataset.motionReady = "true";
+}
+
+function updateMotion() {
+  motionFrame = 0;
+  if (document.hidden) return;
+  const maximum = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+  const progress = Math.min(1, Math.max(0, window.scrollY / maximum));
+  document.documentElement.style.setProperty("--reading-progress", String(progress));
+  document.documentElement.style.setProperty("--shell-progress", String(Math.min(1, window.scrollY / 320)));
+
+  if (storyReader && !reducedMotion.matches) {
+    if (storyOpening) {
+      const rect = storyOpening.getBoundingClientRect();
+      const openingProgress = clamp(-rect.top / Math.max(1, rect.height - window.innerHeight));
+      document.documentElement.style.setProperty("--opening-progress", String(openingProgress));
+    }
+    if (storyLedeStage && storyWords.length) {
+      const rect = storyLedeStage.getBoundingClientRect();
+      const wordProgress = clamp((window.innerHeight * 0.8 - rect.top) / Math.max(1, rect.height * 0.68));
+      const visible = wordProgress * (storyWords.length + 5);
+      storyWords.forEach((word, index) => word.style.setProperty("--word-visible", String(clamp(visible - index))));
+    }
+    if (storyMediaStage) {
+      const rect = storyMediaStage.getBoundingClientRect();
+      const mediaProgress = clamp((window.innerHeight * 0.82 - rect.top) / Math.max(1, rect.height * 0.58));
+      document.documentElement.style.setProperty("--media-progress", String(mediaProgress));
+    }
+  }
+
+  if (!issueBody || reducedMotion.matches) return;
+  const center = window.innerHeight * 0.58;
+  const shiftLimit = mobileViewport.matches ? 12 : 24;
+  for (const story of issueStories) {
+    const rect = story.getBoundingClientRect();
+    const rawShift = (rect.top - center) * 0.025;
+    const shift = Math.max(-shiftLimit, Math.min(shiftLimit, rawShift));
+    const distance = Math.min(1, Math.abs(rect.top - center) / window.innerHeight);
+    story.style.setProperty("--story-shift", `${Math.round(shift)}px`);
+    story.style.setProperty("--story-opacity", String(1 - distance * 0.22));
+  }
+}
+
+if (storyReader && document.startViewTransition && !reducedMotion.matches) {
+  for (const link of storyReader.querySelectorAll("a.next-story, a.related-card, .story-sibling-nav a")) {
+    link.addEventListener("click", (event) => {
+      const destination = new URL(link.href, window.location.href);
+      if (destination.origin !== window.location.origin || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      document.startViewTransition(() => { window.location.href = destination.href; });
+    }, { signal: lifecycle.signal });
+  }
+}
+
+function scheduleMotion() {
+  if (!motionFrame) motionFrame = window.requestAnimationFrame(updateMotion);
+}
+
+window.addEventListener("scroll", scheduleMotion, { passive: true, signal: lifecycle.signal });
+window.addEventListener("resize", scheduleMotion, { passive: true, signal: lifecycle.signal });
+updateMotion();
+
+if (issueHeadings.length && "IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top))[0];
+    if (!visible) return;
+    for (const link of issueNavLinks) {
+      if (link.getAttribute("href") === `#${visible.target.id}`) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    }
+  }, { rootMargin: "-18% 0px -66%", threshold: [0, 0.25, 0.75] });
+  observers.add(observer);
+  for (const heading of issueHeadings) observer.observe(heading);
+}
+
+const homeHero = document.querySelector(".home-hero");
+if (homeHero && !reducedMotion.matches) {
+  homeHero.addEventListener("pointermove", (event) => {
+    const bounds = homeHero.getBoundingClientRect();
+    homeHero.style.setProperty("--hero-x", String((event.clientX - bounds.left) / bounds.width - 0.5));
+    homeHero.style.setProperty("--hero-y", String((event.clientY - bounds.top) / bounds.height - 0.5));
+  }, { passive: true, signal: lifecycle.signal });
+  homeHero.addEventListener("pointerleave", () => {
+    homeHero.style.setProperty("--hero-x", "0");
+    homeHero.style.setProperty("--hero-y", "0");
+  }, { passive: true, signal: lifecycle.signal });
+}
+
+function syncDocumentVisibility() {
+  document.documentElement.dataset.motionPaused = String(document.hidden);
+  if (document.hidden && motionFrame) {
+    window.cancelAnimationFrame(motionFrame);
+    motionFrame = 0;
+  } else if (!document.hidden) {
+    scheduleMotion();
+  }
+}
+
+function cleanupLifecycle() {
+  lifecycle.abort();
+  if (motionFrame) window.cancelAnimationFrame(motionFrame);
+  for (const observer of observers) observer.disconnect();
+  for (const cleanup of cleanupTasks) cleanup();
+  observers.clear();
+  cleanupTasks.clear();
+}
+
+document.addEventListener("visibilitychange", syncDocumentVisibility, { signal: lifecycle.signal });
+window.addEventListener("pagehide", (event) => {
+  if (!event.persisted) cleanupLifecycle();
+  else {
+    document.documentElement.dataset.motionPaused = "true";
+    if (motionFrame) window.cancelAnimationFrame(motionFrame);
+    motionFrame = 0;
+  }
+});
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    syncDocumentVisibility();
+    applyStoryFilter(new URLSearchParams(location.search).get("category"));
+  }
+}, { signal: lifecycle.signal });
+syncDocumentVisibility();
+</script>
+</body>
+</html>

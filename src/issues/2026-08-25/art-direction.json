@@ -1,37 +1,18 @@
 {
   "issue_id": "2026-08-25",
-  "title": "场地开始说话 / THE VENUE SPEAKS",
-  "dominant_mood": "夜间城市导视与临时文化场地之间的张力：清醒、开放，但保留商业边界",
-  "background_logic": "深靛蓝是城市底图；每章在同一条路线中切换为空地、房间、云层、货架与舞台，不使用统一卡片",
-  "palette_logic": "ink #101552, electric lime #D9FF43, warm paper #F5F0E6, signal coral #FF6B57, pale blue #B7C9FF",
+  "title": "场地也有一票 / THE ROOM HAS A VOTE",
+  "dominant_mood": "深夜文化节目单折进明亮公共平面图：清醒、有张力，但不把商业入口伪装成公共性",
+  "background_logic": "近黑色是场地底图；每章占据一个比例不同的房间块，不再用路线或时钟连接故事",
+  "palette_logic": "near-black #09090B, warm white #F7F4ED, pool cyan #36D7E8, taxi yellow #FFD126, orchid #9B6BFF",
   "type_scale_logic": "封面使用超大窄体系统字；正文保持 18–20px；章节编号与事实字段使用等宽系统字形成导视层",
-  "image_behavior": "不使用第三方图片；以 CSS 路线、门框、风筝单元和空间轮廓构成原创信息图形",
-  "page_density_and_tempo": "封面高密度，COVER 拉长，MAJOR 留白，四条 SIGNAL 快慢交替，WATCH 收窄，EXIT 安静",
-  "core_visual_action": "一条不断改变宽度和方向的路线贯穿页面，让读者看到场地如何重新分配注意力",
-  "cover_composition": "标题像城市标牌占据左侧，右侧路线图把 DDP、LOTTE、HOTEL、HALL、STORE、STAGE 连成不闭合路径",
-  "desktop_interaction_mechanic": "渐进增强的 sticky room index 根据阅读位置更新当前章节；锚点可键盘访问，关闭 JavaScript 时全文与导航仍完整",
+  "image_behavior": "每篇使用与事件对应的一手官方图片；未知使用权只通过可点击的 Preview 外链展示，原创平面图仅作为未展示的本地补充资产而不冒充现场影像",
+  "page_density_and_tempo": "封面像压缩节目单，COVER 拉长，MAJOR 留白，六条 SIGNAL 比例不一，WATCH 收窄，EXIT 安静",
+  "core_visual_action": "不规则平面图随场地权力关系改变比例和方向，而不是让所有故事排进同一条路线",
+  "cover_composition": "超大标题压住八个比例不同的房间块；不复用 8/24 的路线、时钟或 8/23 的日期闭合线",
+  "desktop_interaction_mechanic": "渐进增强的 room index 根据阅读位置更新当前章节；锚点可键盘访问，关闭 JavaScript 时全文与导航仍完整",
   "behance_viewing_arc": "先给总命题，再以首尔形成主冲突，伦敦加深权力问题，四条信号改变节奏，TMEX 保留待验证项，最后回到门槛",
-  "mobile_translation": "路线收为左侧细线，双栏全部改单栏，标题不溢出，sticky index 改为顶部横向可滚动导览",
+  "mobile_translation": "房间块改为纵向节目单，双栏全部改单栏，标题不溢出，索引改为顶部可滚动导览",
   "mobbin_usability_constraint": "正文不被交互遮挡；点击目标至少 44px；焦点可见；层级、来源和状态标签始终可识别",
-  "quiet_ending": "大面积靛蓝空场中只保留一块未被占用的荧光地板与一句问题",
-  "index_categories": {
-    "seoul-fashion-week-two-city-systems": "fashion",
-    "southbank-lived-experience-curation": "city",
-    "arteen-taipei-hotel-rooms": "city",
-    "sfmoma-giant-arc": "city",
-    "palace-seoul-retail-heritage": "fashion",
-    "bape-saint-mxxxxxx-can-stool": "objects",
-    "tmex-2026-agenda": "music"
-  },
-  "feature_matrix": {
-    "after_story_id": "bape-saint-mxxxxxx-can-stool",
-    "eyebrow": "DROP MATRIX / VERIFIED RELEASE NOTES",
-    "title": "四件关键单品，把旧化语言从身体推到房间。",
-    "items": [
-      { "label": "LONG-SLEEVE TEE", "note": "AGED GRAPHIC" },
-      { "label": "SHORT-SLEEVE TEE", "note": "AGED GRAPHIC" },
-      { "label": "SOCKS", "note": "WEARABLE DETAIL" },
-      { "label": "CAN STOOL", "note": "OBJECT / FURNITURE" }
-    ]
-  }
+  "quiet_ending": "近黑空场中只保留一间未被占用的白色房间与一句问题",
+  "closing_palette": {"background":"#15111E","foreground":"#F7F4ED","accent":"#36D7E8","rationale":"近黑背景保留空场，暖白承担问题，泳池青只标出那间仍可被进入的房间。"}
 }

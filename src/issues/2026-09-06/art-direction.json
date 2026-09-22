@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-06",
+  "masthead": "HARRY AI DAILY",
+  "content_thesis": "文化的开放性，不是人人都能来的口号，而是把时间、入口、观看方式和参与路径写进活动本身。",
+  "visual_thesis": "把一张城市文化日程拆成可进入的路线：时间格、地标切片与路径箭头互相错开，但最终都回到一个清楚的入口。",
+  "mood": [
+    "清醒",
+    "开放",
+    "有秩序"
+  ],
+  "weights": {
+    "editorial_tension": "high",
+    "information_order": "high",
+    "product_restraint": "medium",
+    "material_warmth": "medium"
+  },
+  "typography": {
+    "display": "grotesk-sans",
+    "text": "humanist-sans",
+    "metadata": "mono"
+  },
+  "palette": {
+    "paper": "#EAF0F2",
+    "ink": "#162322",
+    "accent": "#F26A3D",
+    "support": "#586B68"
+  },
+  "grid": "asymmetric-editorial",
+  "material": "translucent-route-sheet-and-fine-rule",
+  "image_treatment": "decisive-crop",
+  "rhythm": "open-cover-dense-routes-quiet-exit",
+  "dominant_balance": "公共开放性 ↔ 现场容量与完成成本",
+  "avoid": [
+    "dashboard cards",
+    "brand imitation",
+    "decorative AI imagery",
+    "repeating the prior workbench geometry",
+    "unlabeled accessibility claims"
+  ],
+  "dominant_mood": "浅蓝纸面上的橙色入口、深墨路线和半透明城市切片",
+  "background_logic": "以浅蓝纸面做连续底色，路线不是网格背景，而是三条从不同边缘进入的错位带；留白给读者先看懂入口，再进入事实密度。",
+  "palette_logic": "paper #EAF0F2 保持开放和空气感，ink #162322 承担正文与结构，accent #F26A3D 只标记入口和日期，support #586B68 负责次级信息；不使用高饱和渐变。",
+  "type_scale_logic": "封面标题以短句和大字号建立判断，故事标题沿路线带分层；正文保持 17–18px，英文只承担标题、deck 与 abstract。",
+  "image_behavior": "五张一手官方媒体仅在 Preview 外链显示；本地 entry-card SVG 是原创的路线图占位，不冒充现场照片。",
+  "page_density_and_tempo": "封面先给一张未完成的公共日程，首篇进入首尔的双场地路径，随后以东京程序表增加密度，广州与香港把观看和容量放慢，退出处回到可检查的入口。",
+  "core_visual_action": "把时间、地点、观看方式和参与条件变成可移动的路线片段，让‘开放’从口号变成一组可以被核对的页面关系。",
+  "cover_composition": "浅蓝底上放置四块错位的半透明日程纸片，橙色圆点标记不同入口，深墨箭头从边缘交汇到一个未闭合的入口框；标题压在纸片之间，不复制任何品牌构图。",
+  "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；时间、地点和证据边界在桌面端形成可回查的纵向路径，所有事实与正文不依赖 JavaScript。",
+  "behance_viewing_arc": "从首尔把专业时装翻译为城市路线开始，进入东京的制作程序，最后以广州的观看提示和香港的容量限制收束。",
+  "mobile_translation": "390px 下路线纸片改为右侧窄栏，箭头变成短标签，正文保持单列；来源长链接可换行，图片失败时不隐藏来源。",
+  "mobbin_usability_constraint": "交互目标不少于 44px，焦点可见，正文无横向滚动；日程信息在移动端先显示日期、地点和入口，不能只靠颜色区分。",
+  "quiet_ending": "退出处保留一个没有闭合的入口框，提醒公开路径必须在现场反馈中继续修正。",
+  "closing_quotation": {
+    "id": "ct-en-007",
+    "language": "en",
+    "text": "A frame matters only when it changes the action.",
+    "credit": "Culture & Taste Editorial"
+  },
+  "closing_palette": {
+    "background": "#162322",
+    "foreground": "#EAF0F2",
+    "accent": "#F26A3D",
+    "rationale": "深墨收束页面，让入口细节从开放的浅蓝纸面转成一条可核对的公共承诺；橙色只保留给未闭合的路线节点，确保结尾仍有行动张力。"
+  }
+}

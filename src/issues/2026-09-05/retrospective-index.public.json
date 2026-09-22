@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "kind": "owner_authorized_retrospective",
+  "date": "2026-09-05",
+  "assembled_at": "2026-09-07T19:06:34+08:00",
+  "content_sha256": "2c6bb97cf580e7f2d489f735ed26ac8132f1fb6caec4456e12c31105a3cdcb67",
+  "coverage_note": "Three-source retrospective; not a complete daily radar or contemporaneous report.",
+  "items": [
+    {
+      "id": "centrestage-public-floor",
+      "included_story_id": "centrestage-public-floor",
+      "category": "fashion"
+    },
+    {
+      "id": "kaleidos-colour-context",
+      "included_story_id": "kaleidos-colour-context",
+      "category": "objects"
+    },
+    {
+      "id": "grand-canyon-quartet-programme",
+      "included_story_id": "grand-canyon-quartet-programme",
+      "category": "music"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Programme score</title>
+  <desc id="desc">An original diagram of five audience entrances connected by a blue programme line and an orange return line.</desc>
+  <rect width="1200" height="760" fill="#F3F1EA"/>
+  <path d="M84 178H1110M84 318H1110M84 458H1110M84 598H1110" stroke="#111" stroke-width="2" opacity=".18"/>
+  <path d="M86 118C214 118 198 250 338 250S442 112 578 112s104 214 252 214 98-150 284-150" fill="none" stroke="#1746D1" stroke-width="16"/>
+  <path d="M1110 176C1000 176 1026 402 866 402S750 596 588 596s-126-172-280-172-110 112-222 112" fill="none" stroke="#F06432" stroke-width="10" stroke-dasharray="20 16"/>
+  <g fill="#F3F1EA" stroke="#111" stroke-width="8">
+    <circle cx="86" cy="118" r="23"/><circle cx="338" cy="250" r="23"/><circle cx="578" cy="112" r="23"/><circle cx="830" cy="326" r="23"/><circle cx="1114" cy="176" r="23"/>
+  </g>
+  <g fill="#111" font-family="Arial, sans-serif" font-weight="800">
+    <text x="76" y="78" font-size="30">01</text><text x="328" y="310" font-size="30">02</text><text x="568" y="72" font-size="30">03</text><text x="820" y="386" font-size="30">04</text><text x="1100" y="136" font-size="30">05</text>
+    <text x="84" y="688" font-size="24" letter-spacing="5">ENTER / STAY / RETURN</text>
+  </g>
+  <rect x="896" y="590" width="220" height="48" fill="#1746D1"/>
+  <text x="916" y="622" fill="#F3F1EA" font-family="monospace" font-size="19" font-weight="700">OPEN PUBLIC SLOT</text>
+</svg>

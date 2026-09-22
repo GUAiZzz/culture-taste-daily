@@ -1,0 +1,80 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-08-30",
+  "publication_date": "2026-08-30",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-08-30T14:20:00+08:00",
+  "research_locked_at": "2026-08-30T14:20:00+08:00",
+  "content_locked_at": "2026-08-30T14:20:00+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {"repository":"GUAiZzz/culture-taste-daily","path":"docs/PRODUCTION_CONTRACT_V3.md","commit":"83982d543bb845819b3412cd5b10b273ec3fcf25","activation_commit":"da3842bcd72b6966a35826a38b737f12c9042667"},
+  "core_version": "v2",
+  "content_lock": {"status":"locked","sha256":"bdde759cd41faf3118df3523ef61a7d4ce973db33ae6e40444d61c2afe4ea70b","locked_at":"2026-08-30T14:20:00+08:00"},
+  "source_hashes": {"content_sha256":"bdde759cd41faf3118df3523ef61a7d4ce973db33ae6e40444d61c2afe4ea70b","art_direction_sha256":"dd9df065702e8caaf414b6fa5f9577064ad68cd9c952a31c6a7b2d2c5d7191dd","issue_style_sha256":"c25fcf4ea48d9375e8806e6a006ba3bd0f4f684423b022dcb124103dfe9b1fd4"},
+  "harrytone": {"repository":"GUAiZzz/harry-tone","branch":"main","commit":"13cd6b7046bd81be396810d2923f3a5dc818e93f","loaded_at":"2026-08-30T13:55:00+08:00"},
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "截止的价值不是制造焦虑，而是取消含糊，让对象和观众都交代下一步。",
+  "art_direction": {
+    "dominant_mood":"米白色倒计时编辑台：红色截止戳、蓝色裁切线与逐格收窄的留白",
+    "background_logic":"用浅色方格纸与截止标记组织页面，不复用前八期的暗色接力带、地图、房间、proof sheet 或开放矩形",
+    "palette_logic":"paper #F2EBDD, ink #151515, deadline #E84A37, cobalt #2457C5, acid #D5F23B",
+    "type_scale_logic":"超大黑体标题像被裁掉一角，正文保持 18px；每段以倒计时编号进入",
+    "image_behavior":"四张一手官方媒体只在 Preview 外链显示；本地 countdown SVG 明确标记为失图占位",
+    "page_density_and_tempo":"封面压缩，正文逐段扩大留白，最后只保留一条截止线",
+    "core_visual_action":"网格从宽到窄，把浏览逐步压成一次进入或放弃的选择",
+    "cover_composition":"纸色底上四个不等宽时间格向右收紧，红色日期戳覆盖最后一格",
+    "desktop_interaction_mechanic":"原生索引与锚点始终可见，来源和正文不依赖 JavaScript",
+    "behance_viewing_arc":"从材料层次进入缝线结构，再听完整专辑，最后拿起电话",
+    "mobile_translation":"390px 下所有时间格转为横向顶部标尺，正文单列且不裁字",
+    "mobbin_usability_constraint":"交互目标不少于 44px，焦点可见，长链接可换行，外图失败仍显示来源",
+    "quiet_ending":"截止线之后不庆祝，只留下一个已经被做出的选择",
+    "closing_palette":{"background":"#E9E0D2","foreground":"#151515","accent":"#B92F25","rationale":"米白保持截止后的安静，黑色承担既成选择，收暗的红色只作为不可撤回的截止戳。"}
+  },
+  "variation_review": {"comparison_mode":"prior_issues","compared_issue_dates":["2026-08-23","2026-08-24","2026-08-25","2026-08-26","2026-08-27","2026-08-28","2026-08-29"],"repeated_mechanisms":["accessible section index","first-party source image with linked fallback"],"exception_reason":"可访问索引与一手来源是固定约束；本期浅色倒计时网格、红色截止戳和收窄节奏没有复用最近七期的核心构图。"},
+  "stories": [
+    {
+      "id":"on-roger-centre-court","level":"cover","title":"一双纪念鞋，先把致敬收进可穿的尺度",
+      "sources":[{"title":"On Unveils Special-Edition THE ROGER Centre Court","publisher":"On","url":"https://press.on-running.com/on-unveils-special-edition-the-roger-centre-court-to-celebrate-roger-federers-international-tennis-hall-of-fame-induction","published_date":"2026-08-24","event_date":"2026-08-25","relationship":"first_party_official"}],
+      "image_credit":"On official press image / Preview-linked",
+      "english":{"title":"A TRIBUTE STAYS WEARABLE","deck":"Commemoration works when the story still fits inside a daily object.","abstract":"On confirms the shoe, release date and commemorative details; this issue reads their scale without claiming future collectible value."},
+      "media":{"asset":"assets/countdown.svg","alt":"Official On THE ROGER Centre Court special-edition shoe image","caption":"On official press image; open the release for the commemorative details.","credit":"On · Preview-linked official image","kind":"source_image","origin_url":"https://press.on-running.com/on-unveils-special-edition-the-roger-centre-court-to-celebrate-roger-federers-international-tennis-hall-of-fame-induction","external_image_url":"https://cdn.uc.assets.prezly.com/2a646848-1ee0-4a6c-a0ea-cfa72bbc2394/","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id":"ader-birkenstock-second","level":"major","title":"一条外露缝线，把“未完成”变成使用方法",
+      "sources":[{"title":"ADERERROR x BIRKENSTOCK 2nd Collaboration","publisher":"ADERERROR","url":"https://adererror.com/en/collaboration/birkenstock_2nd","published_date":"2026-08-28","event_date":"2026-08-28","relationship":"first_party_official"}],
+      "image_credit":"ADERERROR official collaboration image / Preview-linked",
+      "english":{"title":"THE SEAM EXPLAINS THE OBJECT","deck":"An exposed join makes construction part of use.","abstract":"ADERERROR presents the second BIRKENSTOCK collaboration and its visual system; this issue separates visible construction from unverified comfort claims."},
+      "media":{"asset":"assets/countdown.svg","alt":"Official ADERERROR and BIRKENSTOCK second collaboration image","caption":"ADERERROR official image; open the collaboration page for the complete objects.","credit":"ADERERROR · Preview-linked official image","kind":"source_image","origin_url":"https://adererror.com/en/collaboration/birkenstock_2nd","external_image_url":"https://d31flwjaqugbgy.cloudfront.net/s3-cloud-bucket-ader-user/seo/%EB%B8%94%EB%9E%99_%EC%A0%84%EC%8B%A0%EC%BB%B7_FINAL_%EC%BB%A8%ED%8E%8C%EC%99%84%EB%A3%8C_4x5+%EB%B3%B5%EC%82%AC.jpg","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id":"beartooth-pure-ecstasy","level":"signal","title":"专辑发布之后，改变才不再只是预告",
+      "sources":[
+        {"title":"Pure Ecstasy","publisher":"Apple Music / Beartooth","url":"https://music.apple.com/us/album/pure-ecstasy/1893453878","published_date":"2026-08-28","event_date":"2026-08-28","relationship":"first_party_official"},
+        {"title":"Album review: Beartooth – Pure Ecstasy","publisher":"Kerrang!","url":"https://www.kerrang.com/album-review-beartooth-pure-ecstasy","published_date":"2026-08-27","event_date":"2026-08-28","relationship":"independent_reporting"}
+      ],
+      "image_credit":"Apple Music / Beartooth official album artwork / Preview-linked",
+      "english":{"title":"CHANGE NEEDS A WHOLE ALBUM","deck":"A release turns direction into an order that can be tested.","abstract":"Apple Music fixes the album and release details; independent reviews supply attributable readings, not a universal verdict."},
+      "media":{"asset":"assets/countdown.svg","alt":"Official Beartooth Pure Ecstasy album artwork","caption":"Official album artwork; open Apple Music for the release and track list.","credit":"Apple Music / Beartooth · Preview-linked official image","kind":"source_image","origin_url":"https://music.apple.com/us/album/pure-ecstasy/1893453878","external_image_url":"https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6b/a0/b0/6ba0b0e2-8915-d812-6904-87fec33e2c52/ticket.ywklrehn.jpg/1000x1000bb.jpg","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    },
+    {
+      "id":"mplus-dial-a-poem-close","level":"watch","title":"最后一天，拿起电话才算进入这首诗",
+      "sources":[{"title":"Dial-A-Poem Hong Kong","publisher":"M+","url":"https://www.mplus.org.hk/en/exhibitions/dial-a-poem-hong-kong/","published_date":"2026-04-25","event_date":"2026-04-25/2026-08-30","relationship":"first_party_official"}],
+      "image_credit":"M+ official installation image / Preview-linked",
+      "english":{"title":"THE LAST DAY ASKS FOR A CALL","deck":"The work begins when a visitor lifts the receiver.","abstract":"M+ confirms the exhibition dates, thirty local poets, three languages and public hotline; the interpretation stays with the act of listening."},
+      "media":{"asset":"assets/countdown.svg","alt":"Official M+ Dial-A-Poem Hong Kong installation image","caption":"M+ official installation image; open the exhibition page for dates and access.","credit":"M+ · Preview-linked official image","kind":"source_image","origin_url":"https://www.mplus.org.hk/en/exhibitions/dial-a-poem-hong-kong/","external_image_url":"https://www.mplus.org.hk/api/images/12309/width-1200%7Cformat-jpeg/","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}
+    }
+  ],
+  "rights_summary":{"required_assets":4,"unknown_required_assets":4,"status":"blocked"},
+  "artifact_digests":{"issue_payload_sha256":null},
+  "evidence_refs":{"technical":[],"editorial_visual":[],"gate":[]},
+  "qa":{"html_parse":"unavailable","assets":"unavailable","internal_links":"unavailable","no_js_reading":"unavailable","accessibility":"unavailable","desktop_render":"unavailable","mobile_render":"unavailable","reduced_motion":"unavailable"},
+  "limitations":[
+    "Backfill candidate and non-production Preview input only; this manifest cannot authorize production deployment.",
+    "Canonical private GUAiZzz/harry-tone main was verified at pinned commit 13cd6b7046bd81be396810d2923f3a5dc818e93f from a fresh ephemeral workspace; no private material enters this repository.",
+    "All selected stories use externally hosted first-party official images. Reuse rights remain unknown, so candidate status stays BLOCKED and Preview displays source links and a local non-documentary fallback.",
+    "All five regional lanes, the full 99-subject registry quick scan, the korea_china_taiwan focus cohort and all standing beats were checked; the public radar contains 10 distinct items and applies the prior-two-issue lookback.",
+    "Named editorial, visual and rights review remains unresolved; owner instruction authorizes only the existing non-production Preview after technical and privacy gates pass."
+  ]
+}

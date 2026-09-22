@@ -1,0 +1,19 @@
+{
+  "issue_id":"2026-09-01",
+  "title":"入口先决定，档案才会成为公共文化 / THE ENTRANCE EDITS THE ARCHIVE",
+  "dominant_mood":"黑褐档案室里的珊瑚色入口线、薄荷色开放标记与未闭合的门框",
+  "background_logic":"以四道横向门槛和偏移的珊瑚折线组织暗场，不复用最近七期的脚手架、网格、地图或 proof sheet",
+  "palette_logic":"ink #191716, paper #F1DFC5, coral #FF5A36, mint #76E6CC, violet #6D5DFC",
+  "type_scale_logic":"标题像贴在入口上的大字标签，正文 18px；故事编号固定在每一道门槛左侧",
+  "image_behavior":"四张一手官方媒体只在 Preview 外链显示；本地 threshold SVG 明确是原创失图占位",
+  "page_density_and_tempo":"封面四道门槛并列，正文依次从档案、衣服、声音进入博物馆，退出处只留开放线",
+  "core_visual_action":"页面把进入条件推到前景，让开放时段、销售渠道、触摸动作和展厅地址成为文化判断",
+  "cover_composition":"黑褐底上四道珊瑚斜线穿过横向门槛，薄荷检验标签贴在右上角",
+  "desktop_interaction_mechanic":"原生索引和锚点常驻，所有事实、来源与正文不依赖 JavaScript",
+  "behance_viewing_arc":"从档案入口进入服装的时间表，再进入声音装置，最后抵达博物馆的当天地址",
+  "mobile_translation":"390px 下门槛线退到文本边缘，文字保持单列，不造成横向滚动",
+  "mobbin_usability_constraint":"交互目标不少于 44px，焦点可见，长链接换行，外图失败不隐藏来源",
+  "quiet_ending":"出口只留一条薄荷线，提醒进入条件本身已经完成一次编辑",
+  "closing_quotation":{"id":"ct-en-008","language":"en","text":"An entrance is already an editorial decision.","credit":"Culture & Taste Editorial"},
+  "closing_palette":{"background":"#191716","foreground":"#F1DFC5","accent":"#76E6CC","rationale":"黑褐色保留档案室的密度，纸色保证入口信息可读，薄荷色把开放条件标成可行动的信号。"}
+}

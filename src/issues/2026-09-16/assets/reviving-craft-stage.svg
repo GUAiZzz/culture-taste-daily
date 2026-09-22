@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Reviving Craft silhouette stage</title><desc id="desc">An original abstract craft stage with a blue ceramic moon and a red stitched line.</desc>
+  <rect width="1200" height="800" fill="#F3EFE3"/><path d="M128 641V166h829l116 126v349z" fill="#172033"/><path d="m218 594 196-349 232 87 191-93 122 355z" fill="#243B8A"/>
+  <circle cx="459" cy="354" r="126" fill="#E1D454"/><path d="M459 226a128 128 0 0 1 0 256 96 96 0 0 0 0-256z" fill="#F3EFE3"/>
+  <path d="M250 544c126-84 210 63 337-21 113-75 224 56 401-42" fill="none" stroke="#C74A36" stroke-width="12" stroke-dasharray="21 16"/>
+  <path d="M161 687h884" stroke="#C74A36" stroke-width="8"/><path d="M161 718h566" stroke="#172033" stroke-width="6" stroke-dasharray="26 18"/><circle cx="1015" cy="687" r="18" fill="#E1D454"/>
+</svg>

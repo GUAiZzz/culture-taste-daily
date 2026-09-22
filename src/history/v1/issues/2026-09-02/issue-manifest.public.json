@@ -1,0 +1,248 @@
+{
+  "art_direction": {
+    "background_logic": "以两条互相穿越的曲线和四个身体节点组织暗场，不复用最近七期的脚手架、门槛、地图或倒计时网格",
+    "behance_viewing_arc": "从声音的触感进入档案的衣服，再进入书的物质性，最后抵达一座当代艺术博物馆如何用五天打开自己的历史",
+    "closing_palette": {
+      "accent": "#90F0D0",
+      "background": "#102A2A",
+      "foreground": "#E9F0E7",
+      "rationale": "深青色保留公共空间的深度，奶油色保证长文可读，薄荷色把可进入性标成持续而非装饰性的信号。"
+    },
+    "closing_quotation": {
+      "credit": "Culture & Taste Editorial",
+      "id": "ct-en-005",
+      "language": "en",
+      "text": "A release begins only when someone can truly enter it."
+    },
+    "core_visual_action": "页面把参与从按钮提升为关系，让颜色、衣服、触摸、动作和表情成为观看证据",
+    "cover_composition": "深青底上两条黄珊瑚曲线互相穿过，薄荷节点标记四个进入动作",
+    "desktop_interaction_mechanic": "原生索引和锚点常驻，所有事实、来源与正文不依赖 JavaScript",
+    "dominant_mood": "深青公共空间里的黄色参与轨迹、珊瑚色动作残影与薄荷色身体节点",
+    "image_behavior": "四张一手官方媒体只在 Preview 外链显示；本地 participation SVG 明确是原创失图占位",
+    "mobbin_usability_constraint": "交互目标不少于 44px，焦点可见，长链接换行，外图失败不隐藏来源",
+    "mobile_translation": "390px 下曲线退到文本两侧，文字保持单列，不造成横向滚动",
+    "page_density_and_tempo": "封面曲线互穿，正文依次从声音、服装、书页进入周年现场与公共空间，退出处保留一条未闭合轨迹",
+    "palette_logic": "deep teal #102A2A, cream #E9F0E7, yellow #FFCF4A, coral #F27A63, mint #90F0D0",
+    "quiet_ending": "未闭合轨迹指向下一位观众，提醒参与需要关系而不是按钮",
+    "type_scale_logic": "标题像一条需要身体穿过的路径，正文 18px；故事编号落在曲线交叉点旁"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": "921f053410e1dee1d1eb9e1cefe9431491bb2ee7b5d98e22250dc2ea51e6848f"
+  },
+  "candidate_created_at": "2026-09-02T11:00:00+08:00",
+  "content_lock": {
+    "locked_at": "2026-09-02T11:25:00+08:00",
+    "sha256": "f825403489ac898354cdff825c87f717a785bce160fd8e9772af8c94dc45b8a6",
+    "status": "locked"
+  },
+  "content_locked_at": "2026-09-02T11:25:00+08:00",
+  "contract": {
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "repository": "GUAiZzz/culture-taste-daily"
+  },
+  "core_version": "v2",
+  "editorial_position": "参与不是互动按钮；它是对象与公众之间一段可持续、可进入的关系。",
+  "evidence_refs": {
+    "editorial_visual": [],
+    "gate": [],
+    "technical": []
+  },
+  "harrytone": {
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-09-02T10:40:00+08:00",
+    "repository": "GUAiZzz/harry-tone"
+  },
+  "issue_id": "2026-09-02",
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "limitations": [
+    "Non-production Preview candidate only; this manifest cannot authorize production deployment.",
+    "Canonical private GUAiZzz/harry-tone main was verified at pinned commit 13cd6b7046bd81be396810d2923f3a5dc818e93f; no private material enters this repository.",
+    "All selected stories use externally hosted first-party official images. Reuse rights remain unknown, so candidate status stays BLOCKED and Preview displays source links and a local non-documentary fallback.",
+    "All five regional lanes, the full 99-subject registry quick scan, the culture_retail_creative focus cohort and all standing beats were checked; the public radar contains 10 distinct items and applies the prior-two-issue lookback.",
+    "Named editorial, visual and rights review remains unresolved; the owner's current task authorizes only the existing non-production Preview after technical and privacy gates pass."
+  ],
+  "media_required": true,
+  "publication_date": "2026-09-02",
+  "qa": {
+    "assets": "unavailable",
+    "desktop_render": "unavailable",
+    "html_parse": "unavailable",
+    "internal_links": "unavailable",
+    "mobile_render": "unavailable",
+    "no_js_reading": "unavailable",
+    "reduced_motion": "unavailable"
+  },
+  "research_locked_at": "2026-09-02T11:20:00+08:00",
+  "rights_summary": {
+    "required_assets": 4,
+    "status": "blocked",
+    "unknown_required_assets": 4
+  },
+  "schema_version": 2,
+  "source_hashes": {
+    "art_direction_sha256": "80786d574254914e7eba24777839bc43222caed04aa64dacab57f8dde1b14528",
+    "content_sha256": "f825403489ac898354cdff825c87f717a785bce160fd8e9772af8c94dc45b8a6",
+    "issue_style_sha256": "8ef1547b61812569b70c3681a17cae14a143a49d7c36c4a7130011972b7ceda4"
+  },
+  "status": "BLOCKED",
+  "stories": [
+    {
+      "english": {
+        "abstract": "The official event page fixes the collaborators, the Chicago Cultural Center venue, the free admission and the 2–27 September run; the claim about bodily calibration is editorial interpretation.",
+        "deck": "A city exhibition translates improvised music into colour, motion and bodily scale.",
+        "title": "JAZZ CAN BE ENTERED"
+      },
+      "id": "tangible-sound-body-landscape",
+      "image_credit": "Choose Chicago / Tangible Sound official event image / Preview-linked",
+      "level": "cover",
+      "media": {
+        "alt": "Official Tangible Sound exhibition image",
+        "asset": "assets/participation.svg",
+        "caption": "Tangible Sound official event image; open the Chicago listing for collaborators, dates and venue.",
+        "credit": "Choose Chicago / Tangible Sound · Preview-linked official image",
+        "external_image_url": "https://cdn.choosechicago.com/uploads/2026/05/tangiblesound.jpg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.choosechicago.com/event/tangible-sound-arrival-to-a-higher-ground/2026-09-02/",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-09-02/2026-09-27",
+          "published_date": null,
+          "publisher": "Choose Chicago / Department of Cultural Affairs and Special Events",
+          "relationship": "first_party_official",
+          "title": "Tangible Sound: Arrival to a Higher Ground",
+          "url": "https://www.choosechicago.com/event/tangible-sound-arrival-to-a-higher-ground/2026-09-02/"
+        }
+      ],
+      "title": "爵士不只被听见，也可以被走进去"
+    },
+    {
+      "english": {
+        "abstract": "Peanuts and the Schulz Museum fix the opening window, venue, free entry, archival material and designer-dressed characters; the cultural reading is kept separate from the announcement.",
+        "deck": "A comic archive enters contemporary culture through designed bodies and public context.",
+        "title": "THE ARCHIVE CHANGES CLOTHES"
+      },
+      "id": "snoopy-style-fashion-archive",
+      "image_credit": "Peanuts official exhibition image / Preview-linked",
+      "level": "major",
+      "media": {
+        "alt": "Official Snoopy in Style NYC exhibition image",
+        "asset": "assets/participation.svg",
+        "caption": "Peanuts official image; open the project page for dates, venue and exhibition contents.",
+        "credit": "Peanuts · Preview-linked official image",
+        "external_image_url": "https://static.wixstatic.com/media/5fdc83_37f627cf076a4440be8c4b140653a0c2%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/5fdc83_37f627cf076a4440be8c4b140653a0c2%7Emv2.jpg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.peanuts.com/snoopy-in-style-nyc",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-09-02/2026-09-26",
+          "published_date": null,
+          "publisher": "Peanuts",
+          "relationship": "first_party_official",
+          "title": "Snoopy in Style NYC",
+          "url": "https://www.peanuts.com/snoopy-in-style-nyc"
+        },
+        {
+          "event_date": "2026-09-02/2026-09-26",
+          "published_date": null,
+          "publisher": "Charles M. Schulz Museum and Research Center",
+          "relationship": "first_party_official",
+          "title": "Traveling Exhibitions — Snoopy in Style NYC",
+          "url": "https://schulzmuseum.org/traveling-exhibitions/"
+        }
+      ],
+      "title": "Snoopy 换上衣服之后，档案开始谈当代文化"
+    },
+    {
+      "english": {
+        "abstract": "CCA identifies the three artists, their distinct book-art practices, the 2 September opening and the 23 October closing date; the body's control over reading speed is editorial inference.",
+        "deck": "Three Bay Area artists make reading answer to material, distance and pace.",
+        "title": "THE BOOK BECOMES A SPACE"
+      },
+      "id": "cca-closer-reading-book-object",
+      "image_credit": "California College of the Arts official image / Preview-linked",
+      "level": "signal",
+      "media": {
+        "alt": "Official CCA Closer Reading exhibition image",
+        "asset": "assets/participation.svg",
+        "caption": "CCA official image; open the event page for the artists, format and public dates.",
+        "credit": "California College of the Arts · Preview-linked official image",
+        "external_image_url": "https://storage.googleapis.com/ccaportal-prod/images/CCA_NMWA_CloserReading_portal.original.png",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://portal.cca.edu/events-calendar/closer-reading-reception/",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-09-02/2026-10-23",
+          "published_date": "2026-09-02",
+          "publisher": "California College of the Arts",
+          "relationship": "first_party_official",
+          "title": "Opening Reception for Women to Watch 2027: Closer Reading",
+          "url": "https://portal.cca.edu/events-calendar/closer-reading-reception/"
+        }
+      ],
+      "title": "书不是容器，书艺让阅读重新变成空间"
+    },
+    {
+      "english": {
+        "abstract": "The official programme fixes the 2–5 September anniversary programme, exhibitions, sound, meetings and performances; treating the anniversary as a public instrument is editorial interpretation.",
+        "deck": "An anniversary turns a contemporary museum into a five-day public instrument.",
+        "title": "THE MUSEUM OPENS ITS OWN HISTORY"
+      },
+      "id": "wroclaw-open-museum-fifteen-years",
+      "image_credit": "Wrocław Contemporary Museum official programme image / Preview-linked",
+      "level": "watch",
+      "media": {
+        "alt": "Official Wrocław Contemporary Museum Open Museum programme image",
+        "asset": "assets/participation.svg",
+        "caption": "Wrocław Contemporary Museum official programme image; open the event page for the anniversary schedule and formats.",
+        "credit": "Wrocław Contemporary Museum · Preview-linked official image",
+        "external_image_url": "https://muzeumwspolczesne.pl/wp-content/uploads/2026/07/10_grafika_na_www_2000x2000px.png",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://muzeumwspolczesne.pl/en/wydarzenia/muzeum-otwarte-xv-lat/",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-09-02/2026-09-05",
+          "published_date": null,
+          "publisher": "Wrocław Contemporary Museum",
+          "relationship": "first_party_official",
+          "title": "Muzeum Otwarte — XV lat Muzeum Współczesnego Wrocław",
+          "url": "https://muzeumwspolczesne.pl/en/wydarzenia/muzeum-otwarte-xv-lat/"
+        }
+      ],
+      "title": "Wrocław 当代艺术博物馆用五天重新打开自己的历史"
+    }
+  ],
+  "timezone": "Asia/Shanghai",
+  "variation_review": {
+    "compared_issue_dates": [
+      "2026-08-26",
+      "2026-08-27",
+      "2026-08-28",
+      "2026-08-29",
+      "2026-08-30",
+      "2026-08-31",
+      "2026-09-01"
+    ],
+    "comparison_mode": "prior_issues",
+    "exception_reason": "可访问索引与一手来源图是固定约束；本期深青曲线、交叉节点与未闭合参与轨迹没有复用最近七期的核心构图。",
+    "repeated_mechanisms": [
+      "accessible section index",
+      "first-party source image with linked fallback"
+    ]
+  },
+  "visibility": "published_preview"
+}

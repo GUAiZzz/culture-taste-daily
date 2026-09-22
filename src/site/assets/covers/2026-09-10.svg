@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">The work sets the terms of looking</title>
+  <desc id="desc">An original cover graphic showing four offset apertures, cyan windows and orange crop marks.</desc>
+  <rect width="1200" height="760" fill="#101826"/>
+  <path d="M70 122H1130M70 274H1130M70 426H1130M70 578H1130" stroke="#F4F0E8" stroke-width="2" opacity=".18"/>
+  <g fill="none" stroke="#F4F0E8" stroke-width="7">
+    <rect x="102" y="154" width="292" height="198" transform="rotate(-7 102 154)"/>
+    <rect x="396" y="278" width="394" height="224" transform="rotate(8 396 278)"/>
+    <rect x="732" y="132" width="300" height="190" transform="rotate(-10 732 132)"/>
+    <rect x="218" y="506" width="402" height="130" transform="rotate(-4 218 506)"/>
+  </g>
+  <g stroke="#4BC0C8" stroke-width="20"><path d="M112 326L422 116"/><path d="M548 572L1028 170"/></g>
+  <g stroke="#FF7A45" stroke-width="9"><path d="M82 446L452 72"/><path d="M702 694L1126 288"/><path d="M188 694L1006 74"/></g>
+  <g fill="#F4F0E8" font-family="Arial, sans-serif" font-weight="800"><text x="78" y="82" font-size="28">01</text><text x="414" y="256" font-size="28">02</text><text x="742" y="112" font-size="28">03</text><text x="214" y="692" font-size="28">04</text><text x="76" y="730" font-size="24" letter-spacing="5">THE WORK SETS THE TERMS OF LOOKING</text></g>
+  <rect x="928" y="620" width="196" height="44" fill="#4BC0C8"/><text x="948" y="649" fill="#101826" font-family="monospace" font-size="17" font-weight="700">CHANGE THE VIEW</text>
+</svg>
