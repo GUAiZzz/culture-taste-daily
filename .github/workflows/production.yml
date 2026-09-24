@@ -1,8 +1,6 @@
-name: Preview build
+name: Approved publication
 
 on:
-  pull_request:
-    branches: [main, preview-build-v1]
   workflow_dispatch:
     inputs:
       expected_sha:
@@ -19,7 +17,7 @@ permissions:
 
 jobs:
   verify:
-    name: Build and verify Preview
+    name: Build and verify approved publication
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -94,7 +92,7 @@ jobs:
           path: dist/
 
   deploy-preview:
-    name: Deploy non-production Preview
+    name: Deploy approved publication
     if: github.event_name == 'workflow_dispatch'
     needs: verify
     runs-on: ubuntu-latest

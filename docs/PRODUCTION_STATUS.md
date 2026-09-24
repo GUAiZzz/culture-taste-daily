@@ -1,3 +1,7 @@
+# September 8 owner-approved cutover
+
+The owner has authorized the reviewed September 8 edition and five official images. The scoped [publication amendment](APPROVED_PUBLICATION.md) supersedes the historical Preview-only restrictions below. Actual deployment is proven by the live `preview-release.json` and `production-release.json`, not this document. New daily candidates still require their own approval for formal promotion.
+
 # Production status
 
 The September 7 shared reading-room and history integration is documented in [Three rooms release](THREE_ROOMS_RELEASE.md).

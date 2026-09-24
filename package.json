@@ -23,7 +23,8 @@
     "preview:release": "node scripts/preview-release.mjs",
     "preview:stamp": "node scripts/preview-stamp.mjs",
     "preview:live": "node scripts/preview-live.mjs",
-    "preview:resume": "node scripts/preview-resume.mjs"
+    "preview:resume": "node scripts/preview-resume.mjs",
+    "production:build": "node scripts/production-build.mjs"
   },
   "devDependencies": {
     "ajv": "8.20.0",

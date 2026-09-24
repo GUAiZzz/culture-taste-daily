@@ -1,0 +1,11 @@
+import path from 'node:path';
+import {parseArgs} from 'node:util';
+import {readJson,fileDigestMap,digestMap,writeJson} from './lib/files.mjs';
+const {values}=parseArgs({options:{dir:{type:'string',default:'.stage4/production/rollback-check'}}});
+const dir=path.resolve(values.dir),stamp=await readJson(path.join(dir,'preview-release.json'));
+const config=await readJson('deployment/production-issues.json');
+if(stamp.repository!==config.repository||stamp.source_commit!==config.previous_good_source_commit)throw Error('ROLLBACK_IDENTITY');
+const actual=await fileDigestMap(dir,{exclude:['preview-release.json']});
+if(digestMap(actual)!==stamp.artifact_digest||digestMap(stamp.files)!==stamp.artifact_digest)throw Error('ROLLBACK_CONTENT_CHANGED');
+await writeJson('.stage4/production/rollback-proof.json',{status:'PASS',source_commit:stamp.source_commit,run_id:config.previous_good_run,artifact_digest:stamp.artifact_digest,verified_files:Object.keys(actual).length,verified_at:new Date().toISOString()});
+console.log('PASS: exact previous deployment artifact; '+Object.keys(actual).length+' files verified');

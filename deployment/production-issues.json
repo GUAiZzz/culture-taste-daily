@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "repository": "GUAiZzz/culture-taste-daily",
+  "previous_good_run": 34191825176,
+  "issues": [
+    {
+      "date": "2026-09-08",
+      "approval_basis": "repository_owner_confirmed_publication_and_image_permission",
+      "approved_by": "repository_owner",
+      "recorded_at": "2026-09-08T14:43:05+08:00",
+      "reviewed_source_commit": "0a0e2268487216a22f1afe29e860f84c5402a5b4",
+      "content_sha256": "e1fbf8a8f1e3e36b42e6a7911decb278c6cfd066037ad3eaf1447ab6c60e1966",
+      "art_direction_sha256": "e3b815c9ef444268bdfba86db101fd5cacb28115353e21b4f142fd4d4e7a5858",
+      "harrytone_commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+      "images": [
+        {
+          "story_id": "arcteryx-system-0-sperro-sv",
+          "asset": "assets/official-arcteryx-system-0-sperro-sv.jpg",
+          "sha256": "bd4988d1115925def5776dab4adf17c61f5ffa20a0f162950bc2423ad2b66ce0",
+          "source_url": "https://blog.arcteryx.com/wp-content/uploads/2026/08/ARC_CampaignVis_260314_FW_2026_FW26-SperroSV_MarkoPrezelj_Slovenia__DSCF2405_shrp.jpg",
+          "content_type": "image/jpeg"
+        },
+        {
+          "story_id": "sfmoma-dior-to-mcqueen",
+          "asset": "assets/official-sfmoma-dior-to-mcqueen.png",
+          "sha256": "cfdcb97c0f21c51d53d8abca3aa99ad30be43537a6a8b2d2c5416f8dd440c8b8",
+          "source_url": "https://d1hhug17qm51in.cloudfront.net/www-media/2026/08/02100937/fashioning-form-768x456-png.png",
+          "content_type": "image/png"
+        },
+        {
+          "story_id": "adela-prima",
+          "asset": "assets/official-adela-prima.jpg",
+          "sha256": "b000fa72a8163e6cefc49640ebfd881edee758b2703778018670733a7524f303",
+          "source_url": "https://www.universal-music.co.jp/adela/wp-content/uploads/sites/4224/2026/07/ADELA.jpg",
+          "content_type": "image/jpeg"
+        },
+        {
+          "story_id": "pling-design-hoeren",
+          "asset": "assets/official-pling-design-hoeren.jpg",
+          "sha256": "62db4f44b38bede42cf495ca390b85f83ed8817b0917f75319bd1bfbee33a4d1",
+          "source_url": "https://mfg.rokka.io/fe_nuxt_no_crop/variables-w-520/8cbc24b5dc8d88da6ea1c6500020892a1733c85a/image.jpg",
+          "content_type": "image/jpeg"
+        },
+        {
+          "story_id": "bourdelle-contrepoint-anthony-guerree",
+          "asset": "assets/official-bourdelle-contrepoint-anthony-guerree.jpg",
+          "sha256": "89573eeb99ff9048308c0bf8aad6fc02f076d52dbe0834df7eed15d01e755deb",
+          "source_url": "https://www.bourdelle.paris.fr/sites/default/files/styles/720x700/public/2026-06/01_anthonyguerree_bourdelle_contrepoint_terres_cuites_ph_alexandre_onimus_0.jpg?h=1e36b9b2&itok=6zQOuCtF",
+          "content_type": "image/jpeg"
+        }
+      ],
+      "issue_style_sha256": "4d64dae086fd033f1fa7c1682494bcb1b0e58ca1f8577876d5b148bc86be6319"
+    }
+  ],
+  "previous_good_source_commit": "0a0e2268487216a22f1afe29e860f84c5402a5b4",
+  "previous_good_release": "site-before-production-2026-09-08"
+}

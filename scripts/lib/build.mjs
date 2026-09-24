@@ -242,7 +242,7 @@ function hydrateDailyRadar(radar, manifest, issueId, priorIndex = null) {
     const story = storyById.get(item.included_story_id);
     if (!story) throw new Error(`${issueId} daily radar references unknown story ${item.included_story_id}`);
     const officialSource = story.sources.find((source) => source.relationship === "first_party_official") ?? story.sources.find((source) => source.url === story.media?.origin_url);
-    if (!story.media?.external_image_url || story.media.origin_authority !== "first_party_official" || !officialSource) {
+    if (!(story.media?.external_image_url || (story.media?.asset && story.media?.rights_basis === "documented_permission")) || story.media.origin_authority !== "first_party_official" || !officialSource) {
       throw new Error(`${issueId} daily radar story ${story.id} lacks first-party official media`);
     }
     return {
@@ -258,7 +258,7 @@ function hydrateDailyRadar(radar, manifest, issueId, priorIndex = null) {
       event_date: officialSource.event_date,
       media: {
         kind: "image",
-        url: story.media.external_image_url,
+        url: story.media.external_image_url ?? `issues/${issueId}/${story.media.asset}`,
         alt: story.media.alt,
         credit: story.media.credit,
         origin_authority: story.media.origin_authority,
@@ -458,6 +458,7 @@ export async function buildSite({
   outDir = path.join(repoRoot, "dist"),
   issueId,
   readerRooms = true,
+  productionDates = [],
   through,
   baseUrl = "https://culture-taste-daily.invalid/",
 } = {}) {
@@ -595,7 +596,7 @@ export async function buildSite({
       const dir = path.join(outDir, "issues", issue.issueId);
       await writeFile(path.join(dir, "original-edition.html"), await readFile(path.join(dir, "index.html")));
     }
-    const renderedDates = await buildRooms({ repoRoot, outDir, validatedIssues: issues, publicationIssues });
+    const renderedDates = await buildRooms({ repoRoot, outDir, validatedIssues: issues, publicationIssues, productionDates });
     for (const issue of issues.filter(i => renderedDates.includes(i.issueId))) {
       const dir = path.join(outDir, "issues", issue.issueId);
       const files = await fileDigestMap(dir, { exclude: [PUBLIC_MANIFEST] });
