@@ -1,0 +1,17 @@
+{
+  "dominant_mood": "蜂蜜色纸面上的炭黑、酒红与深青，像一张被撕开又重新排好的城市票根：时间有孔，入口有编号，服装在两者之间移动。",
+  "background_logic": "页面把发售日、秀场时段、购物路径与区域差异拆成一组可撕开的票根和打孔边缘；不复用最近七期的日历轴、节目单轨道、孔径窗口、尺度矩形场、折页结构、门框路线、剪影框或材料样片。",
+  "palette_logic": "honey #F4E6B8, charcoal #171717, teal #0E4F5C, wine #8B1E3F, ticket #FFF8E4, signal #D9A441；蜂蜜色承载长文，炭黑承载正文，深青组织入口与链接，酒红只标记时间压力与判断，金色保留给打孔与票根边缘。",
+  "type_scale_logic": "标题像印在票根上的大号检票标记，正文保持 18px；编号、时间和区域使用等宽字，英文只承担 title、deck 与 abstract，长标题自然断行，不为视觉压缩事实。",
+  "image_behavior": "两张一手官方媒体以 Preview 外链显示；本地 SVG 是原创非纪实票根与时间表回退图，外图失败时仍保留来源链接、图片 credit 和事实说明；未知权利不被写成已获授权。",
+  "page_density_and_tempo": "封面先给出两条不同长度的票根，一条压缩成单日发售，一条展开成十一天城市时段；正文从 Supreme 的等待进入曼谷的分布式路径，最后把问题交回读者的下一次抵达。",
+  "core_visual_action": "用打孔、撕口和未盖章的时间戳把事实与判断分开：酒红标记被压缩的窗口，深青标记可进入的路线，票根永远不闭合，提醒时间安排不是文化效果的证明。",
+  "cover_composition": "蜂蜜色底上叠放两张错开的票根，左侧是一条被剪短的酒红发售带，右侧是一张展开的深青城市票面；黑色打孔线穿过边缘，标题压在两张票根之间，右下留一块未盖章的空白。",
+  "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 只提供可关闭的时间注记，正文、事实和外图回链不依赖 JavaScript。",
+  "behance_viewing_arc": "先看一个日期如何把 T 恤变成等待，再看一张城市日程如何把秀场拆成多条入口，最后停在未盖章的票根上，不替读者宣布开放已经发生。",
+  "mobile_translation": "390px 下两张票根改为纵向叠放，打孔线收成边缘刻点，酒红只出现在标题、日期和判断附近；正文单列，图片说明和长链接自然换行。",
+  "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点可见，长链接换行，移动端无横向滚动；票根装饰不覆盖正文和图片说明，外图失败不隐藏来源。",
+  "quiet_ending": "退出处留下一段未撕下的票根和一枚没有盖下去的章，不给箭头，让下一步回到真实的发售页、秀场和城市路线。",
+  "closing_quotation": {"id":"ct-en-003","language":"en","text":"A deadline earns meaning when it makes the next action visible.","credit":"Culture & Taste Editorial"},
+  "closing_palette": {"background":"#F4E6B8","foreground":"#171717","accent":"#8B1E3F","rationale":"蜂蜜色与炭黑构成长文阅读底，深青承担入口和来源结构，酒红只提示时间压力、判断与权利未决，确保结尾文字和警示色保持足够对比。"}
+}

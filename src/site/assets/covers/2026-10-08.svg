@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Culture &amp; Taste 2026-10-08 cover</title>
+  <desc id="desc">Two overlapping ticket shapes contrast a compressed drop with an expanded city fashion calendar.</desc>
+  <rect width="1600" height="1000" fill="#f4e6b8"/>
+  <rect x="900" y="96" width="520" height="780" fill="#0e4f5c" stroke="#171717" stroke-width="12" transform="rotate(7 1160 486)"/>
+  <rect x="290" y="140" width="610" height="700" fill="#fff8e4" stroke="#171717" stroke-width="12" transform="rotate(-8 595 490)"/>
+  <path d="M356 198v660M828 132v700" stroke="#171717" stroke-width="8" stroke-dasharray="5 34"/>
+  <path d="M1045 196v694M1392 246v620" stroke="#d9a441" stroke-width="6" stroke-dasharray="3 26"/>
+  <path d="M388 506h420M1030 420h322M1030 500h240M1030 580h360" stroke="#0e4f5c" stroke-width="18"/>
+  <path d="M1054 684h278" stroke="#f4e6b8" stroke-width="26"/>
+  <circle cx="774" cy="722" r="92" fill="#8b1e3f" stroke="#171717" stroke-width="12"/>
+  <text x="714" y="714" fill="#fff8e4" font-family="monospace" font-size="36" font-weight="700">10.08</text>
+  <text x="719" y="756" fill="#fff8e4" font-family="monospace" font-size="24">OPEN</text>
+  <text x="1050" y="198" fill="#d9a441" font-family="monospace" font-size="28" letter-spacing="5">01—11 OCT</text>
+  <text x="112" y="130" fill="#171717" font-family="Arial,sans-serif" font-size="42" font-weight="900">CULTURE &amp; TASTE / DAILY</text>
+  <text x="112" y="930" fill="#8b1e3f" font-family="monospace" font-size="30" letter-spacing="8">WHEN CLOTHES TAKE A TIME SLOT</text>
+</svg>
