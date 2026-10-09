@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-09",
+  "coverage": {
+    "verified_at": "2026-10-09T11:21:14+08:00",
+    "regional_lanes_checked": ["mainland_china_plus_hong_kong_or_taiwan","japan_or_korea","continental_europe_or_united_kingdom","united_states_or_canada","rotating_global_lane"],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "luxury_runway",
+    "focus_subjects_checked": ["Balenciaga","Bode","Cartier","Casablanca","Chanel","Chrome Hearts","Givenchy","Goyard","Kenzo","Loro Piana","Marni","Bottega Veneta","Prada","Tiffany & Co.","Loewe","Miu Miu","Rick Owens","SKIMS","HOMME PLISSÉ ISSEY MIYAKE","Entire Studios"],
+    "standing_beats_checked": ["stussy-release-radar","luxury-runway-calendar","exhibition-and-cultural-programme-radar","small-breakout-object-radar"],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {"id":"kyoto-making-public-fashion-2026-10-09","category":"fashion","included_story_id":"kyoto-youme-making-before-finish-2026"},
+    {"id":"es-devlin-archive-practice-fashion-2026-10-09","category":"fashion","included_story_id":"es-devlin-other-worlds-process-2026"},
+    {"id":"kyoto-meaning-of-making-listening-2026-10-09","category":"music","included_story_id":"kyoto-youme-making-before-finish-2026"},
+    {"id":"es-devlin-stage-sculpture-signal-2026-10-09","category":"music","included_story_id":"es-devlin-other-worlds-process-2026"},
+    {"id":"kyoto-craft-route-object-2026-10-09","category":"objects","included_story_id":"kyoto-youme-making-before-finish-2026"},
+    {"id":"es-devlin-maquette-desk-object-2026-10-09","category":"objects","included_story_id":"es-devlin-other-worlds-process-2026"},
+    {"id":"kyoto-youme-open-city-route-2026-10-09","category":"city","included_story_id":"kyoto-youme-making-before-finish-2026"},
+    {"id":"kyoto-shoseien-jushin-public-route-2026-10-09","category":"city","included_story_id":"kyoto-youme-making-before-finish-2026"},
+    {"id":"es-devlin-design-museum-archive-route-2026-10-09","category":"city","included_story_id":"es-devlin-other-worlds-process-2026"},
+    {"id":"es-devlin-studio-to-gallery-route-2026-10-09","category":"city","included_story_id":"es-devlin-other-worlds-process-2026"}
+  ]
+}
