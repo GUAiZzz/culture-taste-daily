@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Kyoto making grid</title>
+  <desc id="desc">An original non-documentary diagram of a Kyoto garden, conference, open studios and making routes.</desc>
+  <rect width="1200" height="720" fill="#245247"/>
+  <g fill="none" stroke="#FAF7F0" stroke-width="3" opacity=".82"><path d="M80 118H1118M80 240H1118M80 362H1118M80 484H1118M80 606H1118"/><path d="M168 64V654M386 64V654M604 64V654M822 64V654M1040 64V654"/></g>
+  <g fill="#A84935"><circle cx="168" cy="118" r="16"/><circle cx="604" cy="362" r="16"/><circle cx="1040" cy="606" r="16"/></g>
+  <g fill="#FAF7F0" font-family="monospace" font-size="28" font-weight="700"><text x="80" y="92">MAKING / KYOTO / 09—18 OCT 2026</text><text x="112" y="176">GARDEN</text><text x="330" y="298">HALL</text><text x="548" y="420">CONFERENCE</text><text x="766" y="542">OPEN STUDIOS</text><text x="984" y="664">JOURNEY</text></g>
+  <path d="M168 118C320 205 470 275 604 362S850 530 1040 606" fill="none" stroke="#A84935" stroke-width="8" stroke-dasharray="18 14"/>
+</svg>

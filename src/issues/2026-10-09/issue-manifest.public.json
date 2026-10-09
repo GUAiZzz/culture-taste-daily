@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-10-09",
+  "publication_date": "2026-10-09",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-10-09T11:21:14+08:00",
+  "research_locked_at": "2026-10-09T11:21:14+08:00",
+  "content_locked_at": "2026-10-09T11:21:14+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {"repository":"GUAiZzz/culture-taste-daily","path":"docs/PRODUCTION_CONTRACT_V3.md","commit":"83982d543bb845819b3412cd5b10b273ec3fcf25","activation_commit":"da3842bcd72b6966a35826a38b737f12c9042667"},
+  "core_version": "v2",
+  "content_lock": {"status":"locked","sha256":"3696cc466bc72b7a7f06f60c4e31e095f35bf1a2effda50944eceb0ddeedd89d","locked_at":"2026-10-09T11:21:14+08:00"},
+  "source_hashes": {"content_sha256":"3696cc466bc72b7a7f06f60c4e31e095f35bf1a2effda50944eceb0ddeedd89d","art_direction_sha256":"4b7afe83c19cb397a22abf1e90634171a3748248bc48b0a225c4a1a319ba4a14","issue_style_sha256":"7c304f797510159d383371add1d1363f4faec2f9b086be8a5a005a7d17eaaa31"},
+  "harrytone": {"repository":"GUAiZzz/harry-tone","branch":"main","commit":"13cd6b7046bd81be396810d2923f3a5dc818e93f","loaded_at":"2026-10-09T11:05:00+08:00"},
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "制作先于完成：京都把 making 铺到城市与会议，伦敦把制作收进工作桌与档案；文化的入口从结果移向过程，但过程必须保留结构与未解决部分。",
+  "art_direction": {
+    "dominant_mood": "雾白纸面上的炭黑、砖红与松绿色，像一张正在被使用的工作台：墨迹未干，木屑仍在边缘，完成品没有把过程擦掉。",
+    "background_logic": "页面把两种过程结构并置：京都用分散的节点、会议与路线向外展开，伦敦用工作桌、档案和模型向内聚拢；不复用最近七期的票根、日历轴、节目单轨道、孔径窗口、尺度矩形场、折页结构或门框路线。",
+    "palette_logic": "mist #EEE9DE, charcoal #1C201D, brick #A84935, pine #245247, paper #FAF7F0, graphite #69706A；雾白承载长文，炭黑负责正文，砖红标记仍在推进的动作，松绿组织来源与城市路径，石墨用于注释。",
+    "type_scale_logic": "标题像工作台上的大号工序标签，正文保持 18px；编号、日期、场地与来源使用等宽字，英文只承担 title、deck 与 abstract，长标题自然断行，不把过程压成宣传口号。",
+    "image_behavior": "两张一手官方媒体以 Preview 外链显示；本地 SVG 是原创非纪实工作台与档案网格回退图，外图失败时仍保留来源链接、图片 credit 和事实说明；未知权利不被写成已获授权。",
+    "page_density_and_tempo": "封面先让一张城市节点图与一张工作桌并置；正文先向外读京都的公共制作，再向内读伦敦的工作档案，最后停在一个仍未封口的动作上。",
+    "core_visual_action": "用未完成的线框、编号、材料标签和不闭合的圆把事实与判断分开：砖红标记进行中的动作，松绿标记可进入的路线，空白保留那些作品尚未替读者回答的部分。",
+    "cover_composition": "雾白底上叠放一张松绿色城市节点图与一张偏移的炭黑工作桌图，砖红线条从图纸伸向桌面；标题横跨两者，右下留一处没有签名的空白。",
+    "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 只提供可关闭的过程注记，正文、事实和外图回链不依赖 JavaScript。",
+    "behance_viewing_arc": "先看制作如何被城市公开，再看制作如何被博物馆保存，最后停在未完成的工作桌上，让读者判断打开后台是否也意味着保留不确定。",
+    "mobile_translation": "390px 下城市节点图与工作桌图改为纵向叠放，线框收成边缘标记，砖红只出现在标题、日期和判断附近；正文单列，图片说明和长链接自然换行。",
+    "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点可见，长链接换行，移动端无横向滚动；线框装饰不覆盖正文和图片说明，外图失败不隐藏来源。",
+    "quiet_ending": "退出处保留一条没有闭合的线和一枚尚未签名的标签，不给箭头，让下一步回到真实的展览、会议和工作方法。",
+    "closing_quotation": {"id":"ct-en-001","language":"en","text":"The last support stays in place. Method is still carrying the result.","credit":"Culture & Taste Editorial"},
+    "closing_palette": {"background":"#EEE9DE","foreground":"#1C201D","accent":"#A84935","rationale":"雾白与炭黑构成长文阅读底，松绿承担入口和来源结构，砖红只提示仍在推进的动作与判断，保持结尾文字和警示色有足够对比。"}
+  },
+  "variation_review": {"comparison_mode":"prior_issues","compared_issue_dates":["2026-10-08","2026-09-22","2026-09-21","2026-09-20","2026-09-17","2026-09-16","2026-09-15"],"repeated_mechanisms":["accessible section index","first-party source image with linked fallback"],"exception_reason":"可访问索引与一手来源图是固定约束；本期改用未完成线框、城市节点图、工作桌圆环与开放档案，不复用最近七期的票根、日历、轨道、孔径、尺度、折页或门框路线。"},
+  "rights_summary": {"required_assets":2,"unknown_required_assets":2,"status":"blocked"},
+  "artifact_digests": {"issue_payload_sha256":null},
+  "evidence_refs": {"technical":[],"editorial_visual":[],"gate":[]},
+  "qa": {"html_parse":"unavailable","assets":"unavailable","internal_links":"unavailable","no_js_reading":"unavailable","desktop_render":"unavailable","mobile_render":"unavailable","reduced_motion":"unavailable"},
+  "limitations": [
+    "Non-production Preview candidate only; this manifest cannot authorize production deployment.",
+    "Canonical private GUAiZzz/harry-tone main was verified at pinned commit 13cd6b7046bd81be396810d2923f3a5dc818e93f; no private material enters this repository.",
+    "Both selected stories use externally hosted first-party official images. Reuse rights remain unknown, so candidate status stays BLOCKED and Preview displays source links with local non-documentary fallbacks.",
+    "Both formal articles include at least ten distinct substantive source URLs in the public package; duplicate URLs and image credits are not counted.",
+    "All five regional lanes, the full 99-subject registry quick scan, the deterministic luxury_runway focus cohort, Friday standing beats and the prior-two-issue lookback were checked; access-limited routes remain recorded in the private ledger and are not treated as article evidence.",
+    "Named editorial, visual, technical and rights review remains unresolved; this candidate does not authorize production deployment."
+  ],
+  "stories": [
+    {
+      "id":"kyoto-youme-making-before-finish-2026","level":"cover","title":"京都先展出制作，再展出完成","image_credit":"Kyōto YouMe Triennale · Preview-linked official image",
+      "english":{"title":"KYOTO PUTS MAKING BEFORE FINISH","deck":"A new triennale makes art, craft and design public through the routes and conversations that produce them.","abstract":"Kyōto YouMe Triennale opens on October 9 across Shōsei-en Garden, Jūshin Kaikan and Kyoto-wide programmes. Reading its distributed making structure as a public cultural interface is editorial interpretation."},
+      "sources":[
+        {"title":"About / Kyoto YouMe Triennale","publisher":"Kyōto YouMe Triennale","url":"https://you-me-kyoto.org/about","published_date":null,"event_date":"2026-10-09/2026-10-18","relationship":"first_party_official"},
+        {"title":"Programme","publisher":"Kyōto YouMe Triennale","url":"https://you-me-kyoto.org/programme","published_date":null,"event_date":"2026-10-09/2026-10-18","relationship":"first_party_official"},
+        {"title":"YouMe Open","publisher":"Kyōto YouMe Triennale","url":"https://you-me-kyoto.org/programme/youmeopen","published_date":null,"event_date":"2026-10-08/2026-10-18","relationship":"first_party_official"},
+        {"title":"Meaning of Making Conference","publisher":"Kyōto YouMe Triennale","url":"https://you-me-kyoto.org/programme/conference","published_date":null,"event_date":"2026-10-11","relationship":"first_party_official"},
+        {"title":"Kyōto YouMe Triennale の開催","publisher":"Kyoto Prefecture","url":"https://www.pref.kyoto.jp/chiikisousei/kyotoyoumetriennale.html","published_date":"2026-09-15","event_date":"2026-10-09/2026-10-18","relationship":"first_party_official"},
+        {"title":"Kyōto YouMe Triennale 2026","publisher":"Politecnico di Milano Department of Design","url":"https://www.dipartimentodesign.polimi.it/en/all-news/kyto-youme-triennale-2026","published_date":null,"event_date":"2026-10-08/2026-10-18","relationship":"first_party_official"},
+        {"title":"YouMe Kyoto Triennale","publisher":"Pentagram","url":"https://www.pentagram.com/work/youme-kyoto-triennale","published_date":null,"event_date":"2026-10","relationship":"independent_reporting"},
+        {"title":"Meaning of Making organiser note","publisher":"Kyōto YouMe Triennale organiser","url":"https://note.com/kyotoyoume2026/n/neddf00cf8914?hl=en","published_date":null,"event_date":"2026-10-11","relationship":"first_party_official"},
+        {"title":"Support","publisher":"Kyōto YouMe Triennale","url":"https://you-me-kyoto.org/support","published_date":null,"event_date":"2026-10","relationship":"first_party_official"},
+        {"title":"参加作家发布","publisher":"DESIGN KYOTO","url":"https://prtimes.jp/main/html/rd/p/000000003.000107542.html","published_date":"2026-09-01","event_date":"2026-10-09/2026-10-18","relationship":"first_party_official"},
+        {"title":"第二次参加者与项目发布","publisher":"DESIGN KYOTO","url":"https://prtimes.jp/main/html/rd/p/000000004.000107542.html","published_date":"2026-09-18","event_date":"2026-10-09/2026-10-18","relationship":"first_party_official"},
+        {"title":"The Future Is Handmade","publisher":"Design Pataki","url":"https://www.designpataki.com/design-news/design-pataki-foundation-brings-indias-crafting-traditions-to-kyoto-youme-triennale-2026/","published_date":"2026-10-09","event_date":"2026-10-09/2026-10-18","relationship":"independent_reporting"}
+      ],
+      "media":{"asset":"assets/kyoto-making-grid.svg","alt":"Original non-documentary diagram of Kyoto making routes","caption":"Kyōto YouMe Triennale 官方媒体；本地 SVG 为原创非纪实制作路线回退图，打开来源查看主展、会议、卫星项目和 Journey。","credit":"Kyōto YouMe Triennale · Preview-linked official image","kind":"source_image","origin_url":"https://you-me-kyoto.org/about","rights_basis":"preview_user_authorized_external","external_image_url":"https://framerusercontent.com/images/WXEagjwtUkMc9N0A6v5Bq1sGxBc.png?height=3032&width=4096","origin_authority":"first_party_official"}
+    },
+    {
+      "id":"es-devlin-other-worlds-process-2026","level":"major","title":"一张工作桌，如何变成一座展览","image_credit":"Design Museum · Preview-linked official image",
+      "english":{"title":"THE WORKDESK BECOMES THE EXHIBITION","deck":"Es Devlin’s first European retrospective turns sketches, models, archives and a studio into a public method.","abstract":"Es Devlin: Other Worlds runs October 2, 2026 to April 4, 2027 at the Design Museum. Reading the workdesk and archive as the exhibition’s argument is editorial interpretation, not an impact claim."},
+      "sources":[
+        {"title":"Es Devlin: Other Worlds","publisher":"Design Museum","url":"https://beta.designmuseum.org/exhibitions/es-devlin-other-worlds","published_date":null,"event_date":"2026-10-02/2027-04-04","relationship":"first_party_official"},
+        {"title":"Press Office","publisher":"Design Museum","url":"https://designmuseum.org/press-office","published_date":null,"event_date":"2026-10-02/2027-04-04","relationship":"first_party_official"},
+        {"title":"Members’ Preview of Es Devlin: Other Worlds","publisher":"Design Museum","url":"https://designmuseum.org/your-membership-archive/your-membership-events-archive/exclusive-events-for-members/members-preview-of-es-devlin-other-worlds","published_date":null,"event_date":"2026-10-01","relationship":"first_party_official"},
+        {"title":"Es Devlin — Information","publisher":"Es Devlin Studio","url":"https://esdevlin.com/information","published_date":null,"event_date":"2026","relationship":"first_party_official"},
+        {"title":"Library of us","publisher":"Es Devlin Studio","url":"https://esdevlin.com/work/projects/library-of-us","published_date":null,"event_date":null,"relationship":"first_party_official"},
+        {"title":"How Es Devlin became the go-to for Beyoncé gigs, fashion runways and the Olympics","publisher":"The Guardian","url":"https://www.theguardian.com/stage/2026/sep/27/stage-designer-es-devlin-design-museum-london-lehman-trilogy","published_date":"2026-09-27","event_date":"2026-10-02/2027-04-04","relationship":"independent_reporting"},
+        {"title":"Es Devlin: Other Worlds","publisher":"Time Out London","url":"https://www.timeout.com/london/museums/es-devlin","published_date":null,"event_date":"2026-10-02/2027-04-04","relationship":"independent_reporting"},
+        {"title":"Fascinating insight into her creative process","publisher":"The Standard","url":"https://www.standard.co.uk/culture/exhibitions/es-devlin-at-the-design-museum-review-b1299352.html","published_date":null,"event_date":"2026-10-02/2027-04-04","relationship":"independent_reporting"},
+        {"title":"The visual diary of a super-achiever","publisher":"The Arts Desk","url":"https://theartsdesk.com/visual-arts/es-devlin-other-worlds-design-museum-review-visual-diary-super-achiever","published_date":null,"event_date":"2026-10-02/2027-04-04","relationship":"independent_reporting"},
+        {"title":"Journey into the Wonderworld of Es Devlin","publisher":"FAD Magazine","url":"https://fadmagazine.com/2026/09/30/es-devlin-other-worlds-design-museum-london/","published_date":"2026-09-30","event_date":"2026-10-02/2027-04-04","relationship":"independent_reporting"},
+        {"title":"Es Devlin at the Design Museum: review","publisher":"Wallpaper*","url":"https://www.wallpaper.com/design-interiors/design-events/es-devlin-design-museum-london","published_date":null,"event_date":"2026-10-02/2027-04-04","relationship":"independent_reporting"},
+        {"title":"Monumental set designs by one of Britain’s best multidisciplinary artists","publisher":"Country Life","url":"https://www.countrylife.co.uk/directory/art-antiques/you-have-to-flow-with-the-moment-where-technology-still-feels-like-magic-meet-the-artist-with-multiple-oliviers-behind-olympic-ceremonies-operas-and-more","published_date":null,"event_date":"2026-10-02/2027-04-04","relationship":"independent_reporting"}
+      ],
+      "media":{"asset":"assets/es-devlin-workdesk.svg","alt":"Original non-documentary diagram of Es Devlin's workdesk and archive","caption":"Design Museum 官方展览媒体；本地 SVG 为原创非纪实工作桌与档案回退图，打开来源查看 studio、Archive Unboxed、30-Year Desk 与 Infinite Library。","credit":"Design Museum · Preview-linked official image","kind":"source_image","origin_url":"https://beta.designmuseum.org/exhibitions/es-devlin-other-worlds","rights_basis":"preview_user_authorized_external","external_image_url":"https://beta.designmuseum.org/image/6592ae3c-3a16-487a-831c-4495e80cbba4?height=606&width=980","origin_authority":"first_party_official"}
+    }
+  ]
+}
