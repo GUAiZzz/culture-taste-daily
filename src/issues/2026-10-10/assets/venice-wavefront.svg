@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original listening wavefront diagram</title>
+  <desc id="desc">Concentric cyan wavefronts and acid listening points on a midnight field.</desc>
+  <rect width="1200" height="760" fill="#0F172A"/>
+  <g fill="none" stroke="#56D6D1" stroke-width="5" opacity=".92">
+    <circle cx="420" cy="372" r="86"/><circle cx="420" cy="372" r="160"/><circle cx="420" cy="372" r="240"/><circle cx="420" cy="372" r="330"/><circle cx="420" cy="372" r="430"/>
+  </g>
+  <path d="M0 620H1200M90 80L1090 690M170 0L1200 530" fill="none" stroke="#64748B" stroke-width="2" opacity=".65"/>
+  <g fill="#F3E93C">
+    <circle cx="420" cy="372" r="13"/><circle cx="792" cy="302" r="10"/><circle cx="931" cy="520" r="10"/>
+  </g>
+  <path d="M792 302H1065M931 520H1140" stroke="#FF6B57" stroke-width="7"/>
+  <text x="78" y="112" fill="#F4F0E8" font-family="monospace" font-size="28" letter-spacing="6">LISTENING FIELD / 01</text>
+  <text x="78" y="690" fill="#56D6D1" font-family="monospace" font-size="20" letter-spacing="4">ORIGINE · ARCADIA · COLLEGE</text>
+</svg>

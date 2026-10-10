@@ -1,0 +1,17 @@
+{
+  "dominant_mood": "午夜蓝的听觉场里，酸黄标出进入条件，珊瑚红只留下正在发生的脉冲：不是舞台海报，而是一张可以跟着走的声场地图。",
+  "background_logic": "威尼斯向内收听，首尔向外行走；本期用同心波前、短促刻度和不闭合导线组织事实，不复用最近七期的工作台、透明叠片、字段卡、折页、剪影框、材料样片或门框路线。",
+  "palette_logic": "midnight #0F172A, cloud #F4F0E8, cyan #56D6D1, acid #F3E93C, coral #FF6B57, slate #64748B。",
+  "type_scale_logic": "标题像演出前的场记信号，正文保持 18px；时间、场地、预约状态和来源使用等宽字。",
+  "image_behavior": "两张一手官方媒体以 Preview 外链显示，本地 SVG 是原创非纪实回退图，权利未清。",
+  "page_density_and_tempo": "先进入威尼斯的听觉条件，再沿首尔的路线行走，最后回到当天雷达的短时脉冲。",
+  "core_visual_action": "同心波前与短促刻度把事实和判断分开；青色可追溯，酸黄可进入，珊瑚时间敏感。",
+  "cover_composition": "午夜蓝底上放偏心同心圆，酸黄切线进入，珊瑚点落在未完成的圆环上。",
+  "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻，正文与外图回链不依赖 JavaScript。",
+  "behance_viewing_arc": "先听，再走，再回到当天脉冲，区分入口和影响。",
+  "mobile_translation": "390px 下波前图改为纵向声柱，正文单列，长链接自然换行。",
+  "mobbin_usability_constraint": "目标不少于 44px，details 焦点可见，无横向滚动，外图失败不隐藏来源。",
+  "quiet_ending": "退出处保留一段没有回到圆心的青色导线和一枚没有落点的酸黄刻度。",
+  "closing_quotation": {"id":"ct-en-008","language":"en","text":"An entrance is already an editorial decision.","credit":"Culture & Taste Editorial"},
+  "closing_palette": {"background":"#0F172A","foreground":"#F4F0E8","accent":"#F3E93C","rationale":"午夜蓝与云白构成长文对比，青色承担入口和来源结构，酸黄提示可进入动作，珊瑚提示时间敏感与权利未决。"}
+}
