@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Asia Culture Week table</title>
+  <desc id="desc">An original non-documentary diagram of a shared table with four material and cultural entry points.</desc>
+  <rect width="1200" height="760" fill="#F5EBDD"/>
+  <rect x="178" y="208" width="844" height="344" rx="38" fill="#FFFDF8" stroke="#18242D" stroke-width="10"/>
+  <path d="M600 208V552M178 380H1022" stroke="#245BFF" stroke-width="8" stroke-dasharray="16 18"/>
+  <g fill="#FF6B4A" stroke="#18242D" stroke-width="7">
+    <circle cx="370" cy="292" r="55"/><circle cx="830" cy="292" r="55"/><circle cx="370" cy="468" r="55"/><circle cx="830" cy="468" r="55"/>
+  </g>
+  <g font-family="monospace" font-size="28" font-weight="700" fill="#18242D" text-anchor="middle">
+    <text x="370" y="302">TEA</text><text x="830" y="302">COFFEE</text><text x="370" y="478">FERMENT</text><text x="830" y="478">MUSIC</text>
+  </g>
+  <path d="M115 640H1085" stroke="#245BFF" stroke-width="16"/>
+  <g fill="#18242D" font-family="Arial,sans-serif" font-size="34" font-weight="700"><text x="180" y="116">SEE</text><text x="480" y="116">LISTEN</text><text x="790" y="116">MAKE</text></g>
+  <circle cx="1040" cy="115" r="30" fill="#FF6B4A" stroke="#18242D" stroke-width="7"/>
+</svg>

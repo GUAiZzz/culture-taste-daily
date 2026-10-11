@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Taoyuan city interface</title>
+  <desc id="desc">An original non-documentary diagram joining two city nodes, a transit line and five smaller satellites.</desc>
+  <rect width="1200" height="760" fill="#F5EBDD"/>
+  <path d="M95 598 C205 480 240 330 392 276 S625 208 738 304 S958 486 1110 130" fill="none" stroke="#245BFF" stroke-width="18"/>
+  <path d="M95 598 C205 480 240 330 392 276 S625 208 738 304 S958 486 1110 130" fill="none" stroke="#FFFDF8" stroke-width="4" stroke-dasharray="18 22"/>
+  <g fill="#FF6B4A" stroke="#18242D" stroke-width="7">
+    <circle cx="208" cy="484" r="32"/><circle cx="735" cy="303" r="42"/><circle cx="1035" cy="202" r="28"/>
+    <circle cx="384" cy="277" r="20"/><circle cx="520" cy="221" r="20"/><circle cx="610" cy="244" r="20"/><circle cx="838" cy="371" r="20"/><circle cx="935" cy="435" r="20"/>
+  </g>
+  <g font-family="monospace" font-size="26" font-weight="700" fill="#18242D">
+    <text x="126" y="650">QINGPU</text><text x="680" y="374">ZHONGLI</text><text x="978" y="106">A9 / RE:CODE</text>
+    <text x="390" y="160">A5</text><text x="536" y="170">A6</text><text x="614" y="320">A7</text><text x="842" y="450">A12</text><text x="944" y="510">A13</text>
+  </g>
+  <rect x="70" y="70" width="360" height="96" fill="#18242D"/>
+  <text x="100" y="130" fill="#FFFDF8" font-family="Arial,sans-serif" font-size="36" font-weight="700">CITY / ROUTE / USE</text>
+</svg>

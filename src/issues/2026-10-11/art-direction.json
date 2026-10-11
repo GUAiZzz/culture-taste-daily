@@ -1,0 +1,17 @@
+{
+  "dominant_mood": "暖纸色的城市底图上，交通蓝负责把人带进来，朱红只标出仍在发生的时间：不是展览海报，而是一张可以被走完、试过、带回日常的公共接口图。",
+  "background_logic": "桃园的路线图与光州的餐桌图并置；一条不闭合的蓝线穿过展区、车站和共享桌面，保留空白让事实与判断不互相冒充，不复用最近七期的工作台、透明叠片、字段卡、折页、剪影框、材料样片、门框路线或同心波前。",
+  "palette_logic": "paper #F5EBDD, ink #18242D, transit_blue #245BFF, vermilion #FF6B4A, leaf #86A66B, chalk #FFFDF8。纸色承载长文，墨黑承载正文，交通蓝组织来源与移动，朱红只提示当天与权利未决，叶绿只留给公共入口状态。",
+  "type_scale_logic": "标题像城市导视系统上的大号方向标，正文保持 18px；编号、时段和来源使用等宽字，英文只承担 title、deck 与 abstract，长标题自然断行。",
+  "image_behavior": "两张一手官方媒体以 Preview 外链显示；本地 SVG 是原创非纪实路线与餐桌回退图，外图失败时仍保留来源链接、图片 credit 和事实说明；未知权利不被写成已获授权。",
+  "page_density_and_tempo": "先沿桃园两点一线进入设计，再在光州共享桌面停留，最后把入口条件还给读者，不把两项公共文化活动提前写成成功故事。",
+  "core_visual_action": "蓝色路线线同时成为索引、来源锚点和移动提示；朱红节点只承担时间、边界与未知权利，不让装饰替结论背书。",
+  "cover_composition": "暖纸底上放一条从左下进入、在中部折返的蓝色路线，两个城市节点以朱红小圆标出，右侧留一张未填满的共享桌面。",
+  "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 只提供可关闭的路线注记，正文、事实和外图回链不依赖 JavaScript。",
+  "behance_viewing_arc": "先走桃园，再坐到光州的桌边，最后停在一个尚未闭合的入口上，区分公共条件和影响判断。",
+  "mobile_translation": "390px 下路线图改为纵向节点线，餐桌图改为上下分区，正文单列，图片说明和长链接自然换行。",
+  "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点可见，长链接换行，移动端无横向滚动；路线装饰不覆盖正文和图片说明，外图失败不隐藏来源。",
+  "quiet_ending": "退出处保留一条没有回到起点的蓝线和一块尚未摆满的桌面，不替读者宣布已经产生影响。",
+  "closing_quotation": {"id":"ct-en-008","language":"en","text":"An entrance is already an editorial decision.","credit":"Culture & Taste Editorial"},
+  "closing_palette": {"background":"#F5EBDD","foreground":"#18242D","accent":"#C7432B","rationale":"暖纸色与墨黑构成长文阅读对比，交通蓝承担路线与来源结构，深朱红提示当天、判断与权利未决，符合结尾文字对比度门禁。"}
+}
