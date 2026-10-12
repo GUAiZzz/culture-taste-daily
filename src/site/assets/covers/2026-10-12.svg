@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">文化项目要先把入口做出来</title>
+  <desc id="desc">A non-documentary editorial cover with two open cultural routes from Venice to Kyoto.</desc>
+  <rect width="1600" height="1000" fill="#EEE9DE"/>
+  <path d="M-80 790 C190 610 280 880 520 630 S820 160 1030 360 S1350 710 1700 190" fill="none" stroke="#2448D8" stroke-width="34"/>
+  <path d="M-40 220 H300 V820 H720 V480 H1180 V920 H1700" fill="none" stroke="#5A3E8E" stroke-width="26"/>
+  <g fill="#EEE9DE" stroke="#101820" stroke-width="12">
+    <circle cx="230" cy="670" r="34"/><circle cx="520" cy="630" r="34"/><circle cx="850" cy="365" r="34"/><circle cx="1200" cy="610" r="34"/><circle cx="1460" cy="350" r="34"/>
+  </g>
+  <rect x="90" y="86" width="510" height="180" fill="#101820"/>
+  <text x="126" y="158" font-family="Arial,sans-serif" font-size="56" font-weight="900" fill="#EEE9DE">入口先于</text>
+  <text x="126" y="224" font-family="Arial,sans-serif" font-size="56" font-weight="900" fill="#C9F05A">结论</text>
+  <rect x="1230" y="100" width="230" height="70" fill="#C9F05A" transform="rotate(4 1230 100)"/>
+  <text x="1268" y="145" font-family="monospace" font-size="28" font-weight="700" fill="#101820">10—12—26</text>
+  <rect x="1040" y="770" width="360" height="66" fill="#E86B4A" transform="rotate(-4 1040 770)"/>
+  <text x="1094" y="813" font-family="monospace" font-size="26" font-weight="700" fill="#101820">VENICE / KYOTO</text>
+</svg>
