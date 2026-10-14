@@ -1,0 +1,11 @@
+body[data-issue="2026-10-09"] { --issue-bg: #EEE9DE; --issue-ink: #1C201D; --issue-brick: #A84935; --issue-pine: #245247; --issue-paper: #FAF7F0; --issue-graphite: #69706A; }
+body[data-issue="2026-10-09"] .issue-cover { background: var(--issue-bg); color: var(--issue-ink); }
+body[data-issue="2026-10-09"] .issue-cover-visual { background: var(--issue-pine); color: var(--issue-paper); }
+body[data-issue="2026-10-09"] .issue-cover-visual:before { content: "WORK / ROUTE / ARCHIVE"; color: var(--issue-brick); }
+body[data-issue="2026-10-09"] .issue-story:nth-of-type(odd) { background: var(--issue-paper); }
+body[data-issue="2026-10-09"] .issue-story:nth-of-type(even) { background: var(--issue-bg); }
+body[data-issue="2026-10-09"] .story-marker, body[data-issue="2026-10-09"] .story-stage-label { color: var(--issue-brick); }
+body[data-issue="2026-10-09"] .story-source-list a, body[data-issue="2026-10-09"] .source-image-link { color: var(--issue-pine); }
+body[data-issue="2026-10-09"] .daily-coda { background: var(--issue-pine); color: var(--issue-paper); }
+body[data-issue="2026-10-09"] .daily-coda h2 { color: var(--issue-paper); }
+@media (max-width: 600px) { body[data-issue="2026-10-09"] .issue-cover-visual { min-height: 320px; } }
