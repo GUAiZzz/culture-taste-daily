@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-12",
+  "coverage": {
+    "verified_at": "2026-10-12T11:22:15+08:00",
+    "regional_lanes_checked": ["mainland_china_plus_hong_kong_or_taiwan","japan_or_korea","continental_europe_or_united_kingdom","united_states_or_canada","rotating_global_lane"],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "european_contemporary",
+    "focus_subjects_checked": ["Our Legacy","Stone Island","C.P. Company","Martine Rose","Wales Bonner","Dries Van Noten","Lemaire"],
+    "standing_beats_checked": ["stussy-release-radar","luxury-runway-calendar","exhibition-and-cultural-programme-radar","small-breakout-object-radar"],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {"id":"venice-route-fashion","category":"fashion","included_story_id":"venice-biennale-musica-2026"},
+    {"id":"kyoto-route-fashion","category":"fashion","included_story_id":"kyoto-youme-triennale-2026"},
+    {"id":"venice-a-child-of-sound","category":"music","included_story_id":"venice-biennale-musica-2026"},
+    {"id":"venice-musica-libera","category":"music","included_story_id":"venice-biennale-musica-2026"},
+    {"id":"kyoto-thinking-hands","category":"music","included_story_id":"kyoto-youme-triennale-2026"},
+    {"id":"kyoto-jushin-floors","category":"objects","included_story_id":"kyoto-youme-triennale-2026"},
+    {"id":"venice-origine-arcadia","category":"objects","included_story_id":"venice-biennale-musica-2026"},
+    {"id":"kyoto-future-is-handmade","category":"objects","included_story_id":"kyoto-youme-triennale-2026"},
+    {"id":"venice-ca-giustinian-route","category":"city","included_story_id":"venice-biennale-musica-2026"},
+    {"id":"kyoto-youme-open-route","category":"city","included_story_id":"kyoto-youme-triennale-2026"}
+  ]
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Kyoto craft route</title>
+  <desc id="desc">A non-documentary violet and lime route with open stops for the Kyoto YouMe Triennale programme.</desc>
+  <rect width="1200" height="800" fill="#EEE9DE"/>
+  <path d="M130 180 L310 180 L310 580 L540 580 L540 270 L790 270 L790 650 L1080 650" fill="none" stroke="#5A3E8E" stroke-width="28"/>
+  <path d="M130 180 L310 180 L310 580 L540 580 L540 270 L790 270 L790 650 L1080 650" fill="none" stroke="#C9F05A" stroke-width="7" stroke-dasharray="2 24"/>
+  <g fill="#EEE9DE" stroke="#101820" stroke-width="10">
+    <circle cx="130" cy="180" r="30"/><circle cx="310" cy="580" r="30"/><circle cx="540" cy="270" r="30"/><circle cx="790" cy="650" r="30"/>
+  </g>
+  <rect x="100" y="690" width="260" height="48" fill="#2448D8" transform="rotate(-3 100 690)"/>
+  <text x="125" y="722" font-family="monospace" font-size="20" font-weight="700" fill="#EEE9DE">WALK / MAKE / RETURN</text>
+  <rect x="820" y="90" width="190" height="72" fill="#E86B4A" transform="rotate(5 820 90)"/>
+  <text x="850" y="136" font-family="Arial,sans-serif" font-size="29" font-weight="800" fill="#101820">8—18 OCT</text>
+</svg>
