@@ -13,5 +13,6 @@
   "behance_viewing_arc": "entry, proof, boundary, release",
   "mobile_translation": "single column",
   "mobbin_usability_constraint": "clear links and visible focus",
-  "quiet_ending": "previous good remains selected"
+  "quiet_ending": "previous good remains selected",
+  "closing_palette": {"background":"#F1F0E8","foreground":"#111111","accent":"#2457C5","rationale":"A quiet paper field keeps the synthetic fixture readable while one blue signal marks the selected previous good."}
 }

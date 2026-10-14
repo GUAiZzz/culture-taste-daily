@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Curatorial seat map</title>
+  <desc id="desc">An original seating chart that shifts selection and sequencing toward lived experience.</desc>
+  <rect width="1200" height="720" fill="#f5f0e6"/>
+  <g stroke="#101552" stroke-width="8" fill="none"><rect x="115" y="140" width="300" height="380"/><rect x="450" y="140" width="300" height="380"/><rect x="785" y="140" width="300" height="380"/></g>
+  <g fill="#ff5a1f"><circle cx="265" cy="330" r="74"/><circle cx="600" cy="330" r="74"/><circle cx="935" cy="330" r="74"/></g>
+  <path d="M415 330h35M750 330h35" stroke="#101552" stroke-width="12"/>
+  <text x="115" y="100" fill="#101552" font-family="monospace" font-size="28" letter-spacing="5">SELECTION / ORDER / CREDIT</text>
+  <text x="150" y="600" fill="#101552" font-family="Arial, sans-serif" font-size="34" font-weight="700">THE ROOM CHANGES WHEN THE SEAT MOVES</text>
+</svg>
+

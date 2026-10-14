@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-04",
+  "coverage": {
+    "verified_at": "2026-09-04T14:22:00+08:00",
+    "regional_lanes_checked": ["mainland_china_plus_hong_kong_or_taiwan", "japan_or_korea", "continental_europe_or_united_kingdom", "united_states_or_canada", "rotating_global_lane"],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "luxury_runway",
+    "focus_subjects_checked": ["Balenciaga", "Bode", "Cartier", "Casablanca", "Chanel", "Chrome Hearts", "Givenchy", "Goyard", "Kenzo", "Loro Piana", "Marni", "Bottega Veneta", "Prada", "Tiffany & Co.", "Loewe", "Miu Miu", "Rick Owens", "SKIMS", "HOMME PLISSÉ ISSEY MIYAKE", "Entire Studios"],
+    "standing_beats_checked": ["stussy-release-radar", "luxury-runway-calendar", "exhibition-and-cultural-programme-radar", "small-breakout-object-radar"],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {"id":"simone-rocha-adidas-fw26-radar","category":"fashion","included_story_id":"simone-rocha-adidas-fw26"},
+    {"id":"adidas-virginia-watermoc-september-five","category":"fashion","title":"adidas x Pharrell Williams Virginia Watermoc Pack","deck":"A 2000s Adventure Water Moc reference becomes a blue, yellow and black release for 5 September.","publisher":"adidas Newsroom","official_url":"https://news.adidas.com/originals/adidas-originals-and-pharrell-williams-launch-the-virginia-watermoc-pack/s/17ef87a1-c136-43f0-a9ed-ab4c3842a418","published_date":"2026-08-31","event_date":"2026-09-05","media":{"kind":"image","url":"https://preview.thenewsmarket.com/Previews/ADID/StillAssets/1920x1080/730799.jpg","alt":"Official adidas Pharrell Williams Virginia Watermoc campaign image","credit":"adidas Newsroom · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}},
+    {"id":"adela-prima-release-radar","category":"music","included_story_id":"adela-prima-release"},
+    {"id":"stolen-days-september-four","category":"music","title":"Stolen Days LP","deck":"The Kickdrums and Dub Sonata release a 10-track album through a Bandcamp-first physical and digital object.","publisher":"Dub Sonata / Bandcamp","official_url":"https://dubsonata.bandcamp.com/album/stolen-days","published_date":"2026-09-04","event_date":"2026-09-04","media":{"kind":"image","url":"https://f4.bcbits.com/img/a0277024321_3.jpg","alt":"Official Stolen Days album artwork","credit":"The Kickdrums & Dub Sonata · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}},
+    {"id":"amor-fati-september-four","category":"music","title":"Amor Fati","deck":"Sibille Attar's self-produced album arrives with a limited PNKSLM red and black galaxy vinyl edition.","publisher":"Sibille Attar / Bandcamp","official_url":"https://sibilleattar.bandcamp.com/album/amor-fati","published_date":"2026-09-04","event_date":"2026-09-04","media":{"kind":"image","url":"https://f4.bcbits.com/img/a2997015883_3.jpg","alt":"Official Sibille Attar Amor Fati album artwork","credit":"Sibille Attar · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}},
+    {"id":"dyson-nurovi-method-radar","category":"objects","included_story_id":"dyson-nurovi-method"},
+    {"id":"dyson-airsmooth-september-three","category":"objects","title":"Dyson Airsmooth","deck":"Dyson introduces a dedicated hot-air brush built around PivotFlex and anti-snag bristles.","publisher":"Dyson Newsroom","official_url":"https://www.dyson.com/discover/news/latest/introducing-airsmooth","published_date":"2026-09-03","event_date":"2026-09-03","media":{"kind":"image","url":"https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/products/beauty/hot-brushes/airsmooth/ceramic-pink/rcc/922_Web_Newsroom_Hero.jpg?%24responsive%24=","alt":"Official Dyson Airsmooth product image","credit":"Dyson Newsroom · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}},
+    {"id":"detroit-global-diasporas-design-radar","category":"city","included_story_id":"detroit-global-diasporas-design"},
+    {"id":"prishtina-materials-futures-radar","category":"city","included_story_id":"prishtina-materials-futures"},
+    {"id":"landscape-festival-bergamo-september-four","category":"city","title":"Landscape Festival Bergamo","deck":"Bergamo's festival turns landscape culture into a public conversation about nature, community and the city.","publisher":"Landscape Festival","official_url":"https://www.landscapefestival.it/en","published_date":null,"event_date":"2026-09-04/2026-09-20","media":{"kind":"image","url":"https://static.wixstatic.com/media/1e432f_778d32239e0542f08ad12fd53e918d7e~mv2.png/v1/fill/w_980%2Ch_980%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/1e432f_778d32239e0542f08ad12fd53e918d7e~mv2.png","alt":"Official Landscape Festival Bergamo image","credit":"Landscape Festival · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}}
+  ]
+}

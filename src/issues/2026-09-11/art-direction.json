@@ -1,0 +1,17 @@
+{
+  "dominant_mood": "暖纸色底上的深墨绿、朱砂红和酸橙线，像一张把入口、休息点与身体路径标出来的现场平面图",
+  "background_logic": "页面不再模拟被观看的对象，而把入口画成一种可读的基础设施：错开的门框、短促的定位线和留给身体的空白共同组成路线；不复用最近七期的门槛、曲线、物件/参与关系图、测量脊、证明表、脚手架、日历轴、节目单轨道或孔径窗口。",
+  "palette_logic": "warm paper #F3E9DC, deep ink #123C3A, vermilion #E45B3C, acid lime #B7CF73, graphite #1D2422；纸色承载阅读，墨绿负责结构，朱砂只标记动作，酸橙只标记入口和停顿，不把低对比装饰色交给正文。",
+  "type_scale_logic": "标题像贴在门口的方向牌，正文保持 18px；编号采用等宽字贴近路径边缘，英文只承担标题、deck 与 abstract。",
+  "image_behavior": "六张一手官方媒体以 Preview 外链显示；C/O Berlin 的官方编辑许可已单独核验，并保留一份本地回退图；所有图片都保留来源回链，外图失败时回到本地原创非纪实入口图。",
+  "page_density_and_tempo": "封面先给一条断开的进入路线，正文从休息与触摸的基础设施开始，经过图像展览的开场、运动服的集体画面、专辑的可编辑版本，再进入漫画展与深圳的跨传统音乐编排，最后把路线留空。",
+  "core_visual_action": "用错位的门框和有意留出的空白，让读者先看到入口条件，再看到对象本身；每个故事都像路线图上的一个可停靠节点，而不是被连成单一轨道。",
+  "cover_composition": "纸色底上叠放四个不对齐的深墨绿门框，朱砂红标记一个刚被打开的转角，酸橙线只指向下一步，深色短线把路线切断而不闭合成迷宫。",
+  "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 提供可关闭的 route notes，正文、事实、来源和外图回链不依赖 JavaScript。",
+  "behance_viewing_arc": "先进入一个愿意让人坐下的展览，再看 C/O Berlin 如何为图像安排开场，转到 Simone Rocha 把运动鞋放进集体画面，听 Sylvan Esso 把专辑交付成一套可继续工作的格式，最后在京都和深圳看不同传统如何找到公共入口。",
+  "mobile_translation": "390px 下门框压缩为左侧连续的错位竖线，朱砂转角变成边缘标签，正文保持单列，图片说明与长链接允许自然换行。",
+  "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点可见，长链接换行，外图失败不隐藏来源，移动端无横向滚动；装饰路径不覆盖正文和图片说明。",
+  "quiet_ending": "退出处只保留一条没有箭头的酸橙短线和一块空纸色，让读者判断下一步是否需要亲自进入。",
+  "closing_quotation": {"id":"ct-en-008","language":"en","text":"An entrance is already an editorial decision.","credit":"Culture & Taste Editorial"},
+  "closing_palette": {"background":"#F3E9DC","foreground":"#123C3A","accent":"#C84B30","rationale":"暖纸色与深墨绿构成稳定的长文对比，深朱砂只承担行动提示；酸橙用于稀疏结构标记，避免让小字号文字承受低对比装饰色。"}
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Doha Pavilion silhouette stage</title><desc id="desc">An original abstract hexagonal stage with an indigo shell and vermilion reflective center.</desc>
+  <rect width="1200" height="800" fill="#F3EFE3"/><path d="M600 77 971 289v423H229V289z" fill="#172033"/>
+  <path d="M600 125 899 298v347H301V298z" fill="#243B8A"/><path d="m600 189 196 113v228L600 643 404 530V302z" fill="#C74A36"/>
+  <path d="m600 246 116 66v133l-116 67-116-67V312z" fill="#E1D454"/><path d="M600 77v566M229 289l371 215 371-215M229 712l371-208 371 208" fill="none" stroke="#F3EFE3" stroke-width="6" opacity=".8"/>
+  <circle cx="600" cy="404" r="34" fill="#172033"/><path d="M95 115h142M963 115h142" stroke="#C74A36" stroke-width="8" stroke-dasharray="18 14"/>
+</svg>

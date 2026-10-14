@@ -1,0 +1,435 @@
+{
+  "art_direction": {
+    "background_logic": "以未填满的纸面和开放网格承载八个入口，不使用最近七期的闭合地图、路线钟表、房间平面、proof sheet 或坐标斜线；空白是事实与判断之间的缓冲带",
+    "behance_viewing_arc": "从封套进入无手机房间，向下穿过展厅和身体动作，再沿曲目阶段、生态作品、驻留标题与声音装置走到一个公共桌面；八个入口不是清单，而是一条开放的工作台",
+    "closing_palette": {
+      "accent": "#2055D6",
+      "background": "#E8E1D4",
+      "foreground": "#18202A",
+      "rationale": "灰白工作纸保留入口的开放性，深墨让判断站稳，钴蓝只画出可以真正走入的路径。"
+    },
+    "core_visual_action": "把每个发布动作画成一条没有封口的入口线：它从官方事实出发，经过一个可感知的条件，最后停在仍需人来完成的地方",
+    "cover_composition": "左侧是竖排大标题与一段判断，右侧是八个错位的开放矩形和一条贯穿的砖红手绘线；不使用最近三期的地图、钟面、房间块或八点斜线",
+    "desktop_interaction_mechanic": "顶部索引采用可折叠原生 details；卡片锚点、来源、图像回链和全文不依赖 JavaScript，色块只标记入口类型，不隐藏正文",
+    "dominant_mood": "一张摊开的灰白工作纸：蓝色铅笔、酸橙便签和温暖的砖红线，把抽象发布拆成几个可以走进去的入口",
+    "image_behavior": "八张一手官方媒体以外链形式进入，统一显示 Preview-only、来源页回链与权利提示；本地 SVG 只作为失图时的原创对象图解，不假装是纪实原图",
+    "mobbin_usability_constraint": "所有外链图像和按钮至少 44px、焦点可见；图片失败时仍显示来源页链接与权利状态；无 JavaScript 时全文、索引和退出段落完整可读",
+    "mobile_translation": "桌面网格在 390px 变成单列入口条，矩形不横向伸出视口；封面标题、导航和图片说明都在窄屏内保留清晰层级",
+    "page_density_and_tempo": "先用两张唱片说明包装与房间，再把阅读速度放慢到照护劳动，随后让鞋、人生阶段、生态作品、驻留展览和声音装置把身体、顺序与公共空间接回来",
+    "palette_logic": "warm paper #F4F0E6, ink #18202A, cobalt #2055D6, lime #D2E85B, brick #B64B38, lavender #D9D2E6, graphite #69727A",
+    "quiet_ending": "不把入口包装成答案：发布只在对象被人真正进入的那一刻开始",
+    "type_scale_logic": "封面用窄体大字切成两块，正文 18px 保持长段落呼吸；蓝色编号和酸橙标签承担视觉导航，中文标题控制在短句和两到三行"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": "b63b65eab0ff92dce45947a7b6631df0ac5b18ded022b9e70ac02d5bfc08565f"
+  },
+  "candidate_created_at": "2026-08-28T14:38:50+08:00",
+  "content_lock": {
+    "locked_at": "2026-08-28T14:38:50+08:00",
+    "sha256": "3b025dae0bb6b278fe4ed50c2d69ad247abaec23fbfbe25fc408bcffeb159c8e",
+    "status": "locked"
+  },
+  "content_locked_at": "2026-08-28T14:38:50+08:00",
+  "contract": {
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "repository": "GUAiZzz/culture-taste-daily"
+  },
+  "core_version": "v2",
+  "editorial_position": "发布不是把信息推到页面上；它要交代一个能被进入的现场，让对象真正被交到人手上。",
+  "evidence_refs": {
+    "editorial_visual": [],
+    "gate": [],
+    "technical": []
+  },
+  "harrytone": {
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-08-28T11:21:29+08:00",
+    "repository": "GUAiZzz/harry-tone"
+  },
+  "issue_id": "2026-08-28",
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "limitations": [
+    "Daily candidate and non-production Preview input only; this manifest cannot authorize deployment.",
+    "Canonical private GUAiZzz/harry-tone main was verified at pinned commit 13cd6b7046bd81be396810d2923f3a5dc818e93f from a fresh ephemeral workspace; no private material enters this repository.",
+    "All eight selected stories use externally hosted first-party official images linked to their official origin pages. Reuse rights remain unknown, so production stays blocked; the visible local SVGs are original non-documentary fallback diagrams only.",
+    "All five regional lanes, the full 99-subject registry quick scan, the luxury_runway focus cohort, Stüssy daily, luxury runway, exhibition/programme and small-object standing beats were checked. The public radar has 14 distinct items with 4 fashion, 3 music, 2 objects and 5 city items; the prior-two-issue lookback is disclosed in private evidence.",
+    "Named human editorial, visual, cultural-appropriateness and image-rights review is unresolved. No Preview dispatch, merge, Pages deployment or production action is authorized."
+  ],
+  "media_required": true,
+  "publication_date": "2026-08-28",
+  "qa": {
+    "accessibility": "unavailable",
+    "assets": "unavailable",
+    "desktop_render": "unavailable",
+    "html_parse": "unavailable",
+    "internal_links": "unavailable",
+    "mobile_render": "unavailable",
+    "no_js_reading": "unavailable",
+    "reduced_motion": "unavailable"
+  },
+  "research_locked_at": "2026-08-28T14:38:50+08:00",
+  "rights_summary": {
+    "required_assets": 8,
+    "status": "blocked",
+    "unknown_required_assets": 8
+  },
+  "schema_version": 2,
+  "source_hashes": {
+    "art_direction_sha256": "e2310fc7a560433f5714a2225ddec858601b11a64422112b0b4a9e765c8714c9",
+    "content_sha256": "3b025dae0bb6b278fe4ed50c2d69ad247abaec23fbfbe25fc408bcffeb159c8e",
+    "issue_style_sha256": "12ac3e3983038269c57ab81038341bce4c8930a8c0c89a8a2b4b944aa1f2fdd6"
+  },
+  "status": "BLOCKED",
+  "stories": [
+    {
+      "english": {
+        "abstract": "The official release identifies the 28 August date and an 18-month Dallas/Los Angeles process with phone-free live testing; independent context confirms the release path without forecasting reception.",
+        "deck": "A phone-free room becomes the first instrument of a collaborative album.",
+        "title": "THE ROOM IS PART OF THE RECORD"
+      },
+      "id": "erykah-badu-before-world-blows",
+      "image_credit": "PR Newswire official press photo / Preview-linked",
+      "level": "cover",
+      "media": {
+        "alt": "Official PR Newswire press photo for Erykah Badu and The Alchemist",
+        "asset": "assets/erykah-stage.svg",
+        "caption": "PR Newswire official press photo; click through to the release page.",
+        "credit": "PR Newswire / Erykah Badu & The Alchemist · Preview-linked official image",
+        "external_image_url": "https://mmx.prnewswire.com/media/MS1969348/The-Alchemist-and-Erykah-Badu.jpg?id=OA2883066&w=500",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.prnewswire.com/news-releases/erykah-badu--the-alchemist-announce-collaborative-album-will-release-on-friday-28-august-2026-302851054.html",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-28",
+          "published_date": "2026-08-13",
+          "publisher": "PR Newswire / Erykah Badu & The Alchemist",
+          "relationship": "first_party_official",
+          "title": "Erykah Badu & The Alchemist Announce Collaborative Album",
+          "url": "https://www.prnewswire.com/news-releases/erykah-badu--the-alchemist-announce-collaborative-album-will-release-on-friday-28-august-2026-302851054.html"
+        },
+        {
+          "event_date": "2026-08-28",
+          "published_date": null,
+          "publisher": "Control FREAQ",
+          "relationship": "first_party_official",
+          "title": "Before The World Blows",
+          "url": "https://controlfreaq.bandcamp.com/album/before-the-world-blows"
+        },
+        {
+          "event_date": "2026-08-28",
+          "published_date": "2026-08-17",
+          "publisher": "Pitchfork",
+          "relationship": "independent_reporting",
+          "title": "Erykah Badu and The Alchemist Finally Releasing Joint Album This Month",
+          "url": "https://pitchfork.com/story/erykah-badu-and-the-alchemist-finally-releasing-joint-album-this-month/"
+        }
+      ],
+      "title": "先有一间无手机的房间，才有这张合唱片"
+    },
+    {
+      "english": {
+        "abstract": "The official store lists the 28 August vinyl release and its gatefold, lyric poster and photocard components; an independent review supplies listening context without claiming a cultural breakthrough.",
+        "deck": "A record arrives with a sequence of physical actions.",
+        "title": "OPEN / TURN / KEEP"
+      },
+      "id": "the-warning-everythings-falling",
+      "image_credit": "The Warning official vinyl product image / Preview-linked",
+      "level": "major",
+      "media": {
+        "alt": "Official The Warning Everything’s Falling release artwork",
+        "asset": "assets/warning-vinyl.svg",
+        "caption": "The Warning official release artwork; click through to the official store detail page.",
+        "credit": "The Warning · Preview-linked official image",
+        "external_image_url": "https://linkstorage.linkfire.com/medialinks/images/4a4d8d0c-8ecb-4c01-8eae-2740fde0beec/artwork-440x440.jpg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://shopuk.thewarningband.com/products/everything-s-falling-vinyl",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-28",
+          "published_date": null,
+          "publisher": "The Warning",
+          "relationship": "first_party_official",
+          "title": "Everything’s Falling Vinyl",
+          "url": "https://shopuk.thewarningband.com/products/everything-s-falling-vinyl"
+        },
+        {
+          "event_date": "2026-08-28",
+          "published_date": "2026-08-27",
+          "publisher": "Soundboard Reviews",
+          "relationship": "independent_reporting",
+          "title": "Album Review: The Warning — Everything’s Falling",
+          "url": "https://thesoundboardreviews.com/2026/08/27/album-review-the-warning-everythings-falling/"
+        }
+      ],
+      "title": "The Warning 把一张专辑做成必须打开的东西"
+    },
+    {
+      "english": {
+        "abstract": "Fotografiska’s exhibition page lists more than 40 photographic, video and text works for the 28 August 2026 opening; this issue keeps the reading at the level of a programme and makes no impact claim.",
+        "deck": "A museum gives invisible work a public duration.",
+        "title": "CARE NEEDS A ROOM"
+      },
+      "id": "fotografiska-the-unmeasurable",
+      "image_credit": "Fotografiska Stockholm official exhibition image / Preview-linked",
+      "level": "signal",
+      "media": {
+        "alt": "Official Fotografiska Stockholm exhibition image for The Unmeasurable",
+        "asset": "assets/fotografiska-care.svg",
+        "caption": "Fotografiska Stockholm official exhibition image; click through to the museum homepage exhibition entry.",
+        "credit": "Fotografiska Stockholm · Preview-linked official image",
+        "external_image_url": "https://cdn.sanity.io/images/2xi539qp/production/099c3a07c7e825e8d70a40eb0dfa1e9384e631da-1823x2500.jpg?auto=format&q=75&w=3840",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://stockholm.fotografiska.com/en",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-28/2027-02-07",
+          "published_date": null,
+          "publisher": "Fotografiska Stockholm",
+          "relationship": "first_party_official",
+          "title": "The Unmeasurable — Nils-Petter Löfstedt",
+          "url": "https://stockholm.fotografiska.com/en"
+        }
+      ],
+      "title": "一份照护记录，需要一个能让人停下来的展厅"
+    },
+    {
+      "english": {
+        "abstract": "ASICS describes motion analysis and construction details for the GEL-FLEXKEE PRO 2.0; No Comply adds independent wear context. Neither source is used to claim universal performance.",
+        "deck": "A collaboration has to pass through the skater’s movement.",
+        "title": "MOVE / GRIP / REPEAT"
+      },
+      "id": "asics-late-nite-stars-flexkee",
+      "image_credit": "ASICS official product image / Preview-linked",
+      "level": "signal",
+      "media": {
+        "alt": "Official ASICS LATE NITE STARS GEL-FLEXKEE PRO 2.0 product image",
+        "asset": "assets/asics-skate.svg",
+        "caption": "ASICS official product image; click through to the product page.",
+        "credit": "ASICS · Preview-linked official image",
+        "external_image_url": "https://images.asics.com/is/image/asics/1203B127_020_SL_LT_GLB?%24sfcc-product%24=",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.asics.com/us/en-us/late-nite-stars-x-gel-flexkee-pro-2.0/p/ANA_1203B127-020.html",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-28",
+          "published_date": null,
+          "publisher": "ASICS",
+          "relationship": "first_party_official",
+          "title": "LATE NITE STARS x GEL-FLEXKEE PRO 2.0",
+          "url": "https://www.asics.com/us/en-us/late-nite-stars-x-gel-flexkee-pro-2.0/p/ANA_1203B127-020.html"
+        },
+        {
+          "event_date": "2026-08-28",
+          "published_date": "2026-07-14",
+          "publisher": "No Comply Network",
+          "relationship": "independent_reporting",
+          "title": "ASICS x Late Nite Stars GEL-FLEXKEE PRO 2.0 Review",
+          "url": "https://www.nocomplynetwork.com/asics-x-late-nite-stars-gel-flexkee-pro-2-0-review/"
+        }
+      ],
+      "title": "鞋子的发布，要经过身体这道窄门"
+    },
+    {
+      "english": {
+        "abstract": "Lauren Alaina’s official announcement sets the 28 August date and describes the album’s different versions of self; Entertainment Focus independently reads the sequencing without predicting longevity.",
+        "deck": "An album makes sequence part of the listening experience.",
+        "title": "STAGES / ONE AFTER ANOTHER"
+      },
+      "id": "lauren-alaina-stages",
+      "image_credit": "Apple Music official album artwork / Preview-linked",
+      "level": "watch",
+      "media": {
+        "alt": "Official Lauren Alaina Stages album artwork",
+        "asset": "assets/lauren-stages.svg",
+        "caption": "Apple Music official album artwork; click through to the album page.",
+        "credit": "Apple Music / Big Loud Records · Preview-linked official image",
+        "external_image_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e4/66/07/e466074e-329d-fec4-6a49-bedad9f2cb7d/26UMGIM66572.rgb.jpg/1000x1000bb.jpg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://music.apple.com/us/album/stages/6772044978",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-28",
+          "published_date": "2026-05-13",
+          "publisher": "Lauren Alaina",
+          "relationship": "first_party_official",
+          "title": "Country Superstar Lauren Alaina Sets Long-Anticipated New Album Stages",
+          "url": "https://laurenalaina.com/home/country-superstar-lauren-alaina-sets-long-anticipated-new-album-stages/"
+        },
+        {
+          "event_date": "2026-08-28",
+          "published_date": "2026-08-28",
+          "publisher": "Apple Music",
+          "relationship": "first_party_official",
+          "title": "Stages",
+          "url": "https://music.apple.com/us/album/stages/6772044978"
+        },
+        {
+          "event_date": "2026-08-28",
+          "published_date": "2026-08-27",
+          "publisher": "Entertainment Focus",
+          "relationship": "independent_reporting",
+          "title": "Review: Lauren Alaina’s New Album Stages Is Fiery, Fierce, Funny and Full of Heart",
+          "url": "https://entertainment-focus.com/2026/08/27/review-lauren-alainas-new-album-stages-is-fiery-fierce-funny-and-full-of-heart/"
+        }
+      ],
+      "title": "Lauren Alaina 把人生阶段排成一张可以顺着听的表"
+    },
+    {
+      "english": {
+        "abstract": "The Pensacola Museum of Art lists STEAM2026 from 28 August to 17 January and frames the exhibition through contemporary art, science, new technologies and environmental interdependence; no audience impact is inferred.",
+        "deck": "A featured work opens an exhibition about art, technology and ecosystems.",
+        "title": "ART / SCIENCE / INTERDEPENDENCE"
+      },
+      "id": "pensacola-steam2026",
+      "image_credit": "Pensacola Museum of Art official featured work image / Preview-linked",
+      "level": "watch",
+      "media": {
+        "alt": "Official Pensacola Museum of Art featured work image for STEAM2026",
+        "asset": "assets/pensacola-steam.svg",
+        "caption": "Pensacola Museum of Art official featured-work image; click through to the exhibition page.",
+        "credit": "Pensacola Museum of Art · Preview-linked official image",
+        "external_image_url": "https://pensacolamuseum.org/wp-content/uploads/2026/07/ChangingLinesFINAL-300x256.jpg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://pensacolamuseum.org/art/steam2026/",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-28/2027-01-17",
+          "published_date": null,
+          "publisher": "Pensacola Museum of Art",
+          "relationship": "first_party_official",
+          "title": "STEAM2026",
+          "url": "https://pensacolamuseum.org/art/steam2026/"
+        }
+      ],
+      "title": "一件作品，把艺术和生态放到同一张桌上"
+    },
+    {
+      "english": {
+        "abstract": "NARS lists its Season III 2026 International Residency Exhibition from 28 August to 15 September, with opening studios and performances; an independent activity listing confirms the public programme without implying audience impact.",
+        "deck": "A residency exhibition lets uncertainty stay visible at the entrance.",
+        "title": "LEAVE IT OPEN"
+      },
+      "id": "nars-subject-to",
+      "image_credit": "NARS Foundation official exhibition image / Preview-linked",
+      "level": "signal",
+      "media": {
+        "alt": "Official NARS Foundation Subject to... exhibition image",
+        "asset": "assets/nars-residency.svg",
+        "caption": "NARS Foundation official exhibition image; click through to the event page.",
+        "credit": "NARS Foundation · Preview-linked official image",
+        "external_image_url": "https://cdn.prod.website-files.com/661ecf2144dd0fe14eb06883/6a7f4aa4020a1858e666e10c_Original_2_small.jpg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.narsfoundation.org/events/event/subject-to",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-28/2026-09-15",
+          "published_date": null,
+          "publisher": "NARS Foundation",
+          "relationship": "first_party_official",
+          "title": "Subject to...",
+          "url": "https://www.narsfoundation.org/events/event/subject-to"
+        },
+        {
+          "event_date": "2026-08-28/2026-09-15",
+          "published_date": null,
+          "publisher": "Outgoing",
+          "relationship": "independent_reporting",
+          "title": "Subject to... – International Residency Exhibition",
+          "url": "https://www.outgoing.world/activity/subject-to-international-residency-exhibition-38c6dadbf3eb"
+        }
+      ],
+      "title": "一个展览先把“待定”留在标题里"
+    },
+    {
+      "english": {
+        "abstract": "The official Tokyo exhibition page sets the 28 August opening, the 26.4-metre screen and the spatial-audio installation by Ryuichi Sakamoto and Shiro Takatani; an opening report supplies scene context without predicting reception.",
+        "deck": "An installation turns listening into a spatial condition.",
+        "title": "SOUND TAKES THE ROOM"
+      },
+      "id": "ambient-kyoto-tokyo",
+      "image_credit": "AMBIENT KYOTO official exhibition image / Preview-linked",
+      "level": "major",
+      "media": {
+        "alt": "Official Azabudai Hills Gallery image for AMBIENT KYOTO - TOKYO",
+        "asset": "assets/ambient-async.svg",
+        "caption": "Azabudai Hills Gallery official exhibition image; click through to the venue listing.",
+        "credit": "Azabudai Hills Gallery · Preview-linked official image",
+        "external_image_url": "https://www.azabudai-hills.com/assets/images/azabudaihillsgallery/2026/20260828_ryuichisakamoto_02.jpg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.azabudai-hills.com/azabudaihillsgallery/exhibition.html?wovnDisableTranslation=true",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-28/2026-10-25",
+          "published_date": null,
+          "publisher": "AMBIENT KYOTO Executive Committee",
+          "relationship": "first_party_official",
+          "title": "AMBIENT KYOTO - TOKYO",
+          "url": "https://ambientkyoto.com/en/"
+        },
+        {
+          "event_date": "2026-08-28/2026-10-25",
+          "published_date": null,
+          "publisher": "Azabudai Hills Gallery",
+          "relationship": "first_party_official",
+          "title": "RYUICHI SAKAMOTO + SHIRO TAKATANI AMBIENT KYOTO - TOKYO",
+          "url": "https://www.azabudai-hills.com/azabudaihillsgallery/exhibition.html?wovnDisableTranslation=true"
+        },
+        {
+          "event_date": "2026-08-28",
+          "published_date": "2026-08-28",
+          "publisher": "美術手帖",
+          "relationship": "independent_reporting",
+          "title": "AMBIENT KYOTO - TOKYO 开幕报道",
+          "url": "https://bijutsutecho.com/magazine/news/report/32960?page=2"
+        }
+      ],
+      "title": "声音先占据房间，音乐才不止于播放"
+    }
+  ],
+  "timezone": "Asia/Shanghai",
+  "variation_review": {
+    "compared_issue_dates": [
+      "2026-08-21",
+      "2026-08-22",
+      "2026-08-23",
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-27"
+    ],
+    "comparison_mode": "prior_issues",
+    "exception_reason": "索引与一手图像是可用性和溯源约束；今日开放工作纸、错位矩形、砖红入口线和发布作为进入条件的论点，不重复 2026-08-21 的层叠纸页、2026-08-23 的收束线、2026-08-24 的路线/钟、2026-08-25 的房间、2026-08-26 的 proof sheet 或 2026-08-27 的坐标地图。",
+    "repeated_mechanisms": [
+      "navigation remains an accessible section index",
+      "one first-party official source image per selected story"
+    ]
+  },
+  "visibility": "published_preview"
+}

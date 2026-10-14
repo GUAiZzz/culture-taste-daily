@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-16",
+  "coverage": {
+    "verified_at": "2026-09-16T11:42:00+08:00",
+    "regional_lanes_checked": ["mainland_china_plus_hong_kong_or_taiwan", "japan_or_korea", "continental_europe_or_united_kingdom", "united_states_or_canada", "rotating_global_lane"],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "culture_retail_creative",
+    "focus_subjects_checked": ["AWGE", "Blonded", "Boardroom", "Coachella", "Dover Street Market Los Angeles", "Hidden.NY", "Homer", "Infinite Archives", "JJJJound", "KAWS", "Rolling Loud", "SLAM Kicks", "StockX", "UpscaleHype", "Virgil Abloh Archive"],
+    "standing_beats_checked": ["stussy-release-radar", "luxury-runway-calendar", "exhibition-and-cultural-programme-radar", "small-breakout-object-radar"],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {"id": "doll-dressing-2026", "category": "fashion", "included_story_id": "doll-dressing-2026"},
+    {"id": "eternal-smile-2026", "category": "fashion", "included_story_id": "eternal-smile-2026"},
+    {"id": "doha-pavilion-richter-2026", "category": "objects", "included_story_id": "doha-pavilion-richter-2026"},
+    {"id": "reviving-craft-2026", "category": "objects", "included_story_id": "reviving-craft-2026"},
+    {
+      "id": "nathalie-ribette-paris-chansons-2026",
+      "category": "music",
+      "title": "Nathalie Ribette sings Paris chansons",
+      "deck": "A free Esplanade Concourse set brings Piaf, Trenet and French chanson into a 30-minute public slot.",
+      "publisher": "Esplanade – Theatres on the Bay",
+      "official_url": "https://www.esplanade.com/whats-on/festivals-and-series/crossing-borders/2026/nathalie-ribette-sings-paris-chansons",
+      "published_date": null,
+      "event_date": "2026-09-16",
+      "media": {"kind": "image", "url": "https://edge.sitecorecloud.io/theesplanad5789-esplanade9e9b-prod2dbd-27bc/media/project/esplanade/images/whats-on/festival-and-series/2026/crossing-borders/nathalie-ribette-sings-paris-chansons-01.jpg?h=1080&iar=0&w=1920", "alt": "Nathalie Ribette performing Paris chansons", "credit": "Esplanade – Theatres on the Bay", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "balkan-collectif-boyana-tesla-2026",
+      "category": "music",
+      "title": "Balkan Collectif and Boyana Tesla",
+      "deck": "An electric Balkan folk set turns Esplanade Concourse into a short, open encounter.",
+      "publisher": "Esplanade – Theatres on the Bay",
+      "official_url": "https://www.esplanade.com/whats-on/festivals-and-series/crossing-borders/2026/balkan-collectif-and-boyana-tesla",
+      "published_date": null,
+      "event_date": "2026-09-17",
+      "media": {"kind": "image", "url": "https://edge.sitecorecloud.io/theesplanad5789-esplanade9e9b-prod2dbd-27bc/media/project/esplanade/images/whats-on/festival-and-series/2026/crossing-borders/balkan-collectif-and-boyana-tesla-01.jpg?h=1080&iar=0&w=1920", "alt": "Balkan Collectif and Boyana Tesla performing", "credit": "Esplanade – Theatres on the Bay", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "bauhaus-comes-from-weimar-2026",
+      "category": "objects",
+      "title": "The Bauhaus comes from Weimar",
+      "deck": "A permanent Weimar exhibition opens the oldest museum collection of the Bauhaus workshops to a new public route.",
+      "publisher": "Klassik Stiftung Weimar",
+      "official_url": "https://www.klassik-stiftung.de/en/your-visit/exhibition/das-bauhaus-kommt-aus-weimar/",
+      "published_date": null,
+      "event_date": "2026-09-16/ongoing",
+      "media": {"kind": "image", "url": "https://www.klassik-stiftung.de/assets/media/0/8/csm_02_Blick_in_die_Ausstellung_a359d52b1d.jpg", "alt": "View into The Bauhaus comes from Weimar exhibition", "credit": "Klassik Stiftung Weimar", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "henrik-vibskov-exhibition-2026",
+      "category": "fashion",
+      "title": "Henrik Vibskov: The exhibition",
+      "deck": "An immersive Designmuseum Danmark exhibition lets music, scenography, costumes and fashion share one universe.",
+      "publisher": "Designmuseum Danmark",
+      "official_url": "https://designmuseum.dk/en/exhibition/henrik-vibskov/",
+      "published_date": null,
+      "event_date": "2026-09-18/2027-02-21",
+      "media": {"kind": "image", "url": "https://designmuseum.dk/en/wp-content/uploads/sites/5/2026/06/Henrik-Vibskov-Observations-of-Humans.-Foto-Josefina-Eikenaar-1024x806.jpg", "alt": "Henrik Vibskov, Observations of Humans", "credit": "Designmuseum Danmark · Photo Josefina Eikenaar", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "bands-of-enchantment-2026",
+      "category": "city",
+      "title": "Bands of Enchantment: Albuquerque Sessions",
+      "deck": "A four-day live concert and filming programme culminates in a free outdoor festival with more than 40 bands.",
+      "publisher": "City of Albuquerque",
+      "official_url": "https://www.cabq.gov/artsculture/kimo/events/the-red-carpet-premiere-of-bands-of-enchantment-albuquerque-sessions-season-6",
+      "published_date": null,
+      "event_date": "2026-09-16/2026-09-19",
+      "media": {"kind": "image", "url": "https://www.cabq.gov/artsculture/kimo/events/the-red-carpet-premiere-of-bands-of-enchantment-albuquerque-sessions-season-6/@@images/image-400-c67696f5138061322a1198d6ee5c228f.png", "alt": "Bands of Enchantment Albuquerque Sessions programme poster", "credit": "City of Albuquerque", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "colourful-world-beijing-2026",
+      "category": "city",
+      "title": "Colourful World at CIFTIS",
+      "deck": "Nearly 30 countries and organisations share traditional music and dance under a one-world stage in Beijing.",
+      "publisher": "Beijing Municipal Government",
+      "official_url": "https://english.beijing.gov.cn/specials/theeleventhcolourfulworld/news_88520/202609/t20260911_4859482.html",
+      "published_date": "2026-09-11",
+      "event_date": "2026-09-09/ongoing",
+      "media": {"kind": "image", "url": "https://english.beijing.gov.cn/specials/theeleventhcolourfulworld/news_88520/202609/W020260911411814615270.png", "alt": "Colourful World cultural programme at CIFTIS in Beijing", "credit": "Beijing Municipal Government", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    }
+  ]
+}

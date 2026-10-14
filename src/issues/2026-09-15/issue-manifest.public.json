@@ -1,0 +1,132 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-09-15",
+  "publication_date": "2026-09-15",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-09-15T11:32:39+08:00",
+  "research_locked_at": "2026-09-15T11:35:16+08:00",
+  "content_locked_at": "2026-09-15T11:35:16+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {"status": "locked", "sha256": "a7948b009bd8713c089e45eab71c88ed9351463ef0c3e5a4ef6a8146d15115fd", "locked_at": "2026-09-15T11:35:16+08:00"},
+  "source_hashes": {"content_sha256": "a7948b009bd8713c089e45eab71c88ed9351463ef0c3e5a4ef6a8146d15115fd", "art_direction_sha256": "0e28fffcd440e41e093d4aeb41a7db704af9d30430cce093a9d254a4caf449d7", "issue_style_sha256": "44084d57a3b38b5458a2c2b39628559276cfa0f574d0e492629026e32b90ffa9"},
+  "harrytone": {"repository": "GUAiZzz/harry-tone", "branch": "main", "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f", "loaded_at": "2026-09-15T11:11:13+08:00"},
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "作品不是做完才开始与人发生关系。它必须找到一个可以被观看、被使用、被讨论或被重新组织的入口。模型不是建筑的缩小版，产品说明也不等于循环已经发生，奖牌不能替品牌替运动员跑完一场比赛；但这些中间层会暴露一个计划真正怎样把自己交给公众。",
+  "art_direction": {
+    "dominant_mood": "像一张被反复折过的编辑工作纸：石墨黑承载长文，钴蓝和砖红标记转换，荧光黄只在折角和注册线出现",
+    "background_logic": "页面不模拟任何单一场馆或品牌，而把‘到达’做成可展开的纸张结构：偏移的页片、显露的折痕、裁切标记和局部重叠共同提示对象如何从制作现场进入公共观看；不复用最近七期的门槛线、互穿曲线、关系图、测量脊、证明表、脚手架、日历轴、节目单轨道、孔径窗口或尺度矩形场。",
+    "palette_logic": "paper #ECEAE4, cobalt #1646A0, brick #B94B37, fluorescent yellow #D8F24B, graphite #202326；纸面负责阅读，钴蓝负责结构，砖红提示转换和不确定，荧光黄只标记折角与注册线，不把装饰色交给正文小字号。",
+    "type_scale_logic": "标题像印在文件夹边缘的工作标签，正文保持 18px；编号用等宽字，英文只承担标题、deck 与 abstract，长标题自然断行，不为视觉压缩事实。",
+    "image_behavior": "六张一手官方媒体以 Preview 外链显示；所有复用权利仍未知，保留来源回链和本地原创非纪实折页图；外图失败时不隐藏来源，回退图只说明结构，不冒充现场。",
+    "page_density_and_tempo": "封面先让折页形成一个未完成的入口，正文从公共符号的模型进入建筑的替身，再收进产品后续、赛道结果、免费演出与桥边展览；每段留出可读空白，不把六个对象串成单一成功叙事。",
+    "core_visual_action": "用三张错位纸片叠出一条可见折痕，蓝色注册线在折角处中断，砖红小页签只在故事切换时出现；读者看到的是对象被翻译到公众面前的瞬间，而不是一条被装饰的路线。",
+    "cover_composition": "纸灰底上叠放三张不同宽度的蓝色纸片，最上层向右折起露出荧光黄内页，砖红注册线穿过折痕后停住；标题占据左侧，右侧留一块像尚未打开的文件夹的空白。",
+    "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 只提供可关闭的‘折页注记’，正文、事实和外图回链不依赖 JavaScript。",
+    "behance_viewing_arc": "先看一座纪念碑如何通过模型进入公共想象，再看建筑如何借替身抵达，接着进入产品的后续、竞技场的验证、公共演出的时段，最后落在桥边的多感官连接。",
+    "mobile_translation": "390px 下三张纸片收成左侧窄页签，折痕变成边缘线，荧光黄只出现在标题与索引附近；正文单列，图片说明和长链接自然换行。",
+    "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点可见，长链接换行，外图失败不隐藏来源，移动端无横向滚动；折页装饰不覆盖正文和图片说明。",
+    "quiet_ending": "退出处留下一个打开一半的蓝色折角和一条停住的注册线，不给箭头，让读者把完成交给下一次遇见。",
+    "closing_quotation": {"id": "ct-en-006", "language": "en", "text": "Culture lives where an object finds its public.", "credit": "Culture & Taste Editorial"},
+    "closing_palette": {"background": "#ECEAE4", "foreground": "#202326", "accent": "#1646A0", "rationale": "纸灰与石墨形成可读长文底，钴蓝承担结构信息，砖红提示转换与不确定，荧光黄只保留给折页内层和少量注册标记。"}
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": ["2026-09-14", "2026-09-11", "2026-09-10", "2026-09-09", "2026-09-08", "2026-09-07", "2026-09-06"],
+    "repeated_mechanisms": ["accessible section index", "first-party source image with linked fallback"],
+    "exception_reason": "可访问索引与一手来源图是固定约束；本期改用折页、折痕、注册标记和错位纸片作为核心构图，讨论对象如何从制作现场进入公共观看，没有复用最近七期的门槛线、互穿曲线、关系图、测量脊、证明表、脚手架、日历轴、节目单轨道、孔径窗口或尺度矩形场。"
+  },
+  "stories": [
+    {
+      "id": "shanghai-tourism-festival-2026",
+      "level": "cover",
+      "title": "上海旅游节：一座城市先安排好被偶遇的方式",
+      "sources": [
+        {"title": "2026 Shanghai Tourism Festival classic season: Return of beloved traditions", "publisher": "Shanghai Municipal Government", "url": "https://english.shanghai.gov.cn/en-2026ShanghaiTourismFestival/20260911/2c7e65139d304221b4d0ebf360053d55.html", "published_date": "2026-09-11", "event_date": "2026-09-01/2026-10-06", "relationship": "first_party_official"},
+        {"title": "第37届上海旅游节“经典活动季”启幕", "publisher": "央广网", "url": "https://www.cnr.cn/shanghai/tt/20260907/t20260907_527806718.shtml", "published_date": "2026-09-07", "event_date": "2026-09-01/2026-10-06", "relationship": "independent_reporting"}
+      ],
+      "image_credit": "Shanghai Municipal Government · Preview-linked",
+      "english": {"title": "A CITY ARRANGES HOW IT CAN BE ENCOUNTERED", "deck": "Shanghai’s tourism festival turns one celebration into a sequence of public surfaces across the city.", "abstract": "The 2026 Shanghai Tourism Festival’s classic season runs from 1 September to 6 October with 170 activities, six themes, 21 performance groups and 21 floats. The reading of the float route as an encounter mechanism is editorial interpretation."},
+      "media": {"asset": "assets/folded-register.svg", "alt": "Shanghai Tourism Festival official government image shown with an original folded-paper fallback", "caption": "上海市政府官方旅游节页面；本地折页图为原创非纪实占位，打开来源查看活动数量、六个主题、开幕巡游与花车路线。", "credit": "Shanghai Municipal Government · Preview-linked official image", "kind": "source_image", "origin_url": "https://english.shanghai.gov.cn/en-2026ShanghaiTourismFestival/20260911/2c7e65139d304221b4d0ebf360053d55.html", "external_image_url": "https://english.shanghai.gov.cn/cmsres/ab/ab87bc9f2daa4746af6141dc4a7d208d/f4704eaf4151f51b14ab34e45f673106.jpeg", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "mplus-herzog-de-meuron-in-focus-2026",
+      "level": "major",
+      "title": "M+：建筑不能被展出，就先把替身做好",
+      "sources": [
+        {"title": "Herzog & de Meuron: In Focus", "publisher": "M+ Museum", "url": "https://www.mplus.org.hk/en/exhibitions/herzog-de-meuron-in-focus/", "published_date": null, "event_date": "2026-09-12/ongoing", "relationship": "first_party_official"},
+        {"title": "Evolución de la visión creativa: Herzog & de Meuron: In Focus por M+", "publisher": "METALOCUS", "url": "https://www.metalocus.es/es/noticias/evolucion-de-la-vision-creativa-herzog-de-meuron-focus-por-m", "published_date": "2026-09-08", "event_date": "2026-09-12/ongoing", "relationship": "independent_reporting"}
+      ],
+      "image_credit": "M+ Museum · Preview-linked",
+      "english": {"title": "WHEN ARCHITECTURE CANNOT BE SHOWN, BUILD THE SUBSTITUTE", "deck": "M+ turns models, drawings and material samples into a close-reading device for architecture.", "abstract": "Herzog & de Meuron: In Focus begins on 12 September 2026 at M+. The donation includes models, drawings, material samples and projects in China, displayed through a cabinet-like arrangement. The claim that these objects create a readable local view is editorial interpretation."},
+      "media": {"asset": "assets/folded-register.svg", "alt": "M+ Herzog and de Meuron In Focus official exhibition image shown with an original folded-paper fallback", "caption": "M+ 官方展览页；本地折页图为原创非纪实占位，打开来源查看捐赠藏品、模型、图纸、材料样本与展示柜。", "credit": "M+ Museum · Preview-linked official image", "kind": "source_image", "origin_url": "https://www.mplus.org.hk/en/exhibitions/herzog-de-meuron-in-focus/", "external_image_url": "https://www.mplus.org.hk/api/images/12623/width-1200%7Cformat-jpeg/", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "arcteryx-system-0-2026",
+      "level": "major",
+      "title": "Arc’teryx System 0：循环先成为产品的后续动作",
+      "sources": [
+        {"title": "Sperro SV Jacket - 0 Men's", "publisher": "Arc’teryx", "url": "https://arcteryx.com/fr/en/shop/mens/sperro-sv-jacket-0-0667", "published_date": null, "event_date": "2026-09-15", "relationship": "first_party_official"},
+        {"title": "Inside System 0, Arc’teryx’s plan to rethink the life of a jacket", "publisher": "T3", "url": "https://www.t3.com/active/outerwear/system-0-arcteryx-launch-interview-0826", "published_date": "2026-08-26", "event_date": "2026-08-26", "relationship": "independent_reporting"}
+      ],
+      "image_credit": "Arc’teryx · Preview-linked",
+      "english": {"title": "CIRCULARITY STARTS AFTER THE SALE", "deck": "Arc’teryx places durability, repairability and disassembly inside a product-design framework.", "abstract": "The current Sperro SV product page describes System 0, recycled and recyclable materials, ReBIRD repair support and disassembly at end of life. The platform is presented as the brand’s proposal; no verified environmental impact or adoption is claimed."},
+      "media": {"asset": "assets/folded-register.svg", "alt": "Arc’teryx System 0 Sperro SV official image shown with an original folded-paper fallback", "caption": "Arc’teryx 官方 Sperro SV 产品页；本地折页图为原创非纪实占位，打开来源查看产品框架、维修性、拆解与后续支持的品牌说明。", "credit": "Arc’teryx · Preview-linked official image", "kind": "source_image", "origin_url": "https://arcteryx.com/fr/en/shop/mens/sperro-sv-jacket-0-0667", "external_image_url": "https://cdn.sanity.io/images/inkbj32c/production/166f141b3d761f3289cf5b389f5c7fda2ef57246-674x674.jpg?auto=format&q=75", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "on-nice-medals-2026",
+      "level": "signal",
+      "title": "On in Nice：品牌叙事必须穿过赛道成绩",
+      "sources": [
+        {"title": "On Pressroom latest stories", "publisher": "On", "url": "https://press.on-running.com/", "published_date": "2026-09-13", "event_date": "2026-09-13", "relationship": "first_party_official"},
+        {"title": "IRONMAN 70.3 World Championship 2026 Results", "publisher": "Pro Triathletes", "url": "https://stats.protriathletes.org/race/im-703-world-championship/2026/results", "published_date": "2026-09-13", "event_date": "2026-09-13", "relationship": "independent_reporting"}
+      ],
+      "image_credit": "On · Preview-linked",
+      "english": {"title": "THE BRAND STORY HAS TO CROSS THE FINISH LINE", "deck": "On’s Nice result can be read through the race first, and the product story second.", "abstract": "On’s 13 September release confirms silver medals for Kristian Blummenfelt and Julie Derron and a bronze for Jelle Geens at the Nice half-distance world championship. The course distances and independent result table make the external event the evidence; no product causality is claimed."},
+      "media": {"asset": "assets/folded-register.svg", "alt": "On Nice triathlon pressroom image shown with an original folded-paper fallback", "caption": "On 官方 Pressroom；本地折页图为原创非纪实占位，打开来源查看 9 月 13 日运动员、赛果与比赛距离。", "credit": "On · Preview-linked official pressroom image", "kind": "source_image", "origin_url": "https://press.on-running.com/", "external_image_url": "https://og.prezly.com/api/og/6ea791ea-b040-4058-a455-94dcb56b310d?locale=en-gb", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "esplanade-reggae-jamboree-2026",
+      "level": "signal",
+      "title": "Reggae Jamboree：传统先被交给一个免费时段",
+      "sources": [
+        {"title": "Reggae Jamboree", "publisher": "Esplanade – Theatres on the Bay", "url": "https://www.esplanade.com/whats-on/festivals-and-series/crossing-borders/2026/reggae-jamboree", "published_date": null, "event_date": "2026-09-15/2026-09-22", "relationship": "first_party_official"},
+        {"title": "Singapore Concerts & Live Shows", "publisher": "artists.rocks", "url": "https://artists.rocks/en/gigs/sg/singapore/", "published_date": "2026-09-15", "event_date": "2026-09-15", "relationship": "independent_reporting"}
+      ],
+      "image_credit": "Esplanade – Theatres on the Bay · Preview-linked",
+      "english": {"title": "A TRADITION GETS A FREE PUBLIC SLOT", "deck": "Esplanade gives Singapore’s Reggae Remedy a small, open stage for a cross-border translation.", "abstract": "Reggae Jamboree takes place on 15 and 22 September 2026 at Esplanade Concourse, with free 30-minute performances by Singapore band Reggae Remedy. The public slot creates a condition for encounter; it does not prove cultural impact or audience response."},
+      "media": {"asset": "assets/folded-register.svg", "alt": "Esplanade Reggae Jamboree official event image shown with an original folded-paper fallback", "caption": "Esplanade 官方活动页；本地折页图为原创非纪实占位，打开来源查看演出日期、免费时段、地点与 Reggae Remedy 的音乐背景。", "credit": "Esplanade – Theatres on the Bay · Preview-linked official image", "kind": "source_image", "origin_url": "https://www.esplanade.com/whats-on/festivals-and-series/crossing-borders/2026/reggae-jamboree", "external_image_url": "https://edge.sitecorecloud.io/theesplanad5789-esplanade9e9b-prod2dbd-27bc/media/project/esplanade/images/whats-on/festival-and-series/2026/crossing-borders/reggae-jamboree-01.jpg?h=1080&iar=0&w=1920", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "design-to-bridge-2026",
+      "level": "watch",
+      "title": "Design To Bridge：桥边的展览不只讲“连接”",
+      "sources": [
+        {"title": "Design To Bridge", "publisher": "Hong Kong Design Centre", "url": "https://www.hkdesigncentre.org/en/whats-on/design-to-bridge/1323", "published_date": null, "event_date": "2026-09-11/2026-10-25", "relationship": "first_party_official"},
+        {"title": "Design to Bridge: a new Hong Kong exhibition", "publisher": "Hong Kong Lei", "url": "https://hongkonglei.com/design-to-bridge/", "published_date": "2026-09-11", "event_date": "2026-09-11/2026-10-25", "relationship": "independent_reporting"}
+      ],
+      "image_credit": "Hong Kong Design Centre · Preview-linked",
+      "english": {"title": "A BRIDGE BECOMES MATERIAL, SOUND AND SCENT", "deck": "Design To Bridge turns connection from a slogan into a set of cross-disciplinary public arrangements.", "abstract": "Hong Kong Design Centre’s free exhibition runs from 11 September to 25 October 2026 at DX design hub beside the West Kowloon Corridor. The official programme names six dimensions including waste, city memory, interactive technology, spatial sound and fragrance; the reading of connection as an actionable arrangement is editorial interpretation."},
+      "media": {"asset": "assets/folded-register.svg", "alt": "Design To Bridge official Hong Kong Design Centre image shown with an original folded-paper fallback", "caption": "香港设计中心官方展览页；本地折页图为原创非纪实占位，打开来源查看西九龙走廊、六个维度、工作坊与导览安排。", "credit": "Hong Kong Design Centre · Preview-linked official image", "kind": "source_image", "origin_url": "https://www.hkdesigncentre.org/en/whats-on/design-to-bridge/1323", "external_image_url": "https://www.hkdesigncentre.org/uploads/page_cover/2026-09/005486_Mng88bnK.jpeg", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    }
+  ],
+  "rights_summary": {"required_assets": 6, "unknown_required_assets": 6, "status": "blocked"},
+  "artifact_digests": {"issue_payload_sha256": null},
+  "evidence_refs": {"technical": [], "editorial_visual": [], "gate": []},
+  "qa": {"html_parse": "unavailable", "assets": "unavailable", "internal_links": "unavailable", "no_js_reading": "unavailable", "desktop_render": "unavailable", "mobile_render": "unavailable", "reduced_motion": "unavailable"},
+  "limitations": [
+    "Non-production Preview candidate only; this manifest cannot authorize production deployment.",
+    "Canonical private GUAiZzz/harry-tone main was verified at pinned commit 13cd6b7046bd81be396810d2923f3a5dc818e93f; no private material enters this repository.",
+    "Six selected stories use externally hosted first-party official images. Reuse rights remain unknown, so candidate status stays BLOCKED and Preview displays source links with a local non-documentary fallback.",
+    "All five regional lanes, the full 99-subject registry quick scan, the sport_outdoor_lifestyle focus cohort, the four daily standing beats and the prior-two-issue lookback were checked; the public radar contains 10 distinct items with at least two per category.",
+    "Named editorial, visual and rights review remains unresolved; the owner’s current task authorizes the existing non-production Preview only after technical and privacy gates pass."
+  ]
+}

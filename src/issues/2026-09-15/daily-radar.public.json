@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "coverage": {
+    "verified_at": "2026-09-15T11:35:16+08:00",
+    "regional_lanes_checked": [
+      "mainland_china_plus_hong_kong_or_taiwan",
+      "japan_or_korea",
+      "continental_europe_or_united_kingdom",
+      "united_states_or_canada",
+      "rotating_global_lane"
+    ],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "sport_outdoor_lifestyle",
+    "focus_subjects_checked": ["Alo", "Arc'teryx", "Nike", "On", "Salomon", "ASICS SportStyle", "New Balance", "HOKA", "Merrell 1TRL", "Nike ACG", "Blue Bottle Coffee"],
+    "standing_beats_checked": ["stussy-release-radar", "luxury-runway-calendar", "exhibition-and-cultural-programme-radar", "small-breakout-object-radar"],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {
+      "id": "arcteryx-system-0-sperro-sv-2026",
+      "category": "fashion",
+      "included_story_id": "arcteryx-system-0-2026",
+      "title": "Arc'teryx System 0：把产品的后续写进设计框架",
+      "deck": "System 0 joins durability, repairability and disassembly to a new product-design framework; the claim remains the brand's proposal, not verified impact.",
+      "publisher": "Arc'teryx",
+      "official_url": "https://arcteryx.com/fr/en/shop/mens/sperro-sv-jacket-0-0667",
+      "published_date": null,
+      "event_date": "2026-09-15",
+      "media": {"kind": "image", "url": "https://cdn.sanity.io/images/inkbj32c/production/166f141b3d761f3289cf5b389f5c7fda2ef57246-674x674.jpg?auto=format&q=75", "alt": "Arc'teryx System 0 Sperro SV official product image", "credit": "Arc'teryx · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "on-nice-medals-2026",
+      "category": "fashion",
+      "included_story_id": "on-nice-medals-2026",
+      "title": "On in Nice：跑过终点线之后，品牌才有叙事空间",
+      "deck": "On's official 13 September press release records three podium finishes at the Nice half-distance world championship.",
+      "publisher": "On",
+      "official_url": "https://press.on-running.com/",
+      "published_date": "2026-09-13",
+      "event_date": "2026-09-13",
+      "media": {"kind": "image", "url": "https://og.prezly.com/api/og/6ea791ea-b040-4058-a455-94dcb56b310d?locale=en-gb", "alt": "On official Nice triathlon pressroom image", "credit": "On · Preview-linked official pressroom image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "salomon-gravel-studio-openhouse-2026",
+      "category": "fashion",
+      "title": "Salomon Gravel Studio Open House：把新品变成一次可进入的练习",
+      "deck": "Salomon lists a 16 September Toronto open house with an immersive Gravel set and community run.",
+      "publisher": "Salomon",
+      "official_url": "https://www.salomon.com/en-ca/events/gravel-studio-openhouse",
+      "published_date": null,
+      "event_date": "2026-09-16",
+      "media": {"kind": "image", "url": "https://www.salomon.com/_next/static/immutable/media/salomon-1200x630.3d6wvgam1c5eq.jpg", "alt": "Salomon Gravel Studio Open House official event image", "credit": "Salomon · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "reggae-jamboree-2026",
+      "category": "music",
+      "included_story_id": "esplanade-reggae-jamboree-2026",
+      "title": "Reggae Jamboree：一段传统先获得一个免费时段",
+      "deck": "Esplanade gives Singapore's Reggae Remedy a free 30-minute public slot on 15 and 22 September.",
+      "publisher": "Esplanade – Theatres on the Bay",
+      "official_url": "https://www.esplanade.com/whats-on/festivals-and-series/crossing-borders/2026/reggae-jamboree",
+      "published_date": null,
+      "event_date": "2026-09-15/2026-09-22",
+      "media": {"kind": "image", "url": "https://edge.sitecorecloud.io/theesplanad5789-esplanade9e9b-prod2dbd-27bc/media/project/esplanade/images/whats-on/festival-and-series/2026/crossing-borders/reggae-jamboree-01.jpg?h=1080&iar=0&w=1920", "alt": "Reggae Jamboree official Esplanade event image", "credit": "Esplanade – Theatres on the Bay · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "trio-de-tango-crossing-borders-2026",
+      "category": "music",
+      "title": "Trio de Tango：公共音乐把同一场地留出两个入口",
+      "deck": "Esplanade lists two free 14 September Concourse performances as part of Crossing Borders 2026.",
+      "publisher": "Esplanade – Theatres on the Bay",
+      "official_url": "https://www.esplanade.com/whats-on/festivals-and-series/crossing-borders/2026/trio-de-tango",
+      "published_date": null,
+      "event_date": "2026-09-14",
+      "media": {"kind": "image", "url": "https://edge.sitecorecloud.io/theesplanad5789-esplanade9e9b-prod2dbd-27bc/media/project/esplanade/images/whats-on/festival-and-series/2026/crossing-borders/crossing-borders-kv.jpg?h=1080&iar=0&w=1920", "alt": "Crossing Borders 2026 official Esplanade image", "credit": "Esplanade – Theatres on the Bay · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "mplus-herzog-de-meuron-in-focus-2026",
+      "category": "objects",
+      "included_story_id": "mplus-herzog-de-meuron-in-focus-2026",
+      "title": "Herzog & de Meuron: In Focus：模型替建筑保留一块可看的局部",
+      "deck": "M+ turns a donation of models, drawings and material samples into a close-reading exhibition from 12 September onward.",
+      "publisher": "M+ Museum",
+      "official_url": "https://www.mplus.org.hk/en/exhibitions/herzog-de-meuron-in-focus/",
+      "published_date": null,
+      "event_date": "2026-09-12/ongoing",
+      "media": {"kind": "image", "url": "https://www.mplus.org.hk/api/images/12623/width-1200%7Cformat-jpeg/", "alt": "Herzog & de Meuron: In Focus official M+ exhibition image", "credit": "M+ Museum · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "hkdc-design-to-bridge-2026",
+      "category": "objects",
+      "included_story_id": "design-to-bridge-2026",
+      "title": "Design To Bridge：把连接拆成材料、声音和气味",
+      "deck": "Hong Kong Design Centre's free DX design hub exhibition runs 11 September–25 October beside the West Kowloon Corridor.",
+      "publisher": "Hong Kong Design Centre",
+      "official_url": "https://www.hkdesigncentre.org/en/whats-on/design-to-bridge/1323",
+      "published_date": null,
+      "event_date": "2026-09-11/2026-10-25",
+      "media": {"kind": "image", "url": "https://www.hkdesigncentre.org/uploads/page_cover/2026-09/005486_Mng88bnK.jpeg", "alt": "Design To Bridge official Hong Kong Design Centre exhibition image", "credit": "Hong Kong Design Centre · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "asics-bloomstride-2026",
+      "category": "objects",
+      "title": "ASICS Bloomstride：把女性运动支持写成一件新产品",
+      "deck": "ASICS announced the Bloomstride running collection on 1 September as a new global women's movement-focused launch.",
+      "publisher": "ASICS",
+      "official_url": "https://corp.asics.com/en/press/article/asics-introduces-bloomstridetm-a-new-era-of-running-comfort-designed-for-her-every-move-",
+      "published_date": "2026-09-01",
+      "event_date": "2026-09-01",
+      "media": {"kind": "image", "url": "https://assets.asics.com/system/media_libraries/25982/file.press.jpg?20260826215641", "alt": "ASICS Bloomstride official press image", "credit": "ASICS · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "crossing-borders-2026",
+      "category": "city",
+      "title": "Crossing Borders：城市把连接折成可感知的现场",
+      "deck": "Esplanade's September programme moves between music, material, sound and scent in Singapore's public arts complex.",
+      "publisher": "Esplanade – Theatres on the Bay",
+      "official_url": "https://www.esplanade.com/whats-on/festivals-and-series/crossing-borders/2026",
+      "published_date": null,
+      "event_date": "2026-09-01/2026-09-30",
+      "media": {"kind": "image", "url": "https://edge.sitecorecloud.io/theesplanad5789-esplanade9e9b-prod2dbd-27bc/media/project/esplanade/images/whats-on/festival-and-series/2026/crossing-borders/crossing-borders-kv.jpg?h=1080&iar=0&w=1920", "alt": "Crossing Borders 2026 official Esplanade programme image", "credit": "Esplanade – Theatres on the Bay · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "shanghai-tourism-festival-2026",
+      "category": "city",
+      "title": "上海旅游节：城市用 170 个活动把秋天铺开",
+      "deck": "Shanghai's official calendar runs 1 September–6 October with 170 events across six themes and floats touring ten areas.",
+      "publisher": "Shanghai Municipal Government",
+      "official_url": "https://english.shanghai.gov.cn/en-2026ShanghaiTourismFestival/20260911/2c7e65139d304221b4d0ebf360053d55.html",
+      "published_date": "2026-09-11",
+      "event_date": "2026-09-01/2026-10-06",
+      "media": {"kind": "image", "url": "https://english.shanghai.gov.cn/cmsres/ab/ab87bc9f2daa4746af6141dc4a7d208d/f4704eaf4151f51b14ab34e45f673106.jpeg", "alt": "2026 Shanghai Tourism Festival official government image", "credit": "Shanghai Municipal Government · Preview-linked official image", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    }
+  ]
+}

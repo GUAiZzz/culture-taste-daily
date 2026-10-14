@@ -1,0 +1,154 @@
+/* Shared reader themes. These variables change presentation only. */
+html[data-visual-theme="field"] {
+  --paper: #eef2df;
+  --ink: #10120d;
+  --acid: #d9ff43;
+  --blue: #2448ff;
+  --orange: #326f4a;
+  --pink: #a8dfbd;
+  --theme-hero: #d9ff43;
+  --theme-index: #d8d1ad;
+  --theme-panel: #eef2df;
+  --theme-accent: #326f4a;
+  --theme-signal: #2448ff;
+}
+
+html[data-visual-theme="coral"] {
+  --paper: #f4eadf;
+  --ink: #160d0a;
+  --acid: #ff6840;
+  --blue: #2448ff;
+  --orange: #ff512b;
+  --pink: #f3a8bf;
+  --theme-hero: #ff5a31;
+  --theme-index: #e8c8b1;
+  --theme-panel: #f4eadf;
+  --theme-accent: #c83d25;
+  --theme-signal: #2448ff;
+}
+
+html[data-visual-theme="analog"] {
+  --paper: #d9cdb4;
+  --ink: #171713;
+  --acid: #c8bd91;
+  --blue: #537a7c;
+  --orange: #b74731;
+  --pink: #b8998f;
+  --theme-hero: #c8bd91;
+  --theme-index: #cfc09e;
+  --theme-panel: #e1d7c2;
+  --theme-accent: #a8402e;
+  --theme-signal: #527d80;
+}
+
+body[data-shell="publication"],
+body[data-story-reader] {
+  background: var(--paper);
+  color: var(--ink);
+  transition: background-color 320ms ease, color 320ms ease;
+}
+
+/* Atmosphere stays behind the shell; it never overlays source photographs or text. */
+html[data-visual-theme="field"] .hero-map {
+  background-image: radial-gradient(circle at 12% 18%, rgb(217 255 67 / 34%), transparent 64%);
+}
+html[data-visual-theme="coral"] .hero-map {
+  background-image: linear-gradient(135deg, transparent 52%, rgb(243 168 191 / 24%));
+}
+html[data-visual-theme="analog"] .hero-map {
+  background-image: repeating-linear-gradient(0deg, rgb(10 10 8 / 6%) 0 1px, transparent 1px 3px);
+}
+
+.theme-dots {
+  position: relative;
+  z-index: 110;
+  display: inline-flex;
+  gap: 0.65rem;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 0.35rem;
+  padding-bottom: 1rem;
+}
+
+.theme-dots button {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.theme-dots button[data-theme-choice="field"] { --dot-color: #65a469; }
+.theme-dots button[data-theme-choice="coral"] { --dot-color: #ff512b; }
+.theme-dots button[data-theme-choice="analog"] {
+  --dot-color: repeating-linear-gradient(0deg, #d5c7aa 0 2px, #2a2924 2px 3px);
+}
+
+.theme-dots button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--dot-color);
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 42%);
+  content: "";
+  transform: translate(-50%, -50%);
+  transition: box-shadow 140ms ease, transform 140ms ease;
+}
+
+.theme-dots button[aria-pressed="true"]::before {
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px currentColor;
+  transform: translate(-50%, -50%);
+}
+
+.theme-dots button::after {
+  position: absolute;
+  right: -0.5rem;
+  bottom: -2.25rem;
+  width: max-content;
+  max-width: 10rem;
+  padding: 0.38rem 0.52rem;
+  background: var(--ink);
+  color: var(--paper);
+  content: attr(data-theme-label);
+  font: 700 0.62rem/1 ui-monospace, monospace;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-0.25rem);
+  transition: opacity 140ms ease, transform 140ms ease;
+  white-space: nowrap;
+}
+
+.theme-dots button:hover::after,
+.theme-dots button:focus-visible::after {
+  opacity: 1;
+  transform: none;
+}
+
+.theme-dots button:active {
+  transform: scale(0.94);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-shell="publication"],
+  body[data-story-reader] {
+    transition: none;
+  }
+}
+
+@media (max-width: 50rem) {
+  .theme-dots button::after {
+    display: none;
+  }
+}
+
+/* Controls appear only when their event handlers are available. */
+html:not(.has-js) .theme-dots { display: none; }
+.theme-current { position: absolute; bottom: 0; left: 0; right: 0; text-align: center; font: 700 0.6875rem/1.2 ui-monospace, monospace; white-space: nowrap; }
