@@ -1,0 +1,11 @@
+body[data-issue="2026-10-10"] { --issue-bg: #0F172A; --issue-ink: #F4F0E8; --issue-cyan: #56D6D1; --issue-acid: #F3E93C; --issue-coral: #FF6B57; --issue-paper: #F4F0E8; --issue-slate: #64748B; }
+body[data-issue="2026-10-10"] .issue-cover { background: var(--issue-bg); color: var(--issue-ink); }
+body[data-issue="2026-10-10"] .issue-cover-visual { background: var(--issue-bg); color: var(--issue-ink); }
+body[data-issue="2026-10-10"] .issue-cover-visual:before { content: "LISTEN / WALK / RETURN"; color: var(--issue-acid); }
+body[data-issue="2026-10-10"] .issue-story:nth-of-type(odd) { background: var(--issue-paper); color: #0F172A; }
+body[data-issue="2026-10-10"] .issue-story:nth-of-type(even) { background: #E5E7EB; color: #0F172A; }
+body[data-issue="2026-10-10"] .story-marker, body[data-issue="2026-10-10"] .story-stage-label { color: var(--issue-coral); }
+body[data-issue="2026-10-10"] .story-source-list a, body[data-issue="2026-10-10"] .source-image-link { color: #087F83; }
+body[data-issue="2026-10-10"] .daily-coda { background: var(--issue-bg); color: var(--issue-ink); }
+body[data-issue="2026-10-10"] .daily-coda h2 { color: var(--issue-acid); }
+@media (max-width: 600px) { body[data-issue="2026-10-10"] .issue-cover-visual { min-height: 340px; } }
