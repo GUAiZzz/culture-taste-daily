@@ -3,10 +3,11 @@ import { readFile, mkdir, writeFile, unlink, realpath } from 'node:fs/promises';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { assertRepository, git, gh } from './lib/github-scope.mjs';
-import { REPOSITORY, PREVIEW_BASE, checkScope, evaluatePreview, policyDigest } from './lib/preview-policy.mjs';
+import { REPOSITORY, PREVIEW_BASE, checkScope, evaluatePreview, policyDigest, shanghaiDate } from './lib/preview-policy.mjs';
 import { readJson, sha256File, directoryDigest } from './lib/files.mjs';
 import { assertPublicTree } from './lib/privacy.mjs';
 import { REQUIRED_TECHNICAL_CHECKS } from './lib/qa.mjs';
+import { historicalPreviewPolicy, historicalPackageBlockers, historicalSourceBlockers, historicalAuthorizationDigest, isAuthorizedHistoricalDate } from './lib/historical-supplements.mjs';
 
 const { values } = parseArgs({ options: {
   evidence: { type: 'string' }, 'private-evidence': { type: 'string' }, execute: { type: 'boolean' },
@@ -28,7 +29,10 @@ const receiptPath = `.stage4/operations/${date}.json`;
 const receipt = { date, state: 'CHECKING', production_eligible: false, source_commit: identity.head };
 async function save() { await writeFile(receiptPath, JSON.stringify(receipt, null, 2)+'\n'); }
 try {
-  const policy = await readJson('automation/daily-policy.json');
+  const dailyPolicy = await readJson('automation/daily-policy.json');
+  const authorization = e.historical_supplement ? await readJson('automation/historical-supplements.json') : null;
+  const policy = authorization ? historicalPreviewPolicy(dailyPolicy, authorization) : dailyPolicy;
+  if (authorization && !isAuthorizedHistoricalDate(authorization, date)) throw new Error('HISTORICAL_AUTHORITY');
   const meta = JSON.parse(gh(['api', `repos/${REPOSITORY}`]));
   const baseCommit = JSON.parse(gh(['api', `repos/${REPOSITORY}/git/ref/heads/${PREVIEW_BASE}`])).object.sha;
   if (git(['rev-parse', `origin/${PREVIEW_BASE}`]) !== baseCommit) throw new Error('STALE_BASE: fetch and revalidate before release');
@@ -53,6 +57,17 @@ try {
   const second = await readJson('dist/build-report.json');
   const issue = second.issues.find(item => item.issue_id === date);
   const manifest = await readJson(`src/issues/${date}/issue-manifest.public.json`);
+  if (Boolean(manifest.historical_supplement) !== Boolean(e.historical_supplement)) throw new Error('HISTORICAL_AUTHORITY');
+  const privateResearch = authorization ? await readJson(values['private-evidence']) : null;
+  const historicalBlockers = authorization ? [
+    ...historicalPackageBlockers({ manifest, content: await readFile(`src/issues/${date}/content.md`, 'utf8'), authorization }),
+    ...historicalSourceBlockers({ manifest, privateResearch, authorization }),
+  ] : [];
+  if (authorization && manifest.research_locked_at.slice(0, 10) !== shanghaiDate()) historicalBlockers.push('HISTORICAL_REFRESH_REQUIRED');
+  let alreadyLiveHistoricalDate = false;
+  if (authorization) {
+    alreadyLiveHistoricalDate = Boolean(git(['ls-tree', baseCommit, '--', `src/issues/${date}/issue-manifest.public.json`]));
+  }
   const radar = await readJson(`src/issues/${date}/daily-radar.public.json`);
   await assertPublicTree('dist');
   const sources = [...new Set([...manifest.stories.flatMap(s => s.sources.map(x => x.url)), ...radar.items.filter(i => !i.included_story_id).map(i => i.official_url)])];
@@ -70,9 +85,15 @@ try {
     privacy_scan: 'PASS', ci: ci.conclusion, push_permission: meta.permissions?.push === true,
     package_complete: Boolean(issue && radar.items?.length >= 10 && radar.items?.length <= 20),
     source_urls: sources, media_urls: media,
+    formal_story_count: manifest.stories.length,
+    historical_supplement_valid: authorization ? !historicalBlockers.length : false,
+    historical_supplement_blockers: historicalBlockers,
+    already_live_historical_date: alreadyLiveHistoricalDate,
   };
   const decision = evaluatePreview({ evidence: e, runtime, policy });
   Object.assign(receipt, decision, { candidate_digest: issue?.candidate_digest, artifact_digest: second.artifact_digest, base_commit: baseCommit, ci_run: ci.id, policy_digest: policyDigest(policy) });
+  if (authorization) receipt.historical_supplement = { authorization_id: authorization.authorization_id,
+    authorization_digest: historicalAuthorizationDigest(authorization), coverage_date: date };
   await save(); console.log(JSON.stringify(receipt, null, 2));
   if (!decision.preview_eligible) { process.exitCode = 1; }
   else if (!values.execute) console.log('DRY_RUN: no merge or dispatch; use --execute only for this validated daily Preview.');
@@ -92,7 +113,8 @@ try {
       if (latest?.status === 'completed') {
         receipt.deploy_run = latest.id; await save();
         if (latest.conclusion !== 'success') throw new Error(`PREVIEW_DEPLOY_FAILED: run ${latest.id}`);
-        execFileSync(process.execPath, ['scripts/preview-live.mjs', '--sha', receipt.merge_commit, '--date', date], { stdio: 'inherit', timeout: 180_000 });
+        execFileSync(process.execPath, ['scripts/preview-live.mjs', '--sha', receipt.merge_commit,
+          authorization ? '--issue-date' : '--date', date], { stdio: 'inherit', timeout: 180_000 });
         Object.assign(receipt, await readJson('.stage4/operations/live.json')); await save();
         console.log(JSON.stringify(receipt, null, 2)); break;
       }

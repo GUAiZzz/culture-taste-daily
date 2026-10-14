@@ -54,6 +54,10 @@ At 18:00 finish existing deployment verification; do not start new research. Mis
 
 Local scheduled tasks need the computer on and app running. Multiple local recovery points reduce missed runs but cannot detect a completely offline machine. An independent always-on monitor remains a future infrastructure decision, not an implemented uptime guarantee.
 
+## Bounded historical supplement authority
+
+The 2026-10-14 owner authorization is limited to the 26 missing dates in `automation/historical-supplements.json`; read `docs/HISTORICAL_SUPPLEMENTS.md`. A supplement explicitly binds that authorization's digest, its historical coverage date and actual preparation/research times. It retains every research, health, technical, privacy, CI and exact-SHA release check, requires ten formal articles with ten qualifying read sources each, and cannot modify an already-live issue. The normal daily evaluator still requires today's date. Production timing and approval blockers remain unchanged.
+
 Final local receipt is `.stage4/operations/YYYY-MM-DD.json`; live verification is `.stage4/operations/live.json`. At completion append a small final operational entry to the task's own memory with date, commit, PR, merge SHA, run ID, live result and unresolved state. Never include research or secrets. GitHub + live hashes outrank old memory. The global Codex memory registry is not the automation state store.
 
 ## Live verification transport

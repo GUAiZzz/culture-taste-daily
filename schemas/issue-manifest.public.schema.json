@@ -185,7 +185,21 @@
       "type": "array",
       "items": { "type": "string", "minLength": 1 }
     },
-    "media_required": { "type": "boolean" }
+    "media_required": { "type": "boolean" },
+    "historical_supplement": {
+      "description": "Public retrospective disclosure only. The separate bounded authorization and private evidence gate grant Preview authority.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "authorization_id", "coverage_date", "prepared_at", "disclosure_zh", "disclosure_en"],
+      "properties": {
+        "kind": { "const": "historical_supplement" },
+        "authorization_id": { "const": "historical-supplements-2026-10-14" },
+        "coverage_date": { "type": "string", "format": "date" },
+        "prepared_at": { "type": "string", "format": "date-time" },
+        "disclosure_zh": { "type": "string", "minLength": 1 },
+        "disclosure_en": { "type": "string", "minLength": 1 }
+      }
+    }
   },
   "$defs": {
     "sha1": {
