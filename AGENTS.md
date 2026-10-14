@@ -47,3 +47,7 @@ For the authorized daily candidate dry run, also read `automation/DAILY_RUN.md` 
 ## Preview operational amendment
 
 Read docs/PREVIEW_AUTONOMY.md and automation/daily-policy.json before release work. The 2026-09-05 owner instruction supersedes prior daily candidate-only limits, effective 2026-09-06. Never apply that exception to Production, other repositories, history, default-branch migration or Pages settings.
+
+## Bounded historical supplements
+
+The owner authorized 26 explicitly listed historical supplements on 2026-10-14. Before preparing one, read `docs/HISTORICAL_SUPPLEMENTS.md` and `automation/historical-supplements.json`. This exception permits newly researched, visibly disclosed retrospective packages only for those missing dates, with actual preparation/access/lock times, exactly ten formal articles and at least ten substantive read sources per article. Ordinary daily scope and schedule remain unchanged. Existing live issues, supplied originals, the shared reading-room renderer and Production remain protected.

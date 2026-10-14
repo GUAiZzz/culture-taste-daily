@@ -18,6 +18,7 @@ import { assertPublicTree } from "./privacy.mjs";
 import { validateJsonFile } from "./schema.mjs";
 import { evaluateDateSemantics, groupIssuesByIsoWeek, isoWeekForDate } from "./dates.mjs";
 import { assertOfficialStoryImages } from "./official-media.mjs";
+import { historicalPackageBlockers } from "./historical-supplements.mjs";
 import {
   renderArchive,
   renderFacsimile,
@@ -301,6 +302,11 @@ async function loadIssue({ repoRoot, sourceRoot, issueId, baseCss, dailyPolicy, 
   await validateJsonFile(manifest, path.join(repoRoot, "schemas/issue-manifest.public.schema.json"), `${issueId} public manifest`);
   assertEqual(issueId, manifest.issue_id, "issue directory/id");
   assertEqual(issueId, manifest.publication_date, "issue id/publication date");
+  if (manifest.historical_supplement) {
+    const authorization = await readJson(path.join(repoRoot, "automation/historical-supplements.json"));
+    const blockers = historicalPackageBlockers({ manifest, content, authorization });
+    if (blockers.length) throw new Error(`${issueId} historical supplement: ${blockers.join(', ')}`);
+  }
   assertEqual(await sha256File(contentPath), manifest.content_lock.sha256, "content lock");
   assertEqual(await sha256File(contentPath), manifest.source_hashes.content_sha256, "content source hash");
   assertEqual(await sha256File(artPath), manifest.source_hashes.art_direction_sha256, "art direction source hash");

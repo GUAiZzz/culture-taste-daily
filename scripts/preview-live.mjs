@@ -4,7 +4,8 @@ import { createHash } from 'node:crypto';
 import { REPOSITORY, SHA, DIGEST } from './lib/preview-policy.mjs';
 import { digestMap } from './lib/files.mjs';
 import { createLiveTransport } from './lib/live-transport.mjs';
-const { values } = parseArgs({ options: { sha: { type: 'string' }, date: { type: 'string' } } });
+const { values } = parseArgs({ options: { sha: { type: 'string' }, date: { type: 'string' }, 'issue-date': { type: 'string' } } });
+if (values.date && values['issue-date']) throw new Error('Choose either latest --date or historical --issue-date');
 if (!SHA.test(values.sha ?? '')) throw new Error('An exact --sha is required');
 const origin = 'https://guaizzz.github.io/culture-taste-daily/';
 const transport = createLiveTransport();
@@ -14,7 +15,7 @@ const stamp = JSON.parse((await get('preview-release.json')).toString('utf8'));
 if (stamp.repository !== REPOSITORY || stamp.source_commit !== values.sha || !DIGEST.test(stamp.artifact_digest ?? '')) throw new Error('LIVE_IDENTITY_MISMATCH');
 if (!stamp.files || typeof stamp.files !== 'object' || Array.isArray(stamp.files) || digestMap(stamp.files) !== stamp.artifact_digest) throw new Error('LIVE_MANIFEST_DIGEST_MISMATCH');
 if (Object.keys(stamp.files).some(file => file.includes('..') || file.startsWith('/') || file.includes('\\') || !DIGEST.test(stamp.files[file]))) throw new Error('LIVE_FILE_SCOPE');
-const date = values.date ?? stamp.latest_issue;
+const date = values['issue-date'] ?? values.date ?? stamp.latest_issue;
 if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || (values.date && stamp.latest_issue !== values.date)) throw new Error('LIVE_DATE_MISMATCH');
 const stories = Object.keys(stamp.files).filter(file => file.startsWith(`issues/${date}/stories/`) && file.endsWith('/index.html'));
 if (!stories.length) throw new Error('LIVE_STORIES_MISSING');
@@ -23,10 +24,11 @@ for (const file of targets) {
   const bytes = await get(file);
   const hash = createHash('sha256').update(bytes).digest('hex');
   if (hash !== stamp.files[file]) throw new Error(`LIVE_CONTENT_MISMATCH ${file}`);
-  if (!/noindex/.test(bytes.toString()) || !bytes.toString().includes(date)) throw new Error(`LIVE_PREVIEW_LABEL_OR_DATE ${file}`);
+  const expectedDate = file === 'index.html' ? stamp.latest_issue : date;
+  if (!/noindex/.test(bytes.toString()) || !bytes.toString().includes(expectedDate)) throw new Error(`LIVE_PREVIEW_LABEL_OR_DATE ${file}`);
 }
 const receipt = { state: 'PREVIEW_DEPLOYED', production_eligible: false, source_commit: values.sha,
-  artifact_digest: stamp.artifact_digest, date, verified_at: new Date().toISOString(), routes: targets, origin,
+  artifact_digest: stamp.artifact_digest, date, latest_issue: stamp.latest_issue, verified_at: new Date().toISOString(), routes: targets, origin,
   transport_fallbacks: transport.events };
 await mkdir('.stage4/operations', { recursive: true });
 await writeFile('.stage4/operations/live.json', JSON.stringify(receipt, null, 2)+'\n');

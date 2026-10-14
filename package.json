@@ -9,6 +9,7 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "daily:preflight": "node scripts/daily-preflight.mjs",
+    "supplement:preflight": "node scripts/historical-preflight.mjs",
     "health:daily": "node scripts/site-health.mjs --scope daily",
     "health:weekly": "node scripts/site-health.mjs --scope weekly",
     "qa": "node scripts/qa.mjs",
@@ -29,7 +30,7 @@
     "ajv": "8.20.0",
     "ajv-formats": "3.0.1",
     "html-validate": "11.10.0",
-    "markdown-it": "15.0.0",
+    "markdown-it": "15.0.2",
     "playwright": "1.62.1"
   }
 }

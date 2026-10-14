@@ -15,6 +15,7 @@ import {
 import { scanForPrivateMaterial } from "./privacy.mjs";
 import { validateJsonFile } from "./schema.mjs";
 import { startStaticServer } from "./server.mjs";
+import { requestOriginUrl, externalPreviewConsoleOrigin } from "./preview-network-diagnostics.mjs";
 
 const CHECK_IDS = [
   "manifest_schema",
@@ -259,16 +260,25 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
   const consoleErrors = [];
   const requestFailures = [];
   const externalPreviewFailures = [];
+  const rawConsoleErrors = [];
+  const rawRequestFailures = [];
+  const imageResources = new Map();
   const externalPreviewUrls = new Set(
     manifest.stories.map((story) => story.media?.external_image_url).filter(Boolean),
   );
   page.on("console", (message) => {
-    if (message.type() === "error") consoleErrors.push(message.text());
+    if (message.type() === "error") rawConsoleErrors.push({ text: message.text(), locationUrl: message.location().url });
+  });
+  page.on("response", response => {
+    const request = response.request();
+    if (request.resourceType() === "image") imageResources.set(response.url(), requestOriginUrl(request));
+  });
+  page.on("request", request => {
+    if (request.resourceType() === "image") imageResources.set(request.url(), requestOriginUrl(request));
   });
   page.on("requestfailed", (request) => {
     const failure = `${request.url()} ${request.failure()?.errorText ?? "failed"}`;
-    if (externalPreviewUrls.has(request.url())) externalPreviewFailures.push(failure);
-    else requestFailures.push(failure);
+    rawRequestFailures.push({ failure, origin: requestOriginUrl(request), isImage: request.resourceType() === "image" });
   });
   await page.goto(`${origin}/${urlPath ?? `issues/${issueId}/`}`, { waitUntil: "domcontentloaded" });
   const resolveExternalPreviews = javaScriptEnabled && (
@@ -397,6 +407,7 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
   const screenshotPath = path.join(evidenceDir, "renders", `${name}.png`);
   await mkdir(path.dirname(screenshotPath), { recursive: true });
   await page.screenshot({ path: screenshotPath, fullPage: true, animations: "disabled" });
+  for (const url of await page.locator('img[data-external-preview="true"]').evaluateAll(images => images.map(image => image.src))) externalPreviewUrls.add(url);
   const render = {
     path: toPosix(path.relative(evidenceDir, screenshotPath)),
     sha256: await sha256File(screenshotPath),
@@ -406,6 +417,16 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
     reduced_motion: reducedMotion,
   };
   await context.close();
+  for (const message of rawConsoleErrors) {
+    const originalUrl = externalPreviewConsoleOrigin({ ...message, imageResources,
+      declaredUrls: externalPreviewUrls, siteOrigin: origin, javaScriptEnabled });
+    if (originalUrl) externalPreviewFailures.push(`${originalUrl}: ${message.text}`);
+    else consoleErrors.push(message.text);
+  }
+  for (const item of rawRequestFailures) {
+    if (item.isImage && externalPreviewUrls.has(item.origin)) externalPreviewFailures.push(item.failure);
+    else requestFailures.push(item.failure);
+  }
   return { facts, consoleErrors, requestFailures, externalPreviewFailures, render };
 }
 
@@ -512,7 +533,7 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
         && captures["archive-no-js-390x844"].facts.archive_hidden_panels === 0
         && captures["archive-no-js-390x844"].facts.archive_issue_links === captures["archive-desktop-1440x900"].facts.archive_issue_links;
       checks.push(result("publication_shell_render", shellOk, {
-        transport_errors: shellCaptures.filter(item => item.consoleErrors.length || item.requestFailures.length).map(item => ({
+        transport_errors: shellCaptures.filter(item => item.consoleErrors.length || item.requestFailures.length || item.externalPreviewFailures.length).map(item => ({
           page: item.render.path, console_errors: item.consoleErrors, request_failures: item.requestFailures,
           external_preview_failures: item.externalPreviewFailures,
         })),

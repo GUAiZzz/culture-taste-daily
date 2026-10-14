@@ -2,6 +2,8 @@
 
 Status: `AUTHORIZED DAILY PREVIEW / PRODUCTION DISABLED`
 
+For the owner-authorized 26-date historical supplement queue, additionally read `docs/HISTORICAL_SUPPLEMENTS.md` and its fixed authorization record. Use the explicit supplement path; ordinary daily date/scope checks remain in force.
+
 Read `docs/PREVIEW_AUTONOMY.md` for the owner authorization, machine evidence contract and recovery procedure. This supersedes older dry-run-only instructions. `automation/daily-policy.json` is the single schedule authority; do not use memory to override it.
 
 ## Schedule and identity

@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { isAuthorizedHistoricalDate, historicalAuthorizationDigest } from './historical-supplements.mjs';
 
 export const REPOSITORY = 'GUAiZzz/culture-taste-daily';
 export const PREVIEW_BASE = 'preview-build-v1';
@@ -38,7 +39,20 @@ export function evaluatePreview({ evidence, runtime, policy, now = new Date() })
   const fail = (ok, code) => { if (!ok) blockers.push(code); };
   fail(e.schema_version === 1 && e.kind === 'preview_run_attestation', 'EVIDENCE_SCHEMA');
   fail(policy?.output?.merge === true && policy?.output?.deploy_preview === true && policy?.output?.deploy_production === false, 'PREVIEW_AUTHORITY');
-  fail(e.target_date === shanghaiDate(now) && e.target_date >= policy?.preview_authority?.effective_from, 'DATE_IDENTITY');
+  const supplement = e.historical_supplement;
+  const authorization = policy?.historical_supplements;
+  if (supplement) {
+    fail(isAuthorizedHistoricalDate(authorization, e.target_date)
+      && supplement.authorization_id === authorization.authorization_id
+      && supplement.authorization_digest === historicalAuthorizationDigest(authorization)
+      && r.historical_supplement_valid === true, 'HISTORICAL_AUTHORITY');
+    fail(r.already_live_historical_date === false, 'HISTORICAL_ALREADY_LIVE');
+    fail(r.formal_story_count === 10, 'FORMAL_STORY_COUNT_MISMATCH');
+    for (const code of r.historical_supplement_blockers ?? []) blockers.push(code);
+  } else {
+    fail(!authorization && e.target_date === shanghaiDate(now)
+      && e.target_date >= policy?.preview_authority?.effective_from, 'DATE_IDENTITY');
+  }
   fail(r.repository === REPOSITORY && r.base_ref === PREVIEW_BASE && r.branch === `automation/culture-taste-${e.target_date}`, 'REPOSITORY_IDENTITY');
   fail(r.scope_ok === true && r.clean === true, 'PUBLIC_PATH_SCOPE');
   for (const field of ['source_commit', 'base_commit']) fail(SHA.test(e[field] ?? '') && e[field] === r[field], field.toUpperCase());
@@ -57,13 +71,14 @@ export function evaluatePreview({ evidence, runtime, policy, now = new Date() })
   fail(r.push_permission === true, 'GITHUB_PUSH_PERMISSION');
   fail(r.package_complete === true, 'PACKAGE_INCOMPLETE');
   const pages = Array.isArray(e.health?.source_pages) ? e.health.source_pages : [];
+  const verificationDate = supplement ? shanghaiDate(now) : e.target_date;
   fail(Array.isArray(r.source_urls) && r.source_urls.length > 0
     && r.source_urls.every(url => pages.some(p => p.url === url && (p.status === 'PASS'
-      || (p.status === 'REVIEW_REQUIRED' && validVerification(p.browser_verified_at, now, e.target_date))))), 'SOURCE_UNVERIFIED');
+      || (p.status === 'REVIEW_REQUIRED' && validVerification(p.browser_verified_at, now, verificationDate))))), 'SOURCE_UNVERIFIED');
   const media = Array.isArray(e.health?.media) ? e.health.media : [];
   fail(Array.isArray(r.media_urls) && r.media_urls.length > 0
     && r.media_urls.every(url => media.some(m => m.url === url
-      && validVerification(m.provenance_verified_at, now, e.target_date)
+      && validVerification(m.provenance_verified_at, now, verificationDate)
       && m.linked_origin === true && m.fallback_verified === true
       && ['PASS', 'TEMPORARILY_UNAVAILABLE'].includes(m.status)
       && ['unknown', 'cleared'].includes(m.production_rights))), 'OFFICIAL_MEDIA_UNVERIFIED');
