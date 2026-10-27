@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "kind": "immutable_published_issue_baseline",
+  "repository": "GUAiZzz/culture-taste-daily",
+  "source_commit": "ac7de074d36ed554f2cf6f079cae7b57c2d26401",
+  "verified_live_on": "2026-10-27",
+  "purpose": "Preserve already-live issues under their original editorial requirements. This is not a new publication or a mutable exemption list.",
+  "issues": [
+    {
+      "date": "2026-08-23",
+      "manifest_sha256": "65d81f08e496e0b31e3e9828e18b40445a956e90735b995c6d3f7b7eead4c875"
+    },
+    {
+      "date": "2026-08-24",
+      "manifest_sha256": "caaeb86df4d7cc0c17339655d382950e1c8923e9cdb19a21be05ee274cabbf49"
+    },
+    {
+      "date": "2026-08-25",
+      "manifest_sha256": "bb54335702fba5d0878c16bd9085bc30f37ea3ba1f4908f7049c62d2a28cff5a"
+    },
+    {
+      "date": "2026-08-26",
+      "manifest_sha256": "585732e3a53dd89bc382b3a0445044750d62e3045e98bfac719cdea591f6de30"
+    },
+    {
+      "date": "2026-08-27",
+      "manifest_sha256": "4f98ae5e1a6eb624020e250dc8ababf95b4bf5251e86e48b4b4c1bd74471fb60"
+    },
+    {
+      "date": "2026-08-28",
+      "manifest_sha256": "0eea5d8795f9e539b34c6c778a15dbe73bde20dafaccc8a6e5979e00e440e453"
+    },
+    {
+      "date": "2026-08-29",
+      "manifest_sha256": "7bc817f4b23762abf2aa9954efe282cc1b022665e006b16dea8278434503cd89"
+    },
+    {
+      "date": "2026-08-30",
+      "manifest_sha256": "547c337b2adc918417a1add33583e032ebcd357f7ac9e9851f46b38e03a65727"
+    },
+    {
+      "date": "2026-08-31",
+      "manifest_sha256": "9be8f48c0b9ef124fb4482ff9668618c974cd84954e08d679dc69222a5ad6f81"
+    },
+    {
+      "date": "2026-09-01",
+      "manifest_sha256": "0a842b32ae1c66f737477bfabc1ed2a0bd97dbe7a6346dbfa7491a6a72f11961"
+    },
+    {
+      "date": "2026-09-02",
+      "manifest_sha256": "9527bff1c89cad0678ee641fae42996091579e4f4ca36f5353640b2eeedc7f4a"
+    },
+    {
+      "date": "2026-09-03",
+      "manifest_sha256": "6906bcd8e0bc5ad2831a3171e841ab884e91b3467d7e3dd74df4b83eb2bd7470"
+    },
+    {
+      "date": "2026-09-04",
+      "manifest_sha256": "3ee8566ac84ccd105aecc97ee058cbcdd9fc60f1f8becb2a9604490bd7c5d550"
+    },
+    {
+      "date": "2026-09-05",
+      "manifest_sha256": "65fbd6b0ece83513528da6f094ea4623db79180134e8b41f27c333d86de398dc"
+    },
+    {
+      "date": "2026-09-06",
+      "manifest_sha256": "0918f325175d7dc3e919a92f773aef77e10271672a01dda582cf4718d2a2b524"
+    },
+    {
+      "date": "2026-09-07",
+      "manifest_sha256": "32f4b57a79ae505e9ab69ae5a4a4a8fdf667d1d9b69eccde5365ba6a55af1faf"
+    },
+    {
+      "date": "2026-09-08",
+      "manifest_sha256": "fabc0276e059f88fefa223fa6ced437183cafbe4c15f9671d86d3acc927bdddb"
+    },
+    {
+      "date": "2026-09-09",
+      "manifest_sha256": "eeeb722539ca24ad3fe3baf1a00ec07f5e07b950212c348c055a1ad783130e65"
+    },
+    {
+      "date": "2026-09-10",
+      "manifest_sha256": "f7730b7e8dc81130718dd03e7550eaea8593c043a6432b5dd981f1ac67c85f8a"
+    },
+    {
+      "date": "2026-09-11",
+      "manifest_sha256": "497aea8600d7dfb29dba75185bd8cab8332dde6458411f4ea879734491e4677a"
+    },
+    {
+      "date": "2026-09-14",
+      "manifest_sha256": "4d76a7e8083276151315e27c42f87851a06da148459ad8163f237d5c1c20d5b9"
+    },
+    {
+      "date": "2026-09-15",
+      "manifest_sha256": "f496e3e848a0d9a18a08b038d45d2a2d8fa025d151fc82589922c3cf219bb66e"
+    },
+    {
+      "date": "2026-09-16",
+      "manifest_sha256": "875fd6bea2059ff5db0321eef3b5767bc8dda44780aebdfd2fc2c1528a41723d"
+    },
+    {
+      "date": "2026-09-17",
+      "manifest_sha256": "c13176b3ae79f36bd08376b185b37cd6295fe939b0735d29dbb7c8916e6689a7"
+    },
+    {
+      "date": "2026-09-20",
+      "manifest_sha256": "6ce47ae2e1496e13f590605372f19443aa78a2b11a93bbce3103eecdbac77edf"
+    },
+    {
+      "date": "2026-09-21",
+      "manifest_sha256": "d4c13804d66f8a5ffcfad9cd6d95fb1860fe2b042636d37e65fabb3a557b85ff"
+    },
+    {
+      "date": "2026-09-22",
+      "manifest_sha256": "2ff9bca6e0bbced9ca85ac58cd067d142a23d26f4a19db100e9c8cf4976932bb"
+    }
+  ]
+}

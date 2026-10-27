@@ -16,6 +16,7 @@ import { scanForPrivateMaterial } from "./privacy.mjs";
 import { validateJsonFile } from "./schema.mjs";
 import { startStaticServer } from "./server.mjs";
 import { requestOriginUrl, externalPreviewConsoleOrigin } from "./preview-network-diagnostics.mjs";
+import { collectPreviewImageFacts, declaredPreviewMedia, previewImagesReadable } from "./preview-fallback.mjs";
 
 const CHECK_IDS = [
   "manifest_schema",
@@ -371,6 +372,7 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
       archive_week_toggles: document.querySelectorAll("[data-week-toggle]").length,
     };
   }, manifest.stories.map((story) => story.title));
+  Object.assign(facts, await page.evaluate(collectPreviewImageFacts));
 
   if (testArchiveAccordion) {
     const toggles = page.locator("[data-week-toggle]");
@@ -437,6 +439,22 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
   const staticFailed = checks.some((check) => check.status === "FAIL");
 
   if (capture && !staticFailed) {
+    // Bind any fallback exception to official image declarations in this artifact.
+    // A source radar is usable only when its parent manifest matches the built input.
+    const manifests = [], radars = [];
+    for (const issue of staticResult.buildReport.issues) {
+      const manifest = await readJson(path.join(distDir, 'issues', issue.issue_id, 'issue-manifest.public.json'));
+      manifests.push(manifest);
+      try {
+        const sourceRoot = path.join(repoRoot, 'src', 'issues', issue.issue_id);
+        const sourceManifest = await readJson(path.join(sourceRoot, 'issue-manifest.public.json'));
+        if (sourceManifest.source_hashes.content_sha256 === manifest.source_hashes.content_sha256) {
+          const radar = await readJson(path.join(sourceRoot, 'daily-radar.public.json'));
+          if (issue.daily_radar_sha256 && await sha256File(path.join(sourceRoot, 'daily-radar.public.json')) === issue.daily_radar_sha256) radars.push(radar);
+        }
+      } catch (error) { if (error.code !== 'ENOENT') throw error; }
+    }
+    const previewOrigins = declaredPreviewMedia(manifests, radars);
     const server = await startStaticServer(distDir);
     const browser = await launchChromium();
     try {
@@ -488,10 +506,7 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
           && item.facts.controls_below_44px.length === 0
           && item.facts.viewport_fit_cover
           && item.facts.broken_images.length === 0
-          && item.facts.external_preview_images.every((image) => image.loaded
-            || !image.settled
-            || item.facts.deferred_external_previews.includes(image.url))
-          && item.facts.image_failed_frames === 0
+          && previewImagesReadable(item.facts, previewOrigins, { allowDeferred: true })
           && item.consoleErrors.length === 0
           && item.requestFailures.length === 0;
       const desktop = captures["desktop-1440x900"];
@@ -523,12 +538,12 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
       const shellCaptures = [captures["home-desktop-1440x900"], captures["home-mobile-390x844"], captures["home-landscape-844x390"], captures["archive-desktop-1440x900"], captures["archive-landscape-844x390"], captures["archive-no-js-390x844"], captures["historical-20-mobile-390x844"], captures["historical-21-mobile-390x844"], captures["historical-22-mobile-390x844"]].filter(Boolean);
       const shellOk = shellCaptures.every((item) => item.facts.horizontal_overflow === 0
         && item.facts.broken_images.length === 0
-        && item.facts.image_failed_frames === 0
+        && previewImagesReadable(item.facts, previewOrigins, { allowDeferred: true })
         && item.facts.nested_scroll_frames === 0
         && item.consoleErrors.length === 0
         && item.requestFailures.length === 0)
-        && captures["home-desktop-1440x900"].facts.external_preview_images.every((image) => image.loaded)
-        && captures["home-mobile-390x844"].facts.external_preview_images.every((image) => image.loaded)
+        && previewImagesReadable(captures["home-desktop-1440x900"].facts, previewOrigins)
+        && previewImagesReadable(captures["home-mobile-390x844"].facts, previewOrigins)
         && captures["archive-desktop-1440x900"].facts.archive_accordion?.valid
         && captures["archive-no-js-390x844"].facts.archive_hidden_panels === 0
         && captures["archive-no-js-390x844"].facts.archive_issue_links === captures["archive-desktop-1440x900"].facts.archive_issue_links;

@@ -2,6 +2,8 @@
 
 Status: **proposed operating map for research and dry runs**
 
+Operational update (owner instruction, 2026-10-27): use `automation/source-library.json` for verified official entrypoints and explicit unresolved identities; `npm run sources:plan` provides the daily queue. Save actual source findings and read notes in the external private editorial workspace. See `docs/EDITORIAL_OPERATIONS.md`. For unpublished issues, the owner's exact-ten-article requirement overrides earlier no-quota statements about formal issue size. The requirement for ten substantive actually read sources per formal article remains independent of issue size.
+
 This document governs factual culture-and-taste research. It is separate from `docs/REFERENCE_SYSTEM.md`, which governs visual and interaction references after the editorial problem is locked.
 
 A publication may appear in both systems for different reasons. An article can support a factual story only when its claims are verified under this map. A project page can teach a design principle only when it passes the detail-evidence rules in the reference system. Neither use authorizes the other.
@@ -93,7 +95,8 @@ Operating rules:
 - official brand, designer, retailer, event, or archive pages may establish only subject-originated facts under P0;
 - cultural impact, reception, breakout status, or trend claims still require independent or direct community evidence appropriate to the claim;
 - the scan must resolve and open the current official detail route rather than treating a saved name, social profile, homepage, or search snippet as evidence;
-- Instagram login and social following are not part of the research contract and must never become runtime dependencies;
+- inspect verified public official Instagram posts/reels/captions as a regular discovery route where accessible; establish account identity through the official site's outbound link, save exact post permalinks and dates, and count only substantive captions actually read;
+- Instagram profiles and inaccessible posts never count as read information sources. Login and social following must not become runtime dependencies; substitute official news/journal/lookbook, collaborator/institution, regional original reporting or a public feed/archive when access fails;
 - missing, renamed, ambiguous, inactive, or compromised identities are recorded as access limits and held until reverified;
 - “Daisy” remains excluded from the active rotation until its exact brand and official source identity are supplied; the system must not guess which subject was intended.
 
@@ -392,7 +395,7 @@ first-party official image verified for every selected story: PASS | FAIL
 cover and major evidence gates passed: PASS | FAIL
 ```
 
-Any `FAIL` is corrected before drafting. Fewer stories are valid. Unsupported completeness is not.
+Any `FAIL` is corrected before drafting. Retain unfinished research privately; only an exact-ten complete formal issue can enter publication under the current owner rule. Unsupported completeness is never valid.
 
 ## 14. Source-health maintenance
 

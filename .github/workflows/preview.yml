@@ -59,6 +59,12 @@ jobs:
       - name: Verify operation policy consistency
         run: npm run ops:check
 
+      - name: Verify public editorial package requirements
+        run: npm run editorial:check -- --public-only
+
+      - name: Check dependency security
+        run: npm audit --audit-level=high
+
       - name: Run complete local-equivalent verification
         env:
           PLAYWRIGHT_CHANNEL: chromium

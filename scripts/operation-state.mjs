@@ -23,7 +23,11 @@ if (values.online) {
   else if (prs.some(pr => pr.state === 'MERGED')) state.state = 'PREVIEW_MERGED_UNVERIFIED';
   else if (prs.some(pr => pr.state === 'OPEN')) state.state = 'PR_OPEN';
   state.base_commit = JSON.parse(gh(['api', `repos/${REPOSITORY}/git/ref/heads/${PREVIEW_BASE}`])).object.sha;
-  state.recent_runs = JSON.parse(gh(['api', `repos/${REPOSITORY}/actions/workflows/preview.yml/runs?per_page=5`])).workflow_runs.map(run => ({ id: run.id, sha: run.head_sha, event: run.event, status: run.status, conclusion: run.conclusion }));
+  state.recent_runs = JSON.parse(gh(['api', `repos/${REPOSITORY}/actions/workflows/preview.yml/runs?per_page=5`])).workflow_runs.map(run => ({ id: run.id, sha: run.head_sha, event: run.event, status: run.status, conclusion: run.conclusion,
+    role: run.event === 'workflow_dispatch' ? 'preview_deployment' : 'pull_request_verification',
+    pull_requests: (run.pull_requests ?? []).map(pr => ({ number: pr.number, base: pr.base?.ref, head: pr.head?.ref })) }));
+  state.recent_deployments = JSON.parse(gh(['api', `repos/${REPOSITORY}/actions/workflows/preview.yml/runs?event=workflow_dispatch&branch=${PREVIEW_BASE}&per_page=3`])).workflow_runs
+    .map(run => ({ id: run.id, sha: run.head_sha, status: run.status, conclusion: run.conclusion }));
   try {
     const response = await fetch('https://guaizzz.github.io/culture-taste-daily/preview-release.json', { signal: AbortSignal.timeout(15000), cache: 'no-store' });
     if (response.ok) {
