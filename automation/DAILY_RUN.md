@@ -2,6 +2,8 @@
 
 Status: `AUTHORIZED DAILY PREVIEW / PRODUCTION DISABLED`
 
+The owner's 2026-10-27 reliability instruction is implemented in [Editorial operations](../docs/EDITORIAL_OPERATIONS.md). Start every collection checkpoint with `npm run daily:cycle -- --workspace-root <absolute-private-root> --online`. Resume its persisted article/source plan; do not restart an unchanged inventory of old PRs. The current-day issue takes priority over the historical queue.
+
 For the owner-authorized 26-date historical supplement queue, additionally read `docs/HISTORICAL_SUPPLEMENTS.md` and its fixed authorization record. Use the explicit supplement path; ordinary daily date/scope checks remain in force.
 
 Read `docs/PREVIEW_AUTONOMY.md` for the owner authorization, machine evidence contract and recovery procedure. This supersedes older dry-run-only instructions. `automation/daily-policy.json` is the single schedule authority; do not use memory to override it.
@@ -13,6 +15,8 @@ At each configured checkpoint, run `npm run ops:state -- --online` first. A comp
 Use the authenticated GitHub transport that performs the work: the local `gh` CLI scoped explicitly to GUAiZzz/culture-taste-daily. A connector's different permission result does not prove this transport unavailable. Network calls have at most three attempts (2s, 8s backoff); do not retry scope, privacy or technical failures as network errors.
 
 Before research, verify origin fetch and push URLs, fetch preview-build-v1, record clean worktree/head/base with `npm run ops:preflight -- --online`, then run `npm run daily:preflight`. Preflight checks alone grant no release authority. Research uses today's actual Shanghai date. A late same-day Preview keeps actual timestamps and Production's original 15:00 deadline result; never backdate.
+
+Collection phases are machine-reported: `RESEARCH` through the 15:00 Production lock, then `LATE_PREVIEW_RESEARCH` before 18:00. This existing Preview allowance does not change Production's deadline or any quality gate. At and after 18:00 only reconcile existing releases and report the result; start no new research.
 
 Create or reuse only `automation/culture-taste-YYYY-MM-DD` and its unique PR to preview-build-v1. Update an existing candidate from the current base without force push. Resolve base changes and rerun checks; never bypass a conflict. Do not directly commit to main/Preview/gh-pages.
 
@@ -60,7 +64,8 @@ The issue may publish none of these when evidence or editorial relevance is weak
 
 ## Editorial and reference lock
 
-- Select the smallest strong issue; do not fill a numerical quota.
+- Select exactly ten strong formal articles for every unpublished candidate, including existing unpublished PRs. This owner requirement supersedes the earlier smallest-issue guidance. Never pad weak or duplicate material; an incomplete issue is retained privately and cannot publish.
+- Every formal article dated from 2026-09-16 requires ten distinct substantive actually read sources. The public package and the private `article_sources` ledger are validated separately; a profile, snippet, image credit, tracking URL or repeated underlying source cannot fill the count. Historical supplements retain their separate stricter authority.
 - Separate fact, attributable source rationale, and Culture & Taste inference.
 - Chinese carries the complete argument; English adds no unsupported fact or certainty.
 - Run the canonical HarryTone audit before content lock.
@@ -74,7 +79,7 @@ The issue may publish none of these when evidence or editorial relevance is weak
 
 ## Supplemental daily radar
 
-Build the homepage radar separately from the formal issue. The issue must still select the smallest strong set and must never be padded to satisfy the radar count.
+Build the homepage radar separately from the ten formal articles. Radar items and information links do not count as formal articles. Reuse verified article material where relevant, without inventing category coverage.
 
 - Create `daily-radar.public.json` for the current date with at least two verified items in each of Fashion, Music, Objects, and City.
 - The radar must include a public coverage attestation: all five regional lanes checked, full brand registry quick-scan completed, the exact focus cohort and standing beats checked, and the configured prior-issue deduplication window applied. Item-level rejected research remains private.
@@ -131,7 +136,7 @@ Run `npm run preview:release` with both private paths, first without `--execute`
 
 After an interruption use `npm run ops:state -- --online` and `npm run preview:resume`; never create another candidate or PR. Confirm final merge/deploy/live state and append the terminal receipt to this automation's memory. Keep detailed evidence and receipts outside Git.
 
-Notify only on a non-overridable fault, exhausted transient retries, failed live verification, or final missing-day. Normal no-op checkpoints stay quiet. A transient limitation that is fully handled and honestly represented in Preview is recorded without requiring owner action. Production never runs automatically.
+Notify on the first verified publication, a missed primary checkpoint, material progress/new blockers at recovery, a non-overridable fault, exhausted transient retries, failed live verification, and the final published-or-missing-day result. Report last live date, complete article and per-story read-source counts, concrete remaining work and next configured recovery. Normal unchanged no-op checkpoints stay quiet. Content incompleteness is a task failure even when commands passed; do not silently archive it as successful. Production never runs automatically.
 
 ## Shared reading edition
 

@@ -285,6 +285,7 @@ test("daily preflight verifies the existing manual-only Preview and privacy defe
     primary: "11:00",
     recovery_checks: ["13:00", "15:00", "17:00"],
     deadline: "08:30",
+    preview_collection_deadline: "18:00",
     recover_when_current_candidate_missing: true,
   });
 });
@@ -352,4 +353,14 @@ test("brand radar is deterministic, complete, and independent from social follow
   assert.equal(report.brand_radar.full_registry_daily_quick_scan, true);
   assert.equal(report.brand_radar.full_registry_subjects.length, subjects.length);
   assert.ok(report.brand_radar.focus_subjects.length > 0);
+});
+
+test("Preview recovery has an explicit late phase and stops new research at the final checkpoint", async () => {
+  const late = await evaluateDailyPreflight({ repoRoot, now: new Date('2026-10-27T17:00:00+08:00') });
+  assert.equal(late.status, 'READY_FOR_PREVIEW_RESEARCH');
+  assert.equal(late.research_phase, 'LATE_PREVIEW_RESEARCH');
+  assert.equal(late.within_production_window, false);
+  const final = await evaluateDailyPreflight({ repoRoot, now: new Date('2026-10-27T18:00:00+08:00') });
+  assert.equal(final.status, 'BLOCKED'); assert.equal(final.research_phase, 'FINAL_RECONCILIATION_ONLY');
+  assert.match(final.blockers.join('\n'), /FINAL_RECONCILIATION_ONLY/);
 });

@@ -2,6 +2,7 @@ import { readFile } from 'node:fs/promises';
 import { parseArgs } from 'node:util';
 import { readJson } from './lib/files.mjs';
 import { checkSchedule } from './lib/schedule.mjs';
+import { validateSourceLibrary } from './lib/source-library.mjs';
 const { values } = parseArgs({ options: { 'automation-file': { type: 'string' } } });
 const policy = await readJson('automation/daily-policy.json');
 const issues = [];
@@ -9,6 +10,13 @@ const times = [policy.schedule.start_time, ...policy.schedule.recovery_check_tim
 const expected = policy.schedule.scheduler_hours.map(hour => `${String(hour).padStart(2, '0')}:00`);
 if (JSON.stringify(times) !== JSON.stringify(expected)) issues.push('INTERNAL_SCHEDULE_DRIFT');
 if (policy.timezone !== 'Asia/Shanghai' || policy.output.deploy_production !== false || policy.output.modify_pages_settings !== false || policy.output.modify_legacy_repository !== false) issues.push('AUTHORITY_DRIFT');
+if (policy.editorial?.formal_story_count !== 10
+  || policy.editorial?.exact_count_effective_from !== '2026-10-12'
+  || policy.editorial?.minimum_substantive_sources_per_story !== 10
+  || policy.editorial?.sources_effective_from !== '2026-09-16'
+  || policy.editorial?.private_workspace_required !== true) issues.push('EDITORIAL_REQUIREMENTS_DRIFT');
+if (policy.brand_radar?.source_library !== 'automation/source-library.json') issues.push('SOURCE_LIBRARY_MISSING');
+issues.push(...validateSourceLibrary(await readJson('automation/source-library.json'), await readJson('automation/brand-radar.json')));
 for (const file of ['docs/PRODUCTION_STATUS.md', 'docs/PREVIEW_BUILD.md']) {
   const text = await readFile(file, 'utf8');
   if (!text.includes('ops:state')) issues.push(`LIVE_STATE_SOURCE_MISSING:${file}`);
@@ -16,6 +24,7 @@ for (const file of ['docs/PRODUCTION_STATUS.md', 'docs/PREVIEW_BUILD.md']) {
 }
 const workflow = await readFile('.github/workflows/preview.yml', 'utf8');
 if (/^\s+(?:schedule|push):/m.test(workflow) || !workflow.includes('expected_sha')) issues.push('WORKFLOW_AUTHORITY_DRIFT');
+if (!workflow.includes('npm run editorial:check -- --public-only') || !workflow.includes('npm audit --audit-level=high')) issues.push('WORKFLOW_QUALITY_DRIFT');
 if (values['automation-file']) {
   const config = await readFile(values['automation-file'], 'utf8');
   const recurrence = config.match(/^rrule = "([^"]+)"/m)?.[1];

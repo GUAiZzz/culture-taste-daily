@@ -47,6 +47,16 @@ The decisions below became active through V3 activation. Their historical `OLD A
 - Failure boundary: any hard failure is `BLOCKED` and preserves the previous good website
 - Authority boundary: O1 permits candidate generation, dated pull requests, and read-only health reporting only; it does not permit merge, Preview dispatch, Pages changes, production deployment, or automated editorial/rights approval
 
+## Operational reconciliation O3 — Daily reliability and content continuation
+
+- Owner instruction: 2026-10-27, preserve the original quality requirements and implement rule unification and content continuation first, then technical repairs and source-library improvements. Inspect relevant working references before changes and verify actual execution rather than changing prompts alone.
+- Existing quality authority reconciled into code: every unpublished candidate has exactly ten formal articles (owner clarification 2026-10-12); ordinary articles from 2026-09-16 have ten substantive actually read sources each; the existing authorized historical supplements retain ten per article for all enumerated dates.
+- Implementation: one machine policy, shared public/private editorial validators, external atomic private checkpoints, explicit source scan records, immutable already-live baseline, input-bound execution receipts and current-state verification during recovery.
+- Time semantics: preserve Production's 15:00 result and the already-authorized late Preview allowance before 18:00; the final checkpoint starts no new research. No schedule or Production cutover changes.
+- Maintenance boundary: dependency/security and reader-fallback checks are repaired separately from daily content. Source entrypoints remain discovery-only; missing identities/access are explicit, never fabricated as read evidence.
+- Protected material: all already-live issues, historical originals, shared reading-room renderers, private HarryTone source, Production and Pages settings remain unchanged.
+- Detailed commands, consulted primary references and experiments: `docs/EDITORIAL_OPERATIONS.md`.
+
 ## D01 — Canonical authority and activation
 
 **OLD ASSUMPTION**

@@ -26,6 +26,14 @@
     ]
   },
   "freshness_hours": 72,
+  "editorial": {
+    "formal_story_count": 10,
+    "exact_count_effective_from": "2026-10-12",
+    "minimum_substantive_sources_per_story": 10,
+    "sources_effective_from": "2026-09-16",
+    "private_workspace_required": true,
+    "current_day_before_historical_supplements": true
+  },
   "official_image_gate": {
     "required": true,
     "effective_from": "2026-08-25",
@@ -80,6 +88,7 @@
   ],
   "brand_radar": {
     "registry": "automation/brand-radar.json",
+    "source_library": "automation/source-library.json",
     "selection": "full_registry_daily_quick_scan_plus_focus_cohort_and_standing_beats",
     "full_registry_daily_quick_scan": true,
     "publication_quota": false,

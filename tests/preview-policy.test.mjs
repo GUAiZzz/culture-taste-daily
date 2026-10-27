@@ -55,7 +55,54 @@ test('resume requires the original eligible receipt, source head and current pol
   const { validResumeReceipt } = await import('../scripts/lib/preview-policy.mjs');
   const p = { headRefOid: 'a'.repeat(40), mergeCommit: { oid: 'b'.repeat(40) } };
   const rule = { output: { deploy_production: false } };
-  const receipt = { date: '2026-09-06', preview_eligible: true, source_commit: p.headRefOid, policy_digest: policyDigest(rule) };
+  const receipt = { schema_version: 2, kind: 'preview_release_receipt', date: '2026-09-06', state: 'PREVIEW_MERGED',
+    preview_eligible: true, execution_authorized: true, merge_attempted: true, source_commit: p.headRefOid,
+    merge_commit: p.mergeCommit.oid, policy_digest: policyDigest(rule), base_commit: 'c'.repeat(40),
+    candidate_digest: d, artifact_digest: d, validated_runtime: { source_commit: p.headRefOid },
+    private_inputs: { attestation_path: '/private/tmp/attestation.json', attestation_sha256: d,
+      research_path: '/private/tmp/research.json', research_sha256: d } };
   assert.equal(validResumeReceipt(receipt, p, rule, receipt.date), true);
-  for (const bad of [null, {}, {...receipt, preview_eligible: false}, {...receipt, source_commit: 'c'.repeat(40)}, {...receipt, policy_digest: 'wrong'}, {...receipt, merge_commit: 'd'.repeat(40)}]) assert.equal(validResumeReceipt(bad, p, rule, receipt.date), false);
+  for (const bad of [null, {}, {...receipt, preview_eligible: false}, {...receipt, source_commit: 'c'.repeat(40)},
+    {...receipt, policy_digest: 'wrong'}, {...receipt, merge_commit: 'd'.repeat(40)},
+    {...receipt, execution_authorized: false}, {...receipt, merge_attempted: false},
+    {...receipt, state: 'STOPPED'}, {...receipt, state: 'PREVIEW_ELIGIBLE'}, {...receipt, private_inputs: undefined},
+    {...receipt, schema_version: undefined}, {...receipt, merge_commit: undefined}]) assert.equal(validResumeReceipt(bad, p, rule, receipt.date), false);
+  for (const state of ['PREVIEW_MERGE_REQUESTED', 'PREVIEW_MERGE_UNCERTAIN']) {
+    assert.equal(validResumeReceipt({ ...receipt, state, merge_commit: undefined }, p, rule, receipt.date), true);
+    assert.equal(validResumeReceipt({ ...receipt, state, execution_authorized: false, merge_commit: undefined }, p, rule, receipt.date), false);
+  }
+});
+
+function modernFixture() {
+  const f = fixture();
+  f.now = new Date('2026-10-27T14:00:00+08:00');
+  f.policy = { ...policy, editorial: { formal_story_count: 10, exact_count_effective_from: '2026-10-12',
+    minimum_substantive_sources_per_story: 10, sources_effective_from: '2026-09-16' } };
+  f.evidence.target_date = '2026-10-27';
+  f.evidence.checked_at = '2026-10-27T13:30:00+08:00';
+  f.evidence.policy_digest = policyDigest(f.policy);
+  f.evidence.health.media[0].provenance_verified_at = '2026-10-27T13:00:00+08:00';
+  f.runtime.branch = 'automation/culture-taste-2026-10-27';
+  f.runtime.formal_story_count = 10;
+  f.runtime.editorial_valid = true;
+  f.runtime.editorial_blockers = [];
+  return f;
+}
+
+test('ordinary release requires exact ten even when the research attestation claims complete', () => {
+  assert.equal(evaluatePreview(modernFixture()).preview_eligible, true);
+  for (const count of [0, 2, 9, 11, undefined]) {
+    const f = modernFixture(); f.runtime.formal_story_count = count;
+    assert.ok(evaluatePreview(f).blockers.includes('FORMAL_STORY_COUNT_MISMATCH'));
+  }
+});
+
+test('ordinary release requires derived per-story source validation, not a complete flag', () => {
+  for (const valid of [false, undefined]) {
+    const f = modernFixture(); f.runtime.editorial_valid = valid;
+    assert.ok(evaluatePreview(f).blockers.includes('EDITORIAL_INCOMPLETE'));
+  }
+  const f = modernFixture(); f.runtime.editorial_blockers = ['SUBSTANTIVE_SOURCE_COUNT_MISMATCH:story-0'];
+  assert.equal(evaluatePreview(f).preview_eligible, false);
+  assert.ok(evaluatePreview(f).blockers.includes('SUBSTANTIVE_SOURCE_COUNT_MISMATCH:story-0'));
 });

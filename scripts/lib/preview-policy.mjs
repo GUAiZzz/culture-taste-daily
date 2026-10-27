@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
 import { isAuthorizedHistoricalDate, historicalAuthorizationDigest } from './historical-supplements.mjs';
+import { editorialRequirements } from './editorial-policy.mjs';
 
 export const REPOSITORY = 'GUAiZzz/culture-taste-daily';
 export const PREVIEW_BASE = 'preview-build-v1';
@@ -52,6 +53,13 @@ export function evaluatePreview({ evidence, runtime, policy, now = new Date() })
   } else {
     fail(!authorization && e.target_date === shanghaiDate(now)
       && e.target_date >= policy?.preview_authority?.effective_from, 'DATE_IDENTITY');
+    const editorial = editorialRequirements(policy, e.target_date, { unpublished: shanghaiDate(now) >= '2026-10-12' });
+    if (editorial.exact_story_count !== null || editorial.minimum_sources_per_story > 0) {
+      fail(editorial.policy_valid, 'EDITORIAL_POLICY_INVALID');
+      if (editorial.exact_story_count !== null) fail(r.formal_story_count === editorial.exact_story_count, 'FORMAL_STORY_COUNT_MISMATCH');
+      fail(r.editorial_valid === true, 'EDITORIAL_INCOMPLETE');
+      for (const code of Array.isArray(r.editorial_blockers) ? r.editorial_blockers : []) blockers.push(code);
+    }
   }
   fail(r.repository === REPOSITORY && r.base_ref === PREVIEW_BASE && r.branch === `automation/culture-taste-${e.target_date}`, 'REPOSITORY_IDENTITY');
   fail(r.scope_ok === true && r.clean === true, 'PUBLIC_PATH_SCOPE');
@@ -95,8 +103,19 @@ function validVerification(value, now, date) {
 }
 
 export function validResumeReceipt(receipt, pr, policy, date) {
-  return receipt?.preview_eligible === true && receipt.date === date
+  const resumableStates = ['PREVIEW_MERGE_REQUESTED', 'PREVIEW_MERGE_UNCERTAIN', 'PREVIEW_MERGED',
+    'PREVIEW_DISPATCH_REQUESTED', 'PREVIEW_DISPATCHED', 'PREVIEW_RELEASE_INTERRUPTED', 'PREVIEW_DEPLOYED'];
+  const inputs = receipt?.private_inputs;
+  return receipt?.schema_version === 2 && receipt.kind === 'preview_release_receipt'
+    && receipt.preview_eligible === true && receipt.execution_authorized === true && receipt.merge_attempted === true
+    && resumableStates.includes(receipt.state) && receipt.date === date
     && receipt.source_commit === pr?.headRefOid && SHA.test(pr?.headRefOid ?? '')
     && SHA.test(pr?.mergeCommit?.oid ?? '') && receipt.policy_digest === policyDigest(policy)
-    && (!receipt.merge_commit || receipt.merge_commit === pr.mergeCommit.oid);
+    && (receipt.merge_commit ? receipt.merge_commit === pr.mergeCommit.oid
+      : ['PREVIEW_MERGE_REQUESTED', 'PREVIEW_MERGE_UNCERTAIN'].includes(receipt.state))
+    && DIGEST.test(receipt.candidate_digest ?? '') && DIGEST.test(receipt.artifact_digest ?? '')
+    && SHA.test(receipt.base_commit ?? '') && receipt.validated_runtime?.source_commit === receipt.source_commit
+    && typeof inputs?.attestation_path === 'string' && inputs.attestation_path.startsWith('/')
+    && typeof inputs?.research_path === 'string' && inputs.research_path.startsWith('/')
+    && DIGEST.test(inputs.attestation_sha256 ?? '') && DIGEST.test(inputs.research_sha256 ?? '');
 }

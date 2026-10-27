@@ -20,6 +20,7 @@ For mobile, responsive, touch, or scroll-experience work, also read
 `docs/MOBILE_EDITORIAL_PROTOCOL.md` before changing implementation files.
 
 For the authorized daily candidate dry run, also read `automation/DAILY_RUN.md` and `automation/daily-policy.json` before acting.
+Read `docs/EDITORIAL_OPERATIONS.md` for the owner-authorized 2026-10-27 rule unification, private article/source continuation, source library and release handoff. Use the actual `daily:cycle` entrypoint; a prompt-only update is not completion. The original content quality requirements remain in force.
 
 ## Current hard stops
 

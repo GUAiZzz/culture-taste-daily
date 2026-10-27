@@ -1,0 +1,1628 @@
+{
+  "schema_version": 1,
+  "kind": "culture_taste_source_library",
+  "purpose": "Verified official discovery entrances plus explicit unresolved identities. A route is not an actually read substantive source or a completed daily scan.",
+  "rules": {
+    "profile_and_index_are_discovery_only": true,
+    "no_login_or_following_dependency": true,
+    "no_access_bypass": true,
+    "impact_claims_require_independent_evidence": true,
+    "dated_scan_records_stay_private": true
+  },
+  "fallback_order": [
+    "official_public_detail_or_post",
+    "official_newsroom_journal_lookbook",
+    "official_collaborator_or_institution",
+    "independent_regional_original_reporting",
+    "public_rss_or_newsletter_archive"
+  ],
+  "subjects": [
+    {
+      "id": "supreme",
+      "name": "Supreme",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://us.supreme.com/",
+          "identity_evidence_url": "https://us.supreme.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_news",
+          "url": "https://supreme.com/news",
+          "identity_evidence_url": "https://us.supreme.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "stussy",
+      "name": "Stüssy",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://www.stussy.com/blogs/features",
+          "identity_evidence_url": "https://www.stussy.com/blogs/features",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "palace",
+      "name": "Palace",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://usa.palaceskateboards.com/",
+          "identity_evidence_url": "https://usa.palaceskateboards.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://instagram.com/palaceskateboards",
+          "identity_evidence_url": "https://usa.palaceskateboards.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "brain-dead",
+      "name": "Brain Dead",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://wearebraindead.com/",
+          "identity_evidence_url": "https://wearebraindead.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_news",
+          "url": "https://wearebraindead.com/pages/programming",
+          "identity_evidence_url": "https://wearebraindead.com/pages/programming",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "aime-leon-dore",
+      "name": "Aimé Leon Dore",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.aimeleondore.com/",
+          "identity_evidence_url": "https://www.aimeleondore.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/aimeleondore/",
+          "identity_evidence_url": "https://www.aimeleondore.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "noah",
+      "name": "Noah",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://noahny.com/",
+          "identity_evidence_url": "https://noahny.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_news",
+          "url": "https://noahny.com/blogs/news",
+          "identity_evidence_url": "https://noahny.com/blogs/news",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/noahny",
+          "identity_evidence_url": "https://noahny.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "corteiz",
+      "name": "Corteiz",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.corteiz.com/",
+          "identity_evidence_url": "https://www.corteiz.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "denim-tears",
+      "name": "Denim Tears",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://denimtears.com/",
+          "identity_evidence_url": "https://denimtears.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/denimtears/",
+          "identity_evidence_url": "https://denimtears.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "kith",
+      "name": "Kith",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://kith.com/",
+          "identity_evidence_url": "https://kith.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/kith",
+          "identity_evidence_url": "https://kith.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "clot",
+      "name": "CLOT",
+      "cohort": "drop_streetwear",
+      "status": "UNRESOLVED",
+      "routes": []
+    },
+    {
+      "id": "gallery-dept",
+      "name": "Gallery Dept.",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://gallerydept.com/",
+          "identity_evidence_url": "https://gallerydept.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "heron-preston",
+      "name": "Heron Preston",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://heronpreston.com/",
+          "identity_evidence_url": "https://heronpreston.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/heronpreston/?hl=en",
+          "identity_evidence_url": "https://heronpreston.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "praying",
+      "name": "Praying",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://prayingg.com/pages/home",
+          "identity_evidence_url": "https://prayingg.com/pages/home",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "youth-of-paris",
+      "name": "Youth of Paris",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.youthofparis.com/",
+          "identity_evidence_url": "https://www.youthofparis.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "yzy",
+      "name": "YZY",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://yeezy.com/",
+          "identity_evidence_url": "https://yeezy.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "october-s-very-own",
+      "name": "October's Very Own",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://octobersveryown.com/",
+          "identity_evidence_url": "https://octobersveryown.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_news",
+          "url": "https://octobersveryown.com/pages/feed",
+          "identity_evidence_url": "https://octobersveryown.com/pages/feed",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "unavailable",
+      "name": "Unavailable",
+      "cohort": "drop_streetwear",
+      "status": "UNRESOLVED",
+      "routes": []
+    },
+    {
+      "id": "uniform-display",
+      "name": "Uniform Display",
+      "cohort": "drop_streetwear",
+      "status": "UNRESOLVED",
+      "routes": []
+    },
+    {
+      "id": "unsound-rags",
+      "name": "Unsound Rags",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://unsoundrags.com/",
+          "identity_evidence_url": "https://unsoundrags.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "prototypes",
+      "name": "Prototypes",
+      "cohort": "drop_streetwear",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://proto-types.ch/INFO-CONTACT",
+          "identity_evidence_url": "https://proto-types.ch/INFO-CONTACT",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/prototypes.ch/",
+          "identity_evidence_url": "https://proto-types.ch/INFO-CONTACT",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "balenciaga",
+      "name": "Balenciaga",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.balenciaga.com/en-us",
+          "identity_evidence_url": "https://www.balenciaga.com/en-us",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "bode",
+      "name": "Bode",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://bode.com/",
+          "identity_evidence_url": "https://bode.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://instagram.com/bode",
+          "identity_evidence_url": "https://bode.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "cartier",
+      "name": "Cartier",
+      "cohort": "luxury_runway",
+      "status": "UNRESOLVED",
+      "routes": []
+    },
+    {
+      "id": "casablanca",
+      "name": "Casablanca",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://casablancaparis.com/",
+          "identity_evidence_url": "https://casablancaparis.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "chanel",
+      "name": "Chanel",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.chanel.com/pl/",
+          "identity_evidence_url": "https://www.chanel.com/pl/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "chrome-hearts",
+      "name": "Chrome Hearts",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.chromehearts.com/",
+          "identity_evidence_url": "https://www.chromehearts.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "givenchy",
+      "name": "Givenchy",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.givenchy.com/",
+          "identity_evidence_url": "https://www.givenchy.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "goyard",
+      "name": "Goyard",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.goyard.com/us_en/",
+          "identity_evidence_url": "https://www.goyard.com/us_en/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "kenzo",
+      "name": "Kenzo",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.kenzo.com/en-id/home",
+          "identity_evidence_url": "https://www.kenzo.com/en-id/home",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://instagram.com/kenzo",
+          "identity_evidence_url": "https://www.kenzo.com/en-id/home",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "loro-piana",
+      "name": "Loro Piana",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://us.loropiana.com/en/",
+          "identity_evidence_url": "https://us.loropiana.com/en/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "marni",
+      "name": "Marni",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.marni.com/en-be/",
+          "identity_evidence_url": "https://www.marni.com/en-be/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "bottega-veneta",
+      "name": "Bottega Veneta",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.bottegaveneta.com/en-us",
+          "identity_evidence_url": "https://www.bottegaveneta.com/en-us",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "prada",
+      "name": "Prada",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.prada.com/eu/en.html",
+          "identity_evidence_url": "https://www.prada.com/eu/en.html",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "tiffany-co",
+      "name": "Tiffany & Co.",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.tiffany.com/",
+          "identity_evidence_url": "https://www.tiffany.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "loewe",
+      "name": "Loewe",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.loewe.com/eur/es/home",
+          "identity_evidence_url": "https://www.loewe.com/eur/es/home",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "miu-miu",
+      "name": "Miu Miu",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.miumiu.com/us/en.html",
+          "identity_evidence_url": "https://www.miumiu.com/us/en.html",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/miumiu/",
+          "identity_evidence_url": "https://www.miumiu.com/us/en.html",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "rick-owens",
+      "name": "Rick Owens",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.rickowens.eu/",
+          "identity_evidence_url": "https://www.rickowens.eu/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "skims",
+      "name": "SKIMS",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://skims.com/en-dk",
+          "identity_evidence_url": "https://skims.com/en-dk",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "homme-plisse-issey-miyake",
+      "name": "HOMME PLISSÉ ISSEY MIYAKE",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.isseymiyake.com/pages/hommeplisse",
+          "identity_evidence_url": "https://www.isseymiyake.com/pages/hommeplisse",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/hommeplisse_isseymiyake/",
+          "identity_evidence_url": "https://www.isseymiyake.com/pages/hommeplisse",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "entire-studios",
+      "name": "Entire Studios",
+      "cohort": "luxury_runway",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.entirestudios.com/",
+          "identity_evidence_url": "https://www.entirestudios.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "human-made",
+      "name": "Human Made",
+      "cohort": "japan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://www.humanmade.jp/en/news/",
+          "identity_evidence_url": "https://www.humanmade.jp/en/news/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/humanmade/?hl=ja",
+          "identity_evidence_url": "https://www.humanmade.jp/en/news/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "kapital",
+      "name": "Kapital",
+      "cohort": "japan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.kapital.jp/info/search",
+          "identity_evidence_url": "https://www.kapital.jp/info/search",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "nigo",
+      "name": "NIGO",
+      "cohort": "japan",
+      "status": "UNRESOLVED",
+      "routes": []
+    },
+    {
+      "id": "undercover",
+      "name": "UNDERCOVER",
+      "cohort": "japan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://undercoverism.com/news",
+          "identity_evidence_url": "https://undercoverism.com/news",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "wtaps",
+      "name": "WTAPS",
+      "cohort": "japan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://wtaps.com/blogs/feature",
+          "identity_evidence_url": "https://wtaps.com/blogs/feature",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "neighborhood",
+      "name": "NEIGHBORHOOD",
+      "cohort": "japan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.neighborhood.jp/",
+          "identity_evidence_url": "https://www.neighborhood.jp/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "sacai",
+      "name": "sacai",
+      "cohort": "japan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://www.sacai.jp/blogs/news",
+          "identity_evidence_url": "https://www.sacai.jp/blogs/news",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "needles",
+      "name": "Needles",
+      "cohort": "japan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://www.needles.jp/news.html",
+          "identity_evidence_url": "https://www.needles.jp/news.html",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "visvim",
+      "name": "visvim",
+      "cohort": "japan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://www.visvim.tv/topics/information/",
+          "identity_evidence_url": "https://www.visvim.tv/topics/information/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/visvimwmv/",
+          "identity_evidence_url": "https://www.visvim.tv/topics/information/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "auralee",
+      "name": "AURALEE",
+      "cohort": "japan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://auralee.jp/news",
+          "identity_evidence_url": "https://auralee.jp/news",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "hender-scheme",
+      "name": "Hender Scheme",
+      "cohort": "japan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://henderscheme.com/",
+          "identity_evidence_url": "https://henderscheme.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "post-archive-faction",
+      "name": "POST ARCHIVE FACTION",
+      "cohort": "korea_china_taiwan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://postarchivefaction.com/",
+          "identity_evidence_url": "https://postarchivefaction.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "ader-error",
+      "name": "ADER ERROR",
+      "cohort": "korea_china_taiwan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://adererror.com/",
+          "identity_evidence_url": "https://adererror.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://instagram.com/ader_error",
+          "identity_evidence_url": "https://adererror.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "thisisneverthat",
+      "name": "thisisneverthat",
+      "cohort": "korea_china_taiwan",
+      "status": "UNRESOLVED",
+      "routes": []
+    },
+    {
+      "id": "gentle-monster",
+      "name": "Gentle Monster",
+      "cohort": "korea_china_taiwan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://www.gentlemonster.com/int/en/stories",
+          "identity_evidence_url": "https://www.gentlemonster.com/int/en/stories",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/gentlemonster",
+          "identity_evidence_url": "https://www.gentlemonster.com/int/en/stories",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "kusikohc",
+      "name": "KUSIKOHC",
+      "cohort": "korea_china_taiwan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://kusikohc.com/",
+          "identity_evidence_url": "https://kusikohc.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://instagram.com/kusikohc",
+          "identity_evidence_url": "https://kusikohc.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "roaringwild",
+      "name": "ROARINGWILD",
+      "cohort": "korea_china_taiwan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://roaringwild.com/collections/series-aw2026",
+          "identity_evidence_url": "https://roaringwild.com/collections/series-aw2026",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "randomevent",
+      "name": "Randomevent",
+      "cohort": "korea_china_taiwan",
+      "status": "UNRESOLVED",
+      "routes": []
+    },
+    {
+      "id": "staffonly",
+      "name": "STAFFONLY",
+      "cohort": "korea_china_taiwan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.staffonlystudio.com/index-0-0.html",
+          "identity_evidence_url": "https://www.staffonlystudio.com/index-0-0.html",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://instagram.com/staffonlystudio?utm_medium=copy_link",
+          "identity_evidence_url": "https://www.staffonlystudio.com/index-0-0.html",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "shushu-tong",
+      "name": "SHUSHU/TONG",
+      "cohort": "korea_china_taiwan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.shushutongstudio.com/about/",
+          "identity_evidence_url": "https://www.shushutongstudio.com/about/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "sankuanz",
+      "name": "SANKUANZ",
+      "cohort": "korea_china_taiwan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://sankuanz.com/",
+          "identity_evidence_url": "https://sankuanz.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "hamcus",
+      "name": "HAMCUS",
+      "cohort": "korea_china_taiwan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://hamc.us/pages/lookbook",
+          "identity_evidence_url": "https://hamc.us/pages/lookbook",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "goopimade",
+      "name": "GOOPiMADE",
+      "cohort": "korea_china_taiwan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.goopi.co/",
+          "identity_evidence_url": "https://www.goopi.co/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/goopi.co/",
+          "identity_evidence_url": "https://www.goopi.co/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "guerrilla-group",
+      "name": "Guerrilla-Group",
+      "cohort": "korea_china_taiwan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.guerrilla-group.co/",
+          "identity_evidence_url": "https://www.guerrilla-group.co/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "invincible",
+      "name": "INVINCIBLE",
+      "cohort": "korea_china_taiwan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://invincible.com.tw/pages/collaborations",
+          "identity_evidence_url": "https://invincible.com.tw/pages/collaborations",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/invincible_inc/",
+          "identity_evidence_url": "https://invincible.com.tw/pages/collaborations",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "dingyun-zhang",
+      "name": "Dingyun Zhang",
+      "cohort": "korea_china_taiwan",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.dingyunzhang.com/pages/about-1",
+          "identity_evidence_url": "https://www.dingyunzhang.com/pages/about-1",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "our-legacy",
+      "name": "Our Legacy",
+      "cohort": "european_contemporary",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://www.ourlegacy.com/projects",
+          "identity_evidence_url": "https://www.ourlegacy.com/projects",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "stone-island",
+      "name": "Stone Island",
+      "cohort": "european_contemporary",
+      "status": "UNRESOLVED",
+      "routes": []
+    },
+    {
+      "id": "c-p-company",
+      "name": "C.P. Company",
+      "cohort": "european_contemporary",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.cpcompany.com/en-jp/",
+          "identity_evidence_url": "https://www.cpcompany.com/en-jp/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/cpcompany",
+          "identity_evidence_url": "https://www.cpcompany.com/en-jp/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "martine-rose",
+      "name": "Martine Rose",
+      "cohort": "european_contemporary",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.martine-rose.com/",
+          "identity_evidence_url": "https://www.martine-rose.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "wales-bonner",
+      "name": "Wales Bonner",
+      "cohort": "european_contemporary",
+      "status": "UNRESOLVED",
+      "routes": []
+    },
+    {
+      "id": "dries-van-noten",
+      "name": "Dries Van Noten",
+      "cohort": "european_contemporary",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.driesvannoten.com/",
+          "identity_evidence_url": "https://www.driesvannoten.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/driesvannoten/",
+          "identity_evidence_url": "https://www.driesvannoten.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "lemaire",
+      "name": "Lemaire",
+      "cohort": "european_contemporary",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.lemaire.fr/",
+          "identity_evidence_url": "https://www.lemaire.fr/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/lemaire/?hl=fr",
+          "identity_evidence_url": "https://www.lemaire.fr/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "alo",
+      "name": "Alo",
+      "cohort": "sport_outdoor_lifestyle",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.aloyoga.com/",
+          "identity_evidence_url": "https://www.aloyoga.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "arc-teryx",
+      "name": "Arc'teryx",
+      "cohort": "sport_outdoor_lifestyle",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://arcteryx.com/us/en",
+          "identity_evidence_url": "https://arcteryx.com/us/en",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "nike",
+      "name": "Nike",
+      "cohort": "sport_outdoor_lifestyle",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://about.nike.com/en/newsroom",
+          "identity_evidence_url": "https://about.nike.com/en/newsroom",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "on",
+      "name": "On",
+      "cohort": "sport_outdoor_lifestyle",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://press.on-running.com/",
+          "identity_evidence_url": "https://press.on-running.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "salomon",
+      "name": "Salomon",
+      "cohort": "sport_outdoor_lifestyle",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.salomon.com/en-dk",
+          "identity_evidence_url": "https://www.salomon.com/en-dk",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "asics-sportstyle",
+      "name": "ASICS SportStyle",
+      "cohort": "sport_outdoor_lifestyle",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://www.asics.com/us/en-us/releases/",
+          "identity_evidence_url": "https://www.asics.com/us/en-us/releases/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "new-balance",
+      "name": "New Balance",
+      "cohort": "sport_outdoor_lifestyle",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.newbalance.com/",
+          "identity_evidence_url": "https://www.newbalance.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "hoka",
+      "name": "HOKA",
+      "cohort": "sport_outdoor_lifestyle",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.hoka.com/en/us/",
+          "identity_evidence_url": "https://www.hoka.com/en/us/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "merrell-1trl",
+      "name": "Merrell 1TRL",
+      "cohort": "sport_outdoor_lifestyle",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.merrell.com/US/en/1trl/",
+          "identity_evidence_url": "https://www.merrell.com/US/en/1trl/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "nike-acg",
+      "name": "Nike ACG",
+      "cohort": "sport_outdoor_lifestyle",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://www.nike.com/acg/acg-journal",
+          "identity_evidence_url": "https://www.nike.com/acg/acg-journal",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/acg/?utm_source=ig_web_button_share_sheet",
+          "identity_evidence_url": "https://www.nike.com/acg/acg-journal",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "blue-bottle-coffee",
+      "name": "Blue Bottle Coffee",
+      "cohort": "sport_outdoor_lifestyle",
+      "status": "UNRESOLVED",
+      "routes": []
+    },
+    {
+      "id": "awge",
+      "name": "AWGE",
+      "cohort": "culture_retail_creative",
+      "status": "UNRESOLVED",
+      "routes": []
+    },
+    {
+      "id": "blonded",
+      "name": "Blonded",
+      "cohort": "culture_retail_creative",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://blonded.co/",
+          "identity_evidence_url": "https://blonded.co/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "boardroom",
+      "name": "Boardroom",
+      "cohort": "culture_retail_creative",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://boardroom.tv/",
+          "identity_evidence_url": "https://boardroom.tv/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "coachella",
+      "name": "Coachella",
+      "cohort": "culture_retail_creative",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.coachella.com/",
+          "identity_evidence_url": "https://www.coachella.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "dover-street-market-los-angeles",
+      "name": "Dover Street Market Los Angeles",
+      "cohort": "culture_retail_creative",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://losangeles.doverstreetmarket.com/",
+          "identity_evidence_url": "https://losangeles.doverstreetmarket.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "hidden-ny",
+      "name": "Hidden.NY",
+      "cohort": "culture_retail_creative",
+      "status": "UNRESOLVED",
+      "routes": []
+    },
+    {
+      "id": "homer",
+      "name": "Homer",
+      "cohort": "culture_retail_creative",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.homer.com/",
+          "identity_evidence_url": "https://www.homer.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "infinite-archives",
+      "name": "Infinite Archives",
+      "cohort": "culture_retail_creative",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://infinitearchives.com/",
+          "identity_evidence_url": "https://infinitearchives.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "jjjjound",
+      "name": "JJJJound",
+      "cohort": "culture_retail_creative",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.jjjjound.com/",
+          "identity_evidence_url": "https://www.jjjjound.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        },
+        {
+          "kind": "official_instagram",
+          "url": "https://www.instagram.com/jjjjound/",
+          "identity_evidence_url": "https://www.jjjjound.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "kaws",
+      "name": "KAWS",
+      "cohort": "culture_retail_creative",
+      "status": "UNRESOLVED",
+      "routes": []
+    },
+    {
+      "id": "rolling-loud",
+      "name": "Rolling Loud",
+      "cohort": "culture_retail_creative",
+      "status": "UNRESOLVED",
+      "routes": []
+    },
+    {
+      "id": "slam-kicks",
+      "name": "SLAM Kicks",
+      "cohort": "culture_retail_creative",
+      "status": "UNRESOLVED",
+      "routes": []
+    },
+    {
+      "id": "stockx",
+      "name": "StockX",
+      "cohort": "culture_retail_creative",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://stockx.com/news/",
+          "identity_evidence_url": "https://stockx.com/news/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "upscalehype",
+      "name": "UpscaleHype",
+      "cohort": "culture_retail_creative",
+      "status": "UNRESOLVED",
+      "routes": []
+    },
+    {
+      "id": "virgil-abloh-archive",
+      "name": "Virgil Abloh Archive",
+      "cohort": "culture_retail_creative",
+      "status": "ROUTE_IDENTIFIED",
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://www.virgilabloh.com/",
+          "identity_evidence_url": "https://www.virgilabloh.com/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    }
+  ],
+  "additional_sources": [
+    {
+      "id": "m-plus",
+      "name": "M+",
+      "region": "Hong Kong",
+      "categories": [
+        "city",
+        "objects"
+      ],
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://www.mplus.org.hk/en/exhibitions/",
+          "identity_evidence_url": "https://www.mplus.org.hk/en/exhibitions/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "nts",
+      "name": "NTS",
+      "region": "Global",
+      "categories": [
+        "music"
+      ],
+      "routes": [
+        {
+          "kind": "official_news",
+          "url": "https://www.nts.live/events",
+          "identity_evidence_url": "https://www.nts.live/events",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    },
+    {
+      "id": "warp",
+      "name": "Warp Records",
+      "region": "United Kingdom",
+      "categories": [
+        "music"
+      ],
+      "routes": [
+        {
+          "kind": "official_site",
+          "url": "https://warp.net/",
+          "identity_evidence_url": "https://warp.net/",
+          "verified_on": "2026-10-27",
+          "discovery_only": true
+        }
+      ]
+    }
+  ]
+}

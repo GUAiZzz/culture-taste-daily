@@ -137,8 +137,12 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
       blockers.push("same-day candidate recovery must remain enabled before the final-refresh deadline");
     }
   }
-  if (currentMinute < windowStart || currentMinute > (previewActive ? minutes(policy.schedule.preview_collection_deadline) : windowEnd)) {
-    blockers.push(`run is outside the publication-day ${researchWindow.start}–${researchWindow.deadline} final-refresh window`);
+  const previewDeadline = minutes(policy.schedule.preview_collection_deadline);
+  const reconciliationOnly = previewActive && currentMinute >= previewDeadline;
+  if (currentMinute < windowStart || (previewActive ? reconciliationOnly : currentMinute > windowEnd)) {
+    blockers.push(reconciliationOnly
+      ? "FINAL_RECONCILIATION_ONLY: no new research at or after the Preview collection deadline"
+      : `run is outside the publication-day ${researchWindow.start}–${researchWindow.deadline} final-refresh window`);
   }
 
   if (contract.repository !== "GUAiZzz/culture-taste-daily" || contract.path !== "docs/PRODUCTION_CONTRACT_V3.md") {
@@ -206,12 +210,17 @@ export async function evaluateDailyPreflight({ repoRoot, now = new Date(), issue
     preview_authority_requires_separate_evidence_gate: previewActive,
     target_date: targetDate,
     shanghai_now: `${shanghai.date}T${shanghai.time}:00+08:00`,
+    research_phase: currentMinute < windowStart ? "BEFORE_RESEARCH_WINDOW"
+      : reconciliationOnly ? "FINAL_RECONCILIATION_ONLY"
+        : currentMinute <= windowEnd ? "RESEARCH" : previewActive ? "LATE_PREVIEW_RESEARCH" : "CLOSED",
+    within_production_window: currentMinute >= windowStart && currentMinute <= windowEnd,
     weekday: shanghai.weekday,
     mode: policy.mode,
     schedule: {
       primary: policy.schedule.start_time,
       recovery_checks: policy.schedule.recovery_check_times ?? [],
       deadline: researchWindow.deadline,
+      preview_collection_deadline: policy.schedule.preview_collection_deadline,
       recover_when_current_candidate_missing: policy.schedule.recover_when_current_candidate_missing === true,
     },
     candidate_action: issueExists ? "repair_or_refresh_existing_candidate" : "create_new_candidate",
