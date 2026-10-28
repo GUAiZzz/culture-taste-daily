@@ -411,7 +411,9 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
 
   const screenshotPath = path.join(evidenceDir, "renders", `${name}.png`);
   await mkdir(path.dirname(screenshotPath), { recursive: true });
-  await page.screenshot({ path: screenshotPath, fullPage: true, animations: "disabled" });
+  // Long ten-story issues can exceed Playwright's default screenshot timeout;
+  // preserve the full-page capture and fail if it still cannot complete.
+  await page.screenshot({ path: screenshotPath, fullPage: true, animations: "disabled", timeout: 120_000 });
   for (const url of await page.locator('img[data-external-preview="true"]').evaluateAll(images => images.map(image => image.src))) externalPreviewUrls.add(url);
   const render = {
     path: toPosix(path.relative(evidenceDir, screenshotPath)),
