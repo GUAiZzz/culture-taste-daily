@@ -1,6 +1,6 @@
 // This checks the reader's fallback, not source availability or usage rights.
 // Release still requires the separate dated provenance and health attestation.
-export function declaredPreviewMedia(manifests = [], radars = []) {
+export function declaredPreviewMedia(manifests = [], radars = [], corrections = {}) {
   const origins = new Map();
   const add = (url, origin) => {
     if (!/^https:\/\//.test(url ?? '') || !/^https:\/\//.test(origin ?? '')) return;
@@ -13,6 +13,16 @@ export function declaredPreviewMedia(manifests = [], radars = []) {
       || media.rights_basis !== 'preview_user_authorized_external'
       || !story.sources?.some(source => source.relationship === 'first_party_official' && source.url === media.origin_url)) continue;
     add(media.external_image_url, media.origin_url);
+    // The reading-room renderer has a small, separately reviewed correction
+    // registry for old issues. Bind a correction only to the same declared
+    // first-party origin and its own host; never accept an unrelated image.
+    const correction = corrections[`${manifest.issue_id}/${story.id}`];
+    try {
+      if (correction?.origin_url === media.origin_url && typeof correction.reason === 'string' && correction.reason.trim()
+        && new URL(correction.external_image_url).hostname === new URL(media.origin_url).hostname) {
+        add(correction.external_image_url, correction.origin_url);
+      }
+    } catch { /* Invalid correction is not a verified origin. */ }
   }
   for (const radar of radars) for (const item of radar.items ?? []) {
     const media = item.media;
@@ -53,7 +63,7 @@ export function collectPreviewImageFacts() {
     return style.display !== 'none' && style.visibility !== 'hidden' && Number(style.opacity) !== 0 && rect.width > 0 && rect.height > 0;
   };
   const facts = [...document.querySelectorAll('img[data-external-preview="true"]')].map(image => {
-    const frame = image.closest('[data-photo], figure.story-figure, [data-visual-frame]');
+    const frame = image.closest('[data-photo], figure.story-figure, [data-visual-frame], .extra-thumb');
     const fallback = frame?.querySelector('.photo-fallback, .official-media-fallback, .image-failure-note, .source-image-fallback');
     const scope = frame?.closest('figure') ?? frame;
     const links = [...new Set([image.closest('a'), ...(scope?.querySelectorAll('a[href]') ?? []), frame?.closest('a')].filter(Boolean))];

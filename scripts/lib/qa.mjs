@@ -17,6 +17,8 @@ import { validateJsonFile } from "./schema.mjs";
 import { startStaticServer } from "./server.mjs";
 import { requestOriginUrl, externalPreviewConsoleOrigin } from "./preview-network-diagnostics.mjs";
 import { collectPreviewImageFacts, declaredPreviewMedia, previewImagesReadable } from "./preview-fallback.mjs";
+import { settleVisiblePreviewFallbacks } from "./preview-scroll.mjs";
+import { createOfflineQaContext } from "./offline-qa.mjs";
 
 const CHECK_IDS = [
   "manifest_schema",
@@ -250,13 +252,13 @@ async function launchChromium() {
 }
 
 async function captureCase({ browser, origin, issueId, evidenceDir, name, width, height, javaScriptEnabled, reducedMotion, manifest, urlPath, testArchiveAccordion = false }) {
-  const context = await browser.newContext({
+  const context = await createOfflineQaContext(browser, {
     viewport: { width, height },
     javaScriptEnabled,
     reducedMotion: reducedMotion ? "reduce" : "no-preference",
     colorScheme: "light",
     locale: "zh-CN",
-  });
+  }, origin);
   const page = await context.newPage();
   const consoleErrors = [];
   const requestFailures = [];
@@ -311,6 +313,7 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
       await Promise.all([...document.querySelectorAll('img[data-external-preview="true"]')]
         .map(decodeWithTimeout));
     });
+    await settleVisiblePreviewFallbacks(page);
   }
   await page.waitForTimeout(500);
 
@@ -408,7 +411,9 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
 
   const screenshotPath = path.join(evidenceDir, "renders", `${name}.png`);
   await mkdir(path.dirname(screenshotPath), { recursive: true });
-  await page.screenshot({ path: screenshotPath, fullPage: true, animations: "disabled" });
+  // Long ten-story issues can exceed Playwright's default screenshot timeout;
+  // preserve the full-page capture and fail if it still cannot complete.
+  await page.screenshot({ path: screenshotPath, fullPage: true, animations: "disabled", timeout: 120_000 });
   for (const url of await page.locator('img[data-external-preview="true"]').evaluateAll(images => images.map(image => image.src))) externalPreviewUrls.add(url);
   const render = {
     path: toPosix(path.relative(evidenceDir, screenshotPath)),
@@ -454,7 +459,8 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
         }
       } catch (error) { if (error.code !== 'ENOENT') throw error; }
     }
-    const previewOrigins = declaredPreviewMedia(manifests, radars);
+    const corrections = await readJson(path.join(repoRoot, 'core/rooms/media-corrections.json'));
+    const previewOrigins = declaredPreviewMedia(manifests, radars, corrections);
     const server = await startStaticServer(distDir);
     const browser = await launchChromium();
     try {
