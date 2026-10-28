@@ -14,11 +14,12 @@ async function listen(handler) {
 test('offline QA blocks cross-origin resources and redirects before any request, with or without JavaScript', async () => {
   let externalRequests = 0, workerRequests = 0;
   const other = await listen((req, res) => { externalRequests++; res.end('not allowed'); });
+  other.server.on('upgrade', (req, socket) => { externalRequests++; socket.destroy(); });
   const local = await listen((req, res) => {
     if (req.url === '/redirect') { res.writeHead(302, { Location: `${other.origin}/forbidden` }).end(); return; }
     if (req.url === '/sw.js') { workerRequests++; res.end('self.addEventListener("fetch", () => {})'); return; }
     res.setHeader('content-type', 'text/html');
-    res.end(`<figure data-photo><span class="photo-fallback">Image unavailable</span><img data-external-preview="true" src="${other.origin}/image.jpg" alt="Official image"><figcaption><a href="${other.origin}/origin">Official origin</a></figcaption></figure><img src="${other.origin}/unofficial.jpg" alt="Undeclared image"><script>fetch('${other.origin}/fetch').catch(()=>{});navigator.serviceWorker?.register('/sw.js').catch(()=>{})</script>`);
+    res.end(`<figure data-photo><span class="photo-fallback">Image unavailable</span><img data-external-preview="true" src="${other.origin}/image.jpg" alt="Official image"><figcaption><a href="${other.origin}/origin">Official origin</a></figcaption></figure><img src="${other.origin}/unofficial.jpg" alt="Undeclared image"><script>fetch('${other.origin}/fetch').catch(()=>{});navigator.serviceWorker?.register('/sw.js').catch(()=>{});const ws=new WebSocket('${other.origin.replace('http:', 'ws:')}/socket');ws.onerror=()=>{}</script>`);
   });
   const browser = await chromium.launch({ headless: true, channel: process.env.PLAYWRIGHT_CHANNEL ?? 'chrome' });
   try {
