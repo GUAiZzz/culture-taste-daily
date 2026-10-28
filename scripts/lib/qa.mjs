@@ -18,6 +18,7 @@ import { startStaticServer } from "./server.mjs";
 import { requestOriginUrl, externalPreviewConsoleOrigin } from "./preview-network-diagnostics.mjs";
 import { collectPreviewImageFacts, declaredPreviewMedia, previewImagesReadable } from "./preview-fallback.mjs";
 import { settleVisiblePreviewFallbacks } from "./preview-scroll.mjs";
+import { createOfflineQaContext } from "./offline-qa.mjs";
 
 const CHECK_IDS = [
   "manifest_schema",
@@ -251,13 +252,13 @@ async function launchChromium() {
 }
 
 async function captureCase({ browser, origin, issueId, evidenceDir, name, width, height, javaScriptEnabled, reducedMotion, manifest, urlPath, testArchiveAccordion = false }) {
-  const context = await browser.newContext({
+  const context = await createOfflineQaContext(browser, {
     viewport: { width, height },
     javaScriptEnabled,
     reducedMotion: reducedMotion ? "reduce" : "no-preference",
     colorScheme: "light",
     locale: "zh-CN",
-  });
+  }, origin);
   const page = await context.newPage();
   const consoleErrors = [];
   const requestFailures = [];
