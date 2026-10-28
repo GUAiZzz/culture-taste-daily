@@ -17,6 +17,7 @@ import { validateJsonFile } from "./schema.mjs";
 import { startStaticServer } from "./server.mjs";
 import { requestOriginUrl, externalPreviewConsoleOrigin } from "./preview-network-diagnostics.mjs";
 import { collectPreviewImageFacts, declaredPreviewMedia, previewImagesReadable } from "./preview-fallback.mjs";
+import { settleVisiblePreviewFallbacks } from "./preview-scroll.mjs";
 
 const CHECK_IDS = [
   "manifest_schema",
@@ -311,6 +312,7 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
       await Promise.all([...document.querySelectorAll('img[data-external-preview="true"]')]
         .map(decodeWithTimeout));
     });
+    await settleVisiblePreviewFallbacks(page);
   }
   await page.waitForTimeout(500);
 

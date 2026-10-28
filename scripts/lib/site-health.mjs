@@ -1,6 +1,7 @@
 import { readdir } from "node:fs/promises";
 import path from "node:path";
 import { exists, readJson, writeJson } from "./files.mjs";
+import { isAllowedHealthUrl, safePublicRequest } from "./health-url-safety.mjs";
 
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 const DEFAULT_TIMEOUT_MS = 12_000;
@@ -124,18 +125,20 @@ function acceptableContentType(expect, value) {
 }
 
 export async function probeHealthTarget(target, {
-  request = fetch,
+  request = safePublicRequest,
   timeoutMs = DEFAULT_TIMEOUT_MS,
   retries = DEFAULT_RETRIES,
 } = {}) {
   const attempts = [];
+  if (!isAllowedHealthUrl(target.url)) return { ...target, url: '[blocked]', status: 'REVIEW_REQUIRED',
+    attempts: [{ attempt: 0, ok: false, status: null, final_url: null, content_type: '', error: 'UNSAFE_TARGET_BLOCKED' }] };
   for (let attempt = 1; attempt <= retries + 1; attempt += 1) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), timeoutMs);
     try {
       const response = await request(target.url, {
         method: "GET",
-        redirect: "follow",
+        redirect: "manual",
         signal: controller.signal,
         headers: {
           Accept: target.expect === "image" ? "image/avif,image/webp,image/*,*/*;q=0.8" : "text/html,application/xhtml+xml,*/*;q=0.8",
@@ -144,20 +147,25 @@ export async function probeHealthTarget(target, {
           ...(target.expect === "image" ? { Range: "bytes=0-2047" } : {}),
         },
       });
-      const contentType = response.headers?.get?.("content-type") ?? "";
-      const ok = response.status >= 200 && response.status < 400 && acceptableContentType(target.expect, contentType);
+      // Keep only the media type; never echo arbitrary remote header parameters.
+      const contentType = String(response.headers?.get?.("content-type") ?? "")
+        .match(/^[a-z0-9.+-]+\/[a-z0-9.+-]+/i)?.[0] ?? "";
+      const redirected = response.status >= 300 && response.status < 400;
+      const responseOriginMismatch = response.url && new URL(response.url).origin !== new URL(target.url).origin;
+      const ok = !redirected && !responseOriginMismatch && response.status >= 200 && response.status < 300 && acceptableContentType(target.expect, contentType);
       attempts.push({
         attempt,
         ok,
         status: response.status,
-        final_url: response.url || target.url,
+        final_url: responseOriginMismatch || redirected ? null : target.url,
         content_type: contentType,
-        error: ok ? null : target.expect === "image" && !acceptableContentType(target.expect, contentType)
+        error: ok ? null : redirected || responseOriginMismatch ? 'REDIRECT_REVIEW_REQUIRED' : target.expect === "image" && !acceptableContentType(target.expect, contentType)
           ? `expected image content-type, received ${contentType || "unknown"}`
           : `HTTP ${response.status}`,
       });
       await response.body?.cancel?.().catch(() => {});
       if (ok) return { ...target, status: "PASS", attempts };
+      if (redirected || responseOriginMismatch) return { ...target, status: 'REVIEW_REQUIRED', attempts };
     } catch (error) {
       attempts.push({
         attempt,
@@ -165,7 +173,7 @@ export async function probeHealthTarget(target, {
         status: null,
         final_url: target.url,
         content_type: "",
-        error: error?.name === "AbortError" ? `timeout after ${timeoutMs}ms` : String(error?.message ?? error),
+        error: error?.name === "AbortError" ? `timeout after ${timeoutMs}ms` : 'CONNECTION_OR_DNS_ERROR',
       });
     } finally {
       clearTimeout(timer);
@@ -199,11 +207,10 @@ export async function runPublicSourceHealth({
   scope = "weekly",
   issueDate,
   checkedAt = new Date().toISOString(),
-  request = fetch,
+  request = safePublicRequest,
   timeoutMs = DEFAULT_TIMEOUT_MS,
   retries = DEFAULT_RETRIES,
   concurrency = 4,
-  fallbackProbe,
   reportPath,
 } = {}) {
   const collected = await collectPublicHealthTargets({ repoRoot, scope, issueDate });
@@ -212,19 +219,6 @@ export async function runPublicSourceHealth({
     timeoutMs,
     retries,
   }));
-  if (fallbackProbe) {
-    checks = await mapWithConcurrency(checks, 1, async (check) => {
-      if (!['FAIL', 'REVIEW_REQUIRED'].includes(check.status)) return check;
-      try {
-        const fallback = await fallbackProbe(check);
-        return fallback?.ok
-          ? { ...check, status: "PASS", access_method: "browser_fallback", fallback }
-          : { ...check, access_method: "browser_fallback_failed", fallback: fallback ?? { ok: false, error: "no fallback result" } };
-      } catch (error) {
-        return { ...check, access_method: "browser_fallback_failed", fallback: { ok: false, error: String(error?.message ?? error) } };
-      }
-    });
-  }
   const failures = checks.filter((check) => check.status === "FAIL");
   const reviewRequired = checks.filter((check) => check.status === "REVIEW_REQUIRED");
   const report = {
@@ -254,10 +248,10 @@ export async function runPublicSourceHealth({
     })),
     checks,
     limitations: [
-      "This availability check verifies public routes and media responses, using a real-browser fallback when direct requests are blocked; it does not grant image usage rights.",
+      "This availability check verifies public routes and media responses without following redirects; it does not grant image usage rights.",
       "A passing response does not replace source reading, editorial review, or the first-party provenance gate.",
       "A failure blocks the automated candidate or weekly health result but never changes the current website.",
-      "A REVIEW_REQUIRED page is protected by anti-bot controls or a transient network limit and must be opened in an interactive browser before the candidate may proceed.",
+      "Automatic browser fallback is disabled. A REVIEW_REQUIRED route needs separate controlled review before the candidate may proceed.",
     ],
   };
   if (reportPath) await writeJson(reportPath, report);

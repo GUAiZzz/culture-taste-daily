@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { test } from "node:test";
 import { collectPublicHealthTargets, probeHealthTarget, runPublicSourceHealth } from "../scripts/lib/site-health.mjs";
+import { createPublicLookup, isAllowedHealthUrl, isPublicAddress, safePublicRequest } from '../scripts/lib/health-url-safety.mjs';
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -69,15 +70,59 @@ test("health checks retry transient failures and fail closed without changing pu
   assert.ok(report.limitations.some((item) => item.includes("never changes the current website")));
 });
 
-test("browser fallback can distinguish anti-bot responses from a dead public route", async () => {
+test("automatic browser fallback remains disabled for restricted pages", async () => {
+  let fallbackCalls = 0;
   const report = await runPublicSourceHealth({
     repoRoot,
     scope: "daily",
     issueDate: "2026-08-25",
     request: async (url) => response({ status: 403, url }),
     retries: 0,
-    fallbackProbe: async (target) => ({ ok: true, status: 200, final_url: target.url }),
+    fallbackProbe: async (target) => { fallbackCalls += 1; return { ok: true, status: 200, final_url: target.url }; },
   });
-  assert.equal(report.status, "PASS");
-  assert.ok(report.checks.every((check) => check.access_method === "browser_fallback"));
+  assert.notEqual(report.status, "PASS");
+  assert.ok(report.checks.some(check => check.status === 'REVIEW_REQUIRED'));
+  assert.equal(fallbackCalls, 0);
+});
+
+test('redirects are never followed or promoted to PASS, and destinations are not printed', async () => {
+  const target = { id:'source', kind:'official_origin_page', expect:'page', url:'https://official.example/source', references:[] };
+  let calls = 0;
+  const result = await probeHealthTarget(target, { retries: 2, request: async (url, options) => {
+    calls++; assert.equal(options.redirect, 'manual');
+    return { status:302, url, headers:{ get: name => name === 'location' ? 'https://192.168.20.5/synthetic-secret' : 'text/html' }, body:{ cancel:async()=>{} } };
+  } });
+  assert.equal(calls,1); assert.equal(result.status,'REVIEW_REQUIRED');
+  assert.doesNotMatch(JSON.stringify(result), /192\.168|synthetic-secret/);
+});
+
+test('cross-origin final responses cannot be accepted even if a request implementation follows a redirect', async () => {
+  const target = { id:'source', kind:'official_origin_page', expect:'page', url:'https://official.example/source', references:[] };
+  const result = await probeHealthTarget(target, { retries:0, request:async()=>response({url:'https://other.example/synthetic-secret'}) });
+  assert.equal(result.status,'REVIEW_REQUIRED'); assert.doesNotMatch(JSON.stringify(result), /other\.example|synthetic-secret/);
+});
+
+test('nonpublic and internal URL targets are stopped before a request and masked in output', async () => {
+  for (const url of ['https://127.0.0.1/secret', 'https://10.2.3.4/secret', 'https://[::1]/secret', 'https://intranet.example/secret', 'https://office-sec.example/secret', 'https://localhost/secret', 'https://public.example/?token=secret']) {
+    let calls=0; const target={id:'source',kind:'official_origin_page',expect:'page',url,references:[]};
+    const result=await probeHealthTarget(target,{retries:0,request:async()=>{calls++;return response();}});
+    assert.equal(calls,0); assert.equal(result.status,'REVIEW_REQUIRED'); assert.equal(result.url,'[blocked]');
+    assert.doesNotMatch(JSON.stringify(result),/secret/);
+  }
+  assert.equal(isAllowedHealthUrl('https://public.example/path'),true);
+  assert.equal(isPublicAddress('127.0.0.1'),false);
+  assert.equal(isPublicAddress('fc00::1'),false);
+  assert.equal(isPublicAddress('8.8.8.8'),true);
+});
+
+test('DNS results are bound to the connection and any nonpublic answer blocks lookup', async () => {
+  const run = records => new Promise(resolve => createPublicLookup((host, options, callback) => callback(null, records))('public.example', {all:true}, (error, addresses) => resolve({error,addresses})));
+  const blocked=await run([{address:'8.8.8.8',family:4},{address:'10.2.3.4',family:4}]);
+  assert.equal(blocked.error.code,'HEALTH_DNS_UNAVAILABLE_OR_NONPUBLIC');
+  const allowed=await run([{address:'8.8.8.8',family:4}]);
+  assert.equal(allowed.error,null); assert.deepEqual(allowed.addresses,[{address:'8.8.8.8',family:4}]);
+});
+
+test('direct transport also rejects a private target before opening a socket', async () => {
+  await assert.rejects(safePublicRequest('https://127.0.0.1/'), /UNSAFE_TARGET_BLOCKED/);
 });

@@ -53,7 +53,7 @@ export function collectPreviewImageFacts() {
     return style.display !== 'none' && style.visibility !== 'hidden' && Number(style.opacity) !== 0 && rect.width > 0 && rect.height > 0;
   };
   const facts = [...document.querySelectorAll('img[data-external-preview="true"]')].map(image => {
-    const frame = image.closest('[data-photo], figure.story-figure, [data-visual-frame]');
+    const frame = image.closest('[data-photo], figure.story-figure, [data-visual-frame], .extra-thumb');
     const fallback = frame?.querySelector('.photo-fallback, .official-media-fallback, .image-failure-note, .source-image-fallback');
     const scope = frame?.closest('figure') ?? frame;
     const links = [...new Set([image.closest('a'), ...(scope?.querySelectorAll('a[href]') ?? []), frame?.closest('a')].filter(Boolean))];

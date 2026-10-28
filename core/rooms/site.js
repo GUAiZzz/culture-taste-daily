@@ -59,7 +59,12 @@ if(homeButtons.length){
  document.querySelector('.category-jumps').addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;const i=homeButtons.indexOf(document.activeElement);if(i<0)return;e.preventDefault();const n=e.key==='Home'?0:e.key==='End'?homeButtons.length-1:(i+(e.key==='ArrowRight'?1:-1)+homeButtons.length)%homeButtons.length;homeButtons[n].focus();homeButtons[n].click()});
  filterHome(fromUrl(),false);window.addEventListener('popstate',()=>filterHome(fromUrl(),false));
 }
-document.querySelectorAll('.extra-thumb img').forEach(img=>{const fail=()=>img.hidden=true;img.addEventListener('error',fail);if(img.complete&&!img.naturalWidth)fail();});
+document.querySelectorAll('.extra-thumb img').forEach(img=>{const frame=img.closest('.extra-thumb');let timer=0,observer=null;
+ const finish=()=>{clearTimeout(timer);frame.dataset.image=img.naturalWidth?'loaded':'failed';img.hidden=!img.naturalWidth;observer?.disconnect()};
+ const start=()=>{timer=setTimeout(()=>{if(!img.complete){frame.dataset.image='slow';img.hidden=true}},8000)};
+ img.addEventListener('load',finish);img.addEventListener('error',finish);
+ if(img.complete)finish();else{observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){start();observer.disconnect()}},{rootMargin:'200px'});observer.observe(img)}
+});
 const revealed=new WeakSet();const revealObserver=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting&&!revealed.has(entry.target)){revealed.add(entry.target);entry.target.classList.add('in-view');}},{threshold:.08});
 document.querySelectorAll('[data-reveal],.section-heading').forEach(e=>revealObserver.observe(e));
 function updateProgress(){visualFrame=0;if(document.hidden||destroyed)return;progressFrames++;const body=document.querySelector('#article-body')||document.querySelector('.issue-body')||document.querySelector('main');const rect=body.getBoundingClientRect(),start=scrollY+rect.top-130,end=start+rect.height-Math.min(innerHeight*.65,500);const value=Math.max(0,Math.min(100,(scrollY-start)/Math.max(1,end-start)*100));document.querySelectorAll('[data-progress]').forEach(e=>e.textContent=String(Math.round(value)).padStart(2,'0'));root.style.setProperty('--progress',value+'%');}

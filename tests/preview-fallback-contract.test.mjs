@@ -1,7 +1,9 @@
 import assert from 'node:assert/strict';
 import { after, before, test } from 'node:test';
 import { chromium } from 'playwright';
+import { readFile } from 'node:fs/promises';
 import { collectPreviewImageFacts, declaredPreviewMedia, previewImagesReadable, verifiedPreviewFallback } from '../scripts/lib/preview-fallback.mjs';
+import { settleVisiblePreviewFallbacks } from '../scripts/lib/preview-scroll.mjs';
 
 const imageUrl = 'https://official.example/current-image.jpg';
 const originUrl = 'https://official.example/current-event';
@@ -84,4 +86,65 @@ test('V1 failed image with a visible explanation and exact official origin is me
   const facts = await observed(`<figure class="story-opening-visual image-failed" data-visual-frame><img data-external-preview="true" src="${imageUrl}" alt="Official event image"><p class="image-failure-note">官方图片未载入，当前显示本地编辑图。</p><figcaption><a href="${originUrl}">查看来源</a></figcaption></figure>`);
   assert.equal(facts.failed_visual_frames.length, 1);
   assert.equal(previewImagesReadable({ ...facts, image_failed_frames: 1 }, origins), true);
+});
+
+test('radar image fallback is tied to the visible exact official link, including without JavaScript', async () => {
+  const radar = { items: [{ official_url: originUrl, media: { kind: 'image', url: imageUrl,
+    origin_authority: 'first_party_official', rights_basis: 'preview_user_authorized_external' } }] };
+  const declared = declaredPreviewMedia([], [radar]);
+  const markup = href => `<a href="${href}"><span class="extra-thumb"><span class="official-media-fallback">官方图源 ↗</span><img data-external-preview="true" src="${imageUrl}" alt="Official image"></span></a>`;
+  for (const javaScriptEnabled of [true, false]) {
+    const good = await observed(markup(originUrl), { javaScriptEnabled });
+    assert.equal(verifiedPreviewFallback(good.external_preview_images[0], declared), true);
+    const bad = await observed(markup('https://official.example/unrelated'), { javaScriptEnabled });
+    assert.equal(verifiedPreviewFallback(bad.external_preview_images[0], declared), false);
+  }
+});
+
+test('QA scrolling triggers the actual reader slow state without accepting an unresolved image early', async () => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
+  await context.route('https://official.example/**', async route => {
+    await new Promise(resolve => setTimeout(resolve, 15_000));
+    await route.abort().catch(() => {});
+  });
+  const page = await context.newPage();
+  try {
+    const js = await readFile(new URL('../core/rooms/site.js', import.meta.url), 'utf8');
+    const start = js.indexOf('function initPhotos('), end = js.indexOf('\ninitPhotos();', start);
+    assert.ok(start >= 0 && end > start);
+    const handler = js.slice(start, end + '\ninitPhotos();'.length);
+    await page.setContent(`<div style="height:2200px"></div>${roomFigure().replace('data-image="failed"', '')}<script>${handler}</script>`, { waitUntil: 'domcontentloaded' });
+    await page.evaluate(() => { document.querySelector('img').loading = 'eager'; });
+    const before = await page.evaluate(collectPreviewImageFacts);
+    assert.equal(verifiedPreviewFallback(before.external_preview_images[0], origins), false);
+    await settleVisiblePreviewFallbacks(page);
+    const after = await page.evaluate(collectPreviewImageFacts);
+    assert.equal(after.external_preview_images[0].loaded, false);
+    assert.equal(after.external_preview_images[0].failure_state, true);
+    assert.equal(verifiedPreviewFallback(after.external_preview_images[0], origins), true);
+  } finally { await context.close(); }
+});
+
+test('a slow radar image exposes the linked fallback using the actual reader handler', async () => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
+  await context.route('https://official.example/**', async route => {
+    await new Promise(resolve => setTimeout(resolve, 15_000));
+    await route.abort().catch(() => {});
+  });
+  const page = await context.newPage();
+  try {
+    const js = await readFile(new URL('../core/rooms/site.js', import.meta.url), 'utf8');
+    const start = js.indexOf("document.querySelectorAll('.extra-thumb img')"), end = js.indexOf('\nconst revealed=', start);
+    assert.ok(start >= 0 && end > start);
+    const markup = `<div style="height:2200px"></div><a href="${originUrl}"><span class="extra-thumb"><span class="official-media-fallback">官方图源 ↗</span><img data-external-preview="true" src="${imageUrl}" alt="Official image" loading="lazy" width="68" height="68"></span></a>`;
+    await page.setContent(`${markup}<script>${js.slice(start, end)}</script>`, { waitUntil: 'domcontentloaded' });
+    await page.evaluate(() => { document.querySelector('img').loading = 'eager'; });
+    const declared = declaredPreviewMedia([], [{ items: [{ official_url: originUrl, media: { kind: 'image', url: imageUrl,
+      origin_authority: 'first_party_official', rights_basis: 'preview_user_authorized_external' } }] }]);
+    assert.equal(verifiedPreviewFallback((await page.evaluate(collectPreviewImageFacts)).external_preview_images[0], declared), false);
+    await settleVisiblePreviewFallbacks(page);
+    const result = (await page.evaluate(collectPreviewImageFacts)).external_preview_images[0];
+    assert.equal(result.failure_state, true);
+    assert.equal(verifiedPreviewFallback(result, declared), true);
+  } finally { await context.close(); }
 });
