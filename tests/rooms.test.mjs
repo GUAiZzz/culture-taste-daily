@@ -99,3 +99,16 @@ test('loaded portrait and landscape images use natural ratios; unavailable image
  const ratio=await img.evaluate(image=>{const r=image.getBoundingClientRect();return{actual:r.width/r.height,natural:image.naturalWidth/image.naturalHeight}});assert.ok(Math.abs(ratio.actual-ratio.natural)<.01,'synthetic portrait is not forced into a fixed frame');
  assert.ok(await p.locator('[data-inline-visual]').count());assert.ok(await p.locator('.photo figcaption a[href^="https:"]').count());await c.close();
 });
+
+// These two cards are deliberately synthetic layout fixtures, not new stories.
+test('eleventh and twelfth cards retain readable widths when a daily package grows',async()=>{
+ const c=await context({reducedMotion:'reduce'}),p=await c.newPage();
+ for(const [width,height]of[[320,568],[390,844],[768,1024],[1440,900]]){
+  await p.setViewportSize({width,height});await p.goto(base()+'/');await p.waitForSelector('html.reading-ready');
+  await p.evaluate(()=>{const card=document.querySelector('.category-board .story-card:last-child');for(const index of [11,12]){const copy=card.cloneNode(true);copy.id='synthetic-layout-'+index;copy.className='story story-card story-'+index;copy.dataset.layoutFixture='true';card.parentElement.append(copy);}});
+  const layout=await p.locator('[data-layout-fixture]').evaluateAll(cards=>cards.map(card=>{const rect=card.getBoundingClientRect(),group=card.parentElement.getBoundingClientRect();return {width:rect.width,groupWidth:group.width,inside:rect.left>=group.left-1&&rect.right<=group.right+1};}));
+  assert.ok(layout.every(card=>card.inside&&card.width>=(card.groupWidth-80)/3),`${width}px: additional cards remain readable`);
+  assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth-innerWidth),0);
+ }
+ await c.close();
+});

@@ -36,7 +36,7 @@ main{max-width:1600px;margin:auto}
 .result-count{font-size:11px;color:var(--muted);white-space:nowrap;padding:0 4px}
 .issue-body{padding:12px var(--gutter) 58px}
 .story-group{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:50px 34px;align-items:start}
-.story{min-width:0;position:relative}
+.story{min-width:0;position:relative;grid-column:span 4}
 .story-1{grid-column:span 7}
 .story-2{grid-column:span 5;padding-top:80px}
 .story-3,.story-4,.story-5,.story-8,.story-9,.story-10{grid-column:span 4}
@@ -111,6 +111,7 @@ main{max-width:1600px;margin:auto}
 .result-count{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .issue-body{padding-top:0;padding-bottom:36px}
 .story-group{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 20px}
+.story{grid-column:span 1}
 .story-1{grid-column:1/-1}
 .story-2{grid-column:1/-1;padding:0;display:grid;grid-template-columns:.95fr 1.05fr;gap:0 20px;background:var(--surface);padding:18px;border-radius:24px}
 .story-2 figure{min-width:0}
