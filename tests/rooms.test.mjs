@@ -112,3 +112,14 @@ test('eleventh and twelfth cards retain readable widths when a daily package gro
  }
  await c.close();
 });
+
+test('unavailable-image metadata stays horizontal in compact two-column cards',async()=>{
+ const c=await context({reducedMotion:'reduce'}),p=await c.newPage();
+ for(const [width,height]of[[320,568],[390,844]]){
+  await p.setViewportSize({width,height});await p.goto(base()+'/');await p.locator('.story-3').scrollIntoViewIfNeeded();await p.locator('.story-3 [data-retry-photo]').waitFor({state:'visible'});
+  const geometry=await p.locator('.story-3 .photo-note').evaluate(note=>{const source=note.querySelector('.source-state'),retry=note.querySelector('[data-retry-photo]');return {source:source.getBoundingClientRect().width,retryHeight:retry.getBoundingClientRect().height,retryWhiteSpace:getComputedStyle(retry).whiteSpace};});
+  assert.ok(geometry.source>=100,`${width}: source description remains a readable line`);assert.equal(geometry.retryWhiteSpace,'nowrap');assert.equal(geometry.retryHeight,44);
+  assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth-innerWidth),0);
+ }
+ await c.close();
+});

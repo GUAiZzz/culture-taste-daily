@@ -436,3 +436,8 @@ html:not(.reading-ready) .visual-open img.official{display:none}
 .js [data-photo][data-image=loaded] .story-image img.fallback,
 .js [data-photo][data-image=loaded] .story-image img.fallback-image,
 .js [data-photo][data-image=loaded] .story-image .photo-fallback{display:none}
+
+/* Failed-image actions wrap as a readable group, never into vertical labels. */
+.photo-note{flex-wrap:wrap}
+.photo-note>.source-state{flex:1 1 120px}
+.photo-note [data-retry-photo]{font-size:11px;padding-inline:12px;white-space:nowrap;flex-shrink:0}
