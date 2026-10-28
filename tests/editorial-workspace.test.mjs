@@ -40,6 +40,13 @@ test('workspace initialization is idempotent and private files are owner-only', 
   assert.equal(second.digest, f.current.digest);
 });
 
+test('workspace default date is derived from the injected clock', async () => {
+  const f = await fixture();
+  const replay = await initEditorialWorkspace({ repoRoot: f.repoRoot, workspace: f.workspace, now });
+  assert.equal(replay.state.target_date, '2026-10-27');
+  assert.equal(replay.created, false);
+});
+
 test('private workspace rejects public checkout and symlink into it', async () => {
   const f = await fixture();
   await assert.rejects(initEditorialWorkspace({ ...f, workspace: path.join(f.repoRoot, 'private'), now }), /INSIDE_REPOSITORY/);

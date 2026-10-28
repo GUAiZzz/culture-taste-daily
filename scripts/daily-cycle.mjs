@@ -7,6 +7,7 @@ import { assertRepository } from './lib/github-scope.mjs';
 import { shanghaiDate } from './lib/preview-policy.mjs';
 import { initEditorialWorkspace, editorialWorkspaceStatus, exportEditorialResearch } from './lib/editorial-workspace.mjs';
 import { sourcePlan } from './lib/source-library.mjs';
+import { diagnoseOnlineFailure } from './lib/online-diagnostics.mjs';
 
 const { values } = parseArgs({ options: {
   'workspace-root': { type: 'string' }, online: { type: 'boolean' }, date: { type: 'string' },
@@ -27,7 +28,7 @@ const sourceQueue = sourcePlan({ library, radar, date, scan: current.state.sourc
 let online;
 if (values.online) {
   try { online = JSON.parse(execFileSync(process.execPath, ['scripts/operation-state.mjs', '--online', '--date', date], { encoding: 'utf8', timeout: 180_000, stdio: ['ignore', 'pipe', 'pipe'] })); }
-  catch { online = { status: 'ONLINE_RECONCILIATION_UNAVAILABLE', publication_authority: false }; }
+  catch (error) { online = { status: 'ONLINE_RECONCILIATION_UNAVAILABLE', publication_authority: false, diagnostic: diagnoseOnlineFailure(error) }; }
 }
 let packagePresent = true;
 try { await access(path.join('src/issues', date, 'issue-manifest.public.json')); } catch { packagePresent = false; }

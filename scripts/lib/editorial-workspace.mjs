@@ -146,7 +146,7 @@ export async function readEditorialWorkspace({ repoRoot, workspace }) {
   return { workspace, state: validateState(record), digest: record.integrity_sha256 };
 }
 
-export async function initEditorialWorkspace({ repoRoot, workspace, date = workspaceDate(), now = new Date() }) {
+export async function initEditorialWorkspace({ repoRoot, workspace, now = new Date(), date = workspaceDate(now) }) {
   if (!DATE.test(date) || date !== workspaceDate(now)) fail('WORKSPACE_CURRENT_DATE_REQUIRED');
   workspace = await externalWorkspacePath(repoRoot, workspace, { create: true });
   return locked(workspace, async () => {
