@@ -1,6 +1,6 @@
 // This checks the reader's fallback, not source availability or usage rights.
 // Release still requires the separate dated provenance and health attestation.
-export function declaredPreviewMedia(manifests = [], radars = [], corrections = {}) {
+export function declaredPreviewMedia(manifests = [], radars = [], corrections = {}, readingMedia = {}) {
   const origins = new Map();
   const add = (url, origin) => {
     if (!/^https:\/\//.test(url ?? '') || !/^https:\/\//.test(origin ?? '')) return;
@@ -23,6 +23,21 @@ export function declaredPreviewMedia(manifests = [], radars = [], corrections = 
         add(correction.external_image_url, correction.origin_url);
       }
     } catch { /* Invalid correction is not a verified origin. */ }
+    // Supplemental reading images are approved public metadata, never a claim
+    // inferred from an arbitrary DOM attribute. Bind each image to this exact
+    // story and one of its declared first-party sources before allowing fallback.
+    for (const image of readingMedia[`${manifest.issue_id}/${story.id}`] ?? []) {
+      try {
+        const source = story.sources?.find(source => source.relationship === 'first_party_official' && source.url === image.origin_url);
+        if (source && image.origin_authority === 'first_party_official'
+          && image.rights_basis === 'preview_user_authorized_external'
+          && typeof image.alt === 'string' && image.alt.trim()
+          && typeof image.credit === 'string' && image.credit.trim()
+          && new URL(image.external_image_url).hostname === new URL(image.origin_url).hostname) {
+          add(image.external_image_url, image.origin_url);
+        }
+      } catch { /* Unbound or malformed media never borrows the exception. */ }
+    }
   }
   for (const radar of radars) for (const item of radar.items ?? []) {
     const media = item.media;

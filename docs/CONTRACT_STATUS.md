@@ -25,3 +25,7 @@ Canonical contract activation does **not** authorize implementation, preview hos
 Upon merge, amendment A1 changes only the final-refresh deadline. It does not expand deployment authority, enable a GitHub Actions schedule, permit unattended publication, or retroactively change the eligibility of an earlier issue.
 
 Upon merge, amendment A2 changes only the story-level official-image and provenance gate. It does not clear image rights, authorize asset copying, dispatch Preview, change Pages, permit deployment, or enable unattended publication.
+
+## A3 — owner-approved shared reading system
+
+On 2026-10-28 the owner approved the soft homepage and complete reader for the existing Preview release path and for subsequent updates. [A3](PRODUCTION_CONTRACT_V3_A3.md) and [READING_SYSTEM.md](READING_SYSTEM.md) replace daily UI reinvention/complex room-channel requirements while retaining field/coral/analog selectable styles independently combined with light/dark/warm appearance and establish an ordinary current-day floor of ten articles, with cumulative later additions. V3/A1/A2 retain their exact bytes; historical supplements remain exactly ten. This implementation record does not claim a main-branch activation SHA, completed deployment or Production approval.

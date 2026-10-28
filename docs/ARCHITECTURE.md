@@ -1,6 +1,6 @@
 # Source architecture
 
-The September 7 shared reading-room and history integration is documented in [Three rooms release](THREE_ROOMS_RELEASE.md).
+Current shared publication structure: [Reading System](READING_SYSTEM.md), approved by [A3](PRODUCTION_CONTRACT_V3_A3.md) on 2026-10-28. [Three rooms release](THREE_ROOMS_RELEASE.md) remains historical implementation evidence.
 
 ## Boundary
 
@@ -24,7 +24,7 @@ production release
 
 The pipeline ends at the non-production Preview today. The production arrow remains inactive and separately gated.
 
-The daily candidate task operates before the public-source layer. It starts from an ephemeral private workspace, uses `preview-build-v1` as the stable current publication container, may promote only publishable issue source to a dated branch, and follows the machine-gated Preview state machine in PREVIEW_AUTONOMY.md. The policy owns 11:00 start, 13:00/15:00/17:00 recovery and 18:00 closure. Production retains its original window and review requirements.
+The daily candidate task operates before the public-source layer. It resumes a private persistent date workspace, uses `preview-build-v1` as the stable current publication container, may promote only publishable issue source to a dated branch, and follows the machine-gated Preview state machine in PREVIEW_AUTONOMY.md. The policy owns 11:00 start, 13:00/15:00/17:00 recovery and 18:00 closure. Production retains its original window and review requirements.
 
 A separate weekly read-only task checks automation drift, deterministic QA, live publication routes, and all public source/media links. It writes no repository state and has no pull-request or deployment authority.
 
@@ -40,11 +40,9 @@ Private research and private source-ledger instances never enter `src/`.
 
 ## Shared core versus issue expression
 
-`core/` owns accessibility, archive navigation, source rendering, responsive primitives, and deterministic output rules. It must not flatten every issue into the same visual template.
+`core/` owns the reviewed shared homepage, issue/article readers, archive navigation, settings, natural-ratio image display, source disclosures, responsive behavior and deterministic output. `core/rooms/render.mjs` is the stable entrypoint. All new daily packages inherit it; source-only candidates do not replace the interface.
 
-Issue-specific art direction may control composition, palette, rhythm, typography, imagery, and content-driven interaction while preserving the shared accessibility and no-JavaScript contract.
-
-The publication homepage/archive uses `core/styles/site.css`, which is never loaded into an issue page. Current issues use scoped `issue.css`; preserved historical originals keep their supplied visual systems.
+Daily packages supply editorial hierarchy, locked bilingual text, verified images/inline placements, captions, sources, cover and preserved public metadata. Their scoped style must not override shared reading controls or require JavaScript for content. Shared assets include `reading-system.css/js` and `interaction.css/js`; maintenance changes run the required `reading_system_contract` and full independent QA. Field/Coral/Analog retain their visual-material identities via one shared structure and independent light/dark/warm appearance. Legacy room assets and issue art-direction fields remain compatibility data, not instructions to create separate channel interfaces or vary the UI each day.
 
 ## Historical Preview objects
 

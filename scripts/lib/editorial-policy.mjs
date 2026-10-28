@@ -4,6 +4,7 @@ const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const TIMESTAMP = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?\+08:00$/;
 const EXACT_COUNT_FROM = '2026-10-12';
 const SOURCE_COUNT_FROM = '2026-09-16';
+const MINIMUM_COUNT_FROM = '2026-10-28';
 const text = value => typeof value === 'string' && value.trim().length > 0;
 const identity = value => text(value) ? value.normalize('NFKC').trim().toLowerCase() : '';
 const unique = values => [...new Set(values)];
@@ -12,13 +13,19 @@ const unique = values => [...new Set(values)];
 // historical content. Build/archive validation deliberately does not call them.
 export function editorialRequirements(policy, publicationDate, { unpublished = true } = {}) {
   const rule = policy?.editorial;
+  const validDate = DATE.test(publicationDate ?? '');
+  const minimumMode = validDate && publicationDate >= MINIMUM_COUNT_FROM;
+  const countApplies = validDate && (unpublished || publicationDate >= EXACT_COUNT_FROM);
   return {
     policy_valid: rule?.formal_story_count === 10
       && rule?.exact_count_effective_from === EXACT_COUNT_FROM
       && rule?.minimum_substantive_sources_per_story === 10
-      && rule?.sources_effective_from === SOURCE_COUNT_FROM,
-    exact_story_count: DATE.test(publicationDate ?? '') && (unpublished || publicationDate >= EXACT_COUNT_FROM) ? 10 : null,
-    minimum_sources_per_story: DATE.test(publicationDate ?? '') && publicationDate >= SOURCE_COUNT_FROM ? 10 : 0,
+      && rule?.sources_effective_from === SOURCE_COUNT_FROM
+      && (!minimumMode || rule?.minimum_formal_story_count === 10
+        && rule?.minimum_count_effective_from === MINIMUM_COUNT_FROM),
+    exact_story_count: countApplies && !minimumMode ? 10 : null,
+    minimum_story_count: countApplies && minimumMode ? 10 : null,
+    minimum_sources_per_story: validDate && publicationDate >= SOURCE_COUNT_FROM ? 10 : 0,
   };
 }
 
@@ -72,7 +79,8 @@ export function editorialPackageBlockers({ manifest, content, policy, now = new 
   if (!DATE.test(manifest?.publication_date ?? '')) blockers.push('EDITORIAL_DATE_IDENTITY');
   if (!requirements.policy_valid) blockers.push('EDITORIAL_POLICY_INVALID');
   const stories = Array.isArray(manifest?.stories) ? manifest.stories : [];
-  if (requirements.exact_story_count !== null && stories.length !== requirements.exact_story_count) blockers.push('FORMAL_STORY_COUNT_MISMATCH');
+  if (requirements.exact_story_count !== null && stories.length !== requirements.exact_story_count
+    || requirements.minimum_story_count !== null && stories.length < requirements.minimum_story_count) blockers.push('FORMAL_STORY_COUNT_MISMATCH');
   const ids = stories.map(story => identity(story?.id));
   const titles = stories.map(story => identity(story?.title));
   if (ids.some(id => !id) || titles.some(title => !title)

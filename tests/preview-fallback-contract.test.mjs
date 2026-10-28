@@ -61,6 +61,26 @@ test('historical image corrections inherit only the exact declared official orig
   assert.equal(declaredPreviewMedia([m], [], missingProof).has(missingProof[key].external_image_url), false);
 });
 
+test('inline reading media binds to the exact story, official source, rights disposition and asset host', () => {
+  const m = structuredClone(manifest); m.issue_id = '2026-10-28'; m.stories[0].id = 'one-story';
+  const key = '2026-10-28/one-story', url = 'https://official.example/detail.jpg';
+  const entry = { external_image_url: url, origin_url: originUrl,
+    origin_authority: 'first_party_official', rights_basis: 'preview_user_authorized_external',
+    alt: 'A verified detail from the same event', credit: 'Official institution' };
+  assert.ok(declaredPreviewMedia([m], [], {}, { [key]: [entry] }).has(url));
+  for (const patch of [
+    { origin_url: 'https://official.example/unrelated' },
+    { external_image_url: 'https://unrelated.example/detail.jpg' },
+    { origin_authority: 'independent_media' },
+    { rights_basis: 'unknown' }, { alt: '' }, { credit: '' },
+  ]) {
+    const media = { [key]: [{ ...entry, ...patch }] };
+    const expectedUrl = media[key][0].external_image_url;
+    assert.equal(declaredPreviewMedia([m], [], {}, media).has(expectedUrl), false);
+  }
+  assert.equal(declaredPreviewMedia([m], [], {}, { '2026-10-28/other-story': [entry] }).has(url), false);
+});
+
 let browser;
 before(async () => {
   try { browser = await chromium.launch({ headless: true, channel: process.env.PLAYWRIGHT_CHANNEL ?? 'chrome' }); }

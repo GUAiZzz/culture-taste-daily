@@ -1,7 +1,8 @@
-import { readdir } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { exists, readJson, writeJson } from "./files.mjs";
 import { isAllowedHealthUrl, safePublicRequest } from "./health-url-safety.mjs";
+import { parseStoryContent, validateReadingMedia } from "../../core/rooms/reading-content.mjs";
 
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 const DEFAULT_TIMEOUT_MS = 12_000;
@@ -34,6 +35,73 @@ async function issueDates(repoRoot) {
     .filter((entry) => entry.isDirectory() && DATE_PATTERN.test(entry.name))
     .map((entry) => entry.name)
     .sort();
+}
+
+async function optionalObject(file) {
+  let value;
+  try { value = await readJson(file); }
+  catch (error) { if (error.code === "ENOENT") return {}; throw error; }
+  if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error("Invalid reading media metadata object");
+  return value;
+}
+
+// Shared by health inventory and the guarded release. A displayed inline image
+// cannot bypass the dated source/media attestation merely by living outside the
+// locked issue manifest. Reuse the renderer's exact provenance/body validation.
+export async function collectIssueReadingMedia({ repoRoot, issueDate, manifest }) {
+  if (!DATE_PATTERN.test(issueDate) || manifest?.issue_id !== issueDate) throw new Error("Reading media issue identity mismatch");
+  const [central, local, corrections] = await Promise.all([
+    optionalObject(path.join(repoRoot, "core", "rooms", "reading-media.json")),
+    optionalObject(path.join(repoRoot, "src", "issues", issueDate, "reading-media.public.json")),
+    optionalObject(path.join(repoRoot, "core", "rooms", "media-corrections.json")),
+  ]);
+  const stories = manifest.stories ?? [];
+  for (const key of Object.keys(central)) {
+    if (!/^\d{4}-\d{2}-\d{2}\/[a-z0-9-]+$/.test(key)) throw new Error("Invalid central reading media key");
+    if (key.startsWith(`${issueDate}/`) && !stories.some(story => key === `${issueDate}/${story.id}`)) throw new Error("Unknown central reading media story");
+  }
+  for (const key of Object.keys(local)) {
+    if (!stories.some(story => key === story.id || key === `${issueDate}/${story.id}`)) throw new Error("Unknown issue reading media story");
+  }
+  const declared = stories.map((story, index) => {
+    const key = `${issueDate}/${story.id}`;
+    const definitions = [
+      Object.hasOwn(central, key) ? central[key] : undefined,
+      Object.hasOwn(local, story.id) ? local[story.id] : undefined,
+      Object.hasOwn(local, key) ? local[key] : undefined,
+    ].filter(value => value !== undefined);
+    if (definitions.length > 1) throw new Error(`Conflicting reading media ${key}`);
+    if (definitions.length && !Array.isArray(definitions[0])) throw new Error(`Invalid reading media for ${story.id}`);
+    return { story, index, key, rows: definitions[0] ?? [] };
+  });
+  if (!declared.some(item => item.rows.length)) return [];
+  const content = await readFile(path.join(repoRoot, "src", "issues", issueDate, "content.md"), "utf8");
+  const sections = content.split(/^## /m).slice(1);
+  return declared.flatMap(({ story, index, key, rows }) => {
+    if (!rows.length) return [];
+    const section = sections[index], newline = section?.indexOf("\n");
+    if (newline === undefined || newline < 0 || section.slice(0, newline).trim() !== story.title) throw new Error(`Reading media section mismatch ${key}`);
+    const parsed = parseStoryContent(section.slice(newline + 1).trim(), story.english);
+    const correction = corrections[key];
+    const media = correction ? { ...story.media, external_image_url: correction.external_image_url, alt: correction.alt, origin_url: correction.origin_url } : story.media;
+    return validateReadingMedia(rows, { ...story, ...parsed, media }).map(row => ({ ...row, issue_id: issueDate, story_id: story.id }));
+  });
+}
+
+export async function collectIssueReleaseUrls({ repoRoot, issueDate, manifest, radar }) {
+  const readingMedia = await collectIssueReadingMedia({ repoRoot, issueDate, manifest });
+  return {
+    source_urls: [...new Set([
+      ...manifest.stories.flatMap(story => story.sources.map(source => source.url)),
+      ...radar.items.filter(item => !item.included_story_id).map(item => item.official_url),
+      ...readingMedia.map(image => image.origin_url),
+    ])],
+    media_urls: [...new Set([
+      ...manifest.stories.map(story => story.media?.external_image_url),
+      ...radar.items.flatMap(item => [item.media?.url, item.media?.poster_url]),
+      ...readingMedia.map(image => image.external_image_url),
+    ].filter(Boolean))],
+  };
 }
 
 export async function collectPublicHealthTargets({ repoRoot, scope = "weekly", issueDate } = {}) {
@@ -78,6 +146,17 @@ export async function collectPublicHealthTargets({ repoRoot, scope = "weekly", i
           references: [{ issue_id: date, story_id: story.id, field: "media.external_image_url" }],
         });
       }
+    }
+
+    for (const image of await collectIssueReadingMedia({ repoRoot, issueDate: date, manifest })) {
+      addTarget(targets, {
+        id: `${date}:${image.story_id}:inline-origin`, kind: "official_origin_page", expect: "page", url: image.origin_url,
+        references: [{ issue_id: date, story_id: image.story_id, field: "reading_media.origin_url" }],
+      });
+      addTarget(targets, {
+        id: `${date}:${image.story_id}:inline-image`, kind: "official_image", expect: "image", url: image.external_image_url,
+        references: [{ issue_id: date, story_id: image.story_id, field: "reading_media.external_image_url" }],
+      });
     }
 
     const ordinaryPath = path.join(issueRoot, "daily-radar.public.json");

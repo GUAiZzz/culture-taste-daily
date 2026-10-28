@@ -15,6 +15,15 @@ The decisions below became active through V3 activation. Their historical `OLD A
 - Result: Production Contract V3 is the canonical Culture & Taste production contract upon merge of the activation commit to `main`
 - Boundary: activation does not authorize implementation, Pages, preview, deployment, historical migration, production cutover, or daily automation
 
+## Amendment A3 — shared reading system (owner approved 2026-10-28)
+
+- Approval: after direct prototype review, the owner authorized releasing the final soft homepage/reader and making that structure the default for future updates.
+- Style clarification: Field/Coral/Analog remain three selectable material identities, independently combined with light/dark/warm appearance. All nine combinations share the same structure and components; old style URLs remain compatible.
+- Change: a stable reviewed UI, natural-ratio and paragraph-related images, unified settings/live typography, complete end-of-article sources, a horizontal category bar, static responsive directories and a position-threshold 本期文章 shortcut, and sourced original/translated daily quotations. Daily work changes editorial data, not the interface.
+- Ordinary count: first release at least ten formal articles; later qualified additions have no new ten-article batch quota. Every selected article still has complete per-story evidence. Historical supplements remain exact-ten.
+- Authority: `PRODUCTION_CONTRACT_V3_A3.md` and `READING_SYSTEM.md`; `reading_system_contract` is a required technical check. Shared maintenance is separately reviewed; dated candidate allowlists and Production-disabled boundaries remain.
+- History: V3/A1/A2 bytes, published baseline fingerprints, supplied originals and existing rights/private-data safeguards are preserved. No new scheduler or time-window change is introduced.
+
 ## Amendment A1 — Final-refresh deadline
 
 - Human approval: repository owner instruction to move the daily cutoff to `15:00` Shanghai time

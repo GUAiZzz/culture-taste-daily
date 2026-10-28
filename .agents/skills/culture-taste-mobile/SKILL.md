@@ -12,9 +12,9 @@ repository.
 1. Read `AGENTS.md` and every mandatory repository document it names.
 2. Read `docs/MOBILE_EDITORIAL_PROTOCOL.md` in full.
 3. Identify whether a change belongs to the shared functional core or to an
-   issue package. Keep issue art direction out of shared CSS.
-4. Preserve locked content, issue order, all three reader themes, asymmetric
-   composition, full no-JavaScript reading, and evidence boundaries.
+   issue package. Keep dated editorial inputs separate from shared UI maintenance. Read docs/READING_SYSTEM.md and A3; routine updates reuse the approved renderer.
+4. Preserve locked content, issue order, field/coral/analog styles × light/dark/warm appearances and the approved shared
+   structure, full no-JavaScript reading, and evidence boundaries.
 5. Test at 320x568, 390x844, 430x932, 768x1024, and 844x390. Include keyboard,
    reduced-motion, no-JavaScript, safe-area, and horizontal-overflow checks.
 6. Run the repository's native build, QA, and test commands. Never infer

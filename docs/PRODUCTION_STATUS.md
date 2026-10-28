@@ -1,6 +1,6 @@
 # Production status
 
-The September 7 shared reading-room and history integration is documented in [Three rooms release](THREE_ROOMS_RELEASE.md).
+The current owner-approved structure is specified by [Reading System](READING_SYSTEM.md) and [A3](PRODUCTION_CONTRACT_V3_A3.md). The [September 7 rooms release](THREE_ROOMS_RELEASE.md) is historical evidence, not the current daily UI requirement.
 
 Status: `PREVIEW DEPLOYED / PRODUCTION NOT DEPLOYED`
 
@@ -46,3 +46,5 @@ The daily candidate task is separate from GitHub Actions and from deployment. It
 ## Current operational authority
 
 Use `npm run ops:state -- --online` to reconcile source, GitHub and live state. The owner-approved [Preview amendment](PREVIEW_AUTONOMY.md) supersedes earlier candidate-only operational descriptions. Policy defines 11:00 start, 13:00/15:00/17:00 recovery and 18:00 final reconciliation in Shanghai. Complete current-day packages may automatically merge and dispatch Preview only after `preview:release` passes. No Production authority is granted. Scheduler availability and next-day unattended execution must be verified independently of local tests.
+
+A3 requires the stable shared renderer and `reading_system_contract` for future updates. Ordinary first publication has a floor of ten complete articles; later qualified additions use a cumulative package. Historical supplement exact-ten, schedule, privacy/rights and Production-disabled boundaries remain. Current source/GitHub/live identity must still be reconciled with `ops:state`; this document is not deployment evidence.

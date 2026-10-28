@@ -9,8 +9,8 @@ import { normalizeEditorialBody, editorialBindingBlockers, validateEditorialBind
 const now = new Date('2026-10-27T14:00:00+08:00');
 const policy = { editorial: { formal_story_count: 10, exact_count_effective_from: '2026-10-12',
   minimum_substantive_sources_per_story: 10, sources_effective_from: '2026-09-16', private_workspace_required: true } };
-function fixture() {
-  const articles = Array.from({ length: 10 }, (_, i) => ({ story_id: `story-${i}`, title: `Article ${i}`, canonical_event_id: `event-${i}`,
+function fixture(count = 10) {
+  const articles = Array.from({ length: count }, (_, i) => ({ story_id: `story-${i}`, title: `Article ${i}`, canonical_event_id: `event-${i}`,
     draft: { markdown: `Synthetic article body ${i}. This is an evidence-binding fixture, not researched content.\n`,
       updated_at: '2026-10-27T13:00:00+08:00' } }));
   for (const article of articles) article.draft.sha256 = sha256(article.draft.markdown);
@@ -81,4 +81,17 @@ test('release re-reads private state and treats missing or forbidden workspace a
     privateResearch: { ...f.privateResearch, workspace_path: path.join(scratch, 'missing') } }), ['WORKSPACE_BINDING_UNAVAILABLE']);
   assert.deepEqual(await validateEditorialBinding({ ...f, repoRoot,
     privateResearch: { ...f.privateResearch, workspace_path: repoRoot } }), ['WORKSPACE_BINDING_UNAVAILABLE']);
+});
+
+test('A3 binding covers every article in an eleven/twelve-story cumulative update', () => {
+  for (const count of [11, 12]) {
+    const f = JSON.parse(JSON.stringify(fixture(count)).replaceAll('2026-10-27', '2026-10-28'));
+    f.now = new Date('2026-10-28T14:00:00+08:00');
+    f.policy.editorial.minimum_formal_story_count = 10;
+    f.policy.editorial.minimum_count_effective_from = '2026-10-28';
+    assert.deepEqual(editorialBindingBlockers(f), []);
+    f.current.state.article_sources[count - 1].sources[9].actually_read = false;
+    f.privateResearch.article_sources = structuredClone(f.current.state.article_sources);
+    assert.ok(editorialBindingBlockers(f).includes('WORKSPACE_NOT_READY'));
+  }
 });

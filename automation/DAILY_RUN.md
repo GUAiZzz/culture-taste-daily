@@ -2,7 +2,7 @@
 
 Status: `AUTHORIZED DAILY PREVIEW / PRODUCTION DISABLED`
 
-The owner's 2026-10-27 reliability instruction is implemented in [Editorial operations](../docs/EDITORIAL_OPERATIONS.md). Start every collection checkpoint with `npm run daily:cycle -- --workspace-root <absolute-private-root> --online`. Resume its persisted article/source plan; do not restart an unchanged inventory of old PRs. The current-day issue takes priority over the historical queue.
+The owner's 2026-10-27 reliability instruction is implemented in [Editorial operations](../docs/EDITORIAL_OPERATIONS.md). Start every collection checkpoint with `npm run daily:cycle -- --workspace-root <absolute-private-root> --online`. Resume its persisted article/source plan; do not restart an unchanged inventory of old PRs. The current-day issue takes priority over the historical queue. Read `docs/READING_SYSTEM.md` and A3; the shared renderer owns the stable UI and required `reading_system_contract` check.
 
 For the owner-authorized 26-date historical supplement queue, additionally read `docs/HISTORICAL_SUPPLEMENTS.md` and its fixed authorization record. Use the explicit supplement path; ordinary daily date/scope checks remain in force.
 
@@ -24,7 +24,7 @@ The daily allowlist is `src/issues/YYYY-MM-DD/` plus exactly `src/site/assets/co
 
 ## Private workspace
 
-Create a fresh ephemeral research workspace outside the public repository for the run. Store candidate records, source-ledger instances, reference cards, rejected items, access notes, image-rights evidence, and HarryTone loading evidence only there.
+Resume the persistent current-day research workspace outside the public repository; create it only when absent. Temporary downloads are separate from the durable state. Store candidate records, source-ledger instances, reference cards, rejected items, access notes, image-rights evidence, and HarryTone loading evidence only there.
 
 Before any public source is written:
 
@@ -64,22 +64,22 @@ The issue may publish none of these when evidence or editorial relevance is weak
 
 ## Editorial and reference lock
 
-- Select exactly ten strong formal articles for every unpublished candidate, including existing unpublished PRs. This owner requirement supersedes the earlier smallest-issue guidance. Never pad weak or duplicate material; an incomplete issue is retained privately and cannot publish.
+- For ordinary current-day issues from 2026-10-28, select at least ten complete formal articles for the first release; eleven or more are valid. The content rule permits later additions without another ten new articles: validate the identified cumulative complete package and preserve prior locked text/evidence. This change does not implement an automatic same-day second release; daily:cycle retains its already-live verification/no-op branch. Revision/PR/receipt handling must be verified before a separate append path is treated as operational. Do not pad weak material. Earlier ordinary count semantics and exact-ten historical-supplement rules retain their own scope.
 - Every formal article dated from 2026-09-16 requires ten distinct substantive actually read sources. The public package and the private `article_sources` ledger are validated separately; a profile, snippet, image credit, tracking URL or repeated underlying source cannot fill the count. Historical supplements retain their separate stricter authority.
 - Separate fact, attributable source rationale, and Culture & Taste inference.
-- Chinese carries the complete argument; English adds no unsupported fact or certainty.
+- Chinese and English have complete source body blocks (`### 中文` / `### English`) in new ordinary issues; English adds no unsupported fact or certainty. Earlier locked issues retain their actual English scope.
 - Run the canonical HarryTone audit before content lock.
-- Compare up to seven previous valid issues before art direction.
+- Compare recent issues for repeated events, image reuse and editorial rhythm. Reuse the approved shared reading UI; no new layout, room or interaction is required each day.
 - Generate and lock `closing_palette` from the day's `quiet_ending`, `dominant_mood`, and `palette_logic`; record background, foreground, accent, and a public editorial rationale. This is authored daily input, never browser randomness.
-- Select one original editorial line from `automation/closing-quotation-pool.json`, preferring English unless the issue specifically needs Chinese. Lock its pool ID, text, language, and Culture & Taste authorship into `closing_quotation`; never select or rotate it in the browser.
+- Preserve required legacy manifest coda metadata honestly for compatibility. The active reading system uses the separately verified seven-item attributed quote pool, rotating by Shanghai date and repeating weekly, with original, Chinese translation, author and source; do not relabel famous quotations as Culture & Taste editorial originals or edit the shared pool in a dated candidate.
 - Keep body-text contrast at or above 4.5:1, structural accent contrast at or above 3:1, and do not repeat the exact three-color set from the previous seven issues.
-- Lock today's editorial/design problem before visual browsing.
-- Reopen and verify at least one detail-level project, live work, or case-study article; use at most two new deep cases by default.
+- Lock the editorial/image-sequencing problem before visual browsing. Daily content uses `docs/READING_SYSTEM.md`; new UI/reference research belongs to separately reviewed shared maintenance.
+- When proposing a shared design change, reopen and verify its relevant detail-level project/live work/case study; use at most two new deep cases by default. A routine content update records the approved reading-system version instead of fabricating a new daily design investigation.
 - Complete the reference chain: original problem → transferable principle → today's problem → independent expression → do-not-copy surface.
 
 ## Supplemental daily radar
 
-Build the homepage radar separately from the ten formal articles. Radar items and information links do not count as formal articles. Reuse verified article material where relevant, without inventing category coverage.
+Build the homepage radar separately from the formal article package. Radar items and information links do not count as formal articles. Reuse verified article material where relevant, without inventing category coverage.
 
 - Create `daily-radar.public.json` for the current date with at least two verified items in each of Fashion, Music, Objects, and City.
 - The radar must include a public coverage attestation: all five regional lanes checked, full brand registry quick-scan completed, the exact focus cohort and standing beats checked, and the configured prior-issue deduplication window applied. Item-level rejected research remains private.
@@ -108,7 +108,7 @@ Promote only reader-facing, publishable material into `src/issues/YYYY-MM-DD/`:
 - `art-direction.json`;
 - `issue-manifest.public.json`;
 - `daily-radar.public.json` for the supplemental homepage index;
-- scoped `issue.css` and optional progressive enhancement;
+- compatibility `issue.css`/art-direction metadata required by the package schema; shared rendering/interaction remains in core and is never replaced by daily code;
 - local assets with a valid public rights basis.
 
 Then run:
@@ -124,7 +124,7 @@ git diff --check
 
 `health:daily` must verify every public source page, first-party official image, radar image, official video route, and static video poster for the dated issue. It retries transient failures without automatically following redirects. Unsafe or nonpublic destinations are blocked before connection, and every redirect requires review; automatic browser fallback is disabled. It writes ignored evidence under `.stage4/health/` and reports failures honestly. Unverified source pages stop Preview. Temporarily unavailable official media may proceed only with the dated provenance, link and tested fallback records required by PREVIEW_AUTONOMY.md; never convert the health result to PASS. A `REVIEW_REQUIRED` page needs a separately controlled interactive review with dated private evidence or remains `BLOCKED`; do not retry a denied destination or bypass an access restriction. Availability does not grant image rights.
 
-Technical browser QA runs against the local build with service workers disabled and external network requests blocked before transmission. It checks readable fallbacks and exact linked origins, not live media availability; source/media health and rights remain independent release requirements.
+The required `reading_system_contract` and other technical browser QA run against the local build with service workers disabled and external network requests blocked before transmission. It checks readable fallbacks and exact linked origins, not live media availability; source/media health and rights remain independent release requirements.
 
 Confirm privacy scanning rejects private material and confirm the issue is fully readable on desktop, mobile, reduced motion, and without JavaScript. The QA evidence must include complete desktop and mobile captures of the current homepage and issue plus story-reader coverage. Re-run every dependent check after a material content, source, image, style, or interaction change.
 
@@ -142,4 +142,4 @@ Notify on the first verified publication, a missed primary checkpoint, material 
 
 ## Shared reading edition
 
-Read `docs/THREE_ROOMS_RELEASE.md` for the owner-approved shared presentation. Normal daily packages automatically appear in all three rooms after the validated build. The two pinned retrospective entries are maintenance history only; ordinary daily coverage and release gates remain unchanged.
+Read `docs/READING_SYSTEM.md` and A3 for the current shared presentation; `docs/THREE_ROOMS_RELEASE.md` is historical implementation evidence. Normal daily packages automatically inherit the stable soft home/reader structure after the validated build, in every field/coral/analog reading style and independently light/dark/warm appearance. Legacy ?theme=field/coral/analog URLs select style; `THREE_ROOMS_RELEASE.md` is historical evidence, superseded for current UI by A3. The two pinned retrospective entries are maintenance history only; ordinary daily coverage and release gates remain unchanged.

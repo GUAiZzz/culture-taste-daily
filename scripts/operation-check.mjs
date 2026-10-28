@@ -12,9 +12,18 @@ if (JSON.stringify(times) !== JSON.stringify(expected)) issues.push('INTERNAL_SC
 if (policy.timezone !== 'Asia/Shanghai' || policy.output.deploy_production !== false || policy.output.modify_pages_settings !== false || policy.output.modify_legacy_repository !== false) issues.push('AUTHORITY_DRIFT');
 if (policy.editorial?.formal_story_count !== 10
   || policy.editorial?.exact_count_effective_from !== '2026-10-12'
+  || policy.editorial?.minimum_formal_story_count !== 10
+  || policy.editorial?.minimum_count_effective_from !== '2026-10-28'
   || policy.editorial?.minimum_substantive_sources_per_story !== 10
   || policy.editorial?.sources_effective_from !== '2026-09-16'
   || policy.editorial?.private_workspace_required !== true) issues.push('EDITORIAL_REQUIREMENTS_DRIFT');
+if (policy.reading_system?.specification !== 'docs/READING_SYSTEM.md'
+  || policy.reading_system?.approval !== 'docs/PRODUCTION_CONTRACT_V3_A3.md'
+  || policy.reading_system?.renderer !== 'core/rooms/render.mjs'
+  || policy.reading_system?.required_technical_check !== 'reading_system_contract'
+  || policy.reading_system?.stable_structure !== true
+  || JSON.stringify(policy.reading_system?.styles) !== JSON.stringify(['field', 'coral', 'analog'])
+  || JSON.stringify(policy.reading_system?.themes) !== JSON.stringify(['light', 'dark', 'warm'])) issues.push('READING_SYSTEM_POLICY_DRIFT');
 if (policy.brand_radar?.source_library !== 'automation/source-library.json') issues.push('SOURCE_LIBRARY_MISSING');
 issues.push(...validateSourceLibrary(await readJson('automation/source-library.json'), await readJson('automation/brand-radar.json')));
 for (const file of ['docs/PRODUCTION_STATUS.md', 'docs/PREVIEW_BUILD.md']) {

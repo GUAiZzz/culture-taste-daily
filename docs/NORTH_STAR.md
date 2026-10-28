@@ -4,7 +4,7 @@
 
 Culture & Taste Daily is a daily bilingual digital culture magazine. It should feel closer to an authored independent magazine or zine than a PM dashboard, consulting report, trend database, generic news feed, or fixed blog template.
 
-Chinese carries the complete editorial argument. English complements it with a title, deck, and closing abstract without adding unsupported facts.
+Chinese carries the complete editorial argument. English complements it with verified reading text and title/deck/abstract metadata without adding unsupported facts; a metadata summary must not impersonate a missing complete translation.
 
 Coverage may include fashion, streetwear, luxury, sneakers, accessories, fragrance, beauty, collaborations, art, design, architecture, exhibitions, retail, hospitality, music, film, photography, publishing, youth culture, city scenes, subcultures, emerging aesthetics, and meaningful technology × culture intersections.
 
@@ -32,7 +32,7 @@ Learn from it:
 
 Ask: **What does this issue believe a digital magazine should feel like today?**
 
-Every issue should identify one dominant visual action that comes from that day's material. Examples of decision scale include type cutting through image fields, a continuous image spine, blackout-to-whiteout progression, collage resolving into a reading column, or modules opening into full bleed. These are examples of ambition, not templates to rotate.
+Within the approved shared structure, image selection and sequence should follow that day's material. A new UI mechanism is not a daily requirement. Examples of decision scale include type cutting through image fields, a continuous image spine, blackout-to-whiteout progression, collage resolving into a reading column, or modules opening into full bleed. These are examples of ambition, not templates to rotate.
 
 Do not add WebGL or motion merely to look advanced. Spectacle cannot outrank reading clarity.
 
@@ -128,37 +128,11 @@ Do not average the sources together. Lock the editorial position first, then sel
 
 These roles describe how a source may help after a specific work has been inspected. They do not make a source's index page an art-direction authority.
 
-## Daily variation
+## Stable reading system, daily editorial variation
 
-Culture & Taste Daily must not reuse one visual template every day.
+The owner-approved 2026-10-28 [A3](PRODUCTION_CONTRACT_V3_A3.md) and [Reading System](READING_SYSTEM.md) replace daily UI reinvention and separate complex channel mechanisms. Retain Field/Coral/Analog as three selectable material identities within the same structure, independently combined with light/dark/warm reading appearance. The same reviewed homepage, reader, controls and accessibility serve every ordinary update. Do not change the navigation, body typography, settings, source placement or interaction metaphor simply because a new date has arrived.
 
-Do not default to the same beige paper, serif cover, blue/red accents, story cards, two-column layout, image ratios, hero composition, or scroll behavior.
-
-Each issue should privately decide at least:
-
-- dominant mood;
-- editorial position;
-- unresolved design problem;
-- primary reference role and transferable principle;
-- issue-specific translation and do-not-copy boundary;
-- background logic;
-- palette logic;
-- type-scale logic;
-- image behavior;
-- page density and tempo;
-- core visual action;
-- cover composition;
-- desktop interaction mechanic;
-- Behance viewing arc;
-- mobile translation;
-- Mobbin usability constraint;
-- quiet ending.
-
-Before designing a new issue, compare up to the previous seven valid issues. Compare dominant background, cover composition, core visual action, typography contrast, image treatment, story-module rhythm, interaction mechanic, location of the main visual climax, and the mechanism signature defined in `docs/REFERENCE_SYSTEM.md`.
-
-Do not repeat the same dominant background logic, cover composition, or core interaction by default. Repetition is allowed when today's content genuinely demands it; record why.
-
-The purpose is to prevent unconscious template reuse, not to force gimmicks.
+Daily authorship belongs in story selection, hierarchy, precise bilingual writing, verified imagery, paragraph-related image sequences, captions and useful reading pauses. Compare recent issues for repeated events, weak curation and image reuse; the shared interface itself is intentionally repeatable. Its improvement is separate reviewed maintenance work. References inform a real unresolved editorial/design problem and never create a requirement to rebuild the site every morning.
 
 ## FORM / MOTION / NARRATIVE / FUNCTION
 

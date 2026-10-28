@@ -10,17 +10,18 @@ Read these files before changing this repository, in order:
 6. `docs/PRODUCTION_CONTRACT_V3.md`
 7. `docs/PRODUCTION_CONTRACT_V3_A1.md`
 8. `docs/PRODUCTION_CONTRACT_V3_A2.md`
-9. `docs/ARCHITECTURE.md`
-10. `docs/DATA_BOUNDARIES.md`
-11. `docs/HARRYTONE_DEPENDENCY.md`
-12. `docs/REFERENCE_SYSTEM.md` and `docs/CULTURE_TASTE_SOURCE_MAP.md` for editorial work
+9. `docs/PRODUCTION_CONTRACT_V3_A3.md` and `docs/READING_SYSTEM.md`
+10. `docs/ARCHITECTURE.md`
+11. `docs/DATA_BOUNDARIES.md`
+12. `docs/HARRYTONE_DEPENDENCY.md`
+13. `docs/REFERENCE_SYSTEM.md` and `docs/CULTURE_TASTE_SOURCE_MAP.md` for editorial work
 
 For mobile, responsive, touch, or scroll-experience work, also read
 `.agents/skills/culture-taste-mobile/SKILL.md` and
 `docs/MOBILE_EDITORIAL_PROTOCOL.md` before changing implementation files.
 
 For the authorized daily candidate dry run, also read `automation/DAILY_RUN.md` and `automation/daily-policy.json` before acting.
-Read `docs/EDITORIAL_OPERATIONS.md` for the owner-authorized 2026-10-27 rule unification, private article/source continuation, source library and release handoff. Use the actual `daily:cycle` entrypoint; a prompt-only update is not completion. The original content quality requirements remain in force.
+Read `docs/EDITORIAL_OPERATIONS.md` for the owner-authorized 2026-10-27 rule unification, private article/source continuation, source library and release handoff. Use the actual `daily:cycle` entrypoint; a prompt-only update is not completion. The original source, truth, media, rights and review requirements remain in force. The owner-approved 2026-10-28 A3 replaces daily UI reinvention with the shared reading system and changes ordinary first publication to at least ten articles; later additions have no new ten-article batch quota. Historical supplements remain exact-ten.
 
 ## Current hard stops
 
@@ -39,7 +40,7 @@ Read `docs/EDITORIAL_OPERATIONS.md` for the owner-authorized 2026-10-27 rule uni
 
 - `src/issues/<date>/content.md` is the public content source for an issue.
 - Any generated candidate must be fully readable without JavaScript.
-- Shared site behavior and issue-specific art direction must remain separate.
+- Shared site behavior and daily editorial data remain separate. Use `core/rooms/render.mjs` and `docs/READING_SYSTEM.md` for every update across field/coral/analog styles and independent light/dark/warm appearances; do not redesign the UI or edit shared code in a dated content candidate. `reading_system_contract` is a required technical check.
 - The accepted `candidate/2026-08-25/` snapshot is review evidence, not a production release.
 - Changes to locked content require a new content hash and a full QA rerun.
 - Every selected story must verify a story-specific image from a first-party official source. An owned diagram, editorial illustration, media image, search result, or generated image cannot satisfy that gate.
@@ -51,4 +52,4 @@ Read docs/PREVIEW_AUTONOMY.md and automation/daily-policy.json before release wo
 
 ## Bounded historical supplements
 
-The owner authorized 26 explicitly listed historical supplements on 2026-10-14. Before preparing one, read `docs/HISTORICAL_SUPPLEMENTS.md` and `automation/historical-supplements.json`. This exception permits newly researched, visibly disclosed retrospective packages only for those missing dates, with actual preparation/access/lock times, exactly ten formal articles and at least ten substantive read sources per article. Ordinary daily scope and schedule remain unchanged. Existing live issues, supplied originals, the shared reading-room renderer and Production remain protected.
+The owner authorized 26 explicitly listed historical supplements on 2026-10-14. Before preparing one, read `docs/HISTORICAL_SUPPLEMENTS.md` and `automation/historical-supplements.json`. This exception permits newly researched, visibly disclosed retrospective packages only for those missing dates, with actual preparation/access/lock times, exactly ten formal articles and at least ten substantive read sources per article. Ordinary daily scope and schedule remain unchanged. Existing locked source, supplied originals and Production remain protected. The 2026-10-28 A3 separately authorizes the shared reading renderer maintenance; it does not broaden daily content-only scope.

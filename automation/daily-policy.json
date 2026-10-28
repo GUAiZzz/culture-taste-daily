@@ -32,7 +32,10 @@
     "minimum_substantive_sources_per_story": 10,
     "sources_effective_from": "2026-09-16",
     "private_workspace_required": true,
-    "current_day_before_historical_supplements": true
+    "current_day_before_historical_supplements": true,
+    "minimum_formal_story_count": 10,
+    "minimum_count_effective_from": "2026-10-28",
+    "subsequent_update_mode": "cumulative_complete_package_without_new_batch_quota"
   },
   "official_image_gate": {
     "required": true,
@@ -169,7 +172,8 @@
     "local_cover_and_headline_collision_gate",
     "deterministic_build_and_independent_qa",
     "privacy_scan",
-    "named_human_review_pending"
+    "named_human_review_pending",
+    "reading_system_contract"
   ],
   "preview_authority": {
     "effective_from": "2026-09-06",
@@ -193,5 +197,22 @@
       "PRIVATE_MATERIAL"
     ],
     "preserve_previous_good": true
+  },
+  "reading_system": {
+    "specification": "docs/READING_SYSTEM.md",
+    "approval": "docs/PRODUCTION_CONTRACT_V3_A3.md",
+    "renderer": "core/rooms/render.mjs",
+    "required_technical_check": "reading_system_contract",
+    "stable_structure": true,
+    "themes": [
+      "light",
+      "dark",
+      "warm"
+    ],
+    "styles": [
+      "field",
+      "coral",
+      "analog"
+    ]
   }
 }

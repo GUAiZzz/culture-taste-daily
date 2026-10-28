@@ -4,7 +4,7 @@ Owner instruction: 2026-10-27. Objective: a complete, high-quality, verified dai
 
 ## One rule set
 
-`automation/daily-policy.json` owns the current rules. Every unpublished candidate must contain exactly ten formal articles. From 2026-09-16, each ordinary article needs at least ten distinct substantive actually read information sources; all authorized historical supplements need ten per article. Radar items and source links do not count as articles. Do not pad counts. The existing coverage, regional lanes, 99-subject discovery scan, independent context, HarryTone, bilingual editorial, official media, rights, privacy, variation, QA, CI and live verification gates remain mandatory.
+`automation/daily-policy.json` owns the current rules. From the owner-approved 2026-10-28 A3, an ordinary first current-day release contains at least ten complete formal articles; later additions have no new ten-article batch quota and validate the cumulative complete package. Historical supplements retain exactly ten. From 2026-09-16, each ordinary article needs at least ten distinct substantive actually read information sources; all authorized historical supplements need ten per article. Radar items and source links do not count as articles. Do not pad counts. The existing coverage, regional lanes, 99-subject discovery scan, independent context, HarryTone, bilingual editorial, official media, rights, privacy, variation, QA, CI and live verification gates remain mandatory.
 
 `scripts/lib/editorial-policy.mjs` is shared by progress reports and final publication checks. Final publication never uses provisional/unlocked progress as approval. `automation/published-baseline.json` pins the 27 structured issues already live at the verified September 22 source commit; its file and manifest fingerprints preserve their original requirements. New issues receive no exemption. The three historical originals remain protected separately by the existing build.
 
@@ -38,7 +38,7 @@ Record a search snippet or unopened link as discovery (`actually_read:false`, ac
 
 `source_scan` saves each brand's actual `subject_id`, `route_url`, `checked_at`, notes, result and discovered `detail_urls`. Access failure stays `ACCESS_LIMITED`; unresolved identity stays `IDENTITY_UNRESOLVED`. Neither means no news. A saved scan is separate from article reading and never increments substantive source counts.
 
-Replace a weak selected candidate with `retire_articles:[{story_id,reason}]` in the same `apply` operation that adds the replacement. The original draft, sources, findings and reason remain in the private archive; only the active ten-article queue changes. A failed replacement cannot erase the original.
+Replace a weak selected candidate with `retire_articles:[{story_id,reason}]` in the same `apply` operation that adds the replacement. The original draft, sources, findings and reason remain in the private archive; only the active article queue changes. A failed replacement cannot erase the original.
 
 `editorial:workspace plan --workspace <absolute-date-workspace>` reloads the same saved work in a new process. `carry` copies unfinished material to a new current-day workspace while keeping original dates. Recheck carried sources and the exact draft before they become current-day progress; never relabel yesterday's reading as today's.
 
@@ -54,7 +54,7 @@ The final release checks that all 99 subjects have a real current-day scan attem
 
 ## Package, verify and release
 
-1. Finish the ten article bodies and their per-article source sets. Complete the original research/editorial/media/coverage checks. Preserve progress when incomplete; no partial issue is publishable.
+1. Finish every selected article body and its per-article source set, with at least ten articles for an ordinary first release. Complete the original research/editorial/media/coverage checks. Preserve progress when incomplete; no incomplete selected article is publishable; an existing complete first release does not require ten additional new articles for a subsequent cumulative update.
 2. Assemble only today's allowed public package and cover. Export the private ledger with `editorial:workspace export --workspace <absolute-date-workspace> --output <absolute-private-export.json>`. This is not a publication certificate.
 3. Run `editorial:check --date YYYY-MM-DD --private-evidence <absolute-private-export.json>`. Repair exact blockers before expensive full verification. Do not edit the saved drafts after export without re-exporting and rerunning dependent checks.
 4. Run `npm ci`, `npm run verify`, `health:daily --date YYYY-MM-DD`, `npm audit --audit-level=high` and `git diff --check`. The source-health probe never follows redirects and does not launch an automatic browser fallback: a redirect or restricted route requires separately controlled review, with no retry of a denied destination. Inspect the required desktop/mobile/no-JS/reduced-motion/theme/fallback results. Keep real health limits and rights states intact.
@@ -87,3 +87,9 @@ Before an optimization, record the observed failure, relevant source/example, ch
 | Source substitution | Official brand/institution sites linked in the maintained library | Verify identity and exact details; separate access from reading and rights | Real source handoff plus failed-route/scan-count tests |
 
 Synthetic experiments remain clearly marked and never enter a public issue. A real-source recovery experiment may retain an unfinished article while correctly reporting fewer than ten sources and zero publishable issues. Passing infrastructure tests does not prove future unattended daily output; inspect the first actual scheduled runs and their live receipts.
+
+## Approved shared reading structure
+
+Use `docs/READING_SYSTEM.md` and A3 for every future content update. The shared `core/rooms/render.mjs` applies the approved structure; `reading_system_contract` is required technical evidence for the exact artifact. The daily candidate allowlist remains dated content/cover only. Maintenance changes to core, settings, the daily quote pool, policy or workflows are separate reviewed work. Reuse UI and reference evidence honestly; legacy `detail_reference`/`seven_issue_variation` attestation IDs now refer to the approved system and current editorial/image review, not a fictitious daily UI redesign. Original truth/source/rights gates remain.
+
+A3 implementation scope: cumulative packages with eleven or more complete articles pass the quantity/binding gates. The current already-live-date cycle remains verification/no-op; this does not certify autonomous same-day append publication. See READING_SYSTEM.md for the pending revision/receipt path and the current seven-item, weekly-repeating quotation rotation. This UI release retains the existing time policy while the requested flexibility work remains separate.
