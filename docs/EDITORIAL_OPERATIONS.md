@@ -67,6 +67,8 @@ The current-day issue takes priority. The separately authorized historical suppl
 
 Daily candidates cannot change shared code or dependencies. A shared technical failure produces a separate scoped maintenance change, with the minimal reproduction and verification; repeated unchanged diagnostics are not progress. This maintenance change fixes the known dependency advisories and aligns reading QA with the existing official-media fallback policy. Fallback readability never changes an unavailable source/media health result to PASS or clears rights.
 
+If online reconciliation fails, `daily:cycle` reports a fixed, non-secret diagnostic that distinguishes transport/access failures, explicit GitHub HTTP 401 or 403 responses, and ambiguous authentication output. An apparent invalid-token message alone is not conclusive: a restricted execution context can prevent network or credential-store access. Use the approved scoped execution path and recheck before changing credentials. An unavailable reconciliation still grants no publication authority; this diagnostic does not itself grant network access or guarantee unattended execution.
+
 Notify on first verified publication, missed primary delivery, material recovery progress/new blockers and the final daily result. Include last verified live date, article and read-source counts, exact remaining work and next checkpoint. A successful command with no complete issue is not a successful daily publication.
 
 ## References and experiments before changes
@@ -79,6 +81,7 @@ Before an optimization, record the observed failure, relevant source/example, ch
 | Resumable work | [LangGraph persistence](https://docs.langchain.com/oss/javascript/langgraph/persistence) | Persist workflow state across processes; a conversation summary is insufficient | Real process exit/reload, replay and carry experiments |
 | Reliable storage | [Node file handles](https://nodejs.org/api/fs.html#filehandlesync) | Exclusive lock, flushed temporary file, atomic replacement and revision checks | Competing writers, truncated state, stale revision and source mutation tests |
 | Release continuity | [GitHub workflow artifacts](https://docs.github.com/en/actions/tutorials/store-and-share-data) | Verify and deploy the same identified artifact | Existing digest/route/dispatch tests remain in force |
+| GitHub failure diagnosis | [GitHub CLI authentication status](https://cli.github.com/manual/gh_auth_status) and [Node child process errors](https://nodejs.org/api/child_process.html#child_processexecfilesyncfile-args-options) | Classify available failure signals conservatively and never echo raw output or secrets | Synthetic 401/403, timeout, access-denial, ambiguous token and secret-redaction tests; real restricted-environment smoke test |
 | Dependency repair | [markdown-it advisory](https://github.com/advisories/GHSA-gfr2-rv44-r23c), [fast-uri advisory](https://github.com/advisories/GHSA-w74x-v6f9-j3xg) | Apply patched compatible versions; keep the security check active | Clean install, audit and full build/regressions |
 | Source substitution | Official brand/institution sites linked in the maintained library | Verify identity and exact details; separate access from reading and rights | Real source handoff plus failed-route/scan-count tests |
 
