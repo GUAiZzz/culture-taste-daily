@@ -1,0 +1,1076 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-10-28",
+  "publication_date": "2026-10-28",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-10-28T11:00:39.648+08:00",
+  "research_locked_at": "2026-10-28T19:38:39.921+08:00",
+  "content_locked_at": "2026-10-28T19:38:39.921+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "1dc421a83a90e20745e9361c694fd5e2b7178ab30bc17d225246b8fd8ecd102e",
+    "locked_at": "2026-10-28T19:38:39.921+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "1dc421a83a90e20745e9361c694fd5e2b7178ab30bc17d225246b8fd8ecd102e",
+    "art_direction_sha256": "4ad3bd9f6e45f01bce0ad99afc5e17fc52442b37260e977ed81344a64d1b8692",
+    "issue_style_sha256": "52eb208826c19c123014ddc6d759188dbd5f0b98d722046b793207888b5a6452"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-10-28T13:46:27+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "从创作方案到现实使用，保持事实、意图和仍需观察的结果之间的区别。",
+  "art_direction": {
+    "dominant_mood": "封面以深紫与暖金组成一条倾斜的环，正文沿用网站可切换的阅读主题。",
+    "background_logic": "环形只承担跨主题的视觉节奏，不把服装、音乐和展览假装成同一件事。与近期的透明叠片、地图、折页和网格构图区分。",
+    "palette_logic": "暖纸 #F4ECE1 与深紫 #2E203D 保证长文对比，琥珀 #E8B04B 用于环形与少量强调，暗赭 #A34338 用于标记。",
+    "type_scale_logic": "中文标题大字并自然换行，正文 18px；英文标题与来源采用较小字号，避免挤压长文。",
+    "image_behavior": "每篇使用对应的一手来源图片与来源链接；外链不可用时显示原创非纪实图形和明确回链。图片权利依各自证据记录。",
+    "page_density_and_tempo": "封面缓慢进入，十篇按单列长文排列，各篇独立分隔，图片与来源一起出现。",
+    "core_visual_action": "一个倾斜的圆环在封面建立节奏；故事间以短编号过渡。",
+    "cover_composition": "深紫色拱形里放一条倾斜的琥珀环，纸色留白容纳标题和日期，不用事件照片拼贴。",
+    "desktop_interaction_mechanic": "目录和来源链接使用原生交互，外链图不可用时保留明确回链；阅读不依赖脚本。",
+    "behance_viewing_arc": "从不同领域的新品和项目进入，再回到它们已有的背景、未完成的使用和未来观察点。",
+    "mobile_translation": "封面改为纵向，图片完整适配窄屏，长标题与来源自然折行。",
+    "mobbin_usability_constraint": "目录触点不小于 44px；链接可见焦点，长网址换行，移动端无横向滚动。",
+    "quiet_ending": "末尾用深紫底与暖金细节，留下一句关于下一步的短句。",
+    "closing_quotation": {
+      "id": "ct-en-003",
+      "language": "en",
+      "text": "A deadline earns meaning when it makes the next action visible.",
+      "credit": "Culture & Taste Editorial"
+    },
+    "closing_palette": {
+      "background": "#2E203D",
+      "foreground": "#F1E8D6",
+      "accent": "#E8B04B",
+      "rationale": "深紫承载结尾阅读，浅暖白用于正文，琥珀用于强调；与最近七期的浅纸、蓝色与赭色组合区分。"
+    }
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": [
+      "2026-09-22",
+      "2026-09-21",
+      "2026-09-20",
+      "2026-09-17",
+      "2026-09-16",
+      "2026-09-15",
+      "2026-09-14"
+    ],
+    "repeated_mechanisms": [
+      "accessible section index",
+      "first-party source image with linked fallback"
+    ],
+    "exception_reason": "目录和官方来源回链属于共同阅读约束；本期封面采用深紫与暖金的倾斜环形，结尾配色与近七期区分。"
+  },
+  "rights_summary": {
+    "required_assets": 10,
+    "unknown_required_assets": 9,
+    "status": "blocked"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": null
+  },
+  "evidence_refs": {
+    "technical": [],
+    "editorial_visual": [],
+    "gate": []
+  },
+  "qa": {
+    "html_parse": "unavailable",
+    "assets": "unavailable",
+    "internal_links": "unavailable",
+    "no_js_reading": "unavailable",
+    "desktop_render": "unavailable",
+    "mobile_render": "unavailable",
+    "reduced_motion": "unavailable"
+  },
+  "limitations": [
+    "Non-production Preview only; nine official images have unknown reproduction rights and remain externally linked to official sources with fallbacks.",
+    "The Wales Bonner image has a stated online editorial-use licence; the licence does not extend to other purposes.",
+    "Some discovery subjects were access-limited or unresolved; a scan attempt is not evidence that those subjects had no news.",
+    "Research was completed after the 15:00 Production window; actual lock time is retained."
+  ],
+  "stories": [
+    {
+      "id": "nact-shojo-manga-infinity-2026",
+      "level": "cover",
+      "title": "少女漫画的经典，如何进入美术馆叙事",
+      "english": {
+        "title": "A HISTORY IN ROTATION",
+        "deck": "A Tokyo exhibition puts three shōjo manga artists into a national art museum narrative.",
+        "abstract": "The National Art Center, Tokyo presents works by Moto Hagio, Ryoko Yamagishi and Waki Yamato in a two-part exhibition. Its claim of a first is limited to a large shōjo manga show at a national art museum."
+      },
+      "sources": [
+        {
+          "title": "Shojo Manga Infinity: Moto Hagio, Ryoko Yamagishi, and Waki Yamato",
+          "publisher": "The National Art Center, Tokyo",
+          "url": "https://www.nact.jp/exhibition_special/2026/shojomanga/",
+          "published_date": null,
+          "event_date": "2026-10-28",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "今日から開幕！「少女漫画・インフィニティ」",
+          "publisher": "The Mainichi Newspapers Co.",
+          "url": "https://prtimes.jp/main/html/rd/p/000000741.000032749.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Bringing manga to the museum: Talk by curator Rei Yoshimura",
+          "publisher": "The National Art Center, Tokyo",
+          "url": "https://www.nact.jp/english/education/report/2026/0225_006328.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Collaboration of Shoujo Manga Masterpieces: Two Sapporo Artists",
+          "publisher": "Media Arts Current Contents / Agency for Cultural Affairs",
+          "url": "https://macc.bunka.go.jp/6317/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Girls’ World: How the women of the Year Group 24 revolutionised girls’ comics",
+          "publisher": "Zoe Taylor / Varoom! The Illustration Report",
+          "url": "https://pure.northampton.ac.uk/ws/portalfiles/portal/6076681/Taylor_Zoe_VAR_2016_How_the_women_of_the_Year_Group_24_revolutionised_girls_comics_in_Japan_in_the_late_1970s.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Introduction to Shōjo Across Media",
+          "publisher": "Jaqueline Berndt / Shōjo Across Media",
+          "url": "https://www.jberndt.net/wp-content/uploads/2020/01/2019_JB.book_ShojoAcrossMedia_Intro.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Shôjo manga in the 1970s",
+          "publisher": "The Routledge Companion to Gender and Sexuality in Comic Book Studies",
+          "url": "https://ebrary.net/314069/language_literature/sh_jo_manga_1970s",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Interview with Moto Hagio",
+          "publisher": "Manga-News",
+          "url": "https://www.manga-news.com/index.php/auteur/interview/HAGIO-Moto",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Waki Yamato and the Hokkaido manga museum initiative",
+          "publisher": "Mainichi Kirei",
+          "url": "https://mainichikirei.jp/article/20260115dog00m100013000c.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "山岸凉子展「光－てらす－」展览报道",
+          "publisher": "Internet Museum",
+          "url": "https://www.museum.or.jp/report/872",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "The National Art Center, Tokyo and exhibition partners",
+      "media": {
+        "asset": "assets/nact-shojo-manga-infinity-2026-fallback.svg",
+        "alt": "Promotional banner for Shōjo Manga Infinity.",
+        "caption": "国立新美术馆官方展览宣传图，不是展厅现场照片。",
+        "credit": "The National Art Center, Tokyo and exhibition partners",
+        "kind": "source_image",
+        "origin_url": "https://www.nact.jp/exhibition_special/2026/shojomanga/",
+        "rights_basis": "preview_user_authorized_external",
+        "external_image_url": "https://www.nact.jp/exhibition_special/media/banner_1920_1080px_fin.jpg",
+        "origin_authority": "first_party_official"
+      }
+    },
+    {
+      "id": "undercover-valentin-workwear",
+      "level": "signal",
+      "title": "UNDERCOVER为马斯特里赫特家具工坊设计工作服",
+      "english": {
+        "title": "A WORK UNIFORM FOR A FURNITURE STUDIO",
+        "deck": "UNDERCOVER makes a capsule around the working conditions of a Maastricht furniture studio.",
+        "abstract": "The collaboration proposes a uniform for Studio Valentin Loellmann's craftspeople. The stated brief covers movement, function and fabric, while daily wear and performance remain unverified."
+      },
+      "sources": [
+        {
+          "title": "Studio Valentin Loellmann × UNDERCOVER",
+          "publisher": "UNDERCOVER",
+          "url": "https://undercoverism.com/new/20261026_1/newarrival",
+          "published_date": "2026-10-27",
+          "event_date": "2026-10-28",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Studio — De Rode Fabriek",
+          "publisher": "De Rode Fabriek",
+          "url": "https://www.derodefabriek.com/about-1-1",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Studio Valentin Loellmann new owner Gasfactory",
+          "publisher": "Belvédère Maastricht",
+          "url": "https://www.belvedere-maastricht.nl/en/actueel/studio-valentin-loellmann-new-owner-gasfactory",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Name to know: German furniture designer Valentin Loellmann",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design/name-to-know-german-furniture-designer-valentin-loellmann",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Dutch Artist Valentin Loellmann Displays Sculptural Furnishings at Twenty First Gallery",
+          "publisher": "Architectural Digest",
+          "url": "https://www.architecturaldigest.com/story/dutch-artist-valentin-loellmann-displays-sculptural-furnishings-at-twenty-first-gallery",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Curves and quirks are plenty as Valentin Loellmann shows off high-end furniture in Seoul",
+          "publisher": "Korea JoongAng Daily",
+          "url": "https://www.koreajoongangdaily.com/lifestyle/curves-and-quirks-are-plenty-as-valentin-loellmann-shows-off-high-end-furniture-in-seoul/11937424",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Kunstenaar Valentin Loellmann zoekt de rust in Maastricht",
+          "publisher": "Visit Maastricht",
+          "url": "https://www.visitmaastricht.com/nl/doen/maastricht-voor-jou/inspirerend-maastricht/kunstenaar-valentin-loellmann-zoekt-de-rust-in-maastricht",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Gasfactory history — Studio Valentin Loellmann",
+          "publisher": "Studio Valentin Loellmann",
+          "url": "https://www.valentinloellmann.de/main_factory-history.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Designer of the Day: Valentin Loellmann",
+          "publisher": "SURFACE",
+          "url": "https://www.surfacemag.com/articles/valentin-loellmann-designer-day/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Steps — interview by Elisabeth Felson",
+          "publisher": "Studio Valentin Loellmann",
+          "url": "https://www.valentinloellmann.de/steps.html",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "UNDERCOVER; photography Jonas Loellmann",
+      "media": {
+        "asset": "assets/undercover-valentin-workwear-fallback.svg",
+        "alt": "A group portrait outside Studio Valentin Loellmann's Maastricht workshop.",
+        "caption": "UNDERCOVER 官方合作影像；摄影 Jonas Loellmann。图像展示工坊团队的宣传画面。",
+        "credit": "UNDERCOVER; photography Jonas Loellmann",
+        "kind": "source_image",
+        "origin_url": "https://undercoverism.com/new/20261026_1/newarrival",
+        "rights_basis": "preview_user_authorized_external",
+        "external_image_url": "https://undercoverism.com/photo/page/20261015/_team_all_01_small.jpg",
+        "origin_authority": "first_party_official"
+      }
+    },
+    {
+      "id": "nike-outkast-georgia-2026",
+      "level": "major",
+      "title": "Outkast × Georgia：Nike把“96”放进亚特兰大赛场",
+      "english": {
+        "title": "OUTKAST U: ATLANTA TAKES THE FIELD",
+        "deck": "A Georgia collection connects college sport with an Atlanta music landmark.",
+        "abstract": "Nike's Outkast U collection brings Georgia insignia together with Outkast references and the 1996 album ATLiens. Release and game-day plans are not evidence of sales or later reception."
+      },
+      "sources": [
+        {
+          "title": "Nike’s Exclusive Georgia x Outkast Collection Unites Sport, Sound and the South",
+          "publisher": "NIKE, Inc.",
+          "url": "https://about.nike.com/en/newsroom/releases/nike-exclusive-georgia-outkast-collection-unites-sport-sound-and-the-south",
+          "published_date": "2026-10-26",
+          "event_date": "2026-10-27/2026-10-31",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Georgia Takes on Florida in Atlanta for the First Time",
+          "publisher": "University of Georgia Athletics",
+          "url": "https://georgiadogs.com/news/2026/10/26/football-georgia-takes-on-florida-in-atlanta-for-the-first-time",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Florida-Georgia: A Century Of Hate, A New Setting And QB Questions",
+          "publisher": "Florida Gators Athletics",
+          "url": "https://floridagators.com/news/2026/10/26/football-gators-florida-georgia-a-century-of-hate-a-new-setting-and-QB-questions-jon-sumrall-tramell-jones-jr-southeastern-conference",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "OutKast's Unique Legacy of Black Expression in Fashion",
+          "publisher": "Harper's BAZAAR",
+          "url": "https://www.harpersbazaar.com/culture/art-books-music/a34690454/outkast-stankonia-fashion-legacy/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Fine and dandy",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/music/2003/nov/07/popandrock.outkast",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Postcard from Atlanta: Outkast",
+          "publisher": "TIME",
+          "url": "https://time.com/archive/6911363/postcard-from-atlanta-outkast/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "History Matters: Summer 2025 — What’s the South Got to Say?",
+          "publisher": "Atlanta History Center",
+          "url": "https://www.atlantahistorycenter.com/app/uploads/2025/08/AHC_History_Matters_Summer_2025_WEB.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Atlanta to Atlantis: An OutKast Retrospective",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/features/article/9253-atlanta-to-atlantis-an-outkast-retrospective/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Two Atlanta icons come together. What OutKast still means to fans",
+          "publisher": "USA TODAY via AOL",
+          "url": "https://www.aol.com/articles/two-atlanta-icons-come-together-200412000.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "A look back at Outkast's 5 most iconic visuals",
+          "publisher": "REVOLT",
+          "url": "https://www.revolt.tv/article/2018-06-11/95529/a-look-back-at-outkasts-5-most-iconic-visuals",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "NIKE, Inc.",
+      "media": {
+        "asset": "assets/nike-outkast-georgia-2026-fallback.svg",
+        "alt": "Nike athletes wearing the Outkast U collection.",
+        "caption": "Nike 官方影像中的运动员身穿 Outkast U 系列。",
+        "credit": "NIKE, Inc.",
+        "kind": "source_image",
+        "origin_url": "https://about.nike.com/en/newsroom/releases/nike-exclusive-georgia-outkast-collection-unites-sport-sound-and-the-south",
+        "rights_basis": "preview_user_authorized_external",
+        "external_image_url": "https://nmp.about.nike.com/about/prod/94bfd19c-bdca-42ba-a7be-d83159288904/outkast-u-collection-1.jpg?m=eyJlZGl0cyI6eyJqcGVnIjp7InF1YWxpdHkiOjEwMH0sIndlYnAiOnsicXVhbGl0eSI6MTAwfSwiZXh0cmFjdCI6eyJsZWZ0IjowLCJ0b3AiOjAsIndpZHRoIjozMjAwLCJoZWlnaHQiOjIxMzR9LCJyZXNpemUiOnsid2lkdGgiOjM4NDB9fX0%3D&s=cc2bbd89df52b4193eb7d2478c6789b2de1893299c41db5f66e5748128c3574e",
+        "origin_authority": "first_party_official"
+      }
+    },
+    {
+      "id": "noa-clean-noise-album-2026",
+      "level": "signal",
+      "title": "把杂音加回来：NOA的“整洁”仍然在场",
+      "english": {
+        "title": "THE PLUS SIGN KEEPS BOTH",
+        "deck": "NOA's third album puts clean surfaces and unfinished feeling in the same title.",
+        "abstract": "Released October 28, CLEAN+NOISE contains ten tracks. NOA's interviews describe the album concept as developing alongside songs already in progress."
+      },
+      "sources": [
+        {
+          "title": "NOA 3rd ALBUM『CLEAN+NOISE』2026年10月28日(水) リリース決定！※10/26更新",
+          "publisher": "NOA Official Site",
+          "url": "https://noamusic.jp/news/detail.php?id=572&t=",
+          "published_date": "2026-10-26",
+          "event_date": "2026-10-28",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "彼が思う美意識について。〖NOA〗",
+          "publisher": "FASHIONSNAP",
+          "url": "https://www.fashionsnap.com/special/sense-of-beauty-19/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "NOAの新作『CLEAN+NOISE』に込めた覚悟と素顔",
+          "publisher": "GLOW Online",
+          "url": "https://glowonline.jp/column/129012/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "NOA「CLEAN+NOISE」の先を描くライブで新章開幕を宣言",
+          "publisher": "JOYSOUND Music News / Natalie",
+          "url": "https://news.joysound.com/article/695131",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "NOAがニューアルバムのリード曲リリース、曖昧な関係描く「Last Kiss」",
+          "publisher": "JOYSOUND Music News / Natalie",
+          "url": "https://news.joysound.com/article/694532",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "「いつでもどこでも聴ける状態にしたい」NOAが音楽に注ぐ愛",
+          "publisher": "Audio-Technica Always Listening",
+          "url": "https://www.audio-technica.co.jp/always-listening/articles/noa-music-love/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "NOA、デビュー5周年ライブで描き切った“本当の自分”",
+          "publisher": "Real Sound",
+          "url": "https://realsound.jp/2025/10/post-2180040.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "NOAが手にした新たな気づき　2ndアルバム『Primary Colors』で描き出した“3人の自分”",
+          "publisher": "Real Sound",
+          "url": "https://realsound.jp/2024/05/post-1674651.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "NOA――春夏秋冬、そして未来を巡る音楽の旅",
+          "publisher": "Real Sound",
+          "url": "https://realsound.jp/2026/02/post-2303566.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "「NOANAと四季を共にしたい」デビュー5周年のNOAが明かす2025年の展望と新曲「Seasons」",
+          "publisher": "Billboard JAPAN",
+          "url": "https://www.billboard-japan.com/special/detail/4764",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "NOA official",
+      "media": {
+        "asset": "assets/noa-clean-noise-album-2026-fallback.svg",
+        "alt": "NOA's CLEAN+NOISE release announcement graphic.",
+        "caption": "NOA 官方专辑发布图。",
+        "credit": "NOA official",
+        "kind": "source_image",
+        "origin_url": "https://noamusic.jp/news/detail.php?id=572&t=",
+        "rights_basis": "preview_user_authorized_external",
+        "external_image_url": "https://noamusic.jp/image.php?neid=1054",
+        "origin_authority": "first_party_official"
+      }
+    },
+    {
+      "id": "asics-michigan-amsi-lab-2026",
+      "level": "major",
+      "title": "鞋还没定型，先把研发搬进校园：ASICS × 密歇根的 2028 目标",
+      "english": {
+        "title": "THE RESEARCH LAB BEFORE THE SHOE",
+        "deck": "ASICS and the University of Michigan open a lab with a product target for 2028.",
+        "abstract": "The AMSI Lab brings a previously announced collaboration into a physical research space. The 2028 product timeline is a target, and current research arrangements are not proof of product performance."
+      },
+      "sources": [
+        {
+          "title": "ASICS Opens Its First Industry-Academia R&D Lab for Running Innovation with the University of Michigan",
+          "publisher": "ASICS",
+          "url": "https://corp.asics.com/en/press/article/2026-10-26",
+          "published_date": "2026-10-26",
+          "event_date": "2026-10-26",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "EXEC: Asics Makes $25 Million Bet on North American Innovation",
+          "publisher": "SGB Executive",
+          "url": "https://sgbonline.com/exec-asics-25-million-bet-on-north-american-innovation/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The University of Michigan & ASICS Are Building the Future of Running",
+          "publisher": "Kicks On SI / Yahoo Sports",
+          "url": "https://sports.yahoo.com/articles/university-michigan-asics-building-future-070001757.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "ASICS Launches First U.S. Research Hub in Collaboration with the University of Michigan to Advance Sports Science",
+          "publisher": "ASICS",
+          "url": "https://corp.asics.com/en/press/article/2025-12-19_iss-america-michigan",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "A new approach to assessing the subjective experience of a running shoe",
+          "publisher": "Richard Gonzalez's University of Michigan faculty website",
+          "url": "https://faculty.isr.umich.edu/gonzo/a-new-approach-to-assessing-the-subjective-experience-of-a-running-shoe/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "密歇根大学机器人系｜外骨骼研究报道（2024）",
+          "publisher": "robotics.umich.edu",
+          "url": "https://robotics.umich.edu/news/2024/simulation-training-improves-performance-in-robotic-exoskeletons/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "密歇根大学机器人系｜行走外骨骼控制误差研究（2024）",
+          "publisher": "robotics.umich.edu",
+          "url": "https://robotics.umich.edu/news/2024/even-robots-make-mistakes-how-humans-walk-with-imperfect-exoskeletons/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "European Journal of Sport Science｜缓冲感受与伤害风险二次分析（2025）",
+          "publisher": "pmc.ncbi.nlm.nih.gov",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12541242/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "arXiv｜VideoRun2D 短跑视频测量预印本（2026）",
+          "publisher": "arxiv.org",
+          "url": "https://arxiv.org/abs/2608.19480",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "ASICS x Michigan Sport Innovation Center Athlete Fireside Chat and Panel",
+          "publisher": "University of Michigan Taubman College",
+          "url": "https://taubmancollege.umich.edu/event/asics-x-michigan-sport-innovation-center-athlete-fireside-chat-and-panel/",
+          "published_date": null,
+          "event_date": "2026-10-22",
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "ASICS",
+      "media": {
+        "asset": "assets/asics-michigan-amsi-lab-2026-fallback.svg",
+        "alt": "ASICS and University of Michigan research laboratory announcement image.",
+        "caption": "ASICS 官方实验室发布图；图片不代表具体产品性能已获验证。",
+        "credit": "ASICS",
+        "kind": "source_image",
+        "origin_url": "https://corp.asics.com/en/press/article/2026-10-26",
+        "rights_basis": "preview_user_authorized_external",
+        "external_image_url": "https://assets.asics.com/system/media_libraries/26199/file.press.jpg?20261026160150=",
+        "origin_authority": "first_party_official"
+      }
+    },
+    {
+      "id": "apple-designers-of-tomorrow-paris-2026",
+      "level": "signal",
+      "title": "当一把椅子会发出声音：四组设计师怎样把注意力带回物件",
+      "english": {
+        "title": "DESIGNING FOR PRESENCE",
+        "deck": "Four designers explored attention through a chair, a lamp and objects for shared use.",
+        "abstract": "Apple and Design Miami's Paris showcase closed October 25. This retrospective follows four projects and separates design intentions from claims about audience response."
+      },
+      "sources": [
+        {
+          "title": "Apple Newsroom：2026 年展览与作品介绍",
+          "publisher": "apple.com",
+          "url": "https://www.apple.com/newsroom/2026/10/apple-unveils-the-2026-designers-of-tomorrow/",
+          "published_date": "2026-10-20",
+          "event_date": "2026-10-21/2026-10-25",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "SURFACE：巴黎展览预览",
+          "publisher": "surfacemag.com",
+          "url": "https://www.surfacemag.com/articles/inside-apples-designers-of-tomorrow-at-design-miami-paris/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "whitewall.art",
+          "publisher": "whitewall.art",
+          "url": "https://whitewall.art/design/apple-designers-of-tomorrow-design-miami-paris-2026/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Apple’s Designers of Tomorrow invite us to slow down at Design Miami Paris",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design-interiors/apple-designers-of-tomorrow-design-miami-paris-2026",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Architectural Digest：Isabel Rower 的陶艺家具",
+          "publisher": "architecturaldigest.com",
+          "url": "https://www.architecturaldigest.com/story/the-future-of-american-craft",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "AD Middle East：Charabi 在吉萨的另一场展览",
+          "publisher": "admiddleeast.com",
+          "url": "https://www.admiddleeast.com/story/salem-charabis-exhibition-in-egypt",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "GOBI：Yoonjeong Lee 的工作室展览",
+          "publisher": "gobi.la",
+          "url": "https://gobi.la/event/heroes-and-protagonists/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Design narratives in clay: how illustrative ceramic works explored the material in 2024",
+          "publisher": "STIR",
+          "url": "https://www.stirworld.com/stirpad/news/stir-news/design-narratives-in-clay-how-illustrative-ceramic-works-explored-the-material-in-2024/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Junge Kreative im Porträt: So lässt Salem S. Charabi Möbeln Flügel wachsen",
+          "publisher": "AD Germany",
+          "url": "https://www.ad-magazin.de/artikel/talent-salem-charabi",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Apple’s latest design showcase explores how furniture can inspire us to stay present",
+          "publisher": "AppleInsider",
+          "url": "https://appleinsider.com/articles/26/10/19/apples-latest-design-showcase-explores-how-furniture-can-inspire-us-to-stay-present/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Best of Design Miami Paris 2026",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design-interiors/design-events/best-of-design-miami-paris-2026",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Apple / Design Miami",
+      "media": {
+        "asset": "assets/apple-designers-of-tomorrow-paris-2026-fallback.svg",
+        "alt": "Exhibition room with a black beaded chair, furniture and a lamp.",
+        "caption": "Apple 官方公布的巴黎展览现场；展览已于 10 月 25 日结束。",
+        "credit": "Apple / Design Miami",
+        "kind": "source_image",
+        "origin_url": "https://www.apple.com/newsroom/2026/10/apple-unveils-the-2026-designers-of-tomorrow/",
+        "rights_basis": "preview_user_authorized_external",
+        "external_image_url": "https://www.apple.com/newsroom/images/2026/10/apple-unveils-the-2026-designers-of-tomorrow/article/Apple-2026-Designers-of-Tomorrow-exhibition_big.jpg.large.jpg",
+        "origin_authority": "first_party_official"
+      }
+    },
+    {
+      "id": "wales-bonner-adidas-fw26-archive",
+      "level": "major",
+      "title": "档案不是一个年代标签：Wales Bonner 与 adidas 重看合作关系",
+      "english": {
+        "title": "AN ARCHIVE IS NOT A DECADE",
+        "deck": "Wales Bonner and adidas return to their collaboration through an autumn-winter collection.",
+        "abstract": "The October 27 announcement describes footwear and apparel shaped by a campaign story about 1980s London, with sales scheduled for October 29. The launch is not proof of future demand."
+      },
+      "sources": [
+        {
+          "title": "adidas Originals by Wales Bonner Introduces the Fall/Winter 2026 Collection",
+          "publisher": "adidas",
+          "url": "https://news.adidas.com/home-of-innovation/originals/adidas-originals-by-wales-bonner-introduces-the-fall-winter-2026-collection/s/e89bd1e9-f99f-4b62-9428-6b9187da66ef",
+          "published_date": "2026-10-27",
+          "event_date": "2026-10-29",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Morning Raga, Autumn Winter 2026 Collection",
+          "publisher": "Wales Bonner",
+          "url": "https://walesbonner.com/pages/morning-raga-autumn-winter-2026-collection",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The new Wales Bonner x Adidas drop is full of cult bangers",
+          "publisher": "British GQ",
+          "url": "https://www.gq-magazine.co.uk/article/wales-bonner-adidas-collection-october-2026",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Dub in London: Shops, sound systems & legends",
+          "publisher": "London Museum",
+          "url": "https://www.londonmuseum.org.uk/collections/london-stories/dub-london-shops-sound-systems-legends/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Artist's Choice: Grace Wales Bonner—Spirit Movers",
+          "publisher": "The Museum of Modern Art",
+          "url": "https://www.moma.org/calendar/exhibitions/5637",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "NEW WALES BONNER AUTUMN/WINTER 2021 COLLABORATIVE COLLECTION",
+          "publisher": "adidas",
+          "url": "https://news.adidas.com/grace-wales-bonner/new-wales-bonner-autumn-winter-2021-collaborative-collection/s/b59b8bb5-51cd-415a-819c-d87be4ee7f3f",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "adidas Originals and Wales Bonner Present their Spring Summer 2022 Collaborative Collection",
+          "publisher": "adidas",
+          "url": "https://news.adidas.com/BRANDS/adidas-originals-and-wales-bonner-present-their-spring-summer-2022-collaborative-collection/s/ccabf433-f5e6-4c60-a4df-a9512418b0c1",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "INTERVIEW: Grace Wales Bonner on Designing for the Jamaican Football Federation With adidas",
+          "publisher": "Hypebae",
+          "url": "https://hypebae.com/2023/2/grace-wales-bonner-adidas-jamaican-football-federation-shirts-collaboration-interview",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Grace Wales Bonner On Her “Polished And Soulful” New Adidas Originals Collection",
+          "publisher": "Vogue",
+          "url": "https://www.vogue.com/article/grace-wales-bonner-on-her-polished-and-soulful-new-adidas-originals-collection",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Club to Catwalk: London Fashion in the 1980s",
+          "publisher": "Victoria and Albert Museum",
+          "url": "https://media.vam.ac.uk/media/documents/ClubtoCatwalk-press-release.pdf",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "adidas / TheNewsMarket",
+      "media": {
+        "asset": "assets/wales-bonner-adidas-fw26-archive-fallback.svg",
+        "alt": "A white adidas and Wales Bonner shirt from the fall-winter 2026 campaign.",
+        "caption": "adidas 官方媒体库素材 734969；该素材标明可用于线上编辑报道。",
+        "credit": "adidas / TheNewsMarket",
+        "kind": "source_image",
+        "origin_url": "https://news.adidas.com/home-of-innovation/originals/adidas-originals-by-wales-bonner-introduces-the-fall-winter-2026-collection/s/e89bd1e9-f99f-4b62-9428-6b9187da66ef",
+        "rights_basis": "preview_user_authorized_external",
+        "external_image_url": "https://preview.thenewsmarket.com/Previews/ADID/StillAssets/1920x1080/734969_v2.jpg",
+        "origin_authority": "first_party_official"
+      }
+    },
+    {
+      "id": "auralee-tekla-wintering-2026",
+      "level": "signal",
+      "title": "从温泉到冬居：AURALEE与Tekla第二次合作写下季节变化",
+      "english": {
+        "title": "FROM ONSEN TO WINTERING",
+        "deck": "A second collaboration moves from bathing rituals to clothes and textiles for winter.",
+        "abstract": "AURALEE and Tekla's October 28 collection connects clothing and home textiles through a wintering theme. Product origin and composition are specific to each item."
+      },
+      "sources": [
+        {
+          "title": "AURALEE and Tekla: Vol. 2",
+          "publisher": "AURALEE",
+          "url": "https://auralee.jp/news/174",
+          "published_date": null,
+          "event_date": "2026-10-28",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "AURALEE × TEKLA — Autumn Winter 2024",
+          "publisher": "AURALEE",
+          "url": "https://auralee.jp/projects/15",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "About Tekla",
+          "publisher": "Tekla",
+          "url": "https://teklafabrics.com/about-tekla",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "AURALEE and Tekla Made the Most Aspirational PJs Ever, Again",
+          "publisher": "Highsnobiety",
+          "url": "https://www.highsnobiety.com/p/auralee-tekla-2026/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "オーラリー・岩井良太が語る、“普通”の服を更新し続ける理由",
+          "publisher": "Vogue Japan",
+          "url": "https://www.vogue.co.jp/article/tokyo-taking-shape-auralee-interview",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Ryota Iwai, la force de la douceur",
+          "publisher": "Le Monde",
+          "url": "https://www.lemonde.fr/m-styles/article/2025/04/29/ryota-iwai-la-force-de-la-douceur_6601305_4497319.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Ryota Iwai (AURALEE)",
+          "publisher": "Rakuten Fashion Week TOKYO",
+          "url": "https://rakutenfashionweektokyo.com/en/topics/interview/ryota-iwai/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "オーラリーとテクラのコラボ第2弾。北欧の冬に着想を得た限定コレクションが到着！",
+          "publisher": "madameFIGARO.jp",
+          "url": "https://madamefigaro.jp/fashion/261026-tekla-auralee-collaboration/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Tekla's 'soft and inviting' London store is made to feel like you're coming home",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/fashion-beauty/tekla-london-marylebone-store",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Tekla's first candles come in sculptural ceramic vessels",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design-interiors/interior-accessories/tekla-candles",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "オーラリーxテクラによる第2弾コラボコレクションが発売",
+          "publisher": "Hypebeast Japan",
+          "url": "https://hypebeast.com/jp/2026/10/auralee-tekla-collabo-collection-release-info",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "AURALEE / Tekla",
+      "media": {
+        "asset": "assets/auralee-tekla-wintering-2026-fallback.svg",
+        "alt": "AURALEE and Tekla's wintering campaign image.",
+        "caption": "AURALEE 官方发布的第二次合作影像。",
+        "credit": "AURALEE / Tekla",
+        "kind": "source_image",
+        "origin_url": "https://auralee.jp/news/174",
+        "rights_basis": "preview_user_authorized_external",
+        "external_image_url": "https://auralee.jp/photo/news/26aw_tekla/4b2cac3a52644aeeaabba41eab83c853.jpg",
+        "origin_authority": "first_party_official"
+      }
+    },
+    {
+      "id": "flaming-lips-teardrop-throbs-2026",
+      "level": "signal",
+      "title": "《The Teardrop Throbs》先把听歌入口写出来",
+      "english": {
+        "title": "THE TEARDROP THROBS: A LISTENING ENTRY POINT",
+        "deck": "A new single and Wayne Coyne's notes arrive before the album itself.",
+        "abstract": "The Flaming Lips announced a 13-track album due January 22, 2027, and released its lead single. Commentary on the single and older recordings cannot stand in for a review of the unreleased record."
+      },
+      "sources": [
+        {
+          "title": "New Album from The Flaming Lips!",
+          "publisher": "Third Man Records",
+          "url": "https://thirdmanrecords.com/blogs/news/new-album-from-the-flaming-lips",
+          "published_date": "2026-10-26",
+          "event_date": "2026-10-26",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "“It’s Strange To Be Talking About the Flaming Lips In The Past Tense”: An Interview With Steven Drozd",
+          "publisher": "Stereogum",
+          "url": "https://stereogum.com/2497927/its-strange-to-be-talking-about-the-flaming-lips-in-the-past-tense-an-interview-with-steven-drozd/interviews/qa",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Steven Drozd Breaks Silence on Flaming Lips Exit: “Moving On Felt Right”",
+          "publisher": "Rolling Stone Australia",
+          "url": "https://au.rollingstone.com/music/music-news/flaming-lips-steven-drozd-breaks-silence-90132/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Interview with The Flaming Lips: American Head, Facing Mortality, & the Healing Power of Music",
+          "publisher": "Atwood Magazine",
+          "url": "https://atwoodmagazine.com/flah-the-flaming-lips-american-head-music-interview-2020/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Flaming Lips: American Head Album Review",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/reviews/albums/the-flaming-lips-american-head/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Greatest Pop Album? The Flaming Lips: The Soft Bulletin",
+          "publisher": "Stereophile",
+          "url": "https://www.stereophile.com/content/greatest-pop-album-flaming-lips-soft-bulletin",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "I used four wireless speakers to finally hear Zaireeka",
+          "publisher": "What Hi-Fi?",
+          "url": "https://www.whathifi.com/speakers/wireless-speakers/i-used-four-wireless-speakers-to-finally-hear-this-album-thats-almost-impossible-to-listen-to-and-it-made-my-brain-hurt-in-a-good-way",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Stereogum: reporting and Chris DeVille’s review of the new single",
+          "publisher": "stereogum.com",
+          "url": "https://stereogum.com/2515626/the-flaming-lips-announce-first-post-steven-drozd-album-the-teardrop-throbs-hear-god-will-control-the-werewolves/music",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Wayne Coyne Reflects on His Teenage Years on New Flaming Lips Album",
+          "publisher": "Westword",
+          "url": "https://www.westword.com/music/wayne-coyne-of-the-flaming-lips-on-american-head-11793984/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "A song for heavy times: Wayne Coyne of the Flaming Lips on Do You Realize??",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/culture/2023/apr/24/wayne-coyne-flaming-lips-do-you-realize",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Third Man Records",
+      "media": {
+        "asset": "assets/flaming-lips-teardrop-throbs-2026-fallback.svg",
+        "alt": "Blue cover artwork for The Flaming Lips' The Teardrop Throbs.",
+        "caption": "Third Man Records 公布的专辑封面；整张专辑计划于 2027 年 1 月发行。",
+        "credit": "Third Man Records",
+        "kind": "source_image",
+        "origin_url": "https://thirdmanrecords.com/blogs/news/new-album-from-the-flaming-lips",
+        "rights_basis": "preview_user_authorized_external",
+        "external_image_url": "https://cdn.shopify.com/s/files/1/0441/1349/4174/files/TMR1187_TheFlamingLips_TheTeardrobThrobs_digital_cover_3200x_1_5f0025bb-35e9-4bbc-9a5c-299c3e0113aa.jpg?v=1792778880",
+        "origin_authority": "first_party_official"
+      }
+    },
+    {
+      "id": "miu-miu-holiday-2026-campaign",
+      "level": "signal",
+      "title": "两间房，一周之内：Miu Miu 的节日广告与 Diop 展览",
+      "english": {
+        "title": "TWO ROOMS, ONE WEEK APART",
+        "deck": "Miu Miu places a Holiday 2026 campaign beside Alice Diop’s recently closed exhibition.",
+        "abstract": "The Holiday 2026 campaign, photographed by Tina Barney and accompanied by a short film by Emilie Blichfeldt, appeared on October 26. The retrospective exhibition Geste de Consolation ran October 21–25. Their proximity links two distinct forms of looking without proving a shared curatorial intention."
+      },
+      "sources": [
+        {
+          "title": "Miu Miu｜Alice Diop 展览官方介绍",
+          "publisher": "miumiu.com",
+          "url": "https://www.miumiu.com/ww/en/miumiu-club/special-projects/geste-de-consolation.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Vogue France｜Diop 谈档案与策展",
+          "publisher": "vogue.fr",
+          "url": "https://www.vogue.fr/article/interview-alice-diop-exposition-geste-de-consolation-miu-miu",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "AnOther｜Diop 谈展览与自画像",
+          "publisher": "origin.anothermag.com",
+          "url": "https://origin.anothermag.com/art-photography/17584/alice-diop-miu-miu-geste-de-consolation-art-basel-paris",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Wallpaper*｜展览与《Fragments for Venus》",
+          "publisher": "wallpaper.com",
+          "url": "https://www.wallpaper.com/art/exhibitions-shows/alice-diop-miu-miu-art-basel-paris-2026-interview",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Art Newspaper｜展览与表演空间",
+          "publisher": "artnewspaper.fr",
+          "url": "https://www.artnewspaper.fr/2026/10/22/avec-miu-miu-alice-diop-fait-du-palais-diena-un-lieu-de-memoire-et-de-reparation",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "SURFACE｜Diop 首次策展采访",
+          "publisher": "surfacemag.com",
+          "url": "https://www.surfacemag.com/articles/alice-diop-curatorial-debut-at-art-basel-paris/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Miu Miu Holiday 2026 Campaign",
+          "publisher": "Miu Miu",
+          "url": "https://www.miumiu.com/ae/en/miumiu-club/campaigns/holiday-2026.html",
+          "published_date": "2026-10-26",
+          "event_date": "2026-10-26",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "「ミュウミュウ」2026年ホリデーキャンペーンにアンバサダーのMOMOなど出演",
+          "publisher": "FASHIONSNAP",
+          "url": "https://www.fashionsnap.com/article/2026-10-26/miumiu-2026-holiday-campaign/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Miu Miu Holiday 2026 Ad Campaign",
+          "publisher": "The Impression",
+          "url": "https://theimpression.com/miu-miu-holiday-2026-ad-campaign-review/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "British Vogue｜Diop 谈展览与办公室",
+          "publisher": "vogue.co.uk",
+          "url": "https://www.vogue.co.uk/article/alice-diop-miu-miu-exhibition",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Miu Miu; photography Tina Barney",
+      "media": {
+        "asset": "assets/miu-miu-holiday-2026-campaign-fallback.svg",
+        "alt": "Official hero image for Miu Miu Holiday 2026, featuring the campaign cast.",
+        "caption": "Miu Miu 官方 Holiday 2026 广告主图，摄影 Tina Barney；图像来自品牌活动页。",
+        "credit": "Miu Miu; photography Tina Barney",
+        "kind": "source_image",
+        "origin_url": "https://www.miumiu.com/ae/en/miumiu-club/campaigns/holiday-2026.html",
+        "rights_basis": "preview_user_authorized_external",
+        "external_image_url": "https://www.miumiu.com/content/dam/miumiu/2026/003_campaigns/Holiday-2026/hero_DT.jpg/jcr:content/renditions/miumiunux_color.2000.2000.jpg",
+        "origin_authority": "first_party_official"
+      }
+    }
+  ]
+}
