@@ -1,0 +1,17 @@
+{
+  "dominant_mood": "雾白纸面上的炭黑、砖红与松绿色，像一张正在被使用的工作台：墨迹未干，木屑仍在边缘，完成品没有把过程擦掉。",
+  "background_logic": "页面把两种过程结构并置：京都用分散的节点、会议与路线向外展开，伦敦用工作桌、档案和模型向内聚拢；不复用最近七期的票根、日历轴、节目单轨道、孔径窗口、尺度矩形场、折页结构或门框路线。",
+  "palette_logic": "mist #EEE9DE, charcoal #1C201D, brick #A84935, pine #245247, paper #FAF7F0, graphite #69706A；雾白承载长文，炭黑负责正文，砖红标记仍在推进的动作，松绿组织来源与城市路径，石墨用于注释。",
+  "type_scale_logic": "标题像工作台上的大号工序标签，正文保持 18px；编号、日期、场地与来源使用等宽字，英文只承担 title、deck 与 abstract，长标题自然断行，不把过程压成宣传口号。",
+  "image_behavior": "两张一手官方媒体以 Preview 外链显示；本地 SVG 是原创非纪实工作台与档案网格回退图，外图失败时仍保留来源链接、图片 credit 和事实说明；未知权利不被写成已获授权。",
+  "page_density_and_tempo": "封面先让一张城市节点图与一张工作桌并置；正文先向外读京都的公共制作，再向内读伦敦的工作档案，最后停在一个仍未封口的动作上。",
+  "core_visual_action": "用未完成的线框、编号、材料标签和不闭合的圆把事实与判断分开：砖红标记进行中的动作，松绿标记可进入的路线，空白保留那些作品尚未替读者回答的部分。",
+  "cover_composition": "雾白底上叠放一张松绿色城市节点图与一张偏移的炭黑工作桌图，砖红线条从图纸伸向桌面；标题横跨两者，右下留一处没有签名的空白。",
+  "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 只提供可关闭的过程注记，正文、事实和外图回链不依赖 JavaScript。",
+  "behance_viewing_arc": "先看制作如何被城市公开，再看制作如何被博物馆保存，最后停在未完成的工作桌上，让读者判断打开后台是否也意味着保留不确定。",
+  "mobile_translation": "390px 下城市节点图与工作桌图改为纵向叠放，线框收成边缘标记，砖红只出现在标题、日期和判断附近；正文单列，图片说明和长链接自然换行。",
+  "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点可见，长链接换行，移动端无横向滚动；线框装饰不覆盖正文和图片说明，外图失败不隐藏来源。",
+  "quiet_ending": "退出处保留一条没有闭合的线和一枚尚未签名的标签，不给箭头，让下一步回到真实的展览、会议和工作方法。",
+  "closing_quotation": {"id":"ct-en-001","language":"en","text":"The last support stays in place. Method is still carrying the result.","credit":"Culture & Taste Editorial"},
+  "closing_palette": {"background":"#EEE9DE","foreground":"#1C201D","accent":"#A84935","rationale":"雾白与炭黑构成长文阅读底，松绿承担入口和来源结构，砖红只提示仍在推进的动作与判断，保持结尾文字和警示色有足够对比。"}
+}

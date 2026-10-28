@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Es Devlin workdesk</title>
+  <desc id="desc">An original non-documentary diagram of a circular work desk, archive boxes, maquettes and an open line.</desc>
+  <rect width="1200" height="720" fill="#EEE9DE"/>
+  <g fill="none" stroke="#1C201D" stroke-width="5"><circle cx="590" cy="350" r="226"/><circle cx="590" cy="350" r="90"/><path d="M590 124V576M364 350H816M430 190L750 510M750 190L430 510"/></g>
+  <g fill="#245247"><rect x="80" y="102" width="178" height="120"/><rect x="928" y="480" width="178" height="120"/></g>
+  <g fill="#FAF7F0" font-family="monospace" font-size="27" font-weight="700"><text x="76" y="72">ARCHIVE / DESK / 30 YEARS</text><text x="100" y="154">SKETCH</text><text x="100" y="190">MODEL</text><text x="948" y="532">STUDIO</text><text x="948" y="568">PUBLIC</text></g>
+  <path d="M180 560C330 590 380 630 590 606S890 560 1020 180" fill="none" stroke="#A84935" stroke-width="10" stroke-dasharray="20 16"/>
+  <circle cx="590" cy="350" r="18" fill="#A84935"/>
+</svg>
