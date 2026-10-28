@@ -48,6 +48,19 @@ test('deferred images remain distinct from checked readable fallbacks', () => {
   assert.equal(previewImagesReadable(facts, origins, { allowDeferred: true }), true);
 });
 
+test('historical image corrections inherit only the exact declared official origin and its host', () => {
+  const m = structuredClone(manifest); m.issue_id = '2026-09-04'; m.stories[0].id = 'old-story';
+  const key = '2026-09-04/old-story';
+  const correction = { [key]: { external_image_url: 'https://official.example/corrected.jpg', origin_url: originUrl, reason: 'Reviewed historical image correction.' } };
+  assert.ok(declaredPreviewMedia([m], [], correction).has(correction[key].external_image_url));
+  const wrongHost = structuredClone(correction); wrongHost[key].external_image_url = 'https://other.example/image.jpg';
+  assert.equal(declaredPreviewMedia([m], [], wrongHost).has(wrongHost[key].external_image_url), false);
+  const wrongOrigin = structuredClone(correction); wrongOrigin[key].origin_url = 'https://official.example/unrelated';
+  assert.equal(declaredPreviewMedia([m], [], wrongOrigin).has(wrongOrigin[key].external_image_url), false);
+  const missingProof = structuredClone(correction); missingProof[key].reason = '';
+  assert.equal(declaredPreviewMedia([m], [], missingProof).has(missingProof[key].external_image_url), false);
+});
+
 let browser;
 before(async () => {
   try { browser = await chromium.launch({ headless: true, channel: process.env.PLAYWRIGHT_CHANNEL ?? 'chrome' }); }

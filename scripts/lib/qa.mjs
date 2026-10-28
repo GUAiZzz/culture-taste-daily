@@ -457,7 +457,8 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
         }
       } catch (error) { if (error.code !== 'ENOENT') throw error; }
     }
-    const previewOrigins = declaredPreviewMedia(manifests, radars);
+    const corrections = await readJson(path.join(repoRoot, 'core/rooms/media-corrections.json'));
+    const previewOrigins = declaredPreviewMedia(manifests, radars, corrections);
     const server = await startStaticServer(distDir);
     const browser = await launchChromium();
     try {
