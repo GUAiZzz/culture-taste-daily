@@ -89,7 +89,7 @@ function modernFixture() {
   return f;
 }
 
-test('ordinary release requires exact ten even when the research attestation claims complete', () => {
+test('pre-A3 ordinary release keeps its exact-ten historical requirement', () => {
   assert.equal(evaluatePreview(modernFixture()).preview_eligible, true);
   for (const count of [0, 2, 9, 11, undefined]) {
     const f = modernFixture(); f.runtime.formal_story_count = count;
@@ -105,4 +105,26 @@ test('ordinary release requires derived per-story source validation, not a compl
   const f = modernFixture(); f.runtime.editorial_blockers = ['SUBSTANTIVE_SOURCE_COUNT_MISMATCH:story-0'];
   assert.equal(evaluatePreview(f).preview_eligible, false);
   assert.ok(evaluatePreview(f).blockers.includes('SUBSTANTIVE_SOURCE_COUNT_MISMATCH:story-0'));
+});
+
+function minimumCountFixture(count = 10) {
+  const f = modernFixture();
+  f.now = new Date('2026-10-28T14:00:00+08:00');
+  Object.assign(f.policy.editorial, { minimum_formal_story_count: 10, minimum_count_effective_from: '2026-10-28' });
+  f.evidence.target_date = '2026-10-28';
+  f.evidence.checked_at = '2026-10-28T13:30:00+08:00';
+  f.evidence.health.media[0].provenance_verified_at = '2026-10-28T13:00:00+08:00';
+  f.evidence.policy_digest = policyDigest(f.policy);
+  f.runtime.branch = 'automation/culture-taste-2026-10-28';
+  f.runtime.formal_story_count = count;
+  return f;
+}
+
+test('A3 Preview gate accepts complete ordinary counts above ten without relaxing evidence', () => {
+  for (const count of [10, 11, 12]) assert.equal(evaluatePreview(minimumCountFixture(count)).preview_eligible, true);
+  for (const count of [0, 9, 10.5]) assert.ok(evaluatePreview(minimumCountFixture(count)).blockers.includes('FORMAL_STORY_COUNT_MISMATCH'));
+  const missing = minimumCountFixture(); delete missing.runtime.formal_story_count;
+  assert.ok(evaluatePreview(missing).blockers.includes('FORMAL_STORY_COUNT_MISMATCH'));
+  const incomplete = minimumCountFixture(11); incomplete.runtime.editorial_valid = false;
+  assert.ok(evaluatePreview(incomplete).blockers.includes('EDITORIAL_INCOMPLETE'));
 });

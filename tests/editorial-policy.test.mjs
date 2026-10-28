@@ -6,8 +6,8 @@ import { editorialRequirements, editorialPackageBlockers, editorialSourceReport,
 const policy = { editorial: { formal_story_count: 10, exact_count_effective_from: '2026-10-12',
   minimum_substantive_sources_per_story: 10, sources_effective_from: '2026-09-16' } };
 const now = new Date('2026-10-27T14:00:00+08:00');
-function fixture() {
-  const stories = Array.from({ length: 10 }, (_, i) => ({ id: `story-${i}`, title: `正式文章 ${i}`,
+function fixture(count = 10) {
+  const stories = Array.from({ length: count }, (_, i) => ({ id: `story-${i}`, title: `正式文章 ${i}`,
     level: i ? 'signal' : 'cover', english: { title: `Article ${i}`, deck: 'A bounded account.', abstract: 'Verified context, with uncertainty retained.' },
     sources: Array.from({ length: 10 }, (_, n) => ({ url: `https://official.example/story-${i}/source-${n}` })),
   }));
@@ -37,7 +37,7 @@ test('count and per-story source requirements have separate effective dates', ()
   assert.equal(editorialRequirements({ editorial: { ...policy.editorial, formal_story_count: 2 } }, '2026-10-27').policy_valid, false);
 });
 
-test('two, nine and eleven articles cannot be disguised by radar or source counts', () => {
+test('pre-A3 exact counts cannot be disguised by radar or source counts', () => {
   for (const count of [2, 9, 11]) {
     const f = fixture();
     f.manifest.stories = Array.from({ length: count }, (_, i) => f.manifest.stories[i % 10]);
@@ -113,4 +113,40 @@ test('unlocked checkpoints can report provisional reads without granting final e
   assert.equal(report.provisional, true); assert.equal(report.stories[0].qualifying_source_count, 10);
   assert.equal(editorialSourceReport(f).stories[0].qualifying_source_count, 0);
   assert.ok(editorialBlockers(f).includes('EDITORIAL_ACTUAL_TIMESTAMPS'));
+});
+
+function minimumFixture(count = 10) {
+  const f = JSON.parse(JSON.stringify(fixture(count)).replaceAll('2026-10-27', '2026-10-28'));
+  f.now = new Date('2026-10-28T14:00:00+08:00');
+  f.policy.editorial.minimum_formal_story_count = 10;
+  f.policy.editorial.minimum_count_effective_from = '2026-10-28';
+  return f;
+}
+
+test('A3 ordinary first publication has a floor of ten and accepts complete eleven/twelve packages', () => {
+  for (const count of [10, 11, 12]) {
+    const f = minimumFixture(count);
+    const requirements = editorialRequirements(f.policy, f.manifest.publication_date);
+    assert.equal(requirements.exact_story_count, null);
+    assert.equal(requirements.minimum_story_count, 10);
+    assert.deepEqual(editorialBlockers(f), []);
+  }
+  for (const count of [0, 1, 9]) assert.ok(editorialPackageBlockers(minimumFixture(count)).includes('FORMAL_STORY_COUNT_MISMATCH'));
+});
+
+test('a one-article addition validates the eleven-article cumulative package, with no new batch quota', () => {
+  assert.deepEqual(editorialBlockers(minimumFixture(10)), []);
+  assert.deepEqual(editorialBlockers(minimumFixture(11)), []);
+  const unfinished = minimumFixture(11);
+  unfinished.privateResearch.article_sources[10].sources[9].actually_read = false;
+  assert.ok(editorialBlockers(unfinished).includes('SUBSTANTIVE_SOURCE_COUNT_MISMATCH:story-10'));
+  const body = minimumFixture(11); body.content = body.content.replace('## 正式文章 10', '## Not the selected article');
+  assert.ok(editorialPackageBlockers(body).includes('ARTICLE_PACKAGE_INCOMPLETE:story-10'));
+});
+
+test('future ordinary packages fail closed if their minimum policy is missing or weakened', () => {
+  const f = minimumFixture(); delete f.policy.editorial.minimum_formal_story_count;
+  assert.equal(editorialRequirements(f.policy, f.manifest.publication_date).policy_valid, false);
+  f.policy.editorial.minimum_formal_story_count = 9;
+  assert.ok(editorialPackageBlockers(f).includes('EDITORIAL_POLICY_INVALID'));
 });

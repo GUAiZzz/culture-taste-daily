@@ -1,0 +1,114 @@
+{
+  "2026-08-20": {
+    "article_count": 10,
+    "count_label": "7 篇长读 · 3 则短讯",
+    "count_basis": "Preserved HTML numbers the seven Closer Reads 01–07 and the three Shorter Signals 08–10. Watch entries and companion interpretation cards are not additional articles.",
+    "category_evidence": [
+      {
+        "category": "fashion",
+        "original_label": "03 Fashion Amsterdam",
+        "title": "Roy Is A Mess 把 2010s internet junk 真的做成了物件。"
+      },
+      {
+        "category": "music",
+        "original_label": "04 Scent × Music Launch",
+        "title": "Ice Spice 的第一支香水，值得看的不是「明星也做香水了」。"
+      },
+      {
+        "category": "objects",
+        "original_label": "05 Objects 3D Footwear",
+        "title": "Reebok 没有再复刻 Question，它换了制造方式。"
+      },
+      {
+        "category": "city",
+        "original_label": "01 City Scene CDMX",
+        "title": "一个 local market，比「Punk is back」更值得看。"
+      }
+    ],
+    "categories": [
+      "fashion",
+      "music",
+      "objects",
+      "city"
+    ],
+    "source_file": "original.html",
+    "source_sha256": "b4b42d072a36f85a5490d9f1cbc0b0c4b4d148282fe379f4022dd08fb1074fd2",
+    "verification": "reviewed_from_preserved_original"
+  },
+  "2026-08-21": {
+    "article_count": 8,
+    "count_label": "8 篇文章",
+    "count_basis": "Preserved HTML has eight numbered story sections 01–08; the separate Watchlist is excluded.",
+    "category_evidence": [
+      {
+        "category": "fashion",
+        "original_label": "01 / FASHION INFRASTRUCTURE / HONG KONG",
+        "title": "CENTRESTAGE 的规模继续涨，香港接下来要证明的是这些人为什么值得聚在同一个场里。"
+      },
+      {
+        "category": "music",
+        "original_label": "06 / MUSIC × ART / ANONYMITY",
+        "title": "Secret 7” 把 designer name 从购买前的判断里拿掉了。"
+      },
+      {
+        "category": "objects",
+        "original_label": "05 / PERFORMANCE × RECOVERY / ON × FKA TWIGS",
+        "title": "On 第一次做 mule，说明它开始认真占据「跑完以后」这段时间。"
+      },
+      {
+        "category": "city",
+        "original_label": "04 / MUSEUM × COMMUNITY / MIAMI",
+        "title": "The Bass 昨晚把 ballroom 的规则一起带进了 museum。"
+      }
+    ],
+    "categories": [
+      "fashion",
+      "music",
+      "objects",
+      "city"
+    ],
+    "source_file": "original.html",
+    "source_sha256": "f85bf5678c20363df68930488e61a02b610268b67e12ce7a7e2cdd2441994041",
+    "verification": "reviewed_from_preserved_original"
+  },
+  "2026-08-22": {
+    "article_count": 8,
+    "count_label": "8 则选读 · 16 页原件",
+    "count_basis": "Visually reviewed preserved raster pages: 01 cover, 02–03 majors, 04–08 Five Signals. Upcoming Watch and Source Ledger are excluded. No article text or individual reader route is reconstructed.",
+    "category_evidence": [
+      {
+        "category": "fashion",
+        "original_label": "04 / EXHIBITION",
+        "title": "时装进馆，比较的坐标先变了",
+        "source_page": "pages/page-007.jpg"
+      },
+      {
+        "category": "music",
+        "original_label": "08 / LISTEN",
+        "title": "小声发行，也是一种发行",
+        "source_page": "pages/page-010.jpg"
+      },
+      {
+        "category": "objects",
+        "original_label": "03 / MAJOR / OBJECT",
+        "title": "气味不能直播，所以它仍要落地。",
+        "source_page": "pages/page-005.jpg"
+      },
+      {
+        "category": "city",
+        "original_label": "01 / COVER STORY · DURHAM",
+        "title": "门开了，文化才开始。",
+        "source_page": "pages/page-000.jpg"
+      }
+    ],
+    "categories": [
+      "fashion",
+      "music",
+      "objects",
+      "city"
+    ],
+    "source_file": "original.pdf",
+    "source_sha256": "2c3785f03eabfa45905c5240b6961b57b7d43fb36802b1e47ba30dbc3f7b7ffe",
+    "verification": "reviewed_from_preserved_original"
+  }
+}

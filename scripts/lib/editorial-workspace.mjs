@@ -352,11 +352,12 @@ export function editorialWorkspaceStatus({ state, digest, policy, now = new Date
       source_ready_for_package: requirements.policy_valid && currentDate === state.target_date && drafted && draftFresh
         && refreshed >= required && Array.isArray(row?.blockers) && row.blockers.length === 0 };
   });
-  const requiredStories = requirements.exact_story_count ?? 10;
+  const requiredStories = requirements.minimum_story_count ?? requirements.exact_story_count ?? 10;
+  const countReady = requirements.minimum_story_count !== null ? stories.length >= requiredStories : stories.length === requiredStories;
   const next = stories.find(s => !s.source_ready_for_package);
   const pending = [...state.blockers.map(b => b.code), ...report.blockers];
   if (currentDate !== state.target_date) pending.unshift('WORKSPACE_REQUIRES_CURRENT_DATE_CARRY');
-  if (stories.length !== requiredStories) pending.push('FORMAL_STORY_COUNT_MISMATCH');
+  if (!countReady) pending.push('FORMAL_STORY_COUNT_MISMATCH');
   if (stories.some(s => !s.source_ready_for_package)) pending.push('ARTICLE_WORK_INCOMPLETE');
   return { schema_version: 1, kind: 'editorial_workspace_progress', date: state.target_date, checked_at: workspaceTimestamp(now),
     revision: state.revision, workspace_digest: digest ?? hash(state), discovered_articles: stories.length,
@@ -365,12 +366,13 @@ export function editorialWorkspaceStatus({ state, digest, policy, now = new Date
     checked_scan_records: (state.source_scan ?? []).filter(scan => scan.checked_at.startsWith(state.target_date) && validTimestamp(scan.checked_at, now)).length,
     drafted_articles: stories.filter(s => s.drafted).length,
     source_ready_for_package: stories.filter(s => s.source_ready_for_package).length, required_articles: requiredStories,
-    issue_source_ready_for_package: stories.length === requiredStories && stories.every(s => s.source_ready_for_package) && pending.length === 0,
+    article_count_mode: requirements.minimum_story_count !== null ? 'minimum' : 'exact',
+    issue_source_ready_for_package: countReady && stories.every(s => s.source_ready_for_package) && pending.length === 0,
     stories, blockers: [...new Set(pending)],
     next_action: currentDate !== state.target_date ? { action: 'CARRY_TO_CURRENT_DATE', date: currentDate }
       : next ? { action: next.stage, story_id: next.story_id, sources_remaining: Math.max(0, next.required_source_count - next.current_issue_verified_source_count), blockers: next.blockers }
       : stories.length < requiredStories ? { action: 'DISCOVER_NEXT_ARTICLE', remaining: requiredStories - stories.length }
-      : stories.length > requiredStories ? { action: 'SELECT_EXACT_ARTICLE_COUNT', excess: stories.length - requiredStories }
+      : requirements.exact_story_count !== null && stories.length > requiredStories ? { action: 'SELECT_EXACT_ARTICLE_COUNT', excess: stories.length - requiredStories }
       : state.blockers.length ? { action: 'REPAIR_RECORDED_BLOCKERS', blockers: state.blockers.map(blocker => blocker.code) }
       : { action: 'VALIDATE_COMPLETE_PUBLIC_PACKAGE_AND_RESEARCH_GATES' },
     publication_eligible: false,

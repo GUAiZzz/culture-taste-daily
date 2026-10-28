@@ -33,7 +33,7 @@ export function editorialBindingBlockers({ manifest, content, privateResearch, c
   let progress;
   try { progress = editorialWorkspaceStatus({ ...current, policy, now }); }
   catch { blockers.push('WORKSPACE_STATE_INVALID'); }
-  if (progress?.issue_source_ready_for_package !== true || progress?.source_ready_for_package !== 10
+  if (progress?.issue_source_ready_for_package !== true || progress?.source_ready_for_package !== state?.articles?.length
     || progress?.blockers.length !== 0) blockers.push('WORKSPACE_NOT_READY');
   const stories = Array.isArray(manifest?.stories) ? manifest.stories : [];
   const articles = Array.isArray(state?.articles) ? state.articles : [];

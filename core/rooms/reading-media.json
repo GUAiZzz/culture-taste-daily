@@ -1,0 +1,50 @@
+{
+  "2026-10-28/nact-shojo-manga-infinity-2026": [
+    {
+      "external_image_url": "https://www.nact.jp/exhibition_special/media/shojomanga2026_14.jpg",
+      "origin_url": "https://www.nact.jp/exhibition_special/2026/shojomanga/",
+      "origin_authority": "first_party_official",
+      "rights_basis": "preview_user_authorized_external",
+      "alt": "紫色花朵与绿色枝叶间，一位穿蓝色水手领上衣的卷发漫画人物。",
+      "credit": "©萩尾望都／小学館；作品图来源：国立新美术馆",
+      "caption": "萩尾望都《ポーの一族 春の夢》：2016年《月刊flowers》7月号封面。馆方列为前期展示作品；此图为官方公布的作品图，非展厅现场照片。",
+      "after_zh_paragraph": 2,
+      "after_en_paragraph": 2
+    },
+    {
+      "external_image_url": "https://www.nact.jp/exhibition_special/media/shojomanga2026_05.jpg",
+      "origin_url": "https://www.nact.jp/exhibition_special/2026/shojomanga/",
+      "origin_authority": "first_party_official",
+      "rights_basis": "preview_user_authorized_external",
+      "alt": "山岸凉子彩色漫画图：左侧为花朵装饰的长发人物面部，右侧人物以芭蕾动作伸展。",
+      "credit": "©山岸凉子；作品图来源：国立新美术馆",
+      "caption": "山岸凉子《アラベスク》：1972年《りぼん》7月号扉页。馆方列为前期展示作品；可与萩尾望都的作品并置阅读，两张都不是展厅现场照片。",
+      "after_zh_paragraph": 2,
+      "after_en_paragraph": 2
+    }
+  ],
+  "2026-10-28/undercover-valentin-workwear": [
+    {
+      "external_image_url": "https://undercoverism.com/photo/page/20261015/valentin-worklook_08_small.jpg",
+      "origin_url": "https://undercoverism.com/new/20261026_1/newarrival",
+      "origin_authority": "first_party_official",
+      "rights_basis": "preview_user_authorized_external",
+      "alt": "一位穿灰色连帽工作服套装的人倚靠金属长桌，身后是红色墙面与工坊门口。",
+      "credit": "摄影：Jonas Loellmann；视觉指导：二村毅；官方发布：UNDERCOVER",
+      "caption": "Studio Valentin Loellmann × UNDERCOVER 官方合作视觉：灰色工作服与工坊空间。品牌说明这组视觉由工坊成员参与拍摄；宣传图不能代替服装实际耐用性或日常使用效果的证据。",
+      "after_zh_paragraph": 1,
+      "after_en_paragraph": 1
+    },
+    {
+      "external_image_url": "https://undercoverism.com/photo/page/20261015/ethan-working_01_small.jpg",
+      "origin_url": "https://undercoverism.com/new/20261026_1/newarrival",
+      "origin_authority": "first_party_official",
+      "rights_basis": "preview_user_authorized_external",
+      "alt": "一位背向镜头的工坊成员穿灰色印花上衣、抬起双臂操作工具，墙面有工作痕迹。",
+      "credit": "摄影：Jonas Loellmann；视觉指导：二村毅；官方发布：UNDERCOVER",
+      "caption": "同一合作的官方工坊拍摄图：背部印花与抬臂工作姿态。它记录品牌如何呈现制服用途；不等于经过独立测试的活动性或员工长期反馈。",
+      "after_zh_paragraph": 4,
+      "after_en_paragraph": 4
+    }
+  ]
+}

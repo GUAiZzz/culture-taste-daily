@@ -23,7 +23,7 @@ A complete daily candidate may automatically merge to `preview-build-v1` and dis
 
 The evaluator checks date, explicit authority, scope, exact source/base SHA, artifact and candidate digests, policy digest, evidence freshness, a complete research-check list, the hash of an existing private evidence file, official-source/media records, independent CI, local deterministic rebuild, technical QA, and privacy. Evidence completeness is not a proof of truth: the agent must actually read the source and private dependency. Model scores are not accepted. Passing this evaluator never grants Production authority.
 
-The owner's 2026-10-27 reliability update is implemented in `docs/EDITORIAL_OPERATIONS.md`. Ordinary unpublished candidates now derive exact-ten article and per-article substantive read-source validation from `automation/daily-policy.json`, verify the current private workspace/export/public draft binding, and require a real dated attempt across the full discovery registry. A failed unselected discovery route is reported honestly; it does not replace or veto complete selected-story evidence. Public CI checks public package structure, while private research remains a separate release gate.
+The owner's 2026-10-27 reliability update is implemented in `docs/EDITORIAL_OPERATIONS.md`. Ordinary unpublished candidates derive article-count and per-article substantive read-source validation from `automation/daily-policy.json`, verify the current private workspace/export/public draft binding, and require a real dated attempt across the full discovery registry. A failed unselected discovery route is reported honestly; it does not replace or veto complete selected-story evidence. Public CI checks public package structure, while private research remains a separate release gate.
 
 ## Evidence input (private, outside Git)
 
@@ -67,3 +67,9 @@ Final local receipt is `.stage4/operations/YYYY-MM-DD.json`; live verification i
 ## Live verification transport
 
 The live verifier first uses bounded HTTPS requests. If the local command-line transport repeatedly fails to connect, it may use the installed Chromium browser for the same fixed public project origin. Browser requests outside that project origin are blocked. HTTP failures, unexpected final URLs, source-SHA mismatches, manifest/digest mismatches and page-hash mismatches still fail verification. The terminal receipt records use of the fallback; browser availability is not treated as proof until the same bytes and identities are checked.
+
+## A3: stable reading structure and ordinary quantity floor
+
+The 2026-10-28 owner approval in `PRODUCTION_CONTRACT_V3_A3.md`/`READING_SYSTEM.md` supersedes daily UI reinvention and ordinary exact-ten policy from that date. First release is at least ten complete articles; later additions validate the complete cumulative package without another ten-new-article quota. Each selected article retains all source/media/rights checks. Historical supplements remain exact-ten. `reading_system_contract` is required technical evidence. Daily candidate scope, five checkpoints, final reconciliation window, evidence binding, Preview-only authority and Production blockers remain unchanged.
+
+The A3 quantity floor is implemented independently of a same-day append orchestrator. The current daily cycle still verifies/no-ops on an already-live date; a second revision/PR/release receipt path must be validated before it is reported as automatic append capability.

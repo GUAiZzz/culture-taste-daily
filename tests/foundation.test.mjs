@@ -141,7 +141,7 @@ test("shared core remains functional and leaves issue visual decisions to issue 
 test("mobile protocol and repository skill are present", async () => {
   const protocol = await readFile(path.join(repoRoot, "docs/MOBILE_EDITORIAL_PROTOCOL.md"), "utf8");
   const skill = await readFile(path.join(repoRoot, ".agents/skills/culture-taste-mobile/SKILL.md"), "utf8");
-  assert.match(protocol, /320x568/);
+  assert.match(protocol, /320[x×]568/);
   assert.match(protocol, /viewport-fit/);
   assert.match(protocol, /field.*coral.*analog/s);
   assert.match(skill, /MOBILE_EDITORIAL_PROTOCOL\.md/);

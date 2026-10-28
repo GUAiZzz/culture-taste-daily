@@ -6,7 +6,7 @@ Run every Sunday at `16:30` in `Asia/Shanghai`. This audit verifies that the con
 
 ## Base and automation drift
 
-1. Use the configured Culture & Taste repository and read `AGENTS.md` plus its mandatory files.
+1. Use the configured Culture & Taste repository and read `AGENTS.md` plus its mandatory files, including A3 and `docs/READING_SYSTEM.md`.
 2. Fetch and inspect `preview-build-v1` without modifying it.
 3. Confirm the daily candidate automation is active, uses the same repository, targets `preview-build-v1`, matches every checkpoint in `automation/daily-policy.json`, and uses the guarded Preview-only release helper. Run `npm run ops:check -- --automation-file <actual config>`; Production authority must remain false.
 4. Confirm `.github/workflows/preview.yml` has no schedule or push trigger and deploys only after an explicit manual dispatch.
@@ -29,7 +29,7 @@ Then inspect the public Preview homepage, archive, latest issue, every latest st
 
 - no broken internal route or page-level horizontal overflow;
 - complete reading without JavaScript and a stable reduced-motion path;
-- three theme controls, homepage randomization before manual selection, and session inheritance after selection;
+- all field/coral/analog styles × light/dark/warm appearances, legacy style aliases and cross-route persistence and the `reading_system_contract` behavior;
 - official-image cards load or expose the designed local fallback plus an exact official-source link;
 - no private material, credentials, research notes, or HarryTone source appear in the repository or public artifact;
 - current external source and image failures are separated from image-rights clearance.

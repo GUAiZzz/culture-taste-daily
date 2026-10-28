@@ -54,9 +54,11 @@ export function evaluatePreview({ evidence, runtime, policy, now = new Date() })
     fail(!authorization && e.target_date === shanghaiDate(now)
       && e.target_date >= policy?.preview_authority?.effective_from, 'DATE_IDENTITY');
     const editorial = editorialRequirements(policy, e.target_date, { unpublished: shanghaiDate(now) >= '2026-10-12' });
-    if (editorial.exact_story_count !== null || editorial.minimum_sources_per_story > 0) {
+    if (editorial.exact_story_count !== null || editorial.minimum_story_count !== null || editorial.minimum_sources_per_story > 0) {
       fail(editorial.policy_valid, 'EDITORIAL_POLICY_INVALID');
       if (editorial.exact_story_count !== null) fail(r.formal_story_count === editorial.exact_story_count, 'FORMAL_STORY_COUNT_MISMATCH');
+      if (editorial.minimum_story_count !== null) fail(Number.isSafeInteger(r.formal_story_count)
+        && r.formal_story_count >= editorial.minimum_story_count, 'FORMAL_STORY_COUNT_MISMATCH');
       fail(r.editorial_valid === true, 'EDITORIAL_INCOMPLETE');
       for (const code of Array.isArray(r.editorial_blockers) ? r.editorial_blockers : []) blockers.push(code);
     }

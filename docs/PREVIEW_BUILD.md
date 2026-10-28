@@ -1,6 +1,6 @@
 # Culture & Taste Daily — Preview Build
 
-The September 7 shared reading-room and history integration is documented in [Three rooms release](THREE_ROOMS_RELEASE.md).
+The current owner-approved structure is specified by [Reading System](READING_SYSTEM.md) and [A3](PRODUCTION_CONTRACT_V3_A3.md). The [September 7 rooms release](THREE_ROOMS_RELEASE.md) is historical evidence, not the current daily UI requirement.
 
 Status: `PUBLIC NON-PRODUCTION PREVIEW`
 
@@ -26,11 +26,11 @@ The supplied 2026-08-22 PDF contains 16 raster mobile screenshots and no selecta
 
 Historical embedded media is under human review and is not represented as production-cleared merely because it appears in Preview.
 
-## Shared publication versus issue worlds
+## Shared reading UI versus locked source
 
-`core/styles/site.css` styles only pages carrying `data-shell="publication"`. It organizes navigation, homepage, archive, and historical context.
+`core/rooms/render.mjs` applies the approved shared reading system to structured home/archive/issue/article routes. The same structure and controls support field/coral/analog styles independently combined with light/dark/warm appearance. New content inherits these assets and the required `reading_system_contract` evidence.
 
-Current issue art direction remains in the scoped `src/issues/<date>/issue.css`. Historical originals retain their own internal CSS. The publication shell does not impose its palette, typography, grid, or interaction on issue content.
+Existing issue art-direction and scoped CSS remain source/compatibility records; dated content does not redefine the shared settings, navigation or reader. Supplied historical originals retain their exact internal files and hashes, alongside their Preview context pages. See A3 and `READING_SYSTEM.md` for the current authority; the former three-room document remains historical implementation evidence.
 
 ## Preview CI and hosting
 
@@ -52,3 +52,5 @@ Deployment occurs only through an explicit `workflow_dispatch`. There is no push
 ## Current operational authority
 
 Use `npm run ops:state -- --online` to reconcile source, GitHub and live state. The owner-approved [Preview amendment](PREVIEW_AUTONOMY.md) supersedes earlier candidate-only operational descriptions. Policy defines 11:00 start, 13:00/15:00/17:00 recovery and 18:00 final reconciliation in Shanghai. Complete current-day packages may automatically merge and dispatch Preview only after `preview:release` passes. No Production authority is granted. Scheduler availability and next-day unattended execution must be verified independently of local tests.
+
+A3 requires the stable shared renderer and `reading_system_contract` for future updates. Ordinary first publication has a floor of ten complete articles; later qualified additions use a cumulative package. Historical supplement exact-ten, schedule, privacy/rights and Production-disabled boundaries remain. Current source/GitHub/live identity must still be reconciled with `ops:state`; this document is not deployment evidence.

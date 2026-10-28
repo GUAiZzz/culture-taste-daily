@@ -33,7 +33,7 @@ if (values.online) {
 let packagePresent = true;
 try { await access(path.join('src/issues', date, 'issue-manifest.public.json')); } catch { packagePresent = false; }
 let packageCheck;
-if (packagePresent && progress.source_ready_for_package === 10 && progress.blockers.length === 0) {
+if (packagePresent && progress.issue_source_ready_for_package === true && progress.blockers.length === 0) {
   const exported = await exportEditorialResearch({ repoRoot, workspace, output: path.join(current.workspace, 'release-research.json') });
   try {
     packageCheck = JSON.parse(execFileSync(process.execPath, ['scripts/editorial-check.mjs', '--date', date, '--private-evidence', exported.path], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }));

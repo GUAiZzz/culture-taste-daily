@@ -12,6 +12,7 @@ import { editorialBlockers } from './lib/editorial-policy.mjs';
 import { validateEditorialBinding } from './lib/editorial-binding.mjs';
 import { externalWorkspacePath, withEditorialWorkspaceLock } from './lib/editorial-workspace.mjs';
 import { loadResumeEvidence, displayReleaseReceipt, saveReleaseReceipt } from './lib/preview-handoff.mjs';
+import { collectIssueReleaseUrls } from './lib/site-health.mjs';
 
 const { values } = parseArgs({ options: {
   evidence: { type: 'string' }, 'private-evidence': { type: 'string' }, execute: { type: 'boolean' },
@@ -86,8 +87,7 @@ try {
   }
   const radar = await readJson(`src/issues/${date}/daily-radar.public.json`);
   await assertPublicTree('dist');
-  const sources = [...new Set([...manifest.stories.flatMap(s => s.sources.map(x => x.url)), ...radar.items.filter(i => !i.included_story_id).map(i => i.official_url)])];
-  const media = [...new Set([...manifest.stories.map(s => s.media?.external_image_url), ...radar.items.flatMap(i => [i.media?.url, i.media?.poster_url])].filter(Boolean))];
+  const publicUrls = await collectIssueReleaseUrls({ repoRoot: identity.root, issueDate: date, manifest, radar });
   const dependency = await readJson('dependencies/harrytone.json');
   const runtime = {
     repository: meta.full_name, base_ref: PREVIEW_BASE, branch: identity.branch,
@@ -100,7 +100,7 @@ try {
     deterministic: first.artifact_digest === second.artifact_digest && reportBefore.artifact_digest === second.artifact_digest,
     privacy_scan: 'PASS', ci: ci.conclusion, push_permission: meta.permissions?.push === true,
     package_complete: Boolean(issue && radar.items?.length >= 10 && radar.items?.length <= 20),
-    source_urls: sources, media_urls: media,
+    ...publicUrls,
     formal_story_count: manifest.stories.length,
     editorial_valid: !editorialChecks.length,
     editorial_blockers: editorialChecks,

@@ -19,6 +19,7 @@ import { requestOriginUrl, externalPreviewConsoleOrigin } from "./preview-networ
 import { collectPreviewImageFacts, declaredPreviewMedia, previewImagesReadable } from "./preview-fallback.mjs";
 import { settleVisiblePreviewFallbacks } from "./preview-scroll.mjs";
 import { createOfflineQaContext } from "./offline-qa.mjs";
+import { readingSystemInteractions } from "./reading-qa.mjs";
 
 const CHECK_IDS = [
   "manifest_schema",
@@ -40,6 +41,7 @@ const CHECK_IDS = [
   "reduced_motion_render",
   "headline_layout",
   "publication_shell_render",
+  "reading_system_contract",
 ];
 
 export const REQUIRED_TECHNICAL_CHECKS = Object.freeze([...CHECK_IDS]);
@@ -147,7 +149,7 @@ export async function runStaticChecks({ repoRoot, distDir, issueId }) {
     ? manifest.stories.filter((story) => {
         const section = storySections.find((candidate) => candidate.includes(roomEdition ? `id="story-${story.id}"` : `data-story="${story.id}"`)) ?? "";
         const kind = story.media?.kind ?? "original_illustration";
-        return !new RegExp(`<figure class="${roomEdition ? "photo" : "story-figure"}"[^>]*data-media-kind="${kind}"[\\s\\S]*?<img\\b[^>]*\\balt="[^"]+"[\\s\\S]*?<figcaption>`).test(section);
+        return !new RegExp(`<figure\\b(?=[^>]*\\bclass="[^"]*\\b${roomEdition ? "photo" : "story-figure"}\\b[^"]*")(?=[^>]*data-media-kind="${kind}")[\\s\\S]*?<img\\b[^>]*\\balt="[^"]+"[\\s\\S]*?<figcaption\\b[^>]*>`).test(section);
       }).map((story) => story.id)
     : [];
   checks.push(result("story_visuals", visualFailures.length === 0, {
@@ -230,8 +232,34 @@ export async function runStaticChecks({ repoRoot, distDir, issueId }) {
 
   const images = htmlTags(issueHtml, ["img"]);
   const missingAlt = images.filter((image) => image.attributes.alt === undefined).length;
-  const a11yOk = /class="[^"]*\bskip-link\b[^"]*"/i.test(issueHtml) && /:focus-visible/.test(issueHtml) && missingAlt === 0;
-  checks.push(result("accessibility_structure", a11yOk, { skip_link: /class="[^"]*\bskip-link\b[^"]*"/i.test(issueHtml), focus_style: /:focus-visible/.test(issueHtml), missing_alt: missingAlt }));
+  const focusSources = [issueHtml];
+  for (const link of htmlTags(issueHtml, ['link']).filter(link => link.attributes.rel === 'stylesheet')) {
+    const target = targetForLink(distDir, issueHtmlPath, link.attributes.href || '');
+    if (target) {
+      try { focusSources.push(await readFile(target, 'utf8')); }
+      catch { /* Missing local stylesheets already fail the asset check above. */ }
+    }
+  }
+  const focusStyle = focusSources.some(css => /:focus-visible/.test(css));
+  const a11yOk = /class="[^"]*\bskip-link\b[^"]*"/i.test(issueHtml) && focusStyle && missingAlt === 0;
+  checks.push(result("accessibility_structure", a11yOk, { skip_link: /class="[^"]*\bskip-link\b[^"]*"/i.test(issueHtml), focus_style: focusStyle, missing_alt: missingAlt }));
+
+  const readingEdition = /data-reading-system="soft-v1"/.test(issueHtml);
+  const readingMarkup = !readingEdition || (
+    issueHtml.includes('id="reading-settings"')
+    && issueHtml.includes('data-open-settings')
+    && issueHtml.includes('data-reader-font')
+    && issueHtml.includes('data-reader-font-value')
+    && issueHtml.includes('data-language="zh"')
+    && issueHtml.includes('data-language="en"')
+    && ['field','coral','analog'].every(style => issueHtml.includes(`data-pref-style="${style}"`))
+    && !/id="reset-preferences"|<fieldset\b/.test(issueHtml)
+  );
+  checks.push(result("reading_system_contract", readingMarkup, {
+    applicable: readingEdition,
+    markup: readingMarkup,
+    behavior: readingEdition ? "Browser verification pending" : "Isolated legacy fixture; no new reading-system shell",
+  }));
 
   return { checks, buildReport, issueReport, manifest, currentArtifactDigest };
 }
@@ -370,7 +398,9 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
         line_height_ratio: headlineLineHeight / headlineFontSize,
         horizontal_overflow: Math.max(0, headline.scrollWidth - headline.clientWidth),
       } : null,
-      archive_issue_links: document.querySelectorAll(".week-date-ledger a").length,
+      archive_issue_links: document.querySelector('[data-reading-system="soft-v1"]')
+        ? document.querySelectorAll('[data-catalog="issues"] .issue-card a.issue-open').length
+        : document.querySelectorAll(".week-date-ledger a").length,
       archive_hidden_panels: [...document.querySelectorAll("[data-week-panel]")].filter((panel) => panel.hidden).length,
       archive_week_toggles: document.querySelectorAll("[data-week-toggle]").length,
     };
@@ -460,7 +490,16 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
       } catch (error) { if (error.code !== 'ENOENT') throw error; }
     }
     const corrections = await readJson(path.join(repoRoot, 'core/rooms/media-corrections.json'));
-    const previewOrigins = declaredPreviewMedia(manifests, radars, corrections);
+    let readingMedia = {};
+    try { readingMedia = await readJson(path.join(repoRoot, 'core/rooms/reading-media.json')); }
+    catch (error) { if (error.code !== 'ENOENT') throw error; }
+    for (const manifest of manifests) {
+      try {
+        const additional = await readJson(path.join(repoRoot, 'src/issues', manifest.issue_id, 'reading-media.public.json'));
+        for (const [key, media] of Object.entries(additional)) readingMedia[key.includes('/') ? key : `${manifest.issue_id}/${key}`] = media;
+      } catch (error) { if (error.code !== 'ENOENT') throw error; }
+    }
+    const previewOrigins = declaredPreviewMedia(manifests, radars, corrections, readingMedia);
     const server = await startStaticServer(distDir);
     const browser = await launchChromium();
     try {
@@ -562,11 +601,20 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
         home_mobile: captures["home-mobile-390x844"].facts,
         archive: captures["archive-desktop-1440x900"].facts,
       }));
+      const interaction = await readingSystemInteractions({ browser, origin: server.origin, issueId, manifest: staticResult.manifest });
+      const readingCheck = checks.find(check => check.id === 'reading_system_contract');
+      readingCheck.status = readingCheck.status === 'PASS' && interaction.ok ? 'PASS' : 'FAIL';
+      readingCheck.detail = { ...readingCheck.detail, browser: interaction };
     } finally {
       await browser.close();
       await server.close();
     }
   } else {
+    const readingCheck = checks.find(check => check.id === 'reading_system_contract');
+    if (readingCheck.detail.applicable) {
+      readingCheck.status = 'FAIL';
+      readingCheck.detail.browser = capture ? 'Not run because static QA failed' : 'Not requested';
+    }
     for (const id of ["no_js_reading", "keyboard_focus", "desktop_render", "mobile_render", "reduced_motion_render", "headline_layout", "publication_shell_render"]) {
       checks.push(result(id, false, capture ? "render checks skipped because static QA failed" : "render checks not requested"));
     }

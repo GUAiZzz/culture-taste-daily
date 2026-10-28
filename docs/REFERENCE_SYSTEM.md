@@ -1,6 +1,6 @@
 # Culture & Taste Daily — Reference System
 
-Status: documentation baseline for reference selection and future V3 input
+Status: reference evidence rules, interpreted under owner-approved A3 and the shared Reading System
 
 Research basis: `docs/REFERENCE_AUDIT_2026-08-23.md`
 
@@ -10,7 +10,7 @@ Production authority: none; this document does not replace Library V2 or authori
 
 Use external references to improve judgment without turning Culture & Taste Daily into a template-driven design gallery.
 
-The publication should feel like Harry's own Vogue: a recognizable editorial standard capable of producing different issue worlds. It should not feel like six websites averaged together, a Behance case study, or a technical demo proving how much the system can build.
+The publication should feel like Harry's own Vogue: a recognizable editorial standard with distinct daily selections inside the approved shared reading structure. It should not feel like six websites averaged together, a Behance case study, or a technical demo proving how much the system can build.
 
 ## Priority
 
@@ -37,7 +37,11 @@ A reference never overrides a higher layer.
 | Inspiration library: composition | SiteInspire | Typography, grid, image relationships, subject/style precedents | Art direction from a screenshot |
 | Inspiration library: freshness | Recent | Current cross-category discovery | Quality, relevance, or authority from recency |
 
-## Daily selection protocol
+## Current operating scope (A3, 2026-10-28)
+
+Routine daily publication reuses the approved `READING_SYSTEM.md` structure. Reference research supports a real editorial/image question or separately reviewed UI maintenance; it is not a daily requirement to choose another layout, background, type pairing, navigation or room. Preserve the evidence distinctions below when a reference is actually used. Legacy daily recheck/anti-repetition passages do not override A3's stable UI. A recorded approved-system version plus current editorial/image review must not be misreported as a new browsing session.
+
+## Reference selection protocol
 
 ### 1. Lock editorial material first
 
@@ -80,11 +84,11 @@ For a candidate that may enter the reference packet:
 The default operating model is hybrid:
 
 - keep reusable private case cards for previously verified work;
-- after today's editorial lock, reopen and verify at least one relevant detail page, live work, or case-study article for the current issue;
+- for a proposed shared design change or a newly accepted visual reference, reopen and verify its relevant detail page, live work, or case-study article; routine content uses the approved system record;
 - inspect no more than two new cases deeply by default; exceed that only when a material editorial problem remains unresolved, and record why;
 - a previously verified case card may support the rest of the packet, but it may not prove current behavior unless the relevant page was rechecked today.
 
-The required daily recheck is not a browsing quota. If no relevant case clears the evidence bar, use no visual reference and continue from the issue's own material.
+A maintenance/reference recheck is not a daily browsing quota. If no relevant case clears the evidence bar, use no visual reference and continue from the issue's own material.
 
 ### 4. Build a small reference packet
 
@@ -163,7 +167,7 @@ Case cards store URLs, access times, limits, and durable text notes. Do not plac
 
 After the reference packet is recorded, stop browsing and develop the issue from its own material. The first art-direction proposal must be explainable without pointing at a screenshot.
 
-## Seven-issue anti-repetition
+## Seven-issue editorial review and maintenance references
 
 Compare up to the previous seven valid issues using:
 
@@ -184,12 +188,12 @@ Repeating a teacher is not automatically repetition. Repeating the same mechanis
 
 Default rule:
 
-- if the proposed issue repeats three or more dominant mechanism dimensions from a recent issue, require a material editorial reason;
+- if a proposed shared UI redesign repeats three or more dominant mechanism dimensions without solving its stated problem, require a material editorial reason;
 - when repetition is justified, change at least two other meaningful dimensions;
 - if the reason is “it worked last time,” reject the direction;
 - if novelty weakens the issue, keep the stronger form and record the exception.
 
-This threshold is provisional and must be tested in dry runs.
+Under A3, these mechanism-change thresholds apply only to a proposed shared UI change. Repeating the approved interface in routine daily issues is intentional and does not fail review. Current event/image reuse and editorial quality still require review.
 
 ## Pre-output review gates
 
@@ -210,7 +214,7 @@ Failure behavior: correct, narrow, omit, or return BLOCKED. Do not design around
 
 - The issue's visual action can be explained from today's material.
 - Homepage, gallery, ranking, category, and tag pages were used only for discovery, not as sole evidence for an accepted reference.
-- At least one relevant candidate detail page, live work, or case-study article was reopened and verified after today's editorial lock, even if the resulting decision is to use no visual reference.
+- A newly accepted reference or shared-design proposal has a relevant inspected detail/live/case source. Routine content reuse records A3 and the shared renderer version without claiming a new design investigation.
 - Every accepted reference has a detail-level URL or an explicit access limit, and its case card records the actual access time and status.
 - Discovery metadata, directly observed behavior, author-stated rationale, and editorial inference remain distinguishable.
 - Every accepted visual reference completes the chain from the original project problem to today's issue-specific expression and prohibited copied surface.
@@ -276,4 +280,4 @@ The `reference_case_card` contract in this document describes private generation
 
 ## V3 boundary
 
-This system is input to a future V3 reconciliation. It does not modify `docs/PRODUCTION_CONTRACT_V2.md`, does not authorize a deploy workflow, and does not re-enable daily automation.
+This reference evidence record is subordinate to canonical V3, its amendments and the current approved Reading System. It grants no independent deployment or Production-automation authority and never overrides the separate Preview authorization.

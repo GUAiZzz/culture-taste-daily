@@ -1,124 +1,42 @@
-# Culture & Taste Daily mobile editorial protocol
+# Culture & Taste Daily mobile reading protocol
 
-This document is the single rule source for mobile behavior in this
-repository. It extends, and never overrides, Production Contract V3,
-`ARCHITECTURE.md`, `DATA_BOUNDARIES.md`, or the repository hard stops.
+Current authority: [READING_SYSTEM.md](READING_SYSTEM.md) and owner-approved [A3](PRODUCTION_CONTRACT_V3_A3.md), 2026-10-28. V3/A1/A2 truth, rights, privacy and historical-original safeguards remain. This replaces separate complex channel interfaces and daily redesign; it retains all three selectable style identities inside the same shared structure.
 
 ## Invariants
 
-- Preserve locked editorial text, story order, dates, source links, issue
-  identity, and public manifests.
-- Preserve the three reader themes: `field`, `coral`, and `analog`.
-- Preserve asymmetric editorial composition, long-form pacing, and deliberate
-  visual tension. Mobile is a vertical magazine, not a generic card feed.
-- Keep every issue fully readable without JavaScript. Enhancements may change
-  atmosphere and navigation convenience, never content availability.
-- Shared core owns access, safe layout, theme state, and motion lifecycle.
-  Each issue package owns color, type scale, geometry, collage, and art
-  direction.
+- Preserve locked text, article order, dates, captions, source links and manifests. Supplied historical originals retain their exact hashes.
+- One shared soft publication/reader system renders every new daily package. Daily work changes editorial data and image sequence, not controls or shared CSS/JavaScript.
+- Reading styles are independently `field`, `coral`, `analog`; reading appearances are `light`, `dark`, `warm`. Old `?theme=field/coral/analog` select style, and new `?style=` is explicit. All nine combinations remain functional and visibly distinguish their styles. Preferences persist across home, archive and articles. Field/light/solid/19px/Chinese/haptics-off are the new-entry defaults.
+- Full Chinese, available complete English, source indexes and navigation are served HTML, readable without JavaScript. No fetch-only text or modal-only essential content.
 
-## Responsive baseline
+## Layout, touch and scrolling
 
-- Mobile layout begins at `800px` (`50rem`). Compact-phone corrections begin
-  at `479px` (`29.9375rem`). These are the only shared mobile breakpoints.
-- Use a `20px` content gutter on mobile and `16px` on compact phones, extended
-  by `env(safe-area-inset-*)` where needed.
-- Every HTML shell declares `viewport-fit=cover` before safe-area insets are
-  used.
-- Core reading text must remain at least `15px`. Necessary metadata must remain
-  at least `11px`; `9px` is reserved for non-interactive decoration.
-- Buttons, theme choices, filter controls, navigation targets, and close
-  controls need a minimum `44x44px` hit area. The visible mark may be smaller.
-- Touch controls need visible focus, selected, pressed, and touch feedback.
-- Horizontal rails are allowed only when intentional. They must expose a visual
-  continuation cue, keep the selected item visible, and support arrow keys,
-  Home, and End. The document itself must not overflow horizontally.
-- Use `svh` for stable minimum stages and `dvh` for live viewport caps. Avoid
-  bare `100vh` on immersive or sticky mobile surfaces.
-- Mobile landscape keeps the complete document while compressing headline and
-  stage geometry enough to protect navigation and progress controls.
+- Use safe-area-aware gutters: normally 20px on mobile and 16px on compact phones. Declare `viewport-fit=cover`; stable stages use svh and bounded overlays use dvh.
+- There is no page-level horizontal overflow. Intentional category/contents rails scroll internally, show continuation, keep selection visible and support keyboard arrows/Home/End.
+- Category controls form one horizontal internally scrolling bar. Issue-directory order remains editorial: two columns on wide screens, one on narrow screens; article readers keep a static native issue-directory disclosure. The floating `本期文章` shortcut fades in over 180ms after passing the original category-controls block, and fades out when returning above it. Hidden state has aria-hidden=true, tabindex=-1 and pointer-events:none; reduced motion removes the fade. It does not hide/reveal based on scroll direction.
+- Controls and source destinations have at least 44×44px hit regions, visible 3px accent focus, selected/open state and restrained press feedback. Motion/transforms stop in reduced motion. No daily scroll gimmick is required.
+- Reader top bar has only a named back-arrow and the shared 24×24 adjustment icon. Language lives inside `阅读设置`; sources live at the article end.
 
-## Page recipes
+## Settings and typography
 
-### Publication home
+Settings order: `正文语言` (中文/EN), `正文字号`, `阅读风格` (场域/印刷/信号), `阅读外观` (明亮/夜读/暖灰), `工具外观` (实色/轻玻璃), `触感反馈`. Use equal-width shared 44px pills, 12px muted group titles and 18–20px group gaps. No fieldset borders, reset button, visible status explanation or switch hint text.
 
-Keep the brand, oversized latest-issue title, theme picker, daily index, and
-asymmetric rhythm. At 800px and below, make the first reading action continuous
-with the title and summary. Theme buttons remain tactile editorial panels, not
-small radio dots. Daily cards may reduce columns only where readability needs
-it; retain deliberate offsets or alternating geometry above compact width.
-The issue field is bounded to the latest published ISO week so the mobile home
-does not grow indefinitely. The final Daily Coda reads its slogan and locked
-background, foreground, and accent colors from that issue's art direction;
-reader themes may change texture but never replace the locked coda palette.
-On mobile, the current-week field continues the active theme-index color family
-and uses a folio dossier rather than stacked full-width posters: the latest date
-keeps its complete 4:5 cover beside its metadata and title, earlier dates in the
-same week become smaller dossier rows, and the archive exit remains a compact
-rule-led link. Desktop keeps its wider asymmetric issue composition.
-The visible Daily Coda contains only the dated marker and one issue-locked
-quotation. English is preferred and Chinese is allowed when editorially
-deliberate. The quotation must come from the repository's original editorial
-pool and is never randomized at runtime.
+The live Npx output itself measures N CSSpx immediately on input, line-height 1.2 and minimum 32px area; a full-width accent slider sits below the left label/right output row. Ordinary paragraphs in both languages, including the first paragraph, compute to the selected Npx; independent titles, captions and source metadata keep their own type hierarchy. Default 19px; verify 17/19/25px in actual browsers.
 
-### Archive and index rails
+Native settings and image dialogs close with Escape, close button or deliberate backdrop click, lock background scroll and return focus. Settings initially focus the selected theme. Language/size changes preserve the current article paragraph when the dialog closes. Glass is limited to tools, solid by default; unsupported devices keep working visual feedback and no vibration guarantee.
 
-Keep filters horizontally scrollable on narrow screens. Announce current state
-with native button semantics and `aria-pressed`, provide keyboard traversal,
-and scroll the active control into view. No filter may be required to access
-content when JavaScript is absent.
+## Images, sources and navigation
 
-The publication Archive separates the latest published ISO week from earlier
-weeks. Historical weeks use inline dossier accordions with one panel open at a
-time, stable `week-YYYY-Www` anchors, native buttons, accurate expanded state,
-and complete date ledgers in the served HTML. Historical-original provenance
-is a separate label and never determines temporal Current/Historical status.
+- Successful hero/inline images use natural width 100% / height auto. Complete work remains visible, with 18px corners on the image. Paired images may have different heights; no imposed crop or large contain frame. A native viewer fits the actual image to the viewport.
+- Place useful verified artwork/process visuals within the related text. Do not repeat the hero as filler. Captions are concise, and source/credit remain visible; longer rights/provenance notes use native disclosure.
+- Failed media preserve readable text, an explicitly identified fallback and exact official-origin access. Health/rights evidence is independent; fallback success cannot turn a remote failure into PASS.
+- One complete article source index stays at the end; native disclosure never removes its static links. Previous/next boundaries have true disabled semantics.
+- Return to home preserves legitimate category context and saved position. Missing/invalid category means all; never infer a fresh entry from stale session state. Cross-article links retain originating context and preferences.
 
-### Long issue
+## Daily quotation and archive
 
-Keep the issue header, contents rail, full article, feature compositions,
-sources, and reading progress. Sticky and transform effects must use dynamic
-viewport-aware geometry, bounded transforms, one animation-frame scheduler,
-passive scroll listeners, and lifecycle cleanup. Pause continuous atmosphere
-when the document is hidden. Reduced-motion must preserve every section in the
-same order while disabling persistent noise and transform-dependent reading.
+The shared seven-item sourced quotation pool rotates daily by Shanghai date and repeats weekly; it includes original, Chinese translation, attribution and source. It does not claim daily fresh quote research. Homepage follows actual Shanghai date; dated archive/issue representations remain stable. It is separate from preserved legacy editorial coda metadata. Historical originals are not restyled or reconstructed by daily work.
 
-## Media and performance
+## Acceptance
 
-- The first meaningful visual may load eagerly. Later raster media should use
-  responsive candidates, correct `sizes`, lazy loading, and async decoding.
-- Preserve intended crop, color treatment, and image meaning. Never substitute
-  remote display-critical assets.
-- Consolidate scroll reads and writes in one `requestAnimationFrame` update.
-  Do not leave duplicate listeners, observers, or animation loops after page
-  lifecycle transitions.
-
-## Deterministic acceptance
-
-Validate 320x568, 390x844, 430x932, 768x1024, and 844x390, plus the existing
-desktop and no-JavaScript cases. Acceptance requires:
-
-- no document-level horizontal overflow;
-- no clipped Chinese or English headings;
-- readable body and metadata sizes with safe-area-aware gutters;
-- 44px functional controls and visible keyboard focus;
-- persistent theme selection, operable filters, and stable navigation;
-- complete reduced-motion and no-JavaScript reading;
-- no console errors, broken display assets, or duplicated motion loops.
-
-Technical evidence remains local and non-production. Human visual review and
-all production gates remain separate.
-
-## External inspiration boundary
-
-The project does not install or copy either source.
-
-- From `isjiamu/gzh-design-skill`, absorb only content completeness, component
-  recipes, one rule source, and deterministic acceptance. Reject AGPL files,
-  WeChat inline HTML, its themes, and platform-specific constraints.
-- From `MengTo/skills`, absorb only design-first constraints, editorial-tech
-  thinking, scroll-trigger discipline, and motion-performance auditing. Reject
-  WebGL, generic SaaS composition, extra visual styles, and unrelated tooling.
-
-These references may improve a weakness in the current system; they do not
-authorize a style replacement, content rewrite, dependency, or downgrade.
+Test 320×568, 390×844, 430×932, 768×1024, 844×390 and desktop 1440×900. Include keyboard, no-JavaScript, reduced motion, all three styles × three appearances, solid/glass fallback, unavailable media, actual live typography, dialog focus/scroll locks, floating-shortcut threshold/hidden states and return restoration. A screenshot alone is not interaction evidence. `reading_system_contract` is required machine evidence; full build/QA/tests/health/CI and actual Preview live verification remain separately required.
