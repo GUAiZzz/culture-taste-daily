@@ -29,14 +29,14 @@ test('growing inventory preserves latest issue, article order, locks and determi
 
 for(const [query,style,theme] of [['style=field&theme=light','field','light'],['style=coral&theme=warm','coral','warm'],['style=analog&theme=dark','analog','dark'],['theme=field','field',null],['theme=coral','coral',null],['theme=analog','analog',null]])test(`${query} opens the same reading system and preserves its visual style across routes`,async()=>{
  const c=await context(),p=await c.newPage(),errors=[];p.on('pageerror',error=>errors.push(error.message));
- await p.goto(base()+'/?'+query);assert.equal(await p.locator('html').getAttribute('data-style'),style);if(theme)assert.equal(await p.locator('html').getAttribute('data-theme'),theme);
- await p.locator('.category-board .story-open').first().click();assert.match(p.url(),/\/culture-taste-daily\/issues\//);assert.equal(await p.locator('html').getAttribute('data-style'),style);if(theme)assert.equal(await p.locator('html').getAttribute('data-theme'),theme);
+ await p.goto(base()+'/?'+query);await p.waitForSelector('html.reading-ready');assert.equal(await p.locator('html').getAttribute('data-style'),style);if(theme)assert.equal(await p.locator('html').getAttribute('data-theme'),theme);
+ await p.locator('.category-board .story-open').first().click();await p.waitForURL(/\/culture-taste-daily\/issues\//);await p.waitForSelector('html.reading-ready');assert.match(p.url(),/\/culture-taste-daily\/issues\//);assert.equal(await p.locator('html').getAttribute('data-style'),style);if(theme)assert.equal(await p.locator('html').getAttribute('data-theme'),theme);
  assert.ok((await p.locator('#article-body').innerText()).length>100);
  assert.equal(await p.locator('.reader-toolbar [data-language]').count(),0);assert.equal(await p.locator('.reader-toolbar a[href*="#sources"]').count(),0);
  await p.locator('[data-open-settings]').click();assert.ok(await p.locator('#reading-settings').isVisible());assert.equal(await p.locator('#reading-settings [data-language]').count(),2);
  assert.equal(await p.locator('#reading-settings fieldset,#reset-preferences').count(),0);await p.keyboard.press('Escape');
- await p.locator('a[data-reading-return]').first().click();await p.waitForSelector('html.reading-ready');assert.equal(new URL(p.url()).pathname,'/culture-taste-daily/');assert.equal(await p.locator('html').getAttribute('data-style'),style);if(theme)assert.equal(await p.locator('html').getAttribute('data-theme'),theme);
- await p.getByRole('navigation',{name:'主要导航'}).getByRole('link',{name:'往期档案'}).click();await p.waitForSelector('html.reading-ready');assert.equal(await p.locator('html').getAttribute('data-style'),style);if(theme)assert.equal(await p.locator('html').getAttribute('data-theme'),theme);
+ await p.locator('a[data-reading-return]').first().click();await p.waitForURL(url=>url.pathname==='/culture-taste-daily/');await p.waitForSelector('html.reading-ready');assert.equal(new URL(p.url()).pathname,'/culture-taste-daily/');assert.equal(await p.locator('html').getAttribute('data-style'),style);if(theme)assert.equal(await p.locator('html').getAttribute('data-theme'),theme);
+ await p.getByRole('navigation',{name:'主要导航'}).getByRole('link',{name:'往期档案'}).click();await p.waitForURL(url=>url.pathname==='/culture-taste-daily/archive/');await p.waitForSelector('html.reading-ready');assert.equal(await p.locator('html').getAttribute('data-style'),style);if(theme)assert.equal(await p.locator('html').getAttribute('data-theme'),theme);
  assert.deepEqual(errors,[]);await c.close();
 });
 
@@ -122,4 +122,16 @@ test('unavailable-image metadata stays horizontal in compact two-column cards',a
   assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth-innerWidth),0);
  }
  await c.close();
+});
+
+test('saved style is applied before the body parser reaches its first content',async()=>{
+ for(const [query,style,theme]of[['style=analog&theme=dark','analog','dark'],['style=coral&theme=warm','coral','warm'],['theme=analog','analog','dark']]){
+  const c=await context(),p=await c.newPage();
+  try{
+   // A test-only parser-time probe distinguishes head bootstrap from deferred setup.
+   await p.route(base()+'/?*',async route=>{const response=await route.fetch({maxRedirects:0});const html=await response.text();await route.fulfill({response,body:html.replace(/(<body[^>]*>)/,'$1<script>document.documentElement.dataset.styleAtBody=document.documentElement.dataset.style;document.documentElement.dataset.themeAtBody=document.documentElement.dataset.theme;</script>')});});
+   await p.goto(base()+'/?'+query);await p.waitForSelector('html.reading-ready');
+   assert.equal(await p.locator('html').getAttribute('data-style-at-body'),style);assert.equal(await p.locator('html').getAttribute('data-theme-at-body'),theme);
+  }finally{await c.close();}
+ }
 });
