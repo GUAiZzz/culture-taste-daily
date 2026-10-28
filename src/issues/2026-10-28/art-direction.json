@@ -1,0 +1,17 @@
+{
+  "dominant_mood": "封面以深紫与暖金组成一条倾斜的环，正文沿用网站可切换的阅读主题。",
+  "background_logic": "环形只承担跨主题的视觉节奏，不把服装、音乐和展览假装成同一件事。与近期的透明叠片、地图、折页和网格构图区分。",
+  "palette_logic": "暖纸 #F4ECE1 与深紫 #2E203D 保证长文对比，琥珀 #E8B04B 用于环形与少量强调，暗赭 #A34338 用于标记。",
+  "type_scale_logic": "中文标题大字并自然换行，正文 18px；英文标题与来源采用较小字号，避免挤压长文。",
+  "image_behavior": "每篇使用对应的一手来源图片与来源链接；外链不可用时显示原创非纪实图形和明确回链。图片权利依各自证据记录。",
+  "page_density_and_tempo": "封面缓慢进入，十篇按单列长文排列，各篇独立分隔，图片与来源一起出现。",
+  "core_visual_action": "一个倾斜的圆环在封面建立节奏；故事间以短编号过渡。",
+  "cover_composition": "深紫色拱形里放一条倾斜的琥珀环，纸色留白容纳标题和日期，不用事件照片拼贴。",
+  "desktop_interaction_mechanic": "目录和来源链接使用原生交互，外链图不可用时保留明确回链；阅读不依赖脚本。",
+  "behance_viewing_arc": "从不同领域的新品和项目进入，再回到它们已有的背景、未完成的使用和未来观察点。",
+  "mobile_translation": "封面改为纵向，图片完整适配窄屏，长标题与来源自然折行。",
+  "mobbin_usability_constraint": "目录触点不小于 44px；链接可见焦点，长网址换行，移动端无横向滚动。",
+  "quiet_ending": "末尾用深紫底与暖金细节，留下一句关于下一步的短句。",
+  "closing_quotation": {"id":"ct-en-003","language":"en","text":"A deadline earns meaning when it makes the next action visible.","credit":"Culture & Taste Editorial"},
+  "closing_palette": {"background":"#2E203D","foreground":"#F1E8D6","accent":"#E8B04B","rationale":"深紫承载结尾阅读，浅暖白用于正文，琥珀用于强调；与最近七期的浅纸、蓝色与赭色组合区分。"}
+}

@@ -1,0 +1,17 @@
+{
+  "dominant_mood": "乳白纸面上的深靛、赭红和薄荷绿，像四张被不同机构重新排版的文化地图：冷静、开放，允许声音彼此不重合",
+  "background_logic": "页面把日历格、工作台、收音机刻度和书架柜格拆成四种边缘符号，不把它们合成单一叙事；最近七期的轨道、折页、门框、剪影、材料样片与 afterlife rail 不再复用",
+  "palette_logic": "paper #F3F0E8, ink #182A3A, rust #B84A35, mint #C8DED2, lilac #D9D0E8；纸面承载长文，深靛承载正文，赭红标记判断，薄荷绿和淡紫只负责分隔四种关系",
+  "type_scale_logic": "中文标题以短而硬的判断为主，英文只承担 title、deck 与 abstract；正文 18px，来源区保持较小但可读，长标题自然断行，不为构图压缩事实",
+  "image_behavior": "四张一手官方媒体以 Preview 外链显示；本地 SVG 是原创非纪实回退图，外图失败时仍保留来源链接、图片 credit 和事实说明",
+  "page_density_and_tempo": "先用一张大封面给出四种关系，再依次进入城市日历、私人档案、跨国平台和知识柜格；段落之间留出足够空白，让来源与判断不混成一团",
+  "core_visual_action": "四个独立的符号系统只在页面边缘相遇：日历线不进入书架，收音机刻度不替代机构判断，柜格只承载对象，不制造一条虚构的共同主线",
+  "cover_composition": "乳白底上四个不等宽的彩色模块像被临时贴在地图上的工作标签，深靛线从左侧日历格出发，在右侧书架前停下；标题占据左上，右下保留空白",
+  "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 只补充“怎么读这一期”的注记，正文和来源不依赖 JavaScript",
+  "behance_viewing_arc": "先看城市如何安排文化，再看收藏怎样成为方法，随后听见多个区域的不同频率，最后把知识放回它的愿望与秩序里",
+  "mobile_translation": "390px 下四个封面模块改为纵向标签，深靛线贴近左边缘，图片与来源自然单列；外链长文本允许断行，装饰不抢正文",
+  "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点清晰，来源链接可见且可复制，移动端无横向滚动，外图失败不隐藏证据路径",
+  "quiet_ending": "退出处只留一条深靛线和一个未填满的格子，不给箭头；读者可以把今天看到的关系带回自己的城市、收藏或书架",
+  "closing_quotation": {"id": "ct-en-008", "language": "en", "text": "An entrance is already an editorial decision.", "credit": "Culture & Taste Editorial"},
+  "closing_palette": {"background": "#F3F0E8", "foreground": "#182A3A", "accent": "#B84A35", "rationale": "乳白纸面保持长文的安静，深靛提供稳定对比，赭红只标记判断与转折，薄荷绿和淡紫让四种文化安排各自保留声部。"}
+}

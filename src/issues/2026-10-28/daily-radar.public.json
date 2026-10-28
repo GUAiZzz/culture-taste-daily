@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-28",
+  "coverage": {
+    "verified_at": "2026-10-28T17:58:19+08:00",
+    "regional_lanes_checked": [
+      "mainland_china_plus_hong_kong_or_taiwan",
+      "japan_or_korea",
+      "continental_europe_or_united_kingdom",
+      "united_states_or_canada",
+      "rotating_global_lane"
+    ],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "culture_retail_creative",
+    "focus_subjects_checked": [
+      "AWGE",
+      "Blonded",
+      "Boardroom",
+      "Coachella",
+      "Dover Street Market Los Angeles",
+      "Hidden.NY",
+      "Homer",
+      "Infinite Archives",
+      "JJJJound",
+      "KAWS",
+      "Rolling Loud",
+      "SLAM Kicks",
+      "StockX",
+      "UpscaleHype",
+      "Virgil Abloh Archive"
+    ],
+    "standing_beats_checked": [
+      "stussy-release-radar",
+      "luxury-runway-calendar",
+      "exhibition-and-cultural-programme-radar",
+      "small-breakout-object-radar"
+    ],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {
+      "id": "today-nact-shojo-manga-infinity-2026",
+      "category": "city",
+      "included_story_id": "nact-shojo-manga-infinity-2026"
+    },
+    {
+      "id": "today-undercover-valentin-workwear",
+      "category": "fashion",
+      "included_story_id": "undercover-valentin-workwear"
+    },
+    {
+      "id": "today-nike-outkast-georgia-2026",
+      "category": "fashion",
+      "included_story_id": "nike-outkast-georgia-2026"
+    },
+    {
+      "id": "today-noa-clean-noise-album-2026",
+      "category": "music",
+      "included_story_id": "noa-clean-noise-album-2026"
+    },
+    {
+      "id": "today-asics-michigan-amsi-lab-2026",
+      "category": "objects",
+      "included_story_id": "asics-michigan-amsi-lab-2026"
+    },
+    {
+      "id": "today-apple-designers-of-tomorrow-paris-2026",
+      "category": "objects",
+      "included_story_id": "apple-designers-of-tomorrow-paris-2026"
+    },
+    {
+      "id": "today-wales-bonner-adidas-fw26-archive",
+      "category": "fashion",
+      "included_story_id": "wales-bonner-adidas-fw26-archive"
+    },
+    {
+      "id": "today-auralee-tekla-wintering-2026",
+      "category": "fashion",
+      "included_story_id": "auralee-tekla-wintering-2026"
+    },
+    {
+      "id": "today-flaming-lips-teardrop-throbs-2026",
+      "category": "music",
+      "included_story_id": "flaming-lips-teardrop-throbs-2026"
+    },
+    {
+      "id": "today-miu-miu-holiday-2026-campaign",
+      "category": "city",
+      "included_story_id": "miu-miu-holiday-2026-campaign"
+    },
+    {
+      "id": "converse-vaquera-vx1-heel-2026",
+      "category": "fashion",
+      "title": "Converse × Vaquera：让滑板鞋踩上猫跟",
+      "deck": "VX-1 Heel 将档案中的 CS Pro-1 厚实滑板鞋轮廓与细猫跟结合；Nike SNKRS 列出 10 月 27 日发售。",
+      "publisher": "Nike SNKRS",
+      "official_url": "https://www.nike.com/launch/t/converse-vaquera-vx-1-heel-shoes",
+      "published_date": null,
+      "event_date": "2026-10-27",
+      "media": {
+        "kind": "image",
+        "url": "https://static.nike.com/a/images/w_1280,q_auto,f_auto/f9b5e3bc-1a7d-445d-a1e8-884676ddff72/converse-x-vaquera-vx-1-heel-shoes-a19134c-001-release-date.jpg",
+        "alt": "Converse 与 Vaquera 联名 VX-1 Heel 黑色鞋款侧面，厚实鞋面与细猫跟。",
+        "credit": "Nike SNKRS；摄影师未标明",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ]
+}

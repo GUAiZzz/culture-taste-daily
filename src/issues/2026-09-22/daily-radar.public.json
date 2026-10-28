@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-22",
+  "coverage": {
+    "verified_at": "2026-09-22T12:11:22+08:00",
+    "regional_lanes_checked": ["mainland_china_plus_hong_kong_or_taiwan","japan_or_korea","continental_europe_or_united_kingdom","united_states_or_canada","rotating_global_lane"],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "sport_outdoor_lifestyle",
+    "focus_subjects_checked": ["Alo","Arc'teryx","Nike","On","Salomon","ASICS SportStyle","New Balance","HOKA","Merrell 1TRL","Nike ACG","Blue Bottle Coffee"],
+    "standing_beats_checked": ["stussy-release-radar","luxury-runway-calendar","exhibition-and-cultural-programme-radar","small-breakout-object-radar"],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {"id":"shanghai-skills-fashion-entry","category":"fashion","included_story_id":"worldskills-shanghai-public-interface-2026"},
+    {"id":"chicago-bird-safe-architecture-style","category":"fashion","included_story_id":"flyway-city-glass-answers-2026"},
+    {"id":"shanghai-skills-opening-sound","category":"music","included_story_id":"worldskills-shanghai-public-interface-2026"},
+    {"id":"chicago-flyway-public-listening","category":"music","included_story_id":"flyway-city-glass-answers-2026"},
+    {"id":"shanghai-try-a-skill-tools","category":"objects","included_story_id":"worldskills-shanghai-public-interface-2026"},
+    {"id":"chicago-bird-safe-glass-detail","category":"objects","included_story_id":"flyway-city-glass-answers-2026"},
+    {"id":"shanghai-worldskills-city-route","category":"city","included_story_id":"worldskills-shanghai-public-interface-2026"},
+    {"id":"chicago-flyway-living-habitat","category":"city","included_story_id":"flyway-city-glass-answers-2026"},
+    {"id":"worldskills-museum-city-entry","category":"city","included_story_id":"worldskills-shanghai-public-interface-2026"},
+    {"id":"flyway-city-public-workshop","category":"city","included_story_id":"flyway-city-glass-answers-2026"}
+  ]
+}

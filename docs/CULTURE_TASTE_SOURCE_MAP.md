@@ -2,6 +2,8 @@
 
 Status: **proposed operating map for research and dry runs**
 
+Operational update (owner instruction, 2026-10-27): use `automation/source-library.json` for verified official entrypoints and explicit unresolved identities; `npm run sources:plan` provides the daily queue. Save actual source findings and read notes in the external private editorial workspace. See `docs/EDITORIAL_OPERATIONS.md`. For unpublished issues, the owner's exact-ten-article requirement overrides earlier no-quota statements about formal issue size. The requirement for ten substantive actually read sources per formal article remains independent of issue size.
+
 This document governs factual culture-and-taste research. It is separate from `docs/REFERENCE_SYSTEM.md`, which governs visual and interaction references after the editorial problem is locked.
 
 A publication may appear in both systems for different reasons. An article can support a factual story only when its claims are verified under this map. A project page can teach a design principle only when it passes the detail-evidence rules in the reference system. Neither use authorizes the other.
@@ -79,7 +81,24 @@ The routes below are seed entrances. Open the exact detail page used for each ca
 | adidas | <https://news.adidas.com/> | Product, Originals, partnership, release date, official assets | Separate newsroom fact from editorial interpretation |
 | On | <https://press.on-running.com/> | Product, collaboration, retail, innovation, official timing | Company claims and modeled impact require source and method checks |
 
-Extend this family dynamically to the official page of any relevant brand, store, label, designer, artist, or collaborator. Do not maintain a giant static brand list. A Hypebeast or social post about a release triggers an official-page check first.
+Extend this family dynamically to the official page of any relevant brand, store, label, designer, artist, or collaborator. The maintained radar at `automation/brand-radar.json` preserves the owner-selected subjects that must be revisited over time; it is a rotational discovery registry, not a whitelist and not a requirement to publish brand news. A Hypebeast or social post about a release triggers an official-page check first.
+
+#### 3.1.1 Maintained brand-and-culture radar
+
+The public registry separates a durable research obligation from any personal social-media account. It contains the established taste anchors and the newly requested streetwear, Japanese, Korean, Greater China, European, luxury, sport, outdoor, retail, and cultural subjects.
+
+Operating rules:
+
+- every candidate day performs a lightweight official-signal check across the complete active registry, then `npm run daily:preflight` chooses one deterministic cohort for a deeper detail-page review;
+- the daily public radar must attest the complete-registry quick scan, the exact deep-review cohort, the required standing beats, all five regional lanes, and the prior-two-issue deduplication window; the attestation gate applies from 2026-08-27;
+- a radar entry means “check for a relevant new official signal,” not “write about this subject”;
+- official brand, designer, retailer, event, or archive pages may establish only subject-originated facts under P0;
+- cultural impact, reception, breakout status, or trend claims still require independent or direct community evidence appropriate to the claim;
+- the scan must resolve and open the current official detail route rather than treating a saved name, social profile, homepage, or search snippet as evidence;
+- inspect verified public official Instagram posts/reels/captions as a regular discovery route where accessible; establish account identity through the official site's outbound link, save exact post permalinks and dates, and count only substantive captions actually read;
+- Instagram profiles and inaccessible posts never count as read information sources. Login and social following must not become runtime dependencies; substitute official news/journal/lookbook, collaborator/institution, regional original reporting or a public feed/archive when access fails;
+- missing, renamed, ambiguous, inactive, or compromised identities are recorded as access limits and held until reverified;
+- “Daisy” remains excluded from the active rotation until its exact brand and official source identity are supplied; the system must not guess which subject was intended.
 
 ### 3.2 Fashion calendars and runway authority
 
@@ -214,6 +233,8 @@ independent_verification:
 contradictions:
 commercial_label:
 image_origin:
+image_origin_relationship: first_party_official | independent_media | community
+official_image_verified_at:
 image_credit:
 image_usage_rights_basis:
 access_limits:
@@ -276,7 +297,8 @@ By default, `cover` and `major` require:
 - dates and official status checked on the day of lock;
 - commercial relationships recorded;
 - a stated cultural consequence and counter-reading;
-- usable image rights or an intentional text-led visual plan.
+- at least one exact, story-specific image verified from a first-party official source;
+- a separately recorded image usage-rights basis; unknown rights may support only the linked, production-blocked Preview treatment.
 
 If the independent source is not available, narrow the claim and downgrade to `signal` or `watch`.
 
@@ -369,10 +391,11 @@ source relationships and commercial labels recorded: PASS | FAIL
 fact / source rationale / editorial inference separated: PASS | FAIL
 sensitive or trend gates completed where applicable: PASS | FAIL
 image credit and usage-rights basis separated: PASS | FAIL
+first-party official image verified for every selected story: PASS | FAIL
 cover and major evidence gates passed: PASS | FAIL
 ```
 
-Any `FAIL` is corrected before drafting. Fewer stories are valid. Unsupported completeness is not.
+Any `FAIL` is corrected before drafting. Retain unfinished research privately; only an exact-ten complete formal issue can enter publication under the current owner rule. Unsupported completeness is never valid.
 
 ## 14. Source-health maintenance
 

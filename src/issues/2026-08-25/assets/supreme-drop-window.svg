@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Thursday drop window diagram</title>
+  <desc id="desc">An original diagram of a weekly drop moving from clock to cart to street.</desc>
+  <rect width="1200" height="720" fill="#0d123f"/>
+  <path d="M88 520H1112M88 180H1112" stroke="#b7c9ff" stroke-width="2" opacity=".65"/>
+  <circle cx="220" cy="350" r="150" fill="none" stroke="#d9ff43" stroke-width="12"/>
+  <path d="M220 350V260M220 350l70 48" stroke="#ff6b57" stroke-width="12" stroke-linecap="round"/>
+  <rect x="560" y="250" width="190" height="200" fill="#f5f0e6" transform="rotate(-8 655 350)"/>
+  <path d="M600 250v-35h110v35M600 330h110M600 390h110" fill="none" stroke="#101552" stroke-width="10"/>
+  <path d="M910 430c68-125 138-125 210 0" fill="none" stroke="#d9ff43" stroke-width="12"/>
+  <circle cx="1012" cy="420" r="26" fill="#ff6b57"/>
+  <text x="88" y="104" fill="#f5f0e6" font-family="monospace" font-size="30" font-weight="700" letter-spacing="5">THU / DROP WINDOW</text>
+  <text x="120" y="610" fill="#b7c9ff" font-family="monospace" font-size="24">TIME</text><text x="565" y="610" fill="#b7c9ff" font-family="monospace" font-size="24">PRODUCT</text><text x="920" y="610" fill="#b7c9ff" font-family="monospace" font-size="24">STREET</text>
+</svg>
+

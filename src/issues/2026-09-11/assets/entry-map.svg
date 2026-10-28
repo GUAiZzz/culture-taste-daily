@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Entry map fallback illustration</title>
+  <desc id="desc">An original non-documentary illustration of offset door frames and a route with room to pause.</desc>
+  <rect width="1200" height="700" fill="#f3e9dc"/>
+  <path d="M120 80h280v440H120zM466 170h340v440H466zM850 38h238v420H850z" fill="none" stroke="#123c3a" stroke-width="24"/>
+  <path d="M150 550h270v70M696 620h300" fill="none" stroke="#e45b3c" stroke-width="18"/>
+  <path d="M706 620h320" stroke="#b7cf73" stroke-width="11"/>
+  <path d="m1026 620-30-21v42z" fill="#b7cf73"/>
+  <path d="M404 82v104M820 520v84" stroke="#e45b3c" stroke-width="10"/>
+</svg>

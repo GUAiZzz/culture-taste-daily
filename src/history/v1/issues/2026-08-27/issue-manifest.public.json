@@ -1,0 +1,451 @@
+{
+  "art_direction": {
+    "background_logic": "米白纸面承载八个现场切片，深青色坐标线把它们串成一张可读的发布地图；不使用最近几期的 proof sheet、路线图、钟表或房间平面",
+    "behance_viewing_arc": "从全球发售的本地时钟开始，进入高山 campaign，再穿过 Vault、黑胶、水瓶、扑克牌，最后回到图书馆和便利店的工作现场",
+    "closing_palette": {
+      "accent": "#F2D14C",
+      "background": "#123B40",
+      "foreground": "#F4F0E4",
+      "rationale": "深青保留城市现场的厚度，纸白保证阅读，信号黄把第一次真实使用标成入口而不是终点。"
+    },
+    "core_visual_action": "把发布日期改写成坐标：每个故事都把一个抽象的上线动作钉到时间、地点或身体使用上",
+    "cover_composition": "深青底上八个橙色坐标点沿斜线分布，标题从中段切入；不重用最近三期的闭合线、路线钟表或房间块",
+    "desktop_interaction_mechanic": "黏附索引只显示故事坐标和章节锚点；正文、来源图、来源清单和故事路由不依赖 JavaScript",
+    "dominant_mood": "一块挂在城市墙面上的深青色现场地图：准确、亮、留有手写坐标的余温",
+    "image_behavior": "八张经核验的一手官方图片使用八种裁切比例并点击回到官方来源；源站若阻止热链，位置保留本期自有且明确标注为非纪实的对象图解",
+    "mobbin_usability_constraint": "所有来源图明确可点击、焦点可见、点击目标至少 44px；无 JavaScript 时全文、来源、图片说明与 Preview 权利提示完整",
+    "mobile_translation": "地图视觉压缩为纵向坐标条，八个故事全部单列展开；图片保留不同裁切但不制造横向滚动",
+    "page_density_and_tempo": "封面先给地图，Stüssy 与 LOEWE 快速进入，Prince 与 LA Priest 拉长声音的时间，两个对象把手感压低，香港与 FamilyMart 回到公共日常",
+    "palette_logic": "paper #F4F0E4, ink #111515, deep teal #123B40, green #3E9C91, safety orange #EF5B35, signal yellow #F2D14C",
+    "quiet_ending": "把现场还给使用者：发布不是终点，是对象第一次被使用的条件",
+    "type_scale_logic": "封面用宽体大字压住视觉重心，正文保持 18–20px，坐标标签用等宽小字；中文标题在桌面和 390px 移动端都保持短行"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": "9e2b11e33611e64f5b9baa16b0e125949c0c9482ded08e1453a895d1e2d4bce9"
+  },
+  "candidate_created_at": "2026-08-27T11:32:28+08:00",
+  "content_lock": {
+    "locked_at": "2026-08-27T11:46:08+08:00",
+    "sha256": "6fb951c28722f93e02d7104a4ae1b96a2a0e57a10bda1f00a8fe24f08597408f",
+    "status": "locked"
+  },
+  "content_locked_at": "2026-08-27T11:46:08+08:00",
+  "contract": {
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "repository": "GUAiZzz/culture-taste-daily"
+  },
+  "core_version": "v2",
+  "editorial_position": "发布不是按下一个按钮就结束；具体的地点、时间、身体姿势或使用规则，决定一个新东西怎样从页面进入生活。",
+  "evidence_refs": {
+    "editorial_visual": [],
+    "gate": [],
+    "technical": []
+  },
+  "harrytone": {
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-08-27T11:46:08+08:00",
+    "repository": "GUAiZzz/harry-tone"
+  },
+  "issue_id": "2026-08-27",
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "limitations": [
+    "Daily candidate and non-production Preview input only; this manifest cannot authorize deployment.",
+    "Canonical private GUAiZzz/harry-tone main was verified at pinned commit 13cd6b7046bd81be396810d2923f3a5dc818e93f from a fresh ephemeral workspace; no private material enters this repository.",
+    "All eight selected stories use externally hosted first-party official images linked to their official origin pages. Reuse rights remain unknown, so production stays blocked; the visible local SVGs are original non-documentary fallback diagrams only.",
+    "All five regional lanes, the full 99-subject registry quick scan, the deterministic drop_streetwear cohort, Supreme Thursday, Stüssy daily, luxury runway calendars, exhibitions/programmes and small-object signals were checked. Registry access limits remain disclosed privately and are not treated as evidence.",
+    "Named human editorial, visual, cultural-appropriateness and image-rights review is unresolved. No Preview dispatch, merge, Pages deployment or production action is authorized."
+  ],
+  "media_required": true,
+  "publication_date": "2026-08-27",
+  "qa": {
+    "accessibility": "pass",
+    "assets": "pass",
+    "desktop_render": "pass",
+    "html_parse": "pass",
+    "internal_links": "pass",
+    "mobile_render": "pass",
+    "no_js_reading": "pass",
+    "reduced_motion": "pass"
+  },
+  "research_locked_at": "2026-08-27T11:46:08+08:00",
+  "rights_summary": {
+    "required_assets": 8,
+    "status": "blocked",
+    "unknown_required_assets": 8
+  },
+  "schema_version": 2,
+  "source_hashes": {
+    "art_direction_sha256": "71abd9b46b6800c44c8f4ecd033951526b447ec4803fb77f47d0ae5798baa3ac",
+    "content_sha256": "6fb951c28722f93e02d7104a4ae1b96a2a0e57a10bda1f00a8fe24f08597408f",
+    "issue_style_sha256": "536fe6723c68593adadc8ec430ed508aa76c789b423707fb481865b2a3d0e338"
+  },
+  "status": "BLOCKED",
+  "stories": [
+    {
+      "english": {
+        "abstract": "Stüssy confirms regional release times and channels; independent context describes the restrained front and graphic-heavy back of the collection.",
+        "deck": "A global capsule becomes a chain of local 10 a.m. appointments.",
+        "title": "ONE DROP, LOCAL CLOCKS"
+      },
+      "id": "stussy-eye-junya-watanabe-fw26",
+      "image_credit": "Stüssy official campaign image / Preview-linked",
+      "level": "cover",
+      "media": {
+        "alt": "Official Stüssy image for the eYe JUNYA WATANABE MAN collaboration",
+        "asset": "assets/stussy-clock.svg",
+        "caption": "Stüssy official collaboration image; click through to the release detail page.",
+        "credit": "Stüssy · Preview-linked official image",
+        "external_image_url": "https://www.stussy.com/cdn/shop/files/sync-33951488573637.jpg?v=1787673190&width=1920",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.stussy.com/blogs/news/stussy-eye-junya-watanabe-man",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-28",
+          "published_date": "2026-08-25",
+          "publisher": "Stüssy",
+          "relationship": "first_party_official",
+          "title": "Stüssy & eYe JUNYA WATANABE MAN",
+          "url": "https://www.stussy.com/blogs/news/stussy-eye-junya-watanabe-man"
+        },
+        {
+          "event_date": "2026-08-28",
+          "published_date": "2026-08-26",
+          "publisher": "PAUSE",
+          "relationship": "independent_reporting",
+          "title": "Stüssy and eYe JUNYA WATANABE MAN Team Up Again for FW26",
+          "url": "https://pausemag.co.uk/2026/08/stussy-and-eye-junya-watanabe-man-team-up-again-for-fw26/"
+        }
+      ],
+      "title": "同一场发售，先切成几个本地时钟"
+    },
+    {
+      "english": {
+        "abstract": "The official campaign confirms the August 27 availability, setting, cast and photographer; this issue treats the landscape as an editorial working surface, not proof of reception.",
+        "deck": "LOEWE places its new season against the Mont Blanc Massif.",
+        "title": "THE LANDSCAPE ENTERS THE GARMENT"
+      },
+      "id": "loewe-fw26-mont-blanc",
+      "image_credit": "LOEWE official campaign image / Preview-linked",
+      "level": "major",
+      "media": {
+        "alt": "Official LOEWE Fall Winter 2026 campaign image from the Mont Blanc Massif",
+        "asset": "assets/loewe-altitude.svg",
+        "caption": "LOEWE official FW26 campaign image; click through to the campaign detail page.",
+        "credit": "LOEWE · Preview-linked official image",
+        "external_image_url": "https://www.loewe.com/dw/image/v2/BBPC_PRD/on/demandware.static/-/Library-Sites-LOW_SharedLibrary/default/dw23ab6aab/00000%20FW26%20RUNWAY/MAIN%20CAMPAIGN/LOEWE_FW26_MAIN_CAMPAIGN_COSIMA_STILL_LIFE_MODEL_CROPPED_RGB_23_3x4.jpg?sfrm=jpg&sw=533",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.loewe.com/int/en/pd/stories-collection/fw26-collection-campaign.html",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-27",
+          "published_date": "2026-08-27",
+          "publisher": "LOEWE",
+          "relationship": "first_party_official",
+          "title": "LOEWE Fall Winter 2026 Campaign",
+          "url": "https://www.loewe.com/int/en/pd/stories-collection/fw26-collection-campaign.html"
+        },
+        {
+          "event_date": "2026-08-27",
+          "published_date": null,
+          "publisher": "Vogue",
+          "relationship": "independent_reporting",
+          "title": "Loewe Fall 2026 Ready-to-Wear Collection",
+          "url": "https://www.vogue.com/fashion-shows/fall-2026-ready-to-wear/loewe"
+        }
+      ],
+      "title": "LOEWE 把秋冬系列放到海拔上"
+    },
+    {
+      "english": {
+        "abstract": "Sony Music Japan confirms the date, ten-track scope, recording span and formats; ANSA supplies independent release context without pre-announcing cultural impact.",
+        "deck": "Ten unreleased recordings turn an archive into a present-tense album.",
+        "title": "THE VAULT BECOMES A RELEASE"
+      },
+      "id": "prince-timeless-vault",
+      "image_credit": "Sony Music Japan official cover image / Preview-linked",
+      "level": "major",
+      "media": {
+        "alt": "Official Prince Timeless album cover image",
+        "asset": "assets/prince-vault.svg",
+        "caption": "Sony Music Japan official cover image; click through to the album announcement.",
+        "credit": "Sony Music Japan · Preview-linked official image",
+        "external_image_url": "https://www.sonymusic.co.jp/img/common/artist_image/71003000/71003784/images/202606050956460.jpg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.sonymusic.co.jp/artist/PRINCE/info/583962",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-28",
+          "published_date": "2026-06-05",
+          "publisher": "Sony Music Japan",
+          "relationship": "first_party_official",
+          "title": "Timeless — Prince",
+          "url": "https://www.sonymusic.co.jp/artist/PRINCE/info/583962"
+        },
+        {
+          "event_date": "2026-08-28",
+          "published_date": "2026-08-05",
+          "publisher": "ANSA",
+          "relationship": "independent_reporting",
+          "title": "Conto alla rovescia per Timeless, l'album di inediti di Prince",
+          "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/08/05/conto-alla-rovescia-per-timeless-lalbum-di-inediti-di-prince_146a459d-63db-42ae-ac63-a8d1bca913b2.html"
+        }
+      ],
+      "title": "Prince 的新作从保管库里出来，但不是从过去里回来"
+    },
+    {
+      "english": {
+        "abstract": "Domino confirms the August 28 album, collaborators, ten-track scope and handmade instruments; FASE supplies independent context around the opening single without claiming reception.",
+        "deck": "LA Priest turns handmade electronics into a dance record.",
+        "title": "FROM MACHINES TO THE FLOOR"
+      },
+      "id": "la-priest-into-the-sky",
+      "image_credit": "Domino official release image / Preview-linked",
+      "level": "signal",
+      "media": {
+        "alt": "Official LA Priest Into The Sky release image",
+        "asset": "assets/la-priest-synth.svg",
+        "caption": "Domino official release image; click through to the album announcement.",
+        "credit": "Domino · Preview-linked official image",
+        "external_image_url": "https://www.dominomusic.com/res/0qnL/800_800/LA_Priest_-_Into_The_Sky_-_Packshot_WIG551D.jpg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.dominomusic.com/news/us/la-priest-announces-new-album-into-the-sky-due-aug-28th",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-28",
+          "published_date": "2026-06-29",
+          "publisher": "Domino",
+          "relationship": "first_party_official",
+          "title": "LA Priest announces new album Into The Sky",
+          "url": "https://www.dominomusic.com/news/us/la-priest-announces-new-album-into-the-sky-due-aug-28th"
+        },
+        {
+          "event_date": "2026-08-28",
+          "published_date": "2026-08-14",
+          "publisher": "FASE",
+          "relationship": "independent_reporting",
+          "title": "Track Review: LA Priest — Rayon",
+          "url": "https://www.fasemag.com/articles/track-review-la-priest-rayon"
+        }
+      ],
+      "title": "LA Priest 让自制机器走到舞池"
+    },
+    {
+      "english": {
+        "abstract": "Brain Dead identifies the 32oz bottle, material, price and post-festival online run; no sales or scene-wide adoption claim is made.",
+        "deck": "A festival bottle keeps a two-day scene in circulation.",
+        "title": "AFTER THE STAGE, A DAILY OBJECT"
+      },
+      "id": "brain-dead-sound-fury-nalgene-2026",
+      "image_credit": "Brain Dead official product image / Preview-linked",
+      "level": "signal",
+      "media": {
+        "alt": "Official Brain Dead x Sound and Fury 2026 Nalgene bottle image",
+        "asset": "assets/brain-dead-bottle.svg",
+        "caption": "Brain Dead official product image; click through to the product detail page.",
+        "credit": "Brain Dead · Preview-linked official image",
+        "external_image_url": "https://wearebraindead.com/cdn/shop/files/Sound_and_Fury_Nalgene_Bottle_320z_Amber_Front_optimized.jpg?v=1784151699&width=1024",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://wearebraindead.com/products/brain-dead-x-sound-fury-2026-nalgene-brown",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-15/2026-08-16",
+          "published_date": null,
+          "publisher": "Brain Dead",
+          "relationship": "first_party_official",
+          "title": "Brain Dead x Sound & Fury 2026 Nalgene - Brown",
+          "url": "https://wearebraindead.com/products/brain-dead-x-sound-fury-2026-nalgene-brown"
+        },
+        {
+          "event_date": "2026-08-15/2026-08-16",
+          "published_date": "2026-08-18",
+          "publisher": "Brain Dead",
+          "relationship": "first_party_official",
+          "title": "Brain Dead x Sound & Fury 2026",
+          "url": "https://wearebraindead.com/blogs/archive/brain-dead-x-sound-fury-2026"
+        },
+        {
+          "event_date": "2026-08-15/2026-08-16",
+          "published_date": null,
+          "publisher": "Sound & Fury",
+          "relationship": "first_party_official",
+          "title": "Sound & Fury Fest 2026",
+          "url": "https://soundandfury.la/"
+        }
+      ],
+      "title": "音乐节散场以后，水瓶还在继续工作"
+    },
+    {
+      "english": {
+        "abstract": "Kith lists the $65 poker deck; BMW confirms the collaboration chapter and Hypebeast supplies the seasonal release context. Use beyond the product description is not claimed.",
+        "deck": "Kith for BMW shrinks a car-fashion relationship to a deck of cards.",
+        "title": "A PARTNERSHIP BECOMES A GAME"
+      },
+      "id": "kith-fall-2026-poker-deck",
+      "image_credit": "Kith official collection image / Preview-linked",
+      "level": "signal",
+      "media": {
+        "alt": "Official Kith for BMW Poker Card Deck product image",
+        "asset": "assets/kith-cards.svg",
+        "caption": "Kith official collection image; click through to the collection page.",
+        "credit": "Kith · Preview-linked official image",
+        "external_image_url": "https://kith.com/cdn/shop/files/KHLA270074-906-Detail.jpg?v=1786636455&width=1920",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://kith.com/collections/kith-fall-2026",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-28",
+          "published_date": null,
+          "publisher": "Kith",
+          "relationship": "first_party_official",
+          "title": "Kith Fall 2026 collection",
+          "url": "https://kith.com/collections/kith-fall-2026"
+        },
+        {
+          "event_date": "2026-08-15",
+          "published_date": "2026-08-12",
+          "publisher": "BMW PressClub",
+          "relationship": "first_party_official",
+          "title": "BMW announces Monterey Car Week 2026 programme and new Kith for BMW chapter",
+          "url": "https://www.press.bmwgroup.com/belux/article/detail/T0460054NL/bmw-maakt-het-programma-voor-de-monterey-car-week-2026-bekend%3A-premi%C3%A8res-van-de-bmw-m-concept-neue-klasse-en-de-vision-bmw-alpina-mijlpalen-van-de-bmw-m3-en-een-nieuw-hoofdstuk-van-%E2%80%9Ekith-for-bmw%E2%80%9C?language=nl"
+        },
+        {
+          "event_date": "2026-08-28",
+          "published_date": "2026-08-27",
+          "publisher": "Hypebeast",
+          "relationship": "independent_reporting",
+          "title": "Kith Unveils Fall 2026 Collection Featuring Needles and NFL Collaborations",
+          "url": "https://hypebeast.com/2026/8/kith-fall-2026-collection-featuring-needles-nfl-collaborations-release-info"
+        }
+      ],
+      "title": "Kith 把一段汽车关系做成一副牌"
+    },
+    {
+      "english": {
+        "abstract": "The official programme confirms dates, free entry, venue and sections; independent reporting adds the exhibition's public-facing display details without claiming audience response.",
+        "deck": "A library hosts reconstructed attire, contemporary fashion and digital culture.",
+        "title": "HISTORY BORROWS A PUBLIC ROOM"
+      },
+      "id": "hong-kong-sui-tang-modern-design",
+      "image_credit": "香港文聯 official programme image / Preview-linked",
+      "level": "watch",
+      "media": {
+        "alt": "Official Hong Kong Literature and Art Association visual for Echoes of the Sui and Tang",
+        "asset": "assets/hong-kong-attire.svg",
+        "caption": "香港文聯 official programme image; click through to the exhibition detail page.",
+        "credit": "香港文聯 · Preview-linked official image",
+        "external_image_url": "https://www.hkwl.org/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-09-at-10.51.28-600x239.jpeg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.hkwl.org/article/36729-ccf2026-004/",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-08-27/2026-09-06",
+          "published_date": null,
+          "publisher": "Chinese Culture Festival",
+          "relationship": "first_party_official",
+          "title": "Echoes of the Sui & Tang: Ancient Attire and Modern Design",
+          "url": "https://www.ccf.gov.hk/en/programme/echoes-of-the-sui-tang-ancient-attire-and-modern-design/"
+        },
+        {
+          "event_date": "2026-08-27/2026-09-06",
+          "published_date": "2026-03-23",
+          "publisher": "香港文聯",
+          "relationship": "first_party_official",
+          "title": "「霓裳越千年—隋唐服飾與現代設計」展覽",
+          "url": "https://www.hkwl.org/article/36729-ccf2026-004/"
+        },
+        {
+          "event_date": "2026-08-27/2026-09-06",
+          "published_date": "2026-08-18",
+          "publisher": "點新聞",
+          "relationship": "independent_reporting",
+          "title": "「霓裳越千年—隋唐服飾與現代設計」展8·27開幕",
+          "url": "https://www.dotdotnews.com/s/202608/18/AP6a842795e4b04b6c5d3708ec.html"
+        }
+      ],
+      "title": "香港中央图书馆先借一个下午，给隋唐服饰"
+    },
+    {
+      "english": {
+        "abstract": "FamilyMart confirms the September 1 rollout, store count, size range and grooming standard; ORICON independently reports the shift from jacket to T-shirt.",
+        "deck": "A convenience chain changes the worker-facing layer of the everyday city.",
+        "title": "THE UNIFORM IS A CITY RULE"
+      },
+      "id": "familymart-new-uniform-famima-code",
+      "image_credit": "FamilyMart official uniform image / Preview-linked",
+      "level": "watch",
+      "media": {
+        "alt": "Official FamilyMart image of the new T-shirt uniform",
+        "asset": "assets/familymart-uniform.svg",
+        "caption": "FamilyMart official uniform image; click through to the company announcement.",
+        "credit": "FamilyMart · Preview-linked official image",
+        "external_image_url": "https://www.family.co.jp/content/dam/family/company/news_releases/2026/20260826_uniform_all_.jpg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.family.co.jp/company/news_releases/2026/20260826_01.html",
+        "rights_basis": "preview_user_authorized_external"
+      },
+      "sources": [
+        {
+          "event_date": "2026-09-01",
+          "published_date": "2026-08-26",
+          "publisher": "FamilyMart",
+          "relationship": "first_party_official",
+          "title": "FamilyMart 2026 new uniform and ファミマコーデ",
+          "url": "https://www.family.co.jp/company/news_releases/2026/20260826_01.html"
+        },
+        {
+          "event_date": "2026-09-01",
+          "published_date": "2026-08-26",
+          "publisher": "ORICON NEWS",
+          "relationship": "independent_reporting",
+          "title": "ファミリーマート、業界初のTシャツのユニフォーム発表",
+          "url": "https://www.oricon.co.jp/news/2476198/full/"
+        }
+      ],
+      "title": "FamilyMart 先换工作人员的衣服，再谈便利店是谁的地方"
+    }
+  ],
+  "timezone": "Asia/Shanghai",
+  "variation_review": {
+    "compared_issue_dates": [
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22",
+      "2026-08-23",
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26"
+    ],
+    "comparison_mode": "prior_issues",
+    "exception_reason": "The repeated index and official-image rule are usability and provenance constraints. Today's coordinate-map composition, deep-teal field, eight-dot diagonal, varied aspect ratios, and release-as-place argument do not repeat the 2026-08-20 layered paper, 2026-08-23 closing line, 2026-08-24 route/clock, 2026-08-25 rooms, or 2026-08-26 proof sheet.",
+    "repeated_mechanisms": [
+      "navigation remains an accessible section index",
+      "one first-party official source image per selected story"
+    ]
+  },
+  "visibility": "published_preview"
+}

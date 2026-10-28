@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Culture and Taste Daily 2026-08-27 cover</title>
+  <desc id="desc">An original orange and deep teal cover with eight coordinates for release, place, time and use.</desc>
+  <rect width="1200" height="1500" fill="#123b40"/>
+  <path d="M0 930L1200 690M0 1080L1200 840M0 1230L1200 990" stroke="#dbe5e7" stroke-width="2" opacity=".5"/>
+  <path d="M80 1320V180h1040" fill="none" stroke="#ef5b35" stroke-width="12"/>
+  <g fill="#ef5b35"><circle cx="260" cy="380" r="38"/><circle cx="520" cy="610" r="38"/><circle cx="760" cy="270" r="38"/><circle cx="960" cy="1040" r="38"/><circle cx="420" cy="1180" r="38"/><circle cx="860" cy="1270" r="38"/><circle cx="190" cy="880" r="38"/><circle cx="1050" cy="480" r="38"/></g>
+  <g fill="#f2d14c" font-family="monospace" font-weight="700" font-size="28"><text x="80" y="120">C&amp;T / FIELD ISSUE 08.27</text><text x="85" y="1410">RELEASE / PLACE / USE</text><text x="860" y="190">01</text><text x="1000" y="1160">08</text></g>
+  <text x="80" y="820" fill="#f4f0e4" font-family="Arial,sans-serif" font-weight="900" font-size="106">RELEASE</text><text x="80" y="930" fill="#f4f0e4" font-family="Arial,sans-serif" font-weight="900" font-size="106">NEEDS A</text><text x="80" y="1040" fill="#f4f0e4" font-family="Arial,sans-serif" font-weight="900" font-size="106">PLACE</text>
+</svg>

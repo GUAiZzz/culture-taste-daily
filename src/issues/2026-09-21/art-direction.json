@@ -1,0 +1,17 @@
+{
+  "dominant_mood": "石板灰纸面上的铅笔黑、荧光黄和朱红，像一张被现场人员反复标注的文化工作图：信息清楚，手迹不被抹平",
+  "background_logic": "页面把城市、学校与服装现场拆成三张可叠放的田野记录：窄边索引、打孔定位和朱红批注共同提示文化如何被进入；不复用最近七期的日历轴、节目单轨道、孔径窗口、尺度矩形场、折页结构、门框路线、剪影框或材料样片",
+  "palette_logic": "slate #D9D7D0, graphite #1D2024, chartreuse #D7F23B, vermilion #C84B36, chalk #F5F3EA；石板灰承载长文，石墨黑承载正文，荧光黄只做索引和局部高亮，朱红标记判断与未决权利，粉笔白保留给回退图",
+  "type_scale_logic": "标题像现场图纸的粗体注记，正文保持 18px；编号用等宽字，英文只承担 title、deck 与 abstract，长标题自然断行，不为视觉压缩事实",
+  "image_behavior": "三张一手官方媒体以 Preview 外链显示；本地 SVG 是原创非纪实田野回退图，外图失败时仍保留来源链接、图片 credit 和事实说明；未知权利不被写成已获授权",
+  "page_density_and_tempo": "封面先给三条未对齐的定位线，正文从前桥的可步行城市进入央美的教学档案，再落到蒙特利尔的生产网络；段落之间留出批注空白，不把三个项目强行串成成功主义",
+  "core_visual_action": "每个故事都有一枚黄色索引标签和一条没有闭合的朱红批注线：标签给出进入点，批注线提醒读者判断仍需回到来源，而不是把装饰当成结论",
+  "cover_composition": "石板灰底上叠放三张窄田野卡片，黑色定位孔穿过边缘，荧光黄标签只贴在一张卡上，朱红线从卡背面伸出后停住；标题压在左侧，右侧留出未填写的记录区",
+  "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻；details 只提供可关闭的田野注记，正文、事实和外图回链不依赖 JavaScript",
+  "behance_viewing_arc": "先看一座城市怎样把展览变成步行基础设施，再看服装档案怎样把教学留下来，最后看一周活动怎样把设计、修理、博物馆和消费者放进同一张网络",
+  "mobile_translation": "390px 下三张田野卡片收成左侧窄标签，定位孔变成边缘刻点，荧光黄只出现在标题与索引附近；正文单列，图片说明和长链接自然换行",
+  "mobbin_usability_constraint": "交互目标不少于 44px，details 焦点可见，长链接换行，移动端无横向滚动；田野装饰不覆盖正文和图片说明，外图失败不隐藏来源",
+  "quiet_ending": "退出处留下一枚没有填写的定位孔和一条停住的朱红线，不给箭头，让读者把下一次进入交给真实地点、档案或人",
+  "closing_quotation": {"id": "ct-en-002", "language": "en", "text": "What remains after the spectacle is the method that carried it.", "credit": "Culture & Taste Editorial"},
+  "closing_palette": {"background": "#D9D7D0", "foreground": "#1D2024", "accent": "#C84B36", "rationale": "石板灰与石墨黑构成长文阅读底，荧光黄只承担索引，朱红提示判断、转换和权利未决，粉笔白只服务于回退图的空白。"}
+}

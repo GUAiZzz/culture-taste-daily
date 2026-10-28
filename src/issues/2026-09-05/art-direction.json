@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-05",
+  "dominant_mood": "藕灰纸面上的朱红括号与梅墨字",
+  "background_logic": "两枚朝内的宽括号围住不居中的色面，把并置关系留在纸上。",
+  "palette_logic": "藕灰 #E6DBE1、梅墨 #392C35、朱红 #AA392D；以轻纸感承载清楚的阅读。",
+  "type_scale_logic": "大标题与紧凑编号建立层级，正文稳定，短标签保留印刷笔触。",
+  "image_behavior": "一手外链图片保持原色；肖像和展览图均明确出处，不冒充现场报道。",
+  "page_density_and_tempo": "三篇依次从时装、珠宝到音乐，以相邻关系串起陈列的判断。",
+  "core_visual_action": "括号把不相同的对象放在同一视野，中央空白邀请读者作比较。",
+  "cover_composition": "两枚不对称朱红括号夹住三张小色片，刻意留出宽阔空白；原创构图。",
+  "desktop_interaction_mechanic": "沿用三种阅读房间与原生链接；正文无需动态效果。",
+  "behance_viewing_arc": "公众入口、观看位置、节目相邻关系，最后回到读者自己的选择。",
+  "mobile_translation": "封面括号收窄，文章选读双栏；全文单栏。",
+  "mobbin_usability_constraint": "保留 44px 操作、键盘焦点和图片失败回链。",
+  "quiet_ending": "末尾保留开放的括号，让选择继续。",
+  "closing_quotation": {
+    "id": "ct-en-008",
+    "language": "en",
+    "text": "An entrance is already an editorial decision.",
+    "credit": "Culture & Taste Editorial"
+  },
+  "closing_palette": {
+    "background": "#E6DBE1",
+    "foreground": "#392C35",
+    "accent": "#AA392D",
+    "rationale": "藕灰和梅墨保持正文对比，朱红用作小标题与括号；与前后期的纸色和图形不同。"
+  }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Workbench entry card</title>
+  <desc id="desc">Original diagram of a blue workbench, orange calibration points, silver material slices and mint annotations, drawn for the Culture &amp; Taste Preview.</desc>
+  <rect width="1200" height="800" fill="#f7f5ef"/>
+  <path d="M90 148H1110M90 390H1110M90 650H1110" stroke="#111827" stroke-width="3" opacity=".18"/>
+  <path d="M170 252H1040" stroke="#2757d6" stroke-width="30"/>
+  <path d="M310 120v520M720 120v520" stroke="#c9ced6" stroke-width="72"/>
+  <rect x="190" y="205" width="250" height="150" fill="#111827" transform="rotate(-4 190 205)"/>
+  <rect x="770" y="450" width="260" height="130" fill="#111827" transform="rotate(5 770 450)"/>
+  <circle cx="170" cy="252" r="22" fill="#f05a3c"/><circle cx="1040" cy="252" r="22" fill="#f05a3c"/>
+  <path d="M840 160h190v110H840z" fill="#b9f4d1"/><path d="M910 190l56 32-56 32" fill="none" stroke="#111827" stroke-width="13"/>
+  <g fill="#111827" font-family="monospace" font-weight="700" font-size="24"><text x="90" y="85">WORKBENCH / 09.04</text><text x="90" y="754">OPEN → MAKE → TEST</text></g>
+</svg>

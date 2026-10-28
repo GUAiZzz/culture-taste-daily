@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Culture &amp; Taste Daily, 25 August 2026</title>
+  <desc id="desc">Eight irregular room blocks form a bright floor plan around the title The Room Has a Vote.</desc>
+  <rect width="1200" height="800" fill="#09090b"/>
+  <rect x="60" y="58" width="480" height="330" fill="#f7f4ed"/>
+  <rect x="560" y="58" width="190" height="165" fill="#36d7e8"/>
+  <rect x="770" y="58" width="370" height="250" fill="#ffd126"/>
+  <rect x="560" y="245" width="190" height="143" fill="#9b6bff"/>
+  <rect x="60" y="410" width="230" height="330" fill="#36d7e8"/>
+  <rect x="310" y="410" width="440" height="145" fill="#ffd126"/>
+  <rect x="310" y="575" width="440" height="165" fill="#f7f4ed"/>
+  <rect x="770" y="330" width="370" height="410" fill="#9b6bff"/>
+  <g fill="#09090b" font-family="Arial Narrow, Arial, sans-serif" font-weight="900">
+    <text x="88" y="140" font-size="34">CULTURE &amp; TASTE DAILY</text>
+    <text x="88" y="238" font-size="94">THE ROOM</text>
+    <text x="88" y="336" font-size="94">HAS A VOTE</text>
+  </g>
+  <text x="800" y="685" fill="#f7f4ed" font-family="ui-monospace, monospace" font-size="74" font-weight="900">08.25</text>
+</svg>

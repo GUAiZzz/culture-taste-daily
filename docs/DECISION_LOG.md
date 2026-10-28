@@ -15,6 +15,48 @@ The decisions below became active through V3 activation. Their historical `OLD A
 - Result: Production Contract V3 is the canonical Culture & Taste production contract upon merge of the activation commit to `main`
 - Boundary: activation does not authorize implementation, Pages, preview, deployment, historical migration, production cutover, or daily automation
 
+## Amendment A1 — Final-refresh deadline
+
+- Human approval: repository owner instruction to move the daily cutoff to `15:00` Shanghai time
+- Approval recorded: `2026-08-25T11:43:38+08:00` (`Asia/Shanghai`)
+- Effective date: publication dates on or after `2026-08-26`
+- Amendment commit: the commit containing this A1 record; its immutable SHA is the amendment identity
+- Activation: canonical upon merge of the amendment commit
+- Change: the final-refresh and research-lock window becomes `06:00–15:00`
+- Historical boundary: publication dates through `2026-08-25` retain the former `06:00–08:30` rule and are not reclassified
+- Authority boundary: A1 changes no Preview, Pages, deployment, review, privacy, HarryTone, or unattended-automation gate
+
+## Amendment A2 — First-party official image gate
+
+- Human approval: repository owner instruction that every story use an image from its official information source, by a rights-cleared local copy or a linked official Preview treatment
+- Approval recorded: `2026-08-25T12:05:44+08:00` (`Asia/Shanghai`)
+- Effective date: publication dates on or after `2026-08-25`
+- Amendment commit: the commit containing this A2 record; its immutable SHA is the amendment identity
+- Activation: canonical upon merge of the amendment commit
+- Change: each selected story must verify at least one story-specific first-party official image; editorial diagrams and third-party media cannot satisfy the gate
+- Rights boundary: official provenance is not permission; unknown rights remain production-blocking and allow only the visibly linked non-production Preview treatment
+- Authority boundary: A2 changes no Preview dispatch, Pages, deployment, privacy, HarryTone, or unattended-automation gate
+
+## Operational authorization O1 — Continuing daily candidate and weekly health audit
+
+- Human approval: repository owner instruction to make the current editorial and front-end standard repeatable every day and week
+- Approval recorded: `2026-08-25` (`Asia/Shanghai`)
+- Daily schedule: one candidate run at `09:30`; a same-day manual recovery may update the same branch before the canonical `15:00` deadline
+- Stable base: `preview-build-v1`, so new dated issues inherit the reviewed publication container without changing it during content generation
+- Added checks: live public source pages, first-party official images, official video routes and posters, plus a weekly read-only whole-site health audit
+- Failure boundary: any hard failure is `BLOCKED` and preserves the previous good website
+- Authority boundary: O1 permits candidate generation, dated pull requests, and read-only health reporting only; it does not permit merge, Preview dispatch, Pages changes, production deployment, or automated editorial/rights approval
+
+## Operational reconciliation O3 — Daily reliability and content continuation
+
+- Owner instruction: 2026-10-27, preserve the original quality requirements and implement rule unification and content continuation first, then technical repairs and source-library improvements. Inspect relevant working references before changes and verify actual execution rather than changing prompts alone.
+- Existing quality authority reconciled into code: every unpublished candidate has exactly ten formal articles (owner clarification 2026-10-12); ordinary articles from 2026-09-16 have ten substantive actually read sources each; the existing authorized historical supplements retain ten per article for all enumerated dates.
+- Implementation: one machine policy, shared public/private editorial validators, external atomic private checkpoints, explicit source scan records, immutable already-live baseline, input-bound execution receipts and current-state verification during recovery.
+- Time semantics: preserve Production's 15:00 result and the already-authorized late Preview allowance before 18:00; the final checkpoint starts no new research. No schedule or Production cutover changes.
+- Maintenance boundary: dependency/security and reader-fallback checks are repaired separately from daily content. Source entrypoints remain discovery-only; missing identities/access are explicit, never fabricated as read evidence.
+- Protected material: all already-live issues, historical originals, shared reading-room renderers, private HarryTone source, Production and Pages settings remain unchanged.
+- Detailed commands, consulted primary references and experiments: `docs/EDITORIAL_OPERATIONS.md`.
+
 ## D01 — Canonical authority and activation
 
 **OLD ASSUMPTION**
@@ -576,3 +618,11 @@ These choices must be closed before the named later stage, but do not justify in
 8. **Legal escalation owner** — name before publishing assets whose basis needs jurisdiction-specific judgment.
 
 Until each is resolved, its dependent stage is `BLOCKED`; no silent default expands authority.
+
+## 2026-09-05 owner audit and 2026-09-06 completion
+
+The owner authorized ongoing machine-gated non-production Preview publication and same-day recovery. PREVIEW_AUTONOMY.md and automation/daily-policy.json supersede prior daily candidate-only operational limits; Production contract text stays intact. A failed private/research/identity/technical gate cannot be overridden.
+
+Shared reading improvements preserve dated source and historical originals while changing navigation, theme preference persistence, image treatment and minimum heading spacing across generated routes. Three theme palettes and independent issue art direction remain. Evidence and screenshots are ignored local artifacts. No framework or runtime dependency was added.
+
+External review methods were assessed at pinned commits above 100 Stars and adapted into original project guidance; no upstream tool or binary was installed. Default branch migration, deletion, Pages setting changes and Production cutover remain separate owner decisions.

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-11",
+  "coverage": {
+    "verified_at": "2026-09-11T11:42:00+08:00",
+    "regional_lanes_checked": ["mainland_china_plus_hong_kong_or_taiwan","japan_or_korea","continental_europe_or_united_kingdom","united_states_or_canada","rotating_global_lane"],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "luxury_runway",
+    "focus_subjects_checked": ["Balenciaga","Bode","Cartier","Casablanca","Chanel","Chrome Hearts","Givenchy","Goyard","Kenzo","Loro Piana","Marni","Bottega Veneta","Prada","Tiffany & Co.","Loewe","Miu Miu","Rick Owens","SKIMS","HOMME PLISSÉ ISSEY MIYAKE","Entire Studios"],
+    "standing_beats_checked": ["stussy-release-radar","luxury-runway-calendar","exhibition-and-cultural-programme-radar","small-breakout-object-radar"],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {"id":"adidas-simone-rocha-fw26-2026","category":"fashion","included_story_id":"adidas-simone-rocha-fw26-2026"},
+    {"id":"wasted-youth-2026-collection-1","category":"fashion","title":"Wasted Youth 2026 Collection #1：图形、针织和短裤留到周六","deck":"Wasted Youth releases a seven-piece collection by VERDY on 12 September, moving from signature graphics to a knit polo and work shorts.","publisher":"HUMAN MADE Inc.","official_url":"https://www.humanmade.jp/en/news/wasted-youth-2026-sep.html","published_date":"2026-09-10","event_date":"2026-09-12","media":{"kind":"image","url":"https://www.humanmade.jp/on/demandware.static/-/Sites-HUMANMADE-Library/default/dwb6a156c1/images/News/image/wasted-youth-2026-sep/dHsdVQ841SgpT/image_1.jpg","alt":"Wasted Youth 2026 Collection #1 official HUMAN MADE image","credit":"HUMAN MADE Inc. / Wasted Youth · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}},
+    {"id":"sylvan-esso-ow-2026","category":"music","included_story_id":"sylvan-esso-ow-2026"},
+    {"id":"shenzhen-belt-road-music-season-2026","category":"music","included_story_id":"shenzhen-belt-road-music-season-2026"},
+    {"id":"kyoto-yoake-no-uta-two-million-stars-2026","category":"objects","included_story_id":"kyoto-yoake-no-uta-two-million-stars-2026"},
+    {"id":"visvim-indigo-camping-trailer-2026","category":"objects","title":"Indigo Camping Trailer：把不可控留在每一件物件里","deck":"visvim's Indigo Camping Trailer capsule uses indigo, mud dyeing and mixed textiles, with a Tokyo pop-up continuing through 15 September.","publisher":"visvim","official_url":"https://www.visvim.tv/pr/press/pr_26083101.html","published_date":"2026-08-31","event_date":"2026-09-05/2026-09-15","media":{"kind":"image","url":"https://www.visvim.tv/jp/topics/img/4ac7a63cb5538297306fa56971e8917620ad769e.jpg","alt":"Indigo Camping Trailer 2026 Capsule Collection official visvim image","credit":"visvim / Keisuke Fukamizu · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}},
+    {"id":"finnegan-shannon-no-me-without-you-2026","category":"city","included_story_id":"finnegan-shannon-no-me-without-you-2026"},
+    {"id":"pioneer-works-child-ren-of-the-bloom-2026","category":"city","title":"Child/ren of the Bloom：手的距离改变海洋的尺度","deck":"Pioneer Works opens LaJuné McMillian's interactive installation on 12 September, using hand-tracking to move between phytoplankton and satellite views.","publisher":"Pioneer Works","official_url":"https://pioneerworks.org/news/pioneer-works-announces-lajune-mcmillian-child-ren-of-the-bloom","published_date":"2026-07-29","event_date":"2026-09-11/2026-12-20","media":{"kind":"image","url":"https://cdn.sanity.io/images/vgvol637/production/d8c5bbb7a9e212dcbf8139533ac6064b63faad53-1909x1121.png?w=2000","alt":"LaJuné McMillian Child/ren of the Bloom official Pioneer Works image still","credit":"Pioneer Works / LaJuné McMillian · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}},
+    {"id":"carrie-mae-weems-heart-of-matter-2026","category":"city","included_story_id":"carrie-mae-weems-heart-of-matter-2026"},
+    {"id":"hong-kong-green-week-2026","category":"city","title":"Hong Kong Green Week：把绿色议题摊在城市的公共日程里","deck":"Hong Kong Green Week runs from 7 to 11 September, with ReThink HK, M+ and public-facing sustainability programmes across the city.","publisher":"Hong Kong Green Week","official_url":"https://www.hkgreenweek.hk/tc/programme.html","published_date":null,"event_date":"2026-09-07/2026-09-11","media":{"kind":"image","url":"https://www.hkgreenweek.hk/images/common/HKGreenWeek_2026_KV_og_image_1200x630.png","alt":"Hong Kong Green Week 2026 official programme image","credit":"Hong Kong Green Week · Preview-linked official image","origin_authority":"first_party_official","rights_basis":"preview_user_authorized_external"}}
+  ]
+}

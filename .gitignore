@@ -23,6 +23,7 @@ harry-tone-private/
 
 # Local tooling and operating-system files
 node_modules/
+/node_modules
 .DS_Store
 __MACOSX/
 .cache/

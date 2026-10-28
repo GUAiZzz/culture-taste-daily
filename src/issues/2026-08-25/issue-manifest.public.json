@@ -2,11 +2,13 @@
   "schema_version": 2,
   "issue_id": "2026-08-25",
   "publication_date": "2026-08-25",
+  "visibility": "published_preview",
   "timezone": "Asia/Shanghai",
   "candidate_created_at": null,
-  "research_locked_at": "2026-08-24T10:10:00+08:00",
-  "content_locked_at": "2026-08-24T10:48:15+08:00",
-  "status": "PASS",
+  "research_locked_at": "2026-08-25T11:09:00+08:00",
+  "content_locked_at": "2026-08-25T11:18:35+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
   "contract": {
     "repository": "GUAiZzz/culture-taste-daily",
     "path": "docs/PRODUCTION_CONTRACT_V3.md",
@@ -16,42 +18,43 @@
   "core_version": "v2",
   "content_lock": {
     "status": "locked",
-    "sha256": "c7a484db9ca2cb5939337882ea1e0a389faef3e2533c50eafd99307ac7fad3d9",
-    "locked_at": "2026-08-24T10:48:15+08:00"
+    "sha256": "74963f0974b01e4c60937865986f2d63b19db2f1a0321aa39d19ec234aac827a",
+    "locked_at": "2026-08-25T11:18:35+08:00"
   },
   "source_hashes": {
-    "content_sha256": "c7a484db9ca2cb5939337882ea1e0a389faef3e2533c50eafd99307ac7fad3d9",
-    "art_direction_sha256": "4fddc0f07e63c8f2318c1a5215d0ea92eeca34757a1e2414d91de5007b2fd8c4",
-    "issue_style_sha256": "daee0decfe28fc9687659fc1f7620e0edc91fb026e9cd62ccdd3609764ae9a0f"
+    "content_sha256": "74963f0974b01e4c60937865986f2d63b19db2f1a0321aa39d19ec234aac827a",
+    "art_direction_sha256": "3b476e3fae94b1573f8ad15dc3fc3ac9653ca2559dd7bf97e133352cdd4c79c6",
+    "issue_style_sha256": "b41b8a6de7f77125ee893114d3a01d488c86c3f9f8265590760a2a21ce404691"
   },
   "harrytone": {
     "repository": "GUAiZzz/harry-tone",
     "branch": "main",
     "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
-    "loaded_at": "2026-08-24T10:10:18+08:00"
+    "loaded_at": "2026-08-25T11:09:00+08:00"
   },
   "language_mode": "zh-CN_full__en_title_deck_abstract",
-  "editorial_position": "Several current cultural projects use the venue to redistribute attention, access, and authorship; wider reach does not automatically create public agency.",
+  "editorial_position": "The venue is an active editor: it decides who is seen first, who can approach, and where public access turns into commerce.",
   "art_direction": {
-    "dominant_mood": "night-city wayfinding crossed with a temporary cultural venue",
-    "background_logic": "one continuous route moves through open field, room, cloud, shelf, and stage states",
-    "palette_logic": "deep indigo, electric lime, warm paper, signal coral, pale blue",
-    "type_scale_logic": "oversized narrow display type, readable 18–20px body, monospaced wayfinding labels",
-    "image_behavior": "no third-party images; original CSS spatial diagrams only",
-    "page_density_and_tempo": "dense cover, extended lead, open major, alternating signals, narrowed watch, quiet exit",
-    "core_visual_action": "a route changes width and direction to show how each venue redistributes attention",
-    "cover_composition": "city-sign title beside a non-closing map linking DDP, LOTTE, HOTEL, HALL, STORE, and STAGE",
-    "desktop_interaction_mechanic": "progressive-enhancement sticky room index updates by section while anchors and all reading remain available without JavaScript",
-    "behance_viewing_arc": "position, cover conflict, authorship depth, varied signals, unverified watch item, unresolved threshold",
-    "mobile_translation": "route becomes a left rail; all grids collapse to one column; navigation becomes a horizontally scrollable top strip",
-    "mobbin_usability_constraint": "44px targets, visible focus, no hidden reading, obvious hierarchy and source labels",
-    "quiet_ending": "an unoccupied fluorescent floor and one unresolved question"
+    "dominant_mood": "深夜文化节目单折进明亮公共平面图：清醒、有张力，但不把商业入口伪装成公共性",
+    "background_logic": "近黑色是场地底图；每章占据一个比例不同的房间块，不再用路线或时钟连接故事",
+    "palette_logic": "near-black #09090B, warm white #F7F4ED, pool cyan #36D7E8, taxi yellow #FFD126, orchid #9B6BFF",
+    "type_scale_logic": "封面使用超大窄体系统字；正文保持 18–20px；章节编号与事实字段使用等宽系统字形成导视层",
+    "image_behavior": "每篇使用与事件对应的一手官方图片；未知使用权只通过可点击的 Preview 外链展示，原创平面图仅作为未展示的本地补充资产而不冒充现场影像",
+    "page_density_and_tempo": "封面像压缩节目单，COVER 拉长，MAJOR 留白，六条 SIGNAL 比例不一，WATCH 收窄，EXIT 安静",
+    "core_visual_action": "不规则平面图随场地权力关系改变比例和方向，而不是让所有故事排进同一条路线",
+    "cover_composition": "超大标题压住八个比例不同的房间块；不复用 8/24 的路线、时钟或 8/23 的日期闭合线",
+    "desktop_interaction_mechanic": "渐进增强的 room index 根据阅读位置更新当前章节；锚点可键盘访问，关闭 JavaScript 时全文与导航仍完整",
+    "behance_viewing_arc": "先给总命题，再以首尔形成主冲突，伦敦加深权力问题，四条信号改变节奏，TMEX 保留待验证项，最后回到门槛",
+    "mobile_translation": "房间块改为纵向节目单，双栏全部改单栏，标题不溢出，索引改为顶部可滚动导览",
+    "mobbin_usability_constraint": "正文不被交互遮挡；点击目标至少 44px；焦点可见；层级、来源和状态标签始终可识别",
+    "quiet_ending": "近黑空场中只保留一间未被占用的白色房间与一句问题",
+    "closing_palette": {"background":"#15111E","foreground":"#F7F4ED","accent":"#36D7E8","rationale":"近黑背景保留空场，暖白承担问题，泳池青只标出那间仍可被进入的房间。"}
   },
   "variation_review": {
     "comparison_mode": "prior_issues",
-    "compared_issue_dates": ["2026-08-20", "2026-08-21", "2026-08-22"],
-    "repeated_mechanisms": [],
-    "exception_reason": null
+    "compared_issue_dates": ["2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24"],
+    "repeated_mechanisms": ["navigation remains an accessible section index"],
+    "exception_reason": "Only five prior issues exist. The repeated index is a usability primitive; the previous issue's route/clock and the 2026-08-23 closing-line cover are not reused."
   },
   "stories": [
     {
@@ -62,19 +65,23 @@
         {
           "title": "Seoul Fashion Week Expands Beyond DDP to Lotte World Tower, Turning Seoul's Iconic Landmarks into Runways",
           "publisher": "Seoul Metropolitan Government",
-          "url": "https://world.seoul.go.kr/seoul-fashion-week-expands-beyond-ddp-to-lotte-world-tower-turning-seouls-iconic-landmarks-into-runways/",
+          "url": "https://english.seoul.go.kr/seoul-fashion-week-expands-beyond-ddp-to-lotte-world-tower-turning-seouls-iconic-landmarks-into-runways/",
           "published_date": "2026-08-21",
-          "event_date": "2026-09-01/2026-09-06"
+          "event_date": "2026-09-01/2026-09-06",
+          "relationship": "first_party_official"
         },
         {
-          "title": "Seoul Fashion Week takes over Lotte's World Park lawn in Jamsil next month",
-          "publisher": "Korea JoongAng Daily",
-          "url": "https://www.koreajoongangdaily.com/business/seoul-fashion-week-takes-over-lottes-world-park-lawn-in-jamsil-next-month/12820777",
+          "title": "Seoul Fashion Week expands from DDP to Lotte World Tower for 2027 S/S season",
+          "publisher": "The Korea Times",
+          "url": "https://www.koreatimes.co.kr/lifestyle/people-events/20260812/seoul-fashion-week-expands-from-ddp-to-lotte-world-tower-for-2027-ss-season",
           "published_date": "2026-08-12",
-          "event_date": "2026-09-01/2026-09-06"
+          "event_date": "2026-09-01/2026-09-06",
+          "relationship": "independent_reporting"
         }
       ],
-      "image_credit": null
+      "image_credit": "Seoul Metropolitan Government official event visual / Preview-linked from the official source",
+      "english": {"title": "RUNWAY AS CITY INTERFACE", "deck": "Seoul puts professional and public fashion access on one route.", "abstract": "The official plan is a September watch item, not a claim about a show today."},
+      "media": {"asset": "assets/seoul-runway-map.svg", "alt": "Official Seoul Fashion Week 2027 Spring Summer event visual published by Seoul Metropolitan Government", "caption": "2027 S/S Seoul Fashion Week official event visual; click through to the official announcement.", "credit": "Seoul Metropolitan Government · Preview-linked official image", "kind": "source_image", "origin_url": "https://english.seoul.go.kr/seoul-fashion-week-expands-beyond-ddp-to-lotte-world-tower-turning-seouls-iconic-landmarks-into-runways/", "external_image_url": "https://news.seoul.go.kr/economy/files/2026/08/6a7c2479a7dd28.29617597.png", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
     },
     {
       "id": "southbank-lived-experience-curation",
@@ -82,14 +89,43 @@
       "title": "谁来策展，先于展了什么改变房间",
       "sources": [
         {
+          "title": "Koestler Arts: Rock, Paper, Scissors",
+          "publisher": "Southbank Centre",
+          "url": "https://www.southbankcentre.co.uk/whats-on/koestler-arts-rock-paper-scissors/",
+          "published_date": null,
+          "event_date": "2026-10-16/2026-11-29",
+          "relationship": "first_party_official"
+        },
+        {
           "title": "Young adults with experience of having parents in prison to curate exhibition at London’s Southbank Centre",
           "publisher": "The Art Newspaper",
           "url": "https://www.theartnewspaper.com/2026/08/21/young-adults-with-experience-of-having-parents-in-prison-to-curate-southbank-centre-exhibition",
           "published_date": "2026-08-21",
-          "event_date": "2026-10-16/2026-11-29"
+          "event_date": "2026-10-16/2026-11-29",
+          "relationship": "independent_reporting"
         }
       ],
-      "image_credit": null
+      "image_credit": "Southbank Centre / Koestler Arts official exhibition image / Preview-linked",
+      "english": {"title": "WHEN THE SEAT MOVES", "deck": "Lived experience enters selection and sequence.", "abstract": "The upcoming exhibition gives five PIC members curatorial responsibility while artist names remain undisclosed."},
+      "media": {"asset": "assets/southbank-curatorial-seat.svg", "alt": "Official image for Koestler Arts Rock Paper Scissors published by Southbank Centre", "caption": "Official exhibition image for Rock, Paper, Scissors; click through to the Southbank Centre programme.", "credit": "Southbank Centre / Koestler Arts · Preview-linked official image", "kind": "source_image", "origin_url": "https://www.southbankcentre.co.uk/whats-on/koestler-arts-rock-paper-scissors/", "external_image_url": "https://bynder.southbankcentre.co.uk/transform/167d9cc7-7d8e-40f7-b994-a74d58e45d36/Koestler-Arts-Rock-Paper-Scissors-2026?io=transform%3Afill%2Cwidth%3A1500%2Cheight%3A1000", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
+    },
+    {
+      "id": "musquiqui-life-of-navigation",
+      "level": "signal",
+      "title": "今天开幕的展览，从「如何导航」开始",
+      "sources": [
+        {
+          "title": "Musquiqui Chihying: A Life of Navigation",
+          "publisher": "Southbank Centre",
+          "url": "https://www.southbankcentre.co.uk/whats-on/musquiqui-chihying-a-life-of-navigation/",
+          "published_date": null,
+          "event_date": "2026-08-25/2026-10-18",
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Southbank Centre official exhibition image / Preview-linked",
+      "english": {"title": "NAVIGATION WITHOUT A MAP", "deck": "Four works ask where people stand inside technological progress.", "abstract": "The venue confirms the opening, four-work structure and stated themes; the new installations still require firsthand viewing."},
+      "media": {"asset": "assets/musquiqui-navigation.svg", "alt": "Official Southbank Centre image of Musquiqui Chihying's work The Toyota", "caption": "The Toyota is one of the four works named in A Life of Navigation; click through to the official exhibition page.", "credit": "Southbank Centre · Preview-linked official image", "kind": "source_image", "origin_url": "https://www.southbankcentre.co.uk/whats-on/musquiqui-chihying-a-life-of-navigation/", "external_image_url": "https://bynder.southbankcentre.co.uk/transform/eb1b8655-6d69-4ae5-b675-0b0f8568c12e/The-Toyota_Musquiqui-Chihying?io=transform%3Afill%2Cwidth%3A1500%2Cheight%3A1000", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
     },
     {
       "id": "arteen-taipei-hotel-rooms",
@@ -101,10 +137,21 @@
           "publisher": "VERSE",
           "url": "https://www.verse.com.tw/article/2026-arteen-taipei",
           "published_date": "2026-08-13",
-          "event_date": "2026-08-21/2026-08-23"
+          "event_date": "2026-08-21/2026-08-23",
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "2026 Arteen Taipei",
+          "publisher": "More Art Gallery / 墨兒藝術",
+          "url": "https://www.moreartgallery.com/moreapply/2026/8/21/2026-arteen-taipei-",
+          "published_date": "2026-08-21",
+          "event_date": "2026-08-21/2026-08-23",
+          "relationship": "first_party_official"
         }
       ],
-      "image_credit": null
+      "image_credit": "More Art Gallery / 墨兒藝術 official event visual / Preview-linked",
+      "english": {"title": "HOTEL AS GALLERY", "deck": "A room becomes a temporary author space.", "abstract": "Arteen Taipei is recorded as a spatial action, not proof of long-term impact."},
+      "media": {"asset": "assets/arteen-room-grid.svg", "alt": "Official 2026 Arteen Taipei event poster published by organizer More Art Gallery", "caption": "2026 Arteen Taipei official event visual; click through to the organizer's event page.", "credit": "More Art Gallery / 墨兒藝術 · Preview-linked official image", "kind": "source_image", "origin_url": "https://www.moreartgallery.com/moreapply/2026/8/21/2026-arteen-taipei-", "external_image_url": "https://images.squarespace-cdn.com/content/v1/586382e0d1758e09280f51c4/215a8013-af30-4a81-ac04-a49a7ff77de2/2026Arteen%2BTaipei%E6%B4%BB%E5%8B%95%E7%B0%A1%E7%AB%A0%E5%AE%8C%E6%95%B4%E7%89%88%2B1.png?format=1500w", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
     },
     {
       "id": "sfmoma-giant-arc",
@@ -116,25 +163,31 @@
           "publisher": "SFMOMA",
           "url": "https://www.sfmoma.org/exhibition/jacob-hashimoto-giant-arc/",
           "published_date": null,
-          "event_date": "2026-08-22"
+          "event_date": "2026-08-22",
+          "relationship": "first_party_official"
         }
       ],
-      "image_credit": null
+      "image_credit": "SFMOMA official contextual image / Preview-linked",
+      "english": {"title": "A CLOUD BEFORE A TICKET", "deck": "Scale changes the first step into the museum.", "abstract": "SFMOMA describes a free first-floor installation built from nearly 75,000 handmade units."},
+      "media": {"asset": "assets/giant-arc-kite-field.svg", "alt": "Official SFMOMA contextual image of an earlier Jacob Hashimoto installation", "caption": "CONTEXT, NOT CURRENT INSTALLATION: an earlier Hashimoto work shown by SFMOMA; click through to the current Giant Arc exhibition page.", "credit": "SFMOMA · Preview-linked official contextual image", "kind": "source_image", "origin_url": "https://www.sfmoma.org/exhibition/jacob-hashimoto-giant-arc/", "external_image_url": "https://d1hhug17qm51in.cloudfront.net/www-media/2026/01/08155826/Hashimoto.png", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
     },
     {
-      "id": "palace-seoul-retail-heritage",
+      "id": "van-cleef-ode-to-nature",
       "level": "signal",
-      "title": "宗庙进入商场，先变成一张材料表",
+      "title": "档案和珠宝，今天最后一次同室出现",
       "sources": [
         {
-          "title": "Palace Skateboards Unveils Third Seoul Store and Exclusive Capsule Collection",
-          "publisher": "Hypebeast",
-          "url": "https://hypebeast.com/2026/8/palace-skateboards-unveils-third-seoul-store-exclusive-capsule-lotte-world-collection",
-          "published_date": "2026-08-22",
-          "event_date": "2026-08-22"
+          "title": "An Ode to Nature by Van Cleef & Arpels exhibition, in Singapore",
+          "publisher": "Van Cleef & Arpels",
+          "url": "https://www.vancleefarpels.com/us/en/the-maison/exhibitions/an-ode-to-nature-van-cleef-arpels-raffles.html",
+          "published_date": null,
+          "event_date": "2026-04-06/2026-08-25",
+          "relationship": "first_party_official"
         }
       ],
-      "image_credit": null
+      "image_credit": "Van Cleef & Arpels official exhibition visual / Preview-linked",
+      "english": {"title": "ARCHIVE BESIDE OBJECT", "deck": "Twenty-eight creations meet seven working documents on the exhibition's final day.", "abstract": "The brand source confirms dates and contents; audience response is not inferred."},
+      "media": {"asset": "assets/van-cleef-archive.svg", "alt": "Official An Ode to Nature exhibition visual published by Van Cleef and Arpels", "caption": "An Ode to Nature official exhibition visual; click through to the Maison's exhibition page.", "credit": "Van Cleef & Arpels · Preview-linked official image", "kind": "source_image", "origin_url": "https://www.vancleefarpels.com/us/en/the-maison/exhibitions/an-ode-to-nature-van-cleef-arpels-raffles.html", "external_image_url": "https://www.vancleefarpels.com/content/dam/vancleefarpels/La-Maison/exhibitions/an-ode-to-nature-raffles/VCA-Exposition--Flora_fauna-cover-desktop-4000x1780.jpg", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
     },
     {
       "id": "bape-saint-mxxxxxx-can-stool",
@@ -146,17 +199,21 @@
           "publisher": "Hypebeast",
           "url": "https://hypebeast.com/2026/8/bape-saint-mxxxxxx-fall-winter-2026-capsule-collaboration-release-info",
           "published_date": "2026-08-21",
-          "event_date": "2026-08-22/2026-08-23"
+          "event_date": "2026-08-22/2026-08-23",
+          "relationship": "independent_reporting"
         },
         {
           "title": "A BATHING APE® x ©SAINT Mxxxxxx",
           "publisher": "BAPE",
           "url": "https://en.jp.bape.com/blogs/news/saintmxxxxxx-26fw",
           "published_date": null,
-          "event_date": "2026-08-22/2026-08-23"
+          "event_date": "2026-08-22/2026-08-23",
+          "relationship": "first_party_official"
         }
       ],
-      "image_credit": null
+      "image_credit": "BAPE official collaboration visual / Preview-linked",
+      "english": {"title": "APPAREL → INTERIOR", "deck": "A worn graphic takes one more step into the room.", "abstract": "The official release lists a Can Stool beside the apparel and socks in the first drop."},
+      "media": {"asset": "assets/bape-can-stool.svg", "alt": "Official BAPE and Saint Mxxxxxx 2026 Autumn Winter collaboration visual", "caption": "Official BAPE × ©SAINT Mxxxxxx release visual; click through to BAPE's release page.", "credit": "BAPE · Preview-linked official image", "kind": "source_image", "origin_url": "https://en.jp.bape.com/blogs/news/saintmxxxxxx-26fw", "external_image_url": "https://i.shgcdn.com/2c481803-8340-45ca-9719-91918b982fa0/-/format/auto/-/quality/normal/", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
     },
     {
       "id": "tmex-2026-agenda",
@@ -168,16 +225,19 @@
           "publisher": "Taipei Music Center",
           "url": "https://www.tmc.taipei/tw/news/announcement/2FDb231761f9",
           "published_date": "2026-08-22",
-          "event_date": "2026-08-27/2026-08-30"
+          "event_date": "2026-08-27/2026-08-30",
+          "relationship": "first_party_official"
         }
       ],
-      "image_credit": null
+      "image_credit": "Taipei Music Center official TMEX announcement visual / Preview-linked",
+      "english": {"title": "THE STAGE IS ALSO A SYSTEM", "deck": "Five forum lanes wait for evidence after the event.", "abstract": "TMEX publishes a programme spanning sustainability, AI, international marketing, festivals, and sound-image-space."},
+      "media": {"asset": "assets/tmex-forum-lanes.svg", "alt": "Official 2026 TMEX announcement visual published by Taipei Music Center", "caption": "2026 TMEX official announcement visual; click through to Taipei Music Center's programme notice.", "credit": "Taipei Music Center · Preview-linked official image", "kind": "source_image", "origin_url": "https://www.tmc.taipei/tw/news/announcement/2FDb231761f9", "external_image_url": "https://www.tmc.taipei/files/1787396628jvRIKFwQ3t.jpg", "origin_authority": "first_party_official", "rights_basis": "preview_user_authorized_external"}
     }
   ],
   "rights_summary": {
-    "required_assets": 0,
-    "unknown_required_assets": 0,
-    "status": "clear"
+    "required_assets": 8,
+    "unknown_required_assets": 8,
+    "status": "blocked"
   },
   "artifact_digests": {
     "issue_payload_sha256": null
@@ -199,10 +259,10 @@
   },
   "limitations": [
     "Local review candidate only; this manifest cannot authorize deployment.",
-    "Exact first materialization time is unavailable because this candidate predates canonical V3; candidate_created_at remains null and must fail the local evidence gate.",
-    "Research locked on 2026-08-24 for a 2026-08-25 issue, outside the canonical publication-day final-refresh window; this remains non-production test input.",
-    "HarryTone visual-editorial support used a user-supplied pinned snapshot and is not claimed as canonical repository state.",
-    "No third-party images are included; CSS-only graphics preserve rights separation.",
-    "Arteen Taipei and Palace Seoul are explicitly constrained by source-access and promotional-material limits."
+    "Exact first materialization time is unavailable because this candidate began as pre-V3 test input; candidate_created_at remains null and must fail the evidence gate.",
+    "Research was refreshed and locked at 11:09 Asia/Shanghai after the 08:30 canonical window under explicit human instruction; the timing blocker remains and this candidate has no production authority.",
+    "Canonical private GUAiZzz/harry-tone main was verified and loaded at commit 13cd6b7046bd81be396810d2923f3a5dc818e93f from an ephemeral workspace; no private material enters this repository.",
+    "All eight story figures use externally hosted first-party official images and click through to official origin pages. Their reuse rights remain unknown, so the Preview is visibly labeled and production stays blocked; local SVGs remain undisplayed supplemental assets and do not satisfy the official-image gate.",
+    "Arteen Taipei and Van Cleef & Arpels are explicitly constrained by organizer or subject-originated source limits."
   ]
 }

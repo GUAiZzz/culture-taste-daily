@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "kind": "culture_taste_closing_quotation_pool",
+  "authorship": "Culture & Taste Editorial",
+  "language_priority": ["en", "zh-CN"],
+  "selection_mode": "editor_selected_and_issue_locked",
+  "candidates": [
+    {"id":"ct-en-001","language":"en","text":"The last support stays in place. Method is still carrying the result."},
+    {"id":"ct-en-002","language":"en","text":"What remains after the spectacle is the method that carried it."},
+    {"id":"ct-en-003","language":"en","text":"A deadline earns meaning when it makes the next action visible."},
+    {"id":"ct-en-004","language":"en","text":"Newness begins where an object becomes usable."},
+    {"id":"ct-en-005","language":"en","text":"A release begins only when someone can truly enter it."},
+    {"id":"ct-en-006","language":"en","text":"Culture lives where an object finds its public."},
+    {"id":"ct-en-007","language":"en","text":"A frame matters only when it changes the action."},
+    {"id":"ct-en-008","language":"en","text":"An entrance is already an editorial decision."},
+    {"id":"ct-zh-001","language":"zh-CN","text":"空间不是背景，它决定谁能留下。"},
+    {"id":"ct-zh-002","language":"zh-CN","text":"真正的结束，是让选择终于可见。"},
+    {"id":"ct-zh-003","language":"zh-CN","text":"发布不是终点，而是对象第一次被使用的条件。"},
+    {"id":"ct-zh-004","language":"zh-CN","text":"方法没有退场，它仍在承担结果。"}
+  ]
+}

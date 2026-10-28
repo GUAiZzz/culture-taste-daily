@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-08",
+  "coverage": "Five formal stories and a ten-item public radar move through product aftercare, sculptural form, self-aware pop, sonic interaction and material process.",
+  "dominant_mood": "冷灰色工作纸上的酸黄维修标记、深墨结构线与锈红回路",
+  "background_logic": "把页面当成一张逆向维护记录：横向轨道保留使用路径，锈红线暴露结构转折，酸黄只标记下一次动作，不复用最近七期的阈值、曲线、物件/参与、测量脊、证明表、脚手架或日历轴。",
+  "palette_logic": "paper #E9E7E1, ink #171918, acid #D7F000, rust #A84B32, blue-gray #304A54；深墨负责阅读，酸黄只承担维修与返回提示，锈红标记结构，蓝灰负责冷静的工作面。",
+  "type_scale_logic": "标题像贴在维护档案边缘的大号工作标签，正文 18px；故事编号沿回路固定，英文只承担标题、deck 与 abstract。",
+  "image_behavior": "五张一手官方媒体只在 Preview 外链显示；本地 aftercare SVG 是原创的维护记录图，不冒充纪实照片。",
+  "page_density_and_tempo": "封面先给一条未闭合的回路，正文从衣物的维修承诺进入，再经过展览、专辑、声音和器物，退出处把下一次使用交还给读者。",
+  "core_visual_action": "页面把第一次发布后的维修、观看、聆听和再进入条件画成一条可回查的 aftercare rail，让文化判断停在接口而不是声量。",
+  "cover_composition": "冷灰纸面上，一条锈红曲线穿过蓝灰刻度；酸黄虚线像维修标记，深墨方块压住当前节点，右下留出一条尚未闭合的返回箭头。",
+  "desktop_interaction_mechanic": "原生索引、来源锚点与外链常驻，所有事实、正文与来源不依赖 JavaScript。",
+  "behance_viewing_arc": "从 Arc'teryx 的维修回路进入 SFMOMA 的身体体积，再经过 Adéla 的行业回望、Pling 的可操作声音，最后落到 Bourdelle 的生产阶段与下一次使用。",
+  "mobile_translation": "390px 下维护轨道折为右侧窄栏，酸黄动作标记变成边缘标签，正文保持单列并允许来源长链接换行。",
+  "mobbin_usability_constraint": "交互目标不少于 44px，焦点可见，长链接换行，外图失败不隐藏来源，移动端无横向滚动。",
+  "quiet_ending": "退出处留下一个未闭合的酸黄回路，提醒读者作品的价值不只在第一次被看见，也在下一次仍能被进入。",
+  "closing_quotation": {"id":"ct-en-007","language":"en","text":"A frame matters only when it changes the action.","credit":"Culture & Taste Editorial"},
+  "closing_palette": {"background":"#E9E7E1","foreground":"#171918","accent":"#A84B32","rationale":"冷灰纸面把页面压回工作现场，深墨确保长文清楚，锈红在浅底上提供足够对比并承担结尾路径标记；酸黄和蓝灰只承担视觉结构，不承担小字号文字。"}
+}

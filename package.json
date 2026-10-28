@@ -8,17 +8,33 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
+    "daily:preflight": "node scripts/daily-preflight.mjs",
+    "daily:cycle": "node scripts/daily-cycle.mjs",
+    "editorial:check": "node scripts/editorial-check.mjs",
+    "editorial:workspace": "node scripts/editorial-workspace.mjs",
+    "sources:plan": "node scripts/source-library.mjs",
+    "supplement:preflight": "node scripts/historical-preflight.mjs",
+    "health:daily": "node scripts/site-health.mjs --scope daily",
+    "health:weekly": "node scripts/site-health.mjs --scope weekly",
     "qa": "node scripts/qa.mjs",
     "review:template": "node scripts/create-review-template.mjs",
     "gate": "node scripts/gate.mjs",
     "test": "node --test --test-concurrency=1 tests/*.test.mjs",
-    "verify": "npm run build && npm run qa && npm test"
+    "verify": "npm run editorial:check -- --public-only && npm run build && npm run ops:check && npm run qa && npm test",
+    "ops:preflight": "node scripts/operation-preflight.mjs",
+    "ops:state": "node scripts/operation-state.mjs",
+    "ops:check": "node scripts/operation-check.mjs",
+    "scope:check": "node scripts/check-public-diff.mjs",
+    "preview:release": "node scripts/preview-release.mjs",
+    "preview:stamp": "node scripts/preview-stamp.mjs",
+    "preview:live": "node scripts/preview-live.mjs",
+    "preview:resume": "node scripts/preview-resume.mjs"
   },
   "devDependencies": {
     "ajv": "8.20.0",
     "ajv-formats": "3.0.1",
     "html-validate": "11.10.0",
-    "markdown-it": "15.0.0",
+    "markdown-it": "15.0.3",
     "playwright": "1.62.1"
   }
 }
