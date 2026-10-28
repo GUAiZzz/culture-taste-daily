@@ -26,7 +26,8 @@ export function isAllowedHealthUrl(value) {
     const url = new URL(value), host = url.hostname.toLowerCase().replace(/^\[|\]$/g, '').replace(/\.$/, '');
     if (url.protocol !== 'https:' || url.username || url.password || !host || !host.includes('.') && !isIP(host)) return false;
     if ([...url.searchParams.keys()].some(key => /^(?:token|access_token|api[_-]?key|authorization|password|secret)$/i.test(key))) return false;
-    if (/(^|\.)(localhost|local|internal|intranet|corp|home|lan|office-sec)(\.|$)/i.test(host)) return false;
+    if (/(^|\.)(localhost|internal|intranet|office-sec)(\.|$)/i.test(host)
+      || /(?:^|\.)(?:local|corp|home|lan)$/i.test(host)) return false;
     return !isIP(host) || isPublicAddress(host);
   } catch { return false; }
 }

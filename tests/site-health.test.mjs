@@ -103,13 +103,14 @@ test('cross-origin final responses cannot be accepted even if a request implemen
 });
 
 test('nonpublic and internal URL targets are stopped before a request and masked in output', async () => {
-  for (const url of ['https://127.0.0.1/secret', 'https://10.2.3.4/secret', 'https://[::1]/secret', 'https://intranet.example/secret', 'https://office-sec.example/secret', 'https://localhost/secret', 'https://public.example/?token=secret']) {
+  for (const url of ['https://127.0.0.1/secret', 'https://10.2.3.4/secret', 'https://[::1]/secret', 'https://intranet.example/secret', 'https://office-sec.example/secret', 'https://network.corp/secret', 'https://localhost/secret', 'https://public.example/?token=secret']) {
     let calls=0; const target={id:'source',kind:'official_origin_page',expect:'page',url,references:[]};
     const result=await probeHealthTarget(target,{retries:0,request:async()=>{calls++;return response();}});
     assert.equal(calls,0); assert.equal(result.status,'REVIEW_REQUIRED'); assert.equal(result.url,'[blocked]');
     assert.doesNotMatch(JSON.stringify(result),/secret/);
   }
   assert.equal(isAllowedHealthUrl('https://public.example/path'),true);
+  assert.equal(isAllowedHealthUrl('https://corp.asics.com/en/press/article'),true);
   assert.equal(isPublicAddress('127.0.0.1'),false);
   assert.equal(isPublicAddress('fc00::1'),false);
   assert.equal(isPublicAddress('8.8.8.8'),true);
