@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Original palace route diagram</title>
+  <desc id="desc">A five-stop route with timed gates and an open ending.</desc>
+  <rect width="1200" height="760" fill="#F4F0E8"/>
+  <path d="M110 528C220 170 400 620 560 270S860 135 1085 420" fill="none" stroke="#0F172A" stroke-width="18"/>
+  <path d="M110 528C220 170 400 620 560 270S860 135 1085 420" fill="none" stroke="#56D6D1" stroke-width="5" stroke-dasharray="3 22"/>
+  <g fill="#0F172A" stroke="#F3E93C" stroke-width="10">
+    <circle cx="110" cy="528" r="30"/><circle cx="290" cy="310" r="30"/><circle cx="560" cy="270" r="30"/><circle cx="820" cy="224" r="30"/><circle cx="1085" cy="420" r="30"/>
+  </g>
+  <g fill="#FF6B57" font-family="monospace" font-size="23" font-weight="700">
+    <text x="86" y="596">01</text><text x="266" y="378">02</text><text x="536" y="338">03</text><text x="796" y="292">04</text><text x="1061" y="488">05</text>
+  </g>
+  <text x="82" y="96" fill="#0F172A" font-family="monospace" font-size="28" letter-spacing="6">PALACE ROUTE / 02</text>
+  <text x="82" y="690" fill="#64748B" font-family="monospace" font-size="20" letter-spacing="3">RESERVATION · STAMP · WALK · RETURN</text>
+</svg>
