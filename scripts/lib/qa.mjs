@@ -253,6 +253,11 @@ export async function runStaticChecks({ repoRoot, distDir, issueId }) {
     && issueHtml.includes('data-language="zh"')
     && issueHtml.includes('data-language="en"')
     && ['field','coral','analog'].every(style => issueHtml.includes(`data-pref-style="${style}"`))
+    && issueHtml.includes('class="story-actions"')
+    && issueHtml.includes('data-open-contents')
+    && issueHtml.includes('data-page-type="issue"')
+    && issueHtml.includes('data-locale-variant="en"')
+    && !htmlTags(issueHtml, ['details']).some(tag => /\bsources\b|\bissue-toc-disclosure\b/.test(tag.attributes.class || '') && Object.hasOwn(tag.attributes, 'open'))
     && !/id="reset-preferences"|<fieldset\b/.test(issueHtml)
   );
   checks.push(result("reading_system_contract", readingMarkup, {
@@ -352,7 +357,7 @@ async function captureCase({ browser, origin, issueId, evidenceDir, name, width,
     const isDeferredExternalPreview = (image) => image.loading === "lazy"
       && image.dataset.externalPreview === "true"
       && !image.complete;
-    const headline = document.querySelector(".hero-copy h1");
+    const headline = document.querySelector(".living-heading h1,.hero-copy h1");
     const headlineStyle = headline ? getComputedStyle(headline) : null;
     const headlineFontSize = headlineStyle ? Number.parseFloat(headlineStyle.fontSize) : null;
     const headlineLineHeight = headlineStyle ? Number.parseFloat(headlineStyle.lineHeight) : null;

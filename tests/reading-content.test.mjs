@@ -138,7 +138,7 @@ test('served pages include complete source content, stable issue boundaries and 
   for (const date of ['2026-08-20', '2026-08-21', '2026-08-22']) publicationIssues.push({ ...await json(`src/historical/${date}/meta.json`), preservation_kind: 'historical_original' });
   await buildReadingSystem({ repoRoot, outDir, validatedIssues, publicationIssues });
   const home = await readFile(path.join(outDir, 'index.html'), 'utf8');
-  assert.equal((home.match(/class="ct-story-entry story-open"/g) || []).length, model.latest.stories.length);
+  assert.equal((home.match(/class="[^"]*\bct-story-entry\s+story-open[^"]*"/g) || []).length, model.latest.stories.length);
   assert.match(home, /data-quote-mode="daily"/);
   assert.match(home, /rooms\/reading-system\.js\?v=[a-f0-9]{12}/);
   assert.match(home, /data-style="field"/);

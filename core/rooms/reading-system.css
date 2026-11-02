@@ -184,6 +184,7 @@ html{scroll-padding-top:192px;scroll-padding-bottom:90px}
 .ct-story-entry:hover{text-decoration:none}
 .ct-story-entry .story-image{border-radius:18px}
 .story-summary{margin-top:0;user-select:text;cursor:text}
+.ct-story-entry .story-summary,.story-open .story-summary{cursor:inherit}
 .story-source{margin-top:8px}
 .photo-note [data-ct-control]{padding-inline:10px}
 #close-settings{font-size:25px;line-height:1}
@@ -313,9 +314,10 @@ html:not(.reading-ready) .catalog-tools,html:not(.reading-ready) .pagination{dis
 .js .visual-open:not([data-image=loaded]) img{position:absolute;inset:0;opacity:0;visibility:hidden}.js .visual-open:not([data-image=loaded]) .inline-placeholder{display:flex}.image-unavailable{display:none}.visual-open[data-image=failed] .image-loading{display:none}.visual-open[data-image=failed] .image-unavailable{display:block}
 .visual-caption{font-size:12px;line-height:1.9;color:var(--muted);padding-top:12px}.visual-caption strong{display:block;color:var(--ink);font-weight:550}.visual-credit{display:block;font-size:11px;margin-top:5px}.visual-caption a{display:inline-flex;align-items:center;min-height:44px;color:var(--accent);font-size:12px}
 .image-dialog{border:0;background:var(--page);color:var(--ink);border-radius:24px;padding:0;max-width:min(1120px,calc(100vw - 28px));max-height:92dvh;overflow:auto;overscroll-behavior:contain;box-shadow:var(--shadow)}
-.image-dialog::backdrop{background:#14251ecc;backdrop-filter:blur(4px)}.dialog-header{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:12px 16px 12px 22px;font-size:12px;color:var(--muted)}
+.image-dialog::backdrop{background:rgb(0 0 0 / .72);backdrop-filter:blur(4px)}.dialog-header{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:12px 16px 12px 22px;font-size:12px;color:var(--muted)}
 .dialog-image-area{display:flex;align-items:center;justify-content:center;min-height:0;background:transparent;padding:0 12px}.dialog-image-area img{display:block;width:auto;height:auto;max-width:100%;max-height:68dvh;border-radius:18px}.dialog-error{display:none;font-size:14px;color:var(--muted);padding:35px 24px;text-align:center}.dialog-image-area.failed img{display:none}.dialog-image-area.failed .dialog-error{display:block;min-height:150px}
 .dialog-caption{padding:18px 22px 22px;font-size:13px;line-height:1.9}.dialog-credit{display:block;font-size:11px;color:var(--muted);margin-top:8px}.dialog-source{display:inline-flex;align-items:center;min-height:44px;color:var(--accent);margin-top:12px}
+.dialog-navigation:not([hidden]){display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px 0;font-size:12px;color:var(--muted)}.dialog-navigation button{min-height:44px;padding:0 10px;border:0;background:transparent;color:var(--ink);font:inherit;cursor:pointer}.dialog-navigation button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 @media(max-width:1100px){.article-catalog{grid-template-columns:repeat(2,minmax(0,1fr))}.reading-layout{grid-template-columns:90px minmax(0,740px);padding:0 30px;gap:25px}}
 @media(max-width:800px){.reading-layout{display:block;padding:0 28px}.reading-rail{display:none}.article-body{margin:auto}.article-top{padding:0 28px;margin-top:35px}.lead-image{width:calc(100% - 40px);margin-bottom:38px}.issue-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.article-tools{grid-template-columns:minmax(0,1fr) 150px}}
 @media(max-width:740px){:root{--gutter:24px}.story-card.story-2{display:flex}.extras{padding:24px}.extra-list{grid-template-columns:1fr}.issue-toc{grid-template-columns:1fr}.issue-grid{gap:26px 20px}.site-footer{padding-bottom:80px}.page-article #toolbar{padding:5px 15px}.page-article .tool-inner{padding:5px 8px}.article-top{padding:0 20px}.page-article .title-zh h1{font-size:clamp(32px,8vw,42px)}.page-article .title-en h1{font-size:clamp(38px,10vw,54px)}.edition-line{gap:12px;font-size:11px}.lead-image{width:calc(100% - 36px)}.lead-image figcaption{display:block}.lead-image figcaption>a{margin-top:4px}.article-catalog{gap:32px 20px}.article-catalog .entry-title{font-size:19px}.story .story-summary{font-size:15px}.catalog{padding-bottom:30px}.article-pager{gap:15px}.pager-item{font-size:16px;padding:18px}.sources,.issue-index{padding:8px 16px 15px}.sources li{padding:14px}.inline-visual.paired .inline-visual-grid{gap:14px}.visual-caption{font-size:12px}.dialog-image-area img{max-height:64dvh}.back-top{right:16px}}
@@ -424,6 +426,38 @@ html:not(.reading-ready) .story-image .fallback-label{display:block}
 html:not(.reading-ready) .visual-open .inline-placeholder{display:flex}
 html:not(.reading-ready) .visual-open img.official{display:none}
 .source-copy .source-metadata{display:block;margin-top:5px;font-size:11px;line-height:1.8;color:var(--muted);overflow-wrap:anywhere}
+
+/* Glass must be able to sample the scrolling page, not an opaque ancestor. */
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  :root[data-surface=glass] body.page-article[data-reading-system=soft-v1] #toolbar{background:transparent}
+  html.reading-ready[data-surface=glass] body.page-home .masthead[data-scrolled=true]::before{
+    background:linear-gradient(to bottom,color-mix(in srgb,var(--page) 84%,transparent) 0%,color-mix(in srgb,var(--page) 78%,transparent) 73%,transparent 100%);
+    backdrop-filter:blur(18px) saturate(1.2);-webkit-backdrop-filter:blur(18px) saturate(1.2);
+  }
+  /* Match the scrolling category rail to the same translucent material. The
+     last few pixels dissolve the backdrop itself as well as its tint, so the
+     transition does not leave a rectangular blur edge across the artwork. */
+  html.reading-ready[data-surface=glass] body.page-home .stories .browse-controls[data-stuck=true]::before{
+    background:linear-gradient(to bottom,color-mix(in srgb,var(--page) 84%,transparent) 0%,color-mix(in srgb,var(--page) 78%,transparent) 73%,transparent 100%);
+    backdrop-filter:blur(18px) saturate(1.2);-webkit-backdrop-filter:blur(18px) saturate(1.2);
+    -webkit-mask-image:linear-gradient(to bottom,#000 0 86%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0 86%,transparent 100%);
+  }
+}
+@media(prefers-reduced-transparency:reduce){
+  :root[data-surface=glass] body.page-article[data-reading-system=soft-v1] #toolbar{background:var(--page)}
+  html.reading-ready[data-surface=glass] body.page-home .masthead[data-scrolled=true]::before{background:linear-gradient(to bottom,var(--page) calc(100% - 6px),transparent 100%);backdrop-filter:none;-webkit-backdrop-filter:none}
+  html.reading-ready[data-surface=glass] body.page-home .stories .browse-controls[data-stuck=true]::before{background:linear-gradient(to bottom,var(--page) calc(100% - 6px),transparent 100%);backdrop-filter:none;-webkit-backdrop-filter:none;mask-image:none;-webkit-mask-image:none}
+}
+@media(forced-colors:active){
+  :root[data-surface=glass] body.page-article[data-reading-system=soft-v1] #toolbar{background:Canvas}
+  html.reading-ready[data-surface=glass] body.page-home .masthead[data-scrolled=true]::before{background:Canvas;backdrop-filter:none;-webkit-backdrop-filter:none}
+  html.reading-ready[data-surface=glass] body.page-home .stories .browse-controls[data-stuck=true]::before{background:Canvas;backdrop-filter:none;-webkit-backdrop-filter:none;mask-image:none;-webkit-mask-image:none}
+}
+
+/* Reserve the cue's own space so it never covers a filter or its focus ring. */
+.browse-controls[data-rail-overflow="true"]{padding-inline-end:20px}
+.browse-controls[data-rail-more="true"]::after{content:'›';position:absolute;right:0;top:50%;transform:translateY(-50%);width:20px;text-align:center;color:var(--muted);font-size:22px;line-height:1;pointer-events:none}
+@media(forced-colors:active){.browse-controls[data-rail-more="true"]::after{color:CanvasText}}
 
 /* One figure state drives its image and its fallback in cards and readers. */
 .js [data-photo][data-image]:not([data-image=loaded]) .story-image img.official,

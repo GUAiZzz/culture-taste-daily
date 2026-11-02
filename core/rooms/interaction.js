@@ -21,6 +21,7 @@
     try{sessionStorage.setItem(KEY,JSON.stringify(preferences));}catch{}};
   const apply=()=>{
     const root=document.documentElement;
+    root.dataset.locale=preferences.language;root.dataset.language=preferences.language;root.lang=preferences.language==='en'?'en':'zh-CN';
     root.dataset.style=preferences.style;root.dataset.theme=preferences.theme;root.dataset.surface=preferences.surface;
     root.classList.toggle('no-glass',preferences.surface==='solid');
     root.classList.toggle('glass-tools',preferences.surface==='glass');
@@ -46,7 +47,17 @@
     preferences=next;write();apply();return getPreferences();
   };
   const subscribe=fn=>{subscribers.add(fn);fn(getPreferences());return()=>subscribers.delete(fn);};
-  const feedback=()=>{if(preferences.haptics&&typeof navigator.vibrate==='function'){try{navigator.vibrate(8);}catch{}}};
+  const feedbackPolicy=window.CTFeedbackPolicy?.create({verifiedEvents:[]});
+  let activationCommit=null,activationCounter=0,lastFeedback={attempted:false,reason:'not-requested'};
+  document.addEventListener('click',()=>{const id=`activation-${++activationCounter}`;activationCommit=id;queueMicrotask(()=>{if(activationCommit===id)activationCommit=null;});},true);
+  const feedback=(event='confirm',detail={})=>{
+    if(event==='boundary.rearm')return feedbackPolicy?.request(event,detail)||{allowed:false,reason:'policy-unavailable'};
+    if(!preferences.haptics)return lastFeedback={event,attempted:false,reason:'preference-off'};
+    const decision=feedbackPolicy?.request(event,{...detail,commitId:detail.commitId||activationCommit});
+    if(!decision?.allowed)return lastFeedback={...decision,event,attempted:false,reason:decision?.reason||'policy-unavailable'};
+    if(typeof navigator.vibrate!=='function')return lastFeedback={event,attempted:false,reason:'api-unavailable'};
+    try{navigator.vibrate(8);return lastFeedback={event,attempted:true,reason:'attempt-only'};}catch{return lastFeedback={event,attempted:false,reason:'api-error'};}
+  };
   const renderSettingsIcon=button=>{if(button)button.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h3m4 0h9M4 12h9m4 0h3M4 18h3m4 0h9"/><circle cx="9" cy="6" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="9" cy="18" r="2"/></svg>';};
   const resolve=(element,scope=document)=>typeof element==='string'?scope.querySelector(element):element;
   const bindDialog=(element,options={})=>{
@@ -67,7 +78,7 @@
     opener?.setAttribute('aria-haspopup','dialog');opener?.setAttribute('aria-expanded','false');
     if(dialog.id)opener?.setAttribute('aria-controls',dialog.id);
     opener?.addEventListener('click',()=>open(opener));
-    dialog.querySelectorAll('[data-ct-close]').forEach(button=>button.addEventListener('click',close));
+    dialog.querySelectorAll('[data-ct-close]').forEach(button=>button.addEventListener('click',event=>{close();if(event.isTrusted)feedback('dismiss');}));
     dialog.addEventListener('close',()=>{
       if(locked){lockCount=Math.max(0,lockCount-1);locked=false;
         if(lockCount===0){document.documentElement.style.overflow=previousOverflow;document.documentElement.style.scrollbarGutter=previousGutter;}}
@@ -84,7 +95,7 @@
     });
     const outside=event=>{const box=dialog.getBoundingClientRect();return event.target===dialog&&(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom);};
     dialog.addEventListener('pointerdown',event=>{outsideDown=outside(event);});
-    dialog.addEventListener('click',event=>{if(outsideDown&&outside(event))close();outsideDown=false;});
+    dialog.addEventListener('click',event=>{if(outsideDown&&outside(event)){close();if(event.isTrusted)feedback('dismiss');}outsideDown=false;});
     const controller={open,close};dialogs.set(dialog,controller);return controller;
   };
   document.addEventListener('keydown',event=>{
@@ -99,5 +110,5 @@
   window.addEventListener('storage',event=>{if(event.key!==KEY&&event.key!==null)return;
     const next=read();document.dispatchEvent(new CustomEvent('ct:preferences-will-change',{detail:{previous:{...preferences},next:{...next}}}));preferences=next;apply();});
   window.addEventListener('pageshow',event=>{if(event.persisted){const next=read();document.dispatchEvent(new CustomEvent('ct:preferences-will-change',{detail:{previous:{...preferences},next:{...next}}}));preferences=next;apply();}});
-  window.CTUI=Object.freeze({getPreferences,setPreferences,subscribe,feedback,bindDialog,renderSettingsIcon});
+  window.CTUI=Object.freeze({getPreferences,setPreferences,subscribe,feedback,feedbackState:()=>({...lastFeedback,verification:'attempt-only',verifiedEvents:feedbackPolicy?.state().verifiedEvents||[]}),bindDialog,renderSettingsIcon});
 })();

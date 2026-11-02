@@ -11,25 +11,37 @@ export const renderMarkdown = value => externalLinks(markdown.render(value || ''
 
 export function parseStoryContent(value, english = {}) {
   let body = value.trim();
-  const sourceMatch = /^来源[：:]\s*/m.exec(body);
-  let sourcesMarkdown = '';
-  if (sourceMatch) {
-    const suffix = body.slice(sourceMatch.index + sourceMatch[0].length);
-    const followingLanguage = /^### (?:中文|English)\s*$/m.exec(suffix);
-    sourcesMarkdown = (followingLanguage ? suffix.slice(0, followingLanguage.index) : suffix).trim();
-    body = body.slice(0, sourceMatch.index).trim() + (followingLanguage ? '\n\n' + suffix.slice(followingLanguage.index).trim() : '');
+  // Source boundaries are presentation metadata. Never rewrite the locked input.
+  const heading = /^(来源(?:[ \t]*\/[ \t]*Sources)?[：:]|Sources[：:])[ \t]*(?:\r?\n)?/gim;
+  const matches = [...body.matchAll(heading)], sourceBlocks = [];
+  for (let index = matches.length - 1; index >= 0; index--) {
+    const match = matches[index], suffix = body.slice(match.index + match[0].length);
+    const nextLanguage = /^### (?:中文|English)\s*$/m.exec(suffix);
+    const end = nextLanguage ? match.index + match[0].length + nextLanguage.index : body.length;
+    sourceBlocks.unshift({ language: /^Sources/i.test(match[1]) ? 'en' : /\//.test(match[1]) ? 'shared' : 'zh', markdown: body.slice(match.index + match[0].length, end).trim() });
+    body = (body.slice(0, match.index).trimEnd() + '\n\n' + body.slice(end).trimStart()).trim();
   }
   const firstBreak = body.indexOf('\n\n');
   const first = (firstBreak < 0 ? body : body.slice(0, firstBreak)).trim();
   if (first === english.title?.trim()) body = firstBreak < 0 ? '' : body.slice(firstBreak + 2).trim();
-  const zhMarker = /^### 中文\s*$/m.exec(body);
-  const enMarker = /^### English\s*$/m.exec(body);
+  const zhMarker = /^### 中文\s*$/m.exec(body), enMarker = /^### English\s*$/m.exec(body);
   if (Boolean(zhMarker) !== Boolean(enMarker) || (zhMarker && enMarker.index < zhMarker.index)) throw Error('Incomplete bilingual story blocks');
   const zhMarkdown = zhMarker ? body.slice(zhMarker.index + zhMarker[0].length, enMarker.index).trim() : body;
   const hasFullEnglish = Boolean(enMarker);
   const enMarkdown = enMarker ? body.slice(enMarker.index + enMarker[0].length).trim() : [...new Set([english.deck, english.abstract].filter(Boolean))].join('\n\n');
   if (!zhMarkdown) throw Error('Empty Chinese story body');
-  return { zhMarkdown, enMarkdown, sourcesMarkdown, hasFullEnglish, zhHtml: renderMarkdown(zhMarkdown), enHtml: renderMarkdown(enMarkdown) };
+  const sourcesMarkdown = (sourceBlocks.find(block => block.language !== 'en') || sourceBlocks[0])?.markdown || '';
+  const enSourcesMarkdown = sourceBlocks.find(block => block.language === 'en')?.markdown || '';
+  return { zhMarkdown, enMarkdown, sourcesMarkdown, enSourcesMarkdown, sourceBlocks, hasFullEnglish, zhHtml: renderMarkdown(zhMarkdown), enHtml: renderMarkdown(enMarkdown) };
+}
+
+export function englishReadingKind({ date, storyId, contentSha256, hasBody, requestedKind }) {
+  const kind = requestedKind || (hasBody ? 'full' : 'abstract');
+  const lockedExistingAbstract = date === '2026-10-28'
+    && storyId === 'apple-designers-of-tomorrow-paris-2026'
+    && contentSha256 === '1dc421a83a90e20745e9361c694fd5e2b7178ab30bc17d225246b8fd8ecd102e';
+  if (date >= '2026-10-28' && kind !== 'full' && !lockedExistingAbstract) throw Error(`New ordinary issue requires full English: ${date}/${storyId}`);
+  return kind;
 }
 
 export function paragraphCount(value) {
@@ -120,6 +132,11 @@ export async function loadReadingModel({ repoRoot, validatedIssues, publicationI
     const title = introParts.shift().replace(/^# /, ''), en = introParts.shift();
     const sections = parts.map(section => ({ title: section.slice(0, section.indexOf('\n')).trim(), markdown: section.slice(section.indexOf('\n') + 1).trim() }));
     const localMedia = await optionalJson(path.join(repoRoot, 'src/issues', date, 'reading-media.public.json'));
+    const readingLocale = await optionalJson(path.join(repoRoot, 'src/issues', date, 'reading-locale.public.json'));
+    const experience = await optionalJson(path.join(repoRoot, 'src/issues', date, 'edition-experience.public.json'));
+    if (Object.keys(readingLocale).length && (readingLocale.schemaVersion !== 1 || readingLocale.issueId !== date)) throw Error(`Invalid locale metadata identity ${date}`);
+    for (const id of Object.keys(readingLocale.stories || {})) if (!manifest.stories.some(story => story.id === id)) throw Error(`Unknown locale story ${date}/${id}`);
+    if (readingLocale.sourceContentSha256 && readingLocale.sourceContentSha256 !== manifest.content_lock.sha256) throw Error(`Locale metadata is stale for ${date}`);
     const stories = manifest.stories.map((story, index) => {
       const section = sections[index];
       if (section?.title !== story.title) throw Error(`Section mismatch ${date} ${story.id}`);
@@ -129,17 +146,25 @@ export async function loadReadingModel({ repoRoot, validatedIssues, publicationI
       const media = correction ? { ...story.media, external_image_url: correction.external_image_url, alt: correction.alt, origin_url: correction.origin_url } : story.media;
       const parsed = parseStoryContent(section.markdown, story.english);
       if (date >= '2026-10-28' && !parsed.hasFullEnglish) throw Error(`Complete source-authored English is required for ${date}/${story.id}`);
-      const result = { ...story, ...parsed, media, markdown: section.markdown, date, index, issueTitle: title, category: record.category, url: `/issues/${date}/stories/${story.id}/` };
+      const locale = readingLocale.stories?.[story.id] || {};
+      if (readingLocale.stories && (!['full','abstract'].includes(locale.englishKind) || !locale.summaryEn || !locale.captionEn)) throw Error(`Incomplete locale fields ${date}/${story.id}`);
+      const imageFacts = experience.stories?.find(item => item.id === story.id);
+      const imageAspectRatio = imageFacts?.paletteBasis?.includes('unavailable') ? 0 : Number(imageFacts?.aspectRatio) || 0;
+      const result = { ...story, ...parsed, locale, imageAspectRatio, sourceLabelsEn: readingLocale.sourceLabelsEn || {}, sourceOriginalLanguageExceptions: readingLocale.sourceOriginalLanguageExceptions || [], englishKind: englishReadingKind({ date, storyId: story.id, contentSha256: manifest.content_lock.sha256, hasBody: parsed.hasFullEnglish, requestedKind: locale.englishKind }), media, markdown: section.markdown, date, index, issueTitle: title, category: record.category, url: `/issues/${date}/stories/${story.id}/` };
       const local = localMedia[story.id] ?? localMedia[key];
       if (local && centralMedia[key]) throw Error(`Conflicting reading media ${key}`);
-      result.inlineMedia = validateReadingMedia(local ?? centralMedia[key] ?? [], result);
+      result.inlineMedia = validateReadingMedia(local ?? centralMedia[key] ?? [], result).map(row => {
+        const locale = readingLocale.inlineMedia?.[row.external_image_url] || {};
+        if (readingLocale.stories && ['altEn','captionEn','creditEn'].some(field => !locale[field])) throw Error(`Incomplete inline locale ${date}/${story.id}`);
+        return { ...row, locale };
+      });
       result.intro = summaries[key]?.text || editorialIntros[key]?.text || parsed.zhMarkdown.split('\n\n').find(part => !part.startsWith('#'))?.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/[*_]/g, '') || '';
       return result;
     });
     for (const key of Object.keys(localMedia)) if (!stories.some(story => key === story.id || key === `${date}/${story.id}`)) throw Error(`Unknown reading media story ${date}/${key}`);
     const closingSections = sections.slice(stories.length);
     const cover = await readFile(path.join(repoRoot, 'src/site/assets/covers', `${date}.svg`), 'utf8');
-    issues.push({ date, title, en, position: manifest.editorial_position, intro: renderMarkdown(introParts.join('\n\n')), stories, extras: radar.items.filter(item => !manifest.stories.some(story => story.id === (item.included_story_id || item.id))), cover, closing: renderMarkdown(closingSections.map(section => `## ${section.title}\n\n${section.markdown}`).join('\n\n')), hash: manifest.source_hashes.content_sha256, locked: manifest.content_lock.sha256, raw: validated.content, url: `/issues/${date}/`, manifest });
+    issues.push({ date, title, en, locale: readingLocale.issue || {}, extraLocale: readingLocale.extras || {}, position: manifest.editorial_position, intro: renderMarkdown(introParts.join('\n\n')), stories, extras: radar.items.filter(item => !manifest.stories.some(story => story.id === (item.included_story_id || item.id))), cover, closing: renderMarkdown(closingSections.map(section => `## ${section.title}\n\n${section.markdown}`).join('\n\n')), hash: manifest.source_hashes.content_sha256, locked: manifest.content_lock.sha256, raw: validated.content, url: `/issues/${date}/`, manifest });
   }
   for (const key of Object.keys(centralMedia)) {
     if (!/^\d{4}-\d{2}-\d{2}\/[a-z0-9-]+$/.test(key)) throw Error(`Invalid central reading media key ${key}`);

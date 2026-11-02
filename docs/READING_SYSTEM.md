@@ -2,6 +2,10 @@
 
 Status: owner approved on 2026-10-28. This is the current implementation contract; actual deployment is established separately by the Preview workflow and live-identity receipt. Authority: [Amendment A3](PRODUCTION_CONTRACT_V3_A3.md). The approved soft homepage and complete reader form one publication. New daily content inherits this system across all three reading styles. A daily candidate must not invent another UI/navigation model or drop one of the approved styles.
 
+## Owner-approved Living Edition B maintenance
+
+The 2026-11-02 owner decision adopts [Living Edition B](LIVING_EDITION_B.md) for the homepage and its reading transitions, with the already reviewed BK02 lower-home composition. That focused specification supersedes the former full article-card homepage and visible category-bar placement below; filtering now lives inside the native full-title directory. Complete issue reading, locked-source preservation, all nine style/appearance combinations and the existing Preview-only release path remain required. Optional official Paper sphere rendering is explicitly approved for the bounded homepage gesture; it is never required for reading.
+
 ## Stable structure and editorial freedom
 
 `core/rooms/render.mjs` is the shared rendering entrypoint. The shared shell, interactions, typography controls and accessibility remain stable. Daily editorial work supplies the date, hierarchy, bilingual text, actual images, captions, sources and curation. Images, their sequence and useful pauses may vary with the subject. UI changes are separate reviewed maintenance work, with complete regression evidence; they cannot be smuggled into a dated content PR.

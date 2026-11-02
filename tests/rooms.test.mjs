@@ -7,131 +7,65 @@ import {buildSite} from '../scripts/lib/build.mjs';
 import {startStaticServer} from '../scripts/lib/server.mjs';
 import {createOfflineQaContext} from '../scripts/lib/offline-qa.mjs';
 import {chromium} from 'playwright';
+// v2.1 migration: homepage artwork opens the full edition at a story anchor;
+// standalone reading remains an explicit secondary action. Retired curtain
+// selectors must not be used as a proxy for reading, touch or style coverage.
 const repoRoot=path.resolve(import.meta.dirname,'..');let temp,report,server,browser,index;
 const base=()=>server.origin+'/culture-taste-daily';
-const context=options=>createOfflineQaContext(browser,{viewport:{width:390,height:844},...options},server.origin);
+const context=options=>createOfflineQaContext(browser,{viewport:{width:390,height:844},reducedMotion:'reduce',...options},server.origin);
+const ready=p=>p.waitForSelector('html.reading-ready');
 before(async()=>{temp=await mkdtemp(path.join(os.tmpdir(),'ct-reading-system-test-'));report=await buildSite({repoRoot,outDir:path.join(temp,'culture-taste-daily'),baseUrl:'https://guaizzz.github.io/culture-taste-daily/'});index=JSON.parse(await readFile(path.join(temp,'culture-taste-daily/content-index.json')));server=await startStaticServer(temp);browser=await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL??'chrome',headless:true});});
 after(async()=>{await browser?.close();await server?.close();if(temp)await rm(temp,{recursive:true,force:true});});
 
 test('growing inventory preserves latest issue, article order, locks and deterministic artifact bytes',async()=>{
  const sourceDates=(await readdir(path.join(repoRoot,'src/issues'))).sort();assert.equal(index.issues.at(-1).date,sourceDates.at(-1));
  assert.equal(index.issues.length,report.issues.filter(issue=>issue.issue_id>='2026-08-25').length);
- for(const issue of index.issues){
-  const m=JSON.parse(await readFile(path.join(repoRoot,'src/issues',issue.date,'issue-manifest.public.json')));
-  const html=await readFile(path.join(temp,'culture-taste-daily',issue.url,'index.html'),'utf8');
-  assert.ok(html.includes(`data-content-sha256="${m.source_hashes.content_sha256}"`));
-  assert.ok(html.includes('data-reading-system="soft-v1"'));
-  assert.deepEqual(index.articles.filter(story=>story.date===issue.date).map(story=>story.id),m.stories.map(story=>story.id));
-  for(const story of m.stories)assert.ok(html.includes(story.title.replaceAll('&','&amp;')));
- }
+ for(const issue of index.issues){const m=JSON.parse(await readFile(path.join(repoRoot,'src/issues',issue.date,'issue-manifest.public.json')));const html=await readFile(path.join(temp,'culture-taste-daily',issue.url,'index.html'),'utf8');assert.ok(html.includes(`data-content-sha256="${m.source_hashes.content_sha256}"`));assert.ok(html.includes('data-reading-system="soft-v1"'));assert.deepEqual(index.articles.filter(story=>story.date===issue.date).map(story=>story.id),m.stories.map(story=>story.id));for(const story of m.stories)assert.ok(html.includes(story.title.replaceAll('&','&amp;')));}
  const again=await buildSite({repoRoot,outDir:path.join(temp,'second'),baseUrl:'https://guaizzz.github.io/culture-taste-daily/'});assert.equal(report.artifact_digest,again.artifact_digest);
+ const inputs=JSON.parse(await readFile(path.join(temp,'culture-taste-daily/view-inputs.public.json')));assert.ok(inputs.reading_view_input_hashes[index.issues.at(-1).date]);assert.ok(inputs.shared_runtime_asset_sha256['rooms/reading-periphery.css']);
 });
-
-for(const [query,style,theme] of [['style=field&theme=light','field','light'],['style=coral&theme=warm','coral','warm'],['style=analog&theme=dark','analog','dark'],['theme=field','field',null],['theme=coral','coral',null],['theme=analog','analog',null]])test(`${query} opens the same reading system and preserves its visual style across routes`,async()=>{
- const c=await context(),p=await c.newPage(),errors=[];p.on('pageerror',error=>errors.push(error.message));
- await p.goto(base()+'/?'+query);await p.waitForSelector('html.reading-ready');assert.equal(await p.locator('html').getAttribute('data-style'),style);if(theme)assert.equal(await p.locator('html').getAttribute('data-theme'),theme);
- await p.locator('.category-board .story-open').first().click();await p.waitForURL(/\/culture-taste-daily\/issues\//);await p.waitForSelector('html.reading-ready');assert.match(p.url(),/\/culture-taste-daily\/issues\//);assert.equal(await p.locator('html').getAttribute('data-style'),style);if(theme)assert.equal(await p.locator('html').getAttribute('data-theme'),theme);
- assert.ok((await p.locator('#article-body').innerText()).length>100);
+for(const [query,style,theme]of[['style=field&theme=light','field','light'],['style=coral&theme=warm','coral','warm'],['style=analog&theme=dark','analog','dark'],['theme=field','field',null],['theme=coral','coral',null],['theme=analog','analog',null]])test(`${query} preserves style through edition, explicit standalone and two-level return`,async()=>{
+ const c=await context(),p=await c.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(base()+'/?'+query);await ready(p);
+ assert.equal(await p.locator('html').getAttribute('data-style'),style);if(theme)assert.equal(await p.locator('html').getAttribute('data-theme'),theme);
+ const entry=p.locator('.bookmark-item a.ct-story-entry').nth(1),id=await entry.getAttribute('data-story-id');await entry.click();await ready(p);
+ assert.ok(new URL(p.url()).hash==='#story-'+id);assert.equal(await p.locator('.issue-story').count(),index.issues.at(-1).stories);assert.ok((await p.locator(`#issue-body-${id}`).innerText()).length>100);
+ const anchor=await p.locator('#story-'+id).evaluate(el=>({top:el.getBoundingClientRect().top,offset:document.querySelector('.site-header').getBoundingClientRect().bottom+16}));assert.ok(Math.abs(anchor.top-anchor.offset)<=4,JSON.stringify(anchor));
+ await p.locator(`#story-${id} .action-standalone`).click();await ready(p);assert.ok(new URL(p.url()).pathname.includes('/stories/'+id+'/'));assert.ok((await p.locator('#article-body').innerText()).length>100);const parent=await p.evaluate(()=>window.CTLivingNavigation.currentParent());assert.equal(parent.clickedStoryId,id);
  assert.equal(await p.locator('.reader-toolbar [data-language]').count(),0);assert.equal(await p.locator('.reader-toolbar a[href*="#sources"]').count(),0);
- await p.locator('[data-open-settings]').click();assert.ok(await p.locator('#reading-settings').isVisible());assert.equal(await p.locator('#reading-settings [data-language]').count(),2);
- assert.equal(await p.locator('#reading-settings fieldset,#reset-preferences').count(),0);await p.keyboard.press('Escape');
- await p.locator('a[data-reading-return]').first().click();await p.waitForURL(url=>url.pathname==='/culture-taste-daily/');await p.waitForSelector('html.reading-ready');assert.equal(new URL(p.url()).pathname,'/culture-taste-daily/');assert.equal(await p.locator('html').getAttribute('data-style'),style);if(theme)assert.equal(await p.locator('html').getAttribute('data-theme'),theme);
- await p.getByRole('navigation',{name:'主要导航'}).getByRole('link',{name:'往期档案'}).click();await p.waitForURL(url=>url.pathname==='/culture-taste-daily/archive/');await p.waitForSelector('html.reading-ready');assert.equal(await p.locator('html').getAttribute('data-style'),style);if(theme)assert.equal(await p.locator('html').getAttribute('data-theme'),theme);
- assert.deepEqual(errors,[]);await c.close();
+ await p.locator('[data-open-settings]').click();assert.ok(await p.locator('#reading-settings').isVisible());assert.equal(await p.locator('#reading-settings [data-language]').count(),2);assert.equal(await p.locator('#reading-settings fieldset,#reset-preferences').count(),0);await p.keyboard.press('Escape');
+ await p.locator('.reader-back').click();await ready(p);const returned=new URL(p.url());assert.equal(returned.pathname,new URL(parent.url).pathname);assert.equal(returned.hash,'','resumed paragraph must not be overridden by the browser late fragment phase');const restored=await p.evaluate(snapshot=>{const body=[...document.querySelectorAll('[data-reading-body]')].find(el=>el.dataset.sourceBody===snapshot?.paragraph?.storyId),section=body&&[...body.querySelectorAll('[data-reading-language]')].find(el=>el.getClientRects().length&&getComputedStyle(el).visibility!=='hidden'),paragraphs=[...(section?.querySelector('.english-content')||section)?.children||[]].filter(el=>el.tagName==='P'),paragraph=paragraphs[Math.min(snapshot?.paragraph?.index,paragraphs.length-1)],rect=paragraph?.getBoundingClientRect();return {scrollY,marker:document.querySelector('.site-header').getBoundingClientRect().bottom+16,paragraphPoint:rect?rect.top+rect.height*snapshot.paragraph.ratio:null};},parent);assert.ok(parent.paragraph?Number.isFinite(restored.paragraphPoint)&&Math.abs(restored.paragraphPoint-restored.marker)<=2:Math.abs(restored.scrollY-parent.scrollY)<=2,JSON.stringify({parent,restored}));assert.ok(await p.locator(`#story-${id} .action-standalone`).evaluate(el=>document.activeElement===el),'parent return restores focus to the originating standalone action');
+ await p.locator('.masthead [data-site-home]').click();await ready(p);assert.equal(new URL(p.url()).pathname,'/culture-taste-daily/');assert.equal(await p.locator('html').getAttribute('data-style'),style);if(theme)assert.equal(await p.locator('html').getAttribute('data-theme'),theme);
+ await p.locator('.site-footer a[href*="/archive/"]').click();await ready(p);assert.equal(await p.locator('html').getAttribute('data-style'),style);assert.deepEqual(errors,[]);await c.close();
 });
-
-test('six responsive sizes preserve complete headings, horizontal categories and 44px controls on all current routes',async()=>{
- const c=await context({reducedMotion:'reduce'}),p=await c.newPage();
- const routes=['/','/archive/',index.issues.at(-1).url,index.articles.find(story=>story.date===index.issues.at(-1).date).url];
- for(const [width,height]of[[320,568],[390,844],[430,932],[768,1024],[844,390],[1440,900]]){
-  await p.setViewportSize({width,height});
-  for(const style of ['field','coral','analog'])for(const theme of ['light','dark','warm'])for(const route of routes){
-   await p.goto(base()+route+(route.includes('?')?'&':'?')+'style='+style+'&theme='+theme);await p.waitForSelector('html.reading-ready');
-   const geometry=await p.evaluate(()=>({overflow:document.documentElement.scrollWidth-innerWidth,clipped:[...document.querySelectorAll('h1,h2,h3')].filter(e=>e.getClientRects().length&&e.scrollWidth>e.clientWidth+2).map(e=>e.textContent),small:[...document.querySelectorAll('[data-ct-control]')].filter(e=>e.getClientRects().length&&!e.closest('dialog')).filter(e=>{let r=e.getBoundingClientRect();return r.width<43.5||r.height<43.5}).map(e=>e.textContent),categories:[...document.querySelectorAll('[data-home-category]')].map(e=>({whiteSpace:getComputedStyle(e).whiteSpace,shrink:getComputedStyle(e).flexShrink}))}));
-   assert.equal(geometry.overflow,0,`${width} ${style}/${theme} ${route}: overflow`);assert.deepEqual(geometry.clipped,[],`${width} ${style}/${theme} ${route}: heading`);assert.deepEqual(geometry.small,[],`${width} ${style}/${theme} ${route}: touch controls`);assert.ok(geometry.categories.every(item=>item.whiteSpace==='nowrap'&&item.shrink==='0'));
-   await p.locator('[data-open-settings]').click();const panel=await p.locator('#reading-settings').boundingBox();assert.ok(panel.x>=0&&panel.y>=0&&panel.x+panel.width<=width+1&&panel.y+panel.height<=height+1);await p.keyboard.press('Escape');
-  }
- }
+test('six sizes and nine material combinations preserve headings, normal flow and 44px controls',async()=>{
+ const c=await context(),p=await c.newPage(),routes=['/','/archive/',index.issues.at(-1).url,index.articles.find(s=>s.date===index.issues.at(-1).date).url];
+ for(const [width,height]of[[320,568],[390,844],[430,932],[768,1024],[844,390],[1440,900]]){await p.setViewportSize({width,height});for(const style of ['field','coral','analog'])for(const theme of ['light','dark','warm'])for(const route of routes){await p.goto(base()+route+'?style='+style+'&theme='+theme);await ready(p);const g=await p.evaluate(()=>({overflow:document.documentElement.scrollWidth-innerWidth,clipped:[...document.querySelectorAll('h1,h2,h3')].filter(e=>e.getClientRects().length&&e.scrollWidth>e.clientWidth+2).map(e=>e.innerText),small:[...document.querySelectorAll('[data-ct-control]')].filter(e=>e.getClientRects().length&&!e.closest('dialog')).filter(e=>{const r=e.getBoundingClientRect();return r.width<43.5||r.height<43.5}).map(e=>e.innerText),categories:[...document.querySelectorAll('[data-home-category]')].map(e=>({whiteSpace:getComputedStyle(e).whiteSpace,shrink:getComputedStyle(e).flexShrink}))}));assert.equal(g.overflow,0,`${width} ${style}/${theme} ${route}`);assert.deepEqual(g.clipped,[],`${width} ${style}/${theme} ${route} headings`);assert.deepEqual(g.small,[],`${width} ${style}/${theme} ${route} touch`);assert.ok(g.categories.every(x=>x.whiteSpace==='nowrap'&&x.shrink==='0'));await p.locator('[data-open-settings]').click();const r=await p.locator('#reading-settings').boundingBox();assert.ok(r.x>=-1&&r.y>=-1&&r.x+r.width<=width+1&&r.y+r.height<=height+1);await p.keyboard.press('Escape');}}
  await c.close();
 });
-
-test('no JavaScript retains both language layers, source links, archive and article access',async()=>{
- const c=await context({javaScriptEnabled:false}),p=await c.newPage();
- await p.goto(base()+index.articles[0].url);assert.ok((await p.locator('#article-body').innerText()).length>100);assert.ok(await p.locator('#chinese-reading').isVisible());assert.ok(await p.locator('#english-reading').isVisible());assert.ok(await p.locator('.sources a').count());
- await p.goto(base()+'/archive/');assert.equal(await p.locator('[data-catalog-item]:visible').count(),await p.locator('[data-catalog-item]').count());
- await c.close();
+test('no JavaScript retains both language layers, complete source links and archive access',async()=>{
+ const c=await context({javaScriptEnabled:false}),p=await c.newPage();await p.goto(base()+index.articles[0].url);assert.ok((await p.locator('#article-body').innerText()).length>100);assert.ok(await p.locator('#chinese-reading').isVisible());assert.ok(await p.locator('#english-reading').isVisible());assert.ok(await p.locator('.sources a').count());assert.equal(await p.locator('[data-open-settings]:visible').count(),0);await p.goto(base()+'/archive/');assert.equal(await p.locator('[data-catalog-item]:visible').count(),await p.locator('[data-catalog-item]').count());await c.close();
 });
-
-test('a failed enhancement script cannot hide locked reading content',async()=>{
- const c=await context(),p=await c.newPage();
- await c.route('**/rooms/reading-system.js*',route=>route.abort());
- await p.goto(base()+index.articles[0].url);
- assert.ok(await p.locator('#chinese-reading').isVisible());assert.ok(await p.locator('#english-reading').isVisible());
- assert.ok((await p.locator('#article-body').innerText()).length>100);assert.ok(await p.locator('.sources a').count());
- await c.close();
+test('failed deferred enhancement preserves the head-selected English body and native sources',async()=>{
+ const c=await context(),p=await c.newPage();await c.addInitScript(()=>localStorage.setItem('culture-taste-reading-preferences',JSON.stringify({language:'en'})));await c.route('**/rooms/reading-system.js*',r=>r.abort());await p.goto(base()+index.articles[0].url);assert.equal(await p.locator('html').getAttribute('data-locale'),'en');assert.ok(await p.locator('#english-reading').isVisible());assert.ok(await p.locator('#chinese-reading').isHidden());assert.ok((await p.locator('#article-body').innerText()).length>100);const sources=p.locator('.sources');await sources.locator(':scope > summary').click();assert.equal(await sources.evaluate(e=>e.open),true);assert.ok(await sources.locator('a:visible').count());assert.equal(await p.locator('[data-open-settings]:visible').count(),0);await c.close();
 });
-
-test('homepage filtering retains source order and one main entry per article',async()=>{
- const c=await context(),p=await c.newPage();await p.goto(base()+'/');
- const latest=index.issues.at(-1),m=JSON.parse(await readFile(path.join(repoRoot,'src/issues',latest.date,'issue-manifest.public.json')));
- assert.deepEqual(await p.locator('.category-board .story-card').evaluateAll(items=>items.map(e=>e.id.replace(/^card-\d{4}-\d{2}-\d{2}-/,''))),m.stories.map(story=>story.id));
- assert.equal(await p.locator('.category-board a.story-open').count(),m.stories.length);
- await p.locator('[data-home-category="city"]').click();assert.equal(await p.locator('.category-board .story-card:visible').count(),index.articles.filter(story=>story.date===latest.date&&story.category==='city').length);
- await c.close();
+test('homepage index keeps source order and artwork has the same whole-edition destinations',async()=>{
+ const c=await context(),p=await c.newPage();await p.goto(base()+'/');await ready(p);const latest=index.issues.at(-1),m=JSON.parse(await readFile(path.join(repoRoot,'src/issues',latest.date,'issue-manifest.public.json')));
+ assert.deepEqual(await p.locator('.bookmark-item').evaluateAll(items=>items.map(e=>e.id.replace(/^card-\d{4}-\d{2}-\d{2}-/,''))),m.stories.map(s=>s.id));assert.equal(await p.locator('.bookmark-item a.ct-story-entry').count(),m.stories.length);
+ const targets=await p.locator('.living-art').evaluateAll(items=>items.map(e=>({id:e.dataset.storyId,path:new URL(e.href).pathname,hash:new URL(e.href).hash})));assert.equal(targets.length,m.stories.length);for(const target of targets){assert.ok(target.path.endsWith(`/issues/${latest.date}/`));assert.equal(target.hash,'#story-'+target.id);}
+ await p.locator('.home-full-directory>summary').click();await p.locator('[data-home-category="city"]').click();const expected=index.articles.filter(s=>s.date===latest.date&&s.category==='city').length;assert.equal(await p.locator('.bookmark-item:visible').count(),expected);assert.equal(await p.locator('[data-home-directory-category]:visible').count(),expected);assert.ok(await p.locator('[data-home-directory-category]:visible').evaluateAll(items=>items.every(e=>e.dataset.homeDirectoryCategory==='city'&&new URL(e.href).searchParams.get('category')==='city')));await p.locator('[data-home-category="all"]').click();assert.equal(await p.locator('[data-home-directory-category]:visible').count(),m.stories.length);assert.ok(await p.locator('[data-home-directory-category]:visible').evaluateAll(items=>items.every(e=>!new URL(e.href).searchParams.has('category'))));await c.close();
 });
-
-test('archive search, month, category and reset work with preserved original categories',async()=>{
- const c=await context(),p=await c.newPage();await p.goto(base()+'/archive/');
- const missing=await p.locator('[data-catalog="issues"] [data-catalog-item]').evaluateAll(items=>items.filter(e=>!e.dataset.categories?.trim()).map(e=>e.dataset.date));assert.deepEqual(missing,[]);
- await p.locator('#catalog-search').fill('NO_SUCH_STORY_4729');assert.ok(await p.locator('.empty-state').isVisible());await p.locator('[data-clear-search]').click();assert.ok(await p.locator('.empty-state').isHidden());
- await p.locator('[data-view="articles"]').click();assert.ok(await p.locator('[data-catalog="articles"] .story-card:visible').count());
- await p.locator('[data-category-filter="music"]').click();assert.ok(await p.locator('[data-catalog="articles"] .story-card:visible').evaluateAll(items=>items.every(e=>e.dataset.category==='music')));
- await p.locator('#catalog-month').selectOption('2026-08');assert.ok(await p.locator('[data-catalog="articles"] .story-card:visible').evaluateAll(items=>items.every(e=>e.dataset.date.startsWith('2026-08'))));
- await p.locator('[data-clear-search]').click();assert.equal(await p.locator('#catalog-month').inputValue(),'all');assert.equal(await p.locator('[data-category-filter="all"]').getAttribute('aria-pressed'),'true');
- await c.close();
+test('archive search, month, category and reset preserve original categories',async()=>{
+ const c=await context(),p=await c.newPage();await p.goto(base()+'/archive/');await ready(p);assert.deepEqual(await p.locator('[data-catalog="issues"] [data-catalog-item]').evaluateAll(items=>items.filter(e=>!e.dataset.categories?.trim()).map(e=>e.dataset.date)),[]);await p.locator('#catalog-search').fill('NO_SUCH_STORY_4729');assert.ok(await p.locator('.empty-state').isVisible());await p.locator('[data-clear-search]').click();assert.ok(await p.locator('.empty-state').isHidden());await p.locator('[data-view="articles"]').click();assert.ok(await p.locator('[data-catalog="articles"] .story-card:visible').count());await p.locator('[data-category-filter="music"]').click();assert.ok(await p.locator('[data-catalog="articles"] .story-card:visible').evaluateAll(items=>items.every(e=>e.dataset.category==='music')));await p.locator('#catalog-month').selectOption('2026-08');assert.ok(await p.locator('[data-catalog="articles"] .story-card:visible').evaluateAll(items=>items.every(e=>e.dataset.date.startsWith('2026-08'))));await p.locator('[data-clear-search]').click();assert.equal(await p.locator('#catalog-month').inputValue(),'all');assert.equal(await p.locator('[data-category-filter="all"]').getAttribute('aria-pressed'),'true');await c.close();
 });
-
-test('loaded portrait and landscape images use natural ratios; unavailable images retain exact official links',async()=>{
- const c=await context(),p=await c.newPage();
- await c.route('https://www.nact.jp/**',route=>route.fulfill({contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="100" height="200"><rect width="100" height="200" fill="#aaa"/></svg>'}));
- await p.goto(base()+index.articles.find(story=>story.id==='nact-shojo-manga-infinity-2026').url);
- const img=p.locator('.reader-hero img[data-external-preview]').first();await img.waitFor();await p.waitForFunction(()=>{const image=document.querySelector('.reader-hero img[data-external-preview]');return image.complete&&image.naturalWidth>0;});
- const ratio=await img.evaluate(image=>{const r=image.getBoundingClientRect();return{actual:r.width/r.height,natural:image.naturalWidth/image.naturalHeight}});assert.ok(Math.abs(ratio.actual-ratio.natural)<.01,'synthetic portrait is not forced into a fixed frame');
- assert.ok(await p.locator('[data-inline-visual]').count());assert.ok(await p.locator('.photo figcaption a[href^="https:"]').count());await c.close();
+test('decoded portrait images use their natural ratio and retain exact official source links',async()=>{
+ const c=await context(),p=await c.newPage();await c.route('https://www.nact.jp/**',r=>r.fulfill({contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="100" height="200"><rect width="100" height="200" fill="#aaa"/></svg>'}));await p.goto(base()+index.articles.find(s=>s.id==='nact-shojo-manga-infinity-2026').url);await ready(p);const img=p.locator('.reader-hero img[data-external-preview]').first();await p.waitForFunction(()=>document.querySelector('.reader-hero img[data-external-preview]')?.naturalWidth>0);const ratio=await img.evaluate(e=>{const r=e.getBoundingClientRect();return {actual:r.width/r.height,natural:e.naturalWidth/e.naturalHeight};});assert.ok(Math.abs(ratio.actual-ratio.natural)<.01);assert.ok(await p.locator('[data-inline-visual]').count());assert.ok(await p.locator('.photo figcaption a[href^="https:"]').count());await c.close();
 });
-
-// These two cards are deliberately synthetic layout fixtures, not new stories.
-test('eleventh and twelfth cards retain readable widths when a daily package grows',async()=>{
- const c=await context({reducedMotion:'reduce'}),p=await c.newPage();
- for(const [width,height]of[[320,568],[390,844],[768,1024],[1440,900]]){
-  await p.setViewportSize({width,height});await p.goto(base()+'/');await p.waitForSelector('html.reading-ready');
-  await p.evaluate(()=>{const card=document.querySelector('.category-board .story-card:last-child');for(const index of [11,12]){const copy=card.cloneNode(true);copy.id='synthetic-layout-'+index;copy.className='story story-card story-'+index;copy.dataset.layoutFixture='true';card.parentElement.append(copy);}});
-  const layout=await p.locator('[data-layout-fixture]').evaluateAll(cards=>cards.map(card=>{const rect=card.getBoundingClientRect(),group=card.parentElement.getBoundingClientRect();return {width:rect.width,groupWidth:group.width,inside:rect.left>=group.left-1&&rect.right<=group.right+1};}));
-  assert.ok(layout.every(card=>card.inside&&card.width>=(card.groupWidth-80)/3),`${width}px: additional cards remain readable`);
-  assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth-innerWidth),0);
- }
- await c.close();
+test('eleventh and twelfth synthetic index rows remain readable without page overflow',async()=>{
+ const c=await context(),p=await c.newPage();for(const [width,height]of[[320,568],[390,844],[768,1024],[1440,900]]){await p.setViewportSize({width,height});await p.goto(base()+'/');await ready(p);await p.evaluate(()=>{const card=document.querySelector('.bookmark-item:last-child');for(const n of [11,12]){const copy=card.cloneNode(true);copy.id='synthetic-layout-'+n;copy.dataset.layoutFixture='true';card.parentElement.append(copy);}});const rows=await p.locator('[data-layout-fixture]').evaluateAll(cards=>cards.map(card=>{const r=card.getBoundingClientRect(),g=card.parentElement.getBoundingClientRect();const css=getComputedStyle(card.parentElement),columns=css.gridTemplateColumns.split(' ').filter(Boolean).length||1,gap=parseFloat(css.columnGap)||0;return {width:r.width,expected:(g.width-gap*(columns-1))/columns,inside:r.left>=g.left-1&&r.right<=g.right+1};}));assert.ok(rows.every(r=>r.inside&&r.width>=r.expected-2),JSON.stringify(rows));assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth-innerWidth),0);}await c.close();
 });
-
-test('unavailable-image metadata stays horizontal in compact two-column cards',async()=>{
- const c=await context({reducedMotion:'reduce'}),p=await c.newPage();
- for(const [width,height]of[[320,568],[390,844]]){
-  await p.setViewportSize({width,height});await p.goto(base()+'/');await p.locator('.story-3').scrollIntoViewIfNeeded();await p.locator('.story-3 [data-retry-photo]').waitFor({state:'visible'});
-  const geometry=await p.locator('.story-3 .photo-note').evaluate(note=>{const source=note.querySelector('.source-state'),retry=note.querySelector('[data-retry-photo]');return {source:source.getBoundingClientRect().width,retryHeight:retry.getBoundingClientRect().height,retryWhiteSpace:getComputedStyle(retry).whiteSpace};});
-  assert.ok(geometry.source>=100,`${width}: source description remains a readable line`);assert.equal(geometry.retryWhiteSpace,'nowrap');assert.equal(geometry.retryHeight,44);
-  assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth-innerWidth),0);
- }
- await c.close();
+test('failed reader images keep readable captions and a 44px retry target',async()=>{
+ const c=await context(),p=await c.newPage();for(const [width,height]of[[320,568],[390,844]]){await p.setViewportSize({width,height});await p.goto(base()+index.articles.find(s=>s.id==='nike-outkast-georgia-2026').url);await ready(p);await p.locator('.reader-hero [data-retry-photo]').waitFor({state:'visible'});const g=await p.locator('.reader-hero .photo-note').evaluate(note=>{const retry=note.querySelector('[data-retry-photo]');return {sourceWidth:note.querySelector('.source-state').getBoundingClientRect().width,retryHeight:retry.getBoundingClientRect().height,nowrap:getComputedStyle(retry).whiteSpace};});assert.ok(g.sourceWidth>=100);assert.equal(g.nowrap,'nowrap');assert.equal(g.retryHeight,44);assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth-innerWidth),0);}await c.close();
 });
-
-test('saved style is applied before the body parser reaches its first content',async()=>{
- for(const [query,style,theme]of[['style=analog&theme=dark','analog','dark'],['style=coral&theme=warm','coral','warm'],['theme=analog','analog','dark']]){
-  const c=await context(),p=await c.newPage();
-  try{
-   // A test-only parser-time probe distinguishes head bootstrap from deferred setup.
-   await p.route(base()+'/?*',async route=>{const response=await route.fetch({maxRedirects:0});const html=await response.text();await route.fulfill({response,body:html.replace(/(<body[^>]*>)/,'$1<script>document.documentElement.dataset.styleAtBody=document.documentElement.dataset.style;document.documentElement.dataset.themeAtBody=document.documentElement.dataset.theme;</script>')});});
-   await p.goto(base()+'/?'+query);await p.waitForSelector('html.reading-ready');
-   assert.equal(await p.locator('html').getAttribute('data-style-at-body'),style);assert.equal(await p.locator('html').getAttribute('data-theme-at-body'),theme);
-  }finally{await c.close();}
- }
+test('saved style and locale are applied before the parser reaches body content',async()=>{
+ for(const [query,style,theme]of[['style=analog&theme=dark','analog','dark'],['style=coral&theme=warm','coral','warm'],['theme=analog','analog','light']]){const c=await context(),p=await c.newPage();try{await c.addInitScript(()=>localStorage.setItem('culture-taste-reading-preferences',JSON.stringify({language:'en'})));await p.route(base()+'/?*',async route=>{const response=await route.fetch({maxRedirects:0});const html=await response.text();await route.fulfill({response,body:html.replace(/(<body[^>]*>)/,'$1<script>for(const key of ["style","theme","locale"])document.documentElement.dataset[key+"AtBody"]=document.documentElement.dataset[key];</script>')});});await p.goto(base()+'/?'+query);await ready(p);assert.equal(await p.locator('html').getAttribute('data-style-at-body'),style);assert.equal(await p.locator('html').getAttribute('data-theme-at-body'),theme);assert.equal(await p.locator('html').getAttribute('data-locale-at-body'),'en');}finally{await c.close();}}
 });

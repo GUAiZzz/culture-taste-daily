@@ -1,0 +1,104 @@
+{
+  "kind": "public-original-English-abstract-and-immutable-language-guards",
+  "oldContentSha256": "1dc421a83a90e20745e9361c694fd5e2b7178ab30bc17d225246b8fd8ecd102e",
+  "correctedContentSha256": "57febc5ccd81be2025eaacb3337e2f970dd4076b0bb88437cc516fa521418639",
+  "oldAppleEnglish": "At the now-closed Designers of Tomorrow exhibition in Paris, four design practices explored presence through furniture, lighting and familiar materials. Their work moved between digital planning and hands-on craft, ending in objects that invite attention through touch, sound and shared use.",
+  "oldAppleEnglishSha256": "642a5a01d5cf78ae87a9508dd0a2f19c61a56852818141f5d943c4e350c7edd0",
+  "storiesMetadataSha256": "dfd8f898913d6f7ef1c438c4ed0170fc4f2bb0393c38615ae8be5933e86d9fb9",
+  "introSha256": "b78d2feb62de6f7a84488f3ce91a1daa8908d733cc78f5fd1c3edfd44ee07222",
+  "trailingSections": [
+    "后记\n\n从设计、发布到进入日常使用，每个项目还有自己的后续。下一次值得回看的是：这些承诺有没有留下可以观察的变化。\n"
+  ],
+  "storyGuards": [
+    {
+      "id": "nact-shojo-manga-infinity-2026",
+      "title": "少女漫画的经典，如何进入美术馆叙事",
+      "zhMarkdownSha256": "e0d5977c5e85fa90ce94fc84c131f22af1e169a57de4f4c4c44a74886b64cb5a",
+      "enMarkdownSha256": "7b38aca2d09d4ba2a6a86a7f0c0aa67f0510e3011ea41d84116f0cc0c1415854",
+      "sourcesMarkdownSha256": "ea858cbf398343ef4e00376304e4b1dc1a31fd30946227f6ad21c2ffe6d94435",
+      "enSourcesMarkdownSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sectionMarkdownSha256": "111420e16903ae52cc583a6028bcbc3f72b632a284b001ab764f44bd6941650e"
+    },
+    {
+      "id": "undercover-valentin-workwear",
+      "title": "UNDERCOVER为马斯特里赫特家具工坊设计工作服",
+      "zhMarkdownSha256": "8e2226be9dac0c5d2155d64f258771adcb70c214434b9fb2be27d4263bfb1596",
+      "enMarkdownSha256": "0b5c1b2d3879191b33b8ab7de000c416235efbaa9b3b8af808d924d3eca1d879",
+      "sourcesMarkdownSha256": "2548714bd8e284ee3fd543069931f4ef1c38cd635e642d240994c2ab03b54125",
+      "enSourcesMarkdownSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sectionMarkdownSha256": "984fa67c43e906ab9aeb01a9ac607c84c4281926448765ab5925405d82891bdc"
+    },
+    {
+      "id": "nike-outkast-georgia-2026",
+      "title": "Outkast × Georgia：Nike把“96”放进亚特兰大赛场",
+      "zhMarkdownSha256": "265fd77c0f7f3bb659612f9f0bd6f7cc9d035684190a0e4dd99faaefa4f50711",
+      "enMarkdownSha256": "594236ac2a8461df1394d211a75e35f638438f4353e63670f1b2795f32a033c6",
+      "sourcesMarkdownSha256": "3fb426ed85f2890f7579c87d31338264c05c7540e9f7c44d93a422a08426c110",
+      "enSourcesMarkdownSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sectionMarkdownSha256": "ff1945677a9752d2558148b10bd1c5ec3272913f8039b7cabf7f09b341a0228e"
+    },
+    {
+      "id": "noa-clean-noise-album-2026",
+      "title": "把杂音加回来：NOA的“整洁”仍然在场",
+      "zhMarkdownSha256": "65a870188cf59bbbdd110b7939d3f5a4b23196fd63ab2630cf011e854020c28a",
+      "enMarkdownSha256": "aa5673e56710859f6411ba628087e2f5d8557ec6304b3a0a9012ff5c98a8ff40",
+      "sourcesMarkdownSha256": "760ed418620f350e4d308ee1d1accbca1b0a8db93f24b422f05f16518c63288d",
+      "enSourcesMarkdownSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sectionMarkdownSha256": "622224ad3fa9b532d05682ef974e19608aba5395f0ee1f6e12f7022b0d8c7249"
+    },
+    {
+      "id": "asics-michigan-amsi-lab-2026",
+      "title": "鞋还没定型，先把研发搬进校园：ASICS × 密歇根的 2028 目标",
+      "zhMarkdownSha256": "b961af448d9615249dbead1e4b03f90a860f90d7b10967ece1631552543b6aaf",
+      "enMarkdownSha256": "e5e308b4d24b9ab12f7674ba5ba00203c71e729c4a428cfe66b34aab8726c15a",
+      "sourcesMarkdownSha256": "361e7c6a8292ad8e274789fc65efad203ad754f0ace42185725be75c5c06356b",
+      "enSourcesMarkdownSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sectionMarkdownSha256": "aee19cd55f884d1bc23b9d08f341d79cfcb3fc191e882755d69a1b4d93a16d20"
+    },
+    {
+      "id": "apple-designers-of-tomorrow-paris-2026",
+      "title": "当一把椅子会发出声音：四组设计师怎样把注意力带回物件",
+      "zhMarkdownSha256": "1363a1572ab2b106405f9e4e5be545323e8581d668d2b81d6ac8db62ed2e41d7",
+      "enMarkdownSha256": "642a5a01d5cf78ae87a9508dd0a2f19c61a56852818141f5d943c4e350c7edd0",
+      "sourcesMarkdownSha256": "994c5a92051dcb994654538b3d9131fc1cdfc46059d0db88effe8ca041f5fbc8",
+      "enSourcesMarkdownSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sectionMarkdownSha256": "6715457489cf51154b86d34842951ed2f083ef86b96bfeaa443a2378519a40b1"
+    },
+    {
+      "id": "wales-bonner-adidas-fw26-archive",
+      "title": "档案不是一个年代标签：Wales Bonner 与 adidas 重看合作关系",
+      "zhMarkdownSha256": "1bde7fd1a3828829bd7a0da49ac7419a6b882ad587ee3a3615e726c16edaa875",
+      "enMarkdownSha256": "08af2ad8b07c25257a8a49496d4e7a5576d66c10868b620184cb034c59935265",
+      "sourcesMarkdownSha256": "235f402ae333c686e3a507d41cd2d7f866cfa5f6932806fd647000b42373c048",
+      "enSourcesMarkdownSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sectionMarkdownSha256": "a92cd9b774eb9109ca005708984a81955ccdc3b7ddafc56d11af458d92292521"
+    },
+    {
+      "id": "auralee-tekla-wintering-2026",
+      "title": "从温泉到冬居：AURALEE与Tekla第二次合作写下季节变化",
+      "zhMarkdownSha256": "61cf6bb5069d8c1fffce53e5ef3146afe5b924afae21365873430a8a7317a7ce",
+      "enMarkdownSha256": "cb55f062c0dbba56298a97c74bcc41313764a15f69ad33621e7e62b8064a49a4",
+      "sourcesMarkdownSha256": "8456fb3fe8a56cbabdd433eb078c980b2377b74c389ef7cbaa8f8c1ccdd8c662",
+      "enSourcesMarkdownSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sectionMarkdownSha256": "22010bda59a61ef7c51e4640e039a3fa5f083d0ab22b99eaaabea71b606cf3e5"
+    },
+    {
+      "id": "flaming-lips-teardrop-throbs-2026",
+      "title": "《The Teardrop Throbs》先把听歌入口写出来",
+      "zhMarkdownSha256": "cd49bae4ff640ad5a19573ff154cf9dd75a7d3996e787572c6b481664875d136",
+      "enMarkdownSha256": "844fd74f978f327215318fc717614393dc85ad22a46b09ae848f79cd76593049",
+      "sourcesMarkdownSha256": "63a406b2e4f4547e3ed940443d9b07096542a0bef2cc6573618bca2c454c35b3",
+      "enSourcesMarkdownSha256": "ba70efeae17de594a01458b9c155168216909862e93158c31f8a8e9a78609d50",
+      "sectionMarkdownSha256": "2d89bf9779b17ca44784a6515057d836bec01fc5c4a09d9bf6b9d8c1cab06027"
+    },
+    {
+      "id": "miu-miu-holiday-2026-campaign",
+      "title": "两间房，一周之内：Miu Miu 的节日广告与 Diop 展览",
+      "zhMarkdownSha256": "cdf3a9e7bf0a428babd1a0b6944c4a1317c1d017ee374f0acab74a8f30b3eba4",
+      "enMarkdownSha256": "f6773921857a312d63ea317c0e30bf9a1a1248e25dd4c27b0cb1e4dec14717c2",
+      "sourcesMarkdownSha256": "466628314ada859047189f9f6689385258e93bb3656e68ae2aad47a1362c44f0",
+      "enSourcesMarkdownSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sectionMarkdownSha256": "425d4cf9190b1fa1378bc360297ffe444294456e46c713bfce56e868121333a0"
+    }
+  ]
+}
