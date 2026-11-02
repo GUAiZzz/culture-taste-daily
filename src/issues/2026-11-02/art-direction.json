@@ -1,0 +1,27 @@
+{
+  "dominant_mood": "从真实作品的粉色、银色、蓝绿与黑白中建立安静、可继续翻阅的当日气氛。",
+  "background_logic": "沿用已确认B空间浏览：环境色由当前作品的已观察人工色板驱动，切换连续，阅读背景保持克制。",
+  "palette_logic": "本期原创封面以深绿、粉灰和暖白组织；各篇环境色保留官方图像各自的光感，不使用无意义随机数。",
+  "type_scale_logic": "沿用共享阅读系统的中英文字级、行高与光学对齐；完整英语正文与中文同等可读。",
+  "image_behavior": "每篇使用已核对画面的一手官方作品图，保留准确的档案/现场/海报边界与原始出处，权利不明仅外链预览。",
+  "page_density_and_tempo": "十篇按灯光、服装、音乐、城市与保存交错排列；目录默认折叠，阅读依共享结构连续展开。",
+  "core_visual_action": "以Sabine Marcelis的透明叠层海报为初始焦点；滑动可看不同图像气氛，一次点击定位整期对应文章。",
+  "cover_composition": "原创档案封面用十道不同长度的折线重新连接一条路径，呼应再编排与持续使用，不冒充现场或作品照片。",
+  "desktop_interaction_mechanic": "复用B空间浏览的直接拖动、连续临界阻尼、整数停靠、一次点击整期定位与返回时恢复当前作品。",
+  "behance_viewing_arc": "从可以进入的灯光开始，经过材料与录音的再制作，再看支撑衣物、影像和公共活动的具体工作。",
+  "mobile_translation": "沿用手机竖向自然滚动、侧图触达与已确认书签样式；横向手势不接管整页，控制触点与阅读入口清楚。",
+  "mobbin_usability_constraint": "主控触点至少44px，目录与来源默认折叠；保持键盘、无脚本、减弱动态及九种风格/外观组合的既有规则。",
+  "quiet_ending": "结尾退入深绿与暖白，用一句短语收住观看节奏，沿用共享每日quotation轮播。",
+  "closing_quotation": {
+    "id": "ct-en-002",
+    "language": "en",
+    "text": "What remains after the spectacle is the method that carried it.",
+    "credit": "Culture & Taste Editorial"
+  },
+  "closing_palette": {
+    "background": "#193735",
+    "foreground": "#F3EEE2",
+    "accent": "#D6A19C",
+    "rationale": "深绿与暖白维持长文对比，灰粉关联当日灯光海报，区别近期深紫暖金与浅纸蓝色。"
+  }
+}

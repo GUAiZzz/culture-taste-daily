@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "coverage": {
+    "verified_at": "2026-11-02T23:45:54+08:00",
+    "regional_lanes_checked": [
+      "mainland_china_plus_hong_kong_or_taiwan",
+      "japan_or_korea",
+      "continental_europe_or_united_kingdom",
+      "united_states_or_canada",
+      "rotating_global_lane"
+    ],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "european_contemporary",
+    "focus_subjects_checked": [
+      "Our Legacy",
+      "Stone Island",
+      "C.P. Company",
+      "Martine Rose",
+      "Wales Bonner",
+      "Dries Van Noten",
+      "Lemaire"
+    ],
+    "standing_beats_checked": [
+      "stussy-release-radar",
+      "luxury-runway-calendar",
+      "exhibition-and-cultural-programme-radar",
+      "small-breakout-object-radar"
+    ],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {
+      "id": "today-sabine-marcelis-light-and-color-2026",
+      "category": "objects",
+      "included_story_id": "sabine-marcelis-light-and-color-2026"
+    },
+    {
+      "id": "today-our-legacy-nike-sport-shop-nyc-2026",
+      "category": "fashion",
+      "included_story_id": "our-legacy-nike-sport-shop-nyc-2026"
+    },
+    {
+      "id": "today-makaya-mccraven-off-the-record-digital-2026",
+      "category": "music",
+      "included_story_id": "makaya-mccraven-off-the-record-digital-2026"
+    },
+    {
+      "id": "today-designart-tokyo-2026-kkline",
+      "category": "city",
+      "included_story_id": "designart-tokyo-2026-kkline"
+    },
+    {
+      "id": "today-doha-designed-to-last-maison-artc-2026",
+      "category": "fashion",
+      "included_story_id": "doha-designed-to-last-maison-artc-2026"
+    },
+    {
+      "id": "today-mariko-mori-all-that-shines",
+      "category": "objects",
+      "included_story_id": "mariko-mori-all-that-shines"
+    },
+    {
+      "id": "today-palace-nike-manor-place-fc-first-anniversary-2026",
+      "category": "city",
+      "included_story_id": "palace-nike-manor-place-fc-first-anniversary-2026"
+    },
+    {
+      "id": "today-mad-look-40-years-fashion-museum-2026",
+      "category": "fashion",
+      "included_story_id": "mad-look-40-years-fashion-museum-2026"
+    },
+    {
+      "id": "today-ellen-pau-luminosity-mplus-2026",
+      "category": "objects",
+      "included_story_id": "ellen-pau-luminosity-mplus-2026"
+    },
+    {
+      "id": "today-smashing-pumpkins-lull-35th-anniversary-2026",
+      "category": "music",
+      "included_story_id": "smashing-pumpkins-lull-35th-anniversary-2026"
+    }
+  ]
+}
