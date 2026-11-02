@@ -1,0 +1,46 @@
+{
+  "package": "@paper-design/shaders",
+  "version": "0.0.82",
+  "license": "Apache-2.0",
+  "retrievedAt": "2026-10-31T01:05:57.397756+08:00",
+  "registry": "https://registry.npmjs.org/@paper-design/shaders/latest",
+  "tarball": "https://registry.npmjs.org/@paper-design/shaders/-/shaders-0.0.82.tgz",
+  "gitHead": "14c06ef5c8c7863e8efec89f85243e118c747ca9",
+  "archiveSha256": "0d0f695dcd31445f6ea237a19de18bca56b61d2e7e2de282814912576808b981",
+  "registrySha1": "ace6b4d3faf50c8c2303d46db61464be45c4e2a6",
+  "registryIntegrity": "sha512-eCxYQrrCxRVc4KG8sLSQecsq8Ymstbaq/FqZjq/fhOa6UiR1ZZfdMO5IJpHmwL0GYmfzvZVQ4l8ZOLux0uLVdg==",
+  "verification": "archive SHA1 and SHA512 matched registry; modules copied byte-for-byte; no install",
+  "modules": {
+    "dist/shader-mount.js": {
+      "sha256": "b16cac7a0fc2cbe4b8aecc1c7c0be79a4dcc69d96ced3a3c99e69f7262c3a858",
+      "bytes": 21826
+    },
+    "dist/vertex-shader.js": {
+      "sha256": "cd9856f2e071e0c18794dd9c5a1663c11d72cbc68b0403b555d190f412b3e8db",
+      "bytes": 5370
+    },
+    "dist/shader-sizing.js": {
+      "sha256": "db0eb176c9a66c03653770a542adcf4cf8efc07b0929d9e257f49c05d82013fe",
+      "bytes": 758
+    },
+    "dist/shader-utils.js": {
+      "sha256": "26ba187ff4b02715bd98d8ff409c508efcc3881a1f45ceeb08d00b71b145eb2e",
+      "bytes": 3669
+    },
+    "dist/shaders/dithering.js": {
+      "sha256": "affcb28b90283e736d2ce347fb562ce180cc9a66ad78db56b2fa3fea537943cc",
+      "bytes": 7402
+    },
+    "LICENSE": {
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    "NOTICE": {
+      "sha256": "06cf1515dc4628ae4a10f04f394ce746c6edba1ad0ed5d3f7df7ab1781dfe868",
+      "bytes": 91
+    }
+  },
+  "officialExample": "https://shaders.paper.design/dithering",
+  "runtime": "WebGL2",
+  "scope": "Five original ESM modules used for an optional, bounded interactive artwork effect. No unknown-rights photo is packaged. Website reading does not depend on WebGL."
+}

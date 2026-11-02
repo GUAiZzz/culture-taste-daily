@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "issueId": "2026-10-28",
+  "sourceContentSha256": "57febc5ccd81be2025eaacb3337e2f970dd4076b0bb88437cc516fa521418639",
+  "issue": {
+    "titleEn": "FROM THE WORK TO THE WORLD",
+    "positionEn": "From creative proposals to real use, keep facts, intentions and results still to be observed distinct.",
+    "introEn": "A major shōjo manga exhibition opening at the National Art Center, Tokyo is this issue’s starting point. From there we enter workshops, a playing field, laboratories, records and recently closed exhibitions: projects with different origins, aims and responses still to be observed.\n\nThis is a non-production Preview. Exhibition retrospectives state their dates; external images retain their official sources and local non-documentary fallbacks.",
+    "closingEn": "From design and release to everyday use, each project has its own next chapter. On returning to it, the question is whether those promises leave observable changes."
+  },
+  "stories": {
+    "nact-shojo-manga-infinity-2026": {
+      "englishKind": "full",
+      "summaryEn": "From rotating original pages to publishing history, the exhibition places three artists within their working conditions rather than leaving only legendary names.",
+      "captionEn": "Official exhibition promotional image from the National Art Center, Tokyo; not an installation photograph.",
+      "altZh": "《少女漫画・インフィニティ》展览宣传横幅。"
+    },
+    "undercover-valentin-workwear": {
+      "englishKind": "full",
+      "summaryEn": "Working conditions, movement and fabric enter the design brief. The campaign uses a real workshop; everyday performance remains to be observed.",
+      "captionEn": "Official UNDERCOVER collaboration image, photographed by Jonas Loellmann, showing the workshop team in the campaign.",
+      "altZh": "Studio Valentin Loellmann 马斯特里赫特工坊外的团队合影。"
+    },
+    "nike-outkast-georgia-2026": {
+      "englishKind": "full",
+      "summaryEn": "A team mark, Outkast’s crown and the year of ATLiens meet in a clothing collection and a game-day project.",
+      "captionEn": "An athlete wears the Outkast U collection in an official Nike image.",
+      "altZh": "Nike 运动员身穿 Outkast U 系列。"
+    },
+    "noa-clean-noise-album-2026": {
+      "englishKind": "full",
+      "summaryEn": "NOA wrote and composed all ten songs. His interviews offer a first look at how “clean” and “noise” organize the album.",
+      "captionEn": "Official NOA album announcement image.",
+      "altZh": "NOA《CLEAN+NOISE》的发行发布图。"
+    },
+    "asics-michigan-amsi-lab-2026": {
+      "englishKind": "full",
+      "summaryEn": "After AMSI Lab opens, the question is how research, athlete feedback and product development connect beyond the laboratory name.",
+      "captionEn": "Official ASICS laboratory announcement image; it does not establish the performance of a specific product.",
+      "altZh": "ASICS 与密歇根大学研究实验室的发布图。"
+    },
+    "apple-designers-of-tomorrow-paris-2026": {
+      "englishKind": "full",
+      "summaryEn": "The Paris exhibition closed on October 25. Four design practices explored how an object can invite us to pause and be present.",
+      "captionEn": "Official Apple photograph of the Paris exhibition, which closed on October 25.",
+      "altZh": "展厅内陈列着黑色串珠椅、家具与一盏灯。"
+    },
+    "wales-bonner-adidas-fw26-archive": {
+      "englishKind": "full",
+      "summaryEn": "A collaboration referring to 1980s London considers the archive in the present. Release plans and actual wearer response remain separate.",
+      "captionEn": "Official adidas media-library image 734969, labeled for online editorial use.",
+      "altZh": "adidas 与 Wales Bonner 2026 秋冬宣传影像中的一件白色衬衫。"
+    },
+    "auralee-tekla-wintering-2026": {
+      "englishKind": "full",
+      "summaryEn": "From knitwear and sleepwear to bedding and blankets, the second collaboration places the season between clothing and home.",
+      "captionEn": "Official AURALEE image for the second collaboration.",
+      "altZh": "AURALEE 与 Tekla 的 wintering 合作宣传图。"
+    },
+    "flaming-lips-teardrop-throbs-2026": {
+      "englishKind": "full",
+      "summaryEn": "The album is scheduled for January 2027. The released single and the creators’ track notes provide an entry point for listeners.",
+      "captionEn": "Album artwork published by Third Man Records; the complete album is scheduled for January 2027.",
+      "altZh": "The Flaming Lips《The Teardrop Throbs》的蓝色专辑封面。"
+    },
+    "miu-miu-holiday-2026-campaign": {
+      "englishKind": "full",
+      "summaryEn": "A holiday campaign and a recently closed Diop exhibition: pairing the two rooms is this article’s reading, rather than a brand-declared single project.",
+      "captionEn": "Official Miu Miu Holiday 2026 campaign image by Tina Barney, from the brand’s campaign page.",
+      "altZh": "Miu Miu Holiday 2026 官方主图，画面中为本季广告阵容。"
+    }
+  },
+  "sourceLabelsEn": {
+    "https://www.museum.or.jp/report/872": "Internet Museum — Ryoko Yamagishi exhibition report (2016)",
+    "https://robotics.umich.edu/news/2024/simulation-training-improves-performance-in-robotic-exoskeletons/": "University of Michigan Robotics — exoskeleton research report (2024)",
+    "https://robotics.umich.edu/news/2024/even-robots-make-mistakes-how-humans-walk-with-imperfect-exoskeletons/": "University of Michigan Robotics — imperfect exoskeleton control study (2024)",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12541242/": "European Journal of Sport Science — secondary analysis of cushioning perception and injury risk (2025)",
+    "https://arxiv.org/abs/2608.19480": "arXiv — VideoRun2D sprint-video measurement preprint (2026)",
+    "https://www.apple.com/newsroom/2026/10/apple-unveils-the-2026-designers-of-tomorrow/": "Apple Newsroom — the 2026 exhibition and works",
+    "https://www.surfacemag.com/articles/inside-apples-designers-of-tomorrow-at-design-miami-paris/": "SURFACE — Paris exhibition preview",
+    "https://www.architecturaldigest.com/story/the-future-of-american-craft": "Architectural Digest — Isabel Rower’s ceramic furniture",
+    "https://www.admiddleeast.com/story/salem-charabis-exhibition-in-egypt": "AD Middle East — Charabi’s separate exhibition in Giza",
+    "https://gobi.la/event/heroes-and-protagonists/": "GOBI — Yoonjeong Lee’s studio exhibition",
+    "https://www.miumiu.com/ww/en/miumiu-club/special-projects/geste-de-consolation.html": "Miu Miu — official Alice Diop exhibition information",
+    "https://www.vogue.fr/article/interview-alice-diop-exposition-geste-de-consolation-miu-miu": "Vogue France — Diop on archives and curating",
+    "https://origin.anothermag.com/art-photography/17584/alice-diop-miu-miu-geste-de-consolation-art-basel-paris": "AnOther — Diop on the exhibition and self-portraiture",
+    "https://www.wallpaper.com/art/exhibitions-shows/alice-diop-miu-miu-art-basel-paris-2026-interview": "Wallpaper* — the exhibition and Fragments for Venus",
+    "https://www.artnewspaper.fr/2026/10/22/avec-miu-miu-alice-diop-fait-du-palais-diena-un-lieu-de-memoire-et-de-reparation": "The Art Newspaper — exhibition and performance space",
+    "https://www.surfacemag.com/articles/alice-diop-curatorial-debut-at-art-basel-paris/": "SURFACE — interview on Diop’s curatorial debut",
+    "https://www.vogue.co.uk/article/alice-diop-miu-miu-exhibition": "British Vogue — Diop on the exhibition and office"
+  },
+  "inlineMedia": {
+    "https://www.nact.jp/exhibition_special/media/shojomanga2026_14.jpg": {
+      "altEn": "A curly-haired manga character in a blue sailor-collar top, among purple flowers and green leaves.",
+      "captionEn": "Moto Hagio, The Poe Clan: Spring Dream, cover of Monthly flowers, July 2016. Listed by the museum for the first exhibition period; an official artwork image, not an installation photograph.",
+      "creditEn": "©萩尾望都／小学館; image source: The National Art Center, Tokyo"
+    },
+    "https://www.nact.jp/exhibition_special/media/shojomanga2026_05.jpg": {
+      "altEn": "A color manga image by Ryoko Yamagishi: a flower-adorned face at left and a figure stretching in a ballet pose at right.",
+      "captionEn": "Ryoko Yamagishi, Arabesque, opening page in Ribon, July 1972. Listed for the first exhibition period and placed here beside Hagio’s work; neither image is an installation photograph.",
+      "creditEn": "©山岸凉子; image source: The National Art Center, Tokyo"
+    },
+    "https://undercoverism.com/photo/page/20261015/valentin-worklook_08_small.jpg": {
+      "altEn": "A person in a gray hooded workwear set leans against a metal table near a red workshop wall.",
+      "captionEn": "Official Studio Valentin Loellmann × UNDERCOVER collaboration visual: gray workwear in the workshop. The brand says workshop members took part; campaign photography does not establish durability or everyday performance.",
+      "creditEn": "Photography: Jonas Loellmann; visual direction: 二村毅; official release: UNDERCOVER"
+    },
+    "https://undercoverism.com/photo/page/20261015/ethan-working_01_small.jpg": {
+      "altEn": "A workshop member faces away from the camera, raising both arms to work in a gray printed top.",
+      "captionEn": "Official workshop photograph from the same collaboration, showing the back print and a working posture. It records the brand’s presentation of the uniform, rather than independent movement testing or long-term employee feedback.",
+      "creditEn": "Photography: Jonas Loellmann; visual direction: 二村毅; official release: UNDERCOVER"
+    }
+  },
+  "sourceOriginalLanguageExceptions": [
+    {
+      "url": "https://prtimes.jp/main/html/rd/p/000000741.000032749.html",
+      "language": "ja",
+      "reason": "original-source-title"
+    },
+    {
+      "url": "https://www.museum.or.jp/report/872",
+      "language": "ja",
+      "reason": "original-source-title"
+    },
+    {
+      "url": "https://noamusic.jp/news/detail.php?id=572&t=",
+      "language": "ja",
+      "reason": "original-source-title"
+    },
+    {
+      "url": "https://www.fashionsnap.com/special/sense-of-beauty-19/",
+      "language": "ja",
+      "reason": "original-source-title"
+    },
+    {
+      "url": "https://glowonline.jp/column/129012/",
+      "language": "ja",
+      "reason": "original-source-title"
+    },
+    {
+      "url": "https://news.joysound.com/article/695131",
+      "language": "ja",
+      "reason": "original-source-title"
+    },
+    {
+      "url": "https://news.joysound.com/article/694532",
+      "language": "ja",
+      "reason": "original-source-title"
+    },
+    {
+      "url": "https://www.audio-technica.co.jp/always-listening/articles/noa-music-love/",
+      "language": "ja",
+      "reason": "original-source-title"
+    },
+    {
+      "url": "https://realsound.jp/2025/10/post-2180040.html",
+      "language": "ja",
+      "reason": "original-source-title"
+    },
+    {
+      "url": "https://realsound.jp/2024/05/post-1674651.html",
+      "language": "ja",
+      "reason": "original-source-title"
+    },
+    {
+      "url": "https://realsound.jp/2026/02/post-2303566.html",
+      "language": "ja",
+      "reason": "original-source-title"
+    },
+    {
+      "url": "https://www.billboard-japan.com/special/detail/4764",
+      "language": "ja",
+      "reason": "original-source-title"
+    },
+    {
+      "url": "https://www.vogue.co.jp/article/tokyo-taking-shape-auralee-interview",
+      "language": "ja",
+      "reason": "original-source-title"
+    },
+    {
+      "url": "https://madamefigaro.jp/fashion/261026-tekla-auralee-collaboration/",
+      "language": "ja",
+      "reason": "original-source-title"
+    },
+    {
+      "url": "https://hypebeast.com/jp/2026/10/auralee-tekla-collabo-collection-release-info",
+      "language": "ja",
+      "reason": "original-source-title"
+    },
+    {
+      "url": "https://www.fashionsnap.com/article/2026-10-26/miumiu-2026-holiday-campaign/",
+      "language": "ja",
+      "reason": "original-source-title"
+    }
+  ],
+  "extras": {
+    "converse-vaquera-vx1-heel-2026": {
+      "titleEn": "Converse × Vaquera VX1 Heel",
+      "deckEn": "A further signal from this issue’s research; follow the official source."
+    }
+  }
+}

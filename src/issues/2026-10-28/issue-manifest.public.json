@@ -6,7 +6,7 @@
   "timezone": "Asia/Shanghai",
   "candidate_created_at": "2026-10-28T11:00:39.648+08:00",
   "research_locked_at": "2026-10-28T19:38:39.921+08:00",
-  "content_locked_at": "2026-10-28T19:38:39.921+08:00",
+  "content_locked_at": "2026-10-30T20:05:00.094+08:00",
   "status": "BLOCKED",
   "media_required": true,
   "contract": {
@@ -18,11 +18,11 @@
   "core_version": "v2",
   "content_lock": {
     "status": "locked",
-    "sha256": "1dc421a83a90e20745e9361c694fd5e2b7178ab30bc17d225246b8fd8ecd102e",
-    "locked_at": "2026-10-28T19:38:39.921+08:00"
+    "sha256": "57febc5ccd81be2025eaacb3337e2f970dd4076b0bb88437cc516fa521418639",
+    "locked_at": "2026-10-30T20:05:00.094+08:00"
   },
   "source_hashes": {
-    "content_sha256": "1dc421a83a90e20745e9361c694fd5e2b7178ab30bc17d225246b8fd8ecd102e",
+    "content_sha256": "57febc5ccd81be2025eaacb3337e2f970dd4076b0bb88437cc516fa521418639",
     "art_direction_sha256": "4ad3bd9f6e45f01bce0ad99afc5e17fc52442b37260e977ed81344a64d1b8692",
     "issue_style_sha256": "52eb208826c19c123014ddc6d759188dbd5f0b98d722046b793207888b5a6452"
   },
@@ -104,7 +104,8 @@
     "Non-production Preview only; nine official images have unknown reproduction rights and remain externally linked to official sources with fallbacks.",
     "The Wales Bonner image has a stated online editorial-use licence; the licence does not extend to other purposes.",
     "Some discovery subjects were access-limited or unresolved; a scan attempt is not evidence that those subjects had no news.",
-    "Research was completed after the 15:00 Production window; actual lock time is retained."
+    "Research was completed after the 15:00 Production window; actual lock time is retained.",
+    "The Apple story English reading body was completed on 2026-10-30 from the original Chinese article as a later non-production language correction; original research dates and rights limitations are retained."
   ],
   "stories": [
     {

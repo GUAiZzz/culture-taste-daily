@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "issueId": "2026-10-28",
+  "revision": "57febc5ccd81-living-b-02",
+  "initialStoryId": "nact-shojo-manga-infinity-2026",
+  "visualThesis": "从作品到使用之间：把展览、声音、工作服与生活物件作为可翻阅的文化作品。",
+  "generationPolicy": "编辑顺序保持不变；同一期同版本固定。色板为已观察图像或明确回退图的人工配置，不使用随机换色。",
+  "stories": [
+    {
+      "id": "nact-shojo-manga-infinity-2026",
+      "aspectRatio": 1.777777778,
+      "palette": [
+        "#a9cbc0",
+        "#dfc57a",
+        "#e4d1ba"
+      ],
+      "paletteBasis": "observed-official-banner",
+      "treatment": "print"
+    },
+    {
+      "id": "undercover-valentin-workwear",
+      "aspectRatio": 1.778496362,
+      "palette": [
+        "#476174",
+        "#b7a185",
+        "#343c39"
+      ],
+      "paletteBasis": "observed-official-artwork-manual-tonal-palette",
+      "treatment": "photograph"
+    },
+    {
+      "id": "nike-outkast-georgia-2026",
+      "aspectRatio": 1.499414291,
+      "palette": [
+        "#a84235",
+        "#697452",
+        "#d4c9b5"
+      ],
+      "paletteBasis": "observed-official-image",
+      "treatment": "photograph"
+    },
+    {
+      "id": "noa-clean-noise-album-2026",
+      "aspectRatio": 2.610966057,
+      "palette": [
+        "#526477",
+        "#a44841",
+        "#c5d5dd"
+      ],
+      "paletteBasis": "observed-official-banner",
+      "treatment": "print"
+    },
+    {
+      "id": "asics-michigan-amsi-lab-2026",
+      "aspectRatio": 1.333333333,
+      "palette": [
+        "#9ba9a2",
+        "#c2b37c",
+        "#838a96"
+      ],
+      "paletteBasis": "observed-official-image",
+      "treatment": "photograph"
+    },
+    {
+      "id": "apple-designers-of-tomorrow-paris-2026",
+      "aspectRatio": 1.498470948,
+      "palette": [
+        "#759692",
+        "#c8ad77",
+        "#ddd3bd"
+      ],
+      "paletteBasis": "observed-official-exhibition-image",
+      "treatment": "photograph"
+    },
+    {
+      "id": "wales-bonner-adidas-fw26-archive",
+      "aspectRatio": 1.777777778,
+      "palette": [
+        "#91b8cd",
+        "#7a8a75",
+        "#d7d0b8"
+      ],
+      "paletteBasis": "observed-official-image",
+      "treatment": "photograph"
+    },
+    {
+      "id": "auralee-tekla-wintering-2026",
+      "aspectRatio": 0.8,
+      "palette": [
+        "#b5a28c",
+        "#d8c8b1",
+        "#726e68"
+      ],
+      "paletteBasis": "observed-official-artwork-manual-tonal-palette",
+      "treatment": "portrait"
+    },
+    {
+      "id": "flaming-lips-teardrop-throbs-2026",
+      "aspectRatio": 1,
+      "palette": [
+        "#153d5d",
+        "#187ba8",
+        "#15282e"
+      ],
+      "paletteBasis": "observed-official-artwork-manual-tonal-palette",
+      "treatment": "cover"
+    },
+    {
+      "id": "miu-miu-holiday-2026-campaign",
+      "aspectRatio": 1.666666667,
+      "palette": [
+        "#574438",
+        "#7c7557",
+        "#322f2b"
+      ],
+      "paletteBasis": "observed-official-artwork-manual-tonal-palette",
+      "treatment": "photograph"
+    }
+  ]
+}

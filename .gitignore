@@ -37,5 +37,8 @@ playwright-report/
 
 # Generated release directories are not authorized yet
 dist/
+# Original, licensed Paper runtime modules; not generated site output.
+!core/rooms/official-paper/vendor/paper-shaders-0.0.82/dist/
+!core/rooms/official-paper/vendor/paper-shaders-0.0.82/dist/**
 release/
 production/
