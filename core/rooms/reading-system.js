@@ -331,7 +331,11 @@
     ui.subscribe(()=>{if(!noiseEnabled())stopNoise();});
     document.addEventListener('visibilitychange',()=>{if(document.hidden)stopNoise();});window.addEventListener('blur',stopNoise);window.addEventListener('pagehide',stopNoise);reducedMotion.addEventListener('change',stopNoise);
   }
-  root.classList.add('js','reading-ready');if(hasReadingBodies)root.classList.add('reader-ready');
+  // This marks usable reader layout, including native-link/script-failure
+  // fallback. The entry module publishes reading-ready after navigation and
+  // incoming paragraph/focus restoration have also completed.
+  root.classList.add('js','reading-ui-ready');if(hasReadingBodies)root.classList.add('reader-ready');
   flushFrame();
   window.CTReadingSystem=Object.freeze({state:()=>({category:currentCategory,catalog:catalogState?{...catalogState}:null,preferences:ui.getPreferences(),reader:isReader}),material:()=>({style:root.dataset.style,noiseRunning:Boolean(noiseTimer),noiseFrames,tvVisible}),refresh:()=>{renderCatalog?.({write:false});scheduleFrame(true);}});
+  document.dispatchEvent(new CustomEvent('ct:reading-ui-ready'));
 })();

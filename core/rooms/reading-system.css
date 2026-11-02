@@ -274,8 +274,8 @@ body{background:var(--page);color:var(--ink);font-family:var(--sans)}
 .week-heading{display:flex;justify-content:space-between;gap:20px;font-size:11px;color:var(--muted);margin:15px 0 25px}
 .article-catalog{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:38px 28px}.article-catalog .story-card{grid-column:auto;padding:0!important;min-width:0}.article-catalog .entry-title{font-size:22px}
 .pagination{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:35px}.pagination button{white-space:nowrap}
-html:not(.reading-ready) .catalog-tools,html:not(.reading-ready) .pagination{display:none}
-.reading-ready .nojs-title{display:none}.legacy-story{padding:24px;background:var(--surface);border-radius:24px}
+html:not(.reading-ui-ready) .catalog-tools,html:not(.reading-ui-ready) .pagination{display:none}
+.reading-ui-ready .nojs-title{display:none}.legacy-story{padding:24px;background:var(--surface);border-radius:24px}
 
 /* Article pages reproduce the approved quiet reading view. */
 .page-article .site-header{position:static}.page-article .site-header nav{margin-left:auto}
@@ -418,26 +418,26 @@ main,.site-footer{position:relative;z-index:1}
 
 /* The static edition exposes content, never inert enhancement controls. */
 [data-open-settings]{display:none}
-.reading-ready [data-open-settings]{display:inline-flex}
-html:not(.reading-ready) .category-rail{display:none}
-html:not(.reading-ready) .story-image .official{display:none}
-html:not(.reading-ready) .story-image .fallback{display:block}
-html:not(.reading-ready) .story-image .fallback-label{display:block}
-html:not(.reading-ready) .visual-open .inline-placeholder{display:flex}
-html:not(.reading-ready) .visual-open img.official{display:none}
+.reading-ui-ready [data-open-settings]{display:inline-flex}
+html:not(.reading-ui-ready) .category-rail{display:none}
+html:not(.reading-ui-ready) .story-image .official{display:none}
+html:not(.reading-ui-ready) .story-image .fallback{display:block}
+html:not(.reading-ui-ready) .story-image .fallback-label{display:block}
+html:not(.reading-ui-ready) .visual-open .inline-placeholder{display:flex}
+html:not(.reading-ui-ready) .visual-open img.official{display:none}
 .source-copy .source-metadata{display:block;margin-top:5px;font-size:11px;line-height:1.8;color:var(--muted);overflow-wrap:anywhere}
 
 /* Glass must be able to sample the scrolling page, not an opaque ancestor. */
 @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
   :root[data-surface=glass] body.page-article[data-reading-system=soft-v1] #toolbar{background:transparent}
-  html.reading-ready[data-surface=glass] body.page-home .masthead[data-scrolled=true]::before{
+  html.reading-ui-ready[data-surface=glass] body.page-home .masthead[data-scrolled=true]::before{
     background:linear-gradient(to bottom,color-mix(in srgb,var(--page) 84%,transparent) 0%,color-mix(in srgb,var(--page) 78%,transparent) 73%,transparent 100%);
     backdrop-filter:blur(18px) saturate(1.2);-webkit-backdrop-filter:blur(18px) saturate(1.2);
   }
   /* Match the scrolling category rail to the same translucent material. The
      last few pixels dissolve the backdrop itself as well as its tint, so the
      transition does not leave a rectangular blur edge across the artwork. */
-  html.reading-ready[data-surface=glass] body.page-home .stories .browse-controls[data-stuck=true]::before{
+  html.reading-ui-ready[data-surface=glass] body.page-home .stories .browse-controls[data-stuck=true]::before{
     background:linear-gradient(to bottom,color-mix(in srgb,var(--page) 84%,transparent) 0%,color-mix(in srgb,var(--page) 78%,transparent) 73%,transparent 100%);
     backdrop-filter:blur(18px) saturate(1.2);-webkit-backdrop-filter:blur(18px) saturate(1.2);
     -webkit-mask-image:linear-gradient(to bottom,#000 0 86%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0 86%,transparent 100%);
@@ -445,13 +445,13 @@ html:not(.reading-ready) .visual-open img.official{display:none}
 }
 @media(prefers-reduced-transparency:reduce){
   :root[data-surface=glass] body.page-article[data-reading-system=soft-v1] #toolbar{background:var(--page)}
-  html.reading-ready[data-surface=glass] body.page-home .masthead[data-scrolled=true]::before{background:linear-gradient(to bottom,var(--page) calc(100% - 6px),transparent 100%);backdrop-filter:none;-webkit-backdrop-filter:none}
-  html.reading-ready[data-surface=glass] body.page-home .stories .browse-controls[data-stuck=true]::before{background:linear-gradient(to bottom,var(--page) calc(100% - 6px),transparent 100%);backdrop-filter:none;-webkit-backdrop-filter:none;mask-image:none;-webkit-mask-image:none}
+  html.reading-ui-ready[data-surface=glass] body.page-home .masthead[data-scrolled=true]::before{background:linear-gradient(to bottom,var(--page) calc(100% - 6px),transparent 100%);backdrop-filter:none;-webkit-backdrop-filter:none}
+  html.reading-ui-ready[data-surface=glass] body.page-home .stories .browse-controls[data-stuck=true]::before{background:linear-gradient(to bottom,var(--page) calc(100% - 6px),transparent 100%);backdrop-filter:none;-webkit-backdrop-filter:none;mask-image:none;-webkit-mask-image:none}
 }
 @media(forced-colors:active){
   :root[data-surface=glass] body.page-article[data-reading-system=soft-v1] #toolbar{background:Canvas}
-  html.reading-ready[data-surface=glass] body.page-home .masthead[data-scrolled=true]::before{background:Canvas;backdrop-filter:none;-webkit-backdrop-filter:none}
-  html.reading-ready[data-surface=glass] body.page-home .stories .browse-controls[data-stuck=true]::before{background:Canvas;backdrop-filter:none;-webkit-backdrop-filter:none;mask-image:none;-webkit-mask-image:none}
+  html.reading-ui-ready[data-surface=glass] body.page-home .masthead[data-scrolled=true]::before{background:Canvas;backdrop-filter:none;-webkit-backdrop-filter:none}
+  html.reading-ui-ready[data-surface=glass] body.page-home .stories .browse-controls[data-stuck=true]::before{background:Canvas;backdrop-filter:none;-webkit-backdrop-filter:none;mask-image:none;-webkit-mask-image:none}
 }
 
 /* Reserve the cue's own space so it never covers a filter or its focus ring. */

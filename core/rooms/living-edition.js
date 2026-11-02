@@ -3,15 +3,27 @@ import {createFrameBudget} from './living-performance.js';
 import {initNavigation,getHomeRestore,consumeHomeRestore,persistBrowse} from './living-navigation.js';
 import {createArtworkMaterials} from './living-materials.js';
 
-initNavigation();
-const edition=document.querySelector('[data-living-edition]');
-if(edition)initializeEdition(edition);
+// A deferred classic script can finish before this module's dependency graph.
+// The reader must apply locale/layout before we restore a reading paragraph;
+// the public completion marker is released only after that restoration.
+let experienceStarted=false;
+function initializeExperience(){
+ if(experienceStarted||!window.CTReadingSystem||!document.documentElement.classList.contains('reading-ui-ready'))return;
+ experienceStarted=true;
+ initNavigation();
+ const edition=document.querySelector('[data-living-edition]');
+ if(edition&&!initializeEdition(edition))throw new Error('Living edition enhancement did not initialize');
+ document.documentElement.classList.add('reading-ready');
+ document.dispatchEvent(new CustomEvent('ct:reading-ready'));
+}
+document.addEventListener('ct:reading-ui-ready',initializeExperience,{once:true});
+initializeExperience();
 
 function initializeEdition(edition){
  let config;
- try{config=JSON.parse(document.getElementById('living-config').textContent);}catch{return;}
+ try{config=JSON.parse(document.getElementById('living-config').textContent);}catch{return false;}
  const artworks=[...edition.querySelectorAll('.living-art')],n=artworks.length;
- if(!n||n!==config.stories.length)return;
+ if(!n||n!==config.stories.length)return false;
  const stage=edition.querySelector('[data-living-stage]'),surface=edition.querySelector('[data-living-surface]');
  const previous=edition.querySelector('[data-living-prev]'),next=edition.querySelector('[data-living-next]');
  const title=edition.querySelector('[data-living-current]'),category=edition.querySelector('[data-living-category]');
@@ -350,4 +362,5 @@ function initializeEdition(edition){
  window.CTLivingEdition=Object.freeze({state:getState,select,restore,pause,config:()=>JSON.parse(JSON.stringify(config)),trace:()=>trace.slice(),clearTrace:()=>trace.splice(0),measure,unfold:materials.trigger});
  consumeHomeRestore(config);
  document.dispatchEvent(new CustomEvent('ct:living-ready',{detail:{issueId:config.issueId,variant:config.variant}}));
+ return true;
 }

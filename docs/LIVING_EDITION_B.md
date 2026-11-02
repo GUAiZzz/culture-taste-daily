@@ -22,7 +22,7 @@ The five original `@paper-design/shaders` 0.0.82 modules, Apache-2.0 license and
 
 ## Reader and language
 
-Contents and source disclosures are closed on entry. Sources, standalone reading and return-to-contents share one compact row; the static bilingual fallback wraps within its columns. The navigation glass uses one fading material layer, while reading text and photographs remain unfiltered. English preferences are applied in the head before body paint. Source titles, credits and retained historical original-language material remain traceable rather than inventing translations.
+Contents and source disclosures are closed on entry. Sources, standalone reading and return-to-contents share one compact row; the static bilingual fallback wraps within its columns. The navigation glass uses one fading material layer, while reading text and photographs remain unfiltered. English preferences are applied in the head before body paint. Reader UI layout is initialized before navigation restoration; the complete reading-ready signal is published only after paragraph/focus restoration and homepage context consumption. Delayed module loading must not report completion early, while a missing enhancement retains usable native reading links and reader settings. Source titles, credits and retained historical original-language material remain traceable rather than inventing translations.
 
 The previously authorized Apple-story language correction completes its seven English paragraphs from the existing Chinese text. Its new content hash and actual correction lock time are retained. Other Chinese/English bodies, source order, issue dates, old originals and quotation data remain unchanged. It is not a new research or rights attestation.
 

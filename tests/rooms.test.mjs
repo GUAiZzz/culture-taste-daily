@@ -69,3 +69,30 @@ test('failed reader images keep readable captions and a 44px retry target',async
 test('saved style and locale are applied before the parser reaches body content',async()=>{
  for(const [query,style,theme]of[['style=analog&theme=dark','analog','dark'],['style=coral&theme=warm','coral','warm'],['theme=analog','analog','light']]){const c=await context(),p=await c.newPage();try{await c.addInitScript(()=>localStorage.setItem('culture-taste-reading-preferences',JSON.stringify({language:'en'})));await p.route(base()+'/?*',async route=>{const response=await route.fetch({maxRedirects:0});const html=await response.text();await route.fulfill({response,body:html.replace(/(<body[^>]*>)/,'$1<script>for(const key of ["style","theme","locale"])document.documentElement.dataset[key+"AtBody"]=document.documentElement.dataset[key];</script>')});});await p.goto(base()+'/?'+query);await ready(p);assert.equal(await p.locator('html').getAttribute('data-style-at-body'),style);assert.equal(await p.locator('html').getAttribute('data-theme-at-body'),theme);assert.equal(await p.locator('html').getAttribute('data-locale-at-body'),'en');}finally{await c.close();}}
 });
+
+// Hold a real module response across the UI completion marker. The 350ms timer
+// models resource transport only; paragraph/focus assertions have no time grace.
+test('delayed navigation module cannot announce reading readiness before edition and parent restoration',async()=>{
+ const c=await context(),p=await c.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
+ let pending=null;
+ const arm=()=>{let release,reached;const gate={released:new Promise(r=>release=r),reached:new Promise(r=>reached=r),release:()=>release()};gate.markReached=reached;pending=gate;return gate;};
+ await c.route('**/rooms/living-navigation.js*',async route=>{
+  const gate=pending;if(!gate){await route.continue();return;}pending=null;gate.markReached();
+  await Promise.all([gate.released,new Promise(resolve=>setTimeout(resolve,350))]);
+  await route.continue().catch(()=>{});
+ });
+ const atUi=async gate=>{await gate.reached;await p.waitForSelector('html.reading-ui-ready');const state=await p.evaluate(()=>({ui:document.documentElement.classList.contains('reading-ui-ready'),ready:document.documentElement.classList.contains('reading-ready'),navigation:!!window.CTLivingNavigation,body:[...document.querySelectorAll('[data-reading-body]')].some(el=>el.innerText.length>100)}));assert.equal(state.ui,true);assert.equal(state.ready,false,'UI layout alone must not advertise navigation completion');assert.equal(state.navigation,false);assert.equal(state.body,true,'the served reader remains available while the module is delayed');};
+ let gate;
+ try{
+  await p.goto(base()+'/');await ready(p);
+  const entry=p.locator('.bookmark-item a.ct-story-entry').first(),id=await entry.getAttribute('data-story-id');
+  gate=arm();await entry.click({noWaitAfter:true});await p.waitForURL(u=>u.pathname.endsWith(`/issues/${index.issues.at(-1).date}/`),{waitUntil:'commit'});await atUi(gate);gate.release();await ready(p);
+  const anchor=await p.locator('#story-'+id).evaluate(el=>({top:el.getBoundingClientRect().top,marker:document.querySelector('.site-header').getBoundingClientRect().bottom+16}));assert.ok(Math.abs(anchor.top-anchor.marker)<=4,JSON.stringify(anchor));
+  await p.locator(`#story-${id} .action-standalone`).click();await ready(p);
+  const parent=await p.evaluate(()=>window.CTLivingNavigation.currentParent());assert.equal(parent.clickedStoryId,id);assert.ok(parent.paragraph);
+  await p.evaluate(()=>window.CTUI.setPreferences({language:'en',fontSize:25,style:'analog',theme:'warm'}));
+  const back=await p.locator('.reader-back').getAttribute('href');gate=arm();await p.goto(new URL(back,p.url()).href,{waitUntil:'commit'});await atUi(gate);gate.release();await ready(p);
+  const restored=await p.evaluate(snapshot=>{const body=[...document.querySelectorAll('[data-reading-body]')].find(el=>el.dataset.sourceBody===snapshot.paragraph.storyId),section=[...body.querySelectorAll('[data-reading-language]')].find(el=>el.getClientRects().length&&getComputedStyle(el).visibility!=='hidden'),paragraphs=[...(section.querySelector('.english-content')||section).children].filter(el=>el.tagName==='P'),paragraph=paragraphs[Math.min(snapshot.paragraph.index,paragraphs.length-1)],r=paragraph.getBoundingClientRect();return {pathname:location.pathname,hash:location.hash,marker:document.querySelector('.site-header').getBoundingClientRect().bottom+16,point:r.top+r.height*snapshot.paragraph.ratio,focusId:document.activeElement.closest('.issue-story')?.id,focusStandalone:document.activeElement.matches('.action-standalone'),navigation:!!window.CTLivingNavigation};},parent);
+  assert.equal(restored.navigation,true);assert.equal(restored.pathname,new URL(parent.url).pathname);assert.equal(restored.hash,'');assert.ok(Math.abs(restored.point-restored.marker)<=2,JSON.stringify({parent,restored}));assert.equal(restored.focusId,'story-'+id);assert.equal(restored.focusStandalone,true);assert.deepEqual(errors,[]);
+ }finally{gate?.release();pending?.release();await c.close();}
+});
