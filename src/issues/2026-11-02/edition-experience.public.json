@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "issueId": "2026-11-02",
+  "revision": "71c63f964398-living-b-01",
+  "initialStoryId": "sabine-marcelis-light-and-color-2026",
+  "visualThesis": "从衣物、灯光和录音，到道路与影像，沿着材料、制作和再次使用的方式继续看。",
+  "generationPolicy": "编辑顺序与当期配置稳定复现；色板来自实际看过的官方图像，手工配置，不声称自动采色，不使用无意义随机参数。",
+  "stories": [
+    {
+      "id": "sabine-marcelis-light-and-color-2026",
+      "aspectRatio": 0.7040913415794482,
+      "palette": [
+        "#d89dab",
+        "#8d9ca6",
+        "#f0d8d5"
+      ],
+      "paletteBasis": "Manual tonal palette observed from exact official image pixels; current browser dimensions recorded. No automatic sampling claimed.",
+      "treatment": "print"
+    },
+    {
+      "id": "our-legacy-nike-sport-shop-nyc-2026",
+      "aspectRatio": 0.7498550724637681,
+      "palette": [
+        "#a73c3a",
+        "#606d81",
+        "#d1d5ce"
+      ],
+      "paletteBasis": "Manual tonal palette observed from exact official image pixels; current browser dimensions recorded. No automatic sampling claimed.",
+      "treatment": "portrait"
+    },
+    {
+      "id": "makaya-mccraven-off-the-record-digital-2026",
+      "aspectRatio": 1,
+      "palette": [
+        "#272323",
+        "#8e8e86",
+        "#dedbd5"
+      ],
+      "paletteBasis": "Human observation of exact official cover pixels in current verified browser screenshot; not automated sampling.",
+      "treatment": "print"
+    },
+    {
+      "id": "designart-tokyo-2026-kkline",
+      "aspectRatio": 1.0,
+      "palette": [
+        "#252d61",
+        "#8b8e8d",
+        "#e6e7e5"
+      ],
+      "paletteBasis": "Manual tonal palette observed from exact official image pixels; current browser dimensions recorded. No automatic sampling claimed.",
+      "treatment": "print"
+    },
+    {
+      "id": "doha-designed-to-last-maison-artc-2026",
+      "aspectRatio": 1.9896373056994818,
+      "palette": [
+        "#9d3349",
+        "#c5c9d0",
+        "#3e2932"
+      ],
+      "paletteBasis": "Manual tonal palette observed from exact official image pixels; current browser dimensions recorded. No automatic sampling claimed.",
+      "treatment": "photograph"
+    },
+    {
+      "id": "mariko-mori-all-that-shines",
+      "aspectRatio": 1.3179571663920921,
+      "palette": [
+        "#b8bfaf",
+        "#9ca9b4",
+        "#d9d5ce"
+      ],
+      "paletteBasis": "Manual tonal palette observed from exact official image pixels; current browser dimensions recorded. No automatic sampling claimed.",
+      "treatment": "photograph"
+    },
+    {
+      "id": "palace-nike-manor-place-fc-first-anniversary-2026",
+      "aspectRatio": 0.7504690431519699,
+      "palette": [
+        "#16667a",
+        "#071828",
+        "#b0ac68"
+      ],
+      "paletteBasis": "Manual tonal palette observed from exact official image pixels; current browser dimensions recorded. No automatic sampling claimed.",
+      "treatment": "portrait"
+    },
+    {
+      "id": "mad-look-40-years-fashion-museum-2026",
+      "aspectRatio": 0.6666666666666666,
+      "palette": [
+        "#e1bba5",
+        "#faf8f6",
+        "#b4957f"
+      ],
+      "paletteBasis": "Manually observed from complete actual official600x900 photograph: pale peach-pink textile, off-white field and muted wood. No pixel readback.",
+      "treatment": "photograph"
+    },
+    {
+      "id": "ellen-pau-luminosity-mplus-2026",
+      "aspectRatio": 2.3966101694915256,
+      "palette": [
+        "#0b0b0b",
+        "#737373",
+        "#d7d7d5"
+      ],
+      "paletteBasis": "Manually observed from the complete actual official PF25 image in ordinary Chrome on 2026-11-02; restrained black, gray and off-white, not pixel sampling.",
+      "treatment": "preserve"
+    },
+    {
+      "id": "smashing-pumpkins-lull-35th-anniversary-2026",
+      "aspectRatio": 1,
+      "palette": [
+        "#bcb6a4",
+        "#8054a2",
+        "#2b6247"
+      ],
+      "paletteBasis": "Restrained colours manually observed in the actually viewed official 440px cover screenshot; not calculated dominant-colour sampling.",
+      "treatment": "print"
+    }
+  ]
+}

@@ -1,0 +1,1100 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-11-02",
+  "publication_date": "2026-11-02",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-11-02T13:05:35.102+08:00",
+  "research_locked_at": "2026-11-02T23:22:55+08:00",
+  "content_locked_at": "2026-11-02T23:22:55+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "71c63f964398ba66cf838fd62e6024c47dff63aa6aeb892433db9ad8cd9b5e6c",
+    "locked_at": "2026-11-02T23:22:55+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "71c63f964398ba66cf838fd62e6024c47dff63aa6aeb892433db9ad8cd9b5e6c",
+    "art_direction_sha256": "f7a7f41fe60a431b3d1a222d49ef19f77391cd2c4ddb56d86959fb360455bcfa",
+    "issue_style_sha256": "e4b789e5c30730c83a5b6a2cb73bcf99735cb3dc577b05340aa15d3a4724a8f6"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-11-02T18:20:44.668+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "从衣物、灯光和录音，到道路与影像，沿着材料、制作和再次使用的方式继续看。",
+  "art_direction": {
+    "dominant_mood": "从真实作品的粉色、银色、蓝绿与黑白中建立安静、可继续翻阅的当日气氛。",
+    "background_logic": "沿用已确认B空间浏览：环境色由当前作品的已观察人工色板驱动，切换连续，阅读背景保持克制。",
+    "palette_logic": "本期原创封面以深绿、粉灰和暖白组织；各篇环境色保留官方图像各自的光感，不使用无意义随机数。",
+    "type_scale_logic": "沿用共享阅读系统的中英文字级、行高与光学对齐；完整英语正文与中文同等可读。",
+    "image_behavior": "每篇使用已核对画面的一手官方作品图，保留准确的档案/现场/海报边界与原始出处，权利不明仅外链预览。",
+    "page_density_and_tempo": "十篇按灯光、服装、音乐、城市与保存交错排列；目录默认折叠，阅读依共享结构连续展开。",
+    "core_visual_action": "以Sabine Marcelis的透明叠层海报为初始焦点；滑动可看不同图像气氛，一次点击定位整期对应文章。",
+    "cover_composition": "原创档案封面用十道不同长度的折线重新连接一条路径，呼应再编排与持续使用，不冒充现场或作品照片。",
+    "desktop_interaction_mechanic": "复用B空间浏览的直接拖动、连续临界阻尼、整数停靠、一次点击整期定位与返回时恢复当前作品。",
+    "behance_viewing_arc": "从可以进入的灯光开始，经过材料与录音的再制作，再看支撑衣物、影像和公共活动的具体工作。",
+    "mobile_translation": "沿用手机竖向自然滚动、侧图触达与已确认书签样式；横向手势不接管整页，控制触点与阅读入口清楚。",
+    "mobbin_usability_constraint": "主控触点至少44px，目录与来源默认折叠；保持键盘、无脚本、减弱动态及九种风格/外观组合的既有规则。",
+    "quiet_ending": "结尾退入深绿与暖白，用一句短语收住观看节奏，沿用共享每日quotation轮播。",
+    "closing_quotation": {
+      "id": "ct-en-002",
+      "language": "en",
+      "text": "What remains after the spectacle is the method that carried it.",
+      "credit": "Culture & Taste Editorial"
+    },
+    "closing_palette": {
+      "background": "#193735",
+      "foreground": "#F3EEE2",
+      "accent": "#D6A19C",
+      "rationale": "深绿与暖白维持长文对比，灰粉关联当日灯光海报，区别近期深紫暖金与浅纸蓝色。"
+    }
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": [
+      "2026-10-28",
+      "2026-09-22",
+      "2026-09-21",
+      "2026-09-20",
+      "2026-09-17",
+      "2026-09-16",
+      "2026-09-15"
+    ],
+    "repeated_mechanisms": [
+      "approved shared B spatial browsing and whole-edition reading",
+      "official image links and local non-documentary fallbacks"
+    ],
+    "exception_reason": "稳定复用已确认共享交互；本期变化来自真实内容、图片比例、已观察色板与原创折线路径封面，不重做日常UI。"
+  },
+  "rights_summary": {
+    "required_assets": 10,
+    "unknown_required_assets": 10,
+    "status": "blocked"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": null
+  },
+  "evidence_refs": {
+    "technical": [],
+    "editorial_visual": [],
+    "gate": []
+  },
+  "qa": {
+    "html_parse": "unavailable",
+    "assets": "unavailable",
+    "internal_links": "unavailable",
+    "no_js_reading": "unavailable",
+    "desktop_render": "unavailable",
+    "mobile_render": "unavailable",
+    "reduced_motion": "unavailable"
+  },
+  "limitations": [
+    "Non-production Preview only. Official images have unknown reproduction rights and remain externally linked with official-origin links and owned non-documentary fallbacks.",
+    "Research and content were prepared after the normal window under the owner’s one-off 2026-11-02 manual Preview authorization; actual timestamps remain unchanged. Production remains blocked.",
+    "Registry scans record real attempts, including access-limited and unresolved subjects; those states do not mean there was no news."
+  ],
+  "stories": [
+    {
+      "id": "sabine-marcelis-light-and-color-2026",
+      "level": "cover",
+      "title": "125盏家用灯，怎样变成一条能走进去的光隧道",
+      "english": {
+        "title": "WHEN A LAMP BECOMES A ROOM",
+        "deck": "Sabine Marcelis’s Zurich exhibition connects familiar lights, mirrored spaces and the work of making.",
+        "abstract": "The newly opened Light and Color exhibition scales IKEA and Mathmos lamps into walk-through installations. New interviews with the designer and curators place those rooms alongside material experiments and production processes."
+      },
+      "sources": [
+        {
+          "title": "Sabine Marcelis – Light and Color",
+          "publisher": "Museum für Gestaltung Zürich",
+          "url": "https://museum-gestaltung.ch/de/ausstellung/sabine-marcelis-light-and-color",
+          "published_date": null,
+          "event_date": "2026-10-30",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "I Shape the Relationship Between Material and Light",
+          "publisher": "German Design Council / Design Perspectives",
+          "url": "https://www.german-design-council.de/en/design-perspectives/article-detail/ich-gestalte-die-beziehung-zwischen-material-und-licht",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Let the Light In",
+          "publisher": "Family Style",
+          "url": "https://www.family.style/articles/sabine-marcelis-designer-interview",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Sabine Marcelis on materials, colour and her major collaboration with IKEA",
+          "publisher": "ICON Magazine",
+          "url": "https://www.iconeye.com/design/sabine-marcelis-materials-colour-collaboration-ikea",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Sabine Marcelis designs a trippy inflatable maze at Coachella 2026",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design-interiors/sabine-marcelis-maze-coachella-2026",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Sabine Marcelis brings 15 years of light and colour to her Zurich show",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design-interiors/design-events/sabine-marcelis-light-and-color-zurich-museum-fur-gestaltung-exhibition-review",
+          "published_date": "2026-10-31",
+          "event_date": null
+        },
+        {
+          "title": "Sabine Marcelis’ lava lamp world is in the pink – and you can buy a piece of it",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design-interiors/lighting/sabine-marcelis-bubblegum-pink-lava-lamp-for-mathmos",
+          "published_date": "2026-10-30",
+          "event_date": null
+        },
+        {
+          "title": "Sabine Marcelis and Less is More, the interview",
+          "publisher": "Salone del Mobile",
+          "url": "https://www.salonemilano.it/en/articles/sabine-marcelis-and-less-more-interview",
+          "published_date": "2022-12-01",
+          "event_date": null
+        },
+        {
+          "title": "Matter and Light",
+          "publisher": "National Gallery of Victoria",
+          "url": "https://www.ngv.vic.gov.au/essay/matter-and-light/",
+          "published_date": "2026-06-25",
+          "event_date": null
+        },
+        {
+          "title": "IKEA and Sabine Marcelis launch the VARMBLIXT collection",
+          "publisher": "Inter IKEA newsroom",
+          "url": "https://www.ikea.com/global/en/newsroom/collaborations/ikea-and-sabine-marcelis-launch-the-varmblixt-collection-exploring-sculptural-design-and-light-230117/",
+          "published_date": "2023-01-17",
+          "event_date": null
+        }
+      ],
+      "image_credit": "Museum für Gestaltung Zürich. Official exhibition visual; individual designer not specified on the source page.",
+      "media": {
+        "origin_url": "https://museum-gestaltung.ch/de/ausstellung/sabine-marcelis-light-and-color",
+        "external_image_url": "https://mfg.rokka.io/fe_nuxt_no_crop/variables-w-1480/64a2e5255302237e6aefe255746e18223ac1c722/image.jpg",
+        "alt": "粉色与蓝灰透明叠层构成的《Light and Color》官方海报。",
+        "caption": "馆方《Light and Color》展览海报，以粉色、蓝灰色的透明叠层呈现；不是展厅现场照片。",
+        "credit": "Museum für Gestaltung Zürich. Official exhibition visual; individual designer not specified on the source page.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "asset": "assets/sabine-marcelis-light-and-color-2026-fallback.svg"
+      }
+    },
+    {
+      "id": "our-legacy-nike-sport-shop-nyc-2026",
+      "level": "major",
+      "title": "纽约快闪结束后，Our Legacy 与 Nike 的两种产品路径",
+      "english": {
+        "title": "After Sport Shop NYC: Two Product Paths for Our Legacy and Nike",
+        "deck": "Reworked deadstock came first. A new technical running collection remains scheduled for spring 2027.",
+        "abstract": "The Procell activation joined an archive, an existing sport line and reworked Nike garments. Its documented materials should be separated from the future products still in development."
+      },
+      "sources": [
+        {
+          "title": "Sport Shop NYC",
+          "publisher": "Our Legacy",
+          "url": "https://www.ourlegacy.com/work-shop-sport-shop-nyc",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Our Legacy on What’s Coming With Nike: It’s Gonna Look Slow but Feel Fast",
+          "publisher": "Highsnobiety",
+          "url": "https://www.highsnobiety.com/p/our-legacy-nike-procell/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Nike and Our Legacy Team on New Running Line",
+          "publisher": "The Business of Fashion",
+          "url": "https://businessoffashion-businessoffashion-prod.web.arc-cdn.net/news/sports/nike-our-legacy-collaboration/",
+          "published_date": "2026-10-26",
+          "event_date": null
+        },
+        {
+          "title": "Selected Memories of Functionality: Procell New York",
+          "publisher": "GORE-TEX",
+          "url": "https://www.gore-tex.com/studio/selected-memories-of-functionality/procell",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Brian Procell Explains Why the Fashion World Started Taking Vintage Seriously",
+          "publisher": "GQ",
+          "url": "https://www.gq.com/story/brian-procell-interview-best-nyc-shops-2018",
+          "published_date": "2018-11-20",
+          "event_date": null
+        },
+        {
+          "title": "Our Legacy Work Shop x Emporio Armani",
+          "publisher": "Vogue",
+          "url": "https://www.vogue.com/article/our-legacy-work-shop-x-emporio-armani-is-the-swedish-italian-collab-you-didnt-know-you-needed",
+          "published_date": "2025-05-07",
+          "event_date": null
+        },
+        {
+          "title": "Why Our Legacy Went All-In on Sport",
+          "publisher": "Highsnobiety",
+          "url": "https://www.highsnobiety.com/p/our-legacy-work-shop-sport-interview/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Our Legacy Sportswear Is, Of Course, Much More Than Sportswear",
+          "publisher": "Highsnobiety",
+          "url": "https://www.highsnobiety.com/p/our-legacy-work-shop-sport/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "How Our Legacy Uncovered a Forgotten Side of C.P. Company",
+          "publisher": "Highsnobiety",
+          "url": "https://www.highsnobiety.com/p/our-legacy-interview-cp-company/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Why Our Legacy Entered Sportswear",
+          "publisher": "SportsVerse / OffBall",
+          "url": "https://www.linkedin.com/pulse/why-our-legacy-entered-sportswear-offball-wiy3e",
+          "published_date": "2025-10-10",
+          "event_date": null
+        }
+      ],
+      "image_credit": "Peter Sutherland / Our Legacy Work Shop. Source: Our Legacy official Sport Shop NYC project page.",
+      "media": {
+        "origin_url": "https://www.ourlegacy.com/work-shop-sport-shop-nyc",
+        "external_image_url": "https://cdn.sanity.io/images/2eyqe6e4/production/d737a33e910b288e75766af96d0a3a1d1eebe877-2587x3450.jpg?auto=format",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "credit": "Peter Sutherland / Our Legacy Work Shop. Source: Our Legacy official Sport Shop NYC project page.",
+        "alt": "戴红色角状发箍的人物抬手遮住一侧眼睛，穿着蓝灰色上衣。",
+        "caption": "Our Legacy Work Shop 与 Nike 的 Sport Shop NYC 项目。摄影：Peter Sutherland；活动已于 2026 年 11 月 1 日结束。",
+        "asset": "assets/our-legacy-nike-sport-shop-nyc-2026-fallback.svg"
+      }
+    },
+    {
+      "id": "makaya-mccraven-off-the-record-digital-2026",
+      "level": "major",
+      "title": "一场演出结束后，Makaya McCraven怎样再做一遍",
+      "english": {
+        "title": "A PERFORMANCE, COMPOSED AGAIN",
+        "deck": "Off the Record gains a digital edition and Bright Lights, with its older live material kept in view.",
+        "abstract": "The digital release offers another entry into four EPs shaped from live recordings. Interviews and contrasting criticism distinguish the musicians’ contributions, the room and subsequent editing."
+      },
+      "sources": [
+        {
+          "title": "Makaya McCraven marks Off the Record one-year anniversary with digital release and new bonus track",
+          "publisher": "International Anthem",
+          "url": "https://www.intlanthem.com/news/makaya-mccraven-marks-off-the-record-one-year-anniversary-w-digital-release-feat-new-bonus-track-us-shows-start-november-13",
+          "published_date": "2026-10-31",
+          "event_date": null
+        },
+        {
+          "title": "Makaya McCraven: Off the Record",
+          "publisher": "Pitchfork / Matthew Blackwell",
+          "url": "https://pitchfork.com/reviews/albums/makaya-mccraven-off-the-record/",
+          "published_date": "2025-11-05",
+          "event_date": null
+        },
+        {
+          "title": "Makaya McCraven – The Rhythm Scientist",
+          "publisher": "OndaRock / Piergiorgio Pardo",
+          "url": "https://ondarock.com/interviews/makaya-mc-craven/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Makaya McCraven – Off The Record",
+          "publisher": "HHV Mag",
+          "url": "https://www.hhv-mag.com/review/makaya-mccraven-off-the-record/?lang=en",
+          "published_date": "2025-10-17",
+          "event_date": null
+        },
+        {
+          "title": "Makaya McCraven – Off The Record",
+          "publisher": "Written in Music",
+          "url": "https://writteninmusic.com/albumrecensie/makaya-mccraven-off-the-record/",
+          "published_date": "2025-10-16",
+          "event_date": null
+        },
+        {
+          "title": "MAKAYA MCCRAVEN – Off The Record",
+          "publisher": "Bedroomdisco",
+          "url": "https://www.bedroomdisco.de/2025/10/makaya-mccraven-off-the-record/",
+          "published_date": "2025-10-20",
+          "event_date": null
+        },
+        {
+          "title": "makaya mccraven – off the record",
+          "publisher": "In Search of Media",
+          "url": "https://insearchofmedia.com/2026/01/04/makaya-mccraven-off-the-record/",
+          "published_date": "2026-01-04",
+          "event_date": null
+        },
+        {
+          "title": "Off the Record — official release and artwork",
+          "publisher": "Makaya McCraven / International Anthem",
+          "url": "https://makayamccraven.lnk.to/OffTheRecord",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Makaya on improvisation and experimentation for In These Times",
+          "publisher": "Composer Magazine / Spitfire Audio",
+          "url": "https://composer.spitfireaudio.com/en/articles/makaya-on-improvisation-experimentation-for-new-album-in-these-times",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Live on KUVO! — Makaya McCraven, public interview transcript",
+          "publisher": "RMPBS / KUVO / PBS",
+          "url": "https://www.pbs.org/video/makaya-mccraven-wx7sto/",
+          "published_date": "2026-01-13",
+          "event_date": null
+        },
+        {
+          "title": "Off the Record — complete session and production credits",
+          "publisher": "International Anthem / Bandcamp",
+          "url": "https://intlanthem.bandcamp.com/album/off-the-record",
+          "published_date": "2026-10-30",
+          "event_date": null
+        }
+      ],
+      "image_credit": "Cover photography: Jacob Blickenstaff; design: Aaron Lowell Denton. Source: Makaya McCraven / International Anthem.",
+      "media": {
+        "kind": "source_image",
+        "origin_url": "https://makayamccraven.lnk.to/OffTheRecord",
+        "external_image_url": "https://linkstorage.linkfire.com/medialinks/images/30be5b84-0cbe-4706-aed7-f84916a080ee/artwork-440x440.jpg",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "alt": "《Off the Record》官方封面：深褐底色、白色标题与中央的黑白演出照片。",
+        "caption": "《Off the Record》官方发行封面；素材来自官方发行入口，不代表2026年新录音。",
+        "credit": "Cover photography: Jacob Blickenstaff; design: Aaron Lowell Denton. Source: Makaya McCraven / International Anthem.",
+        "asset": "assets/makaya-mccraven-off-the-record-digital-2026-fallback.svg"
+      }
+    },
+    {
+      "id": "designart-tokyo-2026-kkline",
+      "level": "major",
+      "title": "KK 线主会场明天结束：一条车道怎样成为五天的展览",
+      "english": {
+        "title": "Before KK Line Closes: A Road Becomes a Five-Day Exhibition",
+        "deck": "The temporary DESIGNART venue ends November 3, with other locations following their own schedules.",
+        "abstract": "ALTEMY’s temporary arrangement reuses road infrastructure while the exhibits test different relationships with images, objects and movement."
+      },
+      "sources": [
+        {
+          "title": "DESIGNART TOKYO 2026: ALTEMY’s KK Line venue ends November 3",
+          "publisher": "TECTURE MAG",
+          "url": "https://mag.tecture.jp/event/20261102-161001/",
+          "published_date": "2026-11-02",
+          "event_date": null
+        },
+        {
+          "title": "SEPARATION, Equals and Aluminum Comes to Life at DESIGNART TOKYO 2026",
+          "publisher": "Nomura Co., Ltd.",
+          "url": "https://www.nomurakougei.co.jp/en/news/page/7926/",
+          "published_date": "2026-10-05",
+          "event_date": null
+        },
+        {
+          "title": "MOIRÉ 干渉するイメージ at DESIGNART TOKYO 2026",
+          "publisher": "amana",
+          "url": "https://amana.jp/news/6775/",
+          "published_date": "2026-09-29",
+          "event_date": null
+        },
+        {
+          "title": "DESIGNART TOKYO 2026 | TOKYO MIDTOWN DESIGN LIVE",
+          "publisher": "Tokyo Midtown",
+          "url": "https://www.tokyo-midtown.com/jp/event/designlive/designart-tokyo.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "DESIGNART TOKYO 2026: seven talk sessions at KK Line",
+          "publisher": "知財図鑑",
+          "url": "https://chizaizukan.com/news/9TFCvQBqNZmm",
+          "published_date": "2026-10-14",
+          "event_date": null
+        },
+        {
+          "title": "SHOSA Bonsai Arm and Tatamel Bike at DESIGNART TOKYO 2026",
+          "publisher": "ICOMA",
+          "url": "https://www.icoma.co.jp/post/info20261029-designart",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "BEYOND CONSUMPTION — 消費の先へ",
+          "publisher": "Ambientec",
+          "url": "https://ambientec.co.jp/blogs/events/beyond-consumption",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "AUTOBAHN – The Design Store: peco-poco and SOLO",
+          "publisher": "YAMAGIWA",
+          "url": "https://www.yamagiwa.lol/news/80421/",
+          "published_date": "2026-10-27",
+          "event_date": null
+        },
+        {
+          "title": "Konel & X Vision: Landscape Superimpose LED",
+          "publisher": "DESIGNART TOKYO / Konel / X Vision",
+          "url": "https://www.designart.jp/designarttokyo2026/exhibitions/14027/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "東京高速道路（KK線）の再生に向けた取組",
+          "publisher": "Tokyo Metropolitan Government, Bureau of Urban Development",
+          "url": "https://www.toshiseibi.metro.tokyo.lg.jp/machizukuri/machi_project/toshi_saisei/kk_arikata",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Source: DESIGNART TOKYO 2026 official exhibition page. Individual photographer credit not specified on the page.",
+      "media": {
+        "origin_url": "https://www.designart.jp/designarttokyo2026/exhibitions/14027/",
+        "external_image_url": "https://www.designart.jp/designarttokyo2026/cms/wp-content/uploads/2026/09/Image-4.jpeg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "credit": "Source: DESIGNART TOKYO 2026 official exhibition page. Individual photographer credit not specified on the page.",
+        "alt": "黑白KK高架道路资料图，上面为蓝色AUTOBAHN与DESIGNART字样。",
+        "caption": "DESIGNART TOKYO 官方项目页所配 KK 线场地资料图。该页未注明照片拍摄日期；不能据此认定为本次展览现场。",
+        "asset": "assets/designart-tokyo-2026-kkline-fallback.svg"
+      }
+    },
+    {
+      "id": "doha-designed-to-last-maison-artc-2026",
+      "level": "major",
+      "title": "多哈的13套独件，为什么值得留下？",
+      "english": {
+        "title": "THIRTEEN REASONS TO KEEP A GARMENT",
+        "deck": "Maison ARTC’s Doha exhibition links one-of-a-kind clothes with memory, photographs and the work of making.",
+        "abstract": "A recent interview and a discussion scheduled for 3 November focus Doha’s Designed to Last on the skills and relationships carried by clothes. The environmental impact of the displayed garments remains unmeasured."
+      },
+      "sources": [
+        {
+          "title": "Longevity in Fashion: Designed to Last",
+          "publisher": "Doha Design District",
+          "url": "https://www.ddd.com.qa/ddd-event/longevity-in-fashion-designed-to-last/",
+          "published_date": null,
+          "event_date": "2026-10-28",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "The Hard Truths of Artsi Ifrach",
+          "publisher": "GQ Middle East",
+          "url": "https://www.gqmiddleeast.com/article/the-hard-truths-of-artsi-ifrach",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Mode au Maroc : comment, vous ne connaissez pas Maison ART/C ?",
+          "publisher": "Shoelifer",
+          "url": "https://shoelifer.com/mode/a-suivre/mode-au-maroc-comment-connaissez-maison-artc/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Getting to know Artsi Ifrach, Founder of Maison ARTC",
+          "publisher": "maft magazine",
+          "url": "https://maftmag.com/interview/getting-to-know-artsi-ifrach-founder-of-maison-artc",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Art/C transforming fashion in Marrakech",
+          "publisher": "Intro Africa",
+          "url": "https://intro.africa/story/art-c-transforming-fashion-in-marrakech/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Moroccan artist sees beauty as a source of hope amid global conflicts",
+          "publisher": "Gulf Times",
+          "url": "https://www.gulf-times.com/article/737123/qatar/moroccan-artist-sees-beauty-as-a-source-of-hope-amid-global-conflicts",
+          "published_date": "2026-10-31",
+          "event_date": null
+        },
+        {
+          "title": "Designer Focus: Maison ARTC",
+          "publisher": "NOT JUST A LABEL",
+          "url": "https://notjustalabel.com/editorial/designer-focus-maison-artc",
+          "published_date": "2018-12-04",
+          "event_date": null
+        },
+        {
+          "title": "Artsi Ifrah: Challenging traditional fashion norms while celebrating craftsmanship.",
+          "publisher": "maft magazine",
+          "url": "https://maftmag.com/article/artsi-ifrah-challenging-traditional-fashion-norms-while-celebrating-craftsmanship",
+          "published_date": "2023-04-18",
+          "event_date": null
+        },
+        {
+          "title": "Waltzing Into Fashion: Artsi Ifrach",
+          "publisher": "Interview Magazine",
+          "url": "https://www.interviewmagazine.com/fashion/waltzing-into-fashion-artsi-ifrach",
+          "published_date": "2010-07-13",
+          "event_date": null
+        },
+        {
+          "title": "Textiles and the environment: the role of design in Europe’s circular economy",
+          "publisher": "European Environment Agency",
+          "url": "https://www.eea.europa.eu/en/analysis/publications/textiles-and-the-environment-the-role-of-design-in-europes-circular-economy-1",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Doha Design District. Individual photographer not specified on the source page.",
+      "media": {
+        "origin_url": "https://www.ddd.com.qa/ddd-event/longevity-in-fashion-designed-to-last/",
+        "external_image_url": "https://www.ddd.com.qa/wp-content/uploads/2026/10/LP-Banner-no-text.png",
+        "alt": "灰白背景中的粉红立体衣物与黑色人台剪影。",
+        "caption": "Doha Design District官方《Designed to Last》活动视觉，呈现红色立体衣物细部；并非展厅现场照。",
+        "credit": "Doha Design District. Individual photographer not specified on the source page.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "asset": "assets/doha-designed-to-last-maison-artc-2026-fallback.svg"
+      }
+    },
+    {
+      "id": "mariko-mori-all-that-shines",
+      "level": "major",
+      "title": "森万里子的《Wave UFO》：进入装置之后，技术能说明什么",
+      "english": {
+        "title": "Inside Wave UFO: What Mariko Mori’s Technology Can—and Cannot—Establish",
+        "deck": "A new Tokyo retrospective brings brainwave imagery, outdoor projects and disclosed Claude support into the same view.",
+        "abstract": "Mori Art Museum’s new retrospective pairs interactive apparatus with a long-running inquiry into connection. Its technical processes are more concrete than the spiritual conclusions attached to them."
+      },
+      "sources": [
+        {
+          "title": "「森万里子：燦燦」（森美術館）開幕レポート。森万里子、24年ぶりの国内大規模個展",
+          "publisher": "美術手帖",
+          "url": "https://bijutsutecho.com/magazine/news/report/33273",
+          "published_date": "2026-10-31",
+          "event_date": null
+        },
+        {
+          "title": "Mariko Mori’s Mind Palace",
+          "publisher": "Highsnobiety",
+          "url": "https://www.highsnobiety.com/p/mariko-mori/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "White Out",
+          "publisher": "Family Style",
+          "url": "https://www.family.style/articles/mariko-mori-tess-miyako-island-house-interview",
+          "published_date": "2025-12-15",
+          "event_date": null
+        },
+        {
+          "title": "Synthetic Dreams: The Art of Mariko Mori",
+          "publisher": "Kyoto Journal",
+          "url": "https://kyotojournal.org/insights-from-asia/synthetic-dreams-the-art-of-mariko-mori/",
+          "published_date": "2011-08-20",
+          "event_date": null
+        },
+        {
+          "title": "“Mariko Mori: All That Shines”",
+          "publisher": "Mori Art Museum",
+          "url": "https://www.mori.art.museum/en/exhibitions/marikomori/index.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Information | Mariko Mori: All That Shines",
+          "publisher": "Mori Art Museum",
+          "url": "https://www.mori.art.museum/en/exhibitions/marikomori/05/index.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Guide to the Wave UFO Experience | Mariko Mori: All That Shines",
+          "publisher": "Mori Art Museum",
+          "url": "https://www.mori.art.museum/en/exhibitions/marikomori/06/index.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Structure | Mariko Mori: All That Shines",
+          "publisher": "Mori Art Museum",
+          "url": "https://www.mori.art.museum/en/exhibitions/marikomori/03/index.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Why Mariko Mori’s Upcoming Retrospective is More Urgent Than Ever",
+          "publisher": "Whitewall / Erica Silverman",
+          "url": "https://whitewall.art/art/mariko-mori/",
+          "published_date": "2026-05-27",
+          "event_date": null
+        },
+        {
+          "title": "MARIKO MORI with Jessica Holmes",
+          "publisher": "The Brooklyn Rail / Jessica Holmes",
+          "url": "https://brooklynrail.org/2018/04/art/MARIKO-MORI-with-Jessica-Holmes/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Mariko Mori, Wave UFO, 1999–2002. Installation view: Kunsthaus Bregenz, Austria, 2003. Photo: Richard Learoyd. Source: Mori Art Museum.",
+      "media": {
+        "origin_url": "https://www.mori.art.museum/en/exhibitions/marikomori/index.html",
+        "external_image_url": "https://www.mori.art.museum/files/exhibitions/2026/06/22/img_mori_mariko_wave_ufo_v2_en.jpg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "credit": "Mariko Mori, Wave UFO, 1999–2002. Installation view: Kunsthaus Bregenz, Austria, 2003. Photo: Richard Learoyd. Source: Mori Art Museum.",
+        "alt": "银色《Wave UFO》舱体与台阶，入口有蓝光；为2003年布雷根茨美术馆资料图。",
+        "caption": "森万里子《Wave UFO》（1999–2002）。2003 年奥地利布雷根茨美术馆展出现场，非本次东京展览现场。摄影：Richard Learoyd。",
+        "asset": "assets/mariko-mori-all-that-shines-fallback.svg"
+      }
+    },
+    {
+      "id": "palace-nike-manor-place-fc-first-anniversary-2026",
+      "level": "major",
+      "title": "周年球衣之后，Manor Place的下一场球",
+      "english": {
+        "title": "A VENUE WITH ANOTHER FIXTURE TO PLAY",
+        "deck": "Manor Place’s anniversary clothes lead back to the rules and work that keep its public spaces usable.",
+        "abstract": "The collection launched at the end of October. A programme scheduled for 3 November and current venue rules offer a more concrete view of the place behind the crest, with planning and construction records explaining how the former baths accommodate sport and creative work."
+      },
+      "sources": [
+        {
+          "title": "Nike and Palace Open Manor Place, a London Hub for Sport, Creativity and Community",
+          "publisher": "NIKE, Inc.",
+          "url": "https://about.nike.com/en/newsroom/releases/nike-palace-manor-place-announcement-official-images",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Nike And Palace Skateboards Have Opened A Vital South London Cultural Hub",
+          "publisher": "British Vogue",
+          "url": "https://www.vogue.co.uk/article/nike-palace-manor-place",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Palace unites with Nike to create a transformable London hub for skateboarding and sport: “we want to give back”",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/fashion-beauty/palace-nike-collaboration-manor-place-london",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Elephant and Castle and Walworth Town Centre Action Plan",
+          "publisher": "Southwark Council",
+          "url": "https://www.southwark.gov.uk/sites/default/files/2026-03/LBS-Elephant-and-Castle-Walworth-TCAP-Mar-2026.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Cage: information and fixtures",
+          "publisher": "Manor Place",
+          "url": "https://manorplace.com/cage",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Manor Place: construction in a listed bathhouse",
+          "publisher": "Vista Building Safety",
+          "url": "https://www.vistabs.uk/projects/manor-place/heritage,-leisure,",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Manor Place — Elephant & Castle, London",
+          "publisher": "BOX3 Projects",
+          "url": "https://box3projects.co.uk/projects/manor-place",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Manor Place planning project",
+          "publisher": "Rolfe Judd",
+          "url": "https://www.rolfe-judd.co.uk/planning/projects/manor-place/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Heritage Statement – Washhouse Works, 33 Manor Place",
+          "publisher": "Turley Heritage / Southwark public planning file",
+          "url": "https://docs.planning.org.uk/20240820/54/SIGVQ8KBK7B00/am4fhrd9e5daig43.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Stage 3 Building Services Performance Specification, 33 Manor Place",
+          "publisher": "Lamorbey Associates / Southwark public planning file",
+          "url": "https://docs.planning.org.uk/20240712/54/SG5P5AKBJ1N00/cu510316jrb4fc2h.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Palace Nike Manor Place — official collection reference",
+          "publisher": "Palace Skateboards",
+          "url": "https://usa.palaceskateboards.com/advice/palace-nike-manor-place",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "A VENUE WITH ANOTHER FIXTURE TO PLAY — official artwork source",
+          "publisher": "Palace Skateboards. Individual photographer not verified for this image.",
+          "url": "https://palaceskateboards.com/advice/palace-nike-manor-place",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Palace Skateboards. Individual photographer not verified for this image.",
+      "media": {
+        "origin_url": "https://palaceskateboards.com/advice/palace-nike-manor-place",
+        "external_image_url": "https://www.datocms-assets.com/65903/1793104797-mpfc-portrait-1.jpg?auto=format&dpr=0.5&fit=crop&w=800",
+        "alt": "穿蓝绿色外套与黑色帽子的模特站在脚手架下。",
+        "caption": "Palace官方周年系列造型图，作为场馆周年商品的图像背景；不是足球比赛现场。",
+        "credit": "Palace Skateboards. Individual photographer not verified for this image.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "asset": "assets/palace-nike-manor-place-fc-first-anniversary-2026-fallback.svg"
+      }
+    },
+    {
+      "id": "mad-look-40-years-fashion-museum-2026",
+      "level": "major",
+      "title": "漂亮衣服进了博物馆，谁来让它继续站着",
+      "english": {
+        "title": "WHAT KEEPS A DRESS STANDING",
+        "deck": "MAD’s anniversary exhibition makes the construction and preservation of fashion visible.",
+        "abstract": "The ongoing Paris exhibition follows clothing through workshops, displays and museum storage. Recent visit reports reveal both the skills behind preservation and the difficulty of reading forty previous exhibitions through forty outfits."
+      },
+      "sources": [
+        {
+          "title": "All facets of fashion on display at the Musée des Arts Décoratifs in Paris",
+          "publisher": "Le Monde",
+          "url": "https://www.lemonde.fr/en/lifestyle/article/2026/10/14/all-facets-of-fashion-on-display-at-the-musee-des-arts-decoratifs-in-paris_6758604_37.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "In Paris, the Musée des Arts Décoratifs Fêtes 40",
+          "publisher": "Vogue",
+          "url": "https://www.vogue.com/article/in-paris-the-musee-des-arts-decoratifs-fetes-40",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Look ! au MAD : quarante ans de mode racontés de l’atelier à la réserve",
+          "publisher": "Esprit Joaillerie",
+          "url": "https://espritjoaillerie.com/look-au-mad-quarante-ans-de-mode-racontes-de-latelier-a-la-reserve/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "From Pattern to Display: The Architecture of Fashion at MAD Paris",
+          "publisher": "Rubi Ramos / RR Éditions",
+          "url": "https://rubiramos.substack.com/p/from-pattern-to-display-the-architecture",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Caring for textiles and costumes",
+          "publisher": "Canadian Conservation Institute",
+          "url": "https://www.canada.ca/en/conservation-institute/services/preventive-conservation/guidelines-collections/textiles-costumes.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Look: 40 Years of Fashion at the Museum",
+          "publisher": "Musée des Arts Décoratifs",
+          "url": "https://madparis.fr/Look-40-Years-of-Fashion-at-the-Museum",
+          "published_date": null,
+          "event_date": "2026-09-30",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "LOOK! 40 Years of Fashion at the Museum - The Exhibition of Exhibitions",
+          "publisher": "FHCM",
+          "url": "https://www.fhcm.paris/en/news/look-40-years-of-fashion-at-the-museum-the-exhibition-of-exhibitions",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Faut-il aller voir Look ! 40 ans de mode au musée ?",
+          "publisher": "Glose",
+          "url": "https://glose.fr/expo-look-musee-arts-decoratifs-avis/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Look ! : quand la mode entre au musée",
+          "publisher": "DEFI",
+          "url": "https://www.defimode.org/look-40-ans-mode-musee-mad/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Cette nouvelle exposition du musée des Arts décoratifs retrace 40 ans de mode",
+          "publisher": "Marie Claire",
+          "url": "https://www.marieclaire.fr/exposition-look-40-ans-de-mode-au-musee-musee-des-arts-decoratifs,1520587.asp",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "© Les Arts Décoratifs / Jean Tholance",
+      "media": {
+        "origin_url": "https://madparis.fr/Look-40-Years-of-Fashion-at-the-Museum",
+        "external_image_url": "https://madparis.fr/local/cache-responsive/cache-600/b8b9d9d81eff20626c8389288e6a4c67.jpg.webp?1764086550",
+        "alt": "木质人台穿着淡粉色长裙，裙身点缀花瓣和圆片状装饰。",
+        "caption": "Madeleine Vionnet 1938 年作品，曾在 2009 年「Madeleine Vionnet」展览中展出。馆方当前展览页提供的馆藏照片，非本次展厅现场。",
+        "credit": "© Les Arts Décoratifs / Jean Tholance",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "asset": "assets/mad-look-40-years-fashion-museum-2026-fallback.svg"
+      }
+    },
+    {
+      "id": "ellen-pau-luminosity-mplus-2026",
+      "level": "major",
+      "title": "鲍蔼伦《原光》来到 M+：身体的动作，怎样留下光迹",
+      "english": {
+        "title": "Ellen Pau’s Luminosity at M+: Following a Gesture into Light",
+        "deck": "A new Grand Stair presentation turns a signed Heart Sutra into emerging and dissolving light traces.",
+        "abstract": "Luminosity shares concerns with Pau’s earlier facade commission while remaining a distinct work and presentation. Its documented history rules out a world-premiere claim."
+      },
+      "sources": [
+        {
+          "title": "Ellen Pau: Luminosity",
+          "publisher": "M+",
+          "url": "https://www.mplus.org.hk/en/exhibitions/ellen-pau-luminosity/",
+          "published_date": "2026-10-30",
+          "event_date": null
+        },
+        {
+          "title": "Healing through the Heart Sutra: Ellen Pau on The Shape of Light",
+          "publisher": "M+",
+          "url": "https://www.mplus.org.hk/en/magazine/an-interview-with-hong-kong-artist-ellen-pau/",
+          "published_date": "2022-05-23",
+          "event_date": null
+        },
+        {
+          "title": "The Shape of Light: Meditations on Hong Kong",
+          "publisher": "PAJ: A Journal of Performance and Art / Joanna Mansbridge",
+          "url": "https://kiangmalingue.com/wordpress/wp-content/uploads/2019/11/Shape-of-Light_PAJ.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Fair encounters: Ellen Pau interview",
+          "publisher": "China Daily Hong Kong",
+          "url": "https://www.chinadailyhk.com/hk/article/273402",
+          "published_date": "2022-05-27",
+          "event_date": null
+        },
+        {
+          "title": "Ellen Pau and Venus Lau on AI, gold, and reimagining East-meets-West",
+          "publisher": "Art Basel",
+          "url": "https://www.artbasel.com/stories/ellen-pau-venus-lau-ai-conversations-film-art-basel-hong-kong-2026?lang=en",
+          "published_date": "2026-02-23",
+          "event_date": null
+        },
+        {
+          "title": "Ellen Pau: She Moves",
+          "publisher": "Kiang Malingue / SculptureCenter",
+          "url": "https://kiangmalingue.com/ellen-pau-sculpturecenter/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "ON HEALING: Kimsooja | Ellen Pau",
+          "publisher": "PF25 cultural projects",
+          "url": "https://www.pf25.org/onhealing",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Ellen Pau: Less Than Meets the Eye",
+          "publisher": "ArtReview / Marcus Civin",
+          "url": "https://artreview.com/ellen-pau-she-moves-sculpturecenter-new-york-review-marcus-civin/",
+          "published_date": "2026-08-04",
+          "event_date": null
+        },
+        {
+          "title": "Ellen Pau: She Moves",
+          "publisher": "The Brooklyn Rail / Delaney Chieyen Holton",
+          "url": "https://brooklynrail.org/2026/07/artseen/ellen-pau-she-moves/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Shape of Light: a Live Performance by Ellen Pau — production account and credits",
+          "publisher": "M+ / Art Basel",
+          "url": "https://www.mplus.org.hk/en/events/the-shape-of-light-a-live-performance-by-ellen-pau/",
+          "published_date": null,
+          "event_date": "2022-05-27",
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Ellen Pau, Luminosity, 2026. Video still. Courtesy of the artist. Source: PF25 cultural projects official ON HEALING page.",
+      "media": {
+        "origin_url": "https://www.pf25.org/onhealing",
+        "external_image_url": "https://static.wixstatic.com/media/fd2b08_8278029c830b4094864d2e3ff132cb4d~mv2.jpg/v1/fill/w_707%2Ch_295%2Cal_c%2Clg_1%2Cq_80%2Cenc_avif%2Cquality_auto/fd2b08_8278029c830b4094864d2e3ff132cb4d~mv2.jpg",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "credit": "Ellen Pau, Luminosity, 2026. Video still. Courtesy of the artist. Source: PF25 cultural projects official ON HEALING page.",
+        "alt": "黑底上的表演者与发亮的双手，周围叠着模糊的黑白光迹。",
+        "caption": "鲍蔼伦《原光》（2026）影像静帧。艺术家提供，出自 PF25 官方展览页；非本次 M+ 大台阶展出现场。",
+        "asset": "assets/ellen-pau-luminosity-mplus-2026-fallback.svg"
+      }
+    },
+    {
+      "id": "smashing-pumpkins-lull-35th-anniversary-2026",
+      "level": "major",
+      "title": "四首歌，重看Gish的边缘",
+      "english": {
+        "title": "FOUR SONGS AT THE EDGE OF GISH",
+        "deck": "The Lull anniversary edition offers a compact route through early recordings, with the scope of “first streaming availability” kept precise.",
+        "abstract": "The band’s 30 October announcement pairs the four-track EP’s streaming arrival with a collectible vinyl reissue. Original production interviews and independent criticism help distinguish album tracks, outtakes and demos without presenting old songs as newly written music."
+      },
+      "sources": [
+        {
+          "title": "35 Years of Lull: Stream & Order Today",
+          "publisher": "The Smashing Pumpkins",
+          "url": "https://www.smashingpumpkins.com/",
+          "published_date": "2026-10-30",
+          "event_date": "2026-10-30",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Mark Ignoffo Talks Smashing Pumpkins",
+          "publisher": "SPFreaks",
+          "url": "https://spfreaks.com/mark-ignoffo-talks-smashing-pumpkins/",
+          "published_date": "2014-06-24",
+          "event_date": null
+        },
+        {
+          "title": "Talking With Producer/Musician Butch Vig of Garbage, Part One",
+          "publisher": "Copper / PS Audio",
+          "url": "https://www.psaudio.com/blogs/copper/talking-with-producer-musician-butch-vig-of-garbage-part-one",
+          "published_date": "2023-01-13",
+          "event_date": null
+        },
+        {
+          "title": "Billy Corgan on the tonal journey behind his guitar sound",
+          "publisher": "Guitar World",
+          "url": "https://www.guitarworld.com/artists/guitarists/billy-corgan-smashing-pumpkins-laney-supergrace-guitar-tone-journey",
+          "published_date": "2026-03-05",
+          "event_date": null
+        },
+        {
+          "title": "Smashing Pumpkins’ debut album Gish mixes Zep rock grooves, acid folk, shoegaze and trippy psychedelic angst",
+          "publisher": "Classic Rock / Louder",
+          "url": "https://www.loudersound.com/music/smashing-pumpkins-gish",
+          "published_date": "2026-05-28",
+          "event_date": null
+        },
+        {
+          "title": "Gish [Deluxe Edition] / Siamese Dream [Deluxe Edition]",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/reviews/albums/16059-gish-deluxe-edition-siamese-dream-deluxe-edition/",
+          "published_date": "2011-11-28",
+          "event_date": null
+        },
+        {
+          "title": "Smashing Pumpkins — Gish, Lull and the early catalogue",
+          "publisher": "Trouser Press",
+          "url": "https://trouserpress.com/reviews/smashing-pumpkins/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Billy Corgan, Jimmy Chamberlin, Butch Vig, Flood and more on the Smashing Pumpkins’ recording history",
+          "publisher": "MusicRadar / Electronic Musician",
+          "url": "https://www.musicradar.com/news/smashing-pumpkins-classic-interview-recording-history",
+          "published_date": "2024-01-08",
+          "event_date": null
+        },
+        {
+          "title": "Pioneering Drummer and Producer Butch Vig Talks Drumming, Roland V-Drums, Production, and Garbage",
+          "publisher": "Modern Drummer",
+          "url": "https://www.moderndrummer.com/article/pioneering-drummer-and-producer-butch-vig-talks-drumming-roland-v-drums-production-and-garbage/",
+          "published_date": "2022-09-30",
+          "event_date": null
+        },
+        {
+          "title": "Smashing Pumpkins Celebrate 35 Years of Gish With a Remastered 180g LP Reissue",
+          "publisher": "AnalogPlanet",
+          "url": "https://www.analogplanet.com/content/smashing-pumpkins-celebrate-35-years-their-1991-debut-album-gish-powerful-dynamic-remastered",
+          "published_date": "2026-06-26",
+          "event_date": null
+        },
+        {
+          "title": "Wendy Schneider & Butch Vig, The Smart Studios Story — public transcript",
+          "publisher": "PBS Wisconsin / Director’s Cut",
+          "url": "https://pbswisconsin.org/watch/directors-cut/wendy-schneider-butch-vig-the-smart-studios-story-ptpusv/",
+          "published_date": "2018-05-25",
+          "event_date": null
+        },
+        {
+          "title": "FOUR SONGS AT THE EDGE OF GISH — official artwork source",
+          "publisher": "The Smashing Pumpkins official release artwork. Individual cover designer not specified in the verified source.",
+          "url": "https://smashingpumpkins.lnk.to/Lull35thAnniversary",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "The Smashing Pumpkins official release artwork. Individual cover designer not specified in the verified source.",
+      "media": {
+        "origin_url": "https://smashingpumpkins.lnk.to/Lull35thAnniversary",
+        "external_image_url": "https://linkstorage.linkfire.com/medialinks/images/db4ac927-425b-4c0d-96a4-051290d7913a/artwork-440x440.jpg",
+        "alt": "Lull封面：浅灰米色纸面上，紫色乐队名围绕中央花纹，四周有绿色波线与黄、粉、红、蓝色图案。",
+        "caption": "《Lull》35周年官方收听与购买入口使用的封面图。具体封面设计者未在本轮官方出处核实。",
+        "credit": "The Smashing Pumpkins official release artwork. Individual cover designer not specified in the verified source.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "asset": "assets/smashing-pumpkins-lull-35th-anniversary-2026-fallback.svg"
+      }
+    }
+  ]
+}

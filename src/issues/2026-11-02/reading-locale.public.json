@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "issueId": "2026-11-02",
+  "sourceContentSha256": "71c63f964398ba66cf838fd62e6024c47dff63aa6aeb892433db9ad8cd9b5e6c",
+  "issue": {
+    "titleEn": "WHAT STAYS IN USE",
+    "positionEn": "Follow how materials, recordings and public spaces are made available for another use.",
+    "introEn": "Re-dyed clothes, rearranged live recordings, a temporary exhibition on a road, and supports that keep a historic dress standing: this work changes how objects continue to appear. Starting with a Zurich light exhibition, today’s issue moves through New York, Doha, Tokyo, London, Paris and Hong Kong, then returns to two music releases.\n\nSome projects have just opened; others have already ended. Each article keeps the dates explicit, separating current opportunities to visit from materials and processes that remain worth examining.",
+    "closingEn": "Preservation and renewal require different kinds of work. Wearing, supporting, playing and sharing offer another occasion for these works to change."
+  },
+  "stories": {
+    "sabine-marcelis-light-and-color-2026": {
+      "altZh": "粉色与蓝灰透明叠层构成的《Light and Color》官方海报。",
+      "altEn": "Official Light and Color poster with pink and blue-grey translucent layers.",
+      "captionEn": "Official Light and Color exhibition poster with translucent pink and blue-grey layers; not a photograph of the galleries.",
+      "summaryEn": "Familiar lamps become spaces to enter, while material tests reveal how their light is made.",
+      "englishKind": "full"
+    },
+    "our-legacy-nike-sport-shop-nyc-2026": {
+      "altZh": "戴红色角状发箍的人物抬手遮住一侧眼睛，穿着蓝灰色上衣。",
+      "altEn": "Campaign portrait of a person wearing a red horn-shaped headband and a blue-grey top, with one hand raised across an eye.",
+      "captionEn": "Sport Shop NYC by Our Legacy Work Shop and Nike. Photo: Peter Sutherland. The activation ended on November 1, 2026.",
+      "summaryEn": "The completed Procell pop-up documents reworked Nike deadstock, distinct from the spring 2027 running collection.",
+      "englishKind": "full"
+    },
+    "makaya-mccraven-off-the-record-digital-2026": {
+      "altZh": "深褐底色、白色标题与黑白演出照片构成的《Off the Record》官方封面。",
+      "altEn": "Official Off the Record cover, with white lettering and a black-and-white performance photograph on a dark brown ground.",
+      "captionEn": "Official Off the Record release artwork. The digital edition does not indicate newly recorded 2026 performances.",
+      "summaryEn": "A digital entry into four EPs assembled from earlier live recordings.",
+      "englishKind": "full"
+    },
+    "designart-tokyo-2026-kkline": {
+      "altZh": "黑白KK高架道路资料图，上面为蓝色AUTOBAHN与DESIGNART字样。",
+      "altEn": "Black-and-white aerial view of the KK elevated road with blue AUTOBAHN and DESIGNART lettering.",
+      "captionEn": "KK Line venue reference image on the official DESIGNART project page. The page does not date this photograph; it is not identified as a current installation view.",
+      "summaryEn": "The temporary KK Line venue closes November3, before the wider festival. Reused road elements and hands-on design offer a focused route.",
+      "englishKind": "full"
+    },
+    "doha-designed-to-last-maison-artc-2026": {
+      "altZh": "灰白背景中的粉红立体衣物与黑色人台剪影。",
+      "altEn": "Pink sculptural garment and a dark mannequin silhouette against a pale grey ground.",
+      "captionEn": "Official Designed to Last event visual showing a sculptural red garment detail; not an installation photograph.",
+      "summaryEn": "Thirteen unique looks, photography and a 3 November discussion ask what makes clothes worth keeping.",
+      "englishKind": "full"
+    },
+    "mariko-mori-all-that-shines": {
+      "altZh": "银色《Wave UFO》舱体与台阶，入口有蓝光；为2003年布雷根茨美术馆资料图。",
+      "altEn": "The silver Wave UFO pod and access steps, with blue light at the entrance; archive installation image from Bregenz in 2003.",
+      "captionEn": "Mariko Mori, Wave UFO (1999–2002), installed at Kunsthaus Bregenz, Austria, in 2003. This is an archive image, not the current Tokyo installation. Photo: Richard Learoyd.",
+      "summaryEn": "A new retrospective follows Mori’s changing tools, with Wave UFO’s visitor procedure and the limits of technical claims kept visible.",
+      "englishKind": "full"
+    },
+    "palace-nike-manor-place-fc-first-anniversary-2026": {
+      "altZh": "穿蓝绿色外套与黑色帽子的模特站在脚手架下。",
+      "altEn": "A model in a teal jacket and black beanie beneath scaffolding.",
+      "captionEn": "Official styling photograph for the anniversary collection, not a football match at the venue.",
+      "summaryEn": "The kit carries the crest; the venue has another programme to run.",
+      "englishKind": "full"
+    },
+    "mad-look-40-years-fashion-museum-2026": {
+      "altZh": "木质人台穿着淡粉色长裙，裙身点缀花瓣和圆片状装饰。",
+      "altEn": "A pale pink full-length dress on an articulated wooden mannequin, with petal and circular appliqués.",
+      "captionEn": "Madeleine Vionnet, 1938, shown in the 2009 exhibition Madeleine Vionnet. Collection photograph supplied on the museum’s current exhibition page, not an installation view of the current galleries. © Les Arts Décoratifs / Jean Tholance",
+      "summaryEn": "A museum preserves more than a silhouette: patterns, supports and patient work keep clothes visible.",
+      "englishKind": "full"
+    },
+    "ellen-pau-luminosity-mplus-2026": {
+      "altZh": "黑底上的表演者与发亮的双手，周围叠着模糊的黑白光迹。",
+      "altEn": "A performer and brightly lit hands emerge amid overlapping monochrome light trails against black.",
+      "captionEn": "Ellen Pau, Luminosity (2026), video still, courtesy of the artist. Source: PF25 official exhibition page. This is not an installation view of the current M+ presentation.",
+      "summaryEn": "A free Grand Stair presentation of Luminosity opened on October 30, distinct from The Shape of Light (2022) and its facade setting.",
+      "englishKind": "full"
+    },
+    "smashing-pumpkins-lull-35th-anniversary-2026": {
+      "altZh": "《Lull》封面，紫色乐队名与绿色波线、彩色花纹围绕浅色纸面。",
+      "altEn": "Lull cover with purple band lettering, green wavy lines and coloured floral patterns on pale paper.",
+      "captionEn": "Cover artwork displayed by the official Lull 35th-anniversary listening and purchasing link. The individual cover designer was not verified in the current official record.",
+      "summaryEn": "An early four-song sequence returns, with its recording history kept in view.",
+      "englishKind": "full"
+    }
+  },
+  "sourceLabelsEn": {
+    "https://amana.jp/news/6775/": "amana — Before KK Line Closes: A Road Becomes a Five-Day Exhibition — source report",
+    "https://ambientec.co.jp/blogs/events/beyond-consumption": "Ambientec — Before KK Line Closes: A Road Becomes a Five-Day Exhibition — source report",
+    "https://www.toshiseibi.metro.tokyo.lg.jp/machizukuri/machi_project/toshi_saisei/kk_arikata": "Tokyo Metropolitan Government, Bureau of Urban Development — Before KK Line Closes: A Road Becomes a Five-Day Exhibition — source report",
+    "https://bijutsutecho.com/magazine/news/report/33273": "美術手帖 — Mariko Mori: All That Shines, opening report"
+  },
+  "inlineMedia": {},
+  "sourceOriginalLanguageExceptions": [],
+  "extras": {}
+}
