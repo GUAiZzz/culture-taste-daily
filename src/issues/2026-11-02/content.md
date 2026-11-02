@@ -296,13 +296,13 @@ In a separate Art Basel interview this year, Pau discussed presentations beyond 
 
 曲目依次是《Rhinoceros》《Blue》《Slunk》和《Bye June》。Trouser Press的评论把它们的来路拆得很清楚：《Rhinoceros》来自《Gish》，《Blue》和《Slunk》是专辑落选曲，末尾则是一段更早的Corgan个人原声demo。评论者尤其区分了《Slunk》的攻击性和《Bye June》的低调。四首放在一起，留下了专辑主线以外的几种尺度，不能简单当成四首“新歌”来介绍。
 
-《Rhinoceros》也适合用来观察版本差异。Classic Rock今年的《Gish》评论，着重写它如何从舒缓的迷幻抒情逐渐转入更浓的吉他层次。更早与乐队合作的工程师Mark Ignoffo，在SPFreaks原访中回忆，Corgan还曾要求他为这首歌的一个替代版本演奏古怪的合成风琴独奏。这段回忆属于早期录音实验，不能移植为本次EP音轨的制作说明；它让“同一首歌”背后的不同录音选择变得具体。
+《Rhinoceros》也适合用来观察录音选择。Corgan在2011年对Blogcritics的邮件原访里，把歌曲开头的效果解释为倒转的混响。更早与乐队合作的工程师Mark Ignoffo，在SPFreaks原访中回忆，Corgan还曾要求他为这首歌的一个替代版本演奏古怪的合成风琴独奏。这段回忆属于早期录音实验，不能移植为本次EP音轨的制作说明；它让“同一首歌”背后的不同录音选择变得具体。
 
-主专辑《Gish》的精细声音，也来自主动留出来的工作时间。Vig在PBS Wisconsin公开逐字稿和Copper的两次原访中，都谈到Corgan愿意多花时间找音色、收紧演奏，再反复处理录音。Corgan今年接受Guitar World采访时，则把一次关键变化追溯到Jimmy Chamberlin卖给他的那把“Gish Strat”，以及它与Marshall音箱的组合。器材在这里对应的是一连串调整，后来的签名产品与这次《Lull》再版仍是两回事。
+主专辑《Gish》的精细声音，也来自主动留出来的工作时间。Vig在Copper的原访中谈到Corgan愿意多花时间找音色、收紧演奏，再反复处理录音。Corgan今年接受Guitar World采访时，则把一次关键变化追溯到Jimmy Chamberlin卖给他的那把“Gish Strat”，以及它与Marshall音箱的组合。器材在这里对应的是一连串调整，后来的签名产品与这次《Lull》再版仍是两回事。
 
 这些层次还依赖两个人一起演奏时的节奏。Vig向Modern Drummer解释，《Gish》的基础录音由Chamberlin打鼓、Corgan弹节奏吉他共同完成，随后才进行重录叠加；他特别指出二人在小节前后推拉的配合。MusicRadar刊载的历史录音访谈，则补足了先集体排练编排、再进入录音室精修的过程。听这批早期作品时，鼓与吉他的关系值得与失真厚度放在一起关注。
 
-Pitchfork的Ned Raggett在2011年已区分《Gish》再版里的新录音、流传旧作和混音。这个区分同样适用于今天的收藏判断。AnalogPlanet今年实物评测《Gish》周年黑胶时，也核对到沿用的2011年母带署名，并明确留下新漆盘由谁处理尚未确认的问题。再版年份、母带年份和录音本身，值得分别看清楚；这些《Gish》的信息也不能直接移给《Lull》。
+再版还需要重新整理档案。Corgan在2011年Stereogum原访里提到误标的磁带盒，以及《Siamese Dream》遗失的混音笔记。这是当时辨认版本的工作，不能当成本次《Lull》的母带制作说明。Pitchfork的Ned Raggett在2011年已区分《Gish》再版里的新录音、流传旧作和混音。这个区分同样适用于今天的收藏判断。AnalogPlanet今年实物评测《Gish》周年黑胶时，也核对到沿用的2011年母带署名，并明确留下新漆盘由谁处理尚未确认的问题。再版年份、母带年份和录音本身，值得分别看清楚；这些《Gish》的信息也不能直接移给《Lull》。
 
 本轮可以先沿官方入口完整听完《Lull》的四曲顺序，再把《Rhinoceros》放回《Gish》比较。黑胶适合希望保留这一版实体形式的人，串流入口则降低了先听再决定的成本。官方入口把收听与购买放在一起，至少可以围绕同一份四曲目录作选择。
 
@@ -312,13 +312,13 @@ On 30 October, The Smashing Pumpkins returned their 1991 four-track EP Lull to t
 
 The sequence is “Rhinoceros,” “Blue,” “Slunk” and “Bye June.” Trouser Press distinguishes their origins: a Gish album track, two album outtakes, and an earlier solo acoustic demo by Billy Corgan. Its review also contrasts the aggression of “Slunk” with the understated final song. Together, they offer several scales of early Pumpkins music around the main album’s edges; presenting them as four newly written songs would obscure that history.
 
-“Rhinoceros” offers a useful way to think about versions. Classic Rock’s Gish review this year follows its movement from unhurried psychedelia into denser guitar textures. In an original SPFreaks interview, early engineer Mark Ignoffo recalls Corgan asking for a deliberately strange synthesised-organ solo on an alternate version of the song. That recollection concerns an earlier recording experiment, not a production credit for the track on this reissue. It makes the choices behind a familiar song more tangible.
+“Rhinoceros” offers a useful way to examine recording decisions. In a 2011 email interview with Blogcritics, Corgan describes its opening effect as backwards reverb. In an original SPFreaks interview, early engineer Mark Ignoffo recalls Corgan asking for a deliberately strange synthesised-organ solo on an alternate version of the song. That recollection concerns an earlier recording experiment, not a production credit for the track on this reissue. It makes the choices behind a familiar song more tangible.
 
-The careful sound of Gish also depended on allowing time for the work. In PBS Wisconsin’s public interview transcript and a separate Copper interview, Butch Vig recalls Corgan’s willingness to refine tones, tighten performances and keep working on the recordings. Speaking to Guitar World this year, Corgan traces a turning point to the “Gish Strat” he bought from Jimmy Chamberlin and its combination with a Marshall amp. These accounts describe a process of adjustment. His later signature equipment and the current Lull edition remain separate subjects.
+The careful sound of Gish also depended on allowing time for the work. In Copper’s original interview, Butch Vig recalls Corgan’s willingness to refine tones, tighten performances and keep working on the recordings. Speaking to Guitar World this year, Corgan traces a turning point to the “Gish Strat” he bought from Jimmy Chamberlin and its combination with a Marshall amp. These accounts describe a process of adjustment. His later signature equipment and the current Lull edition remain separate subjects.
 
 The layers also began with two musicians playing together. Vig tells Modern Drummer that Chamberlin’s drums and Corgan’s rhythm guitar formed the Gish basic tracks before overdubs, highlighting their push and pull within a bar. MusicRadar’s historical recording interviews add the preceding collective rehearsals and arrangement work. The relationship between drums and guitar offers something specific to follow alongside the weight of the distortion.
 
-In his 2011 Pitchfork review, Ned Raggett distinguishes new recordings, circulating rarities and remixes on the Gish reissue. Those distinctions remain useful when deciding what an archive release adds to a collection. Inspecting this year’s Gish anniversary vinyl, AnalogPlanet also identifies reused 2011 mastering credits while leaving the new lacquer-cutting credit unconfirmed. A reissue date, a mastering date and a recording are separate facts; those Gish details cannot simply be transferred to Lull.
+Reissues also involve identifying archive material. In his 2011 Stereogum interview, Corgan describes mislabeled tape boxes and missing mix notes for Siamese Dream. Those are problems from that archival process, not production details for this Lull edition. In his 2011 Pitchfork review, Ned Raggett distinguishes new recordings, circulating rarities and remixes on the Gish reissue. Those distinctions remain useful when deciding what an archive release adds to a collection. Inspecting this year’s Gish anniversary vinyl, AnalogPlanet also identifies reused 2011 mastering credits while leaving the new lacquer-cutting credit unconfirmed. A reissue date, a mastering date and a recording are separate facts; those Gish details cannot simply be transferred to Lull.
 
 Start with Lull’s four-track order through the official listening link, then return “Rhinoceros” to its place on Gish. The vinyl offers a physical version for collectors; streaming makes it easier to listen before deciding. The official link brings listening and purchasing together around the same four-song sequence.
 

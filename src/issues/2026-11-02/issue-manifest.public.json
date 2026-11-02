@@ -5,8 +5,8 @@
   "visibility": "published_preview",
   "timezone": "Asia/Shanghai",
   "candidate_created_at": "2026-11-02T13:05:35.102+08:00",
-  "research_locked_at": "2026-11-02T23:22:55+08:00",
-  "content_locked_at": "2026-11-02T23:22:55+08:00",
+  "research_locked_at": "2026-11-02T23:45:54+08:00",
+  "content_locked_at": "2026-11-02T23:45:54+08:00",
   "status": "BLOCKED",
   "media_required": true,
   "contract": {
@@ -18,11 +18,11 @@
   "core_version": "v2",
   "content_lock": {
     "status": "locked",
-    "sha256": "71c63f964398ba66cf838fd62e6024c47dff63aa6aeb892433db9ad8cd9b5e6c",
-    "locked_at": "2026-11-02T23:22:55+08:00"
+    "sha256": "854938ff8a320901634f706498057b645f8f5ef23c48aaf5a92fc356a40b76b1",
+    "locked_at": "2026-11-02T23:45:54+08:00"
   },
   "source_hashes": {
-    "content_sha256": "71c63f964398ba66cf838fd62e6024c47dff63aa6aeb892433db9ad8cd9b5e6c",
+    "content_sha256": "854938ff8a320901634f706498057b645f8f5ef23c48aaf5a92fc356a40b76b1",
     "art_direction_sha256": "f7a7f41fe60a431b3d1a222d49ef19f77391cd2c4ddb56d86959fb360455bcfa",
     "issue_style_sha256": "e4b789e5c30730c83a5b6a2cb73bcf99735cb3dc577b05340aa15d3a4724a8f6"
   },
@@ -1026,13 +1026,6 @@
           "event_date": null
         },
         {
-          "title": "Smashing Pumpkins’ debut album Gish mixes Zep rock grooves, acid folk, shoegaze and trippy psychedelic angst",
-          "publisher": "Classic Rock / Louder",
-          "url": "https://www.loudersound.com/music/smashing-pumpkins-gish",
-          "published_date": "2026-05-28",
-          "event_date": null
-        },
-        {
           "title": "Gish [Deluxe Edition] / Siamese Dream [Deluxe Edition]",
           "publisher": "Pitchfork",
           "url": "https://pitchfork.com/reviews/albums/16059-gish-deluxe-edition-siamese-dream-deluxe-edition/",
@@ -1068,10 +1061,17 @@
           "event_date": null
         },
         {
-          "title": "Wendy Schneider & Butch Vig, The Smart Studios Story — public transcript",
-          "publisher": "PBS Wisconsin / Director’s Cut",
-          "url": "https://pbswisconsin.org/watch/directors-cut/wendy-schneider-butch-vig-the-smart-studios-story-ptpusv/",
-          "published_date": "2018-05-25",
+          "title": "Billy Corgan on Gish and Siamese Dream reissues",
+          "publisher": "Blogcritics / Charlie Doherty",
+          "url": "https://blogcritics.org/interview-smashing-pumpkins-billy-corgan-talks/",
+          "published_date": "2011-12-05",
+          "event_date": null
+        },
+        {
+          "title": "Progress Report: Billy Corgan",
+          "publisher": "Stereogum / T. Cole Rachel",
+          "url": "https://stereogum.com/906011/progress-report-billy-corgan/interviews",
+          "published_date": "2011-12-15",
           "event_date": null
         },
         {

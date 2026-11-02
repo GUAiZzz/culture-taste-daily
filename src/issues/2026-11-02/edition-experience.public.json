@@ -1,7 +1,7 @@
 {
   "version": 1,
   "issueId": "2026-11-02",
-  "revision": "71c63f964398-living-b-01",
+  "revision": "854938ff8a32-living-b-01",
   "initialStoryId": "sabine-marcelis-light-and-color-2026",
   "visualThesis": "从衣物、灯光和录音，到道路与影像，沿着材料、制作和再次使用的方式继续看。",
   "generationPolicy": "编辑顺序与当期配置稳定复现；色板来自实际看过的官方图像，手工配置，不声称自动采色，不使用无意义随机参数。",
