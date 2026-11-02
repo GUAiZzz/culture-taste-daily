@@ -2,6 +2,16 @@
 (() => {
  'use strict';
  const root=document.documentElement;
+ // Capture real reader intent before the deferred module graph can arrive.
+ // This state belongs only to this document, never to saved reading contexts.
+ const inputTypes=['pointerdown','touchstart','wheel','keydown'];
+ let interrupted=false;
+ const record=event=>{if(event.isTrusted===true)interrupted=true;};
+ for(const type of inputTypes)globalThis.addEventListener?.(type,record,{capture:true,passive:true});
+ globalThis.CTEarlyNavigationInput=Object.freeze({consume(){
+  for(const type of inputTypes)globalThis.removeEventListener?.(type,record,{capture:true});
+  return interrupted;
+ }});
  if(root.dataset.pageType!=='home')return;
  let entries=[];
  try{const data=JSON.parse(sessionStorage.getItem('ct-living-roots-v1')||'[]');if(Array.isArray(data))entries=data;}catch{}

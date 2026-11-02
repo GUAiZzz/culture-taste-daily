@@ -152,6 +152,7 @@ function positionIncoming(){
 
 export function initNavigation(){
  if(initialized)return;initialized=true;
+ cancelled=globalThis.CTEarlyNavigationInput?.consume?.()===true;
  for(const type of ['pointerdown','touchstart','wheel','keydown'])window.addEventListener(type,userInput,{passive:true});
  wireReadingLinks();
  const p=currentParent(),scene=currentRoot(),returning=new URLSearchParams(location.search).get('ctreturn')==='1';

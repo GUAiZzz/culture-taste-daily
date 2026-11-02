@@ -93,6 +93,14 @@ test('delayed navigation module cannot announce reading readiness before edition
   await p.evaluate(()=>window.CTUI.setPreferences({language:'en',fontSize:25,style:'analog',theme:'warm'}));
   const back=await p.locator('.reader-back').getAttribute('href');gate=arm();await p.goto(new URL(back,p.url()).href,{waitUntil:'commit'});await atUi(gate);gate.release();await ready(p);
   const restored=await p.evaluate(snapshot=>{const body=[...document.querySelectorAll('[data-reading-body]')].find(el=>el.dataset.sourceBody===snapshot.paragraph.storyId),section=[...body.querySelectorAll('[data-reading-language]')].find(el=>el.getClientRects().length&&getComputedStyle(el).visibility!=='hidden'),paragraphs=[...(section.querySelector('.english-content')||section).children].filter(el=>el.tagName==='P'),paragraph=paragraphs[Math.min(snapshot.paragraph.index,paragraphs.length-1)],r=paragraph.getBoundingClientRect();return {pathname:location.pathname,hash:location.hash,marker:document.querySelector('.site-header').getBoundingClientRect().bottom+16,point:r.top+r.height*snapshot.paragraph.ratio,focusId:document.activeElement.closest('.issue-story')?.id,focusStandalone:document.activeElement.matches('.action-standalone'),navigation:!!window.CTLivingNavigation};},parent);
-  assert.equal(restored.navigation,true);assert.equal(restored.pathname,new URL(parent.url).pathname);assert.equal(restored.hash,'');assert.ok(Math.abs(restored.point-restored.marker)<=2,JSON.stringify({parent,restored}));assert.equal(restored.focusId,'story-'+id);assert.equal(restored.focusStandalone,true);assert.deepEqual(errors,[]);
+  assert.equal(restored.navigation,true);assert.equal(restored.pathname,new URL(parent.url).pathname);assert.equal(restored.hash,'');assert.ok(Math.abs(restored.point-restored.marker)<=2,JSON.stringify({parent,restored}));assert.equal(restored.focusId,'story-'+id);assert.equal(restored.focusStandalone,true);
+  // A reader who starts scrolling during that same delayed-module interval
+  // takes precedence over saved automatic paragraph and focus restoration.
+  await p.locator(`#story-${id} .action-standalone`).click();await ready(p);
+  const manualBack=await p.locator('.reader-back').getAttribute('href');gate=arm();await p.goto(new URL(manualBack,p.url()).href,{waitUntil:'commit'});await atUi(gate);
+  await p.mouse.move(220,400);await p.mouse.wheel(0,480);await p.waitForFunction(()=>scrollY>=479);
+  const userY=await p.evaluate(()=>scrollY);gate.release();await ready(p);
+  const afterInput=await p.evaluate(()=>({y:scrollY,focusedStandalone:document.activeElement.matches('.action-standalone')}));
+  assert.ok(Math.abs(afterInput.y-userY)<=1,JSON.stringify({userY,afterInput}));assert.equal(afterInput.focusedStandalone,false);assert.deepEqual(errors,[]);
  }finally{gate?.release();pending?.release();await c.close();}
 });
