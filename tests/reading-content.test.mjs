@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import { parseStoryContent, paragraphCount, renderWithInsertions, validateReadingMedia, validateQuotePool, selectDailyQuote, loadReadingModel } from '../core/rooms/reading-content.mjs';
+import { parseStoryContent, escapeHtml, paragraphCount, renderWithInsertions, validateReadingMedia, validateQuotePool, selectDailyQuote, loadReadingModel } from '../core/rooms/reading-content.mjs';
 import { buildReadingSystem } from '../core/rooms/reading-render.mjs';
 
 const repoRoot = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -82,16 +82,26 @@ test('reading model preserves every locked story, source footer, order and hash'
       assert.ok(!story.enHtml.includes('### English'));
     }
   }
-  assert.equal(model.latest.date, '2026-10-28');
-  assert.equal(model.latest.stories.length, 10);
-  assert.equal(model.latest.stories.filter(story => story.hasFullEnglish).length, 10);
-  assert.deepEqual(model.latest.stories.map(story => story.inlineMedia.length), [2, 2, 0, 0, 0, 0, 0, 0, 0, 0]);
-  assert.match(model.latest.stories[8].enMarkdown, /The Teardrop Throbs/);
+  const latestSource = validatedIssues.filter(issue => issue.manifest.visibility !== 'future_draft')
+    .sort((a, b) => a.issueId.localeCompare(b.issueId)).at(-1);
+  assert.ok(latestSource, 'a published Preview fixture is required');
+  assert.equal(model.latest.date, latestSource.issueId);
+  assert.equal(model.latest.stories.length, latestSource.manifest.stories.length);
+  assert.equal(model.latest.stories.filter(story => story.hasFullEnglish).length, latestSource.manifest.stories.length);
+  const inlineFixture = model.issues.find(issue => issue.date === '2026-10-28');
+  assert.ok(inlineFixture, 'the reviewed October 28 inline-media fixture must remain available');
+  assert.deepEqual(inlineFixture.stories.map(story => story.inlineMedia.length), [2, 2, 0, 0, 0, 0, 0, 0, 0, 0]);
+  assert.match(inlineFixture.stories.find(story => story.id === 'flaming-lips-teardrop-throbs-2026').enMarkdown, /The Teardrop Throbs/);
 });
 
 test('inline-media input fails closed on unbound source, rights, duplicates and paragraph position', async () => {
   const model = await loadReadingModel({ repoRoot, validatedIssues: await sourceIssues(), publicationIssues: [] });
-  const story = model.latest.stories[0], rows = structuredClone(story.inlineMedia);
+  const inlineFixture = model.issues.find(issue => issue.date === '2026-10-28');
+  assert.ok(inlineFixture, 'the reviewed inline-media issue must remain available');
+  const story = inlineFixture.stories.find(story => story.id === 'nact-shojo-manga-infinity-2026');
+  assert.ok(story, 'the reviewed inline-media story must remain available');
+  const rows = structuredClone(story.inlineMedia);
+  assert.equal(rows.length, 2, 'the negative cases require the two reviewed image insertions');
   assert.equal(validateReadingMedia(rows, story), rows);
   for (const [field, value, expected] of [
     ['origin_url', 'https://unrelated.example.com/exhibition/', /bound first-party/],
@@ -139,6 +149,14 @@ test('served pages include complete source content, stable issue boundaries and 
   await buildReadingSystem({ repoRoot, outDir, validatedIssues, publicationIssues });
   const home = await readFile(path.join(outDir, 'index.html'), 'utf8');
   assert.equal((home.match(/class="[^"]*\bct-story-entry\s+story-open[^"]*"/g) || []).length, model.latest.stories.length);
+  assert.ok(home.includes(`data-living-issue-id="${model.latest.date}"`), 'home must select the latest published issue');
+  const homeDestinations = new Set([...home.matchAll(/\bhref="([^"]+)"/g)]
+    .map(([, href]) => new URL(href, 'https://preview.example/').href));
+  for (const story of model.latest.stories) {
+    assert.ok(homeDestinations.has(new URL(`${model.latest.url}#story-${story.id}`, 'https://preview.example/').href), `${story.id}: missing latest issue destination`);
+    assert.ok(home.includes(escapeHtml(story.title)), `${story.id}: missing latest Chinese title`);
+    assert.ok(home.includes(escapeHtml(story.english.title)), `${story.id}: missing latest English title`);
+  }
   assert.match(home, /data-quote-mode="daily"/);
   assert.match(home, /rooms\/reading-system\.js\?v=[a-f0-9]{12}/);
   assert.match(home, /data-style="field"/);
