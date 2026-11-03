@@ -21,7 +21,7 @@ Current authority: [READING_SYSTEM.md](READING_SYSTEM.md) and owner-approved [A3
 
 Settings order: `正文语言` (中文/EN), `正文字号`, `阅读风格` (场域/印刷/信号), `阅读外观` (明亮/夜读/暖灰), `工具外观` (实色/轻玻璃), `触感反馈`. Use equal-width shared 44px pills, 12px muted group titles and 18–20px group gaps. No fieldset borders, reset button, visible status explanation or switch hint text.
 
-The live Npx output itself measures N CSSpx immediately on input, line-height 1.2 and minimum 32px area; a full-width accent slider sits below the left label/right output row. Ordinary paragraphs in both languages, including the first paragraph, compute to the selected Npx; independent titles, captions and source metadata keep their own type hierarchy. Default 19px; verify 17/19/25px in actual browsers.
+The live Npx output itself measures N CSSpx immediately on input, line-height 1.2 and minimum 32px area; a full-width accent slider sits below the left label/right output row. Ordinary paragraphs in both languages, including the first paragraph, compute to the selected Npx; independent titles, captions and source metadata keep their own type hierarchy. Selectable range 15–23px in 1px steps; default 19px. Clamp saved out-of-range values before first paint; verify 15/19/23px in actual browsers.
 
 Native settings and image dialogs close with Escape, close button or deliberate backdrop click, lock background scroll and return focus. Settings initially focus the selected theme. Language/size changes preserve the current article paragraph when the dialog closes. Glass is limited to tools, solid by default; unsupported devices keep working visual feedback and no vibration guarantee.
 
