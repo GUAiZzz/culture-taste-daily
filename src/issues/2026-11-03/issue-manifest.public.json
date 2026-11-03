@@ -1,0 +1,1160 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-11-03",
+  "publication_date": "2026-11-03",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-11-03T10:40:16.539+08:00",
+  "research_locked_at": "2026-11-03T17:38:11.209+08:00",
+  "content_locked_at": "2026-11-03T17:38:11.209+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "e3c3b865bab7f825ec76b04d59c7c388b74365944bb00c4cb40a888a95af2521",
+    "locked_at": "2026-11-03T17:38:11.209+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "e3c3b865bab7f825ec76b04d59c7c388b74365944bb00c4cb40a888a95af2521",
+    "art_direction_sha256": "788b4052904e06c68826db3602fb07075c6677a6331a512cf3768512fd238e70",
+    "issue_style_sha256": "1ef67d46f9d0aebc01b942707b5b75da16da067e3e06f777e177429ab751a47b"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-11-03T11:37:45+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "从舞台、衣服和音乐，到树皮布、岛屿与城市，观察空间如何随着人的行动和关系变化。",
+  "art_direction": {
+    "dominant_mood": "深蓝、暖白与琥珀色为舞台、材料和人的移动建立安静的阅读节奏。",
+    "background_logic": "沿用已确认的共享空间浏览与默认环境色，阅读背景保持克制。",
+    "palette_logic": "原创封面使用深蓝、暖白与琥珀；文章沿用共享阅读系统默认色板。",
+    "type_scale_logic": "沿用共享阅读系统的中英文字级、行高与对齐。",
+    "image_behavior": "官方来源图注明历史、海报与现场边界；权利不明的图像仅外链预览。",
+    "page_density_and_tempo": "十篇按建筑、服装、音乐、城市、物件和收藏交错排列。",
+    "core_visual_action": "从历史舞台图进入，再通过共享浏览结构切换文章。",
+    "cover_composition": "原创几何轨迹与十个圆点呼应运动，不冒充纪实图像。",
+    "desktop_interaction_mechanic": "复用已确认的空间浏览和整期定位。",
+    "behance_viewing_arc": "从可移动的舞台到城市设想，沿着人的行动和物件的流转阅读。",
+    "mobile_translation": "沿用手机自然滚动与共享阅读入口。",
+    "mobbin_usability_constraint": "保持共享系统的键盘、无脚本、减弱动态和风格外观支持。",
+    "quiet_ending": "结尾退入深蓝与暖白，沿用共享每日语录轮播。",
+    "closing_quotation": {
+      "id": "ct-en-002",
+      "language": "en",
+      "text": "What remains after the spectacle is the method that carried it.",
+      "credit": "Culture & Taste Editorial"
+    },
+    "closing_palette": {
+      "background": "#172B3B",
+      "foreground": "#F6EFE3",
+      "accent": "#E4A968",
+      "rationale": "深蓝与暖白保证正文对比；琥珀色呼应运动轨迹，与近期封面的三色组合区分。"
+    }
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": [
+      "2026-11-02",
+      "2026-10-28",
+      "2026-09-22",
+      "2026-09-21",
+      "2026-09-20",
+      "2026-09-17",
+      "2026-09-16"
+    ],
+    "repeated_mechanisms": [
+      "approved shared B spatial browsing and whole-edition reading",
+      "official image links and local non-documentary fallbacks"
+    ],
+    "exception_reason": "复用已确认的共享阅读结构；已核对最近七期封面和结尾三色，本期以原创几何轨迹、选题及官方图像形成变化。"
+  },
+  "rights_summary": {
+    "required_assets": 10,
+    "unknown_required_assets": 10,
+    "status": "blocked"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": null
+  },
+  "evidence_refs": {
+    "technical": [],
+    "editorial_visual": [],
+    "gate": []
+  },
+  "qa": {
+    "html_parse": "unavailable",
+    "assets": "unavailable",
+    "internal_links": "unavailable",
+    "no_js_reading": "unavailable",
+    "desktop_render": "unavailable",
+    "mobile_render": "unavailable",
+    "reduced_motion": "unavailable"
+  },
+  "limitations": [
+    "Non-production Preview only. External official images retain linked origins and owned non-documentary fallbacks; reproduction rights are not treated as cleared by the user instruction.",
+    "Research and content were prepared after the Production window; actual timestamps are retained and Production remains blocked.",
+    "Registry scans record real attempts, including access-limited and unresolved subjects; those states do not establish that there was no news."
+  ],
+  "stories": [
+    {
+      "id": "zaha-hadid-architecture-of-performance-2026",
+      "level": "cover",
+      "title": "扎哈的舞台，为什么总在移动？",
+      "english": {
+        "title": "Why Does Zaha Hadid’s Stage Keep Moving?",
+        "deck": "A London exhibition revisits architecture made for dance, music and performance.",
+        "abstract": "A historic moving set and a choreographer’s recollection show how bodies and architecture worked together; reviews also questioned the results."
+      },
+      "sources": [
+        {
+          "title": "Zaha Hadid Foundation exhibition space and opening",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/architecture/architecture-events/zaha-hadid-foundation-new-space-and-events",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Inside the Zaha Hadid Foundation and archive",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/architecture/zaha-hadid-foundation-and-archive-london-uk",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Metapolis: Stage and Costume Design",
+          "publisher": "Divisare / ZHA",
+          "url": "https://divisare.com/projects/286303-zaha-hadid-architects-metapolis",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Metapolis review",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/stage/2001/aug/27/dance.edinburghfestival2001",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "10 Questions with Zaha Hadid",
+          "publisher": "TIME",
+          "url": "https://time.com/4277912/zaha-hadid-dead-10-questions/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Metapolis Project 972",
+          "publisher": "Oriente Occidente",
+          "url": "https://www.orienteoccidente.it/people/eventi/metapolis-project-972",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "A metropolis bustles with rich movement",
+          "publisher": "Los Angeles Times",
+          "url": "https://www.latimes.com/archives/la-xpm-2007-jul-25-et-metapolis25-story.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "2015 festival magazine, Rosemary Butcher interview",
+          "publisher": "Tanz im August",
+          "url": "https://www.tanzimaugust.de/fileadmin/TiA/Archiv_Festival/2015/TiA_Magazin_2015_Webansicht_Einzelseiten_RGB.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Transversalidades entre Dança e Arquitetura",
+          "publisher": "ABRACE / UNICAMP",
+          "url": "https://www.iar.unicamp.br/publionline/abrace/hosting.iar.unicamp.br/publionline/index.php/abrace/article/download/3873/3873-Texto%20do%20artigo-11269-1-10-20190507.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Nueva ciudad ideal",
+          "publisher": "El País",
+          "url": "https://elpais.com/diario/2001/05/27/espectaculos/990914403_850215.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Zaha Hadid's Historic London Studio Reopens as a Cultural Centre",
+          "publisher": "Archie Interiors",
+          "url": "https://www.archieinteriors.com/en/zaha-hadid-london-studio-cultural-centre/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Music Video Pavilion",
+          "publisher": "Hidden Architecture",
+          "url": "https://hiddenarchitecture.net/music-video-pavilion/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Oriente Occidente archive; photographer not named on the source page.",
+      "media": {
+        "origin_url": "https://www.orienteoccidente.it/people/eventi/metapolis-project-972",
+        "external_image_url": "https://www.datocms-assets.com/55129/1707390970-oo_frederic-flamand_metapolis_ph-no-name_3.jpg?ar64=MTY6OQ&auto=format%2Ccompress&crop=focalpoint&fit=crop&fp-x=0.48&fp-y=0.42",
+        "alt": "两位舞者站在投影与桥形舞台装置前。",
+        "caption": "《Metapolis》舞台资料图，由合作艺术节保存；不是 2026 年伦敦展览现场。",
+        "credit": "Oriente Occidente archive; photographer not named on the source page.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "asset": "assets/zaha-hadid-architecture-of-performance-2026-fallback.svg"
+      }
+    },
+    {
+      "id": "judy-blame-uniform-experiment-2026",
+      "level": "major",
+      "title": "安全别针回到衣服上，Judy Blame的物件如何继续被使用",
+      "english": {
+        "title": "Judy Blame’s Objects Return to Clothing",
+        "deck": "A SOPH anniversary capsule brings the artist’s visual vocabulary into a contemporary clothing release.",
+        "abstract": "Original interviews and exhibition records explain how found objects and improvised combinations shaped Blame’s work."
+      },
+      "sources": [
+        {
+          "title": "SOPH. TOKYO 27周年 Judy Blame capsule",
+          "publisher": "SOPH. / PR TIMES",
+          "url": "https://prtimes.jp/main/html/rd/p/000000004.000138303.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Judy Blame",
+          "publisher": "Interview Magazine",
+          "url": "https://www.interviewmagazine.com/fashion/judy-blame",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Judy Blame",
+          "publisher": "AnOther",
+          "url": "https://www.anothermag.com/fashion-beauty/2842/judy-blame",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Judy Blame Looks Back on His Genre-Defying Career",
+          "publisher": "W Magazine",
+          "url": "https://www.wmagazine.com/story/judy-blame-ica-exhibit-zine-interview",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Judy Blame's jewellery collection",
+          "publisher": "i-D",
+          "url": "https://i-d.co/article/we-want-to-be-drapped-in-judy-blames-new-jewellery-collection/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Previously unpublished interview with Judy Blame",
+          "publisher": "i-D",
+          "url": "https://i-d.co/article/judy-blame-interview/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "A tribute to Judy Blame",
+          "publisher": "i-D",
+          "url": "https://i-d.co/article/a-tribute-to-judy-blame-by-kim-jones-neneh-cherry-jeurgen-teller-mark-lebon/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Judy Blame and Terry Jones in conversation",
+          "publisher": "i-D",
+          "url": "https://i-d.co/article/join-judy-blame-and-terry-jones-in-conversation/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Judy Blame: a new showcase of the trailblazing oeuvre of fashion’s renegade",
+          "publisher": "It’s Nice That",
+          "url": "https://www.itsnicethat.com/articles/judy-blame-080716",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Never Again: the life and influence of Judy Blame at the ICA",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/art/ica-celebrates-the-life-and-influence-of-judy-blame-with-countercultural-retrospective-never-again",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Judy Blame’s Guided Tour of 1980s Counterculture",
+          "publisher": "AnOther",
+          "url": "https://www.anothermag.com/fashion-beauty/8813/judy-blames-guided-tour-of-1980s-counterculture",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "SOPH Co. official press release; photographer not identified on the source page.",
+      "media": {
+        "origin_url": "https://prtimes.jp/main/html/rd/p/000000004.000138303.html",
+        "external_image_url": "https://prcdn.freetls.fastly.net/release_image/138303/4/138303-4-5e5845ec3f6678fb8cfd6208efa4f33a-1800x2700.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950",
+        "alt": "模特身穿带有 Judy Blame 图案的飞行夹克。",
+        "caption": "SOPH 发布的联名系列形象图；合作关系不等于图片复制授权。",
+        "credit": "SOPH Co. official press release; photographer not identified on the source page.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "asset": "assets/judy-blame-uniform-experiment-2026-fallback.svg"
+      }
+    },
+    {
+      "id": "yaeji-ddr-dancefloor-2026",
+      "level": "major",
+      "title": "Yaeji的新歌，把跳舞时照顾彼此写进舞池",
+      "english": {
+        "title": "Yaeji Brings Care to the Dancefloor",
+        "deck": "The new single ddr pairs an arcade reference with the artist’s idea of looking after one another.",
+        "abstract": "The November 2 release and a planned Brooklyn event sit alongside earlier interviews about shared spaces and artistic community."
+      },
+      "sources": [
+        {
+          "title": "ddr",
+          "publisher": "Yaeji / XL Recordings",
+          "url": "https://kraejiyaeji.bandcamp.com/album/ddr",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Yaeji Plots a Dance Dance Revolution in New Single DDR",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/story/yaeji-plots-a-dance-dance-revolution-in-new-ddr-video/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Five Artists on the Future of Music",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/features/cover-story/yaeji-amaarae-bartees-strange-keiyaa-angel-bat-dawid-interview/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Yaeji: music allows for time travel",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/music/2023/apr/05/yaeji-music-allows-for-time-travel-and-for-us-to-understand-each-other-better",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Yaeji Interview",
+          "publisher": "Spotify O-EAST / K-MUSIC",
+          "url": "https://shibuya-o.com/feature/yaeji-interview/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Singer/rapper Yaeji: I was pretty shy about using my voice",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/music/2017/dec/08/house-producer-yaeji-pretty-shy-about-using-my-voice",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Music is the only language Yaeji needs to communicate",
+          "publisher": "Korea JoongAng Daily",
+          "url": "https://www.koreajoongangdaily.com/korea/music-is-the-only-language-yaeji-needs-to-communicate-blending-genres-has-been-the-singerdjs-signature-sound-since-her-early-days/10192758",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Homecoming and Coachella: Yaeji talks about diversity",
+          "publisher": "Young Post",
+          "url": "https://www.youngpostclub.com/yp/discover/lifestyle/features/article/3065368/homecoming-and-coachella-yaeji-rising-electronic",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Korean-American producer Yaeji brings whispers to the dancefloor",
+          "publisher": "Interview Magazine",
+          "url": "https://www.interviewmagazine.com/music/yaeji-brings-whispers-to-dancefloor",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Yaeji Gets Ragey",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/features/profile/yaeji-with-a-hammer-interview/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Cover Story: Yaeji",
+          "publisher": "The FADER",
+          "url": "https://www.thefader.com/2018/06/05/yaeji-cover-story",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Yaeji on potential collabs and becoming buds with Charli XCX",
+          "publisher": "ABC triple j",
+          "url": "https://www.abc.net.au/triplej/programs/drive/raingurl-yaeji-australian-debut-interview-charli-xcx-collabs/10586710",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Yaeji / XL Recordings via Bandcamp; individual artwork credit not verified.",
+      "media": {
+        "origin_url": "https://kraejiyaeji.bandcamp.com/album/ddr",
+        "external_image_url": "https://f4.bcbits.com/img/a1722880809_10.jpg",
+        "alt": "灰色封面上排列着黑白方向箭头。",
+        "caption": "Yaeji《ddr》官方发行封面。",
+        "credit": "Yaeji / XL Recordings via Bandcamp; individual artwork credit not verified.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "asset": "assets/yaeji-ddr-dancefloor-2026-fallback.svg"
+      }
+    },
+    {
+      "id": "dubai-design-week-language-gardens-2026",
+      "level": "major",
+      "title": "一座花园、一种文字：迪拜设计周如何安排相遇",
+      "english": {
+        "title": "A Garden and a Language at Dubai Design Week",
+        "deck": "Commissions bring design, craft and public space into conversation.",
+        "abstract": "The programme and earlier interviews distinguish a new commission from the makers’ preceding work and material research."
+      },
+      "sources": [
+        {
+          "title": "Dubai Design Week programme spans architecture and craft",
+          "publisher": "The National",
+          "url": "https://www.thenationalnews.com/arts-culture/art-design/2026/10/13/dubai-design-week-2026-announces-programme-spanning-architecture-and-craft/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Dubai Design Week announces five new commissions for Abwab 2026",
+          "publisher": "The National",
+          "url": "https://www.thenationalnews.com/arts-culture/art-design/2026/10/22/dubai-design-week-announces-five-new-commissions-for-abwab-2026/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "In conversation with Alzaina Lootah",
+          "publisher": "identity",
+          "url": "https://identity.ae/in-conversation-with-alzaina-lootah/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "AlZaina Lootah's light installation",
+          "publisher": "Villa88",
+          "url": "https://www.villa88.com/inspire/how-alzaina-lootah-turned-her-grandfathers-archives-into-a-stunning-light-installation/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "A postcard from Dubai Design Week 2025",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design-interiors/design-events/dubai-design-week-2025",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Kashmiri craft takes form at Dubai Design Week",
+          "publisher": "The Gulf Pulse",
+          "url": "https://thegulfpulse.com/dubai-design-week-2026-taleem/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Akshara: Craftworks from the northern region of India",
+          "publisher": "Dastkari Haat Samiti",
+          "url": "https://artsandculture.google.com/story/xgWR-XyyUK4VIg",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Kanihama: The Loom Village",
+          "publisher": "Kashmir Life",
+          "url": "https://kashmirlife.net/kanihama-the-loom-village-vol-15-issue-07-317356/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "All pashmina is cashmere but all cashmere is not pashmina",
+          "publisher": "Mint Lounge",
+          "url": "https://www.livemint.com/mint-lounge/style/the-beauty-of-handmade-pashmina-lies-in-its-subtle-imperfections-111602785573088.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "AlZaina Lootah",
+          "publisher": "UAE Year Of",
+          "url": "https://uaeyearof.ae/en/sustainable-production/case-studies/al-zaina-lootah",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Kani Weaving Craft from Charismatic Kashmir",
+          "publisher": "Indian Institute of Crafts and Design",
+          "url": "https://www.iicd.ac.in/kani-weaving-craft/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "UAE Year of Sustainability; photographer not named on the source page.",
+      "media": {
+        "origin_url": "https://uaeyearof.ae/en/sustainable-production/case-studies/al-zaina-lootah",
+        "external_image_url": "https://uaeyearof.ae/_next/image?url=https%3A%2F%2Fapi.uaeyearof.ae%2Fuploads%2FAl_Zaina_Lootah_4_7e56c8210d.jpg&w=3840&q=75",
+        "alt": "建筑师 AlZaina Lootah 身穿绿色衣服的肖像。",
+        "caption": "AlZaina Lootah 的 2024 年材料研究案例配图；不是 2026 年设计周现场。",
+        "credit": "UAE Year of Sustainability; photographer not named on the source page.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "asset": "assets/dubai-design-week-language-gardens-2026-fallback.svg"
+      }
+    },
+    {
+      "id": "nike-acg-helinox-chair-zero-lt-2026",
+      "level": "major",
+      "title": "一张轻量椅子，怎样在户外和时装之间找到位置？",
+      "english": {
+        "title": "A Lightweight Chair Between Outdoors and Fashion",
+        "deck": "The Nike ACG and Helinox release places a compact chair in two overlapping product worlds.",
+        "abstract": "Manufacturer information and independent use reports make it possible to separate the collaboration’s visual identity from the chair’s practical tradeoffs."
+      },
+      "sources": [
+        {
+          "title": "ACG X Helinox Zero LT Series 2026",
+          "publisher": "Helinox",
+          "url": "https://helinox.com/blogs/stories/acg-x-helinox-zero-lt-series-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "ACG x Helinox Chair Zero LT",
+          "publisher": "Helinox",
+          "url": "https://helinox.com/products/acg-x-helinox-chair-zero-lt",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Helinox Chair Zero LT and Table Zero LT launch",
+          "publisher": "T3",
+          "url": "https://www.t3.com/active/camping/helinox-chair-zero-lt-table-zero-lt-launch",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Helinox x NIKE ACG 2018",
+          "publisher": "Helinox",
+          "url": "https://helinox.com/blogs/collaborations/helinox-x-nike-acg-2018",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Chair Zero LT",
+          "publisher": "Red Dot",
+          "url": "https://www.red-dot.org/project/chair-zero-lt-86643",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Helinox and WE11DONE capsule",
+          "publisher": "T3",
+          "url": "https://www.t3.com/active/camping/helinox-we11done-capsule-launch-0826",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Nike ACG teams up with Helinox for its latest outdoor collection",
+          "publisher": "T3",
+          "url": "https://www.t3.com/active/camping/nike-acg-helinox-collection-1026",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The best camping chairs in the UK: 12 tested",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/thefilter/2025/jun/24/best-camping-chairs-folding-uk",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "OL-Q&A: A sit down with Young Lah",
+          "publisher": "Outdoor Licence",
+          "url": "https://outdoorlicence.co.uk/ol-qa-a-sit-down-with-our-favourite-chair-man-young-lah/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Helinox Chair Zero Review (Bought & Tested!)",
+          "publisher": "Camping Guidance",
+          "url": "https://campingguidance.com/helinox-chair-zero-review/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "9 Outdoor Gear Obsessions Our Editors Are Actually Using Every Summer Friday",
+          "publisher": "Outside",
+          "url": "https://www.outsideonline.com/outdoor-gear/gear-we-loved-june-2026/?scope=anon",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Nike ACG x Helinox collection",
+          "publisher": "HiConsumption",
+          "url": "https://hiconsumption.com/gear/nike-acg-x-helinox-collection/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Helinox / Nike ACG official release; photographer not named on the source page.",
+      "media": {
+        "origin_url": "https://helinox.com/blogs/stories/acg-x-helinox-zero-lt-series-2026",
+        "external_image_url": "https://cdn.shopify.com/s/files/1/0039/1367/8918/files/Hero-image.webp",
+        "alt": "橙色椅架的户外椅放在海边岩石上，旁边有人和收纳袋。",
+        "caption": "Helinox 官方发布的 ACG 联名系列配图。",
+        "credit": "Helinox / Nike ACG official release; photographer not named on the source page.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "asset": "assets/nike-acg-helinox-chair-zero-lt-2026-fallback.svg"
+      }
+    },
+    {
+      "id": "aitor-throup-ultra-veil-process-archive-2026",
+      "level": "signal",
+      "title": "未完成的衣服，也能成为档案吗？",
+      "english": {
+        "title": "Can Unfinished Clothes Become an Archive?",
+        "deck": "Aitor Throup’s ULTRA VEIL exhibition brings work in progress into public view.",
+        "abstract": "The Westminster exhibition and the designer’s earlier interviews offer a way to read clothing through its construction and development."
+      },
+      "sources": [
+        {
+          "title": "Westminster Menswear Archive presents Aitor Throup’s ULTRA VEIL at Ambika P3",
+          "publisher": "University of Westminster",
+          "url": "https://www.westminster.ac.uk/news/westminster-menswear-archive-presents-aitor-throups-ultra-veil-at-ambika-p3",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Aitor Throup Throws Down the Gauntlet with His New Exhibition “Ultra Veil”",
+          "publisher": "Vogue",
+          "url": "https://www.vogue.com/article/aitor-throup-throws-down-the-gauntlet-with-his-new-exhibition-ultra-veil",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Aitor Throup on His Return to Fashion, Breaking the Rules, and the Launch of His New Brand AITOR ULTRA",
+          "publisher": "Hypebeast",
+          "url": "https://hypebeast.com/2026/5/aitor-throup-aitor-ultra-brand-launch-return-to-fashion-exclusive-interview",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Aitor Throup: is the business model a design model?",
+          "publisher": "1 Granary",
+          "url": "https://1granary.substack.com/p/aitor-throup-is-the-business-model",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Film premiere: Aitor Throup x DSM: New Object Research",
+          "publisher": "Dazed",
+          "url": "https://www.dazeddigital.com/fashion/article/14925/1/film-premiere-aitor-throup-x-dsm-new-object-research",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Interview: Aitor Throup, Artist, Designer & Creative Director",
+          "publisher": "Something Curated",
+          "url": "https://somethingcurated.com/2017/10/17/interview-aitor-throup-artist-designer-creative-director/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Aitor Throup discusses his new online archive",
+          "publisher": "i-D",
+          "url": "https://i-d.co/article/exclusive-aitor-throup-discusses-his-new-online-archive-and-the-tenth-anniversary-of-at-studio/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Aitor Throup on sportswear and the Umbro archive",
+          "publisher": "Complex",
+          "url": "https://www.complex.com/style/a/jian-deleon/interview-aitor-throup-talks-sportswear-superheroes-and-umbro-archive-research-project",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Aitor Throup on becoming creative consultant to G-Star Raw",
+          "publisher": "Dazed",
+          "url": "https://www.dazeddigital.com/fashion/article/19962/1/aitor-throup-just-became-g-star-raws-creative-consultant",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Aitor Throup Talks The Hunger Games, New Object Research and The Rite of Spring",
+          "publisher": "Hypebeast",
+          "url": "https://hypebeast.com/2015/12/aitor-throup-hunger-games-costumes-interview",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "アイター・スロープによる新ブランド「アイター ウルトラ」が始動",
+          "publisher": "FASHIONSNAP.COM",
+          "url": "https://www.fashionsnap.com/article/2026-05-14/aitor-ultra/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "University of Westminster / Westminster Menswear Archive; photographer not identified on the page.",
+      "media": {
+        "origin_url": "https://www.westminster.ac.uk/news/westminster-menswear-archive-presents-aitor-throups-ultra-veil-at-ambika-p3",
+        "external_image_url": "https://www.westminster.ac.uk/sites/default/public-files/styles/panel_image_1_2_768px_/public/general-images/ULTRA-VEILexhibition.jpg?itok=fqqZNFsd",
+        "alt": "《ULTRA VEIL》服装的黑白近景。",
+        "caption": "威斯敏斯特大学发布的《ULTRA VEIL》展览配图。",
+        "credit": "University of Westminster / Westminster Menswear Archive; photographer not identified on the page.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "asset": "assets/aitor-throup-ultra-veil-process-archive-2026-fallback.svg"
+      }
+    },
+    {
+      "id": "met-tapa-art-gift-2026",
+      "level": "signal",
+      "title": "一块树皮布，如何记录一段关系？",
+      "english": {
+        "title": "How Can Barkcloth Record a Relationship?",
+        "deck": "The Met’s exhibition follows tapa as an object made, given and carried between people.",
+        "abstract": "Museum records and Pacific artists’ accounts show distinct histories and methods, without treating one cloth as representative of all communities."
+      },
+      "sources": [
+        {
+          "title": "Tapa: Art of the Gift in Polynesia",
+          "publisher": "The Met",
+          "url": "https://www.metmuseum.org/ko/exhibitions/tapa-art-of-the-gift-in-polynesia",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "What Are Tapa and Woven Mats?",
+          "publisher": "Natural History Museum of Los Angeles County",
+          "url": "https://nhm.org/experience-nhm/exhibitions-natural-history-museum/fabric-community/what-are-tapa-and-woven-mats",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Mapping the Sāmoa Collections: Siapo",
+          "publisher": "Te Papa Tongarewa",
+          "url": "https://blog.tepapa.govt.nz/2023/02/10/mapping-the-samoa-collections-siapo/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "John Pule, Take these with you when you leave",
+          "publisher": "Auckland Art Gallery",
+          "url": "https://www.aucklandartgallery.com/explore/stories-and-voices/from-the-pacific-art-collection-john-pule-take-these-with-you-when-you-leave-1998",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Nofo a koe Ka fano a au",
+          "publisher": "University of Auckland Art Collection",
+          "url": "https://artcollection.auckland.ac.nz/essay/69166",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Oceanic Art: Samoan siapo maker Reggie Meredith Fitiao",
+          "publisher": "Baltimore Museum of Art",
+          "url": "https://artbma.org/digital-guide/oceanic-art/?stop=1",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Māori and Niuean artist Cora-Allan reawakens hiapo",
+          "publisher": "ABC Pacific",
+          "url": "https://www.abc.net.au/pacific/programs/nesia-daily/niue-hiapo-cora-allan/103614016",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Hip hiapo: Niuean artform given modern twist",
+          "publisher": "Pacific Media Network",
+          "url": "https://pmn.co.nz/read/language-and-culture/hip-hiapo-ancient-niuean-artform-given-modern-twist",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Recording Mauri: Cora-Allan Twiss maps life force",
+          "publisher": "Pacific Media Network",
+          "url": "https://pmn.co.nz/read/arts/recording-mauri-cora-allan-twiss-maps-life-force-through-land-fibre-and-protest",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "My grandmother is (not just) a small brown fragment",
+          "publisher": "Australian Journal of Biography and History",
+          "url": "https://history.cass.anu.edu.au/files/docs/2025/6/ajbh-no.-9.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Knowledge exchange: Reviving tapa through transnationalism",
+          "publisher": "Queensland Art Gallery | Gallery of Modern Art",
+          "url": "https://apap.qagoma.qld.gov.au/wp-content/uploads/essay-pdfs/essay-2440.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Masi Kesa, collection object 1990.333.9",
+          "publisher": "The Metropolitan Museum of Art",
+          "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/316402",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "The Metropolitan Museum of Art, collection 1990.333.9. Object image identified as public domain.",
+      "media": {
+        "origin_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/316402",
+        "external_image_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/316402/2083418/main-image",
+        "alt": "一件有黑色、米色和红色几何纹样的斐济树皮布。",
+        "caption": "斐济艺术家制作的 Masi Kesa，馆藏编号 1990.333.9；馆藏记录标为未展出，不能据此判断本次展览现场。",
+        "credit": "The Metropolitan Museum of Art, collection 1990.333.9. Object image identified as public domain.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "asset": "assets/met-tapa-art-gift-2026-fallback.svg"
+      }
+    },
+    {
+      "id": "busan-biennale-dissident-chorus-three-sites",
+      "level": "signal",
+      "title": "釜山双年展结束后，三处场地留下了什么声音？",
+      "english": {
+        "title": "After the Busan Biennale, What Sounds Remain?",
+        "deck": "Reports from three sites trace the city’s role in Dissident Chorus.",
+        "abstract": "The biennale ended November 1; curatorial interviews and site reviews make room for both its ambitions and its limits."
+      },
+      "sources": [
+        {
+          "title": "Busan Biennale 2026 venues and participating artists",
+          "publisher": "Busan Metropolitan City",
+          "url": "https://www.busan.go.kr/eng/bsnews01/1733844",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Busan Biennale 2026 Review: Let’s Misbehave!",
+          "publisher": "ArtReview",
+          "url": "https://artreview.com/busan-biennale-2026-dissident-chorus-review-mark-rappolt/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Dissonance and Dissidence at Busan Biennale 2026",
+          "publisher": "ArtReview",
+          "url": "https://artreview.com/dissonance-and-dissidence-at-busan-biennale-2026/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Busan Biennale Turns Port City’s Sounds Into Chorus of Dissent",
+          "publisher": "Seoul Economic Daily",
+          "url": "https://en.sedaily.com/culture/2026/08/30/busan-biennale-turns-port-citys-sounds-into-chorus-of",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Busan Biennale 2026: sound, body and resistance",
+          "publisher": "ARTnews Japan",
+          "url": "https://artnewsjapan.com/article/87336",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Busan Biennale 2026 through sound and sea",
+          "publisher": "Options, The Edge",
+          "url": "https://www.optionstheedge.com/topic/culture/busan-biennale-2026-delivers-its-most-resounding-edition-yet-through-evocations-sound",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Busan Biennale: operational discord",
+          "publisher": "Kookje Ilbo",
+          "url": "https://kookje.co.kr/news2011/asp/newsbody.asp?code=00&key=20260908.22015002245",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Busan Biennale: a cultural engine of many voices",
+          "publisher": "Newspim",
+          "url": "https://ir.newspim.com/news/view/20260828000322",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "From former factories and schools to the sea: Busan Biennale Dissident Chorus",
+          "publisher": "Newsis",
+          "url": "https://www.newsis.com/view/NISX20260527_0003645687",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Strange chairs and protest songs fill empty classrooms",
+          "publisher": "Kookje Ilbo",
+          "url": "https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0500&key=20260902.22013008521&kid=0510",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Busan Biennale 2026 official event poster",
+          "publisher": "Busan Metropolitan City",
+          "url": "https://www.busan.go.kr/mayor/news/1750842",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Busan Metropolitan City / Busan Biennale; individual poster rights unconfirmed.",
+      "media": {
+        "origin_url": "https://www.busan.go.kr/mayor/news/1750842",
+        "external_image_url": "https://www.busan.go.kr/comm/getImage?fileNo=1&fileTy=MEDIA&srvcId=MEDIA&upperNo=23746",
+        "alt": "釜山双年展《Dissident Chorus》官方活动海报。",
+        "caption": "釜山市发布的双年展活动海报；不是展厅或作品现场照片。",
+        "credit": "Busan Metropolitan City / Busan Biennale; individual poster rights unconfirmed.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "asset": "assets/busan-biennale-dissident-chorus-three-sites-fallback.svg"
+      }
+    },
+    {
+      "id": "betsy-wyeth-colby-islands-by-design-2026",
+      "level": "signal",
+      "title": "一片岛屿，如何成为一件设计作品？",
+      "english": {
+        "title": "How Does an Island Become a Work of Design?",
+        "deck": "A museum exhibition revisits Betsy James Wyeth’s work across islands, objects and place.",
+        "abstract": "Exhibition materials and accounts from people who visited distinguish her design practice from the artists’ different responses to the landscape."
+      },
+      "sources": [
+        {
+          "title": "By Design: The Worlds of Betsy James Wyeth",
+          "publisher": "Brandywine Museum of Art",
+          "url": "https://www.brandywine.org/museum/exhibitions/by-design",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "How Betsy Wyeth shaped her husband Andrew’s art",
+          "publisher": "WHYY",
+          "url": "https://whyy.org/articles/brandywine-museum-pennsylvania-betsy-andrew-wyeth/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Betsy Wyeth’s Other Worlds",
+          "publisher": "Maine Boats, Homes & Harbors",
+          "url": "https://maineboats.com/print/issue-202/betsy-wyeths-other-worlds",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Up East exhibition labels",
+          "publisher": "Brandywine Museum of Art",
+          "url": "https://www.brandywine.org/sites/default/files/2024-09/Up%20East%20Large%20Print%20Labels%202.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Painter Andrew Wyeth’s Beloved Islands Are Acquired by Colby College",
+          "publisher": "Hyperallergic",
+          "url": "https://hyperallergic.com/painter-andrew-wyeths-beloved-islands-are-acquired-by-colby-college/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Authentically Home: The Olson House and Andrew Wyeth’s Christina’s World",
+          "publisher": "Image & Narrative",
+          "url": "https://www.imageandnarrative.be/index.php/imagenarrative/article/download/3369/2787/8769",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Legacies Align with Colby’s Acquisition of Allen and Benner Islands",
+          "publisher": "Colby Magazine",
+          "url": "https://magazine.colby.edu/issue/vol109-issue1/legacies-align-with-colbys-acquisition-of-allen-and-benner-islands/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Allen & Benner Islands: Inspiring Andrew Wyeth’s Life And Death",
+          "publisher": "Antiques and the Arts Weekly",
+          "url": "https://antiquesandthearts.com/allen-benner-islands-inspiring-andrew-wyeths-life-and-death/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "An inside look at the invention of New England with Victoria Wyeth",
+          "publisher": "Bates College",
+          "url": "https://www.bates.edu/news/2022/11/09/wyeth-world-first-year-seminar-discovers-new-england-identity/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Betsy James Wyeth",
+          "publisher": "Island Institute",
+          "url": "https://www.islandinstitute.org/island-journal/betsy-james-wyeth/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Andrew Wyeth, Betsy at Work (1941), Wyeth Foundation for American Art; © 2025 Wyeth Foundation for American Art / Artists Rights Society (ARS), New York; via Brandywine Museum of Art.",
+      "media": {
+        "origin_url": "https://www.brandywine.org/museum/exhibitions/by-design",
+        "external_image_url": "https://www.brandywine.org/sites/default/files/styles/slideshow_large/public/2025-04/ByDesign-AW-Betsy-At-Work-0152r.jpg?itok=tjXcuRz_",
+        "alt": "Andrew Wyeth 的铅笔画《Betsy at Work》，画中人物坐着工作。",
+        "caption": "Andrew Wyeth，Betsy at Work，1941，纸本铅笔。",
+        "credit": "Andrew Wyeth, Betsy at Work (1941), Wyeth Foundation for American Art; © 2025 Wyeth Foundation for American Art / Artists Rights Society (ARS), New York; via Brandywine Museum of Art.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "asset": "assets/betsy-wyeth-colby-islands-by-design-2026-fallback.svg"
+      }
+    },
+    {
+      "id": "tashkent-design-week-new-tashkent-model",
+      "level": "signal",
+      "title": "塔什干的新城模型，如何走向公共视野？",
+      "english": {
+        "title": "How Does a New Tashkent Model Enter Public View?",
+        "deck": "A design-week proposal puts the future city model before a wider audience.",
+        "abstract": "Official planning records, local reporting and independent research distinguish the model’s announced presentation from built or observed outcomes."
+      },
+      "sources": [
+        {
+          "title": "Tashkent Design Week 2026 to Present a Model of New Tashkent for the First Time",
+          "publisher": "Tafs.uz",
+          "url": "https://tafs.uz/en/2026/10/21/new-tashkent-model-to-be-publicly-unveiled-for-the-first-time-at-tashkent-design-week-2026",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "В Ташкенте стартовала Неделя дизайна: макет Нового Ташкента, выставки и городские маршруты",
+          "publisher": "Afisha.uz",
+          "url": "https://www.afisha.uz/ru/gorod/2026/10/28/tashkent-design-week",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "New facilities and major projects launched in New Tashkent",
+          "publisher": "President of the Republic of Uzbekistan",
+          "url": "https://www.president.uz/en/lists/view/9707",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Tour Uzbekistan’s modernist architecture in Tashkent",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/architecture/modernist-architecture-in-uzbekistan",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "New Tashkent: Building a sustainable city from scratch",
+          "publisher": "Euronews (partner content)",
+          "url": "https://www.euronews.com/2026/01/17/new-tashkent-building-a-sustainable-city-from-scratch",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The President reviews the presentation of ongoing projects in New Tashkent",
+          "publisher": "President of the Republic of Uzbekistan",
+          "url": "https://www.president.uz/en/lists/view/8845",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Lead designer of New Tashkent Hakan Agca discusses the city",
+          "publisher": "Gazeta.uz",
+          "url": "https://www.gazeta.uz/ru/2026/10/28/new-tashkent/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "New Tashkent Masterplan",
+          "publisher": "Hakan Agca / Archinect",
+          "url": "https://archinect.com/hakanagca/project/new-tashkent-masterplan",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Three modernist icons have been added to UNESCO’s World Heritage List",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/architecture/public-buildings/unesco-world-heritage-list-modernist-additions",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Reproducing Tashkent: Reconceptualising Transition from the Socialist City to the Post-Socialist City",
+          "publisher": "University of Manchester",
+          "url": "https://pure.manchester.ac.uk/ws/portalfiles/portal/216118310/FULL_TEXT.PDF",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "What will New Tashkent be? Interview with the project chief architect and urban planner",
+          "publisher": "Kun.uz",
+          "url": "https://kun.uz/ru/news/2025/06/07/kakim-budet-novyy-tashkent-intervyu-s-glavnym-arxitektorom-i-gradostroitelem-proyekta",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Yangi Toshkent / New Tashkent",
+          "publisher": "SKAB",
+          "url": "https://www.skab.co.uk/projects/yang%C4%B1-toshkent-%2F-new-tashkent",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "SKAB official New Tashkent project page; individual image creator not verified.",
+      "media": {
+        "origin_url": "https://www.skab.co.uk/projects/yang%C4%B1-toshkent-%2F-new-tashkent",
+        "external_image_url": "https://static.wixstatic.com/media/1bc0fe_a9b4936adf484ff3ab7c0cd39444f31b~mv2.jpg/v1/fill/w_786,h_1292,q_90,enc_avif,quality_auto/1bc0fe_a9b4936adf484ff3ab7c0cd39444f31b~mv2.jpg",
+        "alt": "新塔什干规划项目的城市景观效果图。",
+        "caption": "规划合作方展示的 2024 年概念效果图；不是 2026 年模型展出的现场照片。",
+        "credit": "SKAB official New Tashkent project page; individual image creator not verified.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external",
+        "asset": "assets/tashkent-design-week-new-tashkent-model-fallback.svg"
+      }
+    }
+  ]
+}
