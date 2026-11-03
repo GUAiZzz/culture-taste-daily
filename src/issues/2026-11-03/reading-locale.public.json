@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "issueId": "2026-11-03",
+  "sourceContentSha256": "e3c3b865bab7f825ec76b04d59c7c388b74365944bb00c4cb40a888a95af2521",
+  "issue": {
+    "titleEn": "SPACES IN MOTION",
+    "positionEn": "Follow how stages, clothes, music, cloth, islands and cities change through people’s actions and relationships.",
+    "introEn": "Bridges move with dancers, barkcloth carries relationships through gifts, and a lightweight chair moves between outdoors and clothing. Today’s issue travels through London, Dubai and Busan, then follows music, fashion, islands and a future city.\n\nCompleted events and plans that are still ahead have distinct dates. The articles separate firsthand accounts, historical works, design proposals and facts that can be confirmed now.",
+    "closingEn": "Space is not a fixed background. The relationship between people and objects changes as works are made, given, worn and moved."
+  },
+  "stories": {
+    "zaha-hadid-architecture-of-performance-2026": {
+      "altZh": "两位舞者站在投影与桥形舞台装置前。",
+      "altEn": "Two dancers stand before a projection and a bridge-like stage set.",
+      "captionEn": "Archive image of the Metapolis stage from the co-producing festival; not a 2026 London exhibition view.",
+      "summaryEn": "A London exhibition revisits architecture made for dance, music and performance.",
+      "englishKind": "full"
+    },
+    "judy-blame-uniform-experiment-2026": {
+      "altZh": "模特身穿带有 Judy Blame 图案的飞行夹克。",
+      "altEn": "A model wears a flight jacket with Judy Blame graphics.",
+      "captionEn": "Campaign image from SOPH’s capsule announcement; the partnership does not establish image reproduction permission.",
+      "summaryEn": "A SOPH anniversary capsule brings the artist’s visual vocabulary into a contemporary clothing release.",
+      "englishKind": "full"
+    },
+    "yaeji-ddr-dancefloor-2026": {
+      "altZh": "灰色封面上排列着黑白方向箭头。",
+      "altEn": "Black and white directional arrows arranged on a grey cover.",
+      "captionEn": "Official artwork for Yaeji’s single ddr.",
+      "summaryEn": "The new single ddr pairs an arcade reference with the artist’s idea of looking after one another.",
+      "englishKind": "full"
+    },
+    "dubai-design-week-language-gardens-2026": {
+      "altZh": "建筑师 AlZaina Lootah 身穿绿色衣服的肖像。",
+      "altEn": "Portrait of architect AlZaina Lootah wearing green.",
+      "captionEn": "Portrait accompanying a 2024 material research case study; not a photograph from the 2026 design week.",
+      "summaryEn": "Commissions bring design, craft and public space into conversation.",
+      "englishKind": "full"
+    },
+    "nike-acg-helinox-chair-zero-lt-2026": {
+      "altZh": "橙色椅架的户外椅放在海边岩石上，旁边有人和收纳袋。",
+      "altEn": "An orange-framed outdoor chair on coastal rocks beside a person and carry bag.",
+      "captionEn": "Official image from Helinox’s ACG collaboration announcement.",
+      "summaryEn": "The Nike ACG and Helinox release places a compact chair in two overlapping product worlds.",
+      "englishKind": "full"
+    },
+    "aitor-throup-ultra-veil-process-archive-2026": {
+      "altZh": "《ULTRA VEIL》服装的黑白近景。",
+      "altEn": "Black-and-white close-up of garments from ULTRA VEIL.",
+      "captionEn": "ULTRA VEIL exhibition image published by the University of Westminster.",
+      "summaryEn": "Aitor Throup’s ULTRA VEIL exhibition brings work in progress into public view.",
+      "englishKind": "full"
+    },
+    "met-tapa-art-gift-2026": {
+      "altZh": "一件有黑色、米色和红色几何纹样的斐济树皮布。",
+      "altEn": "Fijian barkcloth with black, cream and red geometric patterns.",
+      "captionEn": "Masi Kesa by Fijian artists, collection number 1990.333.9. The object record says it is not on view; its presence in this exhibition is unconfirmed.",
+      "summaryEn": "The Met’s exhibition follows tapa as an object made, given and carried between people.",
+      "englishKind": "full"
+    },
+    "busan-biennale-dissident-chorus-three-sites": {
+      "altZh": "釜山双年展《Dissident Chorus》官方活动海报。",
+      "altEn": "Official poster for the Busan Biennale Dissident Chorus.",
+      "captionEn": "Busan Metropolitan City’s event poster; not an installation or venue photograph.",
+      "summaryEn": "Reports from three sites trace the city’s role in Dissident Chorus.",
+      "englishKind": "full"
+    },
+    "betsy-wyeth-colby-islands-by-design-2026": {
+      "altZh": "Andrew Wyeth 的铅笔画《Betsy at Work》，画中人物坐着工作。",
+      "altEn": "Andrew Wyeth’s pencil drawing Betsy at Work, showing a seated person working.",
+      "captionEn": "Andrew Wyeth, Betsy at Work, 1941, pencil on paper.",
+      "summaryEn": "A museum exhibition revisits Betsy James Wyeth’s work across islands, objects and place.",
+      "englishKind": "full"
+    },
+    "tashkent-design-week-new-tashkent-model": {
+      "altZh": "新塔什干规划项目的城市景观效果图。",
+      "altEn": "Concept rendering of the planned New Tashkent landscape and city.",
+      "captionEn": "Concept rendering from the planning collaborator’s 2024 project page; not a photograph of the 2026 model display.",
+      "summaryEn": "A design-week proposal puts the future city model before a wider audience.",
+      "englishKind": "full"
+    }
+  },
+  "sourceLabelsEn": {},
+  "inlineMedia": {},
+  "sourceOriginalLanguageExceptions": [],
+  "extras": {
+    "chastity-belt-friends-for-this-2026": {
+      "titleEn": "Chastity Belt: Friends for This",
+      "deckEn": "A new single released November 2, ahead of an album scheduled for November 6.",
+      "altEn": "An orange group sits in a green canoe against blue."
+    }
+  }
+}

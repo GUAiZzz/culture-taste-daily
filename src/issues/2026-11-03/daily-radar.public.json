@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-03",
+  "coverage": {
+    "verified_at": "2026-11-03T17:22:06.553+08:00",
+    "regional_lanes_checked": [
+      "mainland_china_plus_hong_kong_or_taiwan",
+      "japan_or_korea",
+      "continental_europe_or_united_kingdom",
+      "united_states_or_canada",
+      "rotating_global_lane"
+    ],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "sport_outdoor_lifestyle",
+    "focus_subjects_checked": [
+      "Alo",
+      "Arc'teryx",
+      "Nike",
+      "On",
+      "Salomon",
+      "ASICS SportStyle",
+      "New Balance",
+      "HOKA",
+      "Merrell 1TRL",
+      "Nike ACG",
+      "Blue Bottle Coffee"
+    ],
+    "standing_beats_checked": [
+      "stussy-release-radar",
+      "luxury-runway-calendar",
+      "exhibition-and-cultural-programme-radar",
+      "small-breakout-object-radar"
+    ],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {
+      "id": "today-judy-blame-uniform-experiment-2026",
+      "category": "fashion",
+      "included_story_id": "judy-blame-uniform-experiment-2026"
+    },
+    {
+      "id": "today-aitor-throup-ultra-veil-process-archive-2026",
+      "category": "fashion",
+      "included_story_id": "aitor-throup-ultra-veil-process-archive-2026"
+    },
+    {
+      "id": "today-yaeji-ddr-dancefloor-2026",
+      "category": "music",
+      "included_story_id": "yaeji-ddr-dancefloor-2026"
+    },
+    {
+      "id": "today-nike-acg-helinox-chair-zero-lt-2026",
+      "category": "objects",
+      "included_story_id": "nike-acg-helinox-chair-zero-lt-2026"
+    },
+    {
+      "id": "today-met-tapa-art-gift-2026",
+      "category": "objects",
+      "included_story_id": "met-tapa-art-gift-2026"
+    },
+    {
+      "id": "today-betsy-wyeth-colby-islands-by-design-2026",
+      "category": "objects",
+      "included_story_id": "betsy-wyeth-colby-islands-by-design-2026"
+    },
+    {
+      "id": "today-zaha-hadid-architecture-of-performance-2026",
+      "category": "city",
+      "included_story_id": "zaha-hadid-architecture-of-performance-2026"
+    },
+    {
+      "id": "today-dubai-design-week-language-gardens-2026",
+      "category": "city",
+      "included_story_id": "dubai-design-week-language-gardens-2026"
+    },
+    {
+      "id": "today-tashkent-design-week-new-tashkent-model",
+      "category": "city",
+      "included_story_id": "tashkent-design-week-new-tashkent-model"
+    },
+    {
+      "id": "today-busan-biennale-dissident-chorus-three-sites",
+      "category": "city",
+      "included_story_id": "busan-biennale-dissident-chorus-three-sites"
+    },
+    {
+      "id": "chastity-belt-friends-for-this-2026",
+      "category": "music",
+      "title": "Chastity Belt 新歌《Friends for This》",
+      "deck": "11 月 2 日发行的新单曲；专辑计划于 11 月 6 日发行。",
+      "publisher": "Chastity Belt",
+      "official_url": "https://chastity-belt.bandcamp.com/track/friends-for-this",
+      "published_date": "2026-11-02",
+      "event_date": null,
+      "media": {
+        "kind": "image",
+        "url": "https://f4.bcbits.com/img/a3378028949_10.jpg",
+        "alt": "蓝色专辑封面上，一组橙色人物坐在绿色小船中。",
+        "credit": "Chastity Belt / Bandcamp official All My Friends cover; individual artwork credit not verified.",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "dominant_mood": "深蓝、暖白与琥珀色为舞台、材料和人的移动建立安静的阅读节奏。",
+  "background_logic": "沿用已确认的共享空间浏览与默认环境色，阅读背景保持克制。",
+  "palette_logic": "原创封面使用深蓝、暖白与琥珀；文章沿用共享阅读系统默认色板。",
+  "type_scale_logic": "沿用共享阅读系统的中英文字级、行高与对齐。",
+  "image_behavior": "官方来源图注明历史、海报与现场边界；权利不明的图像仅外链预览。",
+  "page_density_and_tempo": "十篇按建筑、服装、音乐、城市、物件和收藏交错排列。",
+  "core_visual_action": "从历史舞台图进入，再通过共享浏览结构切换文章。",
+  "cover_composition": "原创几何轨迹与十个圆点呼应运动，不冒充纪实图像。",
+  "desktop_interaction_mechanic": "复用已确认的空间浏览和整期定位。",
+  "behance_viewing_arc": "从可移动的舞台到城市设想，沿着人的行动和物件的流转阅读。",
+  "mobile_translation": "沿用手机自然滚动与共享阅读入口。",
+  "mobbin_usability_constraint": "保持共享系统的键盘、无脚本、减弱动态和风格外观支持。",
+  "quiet_ending": "结尾退入深蓝与暖白，沿用共享每日语录轮播。",
+  "closing_quotation": {
+    "id": "ct-en-002",
+    "language": "en",
+    "text": "What remains after the spectacle is the method that carried it.",
+    "credit": "Culture & Taste Editorial"
+  },
+  "closing_palette": {
+    "background": "#172B3B",
+    "foreground": "#F6EFE3",
+    "accent": "#E4A968",
+    "rationale": "深蓝与暖白保证正文对比；琥珀色呼应运动轨迹，与近期封面的三色组合区分。"
+  }
+}
