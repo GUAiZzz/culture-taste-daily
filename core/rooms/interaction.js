@@ -9,7 +9,7 @@
     const input=value&&typeof value==='object'?value:{};
     return {style:['field','coral','analog'].includes(input.style)?input.style:defaults.style,theme:['light','dark','warm'].includes(input.theme)?input.theme:defaults.theme,
       surface:['solid','glass'].includes(input.surface)?input.surface:defaults.surface,
-      haptics:input.haptics===true,fontSize:Math.min(25,Math.max(17,Math.round(Number(input.fontSize)||19))),
+      haptics:input.haptics===true,fontSize:Math.min(23,Math.max(15,Math.round(Number(input.fontSize)||19))),
       language:input.language==='en'?'en':'zh'};
   };
   const read=()=>{
