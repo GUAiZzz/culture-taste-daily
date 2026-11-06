@@ -1,0 +1,27 @@
+{
+  "dominant_mood": "棕褐、奶油白与浅陶色，呼应芦苇、纺织与日常物件。",
+  "background_logic": "沿用已确认的共享空间浏览与默认环境色，阅读背景保持克制。",
+  "palette_logic": "封面与结尾采用深棕、奶油白与浅陶色；阅读沿用共享系统默认。",
+  "type_scale_logic": "沿用共享阅读系统的中英文字级、行高与对齐。",
+  "image_behavior": "官方来源图注明历史、海报与现场边界；权利不明的图像仅外链预览。",
+  "page_density_and_tempo": "十二篇交错呈现设计、时装、音乐和城市展览，按自然图像比例阅读。",
+  "core_visual_action": "原创封面以窗、唱片和针脚的抽象形状组织十二个观察位置。",
+  "cover_composition": "纸色矩形、偏心圆与交错细线构成原创抽象图形，不冒充作品或现场。",
+  "desktop_interaction_mechanic": "复用已确认的空间浏览和整期定位。",
+  "behance_viewing_arc": "从设计师之间的差异，走向穿衣、音乐、城市观看和一间毛线餐馆。",
+  "mobile_translation": "沿用手机自然滚动与共享阅读入口。",
+  "mobbin_usability_constraint": "保持共享系统的键盘、无脚本、减弱动态和风格外观支持。",
+  "quiet_ending": "暖色收束，沿用已确认的每日语录轮播。",
+  "closing_quotation": {
+    "id": "ct-en-006",
+    "language": "en",
+    "text": "Culture lives where an object finds its public.",
+    "credit": "Culture & Taste Editorial"
+  },
+  "closing_palette": {
+    "background": "#382C24",
+    "foreground": "#FBF1DE",
+    "accent": "#D9AC83",
+    "rationale": "深棕与奶油白保持长文对比，浅陶色呼应芦苇与针线；区别最近七期的蓝、绿、紫及浅纸底组合。"
+  }
+}

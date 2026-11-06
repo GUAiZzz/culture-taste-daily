@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-06",
+  "coverage": {
+    "verified_at": "2026-11-06T22:58:25.094+08:00",
+    "regional_lanes_checked": [
+      "mainland_china_plus_hong_kong_or_taiwan",
+      "japan_or_korea",
+      "continental_europe_or_united_kingdom",
+      "united_states_or_canada",
+      "rotating_global_lane"
+    ],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "luxury_runway",
+    "focus_subjects_checked": [
+      "Balenciaga",
+      "Bode",
+      "Cartier",
+      "Casablanca",
+      "Chanel",
+      "Chrome Hearts",
+      "Givenchy",
+      "Goyard",
+      "Kenzo",
+      "Loro Piana",
+      "Marni",
+      "Bottega Veneta",
+      "Prada",
+      "Tiffany & Co.",
+      "Loewe",
+      "Miu Miu",
+      "Rick Owens",
+      "SKIMS",
+      "HOMME PLISSÉ ISSEY MIYAKE",
+      "Entire Studios"
+    ],
+    "standing_beats_checked": [
+      "stussy-release-radar",
+      "luxury-runway-calendar",
+      "exhibition-and-cultural-programme-radar",
+      "small-breakout-object-radar"
+    ],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {
+      "id": "today-nue-black-aesthetic",
+      "category": "objects",
+      "included_story_id": "nue-black-aesthetic"
+    },
+    {
+      "id": "today-kith-women-winter-2026",
+      "category": "fashion",
+      "included_story_id": "kith-women-winter-2026"
+    },
+    {
+      "id": "today-saturdays-marmot-dima-parka",
+      "category": "fashion",
+      "included_story_id": "saturdays-marmot-dima-parka"
+    },
+    {
+      "id": "today-union-gshock-pan-african-colors",
+      "category": "objects",
+      "included_story_id": "union-gshock-pan-african-colors"
+    },
+    {
+      "id": "today-bob-dylan-rolling-thunder-1976",
+      "category": "music",
+      "included_story_id": "bob-dylan-rolling-thunder-1976"
+    },
+    {
+      "id": "today-ciaran-roisin-solo-debut",
+      "category": "music",
+      "included_story_id": "ciaran-roisin-solo-debut"
+    },
+    {
+      "id": "today-global-antiquity-pompeii-ivory",
+      "category": "city",
+      "included_story_id": "global-antiquity-pompeii-ivory"
+    },
+    {
+      "id": "today-ola-znad-shabbah-souq-al-liqa",
+      "category": "objects",
+      "included_story_id": "ola-znad-shabbah-souq-al-liqa"
+    },
+    {
+      "id": "today-karon-davis-wishful-thinking",
+      "category": "city",
+      "included_story_id": "karon-davis-wishful-thinking"
+    },
+    {
+      "id": "today-masao-gozu-windows-bars",
+      "category": "city",
+      "included_story_id": "masao-gozu-windows-bars"
+    },
+    {
+      "id": "today-capsule-shanghai-faux-cherry",
+      "category": "city",
+      "included_story_id": "capsule-shanghai-faux-cherry"
+    },
+    {
+      "id": "today-kates-knitalian-textile-restaurant",
+      "category": "objects",
+      "included_story_id": "kates-knitalian-textile-restaurant"
+    }
+  ]
+}
