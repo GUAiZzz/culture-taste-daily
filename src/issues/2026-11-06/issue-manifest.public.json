@@ -1,0 +1,1271 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-11-06",
+  "publication_date": "2026-11-06",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-11-06T10:59:49.269+08:00",
+  "research_locked_at": "2026-11-06T22:58:25.094+08:00",
+  "content_locked_at": "2026-11-06T22:58:25.094+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "557389f2362b850211e497f47df143808d7f0950f3e65fd0020dda96d14acd60",
+    "locked_at": "2026-11-06T22:58:25.094+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "557389f2362b850211e497f47df143808d7f0950f3e65fd0020dda96d14acd60",
+    "art_direction_sha256": "6bb6750e2c71ae6d4a6b9878599b8a5bcd40e7fe61963b879ea9f191811a2b00",
+    "issue_style_sha256": "b9d7db38873b67879a3ad79c57bc1640bc7779e2dc12bd062e9e9ce83e5b743e"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-11-06T22:58:25.094+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "从材料、结构、声音与观看方式，读物件怎样进入人的生活。",
+  "art_direction": {
+    "dominant_mood": "棕褐、奶油白与浅陶色，呼应芦苇、纺织与日常物件。",
+    "background_logic": "沿用已确认的共享空间浏览与默认环境色，阅读背景保持克制。",
+    "palette_logic": "封面与结尾采用深棕、奶油白与浅陶色；阅读沿用共享系统默认。",
+    "type_scale_logic": "沿用共享阅读系统的中英文字级、行高与对齐。",
+    "image_behavior": "官方来源图注明历史、海报与现场边界；权利不明的图像仅外链预览。",
+    "page_density_and_tempo": "十二篇交错呈现设计、时装、音乐和城市展览，按自然图像比例阅读。",
+    "core_visual_action": "原创封面以窗、唱片和针脚的抽象形状组织十二个观察位置。",
+    "cover_composition": "纸色矩形、偏心圆与交错细线构成原创抽象图形，不冒充作品或现场。",
+    "desktop_interaction_mechanic": "复用已确认的空间浏览和整期定位。",
+    "behance_viewing_arc": "从设计师之间的差异，走向穿衣、音乐、城市观看和一间毛线餐馆。",
+    "mobile_translation": "沿用手机自然滚动与共享阅读入口。",
+    "mobbin_usability_constraint": "保持共享系统的键盘、无脚本、减弱动态和风格外观支持。",
+    "quiet_ending": "暖色收束，沿用已确认的每日语录轮播。",
+    "closing_quotation": {
+      "id": "ct-en-006",
+      "language": "en",
+      "text": "Culture lives where an object finds its public.",
+      "credit": "Culture & Taste Editorial"
+    },
+    "closing_palette": {
+      "background": "#382C24",
+      "foreground": "#FBF1DE",
+      "accent": "#D9AC83",
+      "rationale": "深棕与奶油白保持长文对比，浅陶色呼应芦苇与针线；区别最近七期的蓝、绿、紫及浅纸底组合。"
+    }
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": [
+      "2026-11-03",
+      "2026-11-02",
+      "2026-10-28",
+      "2026-09-22",
+      "2026-09-21",
+      "2026-09-20",
+      "2026-09-17"
+    ],
+    "repeated_mechanisms": [
+      "approved A3 shared reading structure",
+      "external official images with linked origins and owned non-documentary fallbacks"
+    ],
+    "exception_reason": "复用已确认的共享阅读系统；以十二篇当日选题、已核对的官方图像和原创抽象封面形成变化。"
+  },
+  "rights_summary": {
+    "required_assets": 12,
+    "unknown_required_assets": 12,
+    "status": "blocked"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": null
+  },
+  "evidence_refs": {
+    "technical": [],
+    "editorial_visual": [],
+    "gate": []
+  },
+  "qa": {
+    "html_parse": "unavailable",
+    "assets": "unavailable",
+    "internal_links": "unavailable",
+    "no_js_reading": "unavailable",
+    "desktop_render": "unavailable",
+    "mobile_render": "unavailable",
+    "reduced_motion": "unavailable"
+  },
+  "limitations": [
+    "Non-production Preview only. Official images remain external links with local non-documentary fallbacks; official provenance does not clear reproduction rights.",
+    "This edition was completed in the evening under explicit one-time owner authorization. Actual preparation and lock times are retained; ordinary schedules and Production restrictions are unchanged.",
+    "Discovery checks include access-limited and unresolved subjects; those outcomes do not establish that there was no news."
+  ],
+  "stories": [
+    {
+      "id": "nue-black-aesthetic",
+      "level": "cover",
+      "title": "一个展览，怎样展开 Black design 里的差异？",
+      "english": {
+        "title": "Many Ways Into Black Design",
+        "deck": "The Nue Black Aesthetic opens at London’s Design Museum on 6 November and runs until 8 August 2027.",
+        "abstract": "The Nue Black Aesthetic opens at London’s Design Museum on 6 November and runs until 8 August 2027. Guest-curated by Charlene Prempeh, its six sections bring together more than 100 objects across fashion, furniture, architecture, product design and sculpture. The museum names sixteen designers, including Samuel Ross, Bianca Saunders, Feben, Ini Archibong and Giles Tettey Nartey."
+      },
+      "sources": [
+        {
+          "title": "The Nue Black Aesthetic",
+          "publisher": "Design Museum",
+          "url": "https://designmuseum.org/exhibitions/the-nue-black-aesthetic",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "The Nue Black Aesthetic maps the diasporic voices shaping design today",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design-interiors/design-events/the-nue-black-aesthetic-maps-the-diasporic-voices-shaping-design-today",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Missing Thread",
+          "publisher": "Somerset House",
+          "url": "https://www.somersethouse.org.uk/whats-on/the-missing-thread",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "A new London exhibition highlights the untold stories of Black British fashion designers",
+          "publisher": "AP News",
+          "url": "https://apnews.com/article/black-british-fashion-designers-exhibition-491217bf2020470f1987ca87db82b22d",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Missing Thread — telling the stories fashion forgot",
+          "publisher": "Evening Standard",
+          "url": "https://www.standard.co.uk/lifestyle/fashion/somerset-house-exhibition-the-missing-thread-telling-the-stories-fashion-forgot-b1107735.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Materiality and Poiesis: Giles Tettey Nartey Builds on Memory",
+          "publisher": "PIN–UP",
+          "url": "https://www.pinupmagazine.org/articles/giles-tettey-nartey-interview",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "British furniture designer Mac Collins has taken his seat at the table",
+          "publisher": "British GQ",
+          "url": "https://www.gq-magazine.co.uk/article/mac-collins-furniture-design-interview-2023",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Dwell 24: Mac Collins",
+          "publisher": "Dwell",
+          "url": "https://www.dwell.com/article/the-dwell-24-mac-collins-7cba93b0",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Black power print",
+          "publisher": "University College London Discovery",
+          "url": "https://discovery.ucl.ac.uk/id/eprint/10063253/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Hold: A Meditation on Black Aesthetics",
+          "publisher": "Princeton University Art Museum",
+          "url": "https://artmuseum.princeton.edu/exhibitions-events/exhibitions/hold-meditation-black-aesthetics",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Jonathan Hordle / PA Media, via Design Museum",
+      "media": {
+        "asset": "assets/nue-black-aesthetic-fallback.svg",
+        "alt": "Nifemi Marcus-Bello 作品的展厅照片。",
+        "caption": "《The Nue Black Aesthetic》展厅内 Nifemi Marcus-Bello 的作品。",
+        "credit": "Jonathan Hordle / PA Media, via Design Museum",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://designmuseum.org/exhibitions/the-nue-black-aesthetic",
+        "external_image_url": "https://designmuseum.org/image/8ee39035-b508-48c8-bff5-66601bfd7ae5?width=980&height=606",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "kith-women-winter-2026",
+      "level": "major",
+      "title": "Kith 把纽约的一整天装进冬日衣橱",
+      "english": {
+        "title": "A Winter Wardrobe for a New York Day",
+        "deck": "Kith Women Winter 2026 releases on 6 November according to each market’s local schedule.",
+        "abstract": "Kith Women Winter 2026 releases on 6 November according to each market’s local schedule. Shot at the former Bank of Manhattan, Echoes of the City introduces outerwear, knitwear, occasionwear, the Katarina handbag and the adidas Originals Stan Smith Suede Ballet. The campaign connects errands, after-work drinks and visits to friends within one day."
+      },
+      "sources": [
+        {
+          "title": "Echoes of the City lookbook",
+          "publisher": "Kith",
+          "url": "https://kith.com/blogs/discover/kith-women-winter-2026-echoes-of-the-city-lookbook",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "The Kith woman and Soho flagship",
+          "publisher": "Vogue",
+          "url": "https://www.vogue.com/article/the-kith-woman-will-come-alive-in-new-soho-flagship",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Danielle Cathari and Kith Women",
+          "publisher": "Vogue",
+          "url": "https://www.vogue.com/article/new-kith-women-designer-danielle-cathari-soho-flagship-store",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Lisa guest-designs Spring 2026",
+          "publisher": "Vogue",
+          "url": "https://www.vogue.com/article/how-kith-got-lisa-to-guest-design-its-new-womens-collection",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Kith Women Manhattan store",
+          "publisher": "Hospitality Design",
+          "url": "https://hospitalitydesign.com/news/kith-womens-store-manhattan/157695",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "History of Stan Smith",
+          "publisher": "adidas",
+          "url": "https://news.adidas.com/timeline/half-a-century-of-classic-style--the-history-of-the-adidas-stan-smith/s/f6061bfc-b9e6-43a0-b7d7-caac2e184126",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Stan Smith Ballet in suede",
+          "publisher": "Footwear Magazine",
+          "url": "https://footwearmagazine.com/kith-adidas-stan-smith-ballet-suede-november-2026/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Spring 2026 designed by Lisa",
+          "publisher": "Kith",
+          "url": "https://kith.com/blogs/discover/a-closer-look-at-kith-women-spring-2026-designed-by-lisa",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Ballerina: Fashion’s Modern Muse",
+          "publisher": "The Museum at FIT",
+          "url": "https://exhibitions.fitnyc.edu/ballerina/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "A guide to pointe shoes",
+          "publisher": "English National Ballet",
+          "url": "https://www.ballet.org.uk/blog/a-guide-to-pointe-shoes/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Kith; individual photographer not identified on source page",
+      "media": {
+        "asset": "assets/kith-women-winter-2026-fallback.svg",
+        "alt": "Kith Women 冬季系列官方造型图。",
+        "caption": "《Echoes of the City》官方 Lookbook；拍摄地为曼哈顿旧 Bank of Manhattan。",
+        "credit": "Kith; individual photographer not identified on source page",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://kith.com/blogs/discover/kith-women-winter-2026-echoes-of-the-city-lookbook",
+        "external_image_url": "https://cdn.shopify.com/s/files/1/0094/2252/files/Cover_bcffef17-f75a-473a-97a2-bf4f602fa1fb.jpg?v=1793723513&width=1280",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "saturdays-marmot-dima-parka",
+      "level": "major",
+      "title": "一件羽绒服，借了军大衣的骨架",
+      "english": {
+        "title": "A Down Parka Borrows an Overcoat’s Structure",
+        "deck": "Saturdays NYC and Marmot release their first collaborative down parka in Japan on 6 November.",
+        "abstract": "Saturdays NYC and Marmot release their first collaborative down parka in Japan on 6 November. Based on the Dima Down Parka Pro, it borrows a belt, front pockets and placket details from the M-47 OVERCOAT. JUN lists PERTEX SHIELD PRO fabric, 750-fill-power down, two contrasting shell-and-lining combinations and a Japanese tax-inclusive price of ¥66,000."
+      },
+      "sources": [
+        {
+          "title": "Saturdays NYC × Marmot",
+          "publisher": "JUN / PR Times",
+          "url": "https://prtimes.jp/main/html/rd/p/000001509.000006099.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Shield Pro",
+          "publisher": "PERTEX",
+          "url": "https://pertex.com/fabrics-technologies/shield-pro",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "What is down fill power?",
+          "publisher": "REI",
+          "url": "https://www.rei.com/learn/expert-advice/what-is-down-fill-power.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Saturdays NYC shelf life",
+          "publisher": "GQ",
+          "url": "https://www.gq.com/story/saturdays-nyc-shelf-life-2015",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Saturdays co-founders interview",
+          "publisher": "Hypebeast",
+          "url": "https://hypebeast.com/2013/11/saturdays-surf-nycs-co-founders-talk-about-the-brand",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Saturdays NYC",
+          "publisher": "Interview",
+          "url": "https://www.interviewmagazine.com/fashion/saturdays-nyc",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Colin Tunstall",
+          "publisher": "Freunde von Freunden",
+          "url": "https://www.freundevonfreunden.com/stories/colin-tunstall/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Saturdays Surf culture interview",
+          "publisher": "Interview",
+          "url": "https://www.interviewmagazine.com/culture/saturdays-surf-jwp",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "David Huntley and Eric Reynolds",
+          "publisher": "UC Santa Cruz",
+          "url": "https://magazine.ucsc.edu/2024/11/david-huntley-and-eric-reynolds-living-outside-the-box/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Our story",
+          "publisher": "Marmot",
+          "url": "https://www.marmot.com/our_story.html/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "JUN / Saturdays NYC / Marmot, via PR Times",
+      "media": {
+        "asset": "assets/saturdays-marmot-dima-parka-fallback.svg",
+        "alt": "Saturdays NYC 与 Marmot 合作羽绒服官方宣传图。",
+        "caption": "日本运营方 JUN 发布的合作系列宣传图。",
+        "credit": "JUN / Saturdays NYC / Marmot, via PR Times",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://prtimes.jp/main/html/rd/p/000001509.000006099.html",
+        "external_image_url": "https://prcdn.freetls.fastly.net/release_image/6099/1509/6099-1509-d1259015efcc71065fb1b6d2bf423fc0-3900x2194.jpg?width=1280&format=jpeg&fit=bounds",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "union-gshock-pan-african-colors",
+      "level": "major",
+      "title": "UNION 把红黑绿放进 G-SHOCK 小方块",
+      "english": {
+        "title": "UNION’s Red, Black and Green G-SHOCK",
+        "deck": "UNION and G-SHOCK’s DW-5600RBG-1 places red and green accents on a black base.",
+        "abstract": "UNION and G-SHOCK’s DW-5600RBG-1 places red and green accents on a black base. CASIO explicitly relates the palette to Pan-African colours and UNION’s roots in Black culture. The colours continue through the band loops, while the Frontman logo appears on the case back and in the backlight. The Japanese operator announces a local release on 7 November."
+      },
+      "sources": [
+        {
+          "title": "DW-5600RBG-1",
+          "publisher": "CASIO",
+          "url": "https://www.casio.com/intl/watches/gshock/product.DW-5600RBG-1/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "UNION × G-SHOCK Japan release",
+          "publisher": "TSI / PR Times",
+          "url": "https://prtimes.jp/main/html/rd/p/000001632.000009786.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Pan-African DW-5600 variant",
+          "publisher": "Notebookcheck",
+          "url": "https://www.notebookcheck.net/Casio-launches-G-Shock-DW-5600-variant-in-pan-African-colors.1441198.0.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Chris Gibbs and Beth Birkett",
+          "publisher": "KCRW",
+          "url": "https://www.kcrw.com/shows/the-treatment/stories/chris-gibbs-and-beth-birkett-union-los-angeles",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Union Tokyo: Chris Gibbs interview",
+          "publisher": "Highsnobiety",
+          "url": "https://www.highsnobiety.com/p/union-tokyo-store-chris-gibbs-interview/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "G-SHOCK product planning interview",
+          "publisher": "Mynavi",
+          "url": "https://news.mynavi.jp/article/20080115-g-shock/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Kikuo Ibe’s quest",
+          "publisher": "Le Monde",
+          "url": "https://www.lemonde.fr/en/lifestyle/article/2025/11/30/kikuo-ibe-s-quest-to-build-the-unbreakable-watch_6747987_37.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Shock-resistant construction",
+          "publisher": "CASIO",
+          "url": "https://gshock.casio.com/intl/technology/shock/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "David Hammons: African-American Flag",
+          "publisher": "MoMA",
+          "url": "https://www.moma.org/collection/works/81317?locale=en",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Brand history of G-SHOCK",
+          "publisher": "CASIO",
+          "url": "https://gshock.casio.com/intl/identity/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "TSI / UNION / G-SHOCK, via PR Times",
+      "media": {
+        "asset": "assets/union-gshock-pan-african-colors-fallback.svg",
+        "alt": "UNION 与 G-SHOCK 合作手表官方宣传图。",
+        "caption": "日本运营方 TSI 发布的 DW-5600RBG-1 合作图。",
+        "credit": "TSI / UNION / G-SHOCK, via PR Times",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://prtimes.jp/main/html/rd/p/000001632.000009786.html",
+        "external_image_url": "https://prcdn.freetls.fastly.net/release_image/9786/1632/9786-1632-67e377e59a47f75b8fdaeb3da7a17de7-1080x1350.jpg?width=1080&format=jpeg&fit=bounds",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "bob-dylan-rolling-thunder-1976",
+      "level": "major",
+      "title": "39 张 CD，把 Bob Dylan 的巡演重新排开",
+      "english": {
+        "title": "Bob Dylan’s 1976 Tour Across 39 CDs",
+        "deck": "Bob Dylan’s The Rolling Thunder Revue: The 1976 Live Recordings releases on 6 November.",
+        "abstract": "Bob Dylan’s The Rolling Thunder Revue: The 1976 Live Recordings releases on 6 November. The official announcement lists 39 CDs containing 381 tracks, of which 371 were previously unreleased. A three-LP edition of the complete 16 May 1976 Fort Worth show arrives on the same date. “371” refers to recorded tracks, not 371 different compositions."
+      },
+      "sources": [
+        {
+          "title": "Rolling Thunder Revue: 1976 recordings",
+          "publisher": "Bob Dylan / Columbia Legacy",
+          "url": "https://www.bobdylan.com/news/bob-dylans-the-rolling-thunder-revue-the-1976-live-recordings-to-be-released-november-6",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "1976 live recordings review",
+          "publisher": "Exclaim!",
+          "url": "https://exclaim.ca/music/article/bob-dylan-the-rolling-thunder-revue-the-1976-live-recordings-album-review",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Fort Collins review",
+          "publisher": "Cult Following",
+          "url": "https://cultfollowing.co.uk/2026/11/03/bob-dylan-the-rolling-thunder-revue-1976-fort-collins-colorado-review/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Hard Rain",
+          "publisher": "Bob Dylan",
+          "url": "https://www.bobdylan.com/albums/hard-rain/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Rolling Thunder: true story",
+          "publisher": "TIME",
+          "url": "https://time.com/5604841/bob-dylan-martin-scorsese-rolling-thunder-revue-true-story/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Rolling Thunder film review",
+          "publisher": "TIME",
+          "url": "https://time.com/5605892/review-rolling-thunder-revue-bob-dylan-martin-scorsese/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Mick Ronson after Bowie",
+          "publisher": "Guitar World",
+          "url": "https://www.guitarworld.com/artists/guitarists/the-post-bowie-career-of-mick-ronson",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Rolling Thunder: musicians remember",
+          "publisher": "MOJO",
+          "url": "https://www.mojo4music.com/articles/stories/bob-dylans-rolling-thunder-revue-i-was-frightened-he-might-get-killed-and-dumped-in-the-bayou/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The 1975 Live Recordings (2019)",
+          "publisher": "Columbia / Legacy",
+          "url": "https://www.prnewswire.com/news-releases/bob-dylan--the-rolling-thunder-revue-the-1975-live-recordings-to-be-released-by-columbia-records--legacy-recordings-300840647.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Rolling Thunder revisited",
+          "publisher": "Pulitzer Prizes",
+          "url": "https://www.pulitzer.org/news/rolling-thunder-revisted",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Columbia / Legacy / Bob Dylan official release",
+      "media": {
+        "asset": "assets/bob-dylan-rolling-thunder-1976-fallback.svg",
+        "alt": "Bob Dylan 1976 年 Rolling Thunder Revue 套装官方产品图。",
+        "caption": "1976 年现场录音新版套装的官方产品图；不是今日演出照片。",
+        "credit": "Columbia / Legacy / Bob Dylan official release",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.bobdylan.com/news/bob-dylans-the-rolling-thunder-revue-the-1976-live-recordings-to-be-released-november-6",
+        "external_image_url": "https://cdn-p.smehost.net/sites/f6f0621f88184e56b557836255a6628a/wp-content/uploads/2026/09/1976-CD-MINI@3000x-300x300.jpg",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "ciaran-roisin-solo-debut",
+      "level": "major",
+      "title": "Ciarán 用自己的名字，开始《Róisín》",
+      "english": {
+        "title": "Ciarán Begins Róisín Under His Own Name",
+        "deck": "Ciarán, formerly Bearface in BROCKHAMPTON, releases his debut solo album Róisín through Ninja Tune on 6 November.",
+        "abstract": "Ciarán, formerly Bearface in BROCKHAMPTON, releases his debut solo album Róisín through Ninja Tune on 6 November. It contains thirteen tracks. K-Bar, Houston, Galvarino and RED 99 were previously available, and the official page lists vinyl, CD and digital editions."
+      },
+      "sources": [
+        {
+          "title": "Róisín",
+          "publisher": "Ninja Tune",
+          "url": "https://ninjatune.net/release/ciaran/roisin",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Róisín: artist’s album note",
+          "publisher": "Ciarán / Bandcamp",
+          "url": "https://ciaran1111.bandcamp.com/album/r-is-n",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Ciarán on Róisín and going solo",
+          "publisher": "The FADER",
+          "url": "https://www.thefader.com/2026/09/09/ciaran-on-his-new-album-risn-retiring-bearface-and-going-solo",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Ciarán begins a new era",
+          "publisher": "Rolling Stone UK",
+          "url": "https://www.rollingstone.co.uk/music/features/brockhamptons-bearface-begins-a-new-era-as-ciaran-65636/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Ciarán: Róisín interview",
+          "publisher": "Pigeons & Planes",
+          "url": "https://www.pigeonsandplanes.com/read/ciaran-roisin-interview",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Ciarán announces Róisín",
+          "publisher": "Hot Press",
+          "url": "https://www.hotpress.com/music/former-brockhampton-member-ciaran-announces-debut-solo-album-roisin-23160477",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Róisín album review",
+          "publisher": "Shatter the Standards",
+          "url": "https://www.shatterthestandards.com/p/album-review-roisin-by-ciaran",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Ciarán — Loom",
+          "publisher": "Stereofox",
+          "url": "https://www.stereofox.com/ciaran-loom/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Ciarán — Galvarino",
+          "publisher": "Gigshack",
+          "url": "https://gigshack.co.uk/albums/ciaran-galvarino",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "K-Bar introduces Ciarán",
+          "publisher": "The FADER",
+          "url": "https://www.thefader.com/2026/07/29/ciaran-bearface--brockhampton-is-back-new-name-k-bar-music-video",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Ciarán / Ninja Tune; individual artwork credit unverified",
+      "media": {
+        "asset": "assets/ciaran-roisin-solo-debut-fallback.svg",
+        "alt": "Ciarán 专辑《Róisín》官方封面。",
+        "caption": "《Róisín》官方专辑封面，来自发行厂牌 Ninja Tune。",
+        "credit": "Ciarán / Ninja Tune; individual artwork credit unverified",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://ninjatune.net/release/ciaran/roisin",
+        "external_image_url": "https://ninjatune.net/images/releases/roisin-main.jpg",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "global-antiquity-pompeii-ivory",
+      "level": "signal",
+      "title": "一尊印度象牙像抵达庞贝之后",
+      "english": {
+        "title": "An Indian Ivory Figure in Pompeii",
+        "deck": "Global Antiquity opened at Fondazione Prada in Milan on 5 November and runs until 1 March 2027.",
+        "abstract": "Global Antiquity opened at Fondazione Prada in Milan on 5 November and runs until 1 March 2027. More than 150 works and artifacts explore cross-regional relations from roughly 600 BCE to 1000 CE. Among the foundation’s examples is an ivory female figure from the Indian subcontinent that reached Pompeii before the eruption of 79 CE."
+      },
+      "sources": [
+        {
+          "title": "Global Antiquity",
+          "publisher": "Fondazione Prada",
+          "url": "https://www.fondazioneprada.org/project/global-antiquity/?lang=en",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Global Antiquity",
+          "publisher": "Apollo Magazine",
+          "url": "https://apollo-magazine.com/global-antiquity-fondazione-prada-milan-preview/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Trade between the Romans and the Empires of Asia",
+          "publisher": "The Metropolitan Museum of Art",
+          "url": "https://www.metmuseum.org/it/essays/trade-between-the-romans-and-the-empires-of-asia",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "La statuetta indiana da Pompei: nuove considerazioni per un approccio emico",
+          "publisher": "LANX / University of Milan",
+          "url": "https://riviste.unimi.it/index.php/lanx/article/view/11206",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Comparanda as Context? The Pompeii Figurine and Indian Yakshis",
+          "publisher": "Institute for the Study of the Ancient World, NYU",
+          "url": "https://isaw.nyu.edu/research/io-figures/sessions/feb-25/info",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Reception and Consumption of Eastern Goods in Roman Society",
+          "publisher": "Greece & Rome / Cambridge University Press",
+          "url": "https://www.cambridge.org/core/journals/greece-and-rome/article/abs/reception-and-consumption-of-eastern-goods-in-roman-society/AB382741FDBC75BFFE346C155DAC84AE",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Eros at Junnar: Reconsidering a Piece of Mediterranean Art",
+          "publisher": "Greece & Rome / Cambridge University Press",
+          "url": "https://www.cambridge.org/core/journals/greece-and-rome/article/abs/eros-at-junnar-reconsidering-a-piece-of-mediterranean-art/5BDB5C96407C1BF0D99CD3CF3235BA6C",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Rome and Mesopotamia: Importers into India in the First Millennium AD",
+          "publisher": "Antiquity / Cambridge University Press",
+          "url": "https://www.cambridge.org/core/journals/antiquity/article/rome-and-mesopotamia-importers-into-india-in-the-first-millennium-ad/5C03182D74207F04BA23620DCB4F7B2C",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Indian Ocean Trade in the First Millennium CE: Taking the Romans out of Indo-Roman?",
+          "publisher": "Journal of Roman Studies / Cambridge University Press",
+          "url": "https://www.cambridge.org/core/journals/journal-of-roman-studies/article/abs/indian-ocean-trade-in-the-first-millennium-ce-taking-the-romans-out-of-indoroman/6254877B05C32F83C6CC9B1F93BF5C7F",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Global Antiquity, the Fondazione Prada exhibition curated by Anna Anguissola",
+          "publisher": "University of Pisa",
+          "url": "https://www.unipi.it/fotonotizie/global-antiquity-anna-angiussola-fondazione-prada/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Roberto Marossi, Courtesy Fondazione Prada",
+      "media": {
+        "asset": "assets/global-antiquity-pompeii-ivory-fallback.svg",
+        "alt": "《Global Antiquity》官方展厅照片。",
+        "caption": "Fondazione Prada 发布的《Global Antiquity》展厅图。",
+        "credit": "Roberto Marossi, Courtesy Fondazione Prada",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.fondazioneprada.org/project/global-antiquity/?lang=en",
+        "external_image_url": "https://www.fondazioneprada.org/wp-content/uploads/01-Fondazione-Prada_Global-Antiquity-copy-959x640.jpg",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "ola-znad-shabbah-souq-al-liqa",
+      "level": "signal",
+      "title": "芦苇家具背后的人，也被带进 Design Doha",
+      "english": {
+        "title": "The People Behind Ola Znad’s Reed Furniture",
+        "deck": "Design Doha began on 5 November.",
+        "abstract": "Design Doha began on 5 November. Its headline exhibition, Arab Design Now 2026, presents 81 designers, including 78 new commissions and sixteen specially commissioned films. Its curatorial account places making environments, artisans and processes alongside finished objects."
+      },
+      "sources": [
+        {
+          "title": "Meet the Iraqi designer reimagining public spaces for her community",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design-interiors/ola-znad-designer-profile-design-doha-2026",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Arab Design Now 2026",
+          "publisher": "Design Doha",
+          "url": "https://designdoha.org.qa/en/calendar/arab-design-now-2026/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Beyti Beytak • My Home is Your Home",
+          "publisher": "Qatar Museums",
+          "url": "https://qm.org.qa/en/calendar/beyti-beytak-2026/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Pakistan's architectural heritage finds a voice in Qatar with Yasmeen Lari, Nayyar Ali Dada's unique practices",
+          "publisher": "Dawn",
+          "url": "https://images.dawn.com/news/1196096/pakistans-architectural-heritage-finds-a-voice-in-qatar-with-yasmeen-lari-nayyar-ali-dadas-unique-practices",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Chairperson of Qatar Museums Opens 'My Home is Your Home' Exhibition",
+          "publisher": "Qatar News Agency",
+          "url": "https://qna.org.qa/en/news/news-details?date=25%2F10%2F2026&id=chairperson-of-qatar-museums-opens-my-home-is-your-home-exhibition",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Dubai Design Week: How coral stones, reefs and mycelium inspired the winning Abwab projects",
+          "publisher": "The National",
+          "url": "https://www.thenationalnews.com/arts-culture/art-design/2024/10/03/abwab-dubai-design-week-coral-stones-reefs-mycelium/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Modern Mudhif: An ancient architectural tradition in a state of rapid change",
+          "publisher": "Journal of Material Cultures in the Muslim World / University of Liverpool Repository",
+          "url": "https://livrepository.liverpool.ac.uk/3196956/1/mcmw-article-10.1163-26666286-12340063.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Iraqi Marshes: Reed House Builders",
+          "publisher": "University of Victoria, Crafts of Iraq",
+          "url": "https://craftsofiraq.uvic.ca/iraqi-marshes-reed-house-builders/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Participatory Environmental and Social Assessment of the Mesopotamian Marshes",
+          "publisher": "UNDP Iraq",
+          "url": "https://iraq.un.org/sites/default/files/2025-07/undp_iq_pea.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Shape — Mudhif: reeds houses",
+          "publisher": "Designed in Iraq / GIZ and Goethe-Institut",
+          "url": "https://designediniraq.org/entry/mudhif-reeds-houses/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Studio Znad — Shabbah",
+          "publisher": "Downtown Design",
+          "url": "https://www.downtowndesign.com/exhibitors/ola-znad",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Studio Znad / Downtown Design; individual photographer unverified",
+      "media": {
+        "asset": "assets/ola-znad-shabbah-souq-al-liqa-fallback.svg",
+        "alt": "Studio Znad《Shabbah》家具的官方展会图片。",
+        "caption": "背景图：Downtown Design 的 Studio Znad／Shabbah 官方项目页配图；不是 Doha 现场照片。",
+        "credit": "Studio Znad / Downtown Design; individual photographer unverified",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.downtowndesign.com/exhibitors/ola-znad",
+        "external_image_url": "https://cdn.prod.website-files.com/67c1846684b4b08dc5bda767/6ad74983e374aceb244805b7_Ola%20Znad_Banner.png",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "karon-davis-wishful-thinking",
+      "level": "signal",
+      "title": "Karon Davis 把现实的身体带进古典雕塑",
+      "english": {
+        "title": "Karon Davis Reconsiders the Classical Figure",
+        "deck": "Karon Davis’s Wishful Thinking opened at Salon 94 in New York on 5 November and runs until 19 December.",
+        "abstract": "Karon Davis’s Wishful Thinking opened at Salon 94 in New York on 5 November and runs until 19 December. Its life-size nude sculptures are made through body casts of friends, muses and models. The gallery connects the exhibition with the often absent Black figure within art history’s canon."
+      },
+      "sources": [
+        {
+          "title": "Karon Davis: Wishful Thinking",
+          "publisher": "Salon 94",
+          "url": "https://salon94.com/exhibitions/karon-davis-wishful-thinking/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Step inside Karon Davis' theatrical and creative world",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/art/exhibitions-shows/step-inside-karon-davis-theatrical-and-creative-world",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Beauty must suffer: the artist lifting the barre on ballet",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/artanddesign/2023/dec/11/art-black-representation-in-ballet-karon-davis",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "A Dance for the Sky",
+          "publisher": "The Brooklyn Rail",
+          "url": "https://brooklynrail.org/2024/06/dance/A-Dance-for-the-Sky/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Karon Davis, Beauty Must Suffer",
+          "publisher": "Ocula",
+          "url": "https://ocula.com/art-galleries/salon-94/exhibitions/karon-davis-beauty-must-suffer/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Object Lessons: Karon Davis",
+          "publisher": "Sculpture",
+          "url": "https://sculpturemagazine.art/object-lessons-karon-davis/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Karon Davis Sculpts Beauty and Suffering of Ballet at Salon 94",
+          "publisher": "Whitewall",
+          "url": "https://whitewall.art/art/karon-davis-sculpts-beauty-and-suffering-of-ballet-at-salon-94/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Artist Karon Davis Captures the Beauty, Pain, and Conformity of Ballet in an Ambitious New Exhibition",
+          "publisher": "CULTURED",
+          "url": "https://culturedmag.com/article/2023/10/16/artist-karon-davis-salon-94-ballet/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "How Artist Karon Davis’s Tour-de-Force Portrayal of Bobby Seale Reveals a Cruel Blind Spot of American History",
+          "publisher": "Artnet",
+          "url": "https://news.artnet.com/art-world/karon-davis-interview-1950278",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Karon Davis' Pain Management plumbs loss and love in a tribute to her late husband, Noah Davis",
+          "publisher": "Los Angeles Times",
+          "url": "https://www.latimes.com/entertainment/arts/la-ca-cm-karon-davis-pain-management-20160923-snap-story.html",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Karon Davis / Salon 94; individual photographer not identified on source page",
+      "media": {
+        "asset": "assets/karon-davis-wishful-thinking-fallback.svg",
+        "alt": "Karon Davis《Wishful Thinking》的雕塑展厅。",
+        "caption": "Salon 94 官方《Wishful Thinking》Installation Views 图组。",
+        "credit": "Karon Davis / Salon 94; individual photographer not identified on source page",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://salon94.com/exhibitions/karon-davis-wishful-thinking/",
+        "external_image_url": "https://cdn.sanity.io/images/cpu8yypf/production-v4/0ec76588b08119d42e31ab9d48a55dd47e4b58dd-3500x2625.jpg?auto=format&q=80&w=1600",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "masao-gozu-windows-bars",
+      "level": "signal",
+      "title": "同一扇纽约的窗，隔了五十三年",
+      "english": {
+        "title": "The Same New York Window, Fifty-three Years Apart",
+        "deck": "MoMA PS1’s Masao Gozu: Windows and Bars opened on 5 November and runs until 15 March 2027.",
+        "abstract": "MoMA PS1’s Masao Gozu: Windows and Bars opened on 5 November and runs until 15 March 2027. It places a 1972 photograph of a Mott Street window in Chinatown beside a 2025 photograph of the same location. Fifty-three years separate a recognizable place from a different moment."
+      },
+      "sources": [
+        {
+          "title": "Masao Gozu: Windows and Bars",
+          "publisher": "MoMA PS1",
+          "url": "https://www.momaps1.org/en/programs/799-masao-gozu-windows-and-bars",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "A family with their dog, an old woman on a fire escape, a faded Stars and Stripes — for five decades, Masao Gozu photographed New York's immigrant neighborhoods from below",
+          "publisher": "Digital Camera World",
+          "url": "https://www.digitalcameraworld.com/photography/galleries-and-exhibitions/a-family-with-their-dog-an-old-woman-on-a-fire-escape-a-faded-stars-and-stripes-for-five-decades-masao-gozu-walked-new-yorks-immigrant-neighborhoods-and-pointed-his-camera-up-at-peoples-windows",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "In New York: Windows and Looks",
+          "publisher": "Window Research Institute",
+          "url": "https://madoken.jp/en/article/4464/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Windows Offer a Glimpse into Contemporary Society",
+          "publisher": "Aesthetica Magazine",
+          "url": "https://aestheticamagazine.com/windows-offer-a-glimpse-into-contemporary-society/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Windows Into Masao Gozu: A Reflection by Ted Riederer on the Art of Urban Memory",
+          "publisher": "Brooklyn Street Art",
+          "url": "https://www.brooklynstreetart.com/2025/06/05/windows-into-masao-gozu-a-reflection-by-ted-riederer-on-the-art-of-urban-memory/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Masao Gozu’s “Windows to New York” is an Ode to New York City",
+          "publisher": "Untapped New York",
+          "url": "https://www.untappedcities.com/windows-to-new-york/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Masao Gozu: Windows",
+          "publisher": "artscape International",
+          "url": "https://artscape.jp/artscape/eng/picks/1205_01.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Masao Gozu Time Frame",
+          "publisher": "Howl! Arts / Howl! Happening",
+          "url": "https://www.howlarts.org/event/masao-gozu-time-frame/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Masao Gozu: Windows to New York",
+          "publisher": "Court Tree Collective",
+          "url": "https://courttree.com/Masao-Gozu-Windows-to-New-York",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Attic Foot and Elbow to Tip of Middle Finger",
+          "publisher": "University of Lethbridge Repository",
+          "url": "https://opus.uleth.ca/server/api/core/bitstreams/d6e0267c-d74d-44b0-9934-5f0a6b3b8ae7/content",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Masao Gozu, Courtesy the artist, via MoMA PS1",
+      "media": {
+        "asset": "assets/masao-gozu-windows-bars-fallback.svg",
+        "alt": "Masao Gozu 莫特街窗景的 1972 年与 2025 年照片并置。",
+        "caption": "左：1972 年明胶银盐照片；右：2025 年数码照片。作品的载体不同，相隔五十三年。",
+        "credit": "Masao Gozu, Courtesy the artist, via MoMA PS1",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.momaps1.org/en/programs/799-masao-gozu-windows-and-bars",
+        "external_image_url": "https://d1tcycker2ppj.cloudfront.net/output%3Df%3Ajpg%2Cq%3A60/resize%3Dwidth%3A1200%2Cfit%3Amax/7p9Yt2mqQtq21tH3FCsZ",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "capsule-shanghai-faux-cherry",
+      "level": "signal",
+      "title": "上海明天的两场展，把身体与感知放在一起",
+      "english": {
+        "title": "Two Shanghai Exhibitions for Body and Perception",
+        "deck": "Capsule Shanghai presents Sarah Faux’s Trampler and Nicki Cherry’s Boundary from 7 November to 31 December.",
+        "abstract": "Capsule Shanghai presents Sarah Faux’s Trampler and Nicki Cherry’s Boundary from 7 November to 31 December. This is a pre-opening selection, not a firsthand exhibition review."
+      },
+      "sources": [
+        {
+          "title": "Sarah Faux: Trampler",
+          "publisher": "Capsule",
+          "url": "https://capsuleshanghai.com/exhibitions/87-sarah-faux-trampler-shanghai/overview/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Nicki Cherry: Boundary",
+          "publisher": "Capsule",
+          "url": "https://capsuleshanghai.com/exhibitions/88-nicki-cherry-boundary-shanghai/overview/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Sarah Faux by Victoria Roth",
+          "publisher": "BOMB",
+          "url": "https://bombmagazine.org/articles/2025/04/21/sarah-faux-by-victoria-roth/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Sarah Faux: Autofriction",
+          "publisher": "Hales",
+          "url": "https://halesgallery.com/exhibitions/244-sarah-faux-autofriction/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Sex and Play and Painting",
+          "publisher": "artcritical / Capsule",
+          "url": "https://capsuleshanghai.com/press/41-artcritical-sex-and-play-and-painting-sarah/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "A conversation with Nicki Cherry",
+          "publisher": "Arte Fuse",
+          "url": "https://artefuse.com/a-conversation-with-artist-nicki-cherry/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Nicki Cherry: Quadraphonic Crush",
+          "publisher": "University of Chicago DOVA",
+          "url": "https://dova.uchicago.edu/news/undergraduate-alum-nicki-cherry-opens-solo-exhibition-mama-projects",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Body Memory",
+          "publisher": "Ghostmachine",
+          "url": "https://ghostmachinegallery.com/projects/body-memory/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Sixth AIM Biennial",
+          "publisher": "The Bronx Museum",
+          "url": "https://bronxmuseum.org/wp-content/uploads/2024/01/Bronx-Museum_6th-AIM-Biennial_Press-Release_01-11-24.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Sarah Faux interview (2021)",
+          "publisher": "Artshard",
+          "url": "https://www.mbart.com/usr/documents/press/download_url/944/2021-01-22-artshard-capsuleshanghai.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Sarah Faux interview (2020)",
+          "publisher": "The Blank Contemporary",
+          "url": "https://www.mbart.com/usr/documents/press/download_url/943/2020-10-06-the-blank-contemporary-interview-.pdf",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Sarah Faux / Capsule; individual graphic credit unverified",
+      "media": {
+        "asset": "assets/capsule-shanghai-faux-cherry-fallback.svg",
+        "alt": "Sarah Faux《Trampler》官方展览海报。",
+        "caption": "Capsule 发布的 Sarah Faux 展览海报；不是开幕现场。",
+        "credit": "Sarah Faux / Capsule; individual graphic credit unverified",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://capsuleshanghai.com/exhibitions/87-sarah-faux-trampler-shanghai/overview/",
+        "external_image_url": "https://static-assets.artlogic.net/w_1200,c_limit,f_auto,fl_lossy,q_auto/ws-capsuleshanghai/usr/images/exhibitions/group_images_override/87/capsule_2026_sarahfaux_trampler_poster_square.jpg",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "kates-knitalian-textile-restaurant",
+      "level": "signal",
+      "title": "一间满桌毛线的意大利餐馆",
+      "english": {
+        "title": "An Italian Restaurant Made of Yarn",
+        "deck": "Kate’s Knitalian, currently at London’s Air Contemporary, turns the gallery into an Italian restaurant and delicatessen.",
+        "abstract": "Kate’s Knitalian, currently at London’s Air Contemporary, turns the gallery into an Italian restaurant and delicatessen. Pasta, cheese, tins and desserts are knitted, crocheted, embroidered and sewn. Visitors can choose pizza toppings at an interactive station. The artist confirmed on 2 November that it was open until 5 December; Balineum and Euronews both give 30 October as the opening date."
+      },
+      "sources": [
+        {
+          "title": "Knot for eating: Welcome to the Italian restaurant where every meal is knitted",
+          "publisher": "Euronews Culture",
+          "url": "https://www.euronews.com/2026/10/30/knot-for-eating-welcome-to-the-italian-restaurant-where-every-meal-is-knitted",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "No one can resist the charms of Kate Jenkins's culinary creations",
+          "publisher": "Country Life",
+          "url": "https://www.countrylife.co.uk/culture/art-exhibitions/ive-seen-other-knitted-roast-chickens-and-id-like-to-put-my-own-stamp-on-one-no-one-can-resist-the-charms-of-kate-jenkinss-culinary-creations",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "At this Italian restaurant, nothing is quite as it seems",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/entertaining/kate-jenkins-knitted-italian-restaurant-exhibition",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Coming Soon: An Italian Restaurant Made Entirely From Wool",
+          "publisher": "Broadsheet London",
+          "url": "https://www.broadsheet.com/london/articles/kates-knitalian-exhibition",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Kate Jenkins’s Knitted World: From Hermès Horse Salon to a Knitted Trattoria",
+          "publisher": "I-M Magazine",
+          "url": "https://i-m-magazine.com/culture/kate-jenkins-knitalian-hermes-textile-art/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Soho's Newest Italian Restaurant And Deli Will Be Made Entirely From Wool",
+          "publisher": "Londonist",
+          "url": "https://londonist.com/london/art-and-photography/knitted-italian-restaurant-kate-jenkins-kates-knitalian",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Look, But Don’t Eat: Delicious Crocheted Dishes",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/arts-culture/look-but-dont-eat-delicious-crocheted-dishes-76983479/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Kate Jenkins brings utter joy through knitted croissants, lobsters and sandwiches",
+          "publisher": "It's Nice That",
+          "url": "https://www.itsnicethat.com/articles/kate-jenkins-art-190521",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Spotlight: Kate Jenkins, Fiber Artist",
+          "publisher": "Create Whimsy",
+          "url": "https://createwhimsy.com/projects/spotlight-kate-jenkins-fiber-artist/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Kate's Knitalian",
+          "publisher": "Balineum",
+          "url": "https://www.balineum.co.uk/blogs/design-notes/kates-knitalian",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Kate’s Knitalian is now open!",
+          "publisher": "Kate Jenkins Studio",
+          "url": "https://katejenkinsstudio.co.uk/kates-knitalian-is-now-open/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Courtesy Air Contemporary, via exhibition collaborator Balineum; individual photographer unverified",
+      "media": {
+        "asset": "assets/kates-knitalian-textile-restaurant-fallback.svg",
+        "alt": "Kate Jenkins 纺织食物展览与瓷砖合作的官方图片。",
+        "caption": "展览瓷砖合作方 Balineum 发布的《Kate’s Knitalian》图片。",
+        "credit": "Courtesy Air Contemporary, via exhibition collaborator Balineum; individual photographer unverified",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "origin_url": "https://www.balineum.co.uk/blogs/design-notes/kates-knitalian",
+        "external_image_url": "https://cdn.shopify.com/s/files/1/2422/3661/files/Kate_Jenkins_Knitalian.jpg?v=1793389570",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ]
+}

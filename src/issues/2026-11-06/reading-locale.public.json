@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "issueId": "2026-11-06",
+  "sourceContentSha256": "557389f2362b850211e497f47df143808d7f0950f3e65fd0020dda96d14acd60",
+  "issue": {
+    "titleEn": "MATERIALS IN EVERYDAY LIFE",
+    "positionEn": "Read how exhibitions, clothes, records and a yarn-filled restaurant connect materials with everyday life.",
+    "introEn": "Today’s twelve selections move between London, New York, Milan, Doha and Shanghai. New releases sit beside exhibitions already open and two shows opening tomorrow. Each article keeps its dates, source accounts and editorial questions visible.",
+    "closingEn": "A window, a garment, a recording and a handmade dish offer different ways to return to the people around them."
+  },
+  "stories": {
+    "nue-black-aesthetic": {
+      "altZh": "Nifemi Marcus-Bello 作品的展厅照片。",
+      "altEn": "A visitor stands beside a large pale circular work in a gallery.",
+      "captionEn": "Nifemi Marcus-Bello’s work in The Nue Black Aesthetic. Photograph: Jonathan Hordle / PA Media, via Design Museum.",
+      "summaryEn": "The Nue Black Aesthetic opens at London’s Design Museum on 6 November and runs until 8 August 2027.",
+      "englishKind": "full"
+    },
+    "kith-women-winter-2026": {
+      "altZh": "Kith Women 冬季系列官方造型图。",
+      "altEn": "A model wears a dark jacket with a grey collar and carries a handbag beside marble walls.",
+      "captionEn": "Official Echoes of the City lookbook, photographed at the former Bank of Manhattan.",
+      "summaryEn": "Kith Women Winter 2026 releases on 6 November according to each market’s local schedule.",
+      "englishKind": "full"
+    },
+    "saturdays-marmot-dima-parka": {
+      "altZh": "Saturdays NYC 与 Marmot 合作羽绒服官方宣传图。",
+      "altEn": "Two campaign views show a beige hooded parka outdoors.",
+      "captionEn": "Official collaboration campaign issued by Japanese operator JUN.",
+      "summaryEn": "Saturdays NYC and Marmot release their first collaborative down parka in Japan on 6 November.",
+      "englishKind": "full"
+    },
+    "union-gshock-pan-african-colors": {
+      "altZh": "UNION 与 G-SHOCK 合作手表官方宣传图。",
+      "altEn": "A person wears the red, black and green G-SHOCK watch beside their neck.",
+      "captionEn": "Official DW-5600RBG-1 collaboration campaign issued by Japanese operator TSI.",
+      "summaryEn": "UNION and G-SHOCK’s DW-5600RBG-1 places red and green accents on a black base.",
+      "englishKind": "full"
+    },
+    "bob-dylan-rolling-thunder-1976": {
+      "altZh": "Bob Dylan 1976 年 Rolling Thunder Revue 套装官方产品图。",
+      "altEn": "Bob Dylan’s 1976 live recordings artwork with a performance photograph.",
+      "captionEn": "Official product image for the new 1976 live-recordings edition, rather than a current performance.",
+      "summaryEn": "Bob Dylan’s The Rolling Thunder Revue: The 1976 Live Recordings releases on 6 November.",
+      "englishKind": "full"
+    },
+    "ciaran-roisin-solo-debut": {
+      "altZh": "Ciarán 专辑《Róisín》官方封面。",
+      "altEn": "Blue-tinted album artwork shows clasped tattooed hands.",
+      "captionEn": "Official Róisín album artwork from Ninja Tune.",
+      "summaryEn": "Ciarán, formerly Bearface in BROCKHAMPTON, releases his debut solo album Róisín through Ninja Tune on 6 November.",
+      "englishKind": "full"
+    },
+    "global-antiquity-pompeii-ivory": {
+      "altZh": "《Global Antiquity》官方展厅照片。",
+      "altEn": "Sculptural figures and display cases inside Global Antiquity.",
+      "captionEn": "Official Global Antiquity exhibition photograph. Roberto Marossi, Courtesy Fondazione Prada.",
+      "summaryEn": "Global Antiquity opened at Fondazione Prada in Milan on 5 November and runs until 1 March 2027.",
+      "englishKind": "full"
+    },
+    "ola-znad-shabbah-souq-al-liqa": {
+      "altZh": "Studio Znad《Shabbah》家具的官方展会图片。",
+      "altEn": "A curved reed bench with three bundled reed legs against a pale background.",
+      "captionEn": "Contextual Shabbah image from Downtown Design’s official Studio Znad project page, rather than a Doha installation view.",
+      "summaryEn": "Design Doha began on 5 November.",
+      "englishKind": "full"
+    },
+    "karon-davis-wishful-thinking": {
+      "altZh": "Karon Davis《Wishful Thinking》的雕塑展厅。",
+      "altEn": "Figurative sculptures in a wood-panelled gallery.",
+      "captionEn": "Image published on Salon 94’s official Wishful Thinking exhibition page.",
+      "summaryEn": "Karon Davis’s Wishful Thinking opened at Salon 94 in New York on 5 November and runs until 19 December.",
+      "englishKind": "full"
+    },
+    "masao-gozu-windows-bars": {
+      "altZh": "Masao Gozu 莫特街窗景的 1972 年与 2025 年照片并置。",
+      "altEn": "Two black-and-white photographs pair the same Chinatown window in 1972 and 2025.",
+      "captionEn": "Left: 1972 gelatin silver print. Right: 2025 digital photograph of the same Mott Street window.",
+      "summaryEn": "MoMA PS1’s Masao Gozu: Windows and Bars opened on 5 November and runs until 15 March 2027.",
+      "englishKind": "full"
+    },
+    "capsule-shanghai-faux-cherry": {
+      "altZh": "Sarah Faux《Trampler》官方展览海报。",
+      "altEn": "Sarah Faux’s Trampler poster features overlapping painted canvas shapes.",
+      "captionEn": "Official Sarah Faux exhibition poster, rather than an opening-day photograph.",
+      "summaryEn": "Capsule Shanghai presents Sarah Faux’s Trampler and Nicki Cherry’s Boundary from 7 November to 31 December.",
+      "englishKind": "full"
+    },
+    "kates-knitalian-textile-restaurant": {
+      "altZh": "Kate Jenkins 纺织食物展览与瓷砖合作的官方图片。",
+      "altEn": "Green deli counters, tables and handmade textile foods in Kate’s Knitalian.",
+      "captionEn": "Exhibition image published by tile collaborator Balineum. Courtesy Air Contemporary.",
+      "summaryEn": "Kate’s Knitalian, currently at London’s Air Contemporary, turns the gallery into an Italian restaurant and delicatessen.",
+      "englishKind": "full"
+    }
+  },
+  "inlineMedia": {
+    "https://designmuseum.org/image/7927aafe-abb8-440c-8a09-9917dd02c70d?width=980&height=606": {
+      "altEn": "Mac Collins’s work in the exhibition.",
+      "captionEn": "Official exhibition view of Mac Collins’s work.",
+      "creditEn": "Jonathan Hordle / PA Media, via Design Museum"
+    }
+  }
+}
