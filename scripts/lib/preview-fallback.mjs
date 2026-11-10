@@ -1,6 +1,6 @@
 // This checks the reader's fallback, not source availability or usage rights.
 // Release still requires the separate dated provenance and health attestation.
-export function declaredPreviewMedia(manifests = [], radars = [], corrections = {}, readingMedia = {}) {
+export function declaredPreviewMedia(manifests = [], radars = [], corrections = {}, readingMedia = {}, provisionalFeatures = []) {
   const origins = new Map();
   // Navigation thumbnails open a complete, statically served story that retains
   // its exact official source. Derive destinations from verified manifest data.
@@ -53,6 +53,21 @@ export function declaredPreviewMedia(manifests = [], radars = [], corrections = 
     if (media?.origin_authority !== 'first_party_official'
       || media.rights_basis !== 'preview_user_authorized_external') continue;
     add(media.kind === 'video' ? media.poster_url : media.url, item.official_url);
+  }
+  // These declarations are separately labeled user-requested Preview data.
+  // They only bind fallback behavior to the exact source and story route;
+  // they do not claim research admission, provenance verification or rights.
+  for(const feature of provisionalFeatures){
+    if(feature?.schemaVersion!==1||feature.status!=='preview'||!/^\d{4}-\d{2}-\d{2}$/.test(feature.date||'')||!Array.isArray(feature.stories))throw Error('Invalid provisional media declaration');
+    for(const story of feature.stories){
+      if(!/^[a-z0-9-]+$/.test(story.id||'')||!Array.isArray(story.images))throw Error('Invalid provisional story declaration');
+      for(const image of story.images){
+        if(image.rights!=='unknown'||!image.alt?.trim()||!image.caption?.trim()||!image.credit?.trim())throw Error('Incomplete provisional image declaration');
+        add(image.url,image.origin);
+        if(!origins.navigationTargets.has(image.url))origins.navigationTargets.set(image.url,new Set());
+        origins.navigationTargets.get(image.url).add(`/issues/${feature.date}/#story-${story.id}`);
+      }
+    }
   }
   return origins;
 }

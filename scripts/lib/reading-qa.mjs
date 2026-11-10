@@ -2,7 +2,7 @@ import { createOfflineQaContext } from './offline-qa.mjs';
 
 // v2.1 UI contract. This is local artifact behavior with outbound media blocked;
 // it cannot certify live source/image health, rights, taste or physical haptics.
-export async function readingSystemInteractions({ browser, origin, issueId, manifest }) {
+export async function readingSystemInteractions({ browser, origin, issueId, manifest, homeFeature }) {
  const context=await createOfflineQaContext(browser,{viewport:{width:390,height:844},locale:'zh-CN',reducedMotion:'reduce'},origin);
  const page=await context.newPage(),failures=[],facts={},errors=[];
  page.on('pageerror',e=>errors.push(e.message));
@@ -18,7 +18,11 @@ export async function readingSystemInteractions({ browser, origin, issueId, mani
   await page.locator('.home-full-directory').evaluate(e=>e.open=false);await page.setViewportSize({width:390,height:844});const quote=page.locator('.daily-quote');check(await quote.count()===1,'one sourced quotation');if(await quote.count()){facts.quote=await quote.evaluate(el=>({id:el.dataset.quoteId,source:el.querySelector('[data-quote-source]')?.href,text:el.querySelector('[data-quote-original]')?.textContent.trim(),background:getComputedStyle(el).backgroundColor}));check(Boolean(facts.quote.id&&facts.quote.text&&/^https:\/\//.test(facts.quote.source||'')),'quotation attribution/source');check(facts.quote.background==='rgba(0, 0, 0, 0)','quotation has no thick outer fill');}
   const entry=page.locator('.bookmark-item').first(),category=await entry.getAttribute('data-story-category'),link=entry.locator('a.ct-story-entry'),storyId=await link.getAttribute('data-story-id');
   if(category){await page.locator('.home-full-directory>summary').click();await page.locator(`[data-home-category="${category}"]`).click();}await link.click();await ready();
-  check(new URL(page.url()).hash==='#story-'+storyId,'homepage story entry reaches corresponding edition anchor');check(await page.locator('.issue-story').count()===manifest.stories.length,'whole edition remains complete');
+  const expectedHomeStories=homeFeature?.stories||manifest.stories;
+  const expectedHomeDate=homeFeature?.date||issueId;
+  check(new URL(page.url()).pathname.endsWith(`/issues/${expectedHomeDate}/`)&&new URL(page.url()).hash==='#story-'+storyId,'homepage story entry reaches corresponding edition anchor');
+  const actualHomeIds=await page.locator('.issue-story').evaluateAll(els=>els.map(el=>el.id.replace(/^story-/,'')));
+  check(actualHomeIds.length===expectedHomeStories.length&&expectedHomeStories.every((story,index)=>story.id===actualHomeIds[index]),'whole edition remains complete');
   const placement=await page.locator('#story-'+storyId).evaluate(el=>({top:el.getBoundingClientRect().top,expected:document.querySelector('.site-header').getBoundingClientRect().bottom+16}));facts.edition_anchor=placement;check(Math.abs(placement.top-placement.expected)<=4,'edition anchor clears actual navigation by 16px');
   check(await page.locator('.issue-toc-disclosure').evaluate(el=>!el.open),'contents collapsed by default');check(await page.locator('details.sources[open]').count()===0,'sources collapsed by default');
   const actions=page.locator(`#story-${storyId} .story-actions`);facts.actions=await actions.evaluate(el=>[el.querySelector('summary'),el.querySelector('.action-standalone'),el.querySelector('.action-contents')].map(e=>{const r=e.getBoundingClientRect();return {top:r.top,height:r.height,width:r.width};}));check(facts.actions.every(x=>x.height>=43.5&&x.width>=43.5)&&Math.max(...facts.actions.map(x=>x.top))-Math.min(...facts.actions.map(x=>x.top))<1,'three article actions share one 44px row');

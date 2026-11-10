@@ -30,9 +30,9 @@ export async function livingEditionMarkup({repoRoot,issue,variant='space'}){
  if(!stories.length)return `<section class="living-empty"><h1>${pair('本期暂不可用','This edition is unavailable')}</h1><a href="/archive/">${pair('浏览往期','Browse the archive')}</a></section>`;
  const artwork=stories.map((s,i)=>{
   const near=Math.abs(i-initial)<=1;
-  const image=`<img class="living-official" data-external-preview="true" src="${esc(s.image)}" alt="${esc(s.altZh)}" data-l10n-alt-zh="${esc(s.altZh)}" data-l10n-alt-en="${esc(s.altEn)}" width="${Math.round(1000*s.ratio)}" height="1000" loading="${near?'eager':'lazy'}" fetchpriority="${i===initial?'high':'auto'}" decoding="async" referrerpolicy="no-referrer">`;
+  const image=s.image?`<img class="living-official" data-external-preview="true" src="${esc(s.image)}" alt="${esc(s.altZh)}" data-l10n-alt-zh="${esc(s.altZh)}" data-l10n-alt-en="${esc(s.altEn)}" width="${Math.round(1000*s.ratio)}" height="1000" loading="${near?'eager':'lazy'}" fetchpriority="${i===initial?'high':'auto'}" decoding="async" referrerpolicy="no-referrer">`:'';
   // Far artwork is inert until approached. No-JS still has real linked images.
-  const source=near?image:`<template data-living-image>${image}</template><noscript>${image}</noscript>`;
+  const source=!image?'':near?image:`<template data-living-image>${image}</template><noscript>${image}</noscript>`;
   return `<a class="living-art" data-visual-frame data-preview-navigation="edition-story" href="${esc(s.issueUrl)}" data-internal data-living-entry="story" data-story-id="${s.id}" data-index="${i}" data-art-treatment="${esc(s.treatment)}" style="--art-index:${i};--art-ratio:${s.ratio}" aria-label="${esc(s.titleZh)}" data-l10n-aria-label-zh="${esc(s.titleZh)}" data-l10n-aria-label-en="${esc(s.titleEn)}"><span class="living-art-surface"><img class="living-fallback" src="${esc(s.fallback)}" alt="" aria-hidden="true" width="1200" height="720">${source}<span class="living-art-error photo-fallback">${pair('官方图像暂不可用 · 非纪实回退图','Official image unavailable · editorial fallback')}</span></span></a>`;
  }).join('');
  const current=stories[initial];
