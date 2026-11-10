@@ -504,7 +504,21 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
         for (const [key, media] of Object.entries(additional)) readingMedia[key.includes('/') ? key : `${manifest.issue_id}/${key}`] = media;
       } catch (error) { if (error.code !== 'ENOENT') throw error; }
     }
-    const previewOrigins = declaredPreviewMedia(manifests, radars, corrections, readingMedia);
+    // A provisional feature has a separate hashed input in the reading-view
+    // metadata. It participates only in technical image-fallback checks, not
+    // in formal issue admission, source health or rights verification.
+    const provisionalFeatures=[];
+    try {
+      const relative='src/preview-features/2026-11-10.json';
+      const source=path.join(repoRoot,relative);
+      const feature=await readJson(source);
+      const viewInputs=await readJson(path.join(distDir,'view-inputs.public.json'));
+      if(!staticResult.buildReport.issues.some(issue=>issue.issue_id===feature.date)){
+        if(viewInputs.reading_view_input_hashes?.[feature.date]?.[relative]!==await sha256File(source))throw new Error('PROVISIONAL_VIEW_INPUT_MISMATCH');
+        provisionalFeatures.push(feature);
+      }
+    } catch(error) { if(error.code!=='ENOENT')throw error; }
+    const previewOrigins = declaredPreviewMedia(manifests, radars, corrections, readingMedia, provisionalFeatures);
     const server = await startStaticServer(distDir);
     const browser = await launchChromium();
     try {
@@ -606,7 +620,13 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
         home_mobile: captures["home-mobile-390x844"].facts,
         archive: captures["archive-desktop-1440x900"].facts,
       }));
-      const interaction = await readingSystemInteractions({ browser, origin: server.origin, issueId, manifest: staticResult.manifest });
+      // The requested issue can be historical; the home interaction must use
+      // the actual latest rendered edition rather than that requested issue.
+      const homeManifest=[...manifests].sort((a,b)=>a.issue_id.localeCompare(b.issue_id)).at(-1);
+      const homeFeature=[...provisionalFeatures]
+        .filter(feature=>feature.date>homeManifest.issue_id)
+        .sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
+      const interaction = await readingSystemInteractions({ browser, origin: server.origin, issueId: homeManifest.issue_id, manifest: homeManifest, homeFeature });
       const readingCheck = checks.find(check => check.id === 'reading_system_contract');
       readingCheck.status = readingCheck.status === 'PASS' && interaction.ok ? 'PASS' : 'FAIL';
       readingCheck.detail = { ...readingCheck.detail, browser: interaction };
