@@ -13,11 +13,11 @@
     imageSlow: ['图像较慢，可先阅读', 'The image is slow; continue reading'],
     imageFailed: ['图片暂未载入', 'Image unavailable'],
     fallbackFailed: ['原创回退图 · 非纪实', 'Original fallback · non-documentary'],
-    unavailable: ['图片暂不可用，可继续阅读或打开官方来源', 'Image unavailable. Continue reading or open the official source.'],
-    fallbackSlow: ['原创回退图 · 官方图像较慢', 'Original fallback · official image is slow'],
-    officialSlow: ['官方图像较慢，可先阅读', 'Official image is slow; continue reading'],
-    fallbackLoading: ['原创回退图 · 官方图像载入中…', 'Original fallback · loading official image…'],
-    officialLoading: ['官方图像载入中…', 'Loading official image…'],
+    unavailable: ['图片暂不可用，可继续阅读或打开图片来源', 'Image unavailable. Continue reading or open the image source.'],
+    fallbackSlow: ['原创回退图 · 图片载入较慢', 'Original fallback · image is slow'],
+    officialSlow: ['图片载入较慢，可先阅读', 'Image is slow; continue reading'],
+    fallbackLoading: ['原创回退图 · 图片载入中…', 'Original fallback · loading image…'],
+    officialLoading: ['图片载入中…', 'Loading image…'],
     artwork: ['作品图像', 'Artwork'], quoteSource: ['引言出处：{title}', 'Quotation source: {title}']
   };
   let locale = root.dataset.locale === 'en' ? 'en' : 'zh';
