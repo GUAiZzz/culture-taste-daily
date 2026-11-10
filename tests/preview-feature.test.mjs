@@ -50,6 +50,11 @@ test('each preview story has native bilingual reading, a source and a visual fal
   assert.match(html,/noindex,nofollow/);
   assert.ok(html.includes('editorial-fallback.svg'),story.id);
   assert.ok(story.sources.some(source=>html.includes(source.url.replaceAll('&','&amp;'))),story.id);
+  for(const image of story.images){
+   const escaped=image.url.replaceAll('&','&amp;');
+   const rendered=[...html.matchAll(/<img\b[^>]*\bsrc="([^"]+)"/g)].filter(match=>match[1]===escaped);
+   assert.equal(rendered.length,1,`${story.id}: each image should be rendered once and shared between languages`);
+  }
  }
  const provenance=JSON.parse(await readFile(path.join(out,'provenance.json'),'utf8'));
  assert.equal(provenance.issues.at(-1).date,index.issues.filter(issue=>issue.status!=='preview').at(-1).date);
