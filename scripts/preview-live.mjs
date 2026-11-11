@@ -13,6 +13,8 @@ const get = transport.get;
 try {
 const stamp = JSON.parse((await get('preview-release.json')).toString('utf8'));
 if (stamp.repository !== REPOSITORY || stamp.source_commit !== values.sha || !DIGEST.test(stamp.artifact_digest ?? '')) throw new Error('LIVE_IDENTITY_MISMATCH');
+if (stamp.latest_issue_status !== undefined && !['preview', 'formal'].includes(stamp.latest_issue_status)) throw new Error('LIVE_ISSUE_STATUS_INVALID');
+if (stamp.latest_formal_issue !== undefined && !/^\d{4}-\d{2}-\d{2}$/.test(stamp.latest_formal_issue)) throw new Error('LIVE_FORMAL_ISSUE_INVALID');
 if (!stamp.files || typeof stamp.files !== 'object' || Array.isArray(stamp.files) || digestMap(stamp.files) !== stamp.artifact_digest) throw new Error('LIVE_MANIFEST_DIGEST_MISMATCH');
 if (Object.keys(stamp.files).some(file => file.includes('..') || file.startsWith('/') || file.includes('\\') || !DIGEST.test(stamp.files[file]))) throw new Error('LIVE_FILE_SCOPE');
 const date = values['issue-date'] ?? values.date ?? stamp.latest_issue;
@@ -28,7 +30,10 @@ for (const file of targets) {
   if (!/noindex/.test(bytes.toString()) || !bytes.toString().includes(expectedDate)) throw new Error(`LIVE_PREVIEW_LABEL_OR_DATE ${file}`);
 }
 const receipt = { state: 'PREVIEW_DEPLOYED', production_eligible: false, source_commit: values.sha,
-  artifact_digest: stamp.artifact_digest, date, latest_issue: stamp.latest_issue, verified_at: new Date().toISOString(), routes: targets, origin,
+  artifact_digest: stamp.artifact_digest, date, latest_issue: stamp.latest_issue,
+  ...(stamp.latest_issue_status !== undefined ? { latest_issue_status: stamp.latest_issue_status } : {}),
+  ...(stamp.latest_formal_issue !== undefined ? { latest_formal_issue: stamp.latest_formal_issue } : {}),
+  verified_at: new Date().toISOString(), routes: targets, origin,
   transport_fallbacks: transport.events };
 await mkdir('.stage4/operations', { recursive: true });
 await writeFile('.stage4/operations/live.json', JSON.stringify(receipt, null, 2)+'\n');

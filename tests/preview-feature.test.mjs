@@ -90,3 +90,19 @@ test('the new edition retains all 22 complete bilingual stories, unique images a
   for(const image of story.images){const escaped=image.url.replaceAll('&','&amp;');assert.equal([...html.matchAll(/<img\b[^>]*\bsrc="([^"]+)"/g)].filter(match=>match[1]===escaped).length,1,story.id);}
  }
 });
+
+test('preview pictures disclose their own rights next to the image without mislabelling public-domain images',async()=>{
+ const issue=index.issues.find(item=>item.date===today.date);
+ if(issue.status!=='preview')return;
+ assert.match(home,/data-living-rights/);
+ for(const story of today.stories){
+  const html=await readFile(path.join(out,'issues/2026-11-11/stories',story.id,'index.html'),'utf8');
+  const hero=html.match(/<figure class="photo image-frame reader-hero"[\s\S]*?<\/figure>/)?.[0];assert.ok(hero,story.id);
+  if(!story.images.length){assert.match(hero,/非纪实编辑配图/);assert.doesNotMatch(hero,/data-image-rights=/);continue;}
+  const image=story.images[0];
+  assert.ok(hero.includes(`data-image-rights="${image.rights}"`),story.id);
+  if(image.rights==='public_domain'){assert.match(hero,/公有领域图像/);assert.doesNotMatch(hero,/图片使用依据待核验/);assert.doesNotMatch(html,/本篇资料与图片使用依据仍在核验/);assert.match(html,/本篇资料仍在核验/);}
+  else {assert.match(hero,/图片使用依据待核验/);assert.match(hero,/Image-use rights under review/);}
+  assert.ok(hero.includes(image.origin.replaceAll('&','&amp;')),story.id);
+ }
+});

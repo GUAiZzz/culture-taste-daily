@@ -52,6 +52,7 @@
 .living-edition[data-variant="record"] .living-art[data-art-treatment="cover"] img{inset:0;width:100%;height:100%}
 .living-edition[data-variant="record"] .living-stage-rule{left:8%;right:8%;bottom:10%;opacity:.24}
 .living-current{position:relative;text-align:center;margin:0 auto;min-height:88px;max-width:40rem}
+.living-rights{margin:4px 0 0;color:var(--muted);font-size:10px;line-height:1.4}
 .living-current-meta{color:var(--muted);font-size:11px;letter-spacing:.05em;min-height:18px;font-variant-numeric:tabular-nums}
 .living-current h2{font-size:clamp(17px,1.5vw,21px);font-weight:550;line-height:1.5;margin:5px 0 0;text-wrap:balance}
 .living-current h2 a{display:inline-block;min-height:32px;padding:2px 8px}
