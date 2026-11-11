@@ -7,12 +7,13 @@ import {buildSite} from '../scripts/lib/build.mjs';
 import {loadPreviewReading} from '../core/rooms/preview-reading.mjs';
 
 const root=path.resolve(import.meta.dirname,'..');
-let temp,out,feature,index,home;
+let temp,out,feature,today,index,home;
 before(async()=>{
  temp=await mkdtemp(path.join(os.tmpdir(),'ct-preview-native-'));
  out=path.join(temp,'site');
  await buildSite({repoRoot:root,outDir:out,baseUrl:'https://guaizzz.github.io/culture-taste-daily/'});
  feature=JSON.parse(await readFile(path.join(root,'src/preview-features/2026-11-10.json'),'utf8'));
+ today=JSON.parse(await readFile(path.join(root,'src/preview-features/2026-11-11.json'),'utf8'));
  index=JSON.parse(await readFile(path.join(out,'content-index.json'),'utf8'));
  home=await readFile(path.join(out,'index.html'),'utf8');
 });
@@ -28,6 +29,12 @@ test('native navigation presents the latest readable edition without the prior b
  const sameDate=index.issues.find(issue=>issue.date===feature.date);
  assert.ok(sameDate,'the date remains in the index');
  if(sameDate.status==='preview')assert.equal(sameDate.stories,34);
+ const newDate=index.issues.find(issue=>issue.date===today.date);
+ assert.ok(newDate,'the new date remains in the index');assert.equal(new Set(today.stories.map(story=>story.id)).size,22);
+ if(newDate.status==='preview'){
+  assert.equal(newDate.stories,22);
+  if(latest.date===today.date)for(const story of today.stories)assert.ok(home.includes(`id="card-2026-11-11-${story.id}"`),story.id);
+ }
  assert.ok(index.issues.some(issue=>issue.date==='2026-11-03'));
 });
 
@@ -58,6 +65,28 @@ test('each preview story has native bilingual reading, a source and a visual fal
  }
  const provenance=JSON.parse(await readFile(path.join(out,'provenance.json'),'utf8'));
  assert.equal(provenance.issues.at(-1).date,index.issues.filter(issue=>issue.status!=='preview').at(-1).date);
- assert.equal(provenance.preview_features[0].status,'sources_and_image_rights_under_review');
- assert.equal(provenance.preview_articles,34);
+ const expected=[feature,today].filter(item=>index.issues.find(issue=>issue.date===item.date)?.status==='preview');
+ assert.deepEqual(provenance.preview_features.map(item=>[item.date,item.stories,item.status]),expected.map(item=>[item.date,item.stories.length,'sources_and_image_rights_under_review']));
+ assert.equal(provenance.preview_articles,expected.reduce((count,item)=>count+item.stories.length,0));
+});
+
+
+test('the new edition retains all 22 complete bilingual stories, unique images and source-linked fallbacks',async()=>{
+ const sameDate=index.issues.find(issue=>issue.date===today.date);
+ if(sameDate.status!=='preview'){
+  assert.equal(await loadPreviewReading({repoRoot:root,outDir:path.join(temp,'replaced-today'),formalDates:[today.date],featureDate:today.date,expectedCount:22}),null);
+  return;
+ }
+ const issue=await readFile(path.join(out,'issues/2026-11-11/index.html'),'utf8');
+ assert.equal((issue.match(/<article class="issue-story/g)||[]).length,22);
+ const images=today.stories.flatMap(story=>story.images.map(image=>image.url));
+ assert.equal(new Set(images).size,images.length,'different stories must not reuse the same image');
+ for(const story of today.stories){
+  const html=await readFile(path.join(out,'issues/2026-11-11/stories',story.id,'index.html'),'utf8');
+  assert.match(html,/data-reading-language="zh"/);assert.match(html,/data-reading-language="en"/);
+  assert.match(html,/data-english-kind="full"/);assert.match(html,/noindex,nofollow/);
+  assert.match(html,/editorial-fallback\.svg/);
+  assert.ok(story.sources.some(source=>html.includes(source.url.replaceAll('&','&amp;'))),story.id);
+  for(const image of story.images){const escaped=image.url.replaceAll('&','&amp;');assert.equal([...html.matchAll(/<img\b[^>]*\bsrc="([^"]+)"/g)].filter(match=>match[1]===escaped).length,1,story.id);}
+ }
 });

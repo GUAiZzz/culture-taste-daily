@@ -17,12 +17,12 @@ function fallback(title,index){
 
 // A reader-facing provisional feature is separate from validated daily issues.
 // It carries no formal research attestation, image-rights approval or lock.
-export async function loadPreviewReading({repoRoot,outDir,formalDates=[]}){
- const file=path.join(repoRoot,'src/preview-features/2026-11-10.json');
+export async function loadPreviewReading({repoRoot,outDir,formalDates=[],featureDate='2026-11-10',expectedCount=34}){
+ const file=path.join(repoRoot,'src/preview-features',`${featureDate}.json`);
  let raw;
  try{raw=await readFile(file,'utf8');}catch(error){if(error.code==='ENOENT')return null;throw error;}
  const feature=JSON.parse(raw);
- if(feature.schemaVersion!==1||feature.date!=='2026-11-10'||feature.status!=='preview'||!Array.isArray(feature.stories)||feature.stories.length!==34)throw Error('Invalid provisional feature identity');
+ if(feature.schemaVersion!==1||feature.date!==featureDate||feature.status!=='preview'||!Array.isArray(feature.stories)||feature.stories.length!==expectedCount)throw Error('Invalid provisional feature identity');
  // Once a formally admitted issue exists for this date, it takes precedence;
  // the separately retained feature input must not overwrite its routes/assets.
  if(formalDates.includes(feature.date))return null;
@@ -40,7 +40,7 @@ export async function loadPreviewReading({repoRoot,outDir,formalDates=[]}){
    if(!source.labelZh||!source.labelEn)throw Error(`Missing provisional source label: ${item.id}`);
    return {url:source.url,title:source.labelZh,publisher:'',labelEn:source.labelEn};
   });
-  for(const image of item.images){https(image.url);https(image.origin);if(!image.caption||!image.alt||!image.credit||image.rights!=='unknown')throw Error(`Invalid provisional image: ${item.id}`);}
+  for(const image of item.images){https(image.url);https(image.origin);if(!image.caption||!image.alt||!image.credit||!['unknown','public_domain'].includes(image.rights))throw Error(`Invalid provisional image: ${item.id}`);}
   const asset=`assets/${item.id}-editorial-fallback.svg`;
   await mkdir(path.join(outDir,'issues',feature.date,'assets'),{recursive:true});
   await writeFile(path.join(outDir,'issues',feature.date,asset),fallback(item.title,index),'utf8');

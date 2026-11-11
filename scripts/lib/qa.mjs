@@ -508,16 +508,18 @@ export async function runTechnicalQa({ repoRoot, distDir, issueId, evidenceDir, 
     // metadata. It participates only in technical image-fallback checks, not
     // in formal issue admission, source health or rights verification.
     const provisionalFeatures=[];
-    try {
-      const relative='src/preview-features/2026-11-10.json';
-      const source=path.join(repoRoot,relative);
-      const feature=await readJson(source);
-      const viewInputs=await readJson(path.join(distDir,'view-inputs.public.json'));
-      if(!staticResult.buildReport.issues.some(issue=>issue.issue_id===feature.date)){
-        if(viewInputs.reading_view_input_hashes?.[feature.date]?.[relative]!==await sha256File(source))throw new Error('PROVISIONAL_VIEW_INPUT_MISMATCH');
-        provisionalFeatures.push(feature);
-      }
-    } catch(error) { if(error.code!=='ENOENT')throw error; }
+    for(const date of ['2026-11-10','2026-11-11']) {
+      try {
+        const relative=`src/preview-features/${date}.json`;
+        const source=path.join(repoRoot,relative);
+        const feature=await readJson(source);
+        const viewInputs=await readJson(path.join(distDir,'view-inputs.public.json'));
+        if(!staticResult.buildReport.issues.some(issue=>issue.issue_id===feature.date)){
+          if(viewInputs.reading_view_input_hashes?.[feature.date]?.[relative]!==await sha256File(source))throw new Error('PROVISIONAL_VIEW_INPUT_MISMATCH');
+          provisionalFeatures.push(feature);
+        }
+      } catch(error) { if(error.code!=='ENOENT')throw error; }
+    }
     const previewOrigins = declaredPreviewMedia(manifests, radars, corrections, readingMedia, provisionalFeatures);
     const server = await startStaticServer(distDir);
     const browser = await launchChromium();

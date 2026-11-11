@@ -106,8 +106,9 @@ function normalizeHtml(html) {
 export async function buildReadingSystem({repoRoot,outDir,validatedIssues,publicationIssues}) {
   const model=await loadReadingModel({repoRoot,validatedIssues,publicationIssues});
   const {preserved,legacyStories,quotePool}=model;
-  const preview=await loadPreviewReading({repoRoot,outDir,formalDates:model.issues.map(issue=>issue.date)});
-  const issues=preview?[...model.issues,preview].sort((a,b)=>a.date.localeCompare(b.date)):model.issues;
+  const formalDates=model.issues.map(issue=>issue.date);
+  const previews=(await Promise.all([{featureDate:'2026-11-10',expectedCount:34},{featureDate:'2026-11-11',expectedCount:22}].map(spec=>loadPreviewReading({repoRoot,outDir,formalDates,...spec})))).filter(Boolean);
+  const issues=[...model.issues,...previews].sort((a,b)=>a.date.localeCompare(b.date));
   const latest=issues.at(-1),dates=issues.map(issue=>issue.date);
   const allStories=issues.slice().reverse().flatMap(issue=>issue.stories);
   if(!latest)return [];
@@ -164,12 +165,12 @@ export async function buildReadingSystem({repoRoot,outDir,validatedIssues,public
     }
     if(Object.keys(files).length)viewInputHashes[issue.date]=files;
   }
-  if(preview)viewInputHashes[preview.date]={'src/preview-features/2026-11-10.json':preview.hash};
+  for(const preview of previews)viewInputHashes[preview.date]={[`src/preview-features/${preview.date}.json`]:preview.hash};
   const sharedRuntimeAssetSha256=Object.fromEntries(assetNames.map(name=>[`rooms/${name}`,createHash('sha256').update(compiled.get(name)).digest('hex')]));
   const sharedSourceSha256={};
   for(const name of ['reading-content.mjs','reading-render.mjs','reading-locale.mjs','living-render.mjs','lower-home.mjs','preview-reading.mjs']){const relative=`core/rooms/${name}`;sharedSourceSha256[relative]=createHash('sha256').update(await readFile(path.join(repoRoot,relative))).digest('hex');}
   await writeFile(path.join(outDir,'view-inputs.public.json'),JSON.stringify({schemaVersion:1,reading_view_input_hashes:viewInputHashes,shared_runtime_asset_sha256:sharedRuntimeAssetSha256,shared_source_sha256:sharedSourceSha256},null,2));
   await writeFile(path.join(outDir,'content-index.json'),JSON.stringify({issues:issues.map(issue=>({date:issue.date,title:issue.title,url:issue.url,stories:issue.stories.length,...(issue.preview?{status:'preview'}:{})})),articles:archiveStories.map(({id,title,date,category,url,index,preview})=>({id,title,date,category,url,index,...(preview?{status:'preview'}:{})}))},null,2));
-  await writeFile(path.join(outDir,'provenance.json'),JSON.stringify({pages:routes.length,routes,issues:model.issues.map(issue=>({date:issue.date,stories:issue.stories.length,radar:issue.extras.length+issue.stories.length,sha256:createHash('sha256').update(issue.raw).digest('hex'),locked:issue.locked})),preview_features:preview?[{date:preview.date,stories:preview.stories.length,sha256:preview.hash,status:'sources_and_image_rights_under_review'}]:[],articles:model.allStories.length,preview_articles:preview?.stories.length||0,extras:model.issues.reduce((sum,issue)=>sum+issue.extras.length,0),source_modified:false,original_photos:'External source-linked Preview images; provenance and reproduction rights require review',renderer_version:'living-v2.1',content_compatibility:'rooms-v2',inline_media:issues.flatMap(issue=>issue.stories.filter(story=>story.inlineMedia.length).map(story=>({issue:issue.date,story:story.id,images:story.inlineMedia.length,...(issue.preview?{status:'preview'}:{})})))},null,2));
+  await writeFile(path.join(outDir,'provenance.json'),JSON.stringify({pages:routes.length,routes,issues:model.issues.map(issue=>({date:issue.date,stories:issue.stories.length,radar:issue.extras.length+issue.stories.length,sha256:createHash('sha256').update(issue.raw).digest('hex'),locked:issue.locked})),preview_features:previews.map(preview=>({date:preview.date,stories:preview.stories.length,sha256:preview.hash,status:'sources_and_image_rights_under_review'})),articles:model.allStories.length,preview_articles:previews.reduce((count,preview)=>count+preview.stories.length,0),extras:model.issues.reduce((sum,issue)=>sum+issue.extras.length,0),source_modified:false,original_photos:'External source-linked Preview images; provenance and reproduction rights require review',renderer_version:'living-v2.1',content_compatibility:'rooms-v2',inline_media:issues.flatMap(issue=>issue.stories.filter(story=>story.inlineMedia.length).map(story=>({issue:issue.date,story:story.id,images:story.inlineMedia.length,...(issue.preview?{status:'preview'}:{})})))},null,2));
   return dates;
 }

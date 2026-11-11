@@ -25,6 +25,16 @@ test('bookmarks preserve order, all exact story destinations and complete titles
   assert.match(html, /3 stories \/ 2 fields/);
 });
 
+test('bookmarks do not repeat story photographs and retain ordered, accessible links without JavaScript', () => {
+  const html = renderBookmarks(fixture);
+  assert.doesNotMatch(html, /<img\b|data-home-photo|official\.example\/[^\"]+\.jpg/);
+  for (const item of fixture.stories) {
+    const sequence = String(item.index + 1).padStart(2, '0');
+    assert.ok(html.includes(`<span class="bookmark-number" aria-hidden="true">${sequence}</span>`));
+    assert.ok(html.includes(`aria-label="${sequence} · ${item.title.replaceAll('<', '&lt;').replaceAll('>', '&gt;')}"`));
+  }
+});
+
 test('approved short labels require the exact locked title, leaving a correction safe', () => {
   const original = story('undercover-valentin-workwear', 1, 'UNDERCOVER为马斯特里赫特家具工坊设计工作服');
   assert.equal(bookmarkLabel(original).meta, 'UNDERCOVER');

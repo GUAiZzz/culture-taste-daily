@@ -79,5 +79,18 @@
       "sourceYear": 1972,
       "translationNote": "中文为本刊译文"
     }
-  ]
+  ],
+  "dateOverrides": {
+    "2026-11-11": {
+      "id": "agnes-martin-skowhegan-1987",
+      "text": "Beauty is the mystery of life.",
+      "translation": "美，是生命的谜。",
+      "author": "Agnes Martin",
+      "authorZh": "阿格妮丝·马丁",
+      "sourceTitle": "The Skowhegan Lecture（1987，Guggenheim 讲座文字记录）",
+      "sourceUrl": "https://www.guggenheim.org/wp-content/uploads/2016/11/guggenheim-agne-martin-speaks-about-emotion-and-art-audio-transcript.pdf",
+      "sourceYear": 1987,
+      "translationNote": "中文为本刊译文"
+    }
+  }
 }
