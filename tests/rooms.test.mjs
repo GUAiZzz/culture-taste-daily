@@ -108,3 +108,19 @@ test('delayed navigation module cannot announce reading readiness before edition
   assert.ok(Math.abs(afterInput.y-userY)<=1,JSON.stringify({userY,afterInput}));assert.equal(afterInput.focusedStandalone,false);assert.deepEqual(errors,[]);
  }finally{gate?.release();pending?.release();await c.close();}
 });
+
+test('home bookmarks avoid duplicated story images while preserving responsive navigation and no-JS links',async()=>{
+ const c=await context(),p=await c.newPage();
+ for(const [width,height] of [[320,568],[390,844],[1440,900]]){
+  await p.setViewportSize({width,height});
+  for(const style of ['field','coral','analog']){
+   await p.goto(base()+'/?style='+style+'&theme=light');await ready(p);
+   const bookmarks=p.locator('.bookmark-item');assert.equal(await bookmarks.count(),index.issues.at(-1).stories);
+   assert.equal(await bookmarks.locator('img').count(),0);assert.equal(await bookmarks.locator('.bookmark-number[aria-hidden="true"]').count(),await bookmarks.count());
+   assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth-innerWidth),0);
+   const first=await p.locator('[data-living-number]').innerText();await p.locator('[data-living-next]').click();assert.notEqual(await p.locator('[data-living-number]').innerText(),first);
+  }
+ }
+ const link=p.locator('.bookmark-item a.ct-story-entry').first(),id=await link.getAttribute('data-story-id');await link.click();await ready(p);assert.equal(new URL(p.url()).hash,'#story-'+id);await c.close();
+ const n=await context({javaScriptEnabled:false}),q=await n.newPage();await q.goto(base()+'/');assert.equal(await q.locator('.bookmark-item img').count(),0);assert.ok(await q.locator('.bookmark-item a.ct-story-entry:visible').count());assert.ok(await q.locator('.bookmark-number[aria-hidden="true"]').count());await n.close();
+});
