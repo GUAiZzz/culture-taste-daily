@@ -12,7 +12,7 @@
     if(!/^\d{4}-\d{2}-\d{2}$/.test(key))throw new RangeError('Expected YYYY-MM-DD');
     const [year,month,day]=key.split('-').map(Number),stamp=Date.UTC(year,month-1,day);
     if(new Date(stamp).toISOString().slice(0,10)!==key)throw new RangeError('Invalid date');
-    return quotes[((stamp/dayMs-baseDay)%quotes.length+quotes.length)%quotes.length];
+    return config.dateOverrides?.[key] ?? quotes[((stamp/dayMs-baseDay)%quotes.length+quotes.length)%quotes.length];
   }
   function renderPanel(panel, quote, key) {
     const english=document.documentElement.dataset.locale==='en';
