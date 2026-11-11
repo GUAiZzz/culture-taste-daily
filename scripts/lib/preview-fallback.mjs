@@ -62,7 +62,7 @@ export function declaredPreviewMedia(manifests = [], radars = [], corrections = 
     for(const story of feature.stories){
       if(!/^[a-z0-9-]+$/.test(story.id||'')||!Array.isArray(story.images))throw Error('Invalid provisional story declaration');
       for(const image of story.images){
-        if(image.rights!=='unknown'||!image.alt?.trim()||!image.caption?.trim()||!image.credit?.trim())throw Error('Incomplete provisional image declaration');
+        if(!['unknown','public_domain'].includes(image.rights)||!image.alt?.trim()||!image.caption?.trim()||!image.credit?.trim())throw Error('Incomplete provisional image declaration');
         add(image.url,image.origin);
         if(!origins.navigationTargets.has(image.url))origins.navigationTargets.set(image.url,new Set());
         origins.navigationTargets.get(image.url).add(`/issues/${feature.date}/#story-${story.id}`);

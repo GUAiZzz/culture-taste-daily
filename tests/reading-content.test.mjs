@@ -148,8 +148,9 @@ test('served pages include complete source content, stable issue boundaries and 
   for (const date of ['2026-08-20', '2026-08-21', '2026-08-22']) publicationIssues.push({ ...await json(`src/historical/${date}/meta.json`), preservation_kind: 'historical_original' });
   await buildReadingSystem({ repoRoot, outDir, validatedIssues, publicationIssues });
   const home = await readFile(path.join(outDir, 'index.html'), 'utf8');
-  const feature=await json('src/preview-features/2026-11-10.json');
-  const homeIssue=feature.date>model.latest.date?{date:feature.date,url:`/issues/${feature.date}/`,stories:feature.stories.map(story=>({...story,english:{title:story.titleEn}}))}:model.latest;
+  const features=await Promise.all(['2026-11-10','2026-11-11'].map(date=>json(`src/preview-features/${date}.json`)));
+  const feature=features.filter(item=>!model.issues.some(issue=>issue.date===item.date)).sort((a,b)=>a.date.localeCompare(b.date)).at(-1);
+  const homeIssue=feature&&feature.date>model.latest.date?{date:feature.date,url:`/issues/${feature.date}/`,stories:feature.stories.map(story=>({...story,english:{title:story.titleEn}}))}:model.latest;
   assert.equal((home.match(/class="[^"]*\bct-story-entry\s+story-open[^"]*"/g) || []).length, homeIssue.stories.length);
   assert.ok(home.includes(`data-living-issue-id="${homeIssue.date}"`), 'home must select the latest readable issue');
   const homeDestinations = new Set([...home.matchAll(/\bhref="([^"]+)"/g)]

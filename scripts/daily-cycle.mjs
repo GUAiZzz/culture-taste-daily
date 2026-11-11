@@ -8,6 +8,7 @@ import { shanghaiDate } from './lib/preview-policy.mjs';
 import { initEditorialWorkspace, editorialWorkspaceStatus, exportEditorialResearch } from './lib/editorial-workspace.mjs';
 import { sourcePlan } from './lib/source-library.mjs';
 import { diagnoseOnlineFailure } from './lib/online-diagnostics.mjs';
+import { liveReconciliationAction } from './lib/preview-issue-metadata.mjs';
 
 const { values } = parseArgs({ options: {
   'workspace-root': { type: 'string' }, online: { type: 'boolean' }, date: { type: 'string' },
@@ -43,9 +44,10 @@ if (packagePresent && progress.issue_source_ready_for_package === true && progre
 }
 const blocked = preflight.blockers.length || sourceQueue.blockers.length;
 const finalOnly = preflight.research_phase === 'FINAL_RECONCILIATION_ONLY';
+const liveAction = liveReconciliationAction(online?.state);
 const next = finalOnly ? { action: 'RECONCILE_EXISTING_RELEASE_AND_REPORT_RESULT', research_allowed: false }
   : blocked ? { action: 'RESOLVE_PREFLIGHT_FAILURE', blockers: [...preflight.blockers, ...sourceQueue.blockers] }
-    : online?.state === 'LIVE_DATE_PRESENT_REQUIRES_HASH_VERIFICATION' ? { action: 'VERIFY_EXISTING_LIVE_HASHES' }
+    : liveAction ? liveAction
       : online?.state === 'PREVIEW_MERGED_UNVERIFIED' ? { action: 'RESUME_MATCHING_RELEASE_RECEIPT', regenerate_candidate: false }
         : online?.state === 'DUPLICATE_PR' ? { action: 'RESOLVE_DUPLICATE_PR', publication_eligible: false }
       : packageCheck?.status === 'PASS' ? { action: 'RUN_VERIFY_HEALTH_AND_EXACT_HEAD_CI_THEN_PREVIEW_RELEASE' }

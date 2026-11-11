@@ -42,7 +42,21 @@ test('historical route verification preserves the real homepage latest issue', a
     const result=run(['--issue-date',oldDate]);assert.equal(result.status,0,result.stderr);
     const receipt=JSON.parse(await readFile(path.join(dir,'.stage4/operations/live.json'),'utf8'));
     assert.equal(receipt.date,oldDate);assert.equal(receipt.latest_issue,latest);assert.equal(receipt.routes.length,5);
+    assert.equal(Object.hasOwn(receipt,'latest_issue_status'),false,'legacy stamp remains compatible');
+    assert.equal(Object.hasOwn(receipt,'latest_formal_issue'),false,'legacy stamp remains compatible');
     assert.notEqual(run(['--date',oldDate]).status,0,'ordinary date must still require latest');
+  });
+});
+test('live receipts preserve the distinction between provisional and formal issues', async () => {
+  await fixture(async ({dir,contents,json,run}) => {
+    const stamp=JSON.parse(contents['preview-release.json']);
+    stamp.latest_issue_status='preview';stamp.latest_formal_issue='2026-09-21';
+    contents['preview-release.json']=JSON.stringify(stamp);await writeFile(json,JSON.stringify(contents));
+    const result=run(['--issue-date',oldDate]);assert.equal(result.status,0,result.stderr);
+    const receipt=JSON.parse(await readFile(path.join(dir,'.stage4/operations/live.json'),'utf8'));
+    assert.equal(receipt.latest_issue_status,'preview');assert.equal(receipt.latest_formal_issue,'2026-09-21');
+    stamp.latest_issue_status='unknown';contents['preview-release.json']=JSON.stringify(stamp);await writeFile(json,JSON.stringify(contents));
+    assert.match(run(['--issue-date',oldDate]).stderr,/LIVE_ISSUE_STATUS_INVALID/);
   });
 });
 test('every older story hash and the source identity remain mandatory', async () => {

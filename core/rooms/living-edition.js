@@ -28,7 +28,7 @@ function initializeEdition(edition){
  const previous=edition.querySelector('[data-living-prev]'),next=edition.querySelector('[data-living-next]');
  const title=edition.querySelector('[data-living-current]'),category=edition.querySelector('[data-living-category]');
  const number=edition.querySelector('[data-living-number]'),position=edition.querySelector('[data-living-position]');
- const announcement=edition.querySelector('[data-living-announcement]');
+ const announcement=edition.querySelector('[data-living-announcement]'),rights=edition.querySelector('[data-living-rights]');
  const ui=window.CTUI;
  const reduced=matchMedia('(prefers-reduced-motion:reduce)');
  const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
@@ -70,6 +70,7 @@ function initializeEdition(edition){
   const story=config.stories[active],language=locale(),name=language==='en'?story.titleEn:story.titleZh;
   title.textContent=name;title.href=resolvedHrefs[active];title.dataset.storyId=story.id;
   category.textContent=categoryNames[story.category]?.[language==='en'?1:0]||story.category;
+  if(rights){const labels={unknown:['图片使用依据待核验','Image-use rights under review'],public_domain:['公有领域图像','Public-domain image'],placeholder:['非纪实编辑配图','Non-documentary illustration']};rights.textContent=labels[story.imageRights]?.[language==='en'?1:0]||'';}
   number.textContent=`${pad(active+1)} / ${pad(n)}`;
   position.replaceChildren(document.createTextNode(pad(active+1)),Object.assign(document.createElement('span'),{textContent:'—'}),document.createTextNode(pad(n)));
   updateControls();

@@ -3,6 +3,7 @@ import { parseArgs } from 'node:util';
 import { readJson } from './lib/files.mjs';
 import { assertRepository, gh } from './lib/github-scope.mjs';
 import { REPOSITORY, PREVIEW_BASE, shanghaiDate } from './lib/preview-policy.mjs';
+import { liveIssueDisposition, reconcileLiveState } from './lib/preview-issue-metadata.mjs';
 const { values } = parseArgs({ options: { online: { type: 'boolean' }, date: { type: 'string' } } });
 const state = assertRepository();
 const date = values.date ?? shanghaiDate();
@@ -32,8 +33,14 @@ if (values.online) {
     const response = await fetch('https://guaizzz.github.io/culture-taste-daily/preview-release.json', { signal: AbortSignal.timeout(15000), cache: 'no-store' });
     if (response.ok) {
       const live = await response.json();
-      state.live = { source_commit: live.source_commit, latest_issue: live.latest_issue };
-      if (live.repository === REPOSITORY && live.latest_issue === date) state.state = 'LIVE_DATE_PRESENT_REQUIRES_HASH_VERIFICATION';
+      const disposition = liveIssueDisposition(live, REPOSITORY, date);
+      state.live = { source_commit: live.source_commit, latest_issue: live.latest_issue,
+        latest_issue_status: live.latest_issue_status ?? 'legacy_unspecified',
+        latest_formal_issue: live.latest_formal_issue ?? null, today_disposition: disposition };
+      // Preserve MISSING_DAY / PACKAGE_PRESENT / PR state when only a
+      // provisional feature is visible: formal editorial work may continue.
+      state.state = reconcileLiveState(state.state, disposition);
+      if (disposition === 'unknown') state.live_status = 'UNKNOWN_LATEST_ISSUE_STATUS';
     } else state.live_status = `HTTP_${response.status}`;
   } catch { state.live_status = 'UNAVAILABLE'; }
 }

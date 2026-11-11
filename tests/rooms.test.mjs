@@ -108,3 +108,38 @@ test('delayed navigation module cannot announce reading readiness before edition
   assert.ok(Math.abs(afterInput.y-userY)<=1,JSON.stringify({userY,afterInput}));assert.equal(afterInput.focusedStandalone,false);assert.deepEqual(errors,[]);
  }finally{gate?.release();pending?.release();await c.close();}
 });
+
+test('home bookmarks avoid duplicated story images while preserving responsive navigation and no-JS links',async()=>{
+ const c=await context(),p=await c.newPage();
+ for(const [width,height] of [[320,568],[390,844],[1440,900]]){
+  await p.setViewportSize({width,height});
+  for(const style of ['field','coral','analog']){
+   await p.goto(base()+'/?style='+style+'&theme=light');await ready(p);
+   const bookmarks=p.locator('.bookmark-item');assert.equal(await bookmarks.count(),index.issues.at(-1).stories);
+   assert.equal(await bookmarks.locator('img').count(),0);assert.equal(await bookmarks.locator('.bookmark-number[aria-hidden="true"]').count(),await bookmarks.count());
+   assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth-innerWidth),0);
+   const first=await p.locator('[data-living-number]').innerText();await p.locator('[data-living-next]').click();assert.notEqual(await p.locator('[data-living-number]').innerText(),first);
+  }
+ }
+ const link=p.locator('.bookmark-item a.ct-story-entry').first(),id=await link.getAttribute('data-story-id');await link.click();await ready(p);assert.equal(new URL(p.url()).hash,'#story-'+id);await c.close();
+ const n=await context({javaScriptEnabled:false}),q=await n.newPage();await q.goto(base()+'/');assert.equal(await q.locator('.bookmark-item img').count(),0);assert.ok(await q.locator('.bookmark-item a.ct-story-entry:visible').count());assert.ok(await q.locator('.bookmark-number[aria-hidden="true"]').count());await n.close();
+});
+
+test('preview carousel updates visible image rights without misleading the public-domain entry',async()=>{
+ const latest=index.issues.at(-1);if(latest.status!=='preview'||latest.date!=='2026-11-11')return;
+ const c=await context(),p=await c.newPage();
+ try{
+  await p.goto(base()+'/');await ready(p);
+  const rights=p.locator('[data-living-rights]');assert.equal(await rights.innerText(),'非纪实编辑配图');
+  for(let i=1;i<=12;i++){
+   await p.locator('[data-living-next]').click();
+   await p.waitForFunction(expected=>document.querySelector('[data-living-number]')?.textContent.trim().startsWith(expected),String(i+1).padStart(2,'0'));
+   if(i===2)assert.equal(await rights.innerText(),'图片使用依据待核验');
+  }
+  assert.equal(await rights.innerText(),'公有领域图像');
+  await p.locator('[data-open-settings]').click();await p.locator('#reading-settings [data-language="en"]').click();
+  assert.equal(await rights.innerText(),'Public-domain image');
+ }finally{await c.close();}
+ const nojs=await context({javaScriptEnabled:false}),q=await nojs.newPage();
+ try{await q.goto(base()+'/');assert.ok(await q.locator('[data-living-rights]').isVisible());assert.match(await q.locator('[data-living-rights]').innerText(),/非纪实编辑配图/);}finally{await nojs.close();}
+});
