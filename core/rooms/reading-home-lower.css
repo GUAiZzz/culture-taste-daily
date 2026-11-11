@@ -11,10 +11,10 @@
 .bookmark-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px;border-bottom:1px solid var(--home-line);padding:10px 0}
 .home-bookmarks .bookmark-item.story-card{display:block;grid-column:auto;min-width:0;position:relative;margin:0;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent}
 .home-bookmarks .bookmark{display:grid;grid-template-columns:48px minmax(0,1fr);column-gap:8px;align-items:start;min-width:0;min-height:48px;padding:0;border:0;box-shadow:none;border-radius:0;outline-offset:3px;text-decoration:none;color:inherit}
+.bookmark-number{display:flex;align-items:center;justify-content:center;width:48px;height:48px;border:1px solid var(--home-line);border-radius:6px;color:var(--muted);font:400 18px/1 Georgia,serif;font-variant-numeric:tabular-nums;align-self:start}
 .bookmark-copy{display:block;min-width:0}
 .bookmark-meta{display:block;color:var(--muted);font-size:10.5px;line-height:1.3;margin:0 0 3px}
-.bookmark-meta b{font:400 10.5px/1.3 Georgia,serif;font-variant-numeric:tabular-nums}
-.bookmark-meta small{font-size:10.5px;margin-left:6px;min-width:0;white-space:normal;overflow-wrap:anywhere}
+.bookmark-meta small{font-size:10.5px;min-width:0;white-space:normal;overflow-wrap:anywhere}
 .bookmark-title{display:block;font-size:14px;font-weight:550;line-height:1.45;letter-spacing:-.01em;text-wrap:balance;word-break:normal;line-break:strict;overflow-wrap:anywhere}
 .bookmark-semantic-part{white-space:nowrap}
 .bookmark:hover .bookmark-title{text-decoration:underline;text-underline-offset:3px}
@@ -96,7 +96,7 @@
  .page-home .home-bookmarks{padding-inline:16px}
  .bookmark-row{column-gap:18px}
  .home-bookmarks .bookmark{grid-template-columns:44px minmax(0,1fr);column-gap:6px;min-height:44px}
- .bookmark-photo{width:44px;height:44px}
+ .bookmark-number{width:44px;height:44px}
  .bookmark-heading h2{font-size:20px}
  .bookmark-heading>span{font-size:10px}
  .page-home .home-further-signals,.page-home .home-read-back,.page-home .daily-quote.home-quiet-quote{width:calc(100% - 32px)}
@@ -104,4 +104,4 @@
  .signal-entry .signal-photo,.signal-entry .signal-photo[data-image=loaded],.home-history-cover{width:76px;height:57px}
 }
 @media(prefers-reduced-motion:reduce){.home-full-directory .directory-chevron{transition:none}}
-@media(forced-colors:active){.home-bookmarks,.home-further-signals,.home-read-back,.home-quiet-quote{--home-line:CanvasText!important}.home-photo,.signal-entry .signal-photo{background:Canvas!important;border:1px solid CanvasText}.home-photo-fallback{color:CanvasText}}
+@media(forced-colors:active){.home-bookmarks,.home-further-signals,.home-read-back,.home-quiet-quote{--home-line:CanvasText!important}.home-photo,.signal-entry .signal-photo,.bookmark-number{background:Canvas!important;border:1px solid CanvasText;color:CanvasText}.home-photo-fallback{color:CanvasText}}

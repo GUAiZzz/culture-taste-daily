@@ -32,14 +32,13 @@ function photo(url, { index = '', treatment = 'photograph', kind = 'bookmark', a
   return `<span class="home-photo ${kind === 'signal' ? 'signal-photo' : 'bookmark-photo'}" data-home-photo data-visual-frame ${kind === 'bookmark' ? 'data-preview-navigation="edition-story"' : ''} data-image="${validUrl ? 'pending' : 'unavailable'}" data-treatment="${esc(treatment)}"><span class="home-photo-fallback photo-fallback"><b>${esc(index)}</b><small>${pair(validUrl ? '原图待载' : '查看来源', validUrl ? 'Image pending' : 'Source ↗')}</small></span>${validUrl ? `<img class="home-thumbnail" data-external-preview="true" src="${esc(url)}" ${attrs('alt', alt, altEn)} loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ''}</span>`;
 }
 
-export function renderBookmarks(issue, experienceStories = []) {
+export function renderBookmarks(issue) {
   const stories = issue.stories || [];
   const bookmarks = stories.map(story => {
     const label = bookmarkLabel(story), names = category[story.category] || ['', ''];
-    const art = experienceStories.find(item => item.id === story.id);
     const meta = label.meta ? esc(label.meta) : pair(...names);
     const title = `<span data-locale-variant="zh">${label.zh}</span><span data-locale-variant="en" lang="en">${label.en}</span>`;
-    return `<article class="story story-card bookmark-item" id="card-${esc(issue.date)}-${esc(story.id)}" data-story-category="${esc(story.category)}" data-category="${esc(story.category)}"><a class="bookmark ct-story-entry story-open" href="${esc(issue.url + '#story-' + story.id)}" data-internal data-living-entry="story" data-story-id="${esc(story.id)}" ${attrs('aria-label', `${number(story.index + 1)} · ${story.title}`, `${number(story.index + 1)} · ${story.english?.title || story.title}`)} ${attrs('title', story.title, story.english?.title || story.title)}>${photo(story.media?.external_image_url, { index: number(story.index + 1), treatment: art?.treatment || 'photograph', alt: story.locale?.altZh || story.media?.alt || story.title, altEn: story.locale?.altEn || story.english?.title || story.media?.alt || story.title })}<span class="bookmark-copy"><span class="bookmark-meta"><b>${number(story.index + 1)}</b><wbr><small>${meta}</small></span><strong class="bookmark-title">${title}</strong></span></a></article>`;
+    return `<article class="story story-card bookmark-item" id="card-${esc(issue.date)}-${esc(story.id)}" data-story-category="${esc(story.category)}" data-category="${esc(story.category)}"><a class="bookmark ct-story-entry story-open" href="${esc(issue.url + '#story-' + story.id)}" data-internal data-living-entry="story" data-story-id="${esc(story.id)}" ${attrs('aria-label', `${number(story.index + 1)} · ${story.title}`, `${number(story.index + 1)} · ${story.english?.title || story.title}`)} ${attrs('title', story.title, story.english?.title || story.title)}><span class="bookmark-number" aria-hidden="true">${number(story.index + 1)}</span><span class="bookmark-copy"><span class="bookmark-meta"><small>${meta}</small></span><strong class="bookmark-title">${title}</strong></span></a></article>`;
   });
   const rows = [];
   for (let i = 0; i < bookmarks.length; i += 2) rows.push(`<div class="bookmark-row" data-story-group>${bookmarks.slice(i, i + 2).join('')}</div>`);
