@@ -73,8 +73,13 @@ function publicHttps(value, name) {
 
 export function validateQuotePool(pool) {
   if (pool?.version !== 1 || pool.timezone !== 'Asia/Shanghai' || !Array.isArray(pool.quotes) || !pool.quotes.length) throw Error('Invalid public quotation pool');
+  const overrides = pool.dateOverrides ?? {};
+  if (!overrides || Array.isArray(overrides) || typeof overrides !== 'object') throw Error('Invalid quotation date overrides');
+  for (const date of Object.keys(overrides)) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || Number.isNaN(Date.parse(`${date}T00:00:00Z`)) || new Date(`${date}T00:00:00Z`).toISOString().slice(0, 10) !== date) throw Error('Invalid quotation override date');
+  }
   const ids = new Set();
-  for (const quote of pool.quotes) {
+  for (const quote of [...pool.quotes, ...Object.values(overrides)]) {
     for (const key of ['id', 'text', 'translation', 'author', 'authorZh', 'sourceTitle', 'sourceUrl']) if (typeof quote[key] !== 'string' || !quote[key].trim()) throw Error(`Missing quote ${key}`);
     if (ids.has(quote.id) || !/^[a-z0-9-]+$/.test(quote.id)) throw Error('Duplicate or invalid quote id');
     ids.add(quote.id);
@@ -89,7 +94,7 @@ export function selectDailyQuote(pool, date) {
   validateQuotePool(pool);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || new Date(`${date}T00:00:00Z`).toISOString().slice(0, 10) !== date) throw Error('Invalid quotation date');
   const day = Math.round((Date.parse(`${date}T00:00:00Z`) - Date.parse('2026-10-28T00:00:00Z')) / 86400000);
-  return pool.quotes[((day % pool.quotes.length) + pool.quotes.length) % pool.quotes.length];
+  return pool.dateOverrides?.[date] ?? pool.quotes[((day % pool.quotes.length) + pool.quotes.length) % pool.quotes.length];
 }
 
 export function validateReadingMedia(rows, story) {
