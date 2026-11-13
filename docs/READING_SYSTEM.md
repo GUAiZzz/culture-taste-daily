@@ -65,6 +65,8 @@ The current verified pool contains seven base quotations. The homepage advances 
 
 From 2026-10-28, the first ordinary current-day release requires **at least ten** complete formal articles. Eleven or twelve are valid; ten is a floor, not a ceiling. Later additions may contain one or more new qualified articles without assembling another ten-article batch. Validate the resulting cumulative package: every selected article, including the eleventh or twelfth, must have its complete body, bounded English, at least ten distinct substantive actually-read sources, official-media evidence and all other applicable quality checks. Ten complete articles do not excuse an incomplete eleventh.
 
+The daily radar is a bounded selection, not the complete issue index. When an issue contains stories outside the radar, declare each such story's category in `reading-locale.public.json` under `stories.<story-id>.category`. The value must be one of the four approved categories, and it must agree with the radar if both specify one. This keeps the radar within its existing policy limit without dropping articles from the reader or archive.
+
 This does not change the explicitly authorized historical supplements: each retains exactly ten formal articles and ten qualifying sources per article. Published baseline fingerprints, historical originals, privacy, rights and source requirements stay protected. The existing five checkpoints, 15:00 Production deadline, 18:00 reconciliation boundary, Preview authority and Production-disabled status are unchanged by A3; schedule restructuring is separate work.
 
 ## Implemented scope and pending operations
