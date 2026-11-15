@@ -1,0 +1,1166 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-11-15",
+  "publication_date": "2026-11-15",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-11-15T16:34:11.554+08:00",
+  "research_locked_at": "2026-11-15T16:34:11.554+08:00",
+  "content_locked_at": "2026-11-15T16:34:11.554+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "908086ae2f114337c3d5bd81ca9abe2f44f3424af875f32139687736b018e351",
+    "locked_at": "2026-11-15T16:34:11.554+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "908086ae2f114337c3d5bd81ca9abe2f44f3424af875f32139687736b018e351",
+    "art_direction_sha256": "c3e5f9d01f2d76500f4cfd106970b5317ca36f4974cd3ee7860aea87c784b025",
+    "issue_style_sha256": "9b7cafea135827e5e6a0274c846a11206b5624b79d19844633693be60817c9ca"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-11-15T16:24:03+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "沿着衣服、声音、物件和城市，观察材料、制作与观看条件如何改变作品的具体关系。",
+  "art_direction": {
+    "dominant_mood": "深酒红、暖纸与黄铜色为材料、制作和阅读留下缓慢的观察距离。",
+    "background_logic": "沿用已批准的共享阅读系统与Living Edition B；不改每日UI。",
+    "palette_logic": "本期原创封面与结尾使用酒红、暖纸和黄铜；各文章的材质细节来自真实官方图。",
+    "type_scale_logic": "沿用共享中英文字级、字号和行高，不在日期样式里覆盖控件。",
+    "image_behavior": "保留官方商品、作品、宣传与历史图的具体身份，未知许可只作外链Preview；正文插图与相关段落对应。",
+    "page_density_and_tempo": "十篇交错安排物件、服装、音乐与城市，避免同类连续堆叠。",
+    "core_visual_action": "从熟悉物件的材料变化进入，在图像与正文间观察制造和观看的关系。",
+    "cover_composition": "原创酒红底上的纸色折面与黄铜色切线，保留制作痕迹的抽象关系；非纪实编辑封面。",
+    "desktop_interaction_mechanic": "继承共享整期、单篇和首页浏览及返回位置。",
+    "behance_viewing_arc": "具体制造进入声音与照片，再回到房间和光线的观看条件；不引入新案例模板。",
+    "mobile_translation": "继承自然滚动、完整双语正文、自然比例图片与44px控件。",
+    "mobbin_usability_constraint": "同一阅读结构覆盖键盘、无脚本、减弱动态及全部九种风格外观组合。",
+    "quiet_ending": "让正文退入深酒红与暖纸，语录仍由已核验共享池按上海日期轮换。",
+    "closing_quotation": {
+      "id": "ct-en-008",
+      "language": "en",
+      "text": "An entrance is already an editorial decision.",
+      "credit": "Culture & Taste Editorial"
+    },
+    "closing_palette": {
+      "background": "#3F2430",
+      "foreground": "#F7F0E4",
+      "accent": "#E9B872",
+      "rationale": "深酒红与暖纸提供长文对比，黄铜用于强调，三色不同于最近七期完整组合。"
+    }
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": [
+      "2026-11-03",
+      "2026-11-02",
+      "2026-10-28",
+      "2026-09-22",
+      "2026-09-21",
+      "2026-09-20",
+      "2026-09-17"
+    ],
+    "repeated_mechanisms": [
+      "owner-approved shared Reading System and Living Edition B",
+      "linked official media and clearly labelled non-documentary fallbacks"
+    ],
+    "exception_reason": "复用已批准界面是A3要求；本期变化在十篇选题、具体材料、图像身份、编排与原创折面封面，不伪造新的UI参考研究。"
+  },
+  "rights_summary": {
+    "required_assets": 10,
+    "unknown_required_assets": 10,
+    "status": "blocked"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": null
+  },
+  "evidence_refs": {
+    "technical": [],
+    "editorial_visual": [],
+    "gate": []
+  },
+  "qa": {
+    "html_parse": "unavailable",
+    "assets": "unavailable",
+    "internal_links": "unavailable",
+    "no_js_reading": "unavailable",
+    "desktop_render": "unavailable",
+    "mobile_render": "unavailable",
+    "reduced_motion": "unavailable"
+  },
+  "limitations": [
+    "Non-production Preview only. External official images retain linked origins and non-documentary fallbacks; reproduction rights remain unknown and no external image is packaged.",
+    "Research was completed after the Production window; actual timestamps are retained and Production remains blocked.",
+    "Public source metadata does not certify private reading, independent review or deployment. Those are checked separately."
+  ],
+  "stories": [
+    {
+      "id": "molteni-materialized-ideas-matter",
+      "level": "cover",
+      "title": "家具回到制作现场，Molteni让熟悉的形式重新长出问题",
+      "english": {
+        "title": "Molteni Returns Familiar Furniture to the Question of Making",
+        "deck": "Familiar chairs, tables and a kitchen counter return to questions of material and making.",
+        "abstract": "Familiar chairs, tables and a kitchen counter return to questions of material and making."
+      },
+      "sources": [
+        {
+          "title": "Exhibition: Materialized",
+          "publisher": "Molteni Museum",
+          "url": "https://www.moltenigroup.com/museum/en/exhibition",
+          "published_date": "2026-11-12",
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Porta Volta special edition",
+          "publisher": "Molteni Museum",
+          "url": "https://www.moltenigroup.com/museum/en/product/porta-volta-special-edition-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Cinnamon special edition",
+          "publisher": "Molteni Museum",
+          "url": "https://www.moltenigroup.com/museum/en/product/cinnamon-special-edition-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Less special edition",
+          "publisher": "Molteni Museum",
+          "url": "https://www.moltenigroup.com/museum/en/product/less-special-edition-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Elémentaire special edition",
+          "publisher": "Molteni Museum",
+          "url": "https://www.moltenigroup.com/museum/en/product/elementaire-special-edition-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Banco special edition",
+          "publisher": "Molteni Museum",
+          "url": "https://www.moltenigroup.com/museum/en/product/banco-special-edition-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Diamond, 2004",
+          "publisher": "Patricia Urquiola",
+          "url": "https://patriciaurquiola.com/product/diamond",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "5 Minutes With Ron Gilad",
+          "publisher": "IndesignLive",
+          "url": "https://www.indesignlive.com/articles/5-minutes-ron-gilad",
+          "published_date": "2018-05-11",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Molteni icons are radically transformed",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design-interiors/molteni-museum-materialized-ideas-in-matter-ron-gilad",
+          "published_date": "2026-11-13",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Materialized, nuovo capitolo",
+          "publisher": "Elle Decor Italia",
+          "url": "https://www.elledecor.com/it/design/a74419502/mostra-molteni-museum-a-giussano/",
+          "published_date": "2026-11-13",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Molteni Museum / Molteni Group；官方页面未列个人摄影署名。",
+      "media": {
+        "asset": "assets/molteni-materialized-ideas-matter-fallback.svg",
+        "origin_url": "https://www.moltenigroup.com/museum/en/exhibition",
+        "external_image_url": "https://res.cloudinary.com/molteni/image/upload/f_webp,q_auto:best,w_352/v1794492004/2026_PH_MMuseum_Exhibition_16-9_Black_02.png",
+        "alt": "Molteni Museum为Materialized展览发布的官方主题图。",
+        "caption": "《Materialized: Ideas in Matter》官方展览主题图。",
+        "credit": "Molteni Museum / Molteni Group；官方页面未列个人摄影署名。",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "nike-carhartt-wip-nocturnes",
+      "level": "major",
+      "title": "Nike 与 Carhartt WIP，把熟悉外套接到另一种材料上",
+      "english": {
+        "title": "Nike and Carhartt WIP Meet Through Construction",
+        "deck": "Running-jacket construction meets workwear material, with campaign and use kept distinct.",
+        "abstract": "Running-jacket construction meets workwear material, with campaign and use kept distinct."
+      },
+      "sources": [
+        {
+          "title": "Carhartt WIP x Nike: The Fall/Winter 2026 Collection",
+          "publisher": "Carhartt WIP",
+          "url": "https://us.carhartt-wip.com/en-us/journal/fw26-carhartt-wip-x-nike",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Carhartt WIP x Nike Windrunner Active Jacket",
+          "publisher": "Carhartt WIP",
+          "url": "https://www.carhartt-wip.com/en-sk/p/carhartt-wip-nike-windrunner-x-active-jacket-black-cypress-stone-washed-37",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "T3 Style Edit: Nike meets Carhartt",
+          "publisher": "T3",
+          "url": "https://www.t3.com/luxury/style/t3-style-edit-131126",
+          "published_date": "2026-11-13",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Nike’s Coolest Air Max Outdoor Boot Wears Carhartt WIP Now",
+          "publisher": "Highsnobiety",
+          "url": "https://www.highsnobiety.com/p/carhartt-nike-air-max-goadome-low/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Carhartt WIP and Nike Team Up for a Three-Pair Air Max Goadome Low Pack",
+          "publisher": "Sole Retriever",
+          "url": "https://www.soleretriever.com/news/articles/carhartt-wip-x-nike-air-max-goadome-low-pack-release-date-holiday-2026",
+          "published_date": "2026-10-15",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Carhartt WIP x Nike Air Max Goadome Low Pack Releases November 2026",
+          "publisher": "SneakerFiles",
+          "url": "https://www.sneakerfiles.com/carhartt-wip-nike-air-max-goadome-low-2026/",
+          "published_date": "2026-11-10",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Nike x Carhartt WIP",
+          "publisher": "Office Magazine",
+          "url": "https://officemagazine.net/nike-x-carhartt-wip",
+          "published_date": "2018-12-08",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Carhartt WIP And Nike Deliver A Durable Collection Of Classic Icons",
+          "publisher": "Sneaker News",
+          "url": "https://sneakernews.com/2018/11/19/carhartt-wip-nike-release-date/",
+          "published_date": "2018-11-18",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "5 Decades of Nike Innovation in Women's Apparel",
+          "publisher": "NIKE, Inc.",
+          "url": "https://about.nike.com/en/magazine/5-decades-of-nike-innovation-in-women-s-apparel",
+          "published_date": "2024-04-18",
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Progress Makes Icons",
+          "publisher": "Carhartt WIP",
+          "url": "https://us.carhartt-wip.com/en-us/journal/fw26-delivery-i-icons",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Carhartt WIP ‘excavates’ the history of its Active Jacket",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/fashion-beauty/carhartt-wip-50-years-active-jacket-tate-modern",
+          "published_date": "2025-11-08",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Boot Up for Cold Weather in the Nike Air Max Goadome",
+          "publisher": "Sneaker Freaker",
+          "url": "https://www.sneakerfreaker.com/releases/nike-air-max-goadome-DC8868-001-release-date",
+          "published_date": "2022-01-13",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Carhartt WIP / Nike official product image; individual product photographer not identified.",
+      "media": {
+        "asset": "assets/nike-carhartt-wip-nocturnes-fallback.svg",
+        "origin_url": "https://www.carhartt-wip.com/en-sk/p/carhartt-wip-nike-windrunner-x-active-jacket-black-cypress-stone-washed-37",
+        "external_image_url": "https://cdn.media.amplience.net/i/carhartt_wip/I037572_0GP_06-ST-01?$ST$=&fmt=auto&qlt=default&w=3840",
+        "alt": "黑色与绿色拼接的 Nike × Carhartt WIP Windrunner Active Jacket 官方正面商品图。",
+        "caption": "Nike × Carhartt WIP Windrunner Active Jacket 官方正面商品图。",
+        "credit": "Carhartt WIP / Nike official product image; individual product photographer not identified.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "u2-carnaval-de-luz",
+      "level": "major",
+      "title": "U2 把新唱片交回四个人之间",
+      "english": {
+        "title": "U2 return the record to the room",
+        "deck": "A new album returns attention to ensemble playing while leaving the lyrics open to disagreement.",
+        "abstract": "A new album returns attention to ensemble playing while leaving the lyrics open to disagreement."
+      },
+      "sources": [
+        {
+          "title": "U2",
+          "publisher": "U2",
+          "url": "https://www.u2.com/blogs/news/out-now-1",
+          "published_date": "2026-11-13",
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Pitchfork",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/reviews/albums/u2-carnaval-de-luz/",
+          "published_date": "2026-11-12",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Louder / Classic Rock",
+          "publisher": "Louder / Classic Rock",
+          "url": "https://www.loudersound.com/bands-artists/u2-carnaval-de-luz-review",
+          "published_date": "2026-11-10",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Rolling Stone en Español",
+          "publisher": "Rolling Stone en Español",
+          "url": "https://es.rollingstone.com/arg-critica-el-sonido-de-u2-se-revitaliza-en-carnaval-de-luz/",
+          "published_date": "2026-11-11",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The Irish Times",
+          "publisher": "The Irish Times",
+          "url": "https://www.irishtimes.com/culture/music/review/2026/11/06/u2-carnaval-de-luz-review-irish-rocks-crazy-diamonds-shine-on-brighter-than-ever/",
+          "published_date": "2026-11-06",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The Guardian",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/music/2026/nov/09/u2-carnaval-de-luz-review",
+          "published_date": "2026-11-09",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Los Angeles Times",
+          "publisher": "Los Angeles Times",
+          "url": "https://www.latimes.com/entertainment-arts/music/story/2026-11-13/u2-carnaval-de-luz-review",
+          "published_date": "2026-11-13",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "EL PAÍS",
+          "publisher": "EL PAÍS",
+          "url": "https://elpais.com/cultura/2026-11-13/critica-de-carnaval-de-luz-de-u2-por-fin-otra-vez-inspirados-incluso-en-su-rendicion-a-rosalia.html",
+          "published_date": "2026-11-13",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Aftonbladet",
+          "publisher": "Aftonbladet",
+          "url": "https://www.aftonbladet.se/nojesbladet/musik/a/3BjnzP/u2-carnaval-de-luz-recension",
+          "published_date": "2026-11-13",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Associated Press",
+          "publisher": "Associated Press",
+          "url": "https://apnews.com/article/november-2026-streaming-tv-music-movies-465085508c38bfcc487ed247d4b987f5",
+          "published_date": "2026-11-06",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "U2 / Island Records. Image presented on official U2 launch story; photographer for this exact asset not separately established.",
+      "media": {
+        "asset": "assets/u2-carnaval-de-luz-fallback.svg",
+        "origin_url": "https://www.u2.com/blogs/news/out-now-1",
+        "external_image_url": "https://www.u2.com/cdn/shop/files/newsthumbforlaunch3.jpg?v=1791025439&width=533",
+        "alt": "U2 四名成员在蓝天下沿海滩行走的官方唱片发布图。",
+        "caption": "U2 官方唱片发布图；宣传图像不代表听众反应。",
+        "credit": "U2 / Island Records. Image presented on official U2 launch story; photographer for this exact asset not separately established.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "paris-photo-2026",
+      "level": "major",
+      "title": "Paris Photo最后一天：照片怎样成为物件、动作与界面",
+      "english": {
+        "title": "Paris Photo's Final Day: Images as Objects, Actions and Interfaces",
+        "deck": "On the scheduled final day, approach photographs through their supports, reproduction and recombination.",
+        "abstract": "On the scheduled final day, approach photographs through their supports, reproduction and recombination."
+      },
+      "sources": [
+        {
+          "title": "Paris Photo｜Centre Pompidou 收藏展策展正文",
+          "publisher": "Paris Photo",
+          "url": "https://www.parisphoto.com/en-gb/program/collection-2026.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Michael Hoppen Gallery｜当届展位详情",
+          "publisher": "Michael Hoppen Gallery",
+          "url": "https://www.michaelhoppengallery.com/exhibitions/256-paris-photo-2026-grand-palais-7-avenue-winston-churchill-75008-paris/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Jecza Gallery｜The Body in Performance",
+          "publisher": "Jecza Gallery",
+          "url": "https://jeczagallery.com/events/36-paris-photo-2026-the-body-in-performance-jecza-gallery/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Pace｜2026展位与作品材料",
+          "publisher": "Pace",
+          "url": "https://www.pacegallery.com/artfairs/paris-photo-2026/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Magnum｜当届作品分类与书展节目",
+          "publisher": "Magnum",
+          "url": "https://store.magnumphotos.com/pages/paris-photo-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Southern Guild｜当届Voices作品与材料",
+          "publisher": "Southern Guild",
+          "url": "https://southernguild.com/fairs/paris-photo-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Paris Photo｜Digital策展人原文",
+          "publisher": "Paris Photo",
+          "url": "https://www.parisphoto.com/en-gb/exhibitor/Digital_Sector_2026.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Paris Photo｜Voices La Disparition策展正文",
+          "publisher": "Paris Photo",
+          "url": "https://www.parisphoto.com/en-gb/exhibitor/Voices_Sector_2026.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "ECAL｜Soft Photography 项目详情",
+          "publisher": "ECAL",
+          "url": "https://ecal.ch/fr/feed/events/1918/ecal-at-paris-photo-soft-photography/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Wallpaper*｜Paris Photo 2026 具名导览",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/art/photography/paris-photo-2026-what-to-see",
+          "published_date": "2026-11-10",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Courtesy Pace Gallery; photographer not stated in accessible page",
+      "media": {
+        "asset": "assets/paris-photo-2026-fallback.svg",
+        "origin_url": "https://www.pacegallery.com/artfairs/paris-photo-2026/",
+        "external_image_url": "https://www.pacegallery.com/media/images/DSC08235.width-2000.webp",
+        "alt": "Pace官方发布的Paris Photo 2026大皇宫C23展位现场图",
+        "caption": "Pace Gallery 官方发布的 Paris Photo 2026 大皇宫展位图。",
+        "credit": "Courtesy Pace Gallery; photographer not stated in accessible page",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "bape-billie-wardrobe-language",
+      "level": "signal",
+      "title": "BAPE × Billie，把私人衣橱整理成一个系列",
+      "english": {
+        "title": "BAPE × Billie Turns a Personal Wardrobe Into a Collection",
+        "deck": "A personal wardrobe’s patterns and silhouettes enter a reproducible collection.",
+        "abstract": "A personal wardrobe’s patterns and silhouettes enter a reproducible collection."
+      },
+      "sources": [
+        {
+          "title": "BAPE® × BILLIE EILISH",
+          "publisher": "A BATHING APE",
+          "url": "https://jp.bape.com/blogs/news/bape-billie-eilish",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "The BAPE x Billie Eilish Collection: Now Available on Complex",
+          "publisher": "Complex",
+          "url": "https://www.complex.com/music/a/oruny-choi/bape-billie-eilish-collection-release-details",
+          "published_date": "2026-11-14",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Billie Eilish Teams Up With BAPE for Orange-Blue Camo Collection",
+          "publisher": "House of Heat",
+          "url": "https://houseofheat.co/a-bathing-ape/billie-eilish-collection",
+          "published_date": "2026-11-13",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "BAPE and Billie Eilish's Orange Camo Collection Is Out",
+          "publisher": "JustFresh",
+          "url": "https://www.justfresh.co/music/bape-billie-eilish-collection-camo-shark-hoodie-november-14",
+          "published_date": "2026-11-14",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Billie Eilish Has Grown Up",
+          "publisher": "Vogue",
+          "url": "https://www.vogue.com/article/billie-eilish-november-2024-cover-interview",
+          "published_date": "2024-10-08",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Read Billie Eilish's Vogue Cover Interview In Full",
+          "publisher": "British Vogue",
+          "url": "https://www.vogue.co.uk/news/article/billie-eilish-vogue-interview",
+          "published_date": "2021-05-02",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "How Billie Eilish Is Reinventing Pop Stardom",
+          "publisher": "Vogue",
+          "url": "https://www.vogue.com/article/billie-eilish-cover-march-2020",
+          "published_date": "2020-02-03",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Rosalía And Billie Eilish’s Stylist Shares The Secrets Of Combining Art And Fashion",
+          "publisher": "Nylon",
+          "url": "https://www.nylon.com/samantha-burkhart-stylist-interview",
+          "published_date": "2019-04-11",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Samantha Burkhart Is the Woman Behind Music's Most Delightful Capital-F Fashion",
+          "publisher": "Fashionista",
+          "url": "https://fashionista.com/2020/03/samantha-burkhart-stylist-clients",
+          "published_date": "2020-03-25",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "You Will See Her in a Crown: Interview with Billie Eilish",
+          "publisher": "LADYGUNN",
+          "url": "https://www.ladygunn.com/music/you-will-see-her-in-a-crown-interview-with-billie-eilish-photos-by-angelo-kritikos/",
+          "published_date": "2019-04-02",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "A BATHING APE / Billie Eilish official collection image; individual image creator not identified.",
+      "media": {
+        "asset": "assets/bape-billie-wardrobe-language-fallback.svg",
+        "origin_url": "https://jp.bape.com/blogs/news/bape-billie-eilish",
+        "external_image_url": "https://i.shgcdn.com/e0eed36d-756c-4244-a917-fc9e58617f18/-/format/auto/-/quality/normal/",
+        "alt": "BAPE × Billie Eilish 白色 BABY MILO T恤官方商品图。",
+        "caption": "BAPE × Billie Eilish 系列 BABY MILO T恤官方商品图。",
+        "credit": "A BATHING APE / Billie Eilish official collection image; individual image creator not identified.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "tokyo-modernism-2026",
+      "level": "signal",
+      "title": "Tokyo Modernism 收官：走进房间，看见选物的方法",
+      "english": {
+        "title": "Tokyo Modernism: Rooms That Reveal How People Choose",
+        "deck": "Guest rooms, collectors and makers make different methods of selection visible together.",
+        "abstract": "Guest rooms, collectors and makers make different methods of selection visible together."
+      },
+      "sources": [
+        {
+          "title": "良品計画｜TOKYO MODERNISM SHOW 2026 开催公告",
+          "publisher": "良品計画",
+          "url": "https://www.ryohin-keikaku.jp/news/articles/2026_1002_01",
+          "published_date": "2026-10-02",
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Ginza Sony Park｜2026 官方场地与节目",
+          "publisher": "Ginza Sony Park",
+          "url": "https://www.ginzasonypark.com/e/activity/028/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "IDÉE｜尾花大辅访谈",
+          "publisher": "IDÉE",
+          "url": "https://www.idee-lifeinart.com/exhibition/tm2026/interview/obana/index.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "IDÉE｜吉田怜香访谈",
+          "publisher": "IDÉE",
+          "url": "https://www.idee-lifeinart.com/exhibition/tm2026/interview/yoshida/index.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "IDÉE｜SNORK MODERN AND CONTEMPORARY 访谈",
+          "publisher": "IDÉE",
+          "url": "https://www.idee-lifeinart.com/exhibition/tm2026/interview/snork/index.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "IDÉE｜SOMEWHERE TOKYO 访谈",
+          "publisher": "IDÉE",
+          "url": "https://www.idee-lifeinart.com/exhibition/tm2026/interview/somewhere/index.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "IDÉE｜stoop 访谈",
+          "publisher": "IDÉE",
+          "url": "https://www.idee-lifeinart.com/exhibition/tm2026/interview/stoop/index.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "BUILDING｜TOKYO MODERNISM SHOW 2026 开幕记录",
+          "publisher": "BUILDING",
+          "url": "https://www.building-td.com/post/tokyo-modernism-show-2026-%E9%96%8B%E5%B9%95%EF%BC%81",
+          "published_date": "2026-11-13",
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Pyöritä｜The Finnish Ceramics 特展公告",
+          "publisher": "Pyöritä",
+          "url": "https://www.pyorita.com/blog/2026/11/09/210305",
+          "published_date": "2026-11-09",
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "TECTURE MAG｜2026年11月13日现场报道",
+          "publisher": "TECTURE MAG",
+          "url": "https://mag.tecture.jp/event/20261113-161937/",
+          "published_date": "2026-11-13",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "TOKYO MODERNISM SHOW 2026 / Ginza Sony Park; exact creator not stated",
+      "media": {
+        "asset": "assets/tokyo-modernism-2026-fallback.svg",
+        "origin_url": "https://www.ginzasonypark.com/e/activity/028/",
+        "external_image_url": "https://www.ginzasonypark.com/img/activity/028/kv.jpg",
+        "alt": "TOKYO MODERNISM SHOW 2026 官方主视觉",
+        "caption": "TOKYO MODERNISM SHOW 2026 官方主视觉，非现场照片。",
+        "credit": "TOKYO MODERNISM SHOW 2026 / Ginza Sony Park; exact creator not stated",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "armand-hammer-snakes-ladders",
+      "level": "signal",
+      "title": "Armand Hammer 把一张唱片写进家里的日常",
+      "english": {
+        "title": "Armand Hammer bring the record home",
+        "deck": "The album, vinyl edition and today’s scheduled show follow different timetables.",
+        "abstract": "The album, vinyl edition and today’s scheduled show follow different timetables."
+      },
+      "sources": [
+        {
+          "title": "Armand Hammer / Bandcamp",
+          "publisher": "Armand Hammer / Bandcamp",
+          "url": "https://armandhammer.bandcamp.com/album/snakes-ladders",
+          "published_date": "2026-11-11",
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Backwoodz Studioz",
+          "publisher": "Backwoodz Studioz",
+          "url": "https://backwoodzstudioz.com/products/armand-hammer-snakes-ladders-vinyl",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Stereogum",
+          "publisher": "Stereogum",
+          "url": "https://stereogum.com/2517597/armand-hammer-release-surprise-album-snakes-ladders/music",
+          "published_date": "2026-11-11",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Tone Glow",
+          "publisher": "Tone Glow",
+          "url": "https://toneglow.substack.com/p/tone-glow-247-armand-hammer-billy-woods-elucid",
+          "published_date": "2026-11-12",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Pitchfork",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/reviews/albums/armand-hammer-snakes-and-ladders/",
+          "published_date": "2026-11-13",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Hip Hop Golden Age",
+          "publisher": "Hip Hop Golden Age",
+          "url": "https://hiphopgoldenage.com/armand-hammer-snakes-ladders-review/",
+          "published_date": "2026-11-14",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Legends Will Never Die",
+          "publisher": "Legends Will Never Die",
+          "url": "https://legendswillneverdie.com/2026/11/11/armand-hammer-snakes-and-ladders-review/",
+          "published_date": "2026-11-11",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Shatter the Standards",
+          "publisher": "Shatter the Standards",
+          "url": "https://www.shatterthestandards.com/p/album-review-snakes-and-ladders-by",
+          "published_date": "2026-11-11",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "AXS / Music Hall of Williamsburg",
+          "publisher": "AXS / Music Hall of Williamsburg",
+          "url": "https://www.axs.com/events/1267625/armand-hammer-tickets",
+          "published_date": "2026-11-15",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Gilder Lehrman Institute",
+          "publisher": "Gilder Lehrman Institute",
+          "url": "https://www.gilderlehrman.org/ap-african-american-studies/unit-3/reconstruction-jim-crow-nadir/if-we-must-die-1919",
+          "published_date": "1919-07",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Backwoodz Studioz; jacket artwork Shane Ingersoll, inner sleeve artwork Ashes57.",
+      "media": {
+        "asset": "assets/armand-hammer-snakes-ladders-fallback.svg",
+        "origin_url": "https://backwoodzstudioz.com/products/armand-hammer-snakes-ladders-vinyl",
+        "external_image_url": "https://backwoodzstudioz.com/cdn/shop/files/BWZ822_ArmandHammer-SnakesLadders_VINYL-FULL-mock_2048x2048.png?v=1794377966",
+        "alt": "Backwoodz 官方展示的《Snakes & Ladders》黑胶唱片、封套和内袋。",
+        "caption": "《Snakes & Ladders》官方黑胶商品展示图，含封套与内袋；不是演出现场。",
+        "credit": "Backwoodz Studioz; jacket artwork Shane Ingersoll, inner sleeve artwork Ashes57.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "stella-nara-rocknroll-forest",
+      "level": "signal",
+      "title": "Stella 与奈良美智，第三次合作开始谈材料的限制",
+      "english": {
+        "title": "Stella and Nara’s Third Collaboration Makes Material Limits Visible",
+        "deck": "A third collaboration brings yarn, quantities and regional arrangements into view.",
+        "abstract": "A third collaboration brings yarn, quantities and regional arrangements into view."
+      },
+      "sources": [
+        {
+          "title": "First Look: Stella McCartney x Yoshitomo Nara",
+          "publisher": "Stella McCartney",
+          "url": "https://www.stellamccartney.com/jp/ja/yoshitomo-nara-stella-mccartney-japan.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "STELLA McCARTNEY x YOSHITOMO NARA A ROCK’N’ROLL FOREST",
+          "publisher": "Isetan Shinjuku",
+          "url": "https://www.mistore.jp/store/shinjuku/shops/women/the_space/shopnews_list/shopnews062.html",
+          "published_date": "2026-11-10",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "An interview with Stella McCartney and Yoshitomo Nara",
+          "publisher": "Rivista Studio",
+          "url": "https://www.rivistastudio.world/stella-mccartney-nara-yoshitomo-collection/",
+          "published_date": "2026-11-13",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "We are punks: Stella Shared SS21 enters the world of Yoshitomo Nara",
+          "publisher": "Stella McCartney",
+          "url": "https://www.stellamccartney.com/us/en/stellas-world/we-are-punks-stella-shared-ss21-yoshitomo-nara.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "The second Yoshitomo Nara × Stella McCartney unisex capsule is here",
+          "publisher": "Stella McCartney",
+          "url": "https://www.stellamccartney.com/jp/ja/stellas-world/yoshitomo-nara-stella-mccartney-spring-summer-2023-capsule.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Fashion and Art: Stella McCartney",
+          "publisher": "Gagosian Quarterly",
+          "url": "https://gagosian.com/quarterly/2021/09/08/interview-fashion-and-art-stella-mccartney/",
+          "published_date": "2021-09-08",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "ステラ マッカートニーが奈良美智とコラボ ニットウェアなど全63型をラインナップ",
+          "publisher": "FASHIONSNAP",
+          "url": "https://www.fashionsnap.com/article/2026-11-05/stella-maccartney-yoshitomo-nara-3/",
+          "published_date": "2026-11-05",
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Nara's Record Collection",
+          "publisher": "LACMA",
+          "url": "https://www.lacma.org/node/39341",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Yoshitomo Nara, November 5–December 12, 2026",
+          "publisher": "David Zwirner",
+          "url": "https://www.davidzwirner.com/exhibitions/2026/yoshitomo-nara/press-release",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Yoshitomo Nara x Stella McCartney",
+          "publisher": "FORMAT.LDN",
+          "url": "https://formatldn.com/work/yoshitomo-nara-x-stella-mccartney/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Stella McCartney / Yoshitomo Nara official collection imagery; individual image photographer not identified.",
+      "media": {
+        "asset": "assets/stella-nara-rocknroll-forest-fallback.svg",
+        "origin_url": "https://www.stellamccartney.com/jp/ja/yoshitomo-nara-stella-mccartney-japan.html",
+        "external_image_url": "https://www.stellamccartney.com/dw/image/v2/BCWD_PRD/on/demandware.static/-/Library-Sites-StellaMcCartneySharedLibrary/default/dwcf2b8e05/images/Nara/SMC_NARA_WEBSITE_CLP_ASSET_12.jpg",
+        "alt": "Stella McCartney × 奈良美智第三次合作的官方系列宣传图。",
+        "caption": "Stella McCartney × 奈良美智第三次合作官方宣传图。",
+        "credit": "Stella McCartney / Yoshitomo Nara official collection imagery; individual image photographer not identified.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "west-bund-art-design-2026",
+      "level": "signal",
+      "title": "西岸最后一天，把观看留给展位里的关系",
+      "english": {
+        "title": "At West Bund, leave time for the spaces between",
+        "deck": "Embroidery, wood, stone and books offer specific distances for looking on the final day.",
+        "abstract": "Embroidery, wood, stone and books offer specific distances for looking on the final day."
+      },
+      "sources": [
+        {
+          "title": "West Bund Art & Design",
+          "publisher": "West Bund Art & Design",
+          "url": "https://westbundonline.oss-cn-shanghai.aliyuncs.com/EDM/2026-11-06/2026%20Westbund%20VIP%20Program.pdf",
+          "published_date": "2026-11-06",
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "YveYANG",
+          "publisher": "YveYANG",
+          "url": "https://www.yveyang.com/art-fairs/west-bund-art-fair-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Pearl Lam Projects",
+          "publisher": "Pearl Lam Projects",
+          "url": "https://www.pearllam.com/art-fair/west-bund-art-design-2026/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "A Lighthouse called Kanata",
+          "publisher": "A Lighthouse called Kanata",
+          "url": "https://lighthouse-kanata.com/en/exhibitions/west-bund-art-design-2026/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "A Lighthouse called Kanata / Joseph Walsh",
+          "publisher": "A Lighthouse called Kanata / Joseph Walsh",
+          "url": "https://lighthouse-kanata.com/en/works/enignum-forma-place-ii-by-joseph-walsh-2026/",
+          "published_date": "2026",
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Leo Gallery",
+          "publisher": "Leo Gallery",
+          "url": "https://www.leogallery.com.cn/art-fairs/79/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "CityUHK / Studio Gallery participant record",
+          "publisher": "CityUHK / Studio Gallery participant record",
+          "url": "https://scholars.cityu.edu.hk/en/activities/westbund-art-amp-design-2026/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Artsy",
+          "publisher": "Artsy",
+          "url": "https://www.artsy.net/article/artsy-editorial-5-best-booths-west-bund-art-design-2026",
+          "published_date": "2026-11-11",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The Art Newspaper",
+          "publisher": "The Art Newspaper",
+          "url": "https://www.theartnewspaper.com/2026/11/13/shanghais-2026-art-week-finds-buyers-in-a-more-selective-market",
+          "published_date": "2026-11-13",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Shanghai municipal portal",
+          "publisher": "Shanghai municipal portal",
+          "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20261113/3a654464547d4a48a628e08c4cad846b.html",
+          "published_date": "2026-11-13",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Joseph Walsh / A Lighthouse called Kanata. Photographer not separately identified on inspected page.",
+      "media": {
+        "asset": "assets/west-bund-art-design-2026-fallback.svg",
+        "origin_url": "https://lighthouse-kanata.com/en/works/enignum-forma-place-ii-by-joseph-walsh-2026/",
+        "external_image_url": "https://lighthouse-kanata.com/en/wp-content/uploads/sites/2/2026/08/works_c_Enignum-Forma-Place-II_joseph-walsh_2026.jpg",
+        "alt": "Joseph Walsh《Enignum Forma Place II》（2026）的官方作品图，木材曲线与石材相接。",
+        "caption": "本届 Kanata 展出作品《Enignum Forma Place II》（2026），梣木与 Connemara 大理石。作品图，非西岸现场照片。",
+        "credit": "Joseph Walsh / A Lighthouse called Kanata. Photographer not separately identified on inspected page.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "james-turrell-new-york-2026",
+      "level": "signal",
+      "title": "Turrell 纽约新展，先给观看留出时间",
+      "english": {
+        "title": "Turrell’s New York show asks for time",
+        "deck": "Reservations, setting and duration participate in the conditions for looking.",
+        "abstract": "Reservations, setting and duration participate in the conditions for looking."
+      },
+      "sources": [
+        {
+          "title": "Almine Rech",
+          "publisher": "Almine Rech",
+          "url": "https://www.alminerech.com/exhibitions/12743-james-turrell-something-old-something-new-something-borrowed-something-blue",
+          "published_date": "2026-11-12",
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "ACMI",
+          "publisher": "ACMI",
+          "url": "https://www.acmi.net.au/works/120294--raemar-blue/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Alex Walker / ACMI",
+          "publisher": "Alex Walker / ACMI",
+          "url": "https://www.acmi.net.au/stories-and-ideas/olafur-eliasson-james-turrell-perception-can-shift-perspective/",
+          "published_date": "2022-07-18",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Pace Gallery",
+          "publisher": "Pace Gallery",
+          "url": "https://www.pacegallery.com/exhibitions/james-turrell-the-return/",
+          "published_date": "2025-06-14",
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "MoMA Archives",
+          "publisher": "MoMA Archives",
+          "url": "https://www.moma.org/momaorg/shared/pdfs/docs/learn/archives/transcript_turrell.pdf",
+          "published_date": "2010-07-14",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Guggenheim",
+          "publisher": "Guggenheim",
+          "url": "https://www.guggenheim.org/wp-content/uploads/2021/08/Aten_Reign_James_Turrell_Skyspaces_transcript.pdf",
+          "published_date": "2013",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Moody Center / Rice University",
+          "publisher": "Moody Center / Rice University",
+          "url": "https://moody.rice.edu/james-turrell-twilight-epiphany-skyspace",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Chichu Art Museum / Benesse",
+          "publisher": "Chichu Art Museum / Benesse",
+          "url": "https://benesse-artsite.jp/en/art/chichu.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "ARoS",
+          "publisher": "ARoS",
+          "url": "https://www.aros.dk/en/skyspace",
+          "published_date": "2026-06-19",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Roden Crater",
+          "publisher": "Roden Crater",
+          "url": "https://rodencrater.com/about/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "© James Turrell. Presented by the Tate Americas Foundation, partial purchase and partial gift of Doris J. Lockhart, 2013. Photo: ACMI. Provided on Almine Rech official exhibition page.",
+      "media": {
+        "asset": "assets/james-turrell-new-york-2026-fallback.svg",
+        "origin_url": "https://www.alminerech.com/exhibitions/12743-james-turrell-something-old-something-new-something-borrowed-something-blue",
+        "external_image_url": "https://d1bc1xn3hygkq4.cloudfront.net/rimage/ftw_placeholder/image/27607/8fb1fdbf9770a4df51060a2379c4b35d",
+        "alt": "James Turrell《Raemar, Blue》（1969）的蓝色光环境作品图，来自本次纽约展官方发布页。",
+        "caption": "《Raemar, Blue》（1969），ACMI 历史呈现图。本次纽约展官方发布页用图，并非 2026 年纽约现场照片。",
+        "credit": "© James Turrell. Presented by the Tate Americas Foundation, partial purchase and partial gift of Doris J. Lockhart, 2013. Photo: ACMI. Provided on Almine Rech official exhibition page.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ]
+}

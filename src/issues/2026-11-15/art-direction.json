@@ -1,0 +1,27 @@
+{
+  "dominant_mood": "深酒红、暖纸与黄铜色为材料、制作和阅读留下缓慢的观察距离。",
+  "background_logic": "沿用已批准的共享阅读系统与Living Edition B；不改每日UI。",
+  "palette_logic": "本期原创封面与结尾使用酒红、暖纸和黄铜；各文章的材质细节来自真实官方图。",
+  "type_scale_logic": "沿用共享中英文字级、字号和行高，不在日期样式里覆盖控件。",
+  "image_behavior": "保留官方商品、作品、宣传与历史图的具体身份，未知许可只作外链Preview；正文插图与相关段落对应。",
+  "page_density_and_tempo": "十篇交错安排物件、服装、音乐与城市，避免同类连续堆叠。",
+  "core_visual_action": "从熟悉物件的材料变化进入，在图像与正文间观察制造和观看的关系。",
+  "cover_composition": "原创酒红底上的纸色折面与黄铜色切线，保留制作痕迹的抽象关系；非纪实编辑封面。",
+  "desktop_interaction_mechanic": "继承共享整期、单篇和首页浏览及返回位置。",
+  "behance_viewing_arc": "具体制造进入声音与照片，再回到房间和光线的观看条件；不引入新案例模板。",
+  "mobile_translation": "继承自然滚动、完整双语正文、自然比例图片与44px控件。",
+  "mobbin_usability_constraint": "同一阅读结构覆盖键盘、无脚本、减弱动态及全部九种风格外观组合。",
+  "quiet_ending": "让正文退入深酒红与暖纸，语录仍由已核验共享池按上海日期轮换。",
+  "closing_quotation": {
+    "id": "ct-en-008",
+    "language": "en",
+    "text": "An entrance is already an editorial decision.",
+    "credit": "Culture & Taste Editorial"
+  },
+  "closing_palette": {
+    "background": "#3F2430",
+    "foreground": "#F7F0E4",
+    "accent": "#E9B872",
+    "rationale": "深酒红与暖纸提供长文对比，黄铜用于强调，三色不同于最近七期完整组合。"
+  }
+}
