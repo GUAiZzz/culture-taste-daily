@@ -94,7 +94,7 @@ test('the new edition retains all 22 complete bilingual stories, unique images a
 test('preview pictures disclose their own rights next to the image without mislabelling public-domain images',async()=>{
  const issue=index.issues.find(item=>item.date===today.date);
  if(issue.status!=='preview')return;
- assert.match(home,/data-living-rights/);
+ if(index.issues.at(-1).date===today.date)assert.match(home,/data-living-rights/);
  for(const story of today.stories){
   const html=await readFile(path.join(out,'issues/2026-11-11/stories',story.id,'index.html'),'utf8');
   const hero=html.match(/<figure class="photo image-frame reader-hero"[\s\S]*?<\/figure>/)?.[0];assert.ok(hero,story.id);
@@ -105,4 +105,16 @@ test('preview pictures disclose their own rights next to the image without misla
   else {assert.match(hero,/图片使用依据待核验/);assert.match(hero,/Image-use rights under review/);}
   assert.ok(hero.includes(image.origin.replaceAll('&','&amp;')),story.id);
  }
+});
+
+test('a published-preview issue discloses unknown external-image rights in the reader',async()=>{
+ const manifest=JSON.parse(await readFile(path.join(root,'src/issues/2026-11-03/issue-manifest.public.json'),'utf8'));
+ const story=manifest.stories.find(item=>item.media.rights_basis==='preview_user_authorized_external');
+ assert.ok(story);
+ const html=await readFile(path.join(out,'issues/2026-11-03/stories',story.id,'index.html'),'utf8');
+ const hero=html.match(/<figure class="photo image-frame reader-hero"[\s\S]*?<\/figure>/)?.[0];
+ assert.ok(hero);
+ assert.match(hero,/data-image-rights="unknown"/);
+ assert.match(hero,/图片使用依据待核验/);
+ assert.ok(hero.includes(story.media.origin_url.replaceAll('&','&amp;')));
 });

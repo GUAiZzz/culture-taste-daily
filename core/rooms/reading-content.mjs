@@ -120,6 +120,18 @@ async function optionalJson(file, fallback = {}) {
   try { return JSON.parse(await readFile(file, 'utf8')); } catch (error) { if (error.code === 'ENOENT') return fallback; throw error; }
 }
 
+// The daily radar is a bounded selection, while the issue can contain more
+// stories. Categories for stories outside that selection live with the issue.
+export function readingStoryCategory(story, radarItems, locale = {}) {
+  const record = radarItems.find(item => item.included_story_id === story.id || item.id === story.id);
+  const localCategory = locale.category;
+  if (localCategory !== undefined && !Object.hasOwn(categoryNames, localCategory)) throw Error(`Invalid exact category ${story.id}`);
+  if (record && localCategory !== undefined && record.category !== localCategory) throw Error(`Conflicting exact category ${story.id}`);
+  const category = record?.category ?? localCategory;
+  if (!Object.hasOwn(categoryNames, category)) throw Error(`Missing exact category ${story.id}`);
+  return category;
+}
+
 export async function loadReadingModel({ repoRoot, validatedIssues, publicationIssues }) {
   const root = path.join(repoRoot, 'core/rooms');
   const [editorialIntros, summaries, corrections, legacyCategories, centralMedia, quotePool, historicalIndex] = await Promise.all([
@@ -145,17 +157,16 @@ export async function loadReadingModel({ repoRoot, validatedIssues, publicationI
     const stories = manifest.stories.map((story, index) => {
       const section = sections[index];
       if (section?.title !== story.title) throw Error(`Section mismatch ${date} ${story.id}`);
-      const record = radar.items.find(item => item.included_story_id === story.id || item.id === story.id);
-      if (!categoryNames[record?.category]) throw Error(`Missing exact category ${story.id}`);
+      const locale = readingLocale.stories?.[story.id] || {};
+      const category = readingStoryCategory(story, radar.items, locale);
       const key = `${date}/${story.id}`, correction = corrections[key];
       const media = correction ? { ...story.media, external_image_url: correction.external_image_url, alt: correction.alt, origin_url: correction.origin_url } : story.media;
       const parsed = parseStoryContent(section.markdown, story.english);
       if (date >= '2026-10-28' && !parsed.hasFullEnglish) throw Error(`Complete source-authored English is required for ${date}/${story.id}`);
-      const locale = readingLocale.stories?.[story.id] || {};
       if (readingLocale.stories && (!['full','abstract'].includes(locale.englishKind) || !locale.summaryEn || !locale.captionEn)) throw Error(`Incomplete locale fields ${date}/${story.id}`);
       const imageFacts = experience.stories?.find(item => item.id === story.id);
       const imageAspectRatio = imageFacts?.paletteBasis?.includes('unavailable') ? 0 : Number(imageFacts?.aspectRatio) || 0;
-      const result = { ...story, ...parsed, locale, imageAspectRatio, sourceLabelsEn: readingLocale.sourceLabelsEn || {}, sourceOriginalLanguageExceptions: readingLocale.sourceOriginalLanguageExceptions || [], englishKind: englishReadingKind({ date, storyId: story.id, contentSha256: manifest.content_lock.sha256, hasBody: parsed.hasFullEnglish, requestedKind: locale.englishKind }), media, markdown: section.markdown, date, index, issueTitle: title, category: record.category, url: `/issues/${date}/stories/${story.id}/` };
+      const result = { ...story, ...parsed, locale, imageAspectRatio, sourceLabelsEn: readingLocale.sourceLabelsEn || {}, sourceOriginalLanguageExceptions: readingLocale.sourceOriginalLanguageExceptions || [], englishKind: englishReadingKind({ date, storyId: story.id, contentSha256: manifest.content_lock.sha256, hasBody: parsed.hasFullEnglish, requestedKind: locale.englishKind }), media, markdown: section.markdown, date, index, issueTitle: title, category, url: `/issues/${date}/stories/${story.id}/` };
       const local = localMedia[story.id] ?? localMedia[key];
       if (local && centralMedia[key]) throw Error(`Conflicting reading media ${key}`);
       result.inlineMedia = validateReadingMedia(local ?? centralMedia[key] ?? [], result).map(row => {

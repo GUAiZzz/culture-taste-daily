@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import { parseStoryContent, escapeHtml, paragraphCount, renderWithInsertions, validateReadingMedia, validateQuotePool, selectDailyQuote, loadReadingModel } from '../core/rooms/reading-content.mjs';
+import { parseStoryContent, escapeHtml, paragraphCount, renderWithInsertions, validateReadingMedia, validateQuotePool, selectDailyQuote, loadReadingModel, readingStoryCategory } from '../core/rooms/reading-content.mjs';
 import { buildReadingSystem } from '../core/rooms/reading-render.mjs';
 
 const repoRoot = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -21,6 +21,16 @@ const sourceIssues = async () => {
   }
   return result;
 };
+
+test('a bounded daily radar can classify a larger complete issue without inventing radar items', () => {
+  const stories = Array.from({ length: 22 }, (_, index) => ({ id: `story-${index + 1}` }));
+  const radar = stories.slice(0, 20).map(story => ({ included_story_id: story.id, category: 'fashion' }));
+  assert.deepEqual(stories.map((story, index) => readingStoryCategory(story, radar, index >= 20 ? { category: 'city' } : {})),
+    [...Array(20).fill('fashion'), 'city', 'city']);
+  assert.throws(() => readingStoryCategory(stories[20], radar), /Missing exact category/);
+  assert.throws(() => readingStoryCategory(stories[20], radar, { category: 'other' }), /Invalid exact category/);
+  assert.throws(() => readingStoryCategory(stories[0], radar, { category: 'city' }), /Conflicting exact category/);
+});
 
 test('bilingual parsing preserves a source block before the English text', () => {
   const source = 'AN ENGLISH TITLE\n\n### 中文\n\n第一段。[注](https://example.com/context)\n\n第二段。\n\n来源：\n\n- [原始资料](https://example.com/source)（原署名）\n\n### English\n\nThe first paragraph.\n\nThe second paragraph.';
