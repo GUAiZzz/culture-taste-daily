@@ -1,0 +1,27 @@
+{
+  "dominant_mood": "深青、暖纸与浅金承接工作室、展厅和日常之间的距离。",
+  "background_logic": "沿用已批准的共享阅读系统与 Living Edition B；日期内容不改共享界面。",
+  "palette_logic": "原创封面和结尾以深青、暖纸、浅金建立清晰的文字层次；真实媒体保留自己的颜色。",
+  "type_scale_logic": "沿用共享中英文字级与阅读行高，不以日期样式覆盖控件。",
+  "image_behavior": "区分真实商品、专辑封面、历史作品与现场图；官方外链失败显示明确标注的非纪实回退图。",
+  "page_density_and_tempo": "在城市、时装、音乐和物件之间交错，给相邻内容不同的阅读节奏。",
+  "core_visual_action": "以四条相错的门框连接制作、展示和使用的距离；线条只表示编辑路径。",
+  "cover_composition": "原创深青底与竖向暖纸门框，通过细线和小型标记建立进出展厅的抽象关系；非纪实编辑封面。",
+  "desktop_interaction_mechanic": "继承共享首页、整期、单篇与返回位置的浏览结构。",
+  "behance_viewing_arc": "从实际物件与声画进入，再回到场地、公众和阅读距离；不增加未经维护的界面。",
+  "mobile_translation": "继承自然滚动、完整双语、图片自然比例和44px交互控件。",
+  "mobbin_usability_constraint": "键盘、无脚本、减弱动态及九种风格外观组合沿用共享阅读合同。",
+  "quiet_ending": "深青底保留阅读安静感；实际引言按已核验共享池轮换。",
+  "closing_quotation": {
+    "id": "ct-en-006",
+    "language": "en",
+    "text": "Culture lives where an object finds its public.",
+    "credit": "Culture & Taste Editorial"
+  },
+  "closing_palette": {
+    "background": "#153D42",
+    "foreground": "#F7F1DF",
+    "accent": "#EDC788",
+    "rationale": "深青与暖纸保证长文可读，浅金区分结构重点；三色组合不同于最近七期。"
+  }
+}
