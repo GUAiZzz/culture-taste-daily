@@ -1,0 +1,1351 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-11-17",
+  "publication_date": "2026-11-17",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-11-17T11:03:36.391+08:00",
+  "research_locked_at": "2026-11-17T14:26:41.379+08:00",
+  "content_locked_at": "2026-11-17T14:26:41.379+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "05e4b76339dfe58eb43212f2abe92900ade1172e6d842b6208ef3895ac9db2bf",
+    "locked_at": "2026-11-17T14:26:41.379+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "05e4b76339dfe58eb43212f2abe92900ade1172e6d842b6208ef3895ac9db2bf",
+    "art_direction_sha256": "d46dd3352d0ab4bf5b8c703713af51dbb3235dd15361f672d0a7103190628209",
+    "issue_style_sha256": "a6e8c1c128719b0e455ab96cd86231337897c9841aa6230b41a1caf0984292fc"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-11-17T14:26:41.379+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "结构进入新的场景，会改变物件被理解和使用的方式；从可见材料与展示关系出发，区分设计表达、品牌说法和已验证结果。",
+  "art_direction": {
+    "dominant_mood": "深紫灰、暖纸与陶土色，把鞋底、纤维和展厅线索并置。",
+    "background_logic": "沿用已批准的共享阅读系统与 Living Edition B；日期内容不改共享界面。",
+    "palette_logic": "用深紫灰托住暖纸文字，陶土色标出结构转折；官方作品与产品图保留本色。",
+    "type_scale_logic": "沿用共享中英文字级与阅读行高，不以日期样式覆盖控件。",
+    "image_behavior": "区分真实商品、专辑封面、历史作品与现场图；官方外链失败显示明确标注的非纪实回退图。",
+    "page_density_and_tempo": "以当天鞋履发布起笔，在纤维、家具与展厅之间换气，再回到衣服和城市记忆。",
+    "core_visual_action": "两组错位的折线沿纵向穿过纸面，抽象表示结构进入不同场景，不描摹真实产品。",
+    "cover_composition": "原创深紫灰底，错位折线与稀疏编号形成纵向路径；明确标注非纪实编辑图解。",
+    "desktop_interaction_mechanic": "继承共享首页、整期、单篇与返回位置的浏览结构。",
+    "behance_viewing_arc": "从实际物件与声画进入，再回到场地、公众和阅读距离；不增加未经维护的界面。",
+    "mobile_translation": "继承自然滚动、完整双语、图片自然比例和44px交互控件。",
+    "mobbin_usability_constraint": "键盘、无脚本、减弱动态及九种风格外观组合沿用共享阅读合同。",
+    "quiet_ending": "折线停在留白处，将注意力交还给真实物件；当前引言沿用已核验共享池。",
+    "closing_quotation": {
+      "id": "ct-en-006",
+      "language": "en",
+      "text": "Culture lives where an object finds its public.",
+      "credit": "Culture & Taste Editorial"
+    },
+    "closing_palette": {
+      "background": "#302F46",
+      "foreground": "#F3EFE5",
+      "accent": "#E5A37C",
+      "rationale": "深紫灰与暖纸形成稳定正文对比，陶土色只标结构；三色集合不同于此前七期。"
+    }
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": [
+      "2026-11-16",
+      "2026-11-15",
+      "2026-11-03",
+      "2026-11-02",
+      "2026-10-28",
+      "2026-09-22",
+      "2026-09-21"
+    ],
+    "repeated_mechanisms": [
+      "owner-approved A3 shared reading system",
+      "source-linked official images and explicit unavailable-image fallbacks"
+    ],
+    "exception_reason": "沿用已批准共享界面；今日变化来自选题、图像关系与错位折线封面。已核对前两期事件，未将它们重新列为今日新选。"
+  },
+  "rights_summary": {
+    "required_assets": 10,
+    "unknown_required_assets": 10,
+    "status": "blocked"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": null
+  },
+  "evidence_refs": {
+    "technical": [],
+    "editorial_visual": [],
+    "gate": []
+  },
+  "qa": {
+    "html_parse": "unavailable",
+    "assets": "unavailable",
+    "internal_links": "unavailable",
+    "no_js_reading": "unavailable",
+    "desktop_render": "unavailable",
+    "mobile_render": "unavailable",
+    "reduced_motion": "unavailable"
+  },
+  "limitations": [
+    "Non-production Preview only. Linked official images retain origin links and non-documentary fallbacks; reproduction rights are not established and external images are not packaged.",
+    "Official image provenance and live availability are separate checks; temporarily unavailable media retain their recorded health status.",
+    "Public source metadata does not certify private reading, independent review or deployment; those are checked separately.",
+    "Ongoing exhibitions retain their actual opening dates; inclusion in this edition does not imply that they opened today. The two supplemental music signals are not formal articles."
+  ],
+  "stories": [
+    {
+      "id": "rick-owens-adidas-springblade-2026",
+      "level": "cover",
+      "title": "把性能结构穿成造型：Springblade 回到 Rick Owens 的鞋履里",
+      "english": {
+        "title": "Springblade returns as a Rick Owens silhouette",
+        "deck": "Sixteen visible blades return to a footwear collection; new running-performance evidence remains absent.",
+        "abstract": "Sixteen visible blades return to a footwear collection; new running-performance evidence remains absent."
+      },
+      "sources": [
+        {
+          "title": "ADIDAS X RICK OWENS SPRINGBLADE RUNNER",
+          "publisher": "adidas UK",
+          "url": "https://www.adidas.co.uk/adidas-x-rick-owens-springblade-runner/KJ5663.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Rick Owens on Reuniting With Adidas",
+          "publisher": "Vogue",
+          "url": "https://www.vogue.com/article/rick-owens-adidas-collaboration",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Rick Owens and Adidas Originals reunite to revive Springblade",
+          "publisher": "TheIndustry.fashion",
+          "url": "https://www.theindustry.fashion/rick-owens-and-adidas-originals-reunite-to-revive-springblade/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Rick Owens Welcomes Back adidas Springblade With Three Shoe Collection",
+          "publisher": "SneakerNews",
+          "url": "https://sneakernews.com/2026/11/12/rick-owens-adidas-springblade/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The Rick Owens x adidas Springblade Collection Runs on a Full-Length Bed of Blades",
+          "publisher": "Hypebeast",
+          "url": "https://hypebeast.com/2026/11/rick-owens-adidas-springblade-runner-boot-fall-2026-collection-kj3110-kj5663-kj3122-release-info",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Rick Owens × adidas Springblade Boot / Runner 発売情報",
+          "publisher": "SNKRDUNK",
+          "url": "https://snkrdunk.com/articles/33714/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Rick Owens Leads adidas’ Springblade Comeback",
+          "publisher": "House of Heat",
+          "url": "https://houseofheat.co/adidas/rick-owens-x-adidas-springblade-runner-collection-details",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Rick Owens' adidas Springblade Collection Releases November 2026",
+          "publisher": "Sole Retriever",
+          "url": "https://www.soleretriever.com/news/articles/rick-owens-adidas-fall-2026-release-date-november-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Walking on springs: Rick Owens and adidas bring back the Springblade after nine years",
+          "publisher": "Sneakerjagers",
+          "url": "https://www.sneakerjagers.com/en/n/rick-owens-x-adidas-springblade-release-november-2026/8183",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Release Dates",
+          "publisher": "adidas Germany",
+          "url": "https://www.adidas.de/en/release-dates",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Review: Adidas Springblade",
+          "publisher": "Canadian Running Magazine",
+          "url": "https://runningmagazine.ca/sections/gear/shoes/adidas-springblade/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Tested: Adidas Springblade",
+          "publisher": "Gear Patrol",
+          "url": "https://www.gearpatrol.com/outdoors/a79841/review-adidas-springblade/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Adidas Springblade: Can You Run in Them?",
+          "publisher": "Runner's World",
+          "url": "https://www.runnersworld.com/gear/a20849206/adidas-springblade-can-you-run-in-them/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Adidas’s New Shoes Are Spring-Loaded To Propel Runners Forward",
+          "publisher": "Fast Company",
+          "url": "https://www.fastcompany.com/1672899/adidas-s-new-shoes-are-spring-loaded-to-propel-runners-forward",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "adidas official product image; photographer not separately identified.",
+      "media": {
+        "asset": "assets/rick-owens-adidas-springblade-2026-fallback.svg",
+        "origin_url": "https://www.adidas.co.uk/adidas-x-rick-owens-springblade-runner/KJ5663.html",
+        "external_image_url": "https://assets.adidas.com/images/w_500%2Cf_auto%2Cq_auto/86fe01581b80483283a5d9878a24b683_9366/ADIDAS_X_RICK_OWENS_SPRINGBLADE_RUNNER_Black_KJ5663_01_00_standard.jpg",
+        "alt": "adidas 官方 Springblade Runner 产品图，展示刀片式鞋底。",
+        "caption": "adidas 官方 Springblade Runner 产品图，展示刀片式鞋底。",
+        "credit": "adidas official product image; photographer not separately identified.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "sheila-hicks-in-the-thread-of-love-2026",
+      "level": "major",
+      "title": "Sheila Hicks 在米兰把纤维从墙面推向空间",
+      "english": {
+        "title": "Sheila Hicks takes fiber into Milan’s PAC",
+        "deck": "A retrospective opening today follows the changing scale of thread, color and space.",
+        "abstract": "A retrospective opening today follows the changing scale of thread, color and space."
+      },
+      "sources": [
+        {
+          "title": "Sheila Hicks | In the thread of love",
+          "publisher": "PAC Milano",
+          "url": "https://www.pacmilano.it/exhibitions/sheila-hicks/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "In the Thread of Love, al Pac di Milano oltre 100 opere di Sheila Hicks",
+          "publisher": "ANSA",
+          "url": "https://www.ansa.it/sito/notizie/cultura/arte/2026/11/16/in-the-thread-of-love-al-pac-di-milano-oltre-100-opere-di-sheila-hicks_bb9672e2-8e18-4b94-affc-9d5b0a3af209.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Sheila Hicks / Piero Dorazio. Interlacing Colours",
+          "publisher": "PAC Milano",
+          "url": "https://www.pacmilano.it/exhibitions/hicks-dorazio/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "The Collection of the Fondation - Sheila Hicks",
+          "publisher": "Fondation Louis Vuitton",
+          "url": "https://www.fondationlouisvuitton.fr/en/collection/artists/sheila-hicks",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Sheila Hicks",
+          "publisher": "National Gallery of Victoria",
+          "url": "https://www.ngv.vic.gov.au/essay/sheila-hicks/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Sheila Hicks: Weaving as Metaphor",
+          "publisher": "Bard Graduate Center",
+          "url": "https://www.bgc.bard.edu/exhibitions/exhibitions/35/sheila-hicks",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Sheila Hicks Just Keeps Spinning",
+          "publisher": "W Magazine",
+          "url": "https://www.wmagazine.com/culture/sheila-hicks-textile-artist-interview",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Sheila Hicks at the MAK Museum Vienna",
+          "publisher": "MAK Vienna",
+          "url": "https://www.mak.at/en/program/exhibitions/sheila_hicks",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Sheila Hicks Weaves a Dreamy Narrative at the Nasher",
+          "publisher": "D Magazine",
+          "url": "https://www.dmagazine.com/arts-entertainment/2019/05/sheila-hicks-weaves-a-dreamy-narrative-at-the-nasher/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Sheila Hicks: Seize, Weave Space",
+          "publisher": "Nasher Sculpture Center",
+          "url": "https://www.nashersculpturecenter.org/art/exhibitions/exhibition/id/702",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Constant Discovery: Sheila Hicks Interviewed",
+          "publisher": "BOMB Magazine",
+          "url": "https://bombmagazine.org/articles/2022/09/01/constant-discovery-sheila-hicks-interviewed/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "“Colour is in my blood!”: the vivid life of artist Sheila Hicks",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/artanddesign/2022/apr/05/textile-artist-sheila-hicks-colour-blood-vivid-life",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Sheila Hicks – What Is That?",
+          "publisher": "Instituto Tomie Ohtake",
+          "url": "https://www.institutotomieohtake.org.br/en/exposicoes/sheila-hicks-what-is-that/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "You have to think futuristically, not only historically – in conversation with artist Sheila Hicks",
+          "publisher": "Metropolis M",
+          "url": "https://metropolism.com/nl/feature/48006_you_have_to_think_futuristically_not_only_historically_in_conversation_with_artist_sheila_hicks/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "© Thomas Adank. Courtesy of The Hepworth Wakefield.",
+      "media": {
+        "asset": "assets/sheila-hicks-in-the-thread-of-love-2026-fallback.svg",
+        "origin_url": "https://www.pacmilano.it/exhibitions/sheila-hicks/",
+        "external_image_url": "https://www.pacmilano.it/wp-content/uploads/2026/09/shila-home.jpg",
+        "alt": "Sheila Hicks 作品的官方展览宣传图；由 Hepworth Wakefield 提供，非米兰本次现场照。",
+        "caption": "Sheila Hicks 作品的官方展览宣传图；由 Hepworth Wakefield 提供，非米兰本次现场照。",
+        "credit": "© Thomas Adank. Courtesy of The Hepworth Wakefield.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "nue-black-aesthetic-design-museum-2026",
+      "level": "major",
+      "title": "把「黑人美学」拆成复数：伦敦设计博物馆如何呈现差异",
+      "english": {
+        "title": "The Nue Black Aesthetic keeps design in the plural",
+        "deck": "A London exhibition places identity questions beside specific objects, materials and makers.",
+        "abstract": "A London exhibition places identity questions beside specific objects, materials and makers."
+      },
+      "sources": [
+        {
+          "title": "The Nue Black Aesthetic",
+          "publisher": "Design Museum",
+          "url": "https://designmuseum.org/exhibitions/the-nue-black-aesthetic",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Charlene Prempeh: I Want This To Be A Defining Moment Of What The Black Aesthetic Is Now",
+          "publisher": "British Vogue",
+          "url": "https://www.vogue.co.uk/article/nue-black-aesthetic-exhibition",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The Nue Black Aesthetic maps the diasporic voices shaping design today",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design-interiors/design-events/the-nue-black-aesthetic-maps-the-diasporic-voices-shaping-design-today",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Black design isn't a monolith, as London's Design Museum's new exhibition reminds us",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design-interiors/design-events/nue-black-aesthetic-design-museum",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The Neu Black Aesthetic",
+          "publisher": "German Design Council",
+          "url": "https://www.german-design-council.de/en/design-perspectives/article-detail/the-neu-black-aesthetic",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Black creativity takes centre stage at the Design Museum",
+          "publisher": "Elle Decoration UK",
+          "url": "https://www.elledecoration.co.uk/lifestyle-culture/a74322183/black-creativity-takes-centre-stage-at-the-design-museum/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The Nue Black Aesthetic and the Future of Design",
+          "publisher": "Aesthetica Magazine",
+          "url": "https://aestheticamagazine.com/the-nue-black-aestheticand-the-future-of-design/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The Design Museum's major new exhibition on contemporary Black design opens this autumn",
+          "publisher": "London x London",
+          "url": "https://www.londonxlondon.com/the-design-museums-major-new-exhibition-on-contemporary-black-design-opens-this-autumn/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Yinka Ilori and Emmanuel Lawal in Conversation",
+          "publisher": "Livingetc",
+          "url": "https://www.livingetc.com/features/yinka-ilori-and-emmanuel-lawal-in-conversation",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "What is Black design now?",
+          "publisher": "Friedman Benda",
+          "url": "https://www.friedmanbenda.com/press/what-is-black-design-now/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "London’s Design Museum Surveys Contemporary Black Design in New Show",
+          "publisher": "Hypebeast",
+          "url": "https://hypebeast.com/2026/11/nue-black-aesthetic-design-museum-charlene-prempeh-exhibition",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The Nue Black Aesthetic: Design Museum unveils major exhibition celebrating Black creativity",
+          "publisher": "The Upcoming",
+          "url": "https://www.theupcoming.co.uk/2026/11/04/the-nue-black-aesthetic-design-museum-unveils-major-exhibition-celebrating-black-creativity/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The Black Arts Movement",
+          "publisher": "The Drama Review (reprinted by National Humanities Center)",
+          "url": "https://nationalhumanitiescenter.org/pds/maai3/community/text8/blackartsmovement.pdf",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Photo: Christian Cassiel / Design Museum.",
+      "media": {
+        "asset": "assets/nue-black-aesthetic-design-museum-2026-fallback.svg",
+        "origin_url": "https://designmuseum.org/exhibitions/the-nue-black-aesthetic",
+        "external_image_url": "https://designmuseum.org/image/786a3d66-1877-42d3-8e3c-8c82b832625c?height=606&width=980",
+        "alt": "伦敦设计博物馆展览现场，画面含 Mac Collins 的作品；不将其认定为某一件特定作品。",
+        "caption": "伦敦设计博物馆展览现场，画面含 Mac Collins 的作品；不将其认定为某一件特定作品。",
+        "credit": "Photo: Christian Cassiel / Design Museum.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "mm6-salomon-fw26-drop2-2026",
+      "level": "major",
+      "title": "外套式鞋面与越野鞋底：MM6 × Salomon 秋冬第二弹",
+      "english": {
+        "title": "MM6 and Salomon put a winter layer around the shoe",
+        "deck": "The November 17 drop gives the XT-BOOT a padded shell and updates the ACS PRO 3.",
+        "abstract": "The November 17 drop gives the XT-BOOT a padded shell and updates the ACS PRO 3."
+      },
+      "sources": [
+        {
+          "title": "エムエム6 メゾン マルジェラとサロモンのコラボ　新作シューズなどラインナップ",
+          "publisher": "FASHIONSNAP",
+          "url": "https://www.fashionsnap.com/article/2026-10-26/mm6-salomon-2026/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "過去作のブーツがアップデートして復活！「エムエム6 メゾン マルジェラ」と「サロモン」のコラボ最新作、第2弾は11月17日発売",
+          "publisher": "MEN'S NON-NO WEB",
+          "url": "https://www.mensnonno.jp/fashion/new-topics/813660/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "11/17・11/26発売｜MM6 Maison Margiela × Salomon ACS PRO 3 / XT-BOOT｜抽選/販売/定価情報",
+          "publisher": "SNKRDUNK",
+          "url": "https://snkrdunk.com/articles/33760/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "MM6 Maison Margiela and Salomon Reunite for Winter 2026",
+          "publisher": "House of Heat",
+          "url": "https://houseofheat.co/salomon/mm6-maison-margiela-salomon-fall-winter-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "MM6 Maison Margiela & Salomon Unveil 8-Pack FW26 Collection",
+          "publisher": "Hypebeast",
+          "url": "https://hypebeast.com/2026/10/mm6-maison-margiela-salomon-unveil-8-pack-fw26-collection",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "MM6 Maison Margiela Has Eight Salomon Drops This Winter",
+          "publisher": "SneakerNews",
+          "url": "https://sneakernews.com/2026/10/19/mm6-maison-margiela-salomon-fw26/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Salomon and Maison Margiela MM6 Turned a Boot Into a Bag",
+          "publisher": "Sole Retriever",
+          "url": "https://www.soleretriever.com/news/articles/maison-margiela-mm6-x-salomon-fw26-drop-2-release-date-november-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "New Maison Margiela x Salomon Collabs Release This Week",
+          "publisher": "Complex",
+          "url": "https://au.complex.com/sneakers/a/victor-deng/maison-margiela-salomon-xt-mm6-2026-release-date",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "MM6 Maison Margiela x Salomon FW26 Collection Drops in Two Parts",
+          "publisher": "Sneaker Bar Detroit",
+          "url": "https://sneakerbardetroit.com/mm6-maison-margiela-salomon-fw26-collection-release-date/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "MM6 Maison Margiela x Salomon FW26: Release Info",
+          "publisher": "The Drop Date",
+          "url": "https://thedropdate.com/news/mm6-maison-margiela-x-salomon-fw26-crossderby-xt-boot-xt-mm6-release-info",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Upcoming releases : sneakers, trail, running",
+          "publisher": "Salomon",
+          "url": "https://www.salomon.com/en-us/c/launch-calendar/upcoming",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "XT-MM6 BOOT MAISON MARGIELA",
+          "publisher": "Salomon",
+          "url": "https://www.salomon.com/en-us/product/xt-mm6-boot-maison-margiela-li1560",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "ACS PRO 3 MM6 MAISON MARGIELA",
+          "publisher": "Salomon",
+          "url": "https://www.salomon.com/en-us/product/acs-pro-3-mm6-maison-margiela-li1561",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Salomon / MM6 Maison Margiela official product image; photographer not separately identified.",
+      "media": {
+        "asset": "assets/mm6-salomon-fw26-drop2-2026-fallback.svg",
+        "origin_url": "https://www.salomon.com/en-us/product/xt-mm6-boot-maison-margiela-li1560",
+        "external_image_url": "https://cdn.dam.salomon.com/26fa2543-11a2-43c6-b4f3-b47c00de25ea/L45449000/PNG-2000px-max-72dpi.png?auto=avif&bg-color=f5f5f5&canvas=116p%2C144p&fit=cover&format=pjpg&optimize=medium&width=3840",
+        "alt": "Salomon 官方 XT-MM6 BOOT 产品图，展示填充外壳与靴口。",
+        "caption": "Salomon 官方 XT-MM6 BOOT 产品图，展示填充外壳与靴口。",
+        "credit": "Salomon / MM6 Maison Margiela official product image; photographer not separately identified.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "pradasphere-milan-permanent-exhibition-2026",
+      "level": "signal",
+      "title": "Pradasphere 把品牌档案放进米兰旗舰店",
+      "english": {
+        "title": "Pradasphere puts the archive inside a Milan shopping destination",
+        "deck": "An ongoing permanent exhibition links garments and documents to the house’s original address.",
+        "abstract": "An ongoing permanent exhibition links garments and documents to the house’s original address."
+      },
+      "sources": [
+        {
+          "title": "Milan’s Prada Galleria weaves past and present across eight floors",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/fashion-beauty/prada-galleria-opens-in-milan",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "A Prada Paradise Has Opened in Milan, and the New Destination is Both a Shop and a Museum",
+          "publisher": "Architectural Digest",
+          "url": "https://www.architecturaldigest.com/story/a-prada-paradise-has-opened-in-milan",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "A secret passage inside Prada’s Milan store, where past and future meet",
+          "publisher": "la Repubblica Europe",
+          "url": "https://www.repubblica.it/en/europe/fashion-design/2026/10/02/news/prada_galleria_milan_pradasphere_secret_passage-425665334/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Inside Prada’s Newly Expanded Milan Flagship, Complete With an Underground Passage",
+          "publisher": "ELLE Decor",
+          "url": "https://www.elledecor.com/design-decorate/a73841028/prada-milan-store-expansion/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "“This Is Where Everything Started For Prada”: Lorenzo Bertelli On The New Prada Galleria",
+          "publisher": "British Vogue",
+          "url": "https://www.vogue.co.uk/article/lorenzo-bertelli-on-the-new-prada-galleria",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Inside Pradasphere: Vintage Trunks, NASA Spacesuits and More Rare Archival Pieces From Prada’s Milan Exhibition",
+          "publisher": "Fashion Times",
+          "url": "https://www.fashiontimes.co.uk/pradasphere-milan-free-prada-exhibition-guide-1767787",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Pradasphere: Prada’s First Permanent Exhibition, Milan",
+          "publisher": "EXQZ",
+          "url": "https://www.exqz.com/news/2026/11/prada-gets-its-first-permanent-exhibition-in-the-milan-arcade-where-it-began-in-1913",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Inside the new Prada Galleria: Eight floors and a secret passage in the heart of Milan",
+          "publisher": "Domus",
+          "url": "https://www.domusweb.it/en/news/2026/09/20/prada-goes-back-home-prada-galleria-open-new-spaces-in-the-galleria-vittorio-emanuele-ii.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Prada Opens Prada Galleria Immersion",
+          "publisher": "V Magazine",
+          "url": "https://vmagazine.com/article/prada-opens-prada-galleria-immersion/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Prada presents Prada Galleria",
+          "publisher": "Prada Group",
+          "url": "https://www.pradagroup.com/en/news-media/press-releases-documents/2026/26-09-15-pradagalleria-pradasphere.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Pradasphere Milano Colophon",
+          "publisher": "PRADA",
+          "url": "https://www.prada.com/ww/en/pradasphere/events/2026/pradasphere-milano-colophon.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Prada Galleria — official media origin",
+          "publisher": "Prada Group",
+          "url": "https://www.pradagroup.com/en/news-media/news-section/26-09-15-prada-galleria-pradasphere.html",
+          "published_date": "2026-09-15",
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Prada Group official exhibition media; photographer not separately identified.",
+      "media": {
+        "asset": "assets/pradasphere-milan-permanent-exhibition-2026-fallback.svg",
+        "origin_url": "https://www.pradagroup.com/en/news-media/news-section/26-09-15-prada-galleria-pradasphere.html",
+        "external_image_url": "https://www.pradagroup.com/content/dam/pradagroup/immagini/newsandmedia/2026-news/Ottobre/2026-10-15-pradasphere/01_gallery.jpg/_jcr_content/renditions/cq5dam.web.1920.1920.jpeg",
+        "alt": "Pradasphere 米兰常设展官方图，品牌档案进入历史拱廊。",
+        "caption": "Pradasphere 米兰常设展官方图，品牌档案进入历史拱廊。",
+        "credit": "Prada Group official exhibition media; photographer not separately identified.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "rm-sfmoma-between-you-and-me-2026",
+      "level": "signal",
+      "title": "把私人收藏变成一条通往韩国艺术的路径",
+      "english": {
+        "title": "A personal collection becomes a route into Korean art",
+        "deck": "RM and SFMOMA connect works through a shared but explicitly personal exhibition.",
+        "abstract": "RM and SFMOMA connect works through a shared but explicitly personal exhibition."
+      },
+      "sources": [
+        {
+          "title": "RM x SFMOMA, the First Exhibition of RM’s Collection, Features 180 Works of Korean Art and International Contemporary Art",
+          "publisher": "SFMOMA",
+          "url": "https://www.sfmoma.org/press-release/rm-and-sfmoma-partner-on-first-exhibition-of-its-kind/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "RM x SFMOMA: Between You and Me",
+          "publisher": "SFMOMA",
+          "url": "https://www.sfmoma.org/exhibition/rm-x-sfmoma/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Blockbuster exhibit ‘Between You and Me’ opens to throngs at SFMOMA",
+          "publisher": "Mission Local",
+          "url": "https://missionlocal.org/2026/10/a-blockbuster-exhibit-between-you-and-me-opens-to-throngs-at-sfmoma/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Why RM’s collection exhibition at SFMOMA is a watershed moment for Korean art",
+          "publisher": "Christie’s",
+          "url": "https://www.christies.com/en/stories/rm-bts-collection-exhibition-san-francisco-sfmoma-9de5e929212546c79e2525280162f4e6",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "A walk through RM’s seasons: How his private art collection became an SFMOMA exhibition",
+          "publisher": "Korea JoongAng Daily",
+          "url": "https://www.koreajoongangdaily.com/lifestyle/a-walk-through-rms-seasons-how-his-private-art-collection-became-an-sfmoma-exhibition/12937004",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "BTS’ RM to unveil personal art collection at San Francisco museum",
+          "publisher": "Yonhap News Agency",
+          "url": "https://en.yna.co.kr/view/AEN20260930003000315",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "‘RM x SFMOMA’: What to know before visiting BTS leader’s exhibition",
+          "publisher": "San Francisco Chronicle",
+          "url": "https://www.sfchronicle.com/entertainment/arts-exhibits/article/rm-sfmoma-collection-guide-22444448.php",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "K-pop star RM shows off his collection of Korean art at SFMoMA",
+          "publisher": "The Art Newspaper",
+          "url": "https://www.theartnewspaper.com/2026/10/07/rm-k-pop-star-bts-exhibition-sfmoma-korean-art",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "RM’s SFMOMA exhibition is an intimate look at the BTS superstar",
+          "publisher": "SFGATE",
+          "url": "https://www.sfgate.com/sf-culture/article/bts-rm-sfmoma-art-exhibition-22425865.php",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "What to Know About Visiting RM x SFMOMA: Between You and Me",
+          "publisher": "KQED",
+          "url": "https://www.kqed.org/news/12101906/rm-sfmoma-between-you-and-me-tickets-merch-store-plan-visit-artworks",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "In ‘RM x SFMOMA,’ K-Pop Star RM Introduces Himself Through the Art He Loves",
+          "publisher": "Observer",
+          "url": "https://observer.com/2026/11/art-exhibition-review-rm-x-sfmoma-between-you-and-me-bts-kpop-kim-namjoon/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "BTS’ RM to feature personal art collection at SFMOMA",
+          "publisher": "The Korea Times",
+          "url": "https://www.koreatimes.co.kr/lifestyle/people-events/20260930/bts-rm-to-feature-personal-art-collection-at-sfmoma",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Reflections on RM’s exhibit at SFMOMA",
+          "publisher": "The Korea Herald",
+          "url": "https://www.koreaherald.com/article/10893379",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Installation view, SFMOMA; photo: Matthew Millman.",
+      "media": {
+        "asset": "assets/rm-sfmoma-between-you-and-me-2026-fallback.svg",
+        "origin_url": "https://www.sfmoma.org/exhibition/rm-x-sfmoma/",
+        "external_image_url": "https://d1hhug17qm51in.cloudfront.net/www-media/2026/10/22112502/SFMOMA-RMxSFMOMA-2008_preview-772x1024.jpg",
+        "alt": "RM x SFMOMA 展览现场官方照片。",
+        "caption": "RM x SFMOMA 展览现场官方照片。",
+        "credit": "Installation view, SFMOMA; photo: Matthew Millman.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "brain-dead-brooks-brothers-fish-house-2026",
+      "level": "signal",
+      "title": "Brain Dead 把加州衣橱搬进 Fish House",
+      "english": {
+        "title": "Brain Dead puts its California wardrobe inside the Fish House",
+        "deck": "Eugene Tssui’s Berkeley house gives the November 20 collection a specific setting.",
+        "abstract": "Eugene Tssui’s Berkeley house gives the November 20 collection a specific setting."
+      },
+      "sources": [
+        {
+          "title": "Fall/Winter 26 Drop 3 + Brooks Brothers California",
+          "publisher": "Brain Dead",
+          "url": "https://wearebraindead.com/blogs/archive/fall-winter-drop-3",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Brain Dead's Last FW26 Drop Is Its Brooks Brothers California Line, Out November 20",
+          "publisher": "JustFresh",
+          "url": "https://www.justfresh.co/fashion/brain-dead-fw26-drop-3-brooks-brothers-california-november-20",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Brooks Brothers California x Braindead",
+          "publisher": "Brooks Brothers",
+          "url": "https://www.brooksbrothers.com/braindead-collection",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Tardigrade-Fish House",
+          "publisher": "Eugene Tssui",
+          "url": "https://eugenetssui.com/built/tardigrade-fish-house",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Berkeley Architect Aims to Transform the World—One Outlandish Project at a Time",
+          "publisher": "California Magazine / Cal Alumni Association",
+          "url": "https://alumni.berkeley.edu/california-magazine/online/berkeley-architect-aims-transform-world-one-outlandish/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Architect Eugene Tssui Might Be the Most Interesting Man in the East Bay",
+          "publisher": "East Bay Express",
+          "url": "https://eastbayexpress.com/architect-eugene-tssui-might-be-the-most-interesting-man-in-the-east-bay-2-1/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Eugene Tssui Brings His Futuristic Visions to an Emeryville Residency",
+          "publisher": "KQED",
+          "url": "https://www.kqed.org/arts/13973365/eugene-tssui-emeryville-residency-bay-street-architecture-fashion",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Supersafe House Rising in Berkeley / Meant to resist quakes, fire, bugs",
+          "publisher": "SFGATE",
+          "url": "https://www.sfgate.com/news/article/Supersafe-House-Rising-in-Berkeley-Meant-to-3044974.php",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "An architect and a tardigrade",
+          "publisher": "Bay Nature",
+          "url": "https://baynature.org/2013/07/15/science-nature/urban-nature/an-architect-and-a-tardigrade/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Sea Creatures and Dinosaurs Inspire a Virtually Indestructible Home in Berkeley, California",
+          "publisher": "Inhabitat",
+          "url": "https://inhabitat.com/sea-creatures-and-dinosaurs-inspire-a-virtually-indestructible-home-in-berkeley-california/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Love It or Loathe It: Berkeley Architect’s Design a Sea Change in Housing",
+          "publisher": "Los Angeles Times / Associated Press",
+          "url": "https://www.latimes.com/archives/la-xpm-1995-03-12-me-41674-story.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "INTERVIEW: Eugene Tssui, Architect, Fashion Designer, Gymnast, and Energy Warrior",
+          "publisher": "PIN–UP",
+          "url": "https://archive.pinupmagazine.org/articles/interview-eugene-tssui-architect",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Photographer @mateo.b.u, as credited by Brain Dead.",
+      "media": {
+        "asset": "assets/brain-dead-brooks-brothers-fish-house-2026-fallback.svg",
+        "origin_url": "https://wearebraindead.com/blogs/archive/fall-winter-drop-3",
+        "external_image_url": "https://wearebraindead.com/cdn/shop/files/BrainDeadBrooksBrothersFW26-21.jpg?v=1794441955&width=1024",
+        "alt": "Brain Dead FW26 第三弹在 Berkeley Fish House 拍摄的官方 campaign 图。",
+        "caption": "Brain Dead FW26 第三弹在 Berkeley Fish House 拍摄的官方 campaign 图。",
+        "credit": "Photographer @mateo.b.u, as credited by Brain Dead.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "ugg-ald-slipper-method-man-redman-2026",
+      "level": "signal",
+      "title": "拖鞋坐上哈莱姆台阶：UGG × Aimé Leon Dore 的友谊叙事",
+      "english": {
+        "title": "UGG and Aimé Leon Dore take the slipper to the stoop",
+        "deck": "A leather slipper and a Harlem campaign connect home, friendship and the street.",
+        "abstract": "A leather slipper and a Harlem campaign connect home, friendship and the street."
+      },
+      "sources": [
+        {
+          "title": "Method Man and Redman Get Candid in Campaign Video for UGG and Aimé Leon Dore’s First Collaboration",
+          "publisher": "Complex",
+          "url": "https://uk.complex.com/style/a/tracewilliamcowen/method-man-redman-ugg-aime-leon-dore-campaign",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Redman and Method Man Anchor Campaign for New ALD x UGG Slipper",
+          "publisher": "Sole Retriever",
+          "url": "https://www.soleretriever.com/news/articles/aime-leon-dore-ugg-slipper-release-date-november-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Ugg Enlists Method Man and Redman to Help Tease Debut Aimé Leon Dore Collab",
+          "publisher": "Footwear News (syndicated by Yahoo Shopping)",
+          "url": "https://shopping.yahoo.com/style/shoes/articles/ugg-enlists-method-man-redman-140000741.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Aimé Leon Dore and UGG Set November 12 Release for Leather Slipper Collaboration",
+          "publisher": "Kicks & Grips",
+          "url": "https://kicksandgrips.com/news/aime-leon-dore-and-ugg-set-november-12-release-for-leather-slipper-collaboration",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Aimé Leon Dore and UGG Tap Method Man and Redman for Their First Collaboration",
+          "publisher": "House of Heat",
+          "url": "https://houseofheat.co/ugg/aime-leon-dore-ugg-slipper-release-details",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Method Man and Redman Rep the New Aimé Leon Dore x UGG Slipper",
+          "publisher": "The Sole Supplier",
+          "url": "https://thesolesupplier.co.uk/news/aime-leon-dore-ugg-slipper-collaboration-method-man-redman/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "UGG x Aimé Leon Dore: the ALD Slipper with Method Man",
+          "publisher": "Sneakerjagers",
+          "url": "https://www.sneakerjagers.com/en/n/ugg-x-aime-leon-dore-ald-slipper/8190",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Method Man And Redman Introduce Aimé Leon Dore x UGG Slipper",
+          "publisher": "Sneaker Bar Detroit",
+          "url": "https://sneakerbardetroit.com/aime-leon-dore-ugg-slipper-release-date/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "UGG and Aimé Leon Dore Debut the Leather UGG ALD Slipper",
+          "publisher": "Style Rave",
+          "url": "https://www.stylerave.com/ugg-ald-slippers-aime-leon-dore/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "ALD / UGG Leather Slipper",
+          "publisher": "Aimé Leon Dore",
+          "url": "https://www.aimeleondore.com/products/ald-ugg-leather-slipper",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "UGGとAIMÉ LEON DOREが、METHOD MANとREDMANを起用した初のコラボレーションを発表",
+          "publisher": "Deckers Japan / UGG",
+          "url": "https://prtimes.jp/main/html/rd/p/000000792.000003434.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Aimé Leon Dore / UGG official product image; photographer not separately identified.",
+      "media": {
+        "asset": "assets/ugg-ald-slipper-method-man-redman-2026-fallback.svg",
+        "origin_url": "https://www.aimeleondore.com/products/ald-ugg-leather-slipper",
+        "external_image_url": "https://www.aimeleondore.com/cdn/shop/files/FW26FD014_UGGALDSlipper_DARKBROWN_2_1200x.jpg?v=1794242093",
+        "alt": "Aimé Leon Dore 官方深棕色 UGG ALD Slipper 产品图，非广告人物照。",
+        "caption": "Aimé Leon Dore 官方深棕色 UGG ALD Slipper 产品图，非广告人物照。",
+        "credit": "Aimé Leon Dore / UGG official product image; photographer not separately identified.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "corteiz-nike-shox-r419-silver-surfer-2026",
+      "level": "signal",
+      "title": "从东京到 SNKRS：Corteiz × Nike 给 Shox R419 排出分段发布",
+      "english": {
+        "title": "Corteiz and Nike give the Shox R419 a staggered route",
+        "deck": "Tokyo, the brand webstore and SNKRS carry different parts of a market-specific rollout.",
+        "abstract": "Tokyo, the brand webstore and SNKRS carry different parts of a market-specific rollout."
+      },
+      "sources": [
+        {
+          "title": "NIKE R419 SHOX [SILVER SURFER]",
+          "publisher": "Corteiz",
+          "url": "https://www.corteiz.com/products/nike-r419-shox-silver-surfer",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Upcoming sneaker and apparel releases: Shox R419 x Corteiz",
+          "publisher": "Nike US / SNKRS",
+          "url": "https://www.nike.com/launch/upcoming",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Corteiz is making Tokyo part of its world",
+          "publisher": "Time Out Tokyo",
+          "url": "https://www.timeout.com/tokyo/news/corteiz-is-making-tokyo-part-of-its-world-111026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Corteiz x Nike Shox R419 'Silver Surfer' Launches November 15th",
+          "publisher": "Sneaker News",
+          "url": "https://sneakernews.com/2026/11/09/corteiz-nike-shox-r419-metallic-silver-iq9951-001/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Corteiz Debuts a New Nike Shox R419 Collab",
+          "publisher": "Sole Retriever",
+          "url": "https://www.soleretriever.com/news/articles/corteiz-nike-shox-r419-release-date-holiday-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Corteiz × Nike Shox R419 3colors / Apparel collection release information",
+          "publisher": "SNKRDUNK",
+          "url": "https://snkrdunk.com/articles/33641/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Nike x Corteiz announces Shox R4 and cross-body bag collaboration",
+          "publisher": "Hypebeast Japan",
+          "url": "https://hypebeast.com/jp/2026/11/nike-corteiz-shox-cross-body-bag-release-info",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Corteiz Announces Tokyo Pop-up for the Mystique Nike Shox R419 and Collaborative Apparel",
+          "publisher": "Hypebeast",
+          "url": "https://hypebeast.com/2026/10/corteiz-tokyo-pop-up-mystique-nike-shox-r419-collaborative-apparel-collection",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Everything You Need to Know About Corteiz",
+          "publisher": "Complex",
+          "url": "https://www.complex.com/style/a/lei-takanashi/corteiz-streetwear-everything-to-know",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Corteiz x Nike Shox R419 drops this autumn",
+          "publisher": "Sneakerjagers",
+          "url": "https://www.sneakerjagers.com/en/n/corteiz-x-nike-shox-r419-drops-this-autumn/8060",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Where to Buy: Corteiz x Nike Shox R419 Collection",
+          "publisher": "House of Heat",
+          "url": "https://houseofheat.co/nike/corteiz-nike-shox-r419-release-date",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Corteiz x Nike Confirmed To Drop Shox R419 in Autumn 2026",
+          "publisher": "The Sole Supplier",
+          "url": "https://thesolesupplier.co.uk/news/corteiz-x-nike-shox-R419-apparel-confirmed-autumn-2026-where-to-buy/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "A Release Date Has Arrived For One of the Corteiz x Nike Shox R419s",
+          "publisher": "Sneaker Freaker",
+          "url": "https://www.sneakerfreaker.com/releases/corteiz-nike-shox-r4-black-metallic-silver-game-royal-IQ9951-002-IQ9951-001-IQ9951-400-price-buy-release-date",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Corteiz / Nike official product image; photographer not separately identified.",
+      "media": {
+        "asset": "assets/corteiz-nike-shox-r419-silver-surfer-2026-fallback.svg",
+        "origin_url": "https://www.corteiz.com/products/nike-r419-shox-silver-surfer",
+        "external_image_url": "https://www.corteiz.com/cdn/shop/files/NikeShoxR419_Silver_01.png?v=1793183555&width=1200",
+        "alt": "Corteiz 官方银色 Nike Shox R419 产品图。",
+        "caption": "Corteiz 官方银色 Nike Shox R419 产品图。",
+        "credit": "Corteiz / Nike official product image; photographer not separately identified.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "kith-knicks-walt-frazier-capsule-2026",
+      "level": "signal",
+      "title": "Kith 把 Knicks 夺冠纪念穿在 Clyde 身上",
+      "english": {
+        "title": "Kith puts Clyde at the center of Knicks memory",
+        "deck": "Frazier’s name and number connect basketball graphics to a documented New York style.",
+        "abstract": "Frazier’s name and number connect basketball graphics to a documented New York style."
+      },
+      "sources": [
+        {
+          "title": "Walt 'Clyde' Frazier Celebrated With Exclusive Capsule in Kith's New Knicks Collection",
+          "publisher": "Complex",
+          "url": "https://www.complex.com/style/a/markelibert/kith-knicks-walt-clyde-frazier-collection-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Kith New York Knicks 2026 Collection Release Info",
+          "publisher": "Hypebeast",
+          "url": "https://hypebeast.com/2026/11/kith-new-york-knicks-2026-collection-release-info",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Walt “Clyde” Frazier Fronts Kith’s Latest New York Knicks Collection",
+          "publisher": "House of Heat",
+          "url": "https://houseofheat.co/kith/walt-clyde-frazier-kith-new-york-knicks-2026-collection",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Kith and the New York Knicks Unveil 2026–2027 Championship Collection, Paying Tribute to Walt Frazier",
+          "publisher": "Style Rave",
+          "url": "https://www.stylerave.com/kith-knicks-2026-2027-collection/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Kith x Knicks 2026 With Walt Frazier: Release Nov 13",
+          "publisher": "JustFresh",
+          "url": "https://www.justfresh.co/fashion/kith-new-york-knicks-2026-walt-frazier-collection",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Knicks Legend Walt “Clyde” Frazier’s Suits Are Amazing—And Made in New York",
+          "publisher": "Vogue",
+          "url": "https://www.vogue.com/article/knicks-legend-walt-clyde-fraziers-suits-are-amazing-and-made-in-new-york",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The Knicks are NBA champions. Now they have to start dressing the part.",
+          "publisher": "Gothamist",
+          "url": "https://tollbit.gothamist.com/arts-entertainment/the-knicks-are-nba-champions-now-they-have-to-start-dressing-the-part",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The Business of the New York Knicks",
+          "publisher": "Vogue",
+          "url": "https://www.vogue.com/article/the-business-of-the-new-york-knicks",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Cool",
+          "publisher": "The New Yorker",
+          "url": "https://www.newyorker.com/magazine/2012/04/30/cool-5",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "A Closer Look at Kith for the New York Knicks 2026",
+          "publisher": "Kith",
+          "url": "https://kith.com/blogs/discover/a-closer-look-at-kith-for-the-new-york-knicks-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Kith official collection image; photographer not separately identified.",
+      "media": {
+        "asset": "assets/kith-knicks-walt-frazier-capsule-2026-fallback.svg",
+        "origin_url": "https://kith.com/blogs/discover/a-closer-look-at-kith-for-the-new-york-knicks-2026",
+        "external_image_url": "https://kith.com/cdn/shop/files/4_-_44KIF261O72-001_Detail_1.jpg?v=1794429785&width=1920",
+        "alt": "Kith 官方 Frazier 10 号单品细节图，非比赛现场照片。",
+        "caption": "Kith 官方 Frazier 10 号单品细节图，非比赛现场照片。",
+        "credit": "Kith official collection image; photographer not separately identified.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "dominant_mood": "深紫灰、暖纸与陶土色，把鞋底、纤维和展厅线索并置。",
+  "background_logic": "沿用已批准的共享阅读系统与 Living Edition B；日期内容不改共享界面。",
+  "palette_logic": "用深紫灰托住暖纸文字，陶土色标出结构转折；官方作品与产品图保留本色。",
+  "type_scale_logic": "沿用共享中英文字级与阅读行高，不以日期样式覆盖控件。",
+  "image_behavior": "区分真实商品、专辑封面、历史作品与现场图；官方外链失败显示明确标注的非纪实回退图。",
+  "page_density_and_tempo": "以当天鞋履发布起笔，在纤维、家具与展厅之间换气，再回到衣服和城市记忆。",
+  "core_visual_action": "两组错位的折线沿纵向穿过纸面，抽象表示结构进入不同场景，不描摹真实产品。",
+  "cover_composition": "原创深紫灰底，错位折线与稀疏编号形成纵向路径；明确标注非纪实编辑图解。",
+  "desktop_interaction_mechanic": "继承共享首页、整期、单篇与返回位置的浏览结构。",
+  "behance_viewing_arc": "从实际物件与声画进入，再回到场地、公众和阅读距离；不增加未经维护的界面。",
+  "mobile_translation": "继承自然滚动、完整双语、图片自然比例和44px交互控件。",
+  "mobbin_usability_constraint": "键盘、无脚本、减弱动态及九种风格外观组合沿用共享阅读合同。",
+  "quiet_ending": "折线停在留白处，将注意力交还给真实物件；当前引言沿用已核验共享池。",
+  "closing_quotation": {
+    "id": "ct-en-006",
+    "language": "en",
+    "text": "Culture lives where an object finds its public.",
+    "credit": "Culture & Taste Editorial"
+  },
+  "closing_palette": {
+    "background": "#302F46",
+    "foreground": "#F3EFE5",
+    "accent": "#E5A37C",
+    "rationale": "深紫灰与暖纸形成稳定正文对比，陶土色只标结构；三色集合不同于此前七期。"
+  }
+}

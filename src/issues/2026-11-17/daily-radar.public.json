@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-17",
+  "coverage": {
+    "verified_at": "2026-11-17T14:26:41.379+08:00",
+    "regional_lanes_checked": [
+      "mainland_china_plus_hong_kong_or_taiwan",
+      "japan_or_korea",
+      "continental_europe_or_united_kingdom",
+      "united_states_or_canada",
+      "rotating_global_lane"
+    ],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "sport_outdoor_lifestyle",
+    "focus_subjects_checked": [
+      "Alo",
+      "Arc'teryx",
+      "Nike",
+      "On",
+      "Salomon",
+      "ASICS SportStyle",
+      "New Balance",
+      "HOKA",
+      "Merrell 1TRL",
+      "Nike ACG",
+      "Blue Bottle Coffee"
+    ],
+    "standing_beats_checked": [
+      "stussy-release-radar",
+      "luxury-runway-calendar",
+      "exhibition-and-cultural-programme-radar",
+      "small-breakout-object-radar"
+    ],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {
+      "id": "today-rick-owens-adidas-springblade-2026",
+      "category": "fashion",
+      "included_story_id": "rick-owens-adidas-springblade-2026"
+    },
+    {
+      "id": "today-sheila-hicks-in-the-thread-of-love-2026",
+      "category": "objects",
+      "included_story_id": "sheila-hicks-in-the-thread-of-love-2026"
+    },
+    {
+      "id": "today-nue-black-aesthetic-design-museum-2026",
+      "category": "objects",
+      "included_story_id": "nue-black-aesthetic-design-museum-2026"
+    },
+    {
+      "id": "today-mm6-salomon-fw26-drop2-2026",
+      "category": "fashion",
+      "included_story_id": "mm6-salomon-fw26-drop2-2026"
+    },
+    {
+      "id": "today-pradasphere-milan-permanent-exhibition-2026",
+      "category": "city",
+      "included_story_id": "pradasphere-milan-permanent-exhibition-2026"
+    },
+    {
+      "id": "today-rm-sfmoma-between-you-and-me-2026",
+      "category": "city",
+      "included_story_id": "rm-sfmoma-between-you-and-me-2026"
+    },
+    {
+      "id": "today-brain-dead-brooks-brothers-fish-house-2026",
+      "category": "fashion",
+      "included_story_id": "brain-dead-brooks-brothers-fish-house-2026"
+    },
+    {
+      "id": "today-ugg-ald-slipper-method-man-redman-2026",
+      "category": "fashion",
+      "included_story_id": "ugg-ald-slipper-method-man-redman-2026"
+    },
+    {
+      "id": "today-corteiz-nike-shox-r419-silver-surfer-2026",
+      "category": "fashion",
+      "included_story_id": "corteiz-nike-shox-r419-silver-surfer-2026"
+    },
+    {
+      "id": "today-kith-knicks-walt-frazier-capsule-2026",
+      "category": "fashion",
+      "included_story_id": "kith-knicks-walt-frazier-capsule-2026"
+    },
+    {
+      "id": "cl-iconic-november-20-2026",
+      "category": "music",
+      "title": "CL《ICONIC》定于 11 月 20 日发布",
+      "deck": "官方 11 秒预告给出韩国时间 18:00 的档期；完整歌曲尚未发布。",
+      "publisher": "CL Official Channel / THEBLACKLABEL",
+      "official_url": "https://www.youtube.com/watch?v=_hbSnfv1NcM",
+      "published_date": "2026-11-16",
+      "event_date": "2026-11-20 18:00 KST",
+      "media": {
+        "kind": "video",
+        "url": "https://www.youtube.com/watch?v=_hbSnfv1NcM",
+        "poster_url": "https://i.ytimg.com/vi/_hbSnfv1NcM/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgALGCooCDAgAEAEYaCBoKGgwDw==&rs=AOn4CLBq68EhfnzrPh_uU5dZusIg6fm55g",
+        "alt": "CL《ICONIC》官方预告的静态封面。",
+        "credit": "CL Official Channel / THEBLACKLABEL official teaser poster.",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "toro-y-moi-unusua-november-20-2026",
+      "category": "music",
+      "title": "Toro y Moi《Unusua》本周五发行",
+      "deck": "七首曲目的官方预购页已开放《Motive》和《Proof》，完整专辑安排在 11 月 20 日。",
+      "publisher": "Toro y Moi",
+      "official_url": "https://toroymoi.bandcamp.com/album/unusua",
+      "published_date": "2026-11-05",
+      "event_date": "2026-11-20",
+      "media": {
+        "kind": "image",
+        "url": "https://f4.bcbits.com/img/a975857694_1x1_700.avif",
+        "alt": "Toro y Moi《Unusua》官方专辑封面。",
+        "credit": "Toro y Moi official Bandcamp album artwork; all rights reserved.",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ]
+}
