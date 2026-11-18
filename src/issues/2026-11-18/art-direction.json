@@ -1,0 +1,27 @@
+{
+  "dominant_mood": "墨绿、暖纸和黄铜。把服装、家具、唱片与场地之间的间隔留出来。",
+  "background_logic": "沿用已批准的共享阅读系统与 Living Edition B；日期内容不改共享界面。",
+  "palette_logic": "以墨绿托住暖纸文字，黄铜色用于指向具体物件。官方图像保留本色。",
+  "type_scale_logic": "沿用共享中英文字级与阅读行高，不以日期样式覆盖控件。",
+  "image_behavior": "区分真实商品、专辑封面、历史作品与现场图；官方外链失败显示明确标注的非纪实回退图。",
+  "page_density_and_tempo": "由香港当天开幕的设计展起笔，在配乐、鞋履、服装和绘画之间换气。",
+  "core_visual_action": "在一张深绿纸上安排三组相距不同的弧线，以间隔提示观看和聆听的距离。",
+  "cover_composition": "深绿底、大字和三组黄铜弧线，原创非纪实编辑封面。",
+  "desktop_interaction_mechanic": "继承共享首页、整期、单篇与返回位置的浏览结构。",
+  "behance_viewing_arc": "从实际物件与声画进入，再回到场地、公众和阅读距离；不增加未经维护的界面。",
+  "mobile_translation": "继承自然滚动、完整双语、图片自然比例和44px交互控件。",
+  "mobbin_usability_constraint": "键盘、无脚本、减弱动态及九种风格外观组合沿用共享阅读合同。",
+  "quiet_ending": "弧线停在纸面外侧，正文留给读者沿着作品与出处继续看。",
+  "closing_quotation": {
+    "id": "ct-en-006",
+    "language": "en",
+    "text": "Culture lives where an object finds its public.",
+    "credit": "Culture & Taste Editorial"
+  },
+  "closing_palette": {
+    "background": "#243530",
+    "foreground": "#FFF2DB",
+    "accent": "#EBB561",
+    "rationale": "暖纸与黄铜在墨绿上保留文字与线条的可读性，对应本期标题和陈列距离。"
+  }
+}
