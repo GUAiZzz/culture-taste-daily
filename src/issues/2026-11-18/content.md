@@ -224,6 +224,94 @@ Stüssy previously collaborated with CDG for its 40th anniversary in 2020. The o
 
 The shop closed yesterday. The old jacket and the newer bags and scarves make a useful comparison. The logos already had a history together. The more interesting change is what they can travel on after leaving the clothes.
 
+## 三宅一生让旅途照片顺着褶裥转弯
+
+### 中文
+
+11 月 15 日，ISSEY MIYAKE 在新宿店的 SHIKAKU 开始展示《CHIFFON TWIST: Emerging Presence》，展出至 2027 年 1 月 4 日。同日推出的 CHIFFON TWIST 3 与 VIEW POINT，把相同的褶裥与扭转用在两种表面上。前一组是纯色，后一组印了旅途中拍到的风景。
+
+纯色款好在能看清轮廓。布料压出褶裥，再经过扭转，密集的折线到了肩膀和领口附近会换方向。品牌说每件衣服的形态会有细微差别。印花给同一处变化加上一条可以追踪的线索：看一段颜色在哪里断开，又从哪一道褶里接上。
+
+东京国立新美术馆过去用一场回顾展梳理过三宅一生对一块布、身体和制作技术的长期研究。看新宿这组衣服时，这个历史背景可以落实到一个很小的动作。把衣服在手里放平时看到的是布面的纹路，穿上之后，肩和手臂参与决定图案会呈现在哪。
+
+先挑同一种领型的纯色和印花看看。颜色挪开以后留下的褶裥，和颜色回来以后改变的观看路线，正是这组新衣可以在店里慢一点看的地方。
+
+### English
+
+ISSEY MIYAKE opened CHIFFON TWIST: Emerging Presence at SHIKAKU in its Shinjuku store on November 15. It runs until January 4, 2027. CHIFFON TWIST 3 and VIEW POINT arrived the same day. The ranges apply pleating and twisting to two surfaces: solid colors and photographs taken while traveling.
+
+A solid color makes the outline easier to see. The fabric is pleated and twisted, and the dense folds change direction around the shoulders and neck. The house describes small variations in shape between individual garments. The print gives the eye another way to follow those changes. You can look for where a stretch of color stops, then find the fold where it resumes.
+
+The National Art Center, Tokyo previously traced Miyake’s long study of cloth, bodies and making in a retrospective. In Shinjuku that history can be brought down to one small action. Flat in the hand, the cloth shows a surface pattern. Once the garment is on, the shoulder and arm help determine where that pattern appears.
+
+Look for a solid and a print with the same neckline. The folds are clearest in one. Color changes where the eye goes in the other. You can spend a little more time with both in the shop.
+
+## Theaster Gates 给首尔的静物配了一间听音室
+
+### 中文
+
+Theaster Gates 在韩国的首个个展《African Still Life》正在 White Cube 首尔展出，展期从 11 月 4 日到 12 月 18 日。展览有一间听音室。现场会播放法国裔越南 DJ Dinh Nguyen 留下的唱片收藏。画廊介绍，这批收藏有超过 14,000 条录音，尤以加勒比音乐为重。
+
+另一间房里，《African Still Life #4》把供石、旧黄铜擦鞋架、纪念旗和一双 Tabi 轮滑鞋放在一起。轮滑鞋由 Gates 在 2023 年设计。在静物里，这几个东西各自带着之前的用途。人可以在它们之间来回看，注意一块石头和一双能穿出去的鞋如何占据同一组陈列。
+
+Gates 此前做过关于黏土的展览，也曾在日本常滑研习陶艺。首尔的新陶瓷用几何形和烧制后的表面继续这项工作。转进听音室，时间随之变了。盆、鞋和石头可以一眼扫过，听一面唱片需要在房间多待一会儿。馆方把公开播放列为艺术家对 Nguyen 家人的承诺。
+
+Gagosian 香港的《Surrogate》另定于 11 月 19 日开幕。两地各有不同的作品和展期。首尔这边，最值得留的可能是等一段音乐播完的时间。
+
+### English
+
+Theaster Gates’s first solo exhibition in South Korea, African Still Life, is at White Cube Seoul from November 4 through December 18. It includes a listening room where the gallery plays selections from French Vietnamese DJ Dinh Nguyen’s collection. White Cube describes an archive of more than 14,000 recordings, with a particular focus on Caribbean music.
+
+In another room, African Still Life #4 places a scholar’s stone, an old brass shoe-shine stand, a memorial flag and a pair of Tabi roller skates together. Gates designed the skates in 2023. Each object carries something of its previous use. You can look back and forth to see how a stone and a pair of shoes occupy the same arrangement.
+
+Gates has staged exhibitions about clay and studied ceramics in Tokoname, Japan. The geometries and fired surfaces of the new Seoul works continue that practice. The listening room uses time differently. A vessel, a shoe and a stone can be taken in quickly. To hear a record you have to remain in the room a little longer. The gallery describes public playback as part of the artist’s commitment to Nguyen’s family.
+
+Gagosian’s Surrogate in Hong Kong is separately scheduled to open November 19, with a different body of work and dates. In Seoul, leave yourself time to hear one piece of music through.
+
+## 旧家具改作，先从一个充气坐垫开始
+
+### 中文
+
+在意大利 Giussano 的 Molteni Museum，Herzog & de Meuron 原本用皮革做的 Porta Volta 椅垫和靠背，被换成透明的红蓝充气垫。木制椅架留了下来，原先看上去密实的部分现在能透光。这件改作属于 Ron Gilad 策划的《Materialized: Ideas in Matter》。
+
+深泽直人的 Cinnamon 扶手椅用的是另一种改法。展览版换上细密的编织藤面，椅子的曲线可以沿着编织的走向看。Patricia Urquiola 也重做了自己的 Diamond 桌，采用雪松木。几件作品放在一起，材料改变的作用就能分开看：有的把轮廓显出来，有的让手更容易辨认表面，有的改变了物件在光里的重量感。
+
+参展者拿到的是 Molteni&C、UniFor、Citterio 已经有过的产品。这个条件让差别变得具体。同一把椅子还可以查回原版，看到最初如何提供支撑，以及展览版为了让空气和颜色可见，要借用什么制作方法。Wallpaper* 在采访里提到 Porta Volta 的团队为此找了做充气泳池玩具的制造商。
+
+展览从家具目录里取出成品，让它重新暴露在下一轮制作中。看改作时把原版留在旁边，哪几项仍能交给原来的工厂，哪几项要换一拨人来做，区别往往就在一个坐垫上。
+
+### English
+
+At the Molteni Museum in Giussano, Italy, Herzog & de Meuron have replaced the leather seat and back of their Porta Volta armchair with transparent red and blue inflatables. The wooden frame remains. Parts that used to look dense now admit light. The work is part of Materialized: Ideas in Matter, curated by Ron Gilad.
+
+Naoto Fukasawa takes another approach to his Cinnamon armchair. Fine woven rattan follows its curves in the exhibition edition. Patricia Urquiola has remade her Diamond table in cedar. Placed together, these pieces show different jobs a material change can do. It can emphasize an outline, make a surface more legible to the hand, or alter the apparent weight of an object in the light.
+
+The starting points were existing products from Molteni&C, UniFor and Citterio. You can bring the first chair back into view and see where the support originally came from. You can also see what had to change to make air and color legible. In an interview with Wallpaper*, the Porta Volta team described working with a manufacturer of inflatable pool toys.
+
+The exhibition takes finished items out of a catalog and makes them available for another round of making. Keep the original nearby as you look. Sometimes a cushion is enough to show what the same factory could still make and where the designers had to find someone else.
+
+## 读 Coachella 新海报，先看舞台写在哪里
+
+### 中文
+
+Coachella 已公布 2027 年阵容，两个周末分别为 4 月 9 日至 11 日、16 日至 18 日，地点仍是加州 Indio 的 Empire Polo Club。Dua Lipa、Tame Impala 和 SZA 分别领衔周五、周六和周日。上周发布的海报还为几场节目注明了不同空间。
+
+Madonna 的名字后面带着舞蹈帐篷的说明。Daddy Yankee 获得一场独立标注的沙漠演出，Justice 的《Blinded by the Lights》标在 Bunker。这几处字不大，却在给读者交代三种不同的观看关系。一场演出安排在帐篷里，和它只出现在周五那一列，是两条各自有用的信息。
+
+Madonna 2006 年在 Coachella 演过 Sahara 帐篷。JamBase 也回顾了她在 2026 年作为 Sabrina Carpenter 嘉宾出现。这次有自己的舞蹈帐篷演出，历史上的几个位置可以用来比较。海报还没给出逐场时间，不能从名字在版面上的高低推出完整动线。
+
+阵容公布之后，先记下想看的几场以及它们明写的场地。两个节目会不会撞在一起，要等音乐节发布时刻表再判断。眼下这张海报已经给了一份可以慢慢读的空间目录。
+
+### English
+
+Coachella has announced its 2027 lineup for April 9–11 and 16–18 at the Empire Polo Club in Indio, California. Dua Lipa, Tame Impala and SZA headline Friday, Saturday and Sunday respectively. The poster released last week also gives several acts specific spaces.
+
+Madonna’s name comes with a dance tent designation. Daddy Yankee has a separate performance billed in the desert, and Justice’s Blinded by the Lights is listed for the Bunker. Those short labels explain different relationships between an act and its audience. A show marked for a tent tells you something beyond the fact that it appears in Friday’s column.
+
+Madonna performed in Coachella’s Sahara tent in 2006. JamBase also notes her 2026 appearance with Sabrina Carpenter. Her own dance tent performance gives those earlier positions a point of comparison. The poster does not give detailed set times, so the size or position of a name cannot tell you what route to take across the festival.
+
+The spaces identified on the poster are useful provisional notes. Whether two shows overlap will only be clear when the festival posts its timetable. For now the lineup already offers a map of some of the rooms it plans to use.
+
 ## 继续看
 
 挑一件确实想再看一眼的东西，沿着它的图像和出处走回去。
