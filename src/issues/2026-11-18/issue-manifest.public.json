@@ -1,0 +1,1175 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-11-18",
+  "publication_date": "2026-11-18",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-11-18T11:38:58.940+08:00",
+  "research_locked_at": "2026-11-18T12:14:10.425+08:00",
+  "content_locked_at": "2026-11-18T12:14:10.425+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "6f446d9fe447522c28df7121a1c192a5a48a10a418984c9ab2b1170e87d6cda6",
+    "locked_at": "2026-11-18T12:14:10.425+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "6f446d9fe447522c28df7121a1c192a5a48a10a418984c9ab2b1170e87d6cda6",
+    "art_direction_sha256": "dd6f252a6f79e2e807f83f0be95b94f189a3961f79006939b47efbb59d6b92a8",
+    "issue_style_sha256": "a6e8c1c128719b0e455ab96cd86231337897c9841aa6230b41a1caf0984292fc"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-11-18T12:13:38.188+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "从物件之间实际存在的距离出发，判断展览、商品和声音在新的场景里怎样改变人看待它们的方式。",
+  "art_direction": {
+    "dominant_mood": "墨绿、暖纸和黄铜。把服装、家具、唱片与场地之间的间隔留出来。",
+    "background_logic": "沿用已批准的共享阅读系统与 Living Edition B；日期内容不改共享界面。",
+    "palette_logic": "以墨绿托住暖纸文字，黄铜色用于指向具体物件。官方图像保留本色。",
+    "type_scale_logic": "沿用共享中英文字级与阅读行高，不以日期样式覆盖控件。",
+    "image_behavior": "区分真实商品、专辑封面、历史作品与现场图；官方外链失败显示明确标注的非纪实回退图。",
+    "page_density_and_tempo": "由香港当天开幕的设计展起笔，在配乐、鞋履、服装和绘画之间换气。",
+    "core_visual_action": "在一张深绿纸上安排三组相距不同的弧线，以间隔提示观看和聆听的距离。",
+    "cover_composition": "深绿底、大字和三组黄铜弧线，原创非纪实编辑封面。",
+    "desktop_interaction_mechanic": "继承共享首页、整期、单篇与返回位置的浏览结构。",
+    "behance_viewing_arc": "从实际物件与声画进入，再回到场地、公众和阅读距离；不增加未经维护的界面。",
+    "mobile_translation": "继承自然滚动、完整双语、图片自然比例和44px交互控件。",
+    "mobbin_usability_constraint": "键盘、无脚本、减弱动态及九种风格外观组合沿用共享阅读合同。",
+    "quiet_ending": "弧线停在纸面外侧，正文留给读者沿着作品与出处继续看。",
+    "closing_quotation": {
+      "id": "ct-en-006",
+      "language": "en",
+      "text": "Culture lives where an object finds its public.",
+      "credit": "Culture & Taste Editorial"
+    },
+    "closing_palette": {
+      "background": "#243530",
+      "foreground": "#FFF2DB",
+      "accent": "#EBB561",
+      "rationale": "暖纸与黄铜在墨绿上保留文字与线条的可读性，对应本期标题和陈列距离。"
+    }
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": [
+      "2026-11-17",
+      "2026-11-16",
+      "2026-11-15",
+      "2026-11-03",
+      "2026-11-02",
+      "2026-10-28",
+      "2026-09-22"
+    ],
+    "repeated_mechanisms": [
+      "Owner-approved shared reading system",
+      "Official-origin links and static image fallbacks"
+    ],
+    "exception_reason": "沿用已批准的共同阅读方式。今日以跨展场比较与首发曲试听排顺序，封面用分隔弧线。前两期的事件与链接已核对。"
+  },
+  "rights_summary": {
+    "required_assets": 10,
+    "unknown_required_assets": 10,
+    "status": "blocked"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": null
+  },
+  "evidence_refs": {
+    "technical": [],
+    "editorial_visual": [],
+    "gate": []
+  },
+  "qa": {
+    "html_parse": "unavailable",
+    "assets": "unavailable",
+    "internal_links": "unavailable",
+    "no_js_reading": "unavailable",
+    "desktop_render": "unavailable",
+    "mobile_render": "unavailable",
+    "reduced_motion": "unavailable"
+  },
+  "limitations": [
+    "Non-production Preview. Official images are externally linked, with rights not cleared for production.",
+    "Previously opened exhibitions retain their original dates. Forthcoming albums are presented with available tracks and separately dated release plans."
+  ],
+  "stories": [
+    {
+      "id": "designinspire-abito-hk-2026",
+      "level": "cover",
+      "title": "在香港会展，把衣服和家具放回同一间房",
+      "english": {
+        "title": "ABITO/HK puts clothing and furniture side by side",
+        "deck": "At DesignInspire in Hong Kong, a traveling exhibition compares how people dress and how they live.",
+        "abstract": "At DesignInspire in Hong Kong, a traveling exhibition compares how people dress and how they live."
+      },
+      "sources": [
+        {
+          "title": "NewMediaWire | DesignInspire Opens on 18 November With Free Admission to the Public on 19-21 November",
+          "publisher": "HKTDC via NewMediaWire",
+          "url": "https://www.newmediawire.com/news/designinspire-opens-on-18-november-with-free-admission-to-the-public-on-19-21-november-7091078",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Exhibitor Manual | DesignInspire 2026",
+          "publisher": "HKTDC Exhibitor Services",
+          "url": "https://info.hktdc.com/sp/designinspire/2026/pdf/Exhibitor-Manual-DesignInspire-2026.pdf",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "DesignInspire 2026｜意大利焦點展館「ABITO/HK」首度登港",
+          "publisher": "HK01",
+          "url": "https://www.hk01.com/%E8%97%9D%E6%96%87/60409958/designinspire-2026-%E6%84%8F%E5%A4%A7%E5%88%A9%E7%84%A6%E9%BB%9E%E5%B1%95%E9%A4%A8-abito-hk-%E9%A6%96%E5%BA%A6%E7%99%BB%E6%B8%AF",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "當設計成為跨文化交流的獨特語言： DesignInspire 2026 -設計- 明周文化",
+          "publisher": "Ming Pao Weekly",
+          "url": "https://www.mpweekly.com/culture/%E8%A8%AD%E8%A8%88/designinspire-%E9%A6%99%E6%B8%AF%E8%A8%AD%E8%A8%88%E4%B8%AD%E5%BF%83-%E6%96%87%E5%89%B5%E7%94%A2%E6%A5%AD%E7%99%BC%E5%B1%95%E8%99%95-274466",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "ABITO: an exhibition in which fashion and design explore the transformation of society and the concept of living | Salone del Mobile",
+          "publisher": "Salone del Mobile.Milano",
+          "url": "https://www.salonemilano.it/en/articles/abito-exhibition-fashion-design-palomba-serafini",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "DMatters September 2026: Creating Value Through Design: From Local Communities to Global Stages - Hong Kong Design Centre (HKDC)",
+          "publisher": "Hong Kong Design Centre",
+          "url": "https://www.hkdesigncentre.org/en/resources/communications/feature-stories/feature-story-178/1359",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Explore Hong Kong's creative side at DesignInspire 2026 | Tatler Asia",
+          "publisher": "Tatler Asia",
+          "url": "https://www.tatlerasia.com/lifestyle/arts/designinspire-2026-4-design-pavilions-to-explore-in-hong-kong",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Abito Exhibition: Ludovica Serafini on Italian fashion and design | Boulevard",
+          "publisher": "Boulevard",
+          "url": "https://boulevard.co/post/abito-italian-fashion-design-exhibition-singapore/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "ABITO - Acerbis",
+          "publisher": "Acerbis",
+          "url": "https://www.acerbisdesign.com/en/stories/abito/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Inside the ABITO exhibition in Singapore: An exploration of fashion, furniture and freedom",
+          "publisher": "Vogue Singapore",
+          "url": "https://vogue.sg/abito-exhibition-vogue-living/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Roberto Palomba © Palomba Serafini e Associati / Salone del Mobile.Milano",
+      "media": {
+        "asset": "assets/designinspire-abito-hk-2026-fallback.svg",
+        "origin_url": "https://www.salonemilano.it/en/articles/abito-exhibition-fashion-design-palomba-serafini",
+        "external_image_url": "https://www.salonemilano.it/sites/default/files/styles/libero/public/2026-04-08/11_Abito_.jpg.webp?itok=D0lZL1FD",
+        "alt": "米兰版 ABITO 的陈列对照，Laura Aponte 服装与 Gaetano Pesce 的 Up。图为米兰版本。",
+        "caption": "米兰版 ABITO 的陈列对照，Laura Aponte 服装与 Gaetano Pesce 的 Up。图为米兰版本。",
+        "credit": "Roberto Palomba © Palomba Serafini e Associati / Salone del Mobile.Milano",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "yuri-suzuki-onomatopia-2026",
+      "level": "major",
+      "title": "Yuri Suzuki 把游乐场缩成可以听的模型",
+      "english": {
+        "title": "Yuri Suzuki makes a miniature amusement park you can hear",
+        "deck": "Onomatopia in London uses small wheels, horns and movement to make listening visible.",
+        "abstract": "Onomatopia in London uses small wheels, horns and movement to make listening visible."
+      },
+      "sources": [
+        {
+          "title": "Yuri Suzuki | Onomatopia",
+          "publisher": "Yuri Suzuki",
+          "url": "https://www.yurisuzuki.com/projects/onomatopia",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Step inside 'Yuri Suzuki: Onomatopia', a new show in London | Wallpaper*",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/architecture/architecture-events/yuri-suzuki-onomatopia-exhibition-london-uk",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Yuri Suzuki’s ‘Onomatopia’ is a mini theme park designed to be listened to - Fast Company",
+          "publisher": "Fast Company",
+          "url": "https://www.fastcompany.com/91640356/yuri-suzukis-onomatopia-is-a-mini-theme-park-designed-to-be-listened-to",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Sonic Playground: Yuri Suzuki - High Museum of Art",
+          "publisher": "High Museum of Art",
+          "url": "https://high.org/exhibition/sonic-playground-yuri-suzuki/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "A New Chapter for Yuri Suzuki",
+          "publisher": "Pentagram",
+          "url": "https://www.pentagram.com/news/a-new-chapter-for-yuri-suzuki",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Ambient Sound with Yuri Suzuki – Japan House London",
+          "publisher": "Japan House London",
+          "url": "https://www.japanhouselondon.uk/whats-on/ambient-sound-with-yuri-suzuki/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "ジ アンビエント マシン | HOME ACCESSORIES | COLLECTION | E&Y",
+          "publisher": "E&Y",
+          "url": "https://www.eandy.com/collection/home_accessories/the_ambient_machine/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Yuri Suzuki: Onomatopia - Show | GalleriesNow",
+          "publisher": "GalleriesNow",
+          "url": "https://www.galleriesnow.net/shows/yuri-suzuki-onomatopia/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Yuri Suzuki’s Sound in Mind comes to the Design Museum",
+          "publisher": "Pentagram",
+          "url": "https://www.pentagram.com/news/yuri-suzukis-sound-in-mind-comes-to-the-design-museum",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Sound in Mind: Yuri Suzuki on his solo show at the Design Museum",
+          "publisher": "It's Nice That",
+          "url": "https://www.itsnicethat.com/news/yuri-suzuki-sound-in-mind-design-museum-exhibition-060919",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Yuri Suzuki official project photography; individual credit not separately identified for this image.",
+      "media": {
+        "asset": "assets/yuri-suzuki-onomatopia-2026-fallback.svg",
+        "origin_url": "https://www.yurisuzuki.com/projects/onomatopia",
+        "external_image_url": "https://www.yurisuzuki.com/content/2-projects/2-onomatopia/yurisuzuki-onomatopia1.jpg",
+        "alt": "Yuri Suzuki 官方项目图，《Onomatopia》的可互动声学模型。",
+        "caption": "Yuri Suzuki 官方项目图，《Onomatopia》的可互动声学模型。",
+        "credit": "Yuri Suzuki official project photography; individual credit not separately identified for this image.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "nike-kobe-9-philippines-2026",
+      "level": "major",
+      "title": "Kobe 9 回归，鞋底里还有菲律宾的人字拖",
+      "english": {
+        "title": "The returning Kobe 9 keeps a Filipino flip-flop underfoot",
+        "deck": "The updated Kobe 9 returns to a 2014 design that references banig, tsinelas and jeepneys.",
+        "abstract": "The updated Kobe 9 returns to a 2014 design that references banig, tsinelas and jeepneys."
+      },
+      "sources": [
+        {
+          "title": "Kobe 9 EM Low Protro 'Laser Crimson and Obsidian' (IO6262-600) Release Date. Nike SNKRS",
+          "publisher": "Nike Philippines",
+          "url": "https://www.nike.com/ph/launch/t/kobe-9-em-low-protro-laser-crimson-and-obsidian",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Nike Kobe 9 EM Low Protro “Philippines” Release Date: The Banig Kobe – DamnKicks",
+          "publisher": "DamnKicks",
+          "url": "https://damnkicks.com/2026/11/09/nike-kobe-9-em-low-protro-philippines-release-date/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Nike Kobe 9 EM Premium \"Philippines\" Release Date | Nice Kicks",
+          "publisher": "Nice Kicks",
+          "url": "https://www.nicekicks.com/nike-kobe-9-em-premium-philippines-release-date/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Detailed Look at the Nike Kobe 9 EM \"Philippines\"",
+          "publisher": "Complex",
+          "url": "https://www.complex.com/sneakers/a/daniel-mitchell/detailed-look-at-the-nike-kobe-9-em-philippines",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Kobe, Curated For You. Nike SNKRS",
+          "publisher": "Nike SNKRS",
+          "url": "https://www.nike.com/ph/launch/t/kobe-curated",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Nike Kobe 9 EM Low Protro “Philippines” IO6262-600",
+          "publisher": "Sneaker Bar Detroit",
+          "url": "https://sneakerbardetroit.com/nike-kobe-9-em-low-protro-philippines-io6262-600/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "11/27発売｜Nike Kobe 9 EM Low Protro \"Philippines/Laser Crimson/Obsidian\"｜抽選/販売/定価情報 | スニーカーダンク",
+          "publisher": "SNKRDUNK Japan",
+          "url": "https://snkrdunk.com/articles/33753/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Kobe 9 EM Low Protro \"Philippines\" First Look | Hypebeast",
+          "publisher": "Hypebeast",
+          "url": "https://hypebeast.com/2026/2/kobe-9-em-low-protro-philippines-first-look",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Nike Kobe 9 EM \"Philippines\" - SneakerNews.com",
+          "publisher": "Sneaker News",
+          "url": "https://sneakernews.com/2014/04/29/nike-kobe-9-em-philippines/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Best Sneaker Releases November 15 to 21 2026 | SneakerNews.com",
+          "publisher": "Sneaker News",
+          "url": "https://sneakernews.com/2026/11/15/sneaker-releases-november-15-november-21-2026/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Nike SNKRS; styled images on the official page produced by TITAN22 — Philippines.",
+      "media": {
+        "asset": "assets/nike-kobe-9-philippines-2026-fallback.svg",
+        "origin_url": "https://www.nike.com/ph/launch/t/kobe-9-em-low-protro-laser-crimson-and-obsidian",
+        "external_image_url": "https://static.nike.com/a/images/t_prod_ls/w_1920,c_limit/f5ff9d49-ba55-440b-830f-08a08ad9cbf4/kobe-9-em-low-protro-laser-crimson-and-obsidian-io6262-600-release-date.jpg",
+        "alt": "Nike 菲律宾 SNKRS 的 Kobe 9 EM Low Protro 官方图。",
+        "caption": "Nike 菲律宾 SNKRS 的 Kobe 9 EM Low Protro 官方图。",
+        "credit": "Nike SNKRS; styled images on the official page produced by TITAN22 — Philippines.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "liz-harris-films-water-2026",
+      "level": "major",
+      "title": "Liz Harris 让两部水的电影共用一张唱片",
+      "english": {
+        "title": "Liz Harris puts two water films on one record",
+        "deck": "One score is available to hear now. Both arrive together on Kranky on November 27.",
+        "abstract": "One score is available to hear now. Both arrive together on Kranky on November 27."
+      },
+      "sources": [
+        {
+          "title": "Music For Two Films About Water | Liz Harris | Grouper",
+          "publisher": "Grouper / Kranky on Bandcamp",
+          "url": "https://grouper.bandcamp.com/album/music-for-two-films-about-water",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Grouper's Liz Harris returns to Kranky with two film scores · News ⟋ RA",
+          "publisher": "Resident Advisor",
+          "url": "https://ra.co/news/86171",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Grouper’s Liz Harris Announces 'Music For Two Films About Water'",
+          "publisher": "Stereogum",
+          "url": "https://stereogum.com/2513917/groupers-liz-harris-announces-music-for-two-films-about-water-shares-22-minute-track/music",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Liz Harris to release Music For Two Films About Water — JOLT",
+          "publisher": "JOLT",
+          "url": "https://joltmagazine.com/news/liz-harris-to-release-music-for-two-films-about-water",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Liz Harris details new album, Music For Two Films About Water | The Line of Best Fit",
+          "publisher": "The Line of Best Fit",
+          "url": "https://www.thelineofbestfit.com/news/liz-harris-details-new-album-music-for-two-films-about-water",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Grouper’s Liz Harris Shares 21-Minute Composition | Pitchfork",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/story/groupers-liz-harris-shares-21-minute-composition/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Grouper's Liz Harris Announces New Album 'Music for Two Films About Water' - Our Culture",
+          "publisher": "Our Culture",
+          "url": "https://ourculturemag.com/groupers-liz-harris-announces-new-album-music-for-two-films-about-water/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Grouper’s Liz Harris Explains the Art of the Paradox and the Beauty of Mistakes | Pitchfork",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/features/profile/groupers-liz-harris-explains-the-art-of-the-paradox-and-the-beauty-of-mistakes/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "ANOMALY",
+          "publisher": "ANOMALY",
+          "url": "https://anomalytokyo.com/en/exhibition/constellation/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Interview: Grouper and Paul Clipson Discuss 'Hypnosis Display' | KQED",
+          "publisher": "KQED",
+          "url": "https://www.kqed.org/arts/10540951/interview-grouper-and-paul-clipson-discuss-hypnosis-display",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Liz Harris / Kranky official album artwork.",
+      "media": {
+        "asset": "assets/liz-harris-films-water-2026-fallback.svg",
+        "origin_url": "https://grouper.bandcamp.com/album/music-for-two-films-about-water",
+        "external_image_url": "https://f4.bcbits.com/img/a3619605292_5.jpg",
+        "alt": "Kranky 在 Bandcamp 提供的《Music For Two Films About Water》正式唱片封面。",
+        "caption": "Kranky 在 Bandcamp 提供的《Music For Two Films About Water》正式唱片封面。",
+        "credit": "Liz Harris / Kranky official album artwork.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "brancusi-studio-moma-2026",
+      "level": "signal",
+      "title": "布朗库西的雕塑，连同底座与工作室一起看",
+      "english": {
+        "title": "Brancusi’s work is seen with its bases and studio",
+        "deck": "MoMA uses sculptures, archival photographs and furniture to show how Brancusi arranged his work.",
+        "abstract": "MoMA uses sculptures, archival photographs and furniture to show how Brancusi arranged his work."
+      },
+      "sources": [
+        {
+          "title": "Brancusi: The Artist and His Studio | MoMA",
+          "publisher": "MoMA",
+          "url": "https://www.moma.org/calendar/exhibitions/5910",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Brancusi - Centre Pompidou",
+          "publisher": "Centre Pompidou",
+          "url": "https://www.centrepompidou.fr/en/program/calendar/event/H531gan",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Brancusi at the Neue Nationalgalerie",
+          "publisher": "Staatliche Museen zu Berlin",
+          "url": "https://www.smb.museum/en/museums-institutions/nationalgalerie/exhibitions/detail/brancusi/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Constantin Brancusi: The Artist and His Studio · The Museum of Modern Art · On View New York City",
+          "publisher": "On View NYC",
+          "url": "https://onview.so/manhattan/moma/the-artist-and-his-studio",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Why Not Just Show the Photographs? | Magazine | MoMA",
+          "publisher": "MoMA Magazine",
+          "url": "https://www.moma.org/magazine/articles/1479",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "L'atelier de Brancusi, matrice de tout son œuvre - Pompidou+ - Centre Pompidou",
+          "publisher": "Centre Pompidou Magazine",
+          "url": "https://www.centrepompidou.fr/fr/pompidou-plus/magazine/article/latelier-de-brancusi-matrice-de-tout-son-oeuvre",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Rare show of sculptor Constantin Brâncuși’s work opens in Paris | Sculpture | The Guardian",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/artanddesign/2024/mar/27/sculptor-constantin-brancusi-exhibition-paris",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Constantin Brancusi at the Pompidou, Reviewed | The New Yorker",
+          "publisher": "The New Yorker",
+          "url": "https://www.newyorker.com/magazine/2024/06/03/brancusi-makes-the-modern-world-look-stale",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Brancusi, Pompidou Centre, Paris review - a sculptor's spiritual quest for form and essence | The Arts Desk",
+          "publisher": "The Arts Desk",
+          "url": "https://theartsdesk.com/visual-arts/brancusi-pompidou-centre-paris-review-sculptors-spiritual-quest-form-and-essence",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Constantin Brancusi, vivant - The Art Newspaper",
+          "publisher": "The Art Newspaper France",
+          "url": "https://www.artnewspaper.fr/2024/06/16/constantin-brancusi-vivant",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Centre Pompidou, PH 854. Digital Image © CNAC/MNAM, Dist. RMN-Grand Palais / Art Resource, NY. © Succession Brancusi (Adagp).",
+      "media": {
+        "asset": "assets/brancusi-studio-moma-2026-fallback.svg",
+        "origin_url": "https://www.moma.org/calendar/exhibitions/5910",
+        "external_image_url": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDYvMjkvN2p2OHVscnRnaV9CcmFuY3VzaV9QSF84NTRfbGVhZF9oaWdoX3Jlcy5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDY2N14gLWdyYXZpdHkgQ2VudGVyIC1jcm9wIDIwMDB4NjY3KzArMCJdXQ/Brancusi_PH-854_lead_high-res.jpg?sha=daeae47235be716a",
+        "alt": "布朗库西在巴黎工作室的自拍，约 1934 年。画面含《无尽之柱》《鱼》《丽达》。",
+        "caption": "布朗库西在巴黎工作室的自拍，约 1934 年。画面含《无尽之柱》《鱼》《丽达》。",
+        "credit": "Centre Pompidou, PH 854. Digital Image © CNAC/MNAM, Dist. RMN-Grand Palais / Art Resource, NY. © Succession Brancusi (Adagp).",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "emily-in-paris-scad-2026",
+      "level": "signal",
+      "title": "《艾米丽在巴黎》把一百多套衣服挂进博物馆",
+      "english": {
+        "title": "Emily in Paris hangs a hundred outfits in a museum",
+        "deck": "SCAD FASH puts Marylin Fitoussi’s character wardrobes in one exhibition with sketches and production material.",
+        "abstract": "SCAD FASH puts Marylin Fitoussi’s character wardrobes in one exhibition with sketches and production material."
+      },
+      "sources": [
+        {
+          "title": "'Emily in Paris: Fashion Without Rules — Costumes by Marylin Fitoussi' | SCAD FASH Museum of Fashion + Film",
+          "publisher": "SCAD FASH",
+          "url": "https://www.scadfash.org/exhibitions/emily-paris-fashion-without-rules-costumes-marylin-fitoussi",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Emily in Paris: Stories Behind the Show's Iconic Outfits | Marie Claire",
+          "publisher": "Marie Claire",
+          "url": "https://www.marieclaire.com/fashion/emily-in-paris-costumes-marylin-fitoussi-exhibition-scad-fash/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "What is American style? SCAD pairs colorful 'Emily in Paris' and classic CZ Guest in new exhibitions | Georgia Public Broadcasting",
+          "publisher": "Georgia Public Broadcasting",
+          "url": "https://www.gpb.org/news/2026/11/13/what-american-style-scad-contrasts-colorful-emily-in-paris-and-classic-cz-guest-in",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Ooh la la! ‘Emily in Paris’ comes to SCAD FASH - The Atlanta 100",
+          "publisher": "The Atlanta 100",
+          "url": "https://theatlanta100.com/lifestyle/living/design/2026/11/13/ooh-la-la-emily-in-paris-comes-to-scad-fash/18819",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Inside Emily Cooper’s New Style Era in Emily in Paris Season 5 - Netflix Tudum",
+          "publisher": "Netflix Tudum",
+          "url": "https://www.netflix.com/tudum/features/emily-in-paris-italian-costumes",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "SCAD Fash Presents ‘Emily in Paris’ Retrospective | The Impression",
+          "publisher": "The Impression",
+          "url": "https://theimpression.com/scad-fash-presents-emily-in-paris-retrospective/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Emily in Paris: Marylin Fitoussi’s Costumes Go on Display at SCAD FASH — CoutureNotebook",
+          "publisher": "CoutureNotebook",
+          "url": "https://www.couturenotebook.com/best-haute-couture-blog/emily-paris-scad-exhibition",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "‘Emily in Paris’ Costume Designer Marylin Fitoussi on All the Key Season 5 References | Vogue",
+          "publisher": "Vogue",
+          "url": "https://www.vogue.com/article/emily-in-paris-costume-designer-season-5-references",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "'Emily in Paris' costume designer Marylin Fitoussi on dressing without fear - Harpers bazaar",
+          "publisher": "Harper’s Bazaar India",
+          "url": "https://www.harpersbazaar.in/fashion/story/emily-in-paris-costume-designer-marylin-fitoussi-on-dressing-without-fear-1353870-2026-03-04",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "From Paris to Rome: 'Emily in Paris' Costume Designer Marylin Fitoussi on Season Four's Bold Fashion Moves - The Art of Costume",
+          "publisher": "The Art of Costume",
+          "url": "https://theartofcostume.com/2025/06/16/from-paris-to-rome-emily-in-paris-costume-designer-marylin-fitoussi-on-season-4s-bold-fashion-moves/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "‘Emily in Paris’ costume designer: “Fashion is not serious, so have fun with it” - Cosmopolitan India",
+          "publisher": "Cosmopolitan India",
+          "url": "https://www.cosmopolitan.in/fashion/features/story/emily-in-paris-costume-designer-fashion-is-not-serious-so-have-fun-with-it-1069711-2024-08-12",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "SCAD FASH Museum of Fashion + Film official exhibition graphic.",
+      "media": {
+        "asset": "assets/emily-in-paris-scad-2026-fallback.svg",
+        "origin_url": "https://www.scadfash.org/exhibitions/emily-paris-fashion-without-rules-costumes-marylin-fitoussi",
+        "external_image_url": "https://www.scadfash.org/sites/fash/files/styles/fash1x1_768/public/exhibitions-SCAD-FASH-Emily-In-Paris-Graphic.jpg?itok=J9a1_fIV&timestamp=1790968596",
+        "alt": "SCAD FASH 发布的展览宣传图。",
+        "caption": "SCAD FASH 发布的展览宣传图。",
+        "credit": "SCAD FASH Museum of Fashion + Film official exhibition graphic.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "nara-zwirner-new-york-2026",
+      "level": "signal",
+      "title": "奈良美智给纽约个展选了一份歌单",
+      "english": {
+        "title": "Yoshitomo Nara picks a playlist for his New York show",
+        "deck": "Two Chelsea galleries share a show connecting new work, earlier selections and music chosen by Nara.",
+        "abstract": "Two Chelsea galleries share a show connecting new work, earlier selections and music chosen by Nara."
+      },
+      "sources": [
+        {
+          "title": "Yoshitomo Nara | New York: 19th & 20th Street | November 5—December 12, 2026 | David Zwirner",
+          "publisher": "David Zwirner",
+          "url": "https://www.davidzwirner.com/exhibitions/2026/yoshitomo-nara",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Yoshitomo Nara: Playlist | Selected by the artist for David Zwirner New York 2026 Exhbiition | David Zwirner",
+          "publisher": "David Zwirner / Yoshitomo Nara",
+          "url": "https://www.davidzwirner.com/news/2026/yoshitomo-nara-nyc-playlist",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Yoshitomo Nara Returns to NYC with David Zwirner Exhibition – The Brooklyn College Vanguard",
+          "publisher": "Brooklyn College Vanguard",
+          "url": "https://vanguard.blog.brooklyn.edu/2026/11/yoshitomo-nara-returns-to-nyc-with-david-zwirner-exhibition/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Yoshitomo Nara Returns to New York With First Show at David Zwirner | NY&NJ",
+          "publisher": "NY&NJ",
+          "url": "https://www.nyandnj.com/en/article/yoshitomo-nara-david-zwirner-new-york-2026-11",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Yoshitomo Nara Returns to New York | David Zwirner — GEN DE ART",
+          "publisher": "GEN DE ART",
+          "url": "https://www.tfwsa.or.jp/post/yoshitomo-nara-returns-to-new-york",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Yoshitomo Nara at David Zwirner New York: Softer Faces, White Heads and a Return to the 1980s - Art Fair",
+          "publisher": "Art Fair",
+          "url": "https://artfair.app/yoshitomo-nara-david-zwirner-new-york-chelsea/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Yoshitomo Nara | Guggenheim Museum Bilbao",
+          "publisher": "Guggenheim Museum Bilbao",
+          "url": "https://www.guggenheim-bilbao.eus/en/exhibitions/yoshitomo-nara",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Yoshitomo Nara | LACMA",
+          "publisher": "LACMA",
+          "url": "https://www.lacma.org/art/exhibition/yoshitomo-nara",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "SFMOMA Opens Major Retrospective of Yoshitomo Nara in Fall 2027",
+          "publisher": "SFMOMA",
+          "url": "https://www.sfmoma.org/press-release/sfmoma-opens-major-retrospective-of-yoshitomo-nara-in-fall-2027/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "A guide to the Pop-influenced Japanese artist Yoshitomo Nara",
+          "publisher": "Christie’s",
+          "url": "https://www.christies.com/en/stories/yoshitomo-nara-collecting-guide-aa7bd7944a774805b39fa91a3cded9e7",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Yoshitomo Nara / David Zwirner official exhibition media.",
+      "media": {
+        "asset": "assets/nara-zwirner-new-york-2026-fallback.svg",
+        "origin_url": "https://www.davidzwirner.com/exhibitions/2026/yoshitomo-nara",
+        "external_image_url": "https://cdn.sanity.io/images/juzvn5an/release-adp/dd3e7c813cf54f98c2f1689e0213f6dce122aadd-3000x1000.jpg?w=3840",
+        "alt": "David Zwirner 发布的奈良美智纽约个展项目图。",
+        "caption": "David Zwirner 发布的奈良美智纽约个展项目图。",
+        "credit": "Yoshitomo Nara / David Zwirner official exhibition media.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "tim-reaper-worlds-end-2026",
+      "level": "signal",
+      "title": "Tim Reaper 从一支行进乐队打开个人专辑",
+      "english": {
+        "title": "Tim Reaper opens his solo album with a marching band",
+        "deck": "The Hyperdub album arrives in February 2027. Its first track, Roll Call, is available now.",
+        "abstract": "The Hyperdub album arrives in February 2027. Its first track, Roll Call, is available now."
+      },
+      "sources": [
+        {
+          "title": "World's End | Tim Reaper",
+          "publisher": "Tim Reaper / Hyperdub on Bandcamp",
+          "url": "https://timreaper.bandcamp.com/album/worlds-end",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Tim Reaper announces debut solo album, World's End · News ⟋ RA",
+          "publisher": "Resident Advisor",
+          "url": "https://ra.co/news/86349",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Tim Reaper Announces Debut Album World’s End | Pitchfork",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/story/tim-reaper-announces-debut-album-worlds-end/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Tim Reaper's Debut Solo Album Set for Release via Hyperdub | The Quietus",
+          "publisher": "The Quietus",
+          "url": "https://thequietus.com/news/tim-reapers-debut-solo-album-set-for-release-via-hyperdub/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Tim Reaper World’s End Album Announced",
+          "publisher": "Neon Music",
+          "url": "https://neonmusic.co.uk/tim-reaper-worlds-end-album",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Tim Reaper & Kloke - In Full Effect – Hyperdub",
+          "publisher": "Hyperdub",
+          "url": "https://hyperdub.net/products/tim-reaper-kloke-in-full-effect",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Tim Reaper & Kloke - In Full Effect | DJ Mag",
+          "publisher": "DJ Mag",
+          "url": "https://djmag.com/reviews/tim-reaper-kloke-full-effect",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Tim Reaper & Kloke - In Full Effect · Album Review ⟋ RA",
+          "publisher": "Resident Advisor",
+          "url": "https://ra.co/reviews/36205",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Hyperdub announce jungle debut with Tim Reaper and Kloke's 'In Full Effect' - Mixmag.net",
+          "publisher": "Mixmag",
+          "url": "https://mixmag.net/read/tim-reaper-kloke-in-full-effect-hyperdub-jungle-news",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Tim Reaper World's End Vinyl / CD / Digital – Hyperdub",
+          "publisher": "Hyperdub",
+          "url": "https://hyperdub.net/products/tim-reaper-worlds-end",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Tim Reaper / Hyperdub official album artwork.",
+      "media": {
+        "asset": "assets/tim-reaper-worlds-end-2026-fallback.svg",
+        "origin_url": "https://timreaper.bandcamp.com/album/worlds-end",
+        "external_image_url": "https://f4.bcbits.com/img/a4271143369_5.jpg",
+        "alt": "Tim Reaper 在 Bandcamp 提供的《World’s End》正式封面。",
+        "caption": "Tim Reaper 在 Bandcamp 提供的《World’s End》正式封面。",
+        "credit": "Tim Reaper / Hyperdub official album artwork.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "salman-toor-courtauld-2026",
+      "level": "signal",
+      "title": "Salman Toor 借一幅旧画重新安排酒吧里的目光",
+      "english": {
+        "title": "Salman Toor finds new ways to look around a bar",
+        "deck": "Nineteen works at the Courtauld make space for friendships, rooms and the gaze of other people.",
+        "abstract": "Nineteen works at the Courtauld make space for friendships, rooms and the gaze of other people."
+      },
+      "sources": [
+        {
+          "title": "Salman Toor: Someone Like You - Courtauld",
+          "publisher": "Courtauld Gallery",
+          "url": "https://courtauld.ac.uk/whats-on/exh-salman-toor-someone-like-you/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Salman Toor: Someone Like You | Courtauld Institute | Art in London",
+          "publisher": "Time Out London",
+          "url": "https://www.timeout.com/london/art/salman-toor-someone-like-you",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Salman Toor takes what he wants from art history - Apollo Magazine",
+          "publisher": "Apollo",
+          "url": "https://apollo-magazine.com/salman-toor-someone-like-you-courtauld-london-review/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Salman Toor’s Courtauld Gallery exhibition hopes to move on from 'joyous communion' - The Art Newspaper - International art news and events",
+          "publisher": "The Art Newspaper",
+          "url": "https://www.theartnewspaper.com/2026/10/13/salman-toor-courtauld-gallery-exhibition-runs-the-emotional-gamut-from-convivial-to-fraught",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Salman Toor: How Will I Know | Whitney Museum of American Art",
+          "publisher": "Whitney Museum",
+          "url": "https://whitney.org/exhibitions/salman-toor",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Salman Toor: Someone Like You | CAS",
+          "publisher": "Contemporary Art Society",
+          "url": "https://contemporaryartsociety.org/explore/resources/salman-toor-someone-you",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Salman Toor: “Painting Is So Serious But Also, Why Does It Have To Be So Serious?” | British Vogue",
+          "publisher": "British Vogue",
+          "url": "https://www.vogue.co.uk/article/salman-toor-interview",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "“Salman Toor: Someone Like You” at the Courtauld Gallery",
+          "publisher": "Sotheby’s",
+          "url": "https://www.sothebys.com/en/museums/courtauld-gallery/exhibitions/salman-toor-someone-like-you-at-the-courtauld-gallery",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "A Bar at the Folies-Bergère - Courtauld",
+          "publisher": "Courtauld Collection",
+          "url": "https://courtauld.ac.uk/highlights/a-bar-at-the-folies-bergere/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Salman Toor: No Ordinary Love | 2023 | Rose Art Museum | Brandeis University",
+          "publisher": "Rose Art Museum",
+          "url": "https://www.brandeis.edu/rose/exhibitions/2023/salman-toor.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "© Salman Toor; courtesy of the artist, Luhring Augustine and Thomas Dane Gallery. Photo: Genevieve Hanson.",
+      "media": {
+        "asset": "assets/salman-toor-courtauld-2026-fallback.svg",
+        "origin_url": "https://courtauld.ac.uk/whats-on/exh-salman-toor-someone-like-you/",
+        "external_image_url": "https://courtauld.ac.uk/wp-content/uploads/2025/09/Smaller_New_ImageThe-Bar-on-East-13_2019_C33946_adj-High.png",
+        "alt": "Courtauld Gallery 官方作品图，Salman Toor《The Bar on East 13th》，2019 年。",
+        "caption": "Courtauld Gallery 官方作品图，Salman Toor《The Bar on East 13th》，2019 年。",
+        "credit": "© Salman Toor; courtesy of the artist, Luhring Augustine and Thomas Dane Gallery. Photo: Genevieve Hanson.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "stussy-cdg-shibuya-2026",
+      "level": "signal",
+      "title": "Stüssy 和 CDG 的涩谷快闪结束，常设店将在二楼开张",
+      "english": {
+        "title": "Stüssy and CDG in Shibuya, between two storefronts",
+        "deck": "The first-floor presale has ended and PARCO schedules a permanent CDG space upstairs.",
+        "abstract": "The first-floor presale has ended and PARCO schedules a permanent CDG space upstairs."
+      },
+      "sources": [
+        {
+          "title": "event&POPUP（CDG POP UP STORE） | 渋谷PARCO(パルコ)",
+          "publisher": "Shibuya PARCO",
+          "url": "https://shibuya.parco.jp/event/detail/?id=9048",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Stüssy x CDG at Shibuya PARCO: 12 Styles, Pre-Sale Nov 7",
+          "publisher": "JustFresh",
+          "url": "https://www.justfresh.co/fashion/stussy-cdg-collection-shibuya-parco-12-styles",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "CDG × ステューシーの最新コラボが渋谷PARCOで先行リリース！注目の全12型を前回のコラボと併せてチェックしよう | スニーカーダンク",
+          "publisher": "SNKRDUNK",
+          "url": "https://snkrdunk.com/articles/33703/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "〖渋谷PARCO〗CDG × ステューシーのコラボを11月7日(土)から先行発売｜フーディーなど12型",
+          "publisher": "CDG Freak",
+          "url": "https://cdg-freak.com/news/cdg-stussy-shibuya-parco-2026/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Stüssy CDG Shibuya Parco Release November 7 | FO",
+          "publisher": "Finally Offline",
+          "url": "https://www.finallyoffline.com/article/stussy-cdg-shibuya-parco-lottery-november-7-w3k8q5mx",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Stüssy & CDG – Stüssy Europe",
+          "publisher": "Stüssy",
+          "url": "https://eu.stussy.com/blogs/features/stussy-cdg-fall-2020",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "STÜSSY 40TH ANNIVERSARY COLLECTION – Stüssy Europe",
+          "publisher": "Stüssy",
+          "url": "https://eu.stussy.com/blogs/features/stussy-40th-anniversary-collection",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "STÜSSY & CDG – Stüssy Europe",
+          "publisher": "Stüssy",
+          "url": "https://eu.stussy.com/blogs/features/stussy-cdg",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "「ステューシー」 × 「CDG」カプセルコレクション発売（WWDジャパン）　 | TSI HOLDINGS",
+          "publisher": "TSI Holdings / WWD Japan",
+          "url": "https://www.tsi-holdings.com/brand/SS/-cdgwwd.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Stüssy World Tour – Stüssy",
+          "publisher": "Stüssy",
+          "url": "https://www.stussy.com/blogs/features/stussy-world-tour-collection",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "CDG × Stüssy の限定カプセルコレクションが発売 - Yakkun StreetFashion Media",
+          "publisher": "Yakkun StreetFashion Media",
+          "url": "https://yakkun-fashion.jp/cdg-x-stussy-2026/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "SHIBUYA PARCO 2026 NEW & RENEWAL 「解体を主張する」 (Re) Construction｜渋谷PARCO",
+          "publisher": "Shibuya PARCO",
+          "url": "https://shibuya.parco.jp/page/2026new-renewal/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "渋谷パルコ26年秋リニューアル、CDG新店やパレス世界初業態などファッション店舗充実 - ファッションプレス",
+          "publisher": "Fashion Press",
+          "url": "https://www.fashion-press.net/news/152915",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Shibuya PARCO / CDG official event graphic.",
+      "media": {
+        "asset": "assets/stussy-cdg-shibuya-2026-fallback.svg",
+        "origin_url": "https://shibuya.parco.jp/event/detail/?id=9048",
+        "external_image_url": "https://image.parco.jp/SCCWEB/image/shibuya/store/storage/w1240/popup_cname_20261030130057.jpg",
+        "alt": "涩谷 PARCO 官方 CDG 快闪店活动图。用于定位活动，非 Stüssy 联名单品照。",
+        "caption": "涩谷 PARCO 官方 CDG 快闪店活动图。用于定位活动，非 Stüssy 联名单品照。",
+        "credit": "Shibuya PARCO / CDG official event graphic.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ]
+}
