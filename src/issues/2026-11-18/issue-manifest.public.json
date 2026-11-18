@@ -5,8 +5,8 @@
   "visibility": "published_preview",
   "timezone": "Asia/Shanghai",
   "candidate_created_at": "2026-11-18T11:38:58.940+08:00",
-  "research_locked_at": "2026-11-18T12:14:10.425+08:00",
-  "content_locked_at": "2026-11-18T12:14:10.425+08:00",
+  "research_locked_at": "2026-11-18T13:34:56.036+08:00",
+  "content_locked_at": "2026-11-18T13:34:56.036+08:00",
   "status": "BLOCKED",
   "media_required": true,
   "contract": {
@@ -18,11 +18,11 @@
   "core_version": "v2",
   "content_lock": {
     "status": "locked",
-    "sha256": "6f446d9fe447522c28df7121a1c192a5a48a10a418984c9ab2b1170e87d6cda6",
-    "locked_at": "2026-11-18T12:14:10.425+08:00"
+    "sha256": "8c5df69dccc0c89eec3713e7042f51e1c2f20fd1907f7d65f8ceb50d50e2abb3",
+    "locked_at": "2026-11-18T13:34:56.036+08:00"
   },
   "source_hashes": {
-    "content_sha256": "6f446d9fe447522c28df7121a1c192a5a48a10a418984c9ab2b1170e87d6cda6",
+    "content_sha256": "8c5df69dccc0c89eec3713e7042f51e1c2f20fd1907f7d65f8ceb50d50e2abb3",
     "art_direction_sha256": "dd6f252a6f79e2e807f83f0be95b94f189a3961f79006939b47efbb59d6b92a8",
     "issue_style_sha256": "a6e8c1c128719b0e455ab96cd86231337897c9841aa6230b41a1caf0984292fc"
   },
@@ -79,8 +79,8 @@
     "exception_reason": "沿用已批准的共同阅读方式。今日以跨展场比较与首发曲试听排顺序，封面用分隔弧线。前两期的事件与链接已核对。"
   },
   "rights_summary": {
-    "required_assets": 10,
-    "unknown_required_assets": 10,
+    "required_assets": 14,
+    "unknown_required_assets": 14,
     "status": "blocked"
   },
   "artifact_digests": {
@@ -1166,6 +1166,446 @@
         "alt": "涩谷 PARCO 官方 CDG 快闪店活动图。用于定位活动，非 Stüssy 联名单品照。",
         "caption": "涩谷 PARCO 官方 CDG 快闪店活动图。用于定位活动，非 Stüssy 联名单品照。",
         "credit": "Shibuya PARCO / CDG official event graphic.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "issey-miyake-chiffon-twist-shikaku-2026",
+      "level": "signal",
+      "title": "三宅一生让旅途照片顺着褶裥转弯",
+      "english": {
+        "title": "Issey Miyake makes a travel photograph turn with the folds",
+        "deck": "The Shinjuku installation pairs solid and printed tops that change shape on the body.",
+        "abstract": "The Shinjuku installation pairs solid and printed tops that change shape on the body."
+      },
+      "sources": [
+        {
+          "title": "ISSEY MIYAKE “CHIFFON TWIST: Emerging Presence” – ISSEY MIYAKE ONLINE STORE",
+          "publisher": "ISSEY MIYAKE",
+          "url": "https://us.isseymiyake.com/blogs/shikaku/18905",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "アイテムのご紹介「CHIFFON TWIST VIEW POINT」 – isseymiyake.com",
+          "publisher": "ISSEY MIYAKE",
+          "url": "https://www.isseymiyake.com/en/blogs/news/18891",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "ISSEY MIYAKE「CHIFFON TWIST: Emerging Presence」 – artscape",
+          "publisher": "artscape",
+          "url": "https://artscape.jp/exhibitions/82057/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "イッセイ ミヤケ、プリーツとねじれが生む新作トップを発売。新宿店での展示にも注目 | Vogue Japan",
+          "publisher": "Vogue Japan",
+          "url": "https://www.vogue.co.jp/article/2026-11-10-issey-miyake",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "イッセイ ミヤケ”旅先の風景”映したねじれプリーツトップ、テラコッタカラーのハイネック - ファッションプレス",
+          "publisher": "Fashion Press",
+          "url": "https://www.fashion-press.net/news/153023",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "イッセイ ミヤケ シフォン ツイスト ー終わりのない開かれた対話ー | 阪急うめだ本店 HANKYU.MODE",
+          "publisher": "Hankyu Umeda",
+          "url": "https://www.hankyu-dept.co.jp/honten/mode/topics/detail/1250961_2148.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Issey Miyake’s Satoshi Kondo is behind the costumes for Némo Flouret’s latest ballet | Wallpaper*",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/fashion-beauty/satoshi-kondo-issey-miyake-nemo-flouret-dance",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "ISSEY MIYAKE “CHIFFON TWIST: An Open-Ended Dialogue” – ISSEY MIYAKE EU",
+          "publisher": "ISSEY MIYAKE",
+          "url": "https://eu.isseymiyake.com/blogs/shikaku/17617",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Issey Miyake - Ensemble - Japanese - The Metropolitan Museum of Art",
+          "publisher": "Metropolitan Museum of Art",
+          "url": "https://www.metmuseum.org/art/collection/search/695620",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "MIYAKE ISSEY EXHIBITION: The Work of Miyake Issey | Special Exhibitions | THE NATIONAL ART CENTER, TOKYO",
+          "publisher": "The National Art Center, Tokyo",
+          "url": "https://www.nact.jp/english/exhibition_special/2016/miyake_issey/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Satoshi Kondo Designs for the Space Between Body and Fabric",
+          "publisher": "Whitewall",
+          "url": "https://whitewall.art/fashion/satoshi-kondo-interview/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "ISSEY MIYAKE SHINJUKU / SHIKAKU official project imagery.",
+      "media": {
+        "asset": "assets/issey-miyake-chiffon-twist-shikaku-2026-fallback.svg",
+        "origin_url": "https://us.isseymiyake.com/blogs/shikaku/18905",
+        "external_image_url": "https://cdn.shopify.com/s/files/1/0650/5981/5642/files/SHIKAKU_2026nov16_01_638b85aa-f63a-4220-a473-cd2d813d09ab_1024x1024.jpg?v=1794792863",
+        "alt": "ISSEY MIYAKE 新宿 SHIKAKU 的《CHIFFON TWIST: Emerging Presence》官方项目图。",
+        "caption": "ISSEY MIYAKE 新宿 SHIKAKU 的《CHIFFON TWIST: Emerging Presence》官方项目图。",
+        "credit": "ISSEY MIYAKE SHINJUKU / SHIKAKU official project imagery.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "theaster-gates-african-still-life-seoul-2026",
+      "level": "signal",
+      "title": "Theaster Gates 给首尔的静物配了一间听音室",
+      "english": {
+        "title": "Theaster Gates gives a Seoul still life a listening room",
+        "deck": "African Still Life juxtaposes clay, objects and Dinh Nguyen’s record archive at White Cube Seoul.",
+        "abstract": "African Still Life juxtaposes clay, objects and Dinh Nguyen’s record archive at White Cube Seoul."
+      },
+      "sources": [
+        {
+          "title": "Theaster Gates, Seoul (2026) | White Cube",
+          "publisher": "White Cube",
+          "url": "https://www.whitecube.com/gallery-exhibitions/theaster-gates-seoul-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "\"도자기·음악으로 아프리카와 아시아를 잇다\"…'아프리카 정물들' 展 - 뉴스1",
+          "publisher": "News1 Korea",
+          "url": "https://www.news1.kr/life-culture/performance-exhibition/6341710",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "사물에 담긴 역사와 정체성…티에스터 게이츠 한국 첫 개인전 | 연합뉴스",
+          "publisher": "Yonhap",
+          "url": "https://www.yna.co.kr/amp/view/AKR20261103098600005",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "k-artnow.com",
+          "publisher": "K-ARTNOW",
+          "url": "https://k-artnow.com/posts.php?co_id=1794283733",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The 12 Best Gallery Shows in Seoul This November (2026) · On View",
+          "publisher": "On View Seoul",
+          "url": "https://onview.so/guides/best-gallery-shows-seoul",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Theaster Gates: Surrogate, Hong Kong, November 19, 2026–February 27, 2027 | Gagosian",
+          "publisher": "Gagosian",
+          "url": "https://gagosian.com/exhibitions/2026/theaster-gates-surrogate/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "www.whitechapelgallery.org",
+          "publisher": "Whitechapel Gallery",
+          "url": "https://www.whitechapelgallery.org/exhibitions/theaster-gates-a-clay-sermon/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "List of Works & Highlights | Theaster Gates: Afro-Mingei | Mori Art Museum",
+          "publisher": "Mori Art Museum",
+          "url": "https://www.mori.art.museum/en/exhibitions/theastergates/03/index.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Theaster Gates -African Still Life #3: A Tribute to Patric McCoy and Marva Jolly - Smart Museum of Art",
+          "publisher": "Smart Museum of Art",
+          "url": "https://smartmuseum.uchicago.edu/exhibitions/theaster-gates-african-still-life-3-a-tribute-to-patric-mccoy-and-marva-jolly/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "For Theaster Gates, the art is in the archives - WBEZ Chicago",
+          "publisher": "WBEZ Chicago",
+          "url": "https://www.wbez.org/arts/2025/09/19/theaster-gates-art-smart-museum-university-of-chicago-unto-thee-rebuild",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "An Interview with Artist Theaster Gates, Now Showing at White Cube | Observer",
+          "publisher": "Observer",
+          "url": "https://observer.com/2024/02/theaster-gates-interview-white-cube-hold-me/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "© Theaster Gates. White Cube installation photography, Jeon Byung Cheol.",
+      "media": {
+        "asset": "assets/theaster-gates-african-still-life-seoul-2026-fallback.svg",
+        "origin_url": "https://www.whitecube.com/gallery-exhibitions/theaster-gates-seoul-2026",
+        "external_image_url": "https://white-cube.transforms.svdcdn.com/production/uploads/Exhibitions/Gallery-Exhibitions/Seoul/2026/Theaster-Gates/Installs/Theaster-Gates-African-Still-Life-White-Cube-Seoul-South-Korea-4-November-18-December-2026_9.jpeg?w=1200&h=630&q=82&auto=format&fit=crop&dm=1793614474&s=7299852c4fe463fb1fb17ff32deadf4c",
+        "alt": "White Cube 发布的 Theaster Gates《African Still Life》首尔展览现场图。",
+        "caption": "White Cube 发布的 Theaster Gates《African Still Life》首尔展览现场图。",
+        "credit": "© Theaster Gates. White Cube installation photography, Jeon Byung Cheol.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "molteni-materialized-ideas-in-matter-2026",
+      "level": "signal",
+      "title": "旧家具改作，先从一个充气坐垫开始",
+      "english": {
+        "title": "A new life for an old chair starts with an inflatable seat",
+        "deck": "Molteni Museum asks designers to take another run at chairs and tables already in production.",
+        "abstract": "Molteni Museum asks designers to take another run at chairs and tables already in production."
+      },
+      "sources": [
+        {
+          "title": "Molteni museum | Materialized: IDEAS IN MATTER",
+          "publisher": "Molteni Museum",
+          "url": "https://www.moltenigroup.com/museum/en/exhibition",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Molteni Museum invites designers to think radically | Wallpaper*",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design-interiors/molteni-museum-materialized-ideas-in-matter-ron-gilad",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Molteni Icons Reimagined: Ron Gilad’s Material Exhibition — Built Current",
+          "publisher": "Built Current",
+          "url": "https://builtcurrent.com/articles/ron-gilad-invites-ten-designers-to-break-their-own-molteni-icons",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Materialized: Molteni Museum reimagines its icons",
+          "publisher": "DesignWanted",
+          "url": "https://designwanted.com/market-news/molteni-museum-materialized/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Molteni Museum Debuts an Experimental Design Exhibit, and Other News. – SURFACE",
+          "publisher": "Surface",
+          "url": "https://www.surfacemag.com/articles/molteni-museum-debuts-an-experimental-design-exhibit/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "app.initaly.it",
+          "publisher": "inITALY",
+          "url": "https://app.initaly.it/en/articolo/materialized-ideas-in-matter-la-mostra-al-molteni-museum-42901",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "La nuova mostra del Molteni Museum a Giussano | Elle Decor",
+          "publisher": "Elle Decor Italia",
+          "url": "https://www.elledecor.com/it/design/a74419502/mostra-molteni-museum-a-giussano/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The new exhibition curated by Ron Gilad at the Molteni Museum",
+          "publisher": "Archiproducts",
+          "url": "https://www.archiproducts.com/en/news/the-new-exhibition-curated-by-ron-gilad-at-the-molteni-museum_112776",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Molteni museum | PORTA VOLTA Special Edition 2026 | Materialized: Ideas in Matter",
+          "publisher": "Molteni Museum",
+          "url": "https://www.moltenigroup.com/museum/en/product/porta-volta-special-edition-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Molteni museum | Armchair | CINNAMON Special Edition 2026 | Materialized: Ideas in Matter",
+          "publisher": "Molteni Museum",
+          "url": "https://www.moltenigroup.com/museum/en/product/cinnamon-special-edition-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Molteni Museum official exhibition imagery.",
+      "media": {
+        "asset": "assets/molteni-materialized-ideas-in-matter-2026-fallback.svg",
+        "origin_url": "https://www.moltenigroup.com/museum/en/exhibition",
+        "external_image_url": "https://res.cloudinary.com/molteni/image/upload/f_webp,q_auto:best,w_352/v1794492004/2026_PH_MMuseum_Exhibition_16-9_Black_02.png",
+        "alt": "意大利 Molteni Museum 发布的《Materialized: Ideas in Matter》官方展览宣传图。",
+        "caption": "意大利 Molteni Museum 发布的《Materialized: Ideas in Matter》官方展览宣传图。",
+        "credit": "Molteni Museum official exhibition imagery.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "coachella-2027-lineup-stages",
+      "level": "signal",
+      "title": "读 Coachella 新海报，先看舞台写在哪里",
+      "english": {
+        "title": "Coachella’s lineup poster makes room for the dance tent",
+        "deck": "The 2027 lineup names three daily headliners and marks separate spaces for several shows.",
+        "abstract": "The 2027 lineup names three daily headliners and marks separate spaces for several shows."
+      },
+      "sources": [
+        {
+          "title": "Coachella Valley Music & Arts Festival",
+          "publisher": "Coachella",
+          "url": "https://www.coachella.com/lineup/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Coachella 2027: Dua Lipa, SZA, Tame Impala headline - Los Angeles Times",
+          "publisher": "Los Angeles Times",
+          "url": "https://www.latimes.com/entertainment-arts/music/story/2026-11-10/coachella-2027-festival-lineup-announced",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "2027 Coachella lineup released: Dua Lipa, Tame Impala, SZA, and Daddy Yankee to headline - KESQ",
+          "publisher": "KESQ",
+          "url": "https://kesq.com/news/2026/11/10/2027-coachella-lineup-released-dua-lipa-tame-impala-sza-and-daddy-yankee-to-headline/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Coachella 2027 Lineup: Tame Impala, SZA, and Dua Lipa | Pitchfork",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/story/coachella-2027-lineup-tame-impala-sza-and-dua-lipa/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Dua Lipa, Tame Impala and SZA to Headline Coachella 2027",
+          "publisher": "Variety Australia",
+          "url": "https://au.variety.com/2026/music/news/dua-lipa-tame-impala-sza-to-headline-coachella-2027-42469/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Coachella Sets 2027 Lineup With Dua Lipa, Tame Impala & SZA Out Front",
+          "publisher": "JamBase",
+          "url": "https://www.jambase.com/article/coachella-2027-lineup-dua-lipa-tame-impala-sza",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "7 Takeaways From the Coachella 2027 Lineup | Pitchfork",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/story/7-takeaways-from-the-coachella-2027-lineup/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Coachella 2027 Lineup Announced",
+          "publisher": "Stereogum",
+          "url": "https://stereogum.com/2517560/coachella-reveals-2027-lineup/news",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "2027 Coachella Lineup: Dua Lipa, Tame Impala, SZA, Daddy Yankee Headlining The Mega Festival - Pollstar News",
+          "publisher": "Pollstar",
+          "url": "https://news.pollstar.com/2026/11/10/2027-coachella-lineup-dua-lipa-tame-impala-sza-daddy-yankee-headlining-the-mega-festival/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Dua Lipa, Madonna, Tame Impala and SZA all confirmed for next year’s Coachella - but Drake's not happy | MusicRadar",
+          "publisher": "MusicRadar",
+          "url": "https://www.musicradar.com/artists/shows-festivals/dua-lipa-madonna-tame-impala-and-sza-all-confirmed-for-next-years-coachella-but-drakes-not-happy",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Coachella Valley Music & Arts Festival",
+          "publisher": "Coachella",
+          "url": "https://coachella.com/festival-info",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Coachella Valley Music and Arts Festival / Goldenvoice official lineup artwork.",
+      "media": {
+        "asset": "assets/coachella-2027-lineup-stages-fallback.svg",
+        "origin_url": "https://www.coachella.com/lineup/",
+        "external_image_url": "https://media.coachella.com/content/banner_images/830/1BFwfsGtHDwPf3ZjbkdfydD5u1e1OY5LNqHtPPSs.jpg",
+        "alt": "Coachella 主办方发布的 2027 年音乐节阵容海报。",
+        "caption": "Coachella 主办方发布的 2027 年音乐节阵容海报。",
+        "credit": "Coachella Valley Music and Arts Festival / Goldenvoice official lineup artwork.",
         "kind": "source_image",
         "origin_authority": "first_party_official",
         "rights_basis": "preview_user_authorized_external"
