@@ -1,0 +1,1303 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-11-22",
+  "publication_date": "2026-11-22",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-11-22T17:19:01.487+08:00",
+  "research_locked_at": "2026-11-22T22:44:25.286+08:00",
+  "content_locked_at": "2026-11-22T22:44:25.286+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "30944720ca4d4d5cc30d071415fd850327af10da750975cf9924f058d6d07ebc",
+    "locked_at": "2026-11-22T22:44:25.286+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "30944720ca4d4d5cc30d071415fd850327af10da750975cf9924f058d6d07ebc",
+    "art_direction_sha256": "6a5dc47af1f44018a113d37825ce0c4b98b72f39932181be8741401baee72a66",
+    "issue_style_sha256": "a6e8c1c128719b0e455ab96cd86231337897c9841aa6230b41a1caf0984292fc"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-11-22T22:43:47.240+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "从物件的形状读出它原来怎样被使用，再看它换了场地以后，谁能接触它、怎样使用它。",
+  "art_direction": {
+    "dominant_mood": "暗紫、米白与暖铜色。保留展品、服装、鞋履和建筑的原始色彩。",
+    "background_logic": "沿用已批准的共享阅读系统与 Living Edition B；日期内容不改共享界面。",
+    "palette_logic": "米白文字压在暗紫底上。暖铜细线提示展柜的轮廓和开口。",
+    "type_scale_logic": "沿用共享中英文字级与阅读行高，不以日期样式覆盖控件。",
+    "image_behavior": "区分真实商品、专辑封面、历史作品与现场图；官方外链失败显示明确标注的非纪实回退图。",
+    "page_density_and_tempo": "用上博金发圈和工艺展的宣纸起笔，接着切换到建筑、服装和摄影。两项唱片发行留在音乐雷达。",
+    "core_visual_action": "三组线框在右侧依次留出开口，表现陈列边界逐步打开。",
+    "cover_composition": "暗紫底、米白标题与暖铜开口线框。原创编辑封面。",
+    "desktop_interaction_mechanic": "继承共享首页、整期、单篇与返回位置的浏览结构。",
+    "behance_viewing_arc": "从实际物件与声画进入，再回到场地、公众和阅读距离；不增加未经维护的界面。",
+    "mobile_translation": "继承自然滚动、完整双语、图片自然比例和44px交互控件。",
+    "mobbin_usability_constraint": "键盘、无脚本、减弱动态及九种风格外观组合沿用共享阅读合同。",
+    "quiet_ending": "以观展日期和两项轻量试听线索把读者带回实际的使用场景。",
+    "closing_quotation": {
+      "id": "ct-en-005",
+      "language": "en",
+      "text": "A release begins only when someone can truly enter it.",
+      "credit": "Culture & Taste Editorial"
+    },
+    "closing_palette": {
+      "background": "#2D2336",
+      "foreground": "#FFF1DF",
+      "accent": "#DCA991",
+      "rationale": "暗紫、米白和暖铜提供足够的文字与线条对比，适合展柜主题。"
+    }
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": [
+      "2026-11-18",
+      "2026-11-17",
+      "2026-11-16",
+      "2026-11-15",
+      "2026-11-03",
+      "2026-11-02",
+      "2026-10-28"
+    ],
+    "repeated_mechanisms": [
+      "Owner-approved shared reading system",
+      "Official-origin links and static image fallbacks"
+    ],
+    "exception_reason": "封面改用带开口的线框。文章按展品、穿戴与公共场地组织，声音信号保留在音乐雷达。前两期的事件和来源已核对。"
+  },
+  "rights_summary": {
+    "required_assets": 11,
+    "unknown_required_assets": 10,
+    "status": "blocked"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": null
+  },
+  "evidence_refs": {
+    "technical": [],
+    "editorial_visual": [],
+    "gate": []
+  },
+  "qa": {
+    "html_parse": "unavailable",
+    "assets": "unavailable",
+    "internal_links": "unavailable",
+    "no_js_reading": "unavailable",
+    "desktop_render": "unavailable",
+    "mobile_render": "unavailable",
+    "reduced_motion": "unavailable"
+  },
+  "limitations": [
+    "Preview edition. Official visual sources are linked from each story, with historical or contextual images identified in their captions.",
+    "The edition includes selections from the past several days. The text retains the relevant exhibition and release dates."
+  ],
+  "stories": [
+    {
+      "id": "jewelry-body-transformed-shanghai-2026",
+      "level": "cover",
+      "title": "一千多枚金圈，怎样戴回头上",
+      "english": {
+        "title": "How More Than a Thousand Gold Rings Were Worn",
+        "deck": "The Shanghai Museum’s new jewelry exhibition starts with where an ornament was worn and how it changed the body.",
+        "abstract": "The Shanghai Museum’s new jewelry exhibition starts with where an ornament was worn and how it changed the body."
+      },
+      "sources": [
+        {
+          "title": "Shanghai Museum to host landmark free exhibition with The Met",
+          "publisher": "Shanghai Municipal Administration of Culture and Tourism",
+          "url": "https://english.shanghai.gov.cn/en-ArtExhibitions/20261110/d957b284e0d74ef4b626ade70742f874.html",
+          "published_date": "2026-11-10",
+          "event_date": "2026-11-18 to 2027-05-05",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "The Metropolitan Museum of Art Announces Major Collaboration Agreement with the Shanghai Museum",
+          "publisher": "The Metropolitan Museum of Art",
+          "url": "https://www.metmuseum.org/es/press-releases/shanghai-museum-mou",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "A World of Jewels Comes to Shanghai Museum East",
+          "publisher": "City News Service",
+          "url": "https://www.citynewsservice.cn/events/exhibition/a-world-of-jewels-comes-to-shanghai-museum-east-zma9o5k3",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Jewelry: The Body Transformed",
+          "publisher": "The Metropolitan Museum of Art",
+          "url": "https://www.metmuseum.org/exhibitions/listings/2018/jewelry",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Jewelry: The Body Transformed",
+          "publisher": "The Metropolitan Museum of Art",
+          "url": "https://www.metmuseum.org/press-releases/jewelry-the-body-transformed-2018-exhibitions",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Visiting Jewelry: The Body Transformed at the Met Museum",
+          "publisher": "Council of Fashion Designers of America",
+          "url": "https://cfda.com/news/visiting-jewelry-the-body-transformed-at-the-met-museum/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Jewelry: The Body Transformed",
+          "publisher": "Pentagram",
+          "url": "https://www.pentagram.com/work/jewelry-the-body-transformed",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Wig rings of Sithathoryunet, on a modern wig",
+          "publisher": "The Metropolitan Museum of Art",
+          "url": "https://www.metmuseum.org/art/collection/search/656816",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "A History of Jewelry Debuts at the Metropolitan Museum of Art's Latest Exhibition, The Body Transformed",
+          "publisher": "Vogue",
+          "url": "https://www.vogue.com/article/the-body-transformed-exhibition",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Transformative and Universal Allure of Jewelry at The Met",
+          "publisher": "Sotheby's",
+          "url": "https://www.sothebys.com/en/articles/the-transformative-and-universal-allure-of-jewelry-at-the-met",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Jewelry: The Body Transformed at The Met",
+          "publisher": "Woman Around Town",
+          "url": "https://womanaroundtown.com/sections/playing-around/jewelry-body-transformed-met/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Jewelry: The Body Transformed at Shanghai Museum East",
+          "publisher": "Shanghai Museum",
+          "url": "https://www.shanghaimuseum.cn/mu/frontend/pg/m/article/id/E00004254",
+          "published_date": null,
+          "event_date": "2026-11-18",
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "The Metropolitan Museum of Art. Purchase, Rogers Fund and Henry Walters Gift, 1916. Public Domain.",
+      "media": {
+        "asset": "assets/jewelry-body-transformed-shanghai-2026-fallback.svg",
+        "origin_url": "https://www.metmuseum.org/art/collection/search/656816",
+        "external_image_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/656816/1795559/main-image",
+        "alt": "大都会艺术博物馆藏 Sithathoryunet 金发圈，按考古线索装在现代假发上。",
+        "caption": "大都会艺术博物馆藏 Sithathoryunet 金发圈，按考古线索装在现代假发上。",
+        "credit": "The Metropolitan Museum of Art. Purchase, Rogers Fund and Henry Walters Gift, 1916. Public Domain.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "revelations-china-craft-shanghai-2026",
+      "level": "major",
+      "title": "一张宣纸，被刺出数十万枚针孔",
+      "english": {
+        "title": "Hundreds of Thousands of Pinholes in a Sheet of Xuan Paper",
+        "deck": "A work at Shanghai’s craft biennial shows what happens when the labor of making becomes something a visitor can see.",
+        "abstract": "A work at Shanghai’s craft biennial shows what happens when the labor of making becomes something a visitor can see."
+      },
+      "sources": [
+        {
+          "title": "REVELATIONS CHINA 2026",
+          "publisher": "REVELATIONS CHINA",
+          "url": "https://www.revelations-china.com/",
+          "published_date": "2026-11-20",
+          "event_date": "2026-11-19 to 2026-11-23",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "国际工艺盛会启幕上海 双城格局成型",
+          "publisher": "看看新闻 Knews",
+          "url": "https://www.kankanews.com/detail/PbwR0a4B4y4",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "REVELATIONS CHINA 2026 趋势原力特展：与古为徒，以技为艺",
+          "publisher": "REVELATIONS CHINA official account",
+          "url": "https://weibo.com/2/detail/5361663888851696",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Revelations China 2026",
+          "publisher": "Shanghai Municipal Government",
+          "url": "https://english.shanghai.gov.cn/en-Events/20261113/c8986d59edbd4aeeaad2a636311daa54.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Talks",
+          "publisher": "REVELATIONS CHINA",
+          "url": "https://www.revelations-china.com/talks-2/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "发布｜国际工艺创新博览会 REVELATIONS CHINA 2026",
+          "publisher": "中国工艺美术学会",
+          "url": "https://m.cnacs.net.cn/7/202604/8130.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The biennial – Révélations International Biennial of Crafts and Creation",
+          "publisher": "Ateliers d’Art de France / Révélations",
+          "url": "https://www.revelations-grandpalais.com/en/the-biennial/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Design: creations to see at the 2025 Révélations biennial",
+          "publisher": "Le Monde",
+          "url": "https://www.lemonde.fr/m-styles/article/2025/05/18/design-les-creations-a-voir-a-la-biennale-revelations_6606903_4497319.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "付小桐 | 藝術家",
+          "publisher": "Alisan Fine Arts",
+          "url": "https://www.alisan.com.hk/tc/artist-detail?id=171",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Fiscal Year 2025 Acquisitions",
+          "publisher": "Harvard Art Museums",
+          "url": "https://s3.amazonaws.com/media.harvardartmuseums.org/assets/files/FiscalYear2025%20Acquisitions_Harvard%20Art%20Museums.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "藏品解说（中文）",
+          "publisher": "White Rabbit Gallery",
+          "url": "https://whiterabbitcollection.org/didactics-mandarin/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "艺术家｜付小桐在宣纸上刻出梦中的“孔”",
+          "publisher": "崇真艺客",
+          "url": "https://www.trueart.com/news/372905.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "付小桐：在对材料的运用与思考过程中认识自我",
+          "publisher": "银杏空间",
+          "url": "https://www.ginkgospace.cn/cn/artists/articledetails/29?aid=4713",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "现场｜史金淞与付小桐：为何借“物”？",
+          "publisher": "雅昌艺术市场监测中心",
+          "url": "https://amma.artron.net/observation_shownews.php?newid=1089016",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "REVELATIONS CHINA / Global ACE Group official event imagery.",
+      "media": {
+        "asset": "assets/revelations-china-craft-shanghai-2026-fallback.svg",
+        "origin_url": "https://www.revelations-china.com/",
+        "external_image_url": "https://www.revelations-china.com/wp-content/uploads/2026/10/9e3761d5b30d4ef67710ec571a806be0-450x600.jpg",
+        "alt": "REVELATIONS CHINA 官网展会配图，供了解展会背景。",
+        "caption": "REVELATIONS CHINA 官网展会配图，供了解展会背景。",
+        "credit": "REVELATIONS CHINA / Global ACE Group official event imagery.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "hasselt-beguinage-waf-2026",
+      "level": "major",
+      "title": "Hasselt 让旧院落重新向城市开放",
+      "english": {
+        "title": "Hasselt Opens Its Historic Beguinage to the City",
+        "deck": "The architecture school, public garden and preserved church ruin share a site that won a World Architecture Festival reuse award.",
+        "abstract": "The architecture school, public garden and preserved church ruin share a site that won a World Architecture Festival reuse award."
+      },
+      "sources": [
+        {
+          "title": "The 2026 winners",
+          "publisher": "World Architecture Festival",
+          "url": "https://www.worldarchitecturefestival.com/WAF2026/en/page/2026-winners",
+          "published_date": "2026-11-18",
+          "event_date": "2026-11-18",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "World Architecture Festival 2026: Day One Winners Announced",
+          "publisher": "ArchDaily",
+          "url": "https://www.archdaily.com/1188890/world-architecture-festival-2026-day-one-winners-announced",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "How a former women’s community in Belgium became a model for adaptive reuse",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/architecture/hasselt-beguinage-david-kohn-belgium",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Bovenbouw – David Kohn, beguinage",
+          "publisher": "A+ Architecture in Belgium",
+          "url": "https://a-plus.be/en/bovenbouw-david-kohn-beguinage/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Hasselt Beguinage",
+          "publisher": "Architecture Today",
+          "url": "https://architecturetoday.co.uk/hasselt-beguinage-bovenbouw-architectuur-david-kohn-architects/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "How a ruined religious complex became a modern university faculty",
+          "publisher": "The Observer",
+          "url": "https://observer.co.uk/culture/architecture/article/how-a-ruined-religious-complex-became-a-modern-university-faculty",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Begijnhofsite Hasselt",
+          "publisher": "Province of Limburg",
+          "url": "https://www.limburg.be/bestuur-regio/provincie-limburg-bouwt/begijnhofsite-hasselt",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "OO3406 – Hasselt – Beguinage",
+          "publisher": "Flemish Government Architect",
+          "url": "https://www.vlaamsbouwmeester.be/en/projects/oo3406-hasselt-beguinage",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Live Projects 2023–2024 / Faculty of Architecture and Arts",
+          "publisher": "Hasselt University",
+          "url": "https://www.uhasselt.be/nl/faculteiten/facark/nieuws/live-projects-2024-2025",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Begijnhof",
+          "publisher": "Flanders Heritage Inventory",
+          "url": "https://inventaris.onroerenderfgoed.be/erfgoedobjecten/22113",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Flemish Béguinages",
+          "publisher": "UNESCO World Heritage Centre",
+          "url": "https://whc.unesco.org/en/list/855/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Hasselt Opening",
+          "publisher": "David Kohn Architects",
+          "url": "https://davidkohn.co.uk/news/hasselt-opening",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Begijnhof Hasselt valt opnieuw internationaal in de prijzen",
+          "publisher": "Province of Limburg",
+          "url": "https://www.limburg.be/nieuws/begijnhof-hasselt-valt-opnieuw-internationaal-de-prijzen",
+          "published_date": "2026-11-20",
+          "event_date": "2026-11-18",
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Luc Daelemans / Province of Limburg.",
+      "media": {
+        "asset": "assets/hasselt-beguinage-waf-2026-fallback.svg",
+        "origin_url": "https://www.limburg.be/bestuur-regio/provincie-limburg-bouwt/begijnhofsite-hasselt",
+        "external_image_url": "https://www.limburg.be/sites/default/files/media/images/2025-08/begijnhof-hasselt_realisatie_15.jpg",
+        "alt": "Hasselt 贝居安院落的水景与塔楼，Limburg 省项目照片。",
+        "caption": "Hasselt 贝居安院落的水景与塔楼，Limburg 省项目照片。",
+        "credit": "Luc Daelemans / Province of Limburg.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "needles-vans-mountain-edition-2026",
+      "level": "major",
+      "title": "旧山地鞋换上 NEEDLES 的蝴蝶",
+      "english": {
+        "title": "NEEDLES Puts Its Butterfly on a Mountain Edition",
+        "deck": "A Nov. 20 Japan release joins a Vans archival silhouette, a Vibram outsole and the embroidery associated with NEEDLES.",
+        "abstract": "A Nov. 20 Japan release joins a Vans archival silhouette, a Vibram outsole and the embroidery associated with NEEDLES."
+      },
+      "sources": [
+        {
+          "title": "NEEDLES x OTW by Vans FALL WINTER 2026",
+          "publisher": "NEEDLES / NEPENTHES",
+          "url": "https://www.needles.jp/needles_otw_vans_fw2026/",
+          "published_date": null,
+          "event_date": "2026-11-20 11:30 JST",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "OTW by Vans x NEEDLES Mountain Edition Vibram",
+          "publisher": "Vans Japan",
+          "url": "https://www.vans.co.jp/p/otw_by_vans_x_needles_%E3%83%9E%E3%82%A6%E3%83%B3%E3%83%86%E3%83%B3_%E3%82%A8%E3%83%87%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3_vibram%C2%AE/VN000V8F3N11.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "About Vans — history",
+          "publisher": "Vans South Africa",
+          "url": "https://vans.co.za/about-vans",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Vans Taps a Japanese Streetwear Favorite to Rework Its Forgotten Outdoor Shoe",
+          "publisher": "Gear Patrol",
+          "url": "https://www.gearpatrol.com/footwear/vans-otw-needles-mountain-edition-vibram/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "OTW by Vans And Needles Hit Altitude With Two Cracked Leather Mountain Editions",
+          "publisher": "Sneaker News",
+          "url": "https://sneakernews.com/2026/11/17/vans-needles-half-cab-mte-edition/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "OTW by Vans x NEEDLES Mountain Edition Vibram & collab apparel releases in Japan",
+          "publisher": "UP TO DATE",
+          "url": "https://uptodate.tokyo/otw-by-vans-x-needles-mountain-edition-vibram/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Needles x Vans OTW Mountain Edition Vibram Black",
+          "publisher": "Sneaker Jagers",
+          "url": "https://www.sneakerjagers.com/en/s/needles-x-vans-otw-mountain-edition-vibram-black-vn000v8fbla/921651",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "NEEDLES × OTW by Vans Mountain Edition Vibram",
+          "publisher": "MOONLOID",
+          "url": "https://shop.moonloid.jp/view/item/000000005362?category_page_id=ct578",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Introducing: Needles Spring/Summer 2019 Collection",
+          "publisher": "HBX Journal",
+          "url": "https://hbx.com/journal/2019/03/needles-spring-summer-2019-collection-introducing",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Needles’ Keizo Shimizu Explains His Latest Collab With Dr. Martens",
+          "publisher": "Esquire",
+          "url": "https://www.esquire.com/style/mens-fashion/a33668219/needles-dr-martens-keizo-shimizu-interview/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Needles SS22 Ain’t Your Grandpa’s Boogie Nights",
+          "publisher": "Highsnobiety",
+          "url": "https://www.highsnobiety.com/p/needles-spring-summer-2022-collection/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "NEEDLES / NEPENTHES and OTW by Vans.",
+      "media": {
+        "asset": "assets/needles-vans-mountain-edition-2026-fallback.svg",
+        "origin_url": "https://www.needles.jp/needles_otw_vans_fw2026/",
+        "external_image_url": "https://www.needles.jp/needles_otw_vans_fw2026/img/sp/01.jpg",
+        "alt": "NEEDLES 与 OTW by Vans Mountain Edition Vibram 官方发布图。",
+        "caption": "NEEDLES 与 OTW by Vans Mountain Edition Vibram 官方发布图。",
+        "credit": "NEEDLES / NEPENTHES and OTW by Vans.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "hender-scheme-stereoscope-2026",
+      "level": "signal",
+      "title": "一段没有图像的故事，最后成了照片",
+      "english": {
+        "title": "A Story Without Pictures Becomes a Photograph",
+        "deck": "Kohei Kawatani used a generated image, a physical object and a camera to trace what changes when a story becomes visible.",
+        "abstract": "Kohei Kawatani used a generated image, a physical object and a camera to trace what changes when a story becomes visible."
+      },
+      "sources": [
+        {
+          "title": "Stereoscope — Kohei Kawatani",
+          "publisher": "Hender Scheme",
+          "url": "https://henderscheme.com/press%E6%9B%B4%E6%96%B0-73/",
+          "published_date": null,
+          "event_date": "2026-11-14 to 2026-11-22",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Kohei Kawatani Interview",
+          "publisher": "CHALKAK Magazine",
+          "url": "https://chalkakmagazine.com/Kohei-Kawatani_Interview",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "川谷光平 Artist Note",
+          "publisher": "Art Squiggle Yokohama",
+          "url": "https://note.com/artsquiggle/n/nfaee35e2dc71",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Kohei Kawatani Interview",
+          "publisher": "IMA ONLINE",
+          "url": "https://imaonline.jp/articles/interview/20220131kohei-kawatani/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Garden",
+          "publisher": "Hanatsubaki / Shiseido",
+          "url": "https://hanatsubaki-journal.shiseido.com/article/2556/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Garden",
+          "publisher": "PARCEL gallery",
+          "url": "https://parceltokyo.jp/exhibition/the-garden/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Garden — exhibition review",
+          "publisher": "写真 Magazine",
+          "url": "https://note.com/shashinmagazine/n/n3f5405e7a710",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Inventors of Photography: Victorian photographic techniques",
+          "publisher": "National Museums Scotland",
+          "url": "https://www.nms.ac.uk/discover-catalogue/inventors-of-photography-exploring-victorian-photographic-techniques",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Photography processes and techniques",
+          "publisher": "Victoria and Albert Museum",
+          "url": "https://www.vam.ac.uk/info/collection-selection-boxes-photography-processes-and-techniques",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Objects in Stereo: captions and transcripts",
+          "publisher": "Wellcome Collection",
+          "url": "https://wellcomecollection.org/guides/exhibitions/objects-in-stereo/captions-and-transcripts",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "On Stereoscopic Art",
+          "publisher": "i-Perception / PubMed Central",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8165537/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Hender Scheme / Sukima 22.0, exhibition imagery for Kohei Kawatani.",
+      "media": {
+        "asset": "assets/hender-scheme-stereoscope-2026-fallback.svg",
+        "origin_url": "https://henderscheme.com/press%E6%9B%B4%E6%96%B0-73/",
+        "external_image_url": "https://henderscheme.com/wp/wp-content/uploads/2026/11/Sukima-22.0-pdf-300x200.jpg",
+        "alt": "川谷光平《Stereoscope》在 Hender Scheme 隙间 22.0 展出的官方配图。",
+        "caption": "川谷光平《Stereoscope》在 Hender Scheme 隙间 22.0 展出的官方配图。",
+        "credit": "Hender Scheme / Sukima 22.0, exhibition imagery for Kohei Kawatani.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "supreme-dickies-fw26-week14",
+      "level": "signal",
+      "title": "Supreme 又把工装带进滑板店",
+      "english": {
+        "title": "Supreme Brings Workwear Back to the Skate Shop",
+        "deck": "November’s Dickies collaboration revisits the lined jacket and painter pant as clothing that has already lived several lives.",
+        "abstract": "November’s Dickies collaboration revisits the lined jacket and painter pant as clothing that has already lived several lives."
+      },
+      "sources": [
+        {
+          "title": "Supreme and Dickies Fall 2026",
+          "publisher": "Supreme",
+          "url": "https://supreme.com/news/1042",
+          "published_date": "2026-11-16",
+          "event_date": "2026-11-19 / Asia 2026-11-21",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "The Latest Supreme x Dickies Collab is ready for Winter Skate Sessions",
+          "publisher": "Sole Retriever",
+          "url": "https://www.soleretriever.com/news/articles/supreme-dickies-fall-2026-release-date-november-2026",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Supreme's Fall Dickies Collection Leads With a Leather Work Jacket, Out November 19",
+          "publisher": "JustFresh",
+          "url": "https://www.justfresh.co/fashion/supreme-dickies-fall-2026-leather-work-jacket-november-19",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "11/21 release: Supreme × Dickies 26FW Week 14",
+          "publisher": "SNKRDUNK",
+          "url": "https://snkrdunk.com/articles/33759/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Dickies X Supreme",
+          "publisher": "Dickies",
+          "url": "https://www.dickies.com/en-us/blogs/collaborations/supreme",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Dickies – Skateboard Clothing Review – 874 Work Pant",
+          "publisher": "Sidewalk",
+          "url": "https://sidewalkmag.com/skateboard-gear/reviews/dickies-skateboard-clothing-review-874-work-pant.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Dickies is turning 100 years old. It's gone viral with Gen Z",
+          "publisher": "Vogue",
+          "url": "https://www.vogue.com/article/dickies-is-turning-100-years-old-its-gone-viral-with-gen-z",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Supreme: How an Upstart NYC Skate Shop Changed Fashion Forever",
+          "publisher": "GQ",
+          "url": "https://www.gq.com/story/inside-supreme",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Dickies 874 is still the hardest working deal in trousers",
+          "publisher": "British GQ",
+          "url": "https://www.gq-magazine.co.uk/article/dickies-874-work-trousers",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Meet the Woman Forging Dickies's Future by Preserving Its Past",
+          "publisher": "Gear Patrol",
+          "url": "https://www.gearpatrol.com/style/a40460430/dickies-1922-history/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Dickies Workwear – Brand History, Inspiration, and Iconic Products",
+          "publisher": "Heddels",
+          "url": "https://www.heddels.com/2017/09/dickies-brand-history-inspiration-and-iconic-products/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Original 874 Work Pants in Khaki",
+          "publisher": "Dickies",
+          "url": "https://www.dickies.com/en-us/products/original-874-r-work-pants-dk0008740kh",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Dickies, Original 874 product photography.",
+      "media": {
+        "asset": "assets/supreme-dickies-fw26-week14-fallback.svg",
+        "origin_url": "https://www.dickies.com/en-us/products/original-874-r-work-pants-dk0008740kh",
+        "external_image_url": "https://cdn.shopify.com/s/files/1/0692/5752/7484/files/DK0008740KH-FR.jpg?v=1772835146&width=800",
+        "alt": "Dickies 经典款 Original 874 卡其工装裤，作为工装背景对照。",
+        "caption": "Dickies 经典款 Original 874 卡其工装裤，作为工装背景对照。",
+        "credit": "Dickies, Original 874 product photography.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "rashid-johnson-mca-2026",
+      "level": "signal",
+      "title": "Rashid Johnson 回到芝加哥，旧作也换了读法",
+      "english": {
+        "title": "Returning to Chicago Changes How Rashid Johnson’s Early Work Reads",
+        "deck": "The MCA’s retrospective pairs work from several decades with Chicago settings and relationships that shaped it.",
+        "abstract": "The MCA’s retrospective pairs work from several decades with Chicago settings and relationships that shaped it."
+      },
+      "sources": [
+        {
+          "title": "Rashid Johnson: A Poem for Deep Thinkers",
+          "publisher": "Museum of Contemporary Art Chicago",
+          "url": "https://mcachicago.org/whats-on/exhibitions/rashid-johnson-a-poem-for-deep-thinkers/",
+          "published_date": null,
+          "event_date": "2026-11-07 to 2027-04-25",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Rashid Johnson comes home to Chicago for a sweeping new MCA exhibition",
+          "publisher": "Axios Chicago",
+          "url": "https://www.axios.com/local/chicago/2026/11/18/rashid-johnson-poem-deep-thinkers-museum-contemporary-art-chicago",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "A Poem for Deep Thinkers: Rashid Johnson Returns to Chicago",
+          "publisher": "Chicago Gallery News",
+          "url": "https://www.chicagogallerynews.com/articles/a-poem-for-deep-thinkers-rashid-johnson-returns-to-chicago",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Rashid Johnson’s Own “Poem for Deep Thinkers”",
+          "publisher": "The New Yorker",
+          "url": "https://www.newyorker.com/culture/the-art-world/rashid-johnsons-own-poem-for-deep-thinkers",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Rashid Johnson and the Fine Art of Anxiety",
+          "publisher": "TIME",
+          "url": "https://time.com/7272211/rashid-johnson-guggenheim-interview/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Rashid Johnson: A Poem for Deep Thinkers",
+          "publisher": "Modern Art Museum of Fort Worth",
+          "url": "https://www.themodern.org/exhibition/rashid-johnson-poem-deep-thinkers",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Rashid Johnson",
+          "publisher": "Hauser & Wirth",
+          "url": "https://www.hauserwirth.com/artists/2830-rashid-johnson/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Artist Rashid Johnson has fame, fortune and the perfect trench. He’s also more vulnerable than ever.",
+          "publisher": "WBEZ Chicago",
+          "url": "https://www.wbez.org/arts/2026/11/05/rashid-johnson-a-poem-for-deep-thinkers-mca-chicago",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Chicago artist Rashid Johnson returns to MCA for his largest exhibition to date",
+          "publisher": "Audacy / WBBM Newsradio",
+          "url": "https://www.audacy.com/wbbm780/news/local/chicago-artist-rashid-johnson-returns-to-mca-for-his-largest-exhibition-to-date",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "How Rashid Johnson’s Origin Story in Chicago Made Him an Art Superhero",
+          "publisher": "Newcity Art",
+          "url": "https://art.newcity.com/2026/11/02/how-rashid-johnsons-origin-story-in-chicago-made-him-an-art-superhero/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Courtesy of Dr. Kenneth Montague | The Wedge Collection, Toronto and Monique Meloche Gallery. © Rashid Johnson.",
+      "media": {
+        "asset": "assets/rashid-johnson-mca-2026-fallback.svg",
+        "origin_url": "https://mcachicago.org/whats-on/exhibitions/rashid-johnson-a-poem-for-deep-thinkers/",
+        "external_image_url": "https://mcachicago.org/wp-content/uploads/2026/01/RJ_009-900x675.jpg",
+        "alt": "Rashid Johnson《The Reader》（2008），MCA 芝加哥展览所列作品。",
+        "caption": "Rashid Johnson《The Reader》（2008），MCA 芝加哥展览所列作品。",
+        "credit": "Courtesy of Dr. Kenneth Montague | The Wedge Collection, Toronto and Monique Meloche Gallery. © Rashid Johnson.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "peggy-guggenheim-london-jeune-2026",
+      "level": "signal",
+      "title": "佩吉·古根海姆的第一间画廊开了十八个月",
+      "english": {
+        "title": "Peggy Guggenheim’s First Gallery Lasted Eighteen Months",
+        "deck": "The Royal Academy revisits the short-lived London gallery where Guggenheim learned to organize exhibitions and back artists.",
+        "abstract": "The Royal Academy revisits the short-lived London gallery where Guggenheim learned to organize exhibitions and back artists."
+      },
+      "sources": [
+        {
+          "title": "Peggy Guggenheim in London: The Making of a Collector",
+          "publisher": "Peggy Guggenheim Collection",
+          "url": "https://www.guggenheim-venice.it/en/whats-on/exhibitions/peggy-guggenheim-in-london-the-making-of-a-collector/",
+          "published_date": null,
+          "event_date": "2026-11-21 to 2027-03-14",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "About Peggy",
+          "publisher": "Peggy Guggenheim Collection",
+          "url": "https://www.guggenheim-venice.it/en/art/in-depth/peggy-guggenheim/about-peggy/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Peggy Guggenheim Exhibition Catalogue",
+          "publisher": "Royal Academy of Arts",
+          "url": "https://shop.royalacademy.org.uk/ra-edit/exhibitions/peggy-guggenheim-in-london/peggy-guggenheim-exhibition-catalogue",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Printed material relating to Guggenheim Jeune and Art of this Century galleries",
+          "publisher": "Archives of American Art, Smithsonian Institution",
+          "url": "https://sirismm.si.edu/EADpdfs/AAA.guggpegg.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "How London made Peggy Guggenheim one of the world’s great artistic patrons",
+          "publisher": "Country Life",
+          "url": "https://www.countrylife.co.uk/culture/art-exhibitions/how-london-made-peggy-guggenheim-one-of-the-worlds-great-artistic-patrons",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The making of Peggy Guggenheim",
+          "publisher": "The Observer",
+          "url": "https://observer.co.uk/culture/art/article/the-making-of-peggy-guggenheim",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Peggy Guggenheim presents Rita Kernn-Larsen, a Danish Surrealist",
+          "publisher": "AWARE: Archives of Women Artists, Research and Exhibitions",
+          "url": "https://awarewomenartists.com/en/magazine/peggy-guggenheim-presents-rita-kernn-larsen-a-danish-surrealist/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Peggy Guggenheim",
+          "publisher": "The Metropolitan Museum of Art",
+          "url": "https://www.metmuseum.org/de/research-centers/leonard-a-lauder-research-center/research-resources/modern-art-index-project/guggenheim",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Who was Peggy Guggenheim? The Making of a Collector at the RA",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/art/exhibitions-shows/peggy-guggenheim-in-london-the-making-of-a-collector-royal-academy-review",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Inside Peggy Guggenheim in London",
+          "publisher": "Broadsheet",
+          "url": "https://www.broadsheet.com/london/art-and-design/peggy-guggenheim-royal-academy-london",
+          "published_date": "2026-11-19",
+          "event_date": "2026-11-21"
+        },
+        {
+          "title": "The Making of a Collector at the Peggy Guggenheim Collection",
+          "publisher": "Sotheby’s",
+          "url": "https://www.sothebys.com/en/museums/peggy-guggenheim-collection/exhibitions/peggy-guggenheim-in-london-the-making-of-a-collector-at-the-peggy-guggenheim-collection",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Solomon R. Guggenheim Museum, New York / Peggy Guggenheim Collection exhibition site.",
+      "media": {
+        "asset": "assets/peggy-guggenheim-london-jeune-2026-fallback.svg",
+        "origin_url": "https://www.guggenheim-venice.it/en/whats-on/exhibitions/peggy-guggenheim-in-london-the-making-of-a-collector/",
+        "external_image_url": "https://www.guggenheim-venice.it/site/assets/files/34058/kandinsky_dominant-curve-1936_45989_ph.640x0.jpg",
+        "alt": "康定斯基《Dominant Curve》（1936），威尼斯古根海姆展览页所列作品。",
+        "caption": "康定斯基《Dominant Curve》（1936），威尼斯古根海姆展览页所列作品。",
+        "credit": "Solomon R. Guggenheim Museum, New York / Peggy Guggenheim Collection exhibition site.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "formula-one-nike-lisa-fashion-2026",
+      "level": "signal",
+      "title": "F1 的新衣，有两种穿法",
+      "english": {
+        "title": "Two Ways to Dress for Formula 1",
+        "deck": "Nike’s long-term uniforms deal and LISA’s Pretty Fast collection appeal to different ways of taking part in racing culture.",
+        "abstract": "Nike’s long-term uniforms deal and LISA’s Pretty Fast collection appeal to different ways of taking part in racing culture."
+      },
+      "sources": [
+        {
+          "title": "Formula 1 and Nike join forces to shape the future of sport and culture",
+          "publisher": "Formula One World Championship Limited",
+          "url": "https://corp.formula1.com/formula-1-and-nike-join-forces-to-shape-the-future-of-sport-and-culture/",
+          "published_date": "2026-11-20",
+          "event_date": "2026-11-20",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Nike and Formula 1 Join Forces in Long-Term Global Partnership",
+          "publisher": "NIKE, Inc.",
+          "url": "https://about.nike.com/en/newsroom/releases/nike-and-formula-1-join-forces-in-long-term-global-partnership",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Nike to return to F1 after 24 years",
+          "publisher": "The Race",
+          "url": "https://www.the-race.com/business/nike-to-return-to-f1-after-24-years/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Formula 1 and global superstar LISA unveil Pretty Fast apparel collection",
+          "publisher": "Formula One World Championship Limited",
+          "url": "https://corp.formula1.com/formula-1-and-global-superstar-lisa-unveil-pretty-fast-apparel-collection/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "LISA X F1 Pretty Fast Racing Jacket",
+          "publisher": "F1 Store / Fanatics",
+          "url": "https://f1store.formula1.com/en/formula-1-merchandise/lisa-x-f1-pretty-fast-racing-jacket/t-32656643%2Bp-354450243743169%2Bz-9-3728682227",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Formula 1 and Motorsport Network Unveil 2025 Global Fan Survey",
+          "publisher": "Formula 1 and Motorsport Network",
+          "url": "https://corp.formula1.com/formula-1-and-motorsport-network-unveil-2025-global-fan-survey-gen-z-women-and-u-s-audiences-leading-new-era-of-modern-fandom/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "How Formula 1 Built its Fashion Engine",
+          "publisher": "Vogue",
+          "url": "https://www.vogue.com/article/how-formula-1-built-its-fashion-engine",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Luxury brands double down on F1",
+          "publisher": "Axios",
+          "url": "https://www.axios.com/2026/07/07/f1-luxury-brands",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Formula 1 and Pacsun elevate fan fashion through renewed licensing partnership",
+          "publisher": "Formula 1",
+          "url": "https://www.formula1.com/en/latest/article/formula-1-and-pacsun-elevate-fan-fashion-through-renewed-licensing.1h5v44OkjpRfyU6ASv64F0",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "How F1 The Movie is influencing fan fashion at Grands Prix",
+          "publisher": "Formula 1",
+          "url": "https://www.formula1.com/en/latest/article/how-f1-the-movie-is-influencing-fan-fashion-at-grands-prix.2VSk9MPYR6yk3F4lpkeEKG",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Rise of Fashion-Forward Fandom",
+          "publisher": "License Global",
+          "url": "https://eu-assets.contentstack.com/v3/assets/blt8770191dea35bccc/blt0532c246a6ff32e6/6984b4b63bd30e5160651306/LIC_260212_Fashion_Report_2026.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Nike turns F1 uniforms into a product-development platform",
+          "publisher": "Motor Racing Industry",
+          "url": "https://www.motorracingindustry.com/news/f1-nike-product-development-platform",
+          "published_date": "2026-11-20",
+          "event_date": "2026-11-20"
+        }
+      ],
+      "image_credit": "Formula One World Championship Limited official release.",
+      "media": {
+        "asset": "assets/formula-one-nike-lisa-fashion-2026-fallback.svg",
+        "origin_url": "https://corp.formula1.com/formula-1-and-nike-join-forces-to-shape-the-future-of-sport-and-culture/",
+        "external_image_url": "https://corp.formula1.com/wp-content/uploads/2026/11/nike-x-formula-1-1.jpg",
+        "alt": "Formula 1 与 Nike 合作的官方发布图。",
+        "caption": "Formula 1 与 Nike 合作的官方发布图。",
+        "credit": "Formula One World Championship Limited official release.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "on-her-right-to-move-2026",
+      "level": "signal",
+      "title": "跑步路线也受天色和照护时间限制",
+      "english": {
+        "title": "Running Routes Depend on Daylight and Time for Care",
+        "deck": "On’s grassroots pledge invites scrutiny of the local conditions that shape when and where women can exercise.",
+        "abstract": "On’s grassroots pledge invites scrutiny of the local conditions that shape when and where women can exercise."
+      },
+      "sources": [
+        {
+          "title": "On Expands Grassroots Partnerships to Break Down Barriers for Women in Movement",
+          "publisher": "On",
+          "url": "https://press.on-running.com/on-expands-grassroots-partnerships-to-break-down-barriers-for-women-in-movement",
+          "published_date": "2026-11-19",
+          "event_date": "2026-11-19",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Barriers to physical activity in women from ethnic minority groups: a systematic review",
+          "publisher": "BMC Women’s Health / Springer Nature",
+          "url": "https://link.springer.com/article/10.1186/s12905-025-03877-y",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Commercial Running Spaces on the Reproduction of Gender Inequality",
+          "publisher": "Social Sciences / MDPI",
+          "url": "https://www.mdpi.com/2076-0760/15/2/107",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Self-Reported Interpersonal Safety Concerns During Outdoor, Daytime Physical Activities by Sex and Race/Ethnicity, SummerStyles - United States, 2022",
+          "publisher": "CDC Stacks / American Journal of Health Promotion",
+          "url": "https://stacks.cdc.gov/view/cdc/260693",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Office of Sport: Run My Way",
+          "publisher": "NSW Government",
+          "url": "https://www.nsw.gov.au/departments-and-agencies/women-nsw/nsw-womens-strategy/nsw-womens-strategy-2026-report-card/office-of-sport-run-my-way",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Let’s Lift the Curfew returns to highlight women’s safety fears",
+          "publisher": "Sport England",
+          "url": "https://www.sportengland.org/news-and-inspiration/lets-lift-curfew-returns-highlight-womens-safety-fears",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "“You never know as a woman”: Healthism, embodied risk and women’s recreational running in Sweden",
+          "publisher": "International Review for the Sociology of Sport / SAGE",
+          "url": "https://journals.sagepub.com/doi/10.1177/10126902261478836",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Social run clubs are getting more people into running",
+          "publisher": "Le Monde",
+          "url": "https://www.lemonde.fr/en/sports/article/2026/09/20/social-run-clubs-are-getting-more-people-into-running_6757725_9.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "From car horns to insults and sexual assault: Female joggers deal with constant harassment",
+          "publisher": "Le Monde",
+          "url": "https://www.lemonde.fr/en/our-times/article/2025/05/18/from-car-horns-to-insults-and-sexual-assault-how-female-joggers-deal-with-constant-harassment_6741387_39.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "How do new runners maintain their running?",
+          "publisher": "Plymouth Marjon University repository",
+          "url": "https://marjon.repository.guildhe.ac.uk/id/eprint/17765/1/How%20do%20new%20runners%20maintain%20their%20running%2C%20and%20what%20leads%20to%20others%20stopping%20A%20qualitative%2C%20longitudinal%20study.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Women’s safety in public spaces",
+          "publisher": "University of Manchester",
+          "url": "https://www.policy.manchester.ac.uk/events/previous-events/womens-safety/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Women’s safety while walking, wheeling, cycling and running",
+          "publisher": "House of Commons Library",
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cdp-2026-0017/",
+          "published_date": "2026-01-23",
+          "event_date": null
+        }
+      ],
+      "image_credit": "Sport England / Let's Lift the Curfew official campaign image.",
+      "media": {
+        "asset": "assets/on-her-right-to-move-2026-fallback.svg",
+        "origin_url": "https://www.sportengland.org/news-and-inspiration/lets-lift-curfew-returns-highlight-womens-safety-fears",
+        "external_image_url": "https://sportengland-production-files.s3.eu-west-2.amazonaws.com/s3fs-public/2024-10/pa_lets_lift_the_curfew_06%202000.jpg?VersionId=UFAz_wd20jOMj.f6y7imG.lbYoYs5f.y",
+        "alt": "Sport England「Let's Lift the Curfew」活动图，作为夜间运动环境的背景。",
+        "caption": "Sport England「Let's Lift the Curfew」活动图，作为夜间运动环境的背景。",
+        "credit": "Sport England / Let's Lift the Curfew official campaign image.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "kvareli-foundation-kakheti-access-2026",
+      "level": "signal",
+      "title": "Kvareli 美术馆免费，抵达要花多久",
+      "english": {
+        "title": "Admission Is Free. How Long Does It Take to Reach Kvareli?",
+        "deck": "A new foundation in Georgia offers free entry to a permanent exhibition while transport remains part of what makes a visit possible.",
+        "abstract": "A new foundation in Georgia offers free entry to a permanent exhibition while transport remains part of what makes a visit possible."
+      },
+      "sources": [
+        {
+          "title": "Georgian Contemporary Art: Origins and Continuities",
+          "publisher": "Kvareli Foundation for Contemporary Art",
+          "url": "https://kvarelifoundation.com/exhibitions/Georgian-Contemporary-Art-Origins-and-Continuities",
+          "published_date": null,
+          "event_date": "2026-11-02",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Welcome to the Kvareli Foundation, Georgia’s new art hub with an “emotional heart”",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/architecture/kvareli-foundation-georgia",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "As protests in Georgia intensify again, a new private museum puts focus on the country’s artists",
+          "publisher": "The Art Newspaper",
+          "url": "https://www.theartnewspaper.com/2026/10/29/new-private-museum-in-georgia-puts-focus-on-the-countrys-artists",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Фонд современного искусства открылся в Кахети. Рассказываем, что смотреть на первой выставке там",
+          "publisher": "Paper Kartuli / Бумага",
+          "url": "https://paperpaper.io/fond-sovremennogo-iskusstva-otkryls/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Newly Opened Foundation in Kvareli Celebrates Georgian Contemporary Art",
+          "publisher": "The Art Journal",
+          "url": "https://www.theartjournal.com/articles/newly-opened-foundation-in-kvareli-celebrates-georgian-contemporary-art",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "В Кварели открылся центр современного искусства",
+          "publisher": "Smart Press / SPress",
+          "url": "https://spress.ge/68627/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "About Art Gallery Line",
+          "publisher": "Art Gallery Line",
+          "url": "https://artgalleryline.com/about-art-gallery-line/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Cultural Policy Profile: Georgia",
+          "publisher": "Compendium of Cultural Policies and Trends",
+          "url": "https://www.culturalpolicies.net/wp-content/uploads/pdf_full/georgia/Georgia_full-profile_01_2025.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "How Georgian artists have put Tbilisi in the global spotlight",
+          "publisher": "Art Basel",
+          "url": "https://www.artbasel.com/news/how-georgian-artists-have-put-tbilisi-in-the-global-spotlight?lang=en",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Центр современного искусства среди виноградников открыли в Грузии",
+          "publisher": "Kursiv LifeStyle",
+          "url": "https://kz.kursiv.media/2026-11-05/assm-tsentr-sovremennogo-iskusstva-sredi-vinogradnikov-otkryli-v-gruzii/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Plan Your Visit",
+          "publisher": "Kvareli Foundation",
+          "url": "https://kvarelifoundation.com/plan-your-visit",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Women Artists in Georgian Visual Arts of the Soviet Period",
+          "publisher": "Kvareli Foundation",
+          "url": "https://kvarelifoundation.com/events/women-artists-in-georgian-visual-arts-of-the-soviet-period",
+          "published_date": null,
+          "event_date": "2026-11-28",
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Karlo Kacharava / Kvareli Foundation for Contemporary Art.",
+      "media": {
+        "asset": "assets/kvareli-foundation-kakheti-access-2026-fallback.svg",
+        "origin_url": "https://kvarelifoundation.com/exhibitions/Georgian-Contemporary-Art-Origins-and-Continuities",
+        "external_image_url": "https://kvarelifoundation.com/uploads_script/sized/1600/exhibition/2026/04/yimf3isjgu699qw.jpg",
+        "alt": "格鲁吉亚艺术家 Karlo Kacharava《The King》（1987），基金会开幕展列出的作品。",
+        "caption": "格鲁吉亚艺术家 Karlo Kacharava《The King》（1987），基金会开幕展列出的作品。",
+        "credit": "Karlo Kacharava / Kvareli Foundation for Contemporary Art.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-22",
+  "coverage": {
+    "verified_at": "2026-11-22T22:44:25.286+08:00",
+    "regional_lanes_checked": [
+      "mainland_china_plus_hong_kong_or_taiwan",
+      "japan_or_korea",
+      "continental_europe_or_united_kingdom",
+      "united_states_or_canada",
+      "rotating_global_lane"
+    ],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "korea_china_taiwan",
+    "focus_subjects_checked": [
+      "POST ARCHIVE FACTION",
+      "ADER ERROR",
+      "thisisneverthat",
+      "Gentle Monster",
+      "KUSIKOHC",
+      "ROARINGWILD",
+      "Randomevent",
+      "STAFFONLY",
+      "SHUSHU/TONG",
+      "SANKUANZ",
+      "HAMCUS",
+      "GOOPiMADE",
+      "Guerrilla-Group",
+      "INVINCIBLE",
+      "Dingyun Zhang"
+    ],
+    "standing_beats_checked": [
+      "stussy-release-radar",
+      "luxury-runway-calendar",
+      "exhibition-and-cultural-programme-radar",
+      "small-breakout-object-radar"
+    ],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {
+      "id": "today-jewelry-body-transformed-shanghai-2026",
+      "category": "objects",
+      "included_story_id": "jewelry-body-transformed-shanghai-2026"
+    },
+    {
+      "id": "today-revelations-china-craft-shanghai-2026",
+      "category": "objects",
+      "included_story_id": "revelations-china-craft-shanghai-2026"
+    },
+    {
+      "id": "today-hasselt-beguinage-waf-2026",
+      "category": "city",
+      "included_story_id": "hasselt-beguinage-waf-2026"
+    },
+    {
+      "id": "today-needles-vans-mountain-edition-2026",
+      "category": "fashion",
+      "included_story_id": "needles-vans-mountain-edition-2026"
+    },
+    {
+      "id": "today-hender-scheme-stereoscope-2026",
+      "category": "objects",
+      "included_story_id": "hender-scheme-stereoscope-2026"
+    },
+    {
+      "id": "today-supreme-dickies-fw26-week14",
+      "category": "fashion",
+      "included_story_id": "supreme-dickies-fw26-week14"
+    },
+    {
+      "id": "today-rashid-johnson-mca-2026",
+      "category": "city",
+      "included_story_id": "rashid-johnson-mca-2026"
+    },
+    {
+      "id": "today-peggy-guggenheim-london-jeune-2026",
+      "category": "city",
+      "included_story_id": "peggy-guggenheim-london-jeune-2026"
+    },
+    {
+      "id": "today-formula-one-nike-lisa-fashion-2026",
+      "category": "fashion",
+      "included_story_id": "formula-one-nike-lisa-fashion-2026"
+    },
+    {
+      "id": "today-on-her-right-to-move-2026",
+      "category": "city",
+      "included_story_id": "on-her-right-to-move-2026"
+    },
+    {
+      "id": "today-kvareli-foundation-kakheti-access-2026",
+      "category": "city",
+      "included_story_id": "kvareli-foundation-kakheti-access-2026"
+    },
+    {
+      "id": "sheherazaad-khudgarzi-2026",
+      "category": "music",
+      "title": "Sheherazaad 亲自制作首张长专辑《Khudgarzi》",
+      "deck": "11 月 20 日发行。Erased Tapes 的页面列出 10 首曲目，可以从《Pakeezah》听起。",
+      "publisher": "Sheherazaad / Erased Tapes",
+      "official_url": "https://sheherazaad.bandcamp.com/album/khudgarzi",
+      "published_date": null,
+      "event_date": "2026-11-20",
+      "media": {
+        "kind": "image",
+        "url": "https://f4.bcbits.com/img/a3127600889_5.jpg",
+        "alt": "Sheherazaad《Khudgarzi》唱片封面。",
+        "credit": "Photography by Zayira Ray, design by Robert Raths / Erased Tapes.",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "doble-ceniza-2026",
+      "category": "music",
+      "title": "两代乌拉圭音乐人合写《Doble Ceniza》",
+      "deck": "Sylvia Meyer 和 Lila Tirando a Violeta 合写并制作了五首曲目，11 月 20 日由 pop.soil 发行。",
+      "publisher": "Lila Tirando a Violeta / Sylvia Meyer / pop.soil",
+      "official_url": "https://lilatirandoavioleta.bandcamp.com/album/doble-ceniza",
+      "published_date": null,
+      "event_date": "2026-11-20",
+      "media": {
+        "kind": "image",
+        "url": "https://f4.bcbits.com/img/a3356466678_5.jpg",
+        "alt": "《Doble Ceniza》唱片封面。",
+        "credit": "Ígnea Rivero / pop.soil.",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ]
+}
