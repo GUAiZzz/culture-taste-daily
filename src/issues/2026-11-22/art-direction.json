@@ -1,0 +1,27 @@
+{
+  "dominant_mood": "暗紫、米白与暖铜色。保留展品、服装、鞋履和建筑的原始色彩。",
+  "background_logic": "沿用已批准的共享阅读系统与 Living Edition B；日期内容不改共享界面。",
+  "palette_logic": "米白文字压在暗紫底上。暖铜细线提示展柜的轮廓和开口。",
+  "type_scale_logic": "沿用共享中英文字级与阅读行高，不以日期样式覆盖控件。",
+  "image_behavior": "区分真实商品、专辑封面、历史作品与现场图；官方外链失败显示明确标注的非纪实回退图。",
+  "page_density_and_tempo": "用上博金发圈和工艺展的宣纸起笔，接着切换到建筑、服装和摄影。两项唱片发行留在音乐雷达。",
+  "core_visual_action": "三组线框在右侧依次留出开口，表现陈列边界逐步打开。",
+  "cover_composition": "暗紫底、米白标题与暖铜开口线框。原创编辑封面。",
+  "desktop_interaction_mechanic": "继承共享首页、整期、单篇与返回位置的浏览结构。",
+  "behance_viewing_arc": "从实际物件与声画进入，再回到场地、公众和阅读距离；不增加未经维护的界面。",
+  "mobile_translation": "继承自然滚动、完整双语、图片自然比例和44px交互控件。",
+  "mobbin_usability_constraint": "键盘、无脚本、减弱动态及九种风格外观组合沿用共享阅读合同。",
+  "quiet_ending": "以观展日期和两项轻量试听线索把读者带回实际的使用场景。",
+  "closing_quotation": {
+    "id": "ct-en-005",
+    "language": "en",
+    "text": "A release begins only when someone can truly enter it.",
+    "credit": "Culture & Taste Editorial"
+  },
+  "closing_palette": {
+    "background": "#2D2336",
+    "foreground": "#FFF1DF",
+    "accent": "#DCA991",
+    "rationale": "暗紫、米白和暖铜提供足够的文字与线条对比，适合展柜主题。"
+  }
+}
