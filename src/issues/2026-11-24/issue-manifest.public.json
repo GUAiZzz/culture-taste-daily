@@ -1,0 +1,1445 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-11-24",
+  "publication_date": "2026-11-24",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-11-24T11:03:19.100+08:00",
+  "research_locked_at": "2026-11-24T17:27:30.354+08:00",
+  "content_locked_at": "2026-11-24T17:27:30.354+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "bef60ce48a48cd19261774bc4a71cd6f4e95345afa31df41bf50d658c1727ac9",
+    "locked_at": "2026-11-24T17:27:30.354+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "bef60ce48a48cd19261774bc4a71cd6f4e95345afa31df41bf50d658c1727ac9",
+    "art_direction_sha256": "4172d3ef2a8a078690899909f405364f2ebb2ec941064b98a6583c8600e10b4b",
+    "issue_style_sha256": "a6e8c1c128719b0e455ab96cd86231337897c9841aa6230b41a1caf0984292fc"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-11-24T17:26:09.455+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "展览、服装与声音到了新的场地，空间会改变人怎样走近它、穿它或听它。",
+  "art_direction": {
+    "dominant_mood": "石蓝、浅纸与暖铜色，保留摄影、服装和艺术作品的原始色彩。",
+    "background_logic": "沿用已批准的共享阅读系统与 Living Edition B；日期内容不改共享界面。",
+    "palette_logic": "以石蓝托住浅纸文字，用暖铜色标出进入场地的步行方向。",
+    "type_scale_logic": "沿用共享中英文字级与阅读行高，不以日期样式覆盖控件。",
+    "image_behavior": "区分真实商品、专辑封面、历史作品与现场图；官方外链失败显示明确标注的非纪实回退图。",
+    "page_density_and_tempo": "从雅典和吉萨的场地开始，转到摄影、服装和游戏音乐，保留可继续浏览的节目出处。",
+    "core_visual_action": "在纸面依次错开三组折线，留出像走进房间一样的空间。",
+    "cover_composition": "石蓝底、浅纸标题，折线从左下往右上移。原创编辑封面。",
+    "desktop_interaction_mechanic": "继承共享首页、整期、单篇与返回位置的浏览结构。",
+    "behance_viewing_arc": "从实际物件与声画进入，再回到场地、公众和阅读距离；不增加未经维护的界面。",
+    "mobile_translation": "继承自然滚动、完整双语、图片自然比例和44px交互控件。",
+    "mobbin_usability_constraint": "键盘、无脚本、减弱动态及九种风格外观组合沿用共享阅读合同。",
+    "quiet_ending": "用实际参观日期和官方节目出处收束。",
+    "closing_quotation": {
+      "id": "ct-en-008",
+      "language": "en",
+      "text": "An entrance is already an editorial decision.",
+      "credit": "Culture & Taste Editorial"
+    },
+    "closing_palette": {
+      "background": "#233447",
+      "foreground": "#FFF0DF",
+      "accent": "#F0B88E",
+      "rationale": "石蓝和浅纸保持文字对比，暖铜引导视线。"
+    }
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": [
+      "2026-11-22",
+      "2026-11-18",
+      "2026-11-17",
+      "2026-11-16",
+      "2026-11-15",
+      "2026-11-03",
+      "2026-11-02"
+    ],
+    "repeated_mechanisms": [
+      "Owner-approved shared reading system",
+      "Official-origin links and static image fallbacks"
+    ],
+    "exception_reason": "封面改用沿斜线排列的折角。以老卫城博物馆重开和吉萨步道开篇，按场地、服装和声音转场。已核对前两期的事件和来源。"
+  },
+  "rights_summary": {
+    "required_assets": 12,
+    "unknown_required_assets": 12,
+    "status": "blocked"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": null
+  },
+  "evidence_refs": {
+    "technical": [],
+    "editorial_visual": [],
+    "gate": []
+  },
+  "qa": {
+    "html_parse": "unavailable",
+    "assets": "unavailable",
+    "internal_links": "unavailable",
+    "no_js_reading": "unavailable",
+    "desktop_render": "unavailable",
+    "mobile_render": "unavailable",
+    "reduced_motion": "unavailable"
+  },
+  "limitations": [
+    "Preview edition. Official visual sources are linked from each story, with historical or contextual images identified in their captions.",
+    "The edition includes selections from the past several days. The text retains the relevant exhibition and release dates."
+  ],
+  "stories": [
+    {
+      "id": "old-acropolis-museum-rakowitz-2026",
+      "level": "cover",
+      "title": "雅典老卫城博物馆重开，修复也成了展览",
+      "english": {
+        "title": "Athens Reopens Its Old Acropolis Museum and Puts Conservation on View",
+        "deck": "After nineteen years, the Old Acropolis Museum reopens with archaeological displays, visible conservation work and a new commission by Michael Rakowitz.",
+        "abstract": "After nineteen years, the Old Acropolis Museum reopens with archaeological displays, visible conservation work and a new commission by Michael Rakowitz."
+      },
+      "sources": [
+        {
+          "title": "What You Leave Behind Is Not What Is Engraved",
+          "publisher": "NEON",
+          "url": "https://neon.org.gr/en/exhibition/what-you-leave-behind-is-not-what-is-engraved/",
+          "published_date": null,
+          "event_date": "2026-11-23",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Museum History",
+          "publisher": "Acropolis Museum",
+          "url": "https://www.theacropolismuseum.gr/en/museum-history",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Athens’ Old Acropolis Museum Reopens After 19 Years",
+          "publisher": "To Vima",
+          "url": "https://www.tovima.com/culture/athens-old-acropolis-museum-reopens-after-19-years",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "What You Leave Behind Is Not What Is Engraved — Opening Event",
+          "publisher": "NEON",
+          "url": "https://neon.org.gr/en/event/what-you-leave-behind-is-not-what-is-engraved/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Openings (23–29/11): The exhibitions of the week",
+          "publisher": "Athinorama",
+          "url": "https://en.athinorama.gr/texnes/3081295/egkainia-232911-oi-ektheseis-tis-ebdomadas/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "‘I feel at home here’: Michael Rakowitz’s Acropolis Museum exhibition locates the lines between stories of lost heritage",
+          "publisher": "The Art Newspaper",
+          "url": "https://www.theartnewspaper.com/2025/05/27/michael-rakowitz-acropolis-museum-exhibition-locates-lines-between-stories-lost-heritage",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "In the Studio: Michael Rakowitz",
+          "publisher": "Art21",
+          "url": "https://art21.org/read/in-the-studio-michael-rakowitz/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Michael Rakowitz and the Ghosts of Iraq’s Antiquities",
+          "publisher": "Frieze",
+          "url": "https://app.frieze.com/article/bailey-trela-michael-rakowitz-258",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Michael Rakowitz’s Art of Return",
+          "publisher": "The New Yorker",
+          "url": "https://www.newyorker.com/magazine/2020/08/24/michael-rakowitzs-art-of-return",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Michael Rakowitz — Aichi Triennale 2025",
+          "publisher": "Aichi Triennale Organizing Committee",
+          "url": "https://aichitriennale.jp/2025/en/artist/michael-rakowitz.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Information",
+          "publisher": "Michael Rakowitz Studio",
+          "url": "https://www.michaelrakowitz.com/information",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Old Acropolis Museum reopening and the Rakowitz commission",
+          "publisher": "Hellenic Ministry of Culture / NEON",
+          "url": "https://neon.org.gr/wp-content/uploads/2026/11/PR-MRA-EN.pdf",
+          "published_date": "2026-11-23",
+          "event_date": "2026-11-23",
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Photography © Natalia Tsoukala / NEON.",
+      "media": {
+        "asset": "assets/old-acropolis-museum-rakowitz-2026-fallback.svg",
+        "origin_url": "https://neon.org.gr/en/exhibition/what-you-leave-behind-is-not-what-is-engraved/",
+        "external_image_url": "https://neon.org.gr/wp-content/uploads/2026/11/246A4420.jpg",
+        "alt": "Michael Rakowitz 在雅典老卫城博物馆的新委托作品现场。",
+        "caption": "Michael Rakowitz 在雅典老卫城博物馆的新委托作品现场。",
+        "credit": "Photography © Natalia Tsoukala / NEON.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "jiang-qiong-er-giza-plant-love-2026",
+      "level": "major",
+      "title": "十二尊雕塑为吉萨排出一条步道",
+      "english": {
+        "title": "Twelve Sculptures Mark a Path at Giza",
+        "deck": "Jiang Qiong Er places twelve guardians, mirrored surfaces and wooden seeds in a work visitors can walk through.",
+        "abstract": "Jiang Qiong Er places twelve guardians, mirrored surfaces and wooden seeds in a work visitors can walk through."
+      },
+      "sources": [
+        {
+          "title": "Art D’Égypte Brings World-Renowned Artist Jiang Qiong Er to the Pyramids of Giza",
+          "publisher": "Art D’Égypte",
+          "url": "https://artdegypt.prowly.com/469838-art-degypte-brings-world-renowned-artist-jiang-qiong-er-to-the-pyramids-of-giza",
+          "published_date": null,
+          "event_date": "2026-11-04 to 2026-11-28",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Jiang Qiong Er’s 12 guardians of humanity plant love beside the Giza pyramids",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/art/exhibitions-shows/jiang-qiong-er-it-is-time-to-plant-love-at-forever-is-now-2026-review",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Egypt's pyramids embrace global artistic visions at 'Forever Is Now' exhibition",
+          "publisher": "Xinhua",
+          "url": "https://english.news.cn/20261109/2224397ed7ea492682271f786c18cbc2/c.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Ancient meets modern as art exhibition opens at Egypt's pyramids",
+          "publisher": "Associated Press via Africanews",
+          "url": "https://www.africanews.com/2026/11/08/ancient-meets-modern-as-art-exhibition-opens-at-egypts-pyramids/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Forever Is Now 06: الفن عند سفح الأهرامات",
+          "publisher": "A7 Magazine",
+          "url": "https://www.a7magazine.com/news/6596/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "8 Artists Bring Otherworldly Installations to the Giza Pyramids for Forever is Now 2026",
+          "publisher": "Architectural Digest Middle East",
+          "url": "https://www.admiddleeast.com/story/forever-is-now-2026",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Forever Is Now transforms Giza Plateau into an open-air gallery with the Pyramids as a backdrop",
+          "publisher": "Condé Nast Traveller Middle East",
+          "url": "https://www.cntravellerme.com/story/forever-is-now-transforms-giza-plateau-into-an-open-air-gallery-with-the-pyramids-as-its-backdrop",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "How Jiang Qiong Er Is Shaping The Future Of Chinese Craft",
+          "publisher": "Forbes",
+          "url": "https://www.forbes.com/sites/yjeanmundelsalle/2025/10/01/how-jiang-qiong-er-is-shaping-the-future-of-chinese-craft/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Inner Worlds | Designer Jiang Qiong Er",
+          "publisher": "Art Basel",
+          "url": "https://www.artbasel.com/stories/inner-worlds-chinese-designer-artist-jiang-qiong-er-paris",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Art D’Egypte announces 6th edition of Forever Is Now at Giza Pyramids",
+          "publisher": "Ahram Online",
+          "url": "https://english.ahram.org.eg/NewsContent/5/25/574759/Arts--Culture/Visual-Art/Art-D%E2%80%99Egypte-announces-6th-edition-of-Forever-Is-No.aspx",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Eight Paris museums and foundations to visit away from the crowds during the Olympics",
+          "publisher": "Le Monde",
+          "url": "https://www.lemonde.fr/en/culture/article/2024/08/06/eight-museums-and-foundations-to-visit-away-from-the-crowds-during-the-olympics_6710454_30.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Guardians of Time",
+          "publisher": "Musée Guimet",
+          "url": "https://www.guimet.fr/en/exhibitions/guardians-time",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "It Is Time to Plant Love 万物有时，此刻播种爱",
+          "publisher": "Jiang Qiong Er official website",
+          "url": "https://www.jiangqionger.com/project/project-it-is-time-to-plant-love",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Art D’Égypte / Forever Is Now official press image.",
+      "media": {
+        "asset": "assets/jiang-qiong-er-giza-plant-love-2026-fallback.svg",
+        "origin_url": "https://artdegypt.prowly.com/469838-art-degypte-brings-world-renowned-artist-jiang-qiong-er-to-the-pyramids-of-giza",
+        "external_image_url": "https://prowly-prod.s3.eu-west-1.amazonaws.com/uploads/landing_page/template_background/469838/a2712d9f2b7fb3930914a34a432ee685.jpg",
+        "alt": "Art D’Égypte 发布蒋琼耳参展消息时使用的配图。",
+        "caption": "Art D’Égypte 发布蒋琼耳参展消息时使用的配图。",
+        "credit": "Art D’Égypte / Forever Is Now official press image.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "david-sims-mop-2026",
+      "level": "major",
+      "title": "David Sims 把三十五年的照片放进九个房间",
+      "english": {
+        "title": "David Sims Puts Thirty-Five Years of Photographs in Nine Rooms",
+        "deck": "An A Coruña exhibition gives fashion commissions and personal photographs several routes through a photographer’s archive.",
+        "abstract": "An A Coruña exhibition gives fashion commissions and personal photographs several routes through a photographer’s archive."
+      },
+      "sources": [
+        {
+          "title": "David Sims — The Hamster Becomes The Problem",
+          "publisher": "The MOP Foundation",
+          "url": "https://themopfoundation.org/en/exhibitions/david-sims",
+          "published_date": null,
+          "event_date": "2026-11-21 to 2027-05-01",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Inside David Sims’ new exhibition at The MOP Foundation",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/fashion-beauty/david-sims-exhibition-mop-foundation-a-coruna-spain-the-hamster-becomes-the-problem",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Llegan a A Coruña las imágenes de David Sims, el fotógrafo que capturó la esencia de la juventud de los noventa",
+          "publisher": "EL PAÍS",
+          "url": "https://elpais.com/cultura/2026-11-20/llegan-a-a-coruna-las-imagenes-de-david-sims-el-fotografo-que-capturo-la-esencia-de-la-juventud-de-los-noventa.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "David Sims huye de lo clásico y redefine la masculinidad en la Fundación MOP de A Coruña",
+          "publisher": "EL ESPAÑOL / Quincemil",
+          "url": "https://www.elespanol.com/quincemil/cultura/exposiciones/20261120/david-sims-huye-clasico-redefine-masculinidad-fundacion-mop-coruna/1003744464831_0.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "El mayor dilema de la nueva muestra de la Fundación MOP: ¿Por qué el hámster es el problema?",
+          "publisher": "El Ideal Gallego",
+          "url": "https://www.elidealgallego.com/a-coruna/2026-11-22/mayor-dilema-nueva-muestra-fundacion-mop-hamster-problema-892486.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "David Sims Has Shaped Fashion Photography for Decades. He’s Finally Ready to Look Back",
+          "publisher": "W Magazine",
+          "url": "https://www.wmagazine.com/culture/david-sims-interview-mop-foundation-spain-exhibition",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Decoding the Enigma of David Sims",
+          "publisher": "The Business of Fashion",
+          "url": "https://businessoffashion-businessoffashion-prod.web.arc-cdn.net/articles/creative-class/david-sims-mop-foundation-exhibition-interview/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "David Sims — System Issue No. 24",
+          "publisher": "System Magazine",
+          "url": "https://system-magazine.com/issues/issue-24/david-sims-mathias-augustyniak",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "MOP Foundation: David Sims, The Photographer, Fashion and the Hamster",
+          "publisher": "L’Œil de la Photographie",
+          "url": "https://loeildelaphotographie.com/en/mop-foundation-david-sims-the-photographer-fashion-and-the-hamster/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "David Sims Finally Shows His Archive in Spain",
+          "publisher": "BLIND Magazine",
+          "url": "https://www.blind-magazine.com/news/david-sims-finally-shows-his-archive-in-spain/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "David Sims: The Hamster Becomes the Problem",
+          "publisher": "Air Mail / Arts Intel",
+          "url": "https://airmail.news/arts-intel/events/david-sims-the-hamster-becomes-the-problem",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Opening David Sims’s A Coruña exhibition",
+          "publisher": "Vogue España",
+          "url": "https://www.vogue.es/articulos/david-sims-the-hamster-becomes-the-problem-fundacion-mop-a-coruna",
+          "published_date": "2026-11-23",
+          "event_date": "2026-11-21"
+        },
+        {
+          "title": "A giant hamster wheel and more than 200 photographs",
+          "publisher": "Cadena SER",
+          "url": "https://cadenaser.com/galicia/2026/11/20/una-rueda-de-hamster-gigante-y-mas-de-200-fotografias-asi-es-la-nueva-exposicion-de-la-fundacion-mop-en-a-coruna-radio-coruna/",
+          "published_date": "2026-11-20",
+          "event_date": "2026-11-21"
+        },
+        {
+          "title": "David Sims book signing and guided tour",
+          "publisher": "The MOP Foundation",
+          "url": "https://themopfoundation.org/en/events/david-sims-book-signing",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "David Sims / The MOP Foundation, exhibition publication imagery.",
+      "media": {
+        "asset": "assets/david-sims-mop-2026-fallback.svg",
+        "origin_url": "https://themopfoundation.org/en/exhibitions/david-sims",
+        "external_image_url": "https://cdn.shopify.com/s/files/1/0828/8426/4252/files/9788412884074-1.jpg?v=1794917776",
+        "alt": "《The Hamster Becomes The Problem》展览配套图书，图片来自 MOP Foundation。",
+        "caption": "《The Hamster Becomes The Problem》展览配套图书，图片来自 MOP Foundation。",
+        "credit": "David Sims / The MOP Foundation, exhibition publication imagery.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "venice-biennale-in-minor-keys-2026",
+      "level": "major",
+      "title": "威尼斯双年展闭幕，Koyo Kouoh 留下的展览怎样完成",
+      "english": {
+        "title": "How Koyo Kouoh’s Team Brought In Minor Keys to Venice",
+        "deck": "The closing figures, the curatorial work continued by her colleagues and the Visitors’ Lions tell different parts of the 2026 Biennale’s story.",
+        "abstract": "The closing figures, the curatorial work continued by her colleagues and the Visitors’ Lions tell different parts of the 2026 Biennale’s story."
+      },
+      "sources": [
+        {
+          "title": "The Biennale Arte 2026 closes with 714,015 visitors",
+          "publisher": "La Biennale di Venezia",
+          "url": "https://www.labiennale.org/en/news/biennale-arte-2026-koyo-kouoh-closes-high-note-714015-visitors",
+          "published_date": null,
+          "event_date": "2026-11-22",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Biennale Arte 2026 | 61st Exhibition",
+          "publisher": "La Biennale di Venezia",
+          "url": "https://www.labiennale.org/en/art/2026/61st-exhibition",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "In Minor Keys curatorial introduction",
+          "publisher": "La Biennale di Venezia",
+          "url": "https://static.labiennale.org/files/arte/Documenti/biennale-arte-2026a.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Two Visitors’ Lions have been established for the Biennale Arte 2026",
+          "publisher": "La Biennale di Venezia",
+          "url": "https://www.labiennale.org/en/news/two-visitors%E2%80%99-lions-have-been-established-biennale-arte-2026",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "How the exhibition was brought to life after Koyo Kouoh’s death",
+          "publisher": "The Art Newspaper",
+          "url": "https://www.theartnewspaper.com/2026/05/05/in-minor-keys-how-venices-international-exhibition-was-brought-to-life-after-the-death-of-artistic-director-koyo-kouoh",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Big Review: Venice Biennale 2026 — In Minor Keys",
+          "publisher": "The Art Newspaper",
+          "url": "https://www.theartnewspaper.com/2026/05/08/the-big-review-%7C-venice-biennale-2026-in-minor-keys-12",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "In Minor Keys: Venice Biennale review",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/art/exhibitions-shows/in-minor-keys-venice-biennale-review",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "In Minor Keys: Sketching as Curating",
+          "publisher": "Afterall",
+          "url": "https://www.afterall.org/articles/in-minor-keys-sketching-as-curating/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Venice Biennale",
+          "publisher": "The Brooklyn Rail",
+          "url": "https://brooklynrail.org/2026/06/artseen/venice-biennale/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "In Minor Keys: A View from the 61st Venice Biennale",
+          "publisher": "Contemporary Arts Society",
+          "url": "https://www.contemporaryartsociety.org/explore/resources/minor-keys-view-61st-venice-biennale",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "In Minor Keys: a Biennale rocked by conflict and loss",
+          "publisher": "Art Monthly",
+          "url": "https://www.artmonthly.co.uk/magazine/site/article/61st-venice-biennale-by-chris-clarke-june-2026",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Russia, Israel, United States: “Pariah” pavilions spark controversy",
+          "publisher": "Le Monde",
+          "url": "https://www.lemonde.fr/en/culture/article/2026/05/07/russia-israel-united-states-pariah-pavilions-spark-controversy-at-venice-biennale_6753229_30.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Koyo Kouoh’s Biennale closes with 714,000 visitors",
+          "publisher": "Finestre sull’Arte",
+          "url": "https://www.finestresullarte.info/en/news/koyo-kouoh-s-biennale-closes-with-714-000-visitors",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "2026 edition closes with 714,000 visitors",
+          "publisher": "ANSA",
+          "url": "https://www.ansa.it/veneto/notizie/2026/11/22/biennale-arte-ledizione-2026-si-chiude-con-714mila-visitatori_405fddc8-e285-42c0-9b13-3ed142f1712c.html",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "La Biennale di Venezia official closing report imagery.",
+      "media": {
+        "asset": "assets/venice-biennale-in-minor-keys-2026-fallback.svg",
+        "origin_url": "https://www.labiennale.org/en/news/biennale-arte-2026-koyo-kouoh-closes-high-note-714015-visitors",
+        "external_image_url": "https://static.labiennale.org/files/styles/full_screen_slide/public/arte/2026/750x500/numeri-4.jpg?itok=E5KLUjHd",
+        "alt": "La Biennale di Venezia 发布的 2026 年双年展闭幕报道配图。",
+        "caption": "La Biennale di Venezia 发布的 2026 年双年展闭幕报道配图。",
+        "credit": "La Biennale di Venezia official closing report imagery.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "beau-disundi-makayabu-dakart-2026",
+      "level": "signal",
+      "title": "Beau Disundi 用咸鱼纸箱画贸易",
+      "english": {
+        "title": "Beau Disundi Traces a Trade Route on Salt-Fish Cardboard",
+        "deck": "Beau Disundi works on the packaging of a familiar food, following a trade that connects Congo and Norway.",
+        "abstract": "Beau Disundi works on the packaging of a familiar food, following a trade that connects Congo and Norway."
+      },
+      "sources": [
+        {
+          "title": "The Dakar Biennale 2026 Awards",
+          "publisher": "Dakar Biennale",
+          "url": "https://biennaledakar.org/en/2026/11/19/le-palmares-de-la-biennale-de-dakar/",
+          "published_date": "2026-11-19",
+          "event_date": "2026-11-19",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Dak’Art 2026: Beau Disundi Wins the Grand Prize",
+          "publisher": "RTS Sénégal",
+          "url": "https://www.rts.sn/actualite/detail/culture/dakart-2026-le-congolais-beau-disundi-consacre-par-le-grand-prix-leopold-sedar-senghor",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Beau Disundi — International Exhibition",
+          "publisher": "Dakar Biennale",
+          "url": "https://biennaledakar.org/project/beau-disundi/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Beau Disundi Nzazi",
+          "publisher": "AKKA Project",
+          "url": "https://www.akkaproject.com/artists/beau-disundi-nzazi/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Makayabu — 200,000 Possibilities of Presence and Absence",
+          "publisher": "La Cambre Alumni",
+          "url": "https://alumni.lacambre.be/alumni/disundi-nzazi-beau/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Two Congolese Artists Selected for the International Exhibition in Dakar",
+          "publisher": "Agence Congolaise de Presse",
+          "url": "https://acp.cd/culture/deux-plasticiens-de-la-rdc-selectionnes-pour-lexposition-internationale-a-dakar/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "DRC–Norway Talks Put Salted-Fish Trade on the Agenda",
+          "publisher": "Agence Congolaise de Presse",
+          "url": "https://acp.cd/economie/rdc-norvege-le-commerce-des-poissons-sales-aux-menus-des-echanges/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "First Norwegian Seafood Seminar in Kinshasa",
+          "publisher": "Norwegian Seafood Council",
+          "url": "https://www.seafood.no/aktuelt/nyheter/forste-norske-sjomatseminar-i-kinshasa-dr-kongo/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Yacouba Konaté on Dak’Art: What We Build Here Will Not Be a Ghost Memory",
+          "publisher": "DakArtNews",
+          "url": "https://dakartnews.com/2026/11/16/yacouba-konate-dakar-biennale-ghost-memory/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Visit the Dakar Biennale 2026",
+          "publisher": "Dakar Biennale",
+          "url": "https://biennaledakar.org/visiter/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Biennale de Dakar official awards graphic / Beau Disundi.",
+      "media": {
+        "asset": "assets/beau-disundi-makayabu-dakart-2026-fallback.svg",
+        "origin_url": "https://biennaledakar.org/en/2026/11/19/le-palmares-de-la-biennale-de-dakar/",
+        "external_image_url": "https://biennaledakar.org/wp-content/uploads/2026/11/palmares-2026-beau-disundi-1030x579.webp",
+        "alt": "达喀尔双年展的获奖公告图，右侧为 Beau Disundi 的作品。",
+        "caption": "达喀尔双年展的获奖公告图，右侧为 Beau Disundi 的作品。",
+        "credit": "Biennale de Dakar official awards graphic / Beau Disundi.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "new-york-fashion-ps1-1980-1984",
+      "level": "signal",
+      "title": "Willi Smith 把衣服摆在画廊地上",
+      "english": {
+        "title": "Willi Smith Put Clothes on the Gallery Floor",
+        "deck": "MoMA PS1 uses archival documents, footage and partial reconstructions to revisit ten experiments in exhibiting fashion.",
+        "abstract": "MoMA PS1 uses archival documents, footage and partial reconstructions to revisit ten experiments in exhibiting fashion."
+      },
+      "sources": [
+        {
+          "title": "New York Fashion at PS1, 1980–1984",
+          "publisher": "MoMA PS1",
+          "url": "https://www.momaps1.org/en/programs/793-new-york-fashion-at-ps1-1980-1984",
+          "published_date": null,
+          "event_date": "2026-11-05 to 2027-03-15",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Archival Exhibition Traces the History of Fashion at PS1",
+          "publisher": "MoMA Press",
+          "url": "https://press.moma.org/wp-content/uploads/2026/07/New-York-Fashion_Press-Release_FINAL-1.pdf",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "MoMA PS1’s New Fashion Exhibition Is Nothing Like a Retrospective",
+          "publisher": "W Magazine",
+          "url": "https://www.wmagazine.com/culture/moma-ps1-fashion-exhibition-new-york-1980-1984-photos",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "From the MoMA PS1 Archives: High-Class Couture in the Classrooms",
+          "publisher": "MoMA Archives",
+          "url": "https://www.moma.org/explore/inside_out/2014/05/15/from-the-moma-ps1-archives-high-class-couture-in-the-classrooms/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Willi Smith: Beginnings and Career",
+          "publisher": "Cooper Hewitt, Smithsonian Design Museum",
+          "url": "https://exhibitions.cooperhewitt.org/willismith/beginnings-and-career/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Fashion (Winter 1982): Willi Smith: Art as Damaged Goods",
+          "publisher": "MoMA",
+          "url": "https://www.moma.org/calendar/exhibitions/4258",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "MoMA PS1 Archives, Series I: Curatorial and Exhibition Records",
+          "publisher": "MoMA Archives",
+          "url": "https://www.moma.org/research/archives/finding-aids/MoMAPS1_Ib.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Artist in Place: The First Ten Years at P.S.1",
+          "publisher": "MoMA",
+          "url": "https://www.moma.org/interactives/exhibitions/2012/artistinplace/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "New York Fashion at PS1, 1980–1984",
+          "publisher": "Musa Guide",
+          "url": "https://www.musa.guide/en/discover/new-york/exhibitions/moma-ps1/new-york-fashion-at-ps1-1980-1984",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Museum à la Mode",
+          "publisher": "Spike Art Magazine",
+          "url": "https://spikeartmagazine.com/articles/essay-museum-a-la-mode",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "A Fashion Alternative",
+          "publisher": "MoMA PS1",
+          "url": "https://www.momaps1.org/en/events/880-a-fashion-alternative",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "MoMA PS1, official exhibition image.",
+      "media": {
+        "asset": "assets/new-york-fashion-ps1-1980-1984-fallback.svg",
+        "origin_url": "https://www.momaps1.org/en/programs/793-new-york-fashion-at-ps1-1980-1984",
+        "external_image_url": "https://d1tcycker2ppj.cloudfront.net/output=f:jpg,q:60/resize=width:1200,fit:max/7B4AA49TlSre6hp1qz3p",
+        "alt": "MoMA PS1《New York Fashion at PS1, 1980–1984》展览现场。",
+        "caption": "MoMA PS1《New York Fashion at PS1, 1980–1984》展览现场。",
+        "credit": "MoMA PS1, official exhibition image.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "uniqlo-cecilie-bahnsen-fleece-2026",
+      "level": "signal",
+      "title": "Cecilie Bahnsen 把花和抽绳缝进抓绒",
+      "english": {
+        "title": "Cecilie Bahnsen Brings Flowers and Drawstrings to Fleece",
+        "deck": "UNIQLO’s second collaboration changes the main fabric while keeping details a wearer can recognize and adjust.",
+        "abstract": "UNIQLO’s second collaboration changes the main fabric while keeping details a wearer can recognize and adjust."
+      },
+      "sources": [
+        {
+          "title": "UNIQLO and Cecilie Bahnsen Autumn/Winter 2026 release in Japan",
+          "publisher": "UNIQLO Japan",
+          "url": "https://www.uniqlo.com/jp/ja/contents/corp/press-release/2026/11/uniqlo_and_cecilie_bahnsen_202.html",
+          "published_date": null,
+          "event_date": "2026-11-20",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "UNIQLO and Cecilie Bahnsen Autumn/Winter 2026 collection",
+          "publisher": "UNIQLO UK",
+          "url": "https://www.uniqlo.com/uk/en/women/special-collaboration/uniqlo-and-cecilie-bahnsen",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Cecilie Bahnsen Rethinks the Fleece for Her Second Uniqlo Collaboration",
+          "publisher": "ELLE",
+          "url": "https://www.elle.com/fashion/shopping/a74490341/cecilie-bahnsen-uniqlo-collection-launch-news-2026/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Uniqlo x Cecilie Bahnsen Returns in Scandi Girl Winter Style",
+          "publisher": "Marie Claire",
+          "url": "https://www.marieclaire.com/fashion/winter-fashion/uniqlo-cecilie-bahnsen-winter-2026-collaboration/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Uniqlo's New Cecilie Bahnsen F/W 26 Collection Is Here",
+          "publisher": "Who What Wear",
+          "url": "https://www.whowhatwear.com/fashion/shopping/uniqlo-cecilie-bahnsen",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Cecilie Bahnsen x UNIQLO",
+          "publisher": "Cecilie Bahnsen",
+          "url": "https://ceciliebahnsen.com/pages/cecilie-bahnsen-x-uniqlo",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "All you need to know about the second Uniqlo x Cecilie Bahnsen collab",
+          "publisher": "The Independent",
+          "url": "https://www.the-independent.com/extras/indybest/fashion-beauty/womens-clothing/uniqlo-x-cecilie-bahnsen-winter-collab-b3079681.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "'유니클로 and 세실리에 반센' 2026 FW 컬렉션 공개",
+          "publisher": "UNIQLO Korea",
+          "url": "https://www.uniqlo.com/kr/corp/pressrelease/2026/11/Cecilie%20Bahnsen%202026_fw.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Uniqlo launches 26FW Cecilie Bahnsen collection blending function and femininity",
+          "publisher": "CHOSUNBIZ",
+          "url": "https://biz.chosun.com/en/en-retail/2026/11/05/JLB4YZWE5JEETGPRL2Z7SHW4HU/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Cecilie Bahnsen and Uniqlo's capsule collection celebrates sisterhood and self-expression",
+          "publisher": "Vogue Scandinavia",
+          "url": "https://www.voguescandinavia.com/articles/cecilie-bahnsen-uniqlo-collection",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Cecilie Bahnsen and Uniqlo reunite for an autumn collection of fleece and embroidered flowers",
+          "publisher": "Sneakerjagers",
+          "url": "https://www.sneakerjagers.com/en/n/cecilie-bahnsen-x-uniqlo-fall-collection/8154",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Shop Uniqlo X Cecilie Bahnsen's Versatile Summer Capsule",
+          "publisher": "British Vogue",
+          "url": "https://www.vogue.co.uk/article/cecilie-bahnsen-uniqlo-collaboration",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "UNIQLO Japan / Cecilie Bahnsen official campaign.",
+      "media": {
+        "asset": "assets/uniqlo-cecilie-bahnsen-fleece-2026-fallback.svg",
+        "origin_url": "https://www.uniqlo.com/jp/ja/contents/corp/press-release/2026/11/uniqlo_and_cecilie_bahnsen_202.html",
+        "external_image_url": "https://www.uniqlo.com/jp/ja/contents/corp/press-release/3995d6a231b66dcb40b631905b88986a5db5e81d.png",
+        "alt": "优衣库与 Cecilie Bahnsen 秋冬抓绒系列的官方发布图。",
+        "caption": "优衣库与 Cecilie Bahnsen 秋冬抓绒系列的官方发布图。",
+        "credit": "UNIQLO Japan / Cecilie Bahnsen official campaign.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "stella-nara-rocknroll-forest-2026",
+      "level": "signal",
+      "title": "Stella McCartney 和奈良美智在新宿搭了一座摇滚森林",
+      "english": {
+        "title": "Stella McCartney and Yoshitomo Nara Build a Rock’n’Roll Forest in Shinjuku",
+        "deck": "A third capsule collaboration brings artwork, paper displays and a shared playlist to an Isetan pop-up running through December 8.",
+        "abstract": "A third capsule collaboration brings artwork, paper displays and a shared playlist to an Isetan pop-up running through December 8."
+      },
+      "sources": [
+        {
+          "title": "Yoshitomo Nara x Stella McCartney",
+          "publisher": "Stella McCartney",
+          "url": "https://www.stellamccartney.com/pr/en/yoshitomo-nara-stella-mccartney.html",
+          "published_date": null,
+          "event_date": "2026-11-11 to 2026-12-08 (Isetan Shinjuku)",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Yoshitomo Nara x Stella McCartney — Japan",
+          "publisher": "Stella McCartney Japan",
+          "url": "https://www.stellamccartney.com/jp/ja/yoshitomo-nara-stella-mccartney-japan.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "＜STELLA McCARTNEY x YOSHITOMO NARA＞ A ROCK’N’ROLL FOREST",
+          "publisher": "Isetan Shinjuku",
+          "url": "https://www.mistore.jp/store/shinjuku/shops/women/the_space/shopnews_list/shopnews062.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Stella McCartney launches third Yoshitomo Nara collaboration",
+          "publisher": "WWD Japan",
+          "url": "https://www.wwdjapan.com/articles/2545703",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Tokyo launch-party gallery for the third Nara collaboration",
+          "publisher": "WWD Japan",
+          "url": "https://www.wwdjapan.com/articles/2550902",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Stella McCartney and Yoshitomo Nara collaborate for a 63-style collection",
+          "publisher": "Fashionsnap",
+          "url": "https://www.fashionsnap.com/article/2026-11-05/stella-maccartney-yoshitomo-nara-3/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Stella McCartney and Yoshitomo Nara's third capsule and campaign",
+          "publisher": "ELLE Japan",
+          "url": "https://www.elle.com/jp/fashion/a74356265/stellamccartney-yoshitomonara-2611/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Interview with Stella McCartney and Yoshitomo Nara",
+          "publisher": "Rivista Studio",
+          "url": "https://www.rivistastudio.world/stella-mccartney-nara-yoshitomo-collection/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Stella McCartney and Yoshitomo Nara unveil limited-edition collection",
+          "publisher": "Artsy",
+          "url": "https://www.artsy.net/article/artsy-editorial-stella-mccartney-yoshitomo-nara-unveil-limited-edition-collection",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Stella McCartney and Yoshitomo Nara Celebrate Collaboration",
+          "publisher": "The Impression",
+          "url": "https://theimpression.com/stella-mccartney-and-yoshitomo-nara-celebrate-collaboration/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Stella McCartney and Yoshitomo Nara Bring Graphic Trainers to Their Third Capsule",
+          "publisher": "Footwear Magazine",
+          "url": "https://footwearmagazine.com/stella-mccartney-yoshitomo-nara-graphic-trainers-november-2026/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "How to visit the Stella McCartney and Yoshitomo Nara pop-up in Shinjuku",
+          "publisher": "ÉTAT HER",
+          "url": "https://etather.com/en/news/stella-mccartney-yoshitomo-nara-isetan-popup-20261114",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Stella McCartney / Yoshitomo Nara official collaboration imagery.",
+      "media": {
+        "asset": "assets/stella-nara-rocknroll-forest-2026-fallback.svg",
+        "origin_url": "https://www.stellamccartney.com/pr/en/yoshitomo-nara-stella-mccartney.html",
+        "external_image_url": "https://www.stellamccartney.com/dw/image/v2/BCWD_PRD/on/demandware.static/-/Library-Sites-StellaMcCartneySharedLibrary/default/dw4b7a2fec/images/Nara/SMC_NARA_WEBSITE_CLP_ASSET_4.jpg",
+        "alt": "Stella McCartney 与奈良美智第三次联名的官方系列图。",
+        "caption": "Stella McCartney 与奈良美智第三次联名的官方系列图。",
+        "credit": "Stella McCartney / Yoshitomo Nara official collaboration imagery.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "diana-flores-nike-flag-football",
+      "level": "signal",
+      "title": "Diana Flores 签约 Nike，接下来会参与装备研发",
+      "english": {
+        "title": "Diana Flores Joins Nike and Will Work on Flag Football Equipment",
+        "deck": "The Mexico quarterback’s new deal puts products and local participation in view ahead of flag football’s Olympic debut.",
+        "abstract": "The Mexico quarterback’s new deal puts products and local participation in view ahead of flag football’s Olympic debut."
+      },
+      "sources": [
+        {
+          "title": "Nike Signs Two-Time World Champion Diana Flores, Growing Its Flag Football Roster",
+          "publisher": "NIKE Newsroom",
+          "url": "https://about.nike.com/en/newsroom/releases/nike-signs-two-time-world-champion-diana-flores-growing-its-flag-football-roster",
+          "published_date": "2026-11-23",
+          "event_date": "2026-11-23",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Team Mexico QB Diana Flores signs with Nike",
+          "publisher": "NBC Sports",
+          "url": "https://www.nbcsports.com/olympics/news/team-mexico-qb-diana-flores-signs-with-nike-sport-is-the-vehicle-to-change-lives",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Diana Flores espera elevar el fútbol bandera previo a Los Ángeles 2028 con una nueva alianza",
+          "publisher": "Los Angeles Times en Español",
+          "url": "https://www.latimes.com/espanol/deportes/articulo/2026-11-23/diana-flores-espera-elevar-el-futbol-bandera-previo-los-angeles-2028-con-una-nueva-alianza",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Flag Football at LA28",
+          "publisher": "LA28",
+          "url": "https://la28.org/en/games-plan/olympics/flag-football.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Women's Sports Foundation Welcomes New President and Board of Trustees Members",
+          "publisher": "Women's Sports Foundation",
+          "url": "https://www.womenssportsfoundation.org/press_release/the-womens-sports-foundation-welcomes-new-president-and-board-of-trustees-members/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "USA Football Statement on New Jersey Sanctioning Girls Flag Football as a High School Varsity Sport",
+          "publisher": "USA Football",
+          "url": "https://usafootball.com/media-center/usa-football-statement-on-new-jersey-sanctioning-girls-flag-football-as-a-high-school-varsity-sport",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Diana Flores profile on flag football",
+          "publisher": "Associated Press",
+          "url": "https://apnews.com/article/diana-flores-flag-football-6a2719d40b1f90e63ac95765940544eb",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Las mexicanas del tochito bandera logran un inédito boleto a los Juegos Olímpicos",
+          "publisher": "EL PAÍS México",
+          "url": "https://elpais.com/mexico/2026-08-16/las-mexicanas-del-tochito-bandera-logran-un-inedito-boleto-a-los-juegos-olimpicos.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Flag Football partnership and Olympic context",
+          "publisher": "NFL",
+          "url": "https://www.nfl.com/partners/flag-football/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Mexico quarterback Diana Flores on flag football, LA28 and Billie Jean King",
+          "publisher": "Sports Illustrated",
+          "url": "https://www.si.com/olympics/mexico-quarterback-diana-flores-flag-football-los-angeles-olympics-billie-jean-king",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "NCAA, NFL and flag football's Olympic pipeline",
+          "publisher": "Associated Press",
+          "url": "https://apnews.com/article/ncaa-nfl-olympics-flag-football-834a8df578cce5f11595c31dd46801ce",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "NIKE, Inc. Newsroom, official portrait.",
+      "media": {
+        "asset": "assets/diana-flores-nike-flag-football-fallback.svg",
+        "origin_url": "https://about.nike.com/en/newsroom/releases/nike-signs-two-time-world-champion-diana-flores-growing-its-flag-football-roster",
+        "external_image_url": "https://nmp.about.nike.com/about/prod/f10817b3-9d2f-4c05-ba69-bbef90710dc7/ho26-usnf-dflores-comms-02-final.jpg?m=eyJlZGl0cyI6eyJqcGVnIjp7InF1YWxpdHkiOjEwMH0sIndlYnAiOnsicXVhbGl0eSI6MTAwfSwiZXh0cmFjdCI6eyJsZWZ0IjowLCJ0b3AiOjAsIndpZHRoIjozMTkyLCJoZWlnaHQiOjIxMjl9LCJyZXNpemUiOnsid2lkdGgiOjM4NDB9fX0%3D&s=3ffe63d772699fad4e89cdfe708ca212727abeeed74fafef3a747f7107140eae",
+        "alt": "墨西哥腰旗橄榄球运动员 Diana Flores，Nike 签约公告肖像。",
+        "caption": "墨西哥腰旗橄榄球运动员 Diana Flores，Nike 签约公告肖像。",
+        "credit": "NIKE, Inc. Newsroom, official portrait.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "gtavi-album-radio-score-2026",
+      "level": "signal",
+      "title": "GTA VI 的电台、唱片和配乐各有一套听法",
+      "english": {
+        "title": "Three Ways to Listen to the Music of GTA VI",
+        "deck": "The 34-track album, Vice City’s in-game radio and Justice’s forthcoming score each organize the game’s sound differently.",
+        "abstract": "The 34-track album, Vice City’s in-game radio and Justice’s forthcoming score each organize the game’s sound differently."
+      },
+      "sources": [
+        {
+          "title": "Grand Theft Auto VI: The Album",
+          "publisher": "Apple Music",
+          "url": "https://music.apple.com/us/album/grand-theft-auto-vi-the-album/6812476961",
+          "published_date": "2026-11-20",
+          "event_date": "2026-11-20",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Grand Theft Auto VI: The Album Is Now Available",
+          "publisher": "Game Informer",
+          "url": "https://gameinformer.com/2026/11/20/grand-theft-auto-vi-the-album-is-now-available",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Grand Theft Auto VI: The Album Is All Over the Place (in a Good Way)",
+          "publisher": "Rolling Stone Australia",
+          "url": "https://au.rollingstone.com/music/music-album-reviews/grand-theft-auto-vi-soundtrack-album-review-103596/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "“GTA VI” är världens bästa radiokanal och musiktjänst just nu",
+          "publisher": "Aftonbladet",
+          "url": "https://www.aftonbladet.se/nojesbladet/spela/a/bk5dJg/markus-larsson-om-musiken-i-gta-vi",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The best songs on Grand Theft Auto VI: The Album, reviewed",
+          "publisher": "The FADER",
+          "url": "https://www.thefader.com/2026/11/20/gta-6-soundtrack-album-best-songs",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Hyped for Grand Theft Auto? Here’s why I’m excited about the GTA 6 vinyl record for testing",
+          "publisher": "What Hi-Fi?",
+          "url": "https://www.whathifi.com/streaming-entertainment/music-streaming/hyped-for-grand-theft-auto-heres-why-im-excited-about-the-gta-6-vinyl-record-for-testing",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Grand Theft Auto VI: The Album — Album Review",
+          "publisher": "Sinusoidal Music",
+          "url": "https://sinusoidalmusic.com/reviews/grand-theft-auto-vi-the-album-album-review/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Justice suggest their GTA VI score will be a one-off",
+          "publisher": "MusicRadar",
+          "url": "https://www.musicradar.com/artists/singles-albums/as-soon-as-we-accepted-and-started-working-it-we-thought-it-would-probably-be-the-first-and-last-score-well-ever-do-for-a-video-game-justice-suggest-that-their-gta-vi-score-will-be-a-one-off",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Every GTA 6 song and radio station confirmed so far",
+          "publisher": "PC Gamer",
+          "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-radio-songs/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Grand Theft Auto VI: Original Score (iTunes Exclusive)",
+          "publisher": "Justice / Ed Banger Records and Because Music via Apple Music",
+          "url": "https://music.apple.com/us/album/grand-theft-auto-vi-original-score-itunes-exclusive/6827706027",
+          "published_date": null,
+          "event_date": "2026-12-11",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Grand Theft Auto VI: Original Score by Justice",
+          "publisher": "Rockstar Games",
+          "url": "https://www.rockstargames.com/newswire/article/39ak8a12395591/grand-theft-auto-vi-original-score-by-justice",
+          "published_date": "2026-10-29",
+          "event_date": "2026-12-11",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Grand Theft Auto VI official artwork and wallpaper",
+          "publisher": "Rockstar Games",
+          "url": "https://www.rockstargames.com/VI/media/artwork-wallpapers?pubDate=20260806",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Rockstar Games / Atlantic Records official album artwork.",
+      "media": {
+        "asset": "assets/gtavi-album-radio-score-2026-fallback.svg",
+        "origin_url": "https://www.rockstargames.com/VI/media/artwork-wallpapers?pubDate=20260806",
+        "external_image_url": "https://www.rockstargames.com/VI/_next/static/media/The_Album_Cover_Art_landscape.000ifb9a.j-gp.jpg?akim=1&imdensity=1&imwidth=3840",
+        "alt": "Rockstar Games 官方媒体页上《Grand Theft Auto VI: The Album》的封面。",
+        "caption": "Rockstar Games 官方媒体页上《Grand Theft Auto VI: The Album》的封面。",
+        "credit": "Rockstar Games / Atlantic Records official album artwork.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "or-music-for-empty-stadiums-2026",
+      "level": "signal",
+      "title": "舞池消失以后，John Talabot 把草稿做成了唱片",
+      "english": {
+        "title": "After the Dance Floor Disappeared, John Talabot Returned to His Drafts",
+        "deck": "As OR, the producer gathers lockdown-era ideas into an album that builds dance-floor energy through melody and repetition.",
+        "abstract": "As OR, the producer gathers lockdown-era ideas into an album that builds dance-floor energy through melody and repetition."
+      },
+      "sources": [
+        {
+          "title": "Music for Empty Stadiums",
+          "publisher": "John Talabot / AD 93 (Bandcamp)",
+          "url": "https://johntalabot.bandcamp.com/album/music-for-empty-stadiums",
+          "published_date": "2026-10-30",
+          "event_date": "2026-10-30",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "John Talabot announces new album under OR alias, 'Music For Empty Stadiums'",
+          "publisher": "DJ Mag",
+          "url": "https://djmag.com/news/john-talabot-announces-new-album-under-or-alias-music-empty-stadiums",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "“I recorded almost 70 tracks in two months”: How lockdown turmoil, studio setbacks and a 14-year-old VST inspired John Talabot's new album as OR",
+          "publisher": "MusicRadar",
+          "url": "https://www.musicradar.com/artists/i-recorded-almost-70-tracks-in-two-months-how-lockdown-turmoil-studio-setbacks-and-a-14-year-old-vst-inspired-john-talabots-new-album-as-or",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "OR's Oriol Riverola: “This is the most human record I’ve ever made”",
+          "publisher": "The Line of Best Fit",
+          "url": "https://www.thelineofbestfit.com/features/interviews/or-oriol-riverola-found-something-hold-onto-amid-uncertainty",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "“So music is the problem? – I wanted to create the opposite of a relaxing space”",
+          "publisher": "Kaput Mag",
+          "url": "https://kaput-mag.com/stories_en/so-music-is-the-problem-i-wanted-to-create-the-opposite-of-a-relaxing-space-something-hectic-and-stressful-2/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "OR, “Music for Empty Stadiums”",
+          "publisher": "Bandcamp Daily",
+          "url": "https://daily.bandcamp.com/album-of-the-day/or-music-for-empty-stadiums-review",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "OR: Music for Empty Stadiums Album Review",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/reviews/albums/or-music-for-empty-stadiums/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Recensie: OR (John Talabot) - Music For Empty Stadiums",
+          "publisher": "OOR",
+          "url": "https://oor.nl/albums/music-for-empty-stadiums/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Oktober 2026: Album des Monats",
+          "publisher": "Groove",
+          "url": "https://groove.de/2026/11/01/oktober-2026-album-des-monats/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Switched On – OR: Music For Empty Stadiums (4AD)",
+          "publisher": "Arcana.fm",
+          "url": "https://arcana.fm/2026/11/17/or/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "OR – Music for Empty Stadiums",
+          "publisher": "First Floor",
+          "url": "https://firstfloor.substack.com/p/or-music-for-empty-stadiums",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "John Talabot's new ambient alias OR releases Music For Empty Stadiums",
+          "publisher": "Time To House",
+          "url": "https://timetohouse.com/en/articles/john-talabot-or-music-for-empty-stadiums",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "OR / AD 93 official album artwork.",
+      "media": {
+        "asset": "assets/or-music-for-empty-stadiums-2026-fallback.svg",
+        "origin_url": "https://johntalabot.bandcamp.com/album/music-for-empty-stadiums",
+        "external_image_url": "https://f4.bcbits.com/img/a2543753972_2.jpg",
+        "alt": "OR《Music for Empty Stadiums》官方发行页上的唱片封面。",
+        "caption": "OR《Music for Empty Stadiums》官方发行页上的唱片封面。",
+        "credit": "OR / AD 93 official album artwork.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "mfa-taylor-swift-eras-collection-2027",
+      "level": "signal",
+      "title": "波士顿美术馆怎样用衣服讲 Taylor Swift 的十二个时期",
+      "english": {
+        "title": "How Boston’s MFA Plans to Tell Taylor Swift’s Story Through Clothes",
+        "deck": "A 2027 exhibition will bring together more than fifty objects. Earlier exhibitions show what a costume can tell a museum visitor about making music.",
+        "abstract": "A 2027 exhibition will bring together more than fifty objects. Earlier exhibitions show what a costume can tell a museum visitor about making music."
+      },
+      "sources": [
+        {
+          "title": "Museum of Fine Arts, Boston, to Exclusively Present “Taylor Swift: The Eras Collection”",
+          "publisher": "Museum of Fine Arts, Boston",
+          "url": "https://www.mfa.org/press-release/taylor-swift-the-eras-collection",
+          "published_date": "2026-11-17",
+          "event_date": "2027-04-10 to 2027-08-15",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Taylor Swift ‘Eras’ exhibition to debut at the MFA next year",
+          "publisher": "The Boston Globe",
+          "url": "https://www.bostonglobe.com/2026/11/17/arts/taylor-swift-mfa-eras-collection-exhibit/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "MFA Boston will launch “Taylor Swift” exhibit in 2027",
+          "publisher": "Axios Boston",
+          "url": "https://www.axios.com/local/boston/2026/11/17/mfa-boston-taylor-swift-eras-collection-2027",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Museum of Fine Arts secures exclusive “life of a showgirl” Taylor Swift exhibit",
+          "publisher": "Boston Business Journal",
+          "url": "https://www.bizjournals.com/boston/news/2026/11/17/taylor-swift-museum-of-fine-arts.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Annual Report 2025: Numbers",
+          "publisher": "Museum of Fine Arts, Boston",
+          "url": "https://www.mfa.org/annual-report/annual-report-2025/numbers",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "MFA Boston to lay off 33 employees amid $13M deficit",
+          "publisher": "The Boston Globe",
+          "url": "https://www.bostonglobe.com/2026/01/28/arts/boston-museum-fine-arts-layoffs-amid-financial-struggles/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Museum of Fine Arts Boston Lays Off 33 Workers",
+          "publisher": "Hyperallergic",
+          "url": "https://hyperallergic.com/museum-of-fine-arts-boston-lays-off-33-workers/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "MFA appoints Layla Bermeo as Art of the Americas department chair",
+          "publisher": "WBUR",
+          "url": "https://www.wbur.org/news/2026/09/24/mfa-appoints-layla-bermeo-art-of-the-americas-department-chair",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Taylor Swift: Storyteller",
+          "publisher": "Museum of Arts and Design",
+          "url": "https://madmuseum.org/exhibition/taylor-swift-storyteller",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Taylor Swift Experience",
+          "publisher": "GRAMMY Museum",
+          "url": "https://grammymuseum.org/exhibit/the-taylor-swift-experience/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Past Exhibits: Taylor Swift | The Eras Tour Collection",
+          "publisher": "Arlington Museum of Art",
+          "url": "https://arlingtonmuseum.org/past-exhibits",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Searching for the individual in Bowie’s professional archive",
+          "publisher": "V&A",
+          "url": "https://www.vam.ac.uk/articles/search-for-individual-in-bowies-professional-archive",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "The Taylor Swift Archive",
+          "publisher": "Taylor Swift",
+          "url": "https://www.taylorswift.com/tour-/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Bowie’s message to the millionth David Bowie is visitor",
+          "publisher": "David Bowie official archive / Victoria and Albert Museum",
+          "url": "https://www.davidbowie.com/2015/2015/05/05/bowies-message-to-millionth-david-bowie-is-visitor",
+          "published_date": "2015-05-05",
+          "event_date": "2015-05-05"
+        }
+      ],
+      "image_credit": "Taylor Swift official archive / Universal Music Group.",
+      "media": {
+        "asset": "assets/mfa-taylor-swift-eras-collection-2027-fallback.svg",
+        "origin_url": "https://www.taylorswift.com/tour-/",
+        "external_image_url": "https://cache.umusic.com/_sites/_halo/zyx/ach/img-Folkore.png",
+        "alt": "Taylor Swift 官网档案的《folklore》时期配图，用于介绍展览所采用的时期划分。",
+        "caption": "Taylor Swift 官网档案的《folklore》时期配图，用于介绍展览所采用的时期划分。",
+        "credit": "Taylor Swift official archive / Universal Music Group.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ]
+}
