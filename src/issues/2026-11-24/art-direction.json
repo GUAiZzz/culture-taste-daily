@@ -1,0 +1,27 @@
+{
+  "dominant_mood": "石蓝、浅纸与暖铜色，保留摄影、服装和艺术作品的原始色彩。",
+  "background_logic": "沿用已批准的共享阅读系统与 Living Edition B；日期内容不改共享界面。",
+  "palette_logic": "以石蓝托住浅纸文字，用暖铜色标出进入场地的步行方向。",
+  "type_scale_logic": "沿用共享中英文字级与阅读行高，不以日期样式覆盖控件。",
+  "image_behavior": "区分真实商品、专辑封面、历史作品与现场图；官方外链失败显示明确标注的非纪实回退图。",
+  "page_density_and_tempo": "从雅典和吉萨的场地开始，转到摄影、服装和游戏音乐，保留可继续浏览的节目出处。",
+  "core_visual_action": "在纸面依次错开三组折线，留出像走进房间一样的空间。",
+  "cover_composition": "石蓝底、浅纸标题，折线从左下往右上移。原创编辑封面。",
+  "desktop_interaction_mechanic": "继承共享首页、整期、单篇与返回位置的浏览结构。",
+  "behance_viewing_arc": "从实际物件与声画进入，再回到场地、公众和阅读距离；不增加未经维护的界面。",
+  "mobile_translation": "继承自然滚动、完整双语、图片自然比例和44px交互控件。",
+  "mobbin_usability_constraint": "键盘、无脚本、减弱动态及九种风格外观组合沿用共享阅读合同。",
+  "quiet_ending": "用实际参观日期和官方节目出处收束。",
+  "closing_quotation": {
+    "id": "ct-en-008",
+    "language": "en",
+    "text": "An entrance is already an editorial decision.",
+    "credit": "Culture & Taste Editorial"
+  },
+  "closing_palette": {
+    "background": "#233447",
+    "foreground": "#FFF0DF",
+    "accent": "#F0B88E",
+    "rationale": "石蓝和浅纸保持文字对比，暖铜引导视线。"
+  }
+}
