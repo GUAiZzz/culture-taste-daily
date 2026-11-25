@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-25",
+  "coverage": {
+    "verified_at": "2026-11-25T15:57:53.222+08:00",
+    "regional_lanes_checked": [
+      "mainland_china_plus_hong_kong_or_taiwan",
+      "japan_or_korea",
+      "continental_europe_or_united_kingdom",
+      "united_states_or_canada",
+      "rotating_global_lane"
+    ],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "culture_retail_creative",
+    "focus_subjects_checked": [
+      "AWGE",
+      "Blonded",
+      "Boardroom",
+      "Coachella",
+      "Dover Street Market Los Angeles",
+      "Hidden.NY",
+      "Homer",
+      "Infinite Archives",
+      "JJJJound",
+      "KAWS",
+      "Rolling Loud",
+      "SLAM Kicks",
+      "StockX",
+      "UpscaleHype",
+      "Virgil Abloh Archive"
+    ],
+    "standing_beats_checked": [
+      "stussy-release-radar",
+      "luxury-runway-calendar",
+      "exhibition-and-cultural-programme-radar",
+      "small-breakout-object-radar"
+    ],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {
+      "id": "today-london-museum-smithfield-2026",
+      "category": "city",
+      "included_story_id": "london-museum-smithfield-2026"
+    },
+    {
+      "id": "today-ilmin-museum-mana-2026",
+      "category": "city",
+      "included_story_id": "ilmin-museum-mana-2026"
+    },
+    {
+      "id": "today-jagda-harmony-posters-tokyo-2026",
+      "category": "objects",
+      "included_story_id": "jagda-harmony-posters-tokyo-2026"
+    },
+    {
+      "id": "today-gerhard-richter-doha-pavilion-2026",
+      "category": "city",
+      "included_story_id": "gerhard-richter-doha-pavilion-2026"
+    },
+    {
+      "id": "today-gshock-hidden-metal-watch-2026",
+      "category": "objects",
+      "included_story_id": "gshock-hidden-metal-watch-2026"
+    },
+    {
+      "id": "today-victor-solomon-red-trophies-nike-2026",
+      "category": "fashion",
+      "included_story_id": "victor-solomon-red-trophies-nike-2026"
+    },
+    {
+      "id": "today-timberland-peanuts-joe-cool-japan-2026",
+      "category": "fashion",
+      "included_story_id": "timberland-peanuts-joe-cool-japan-2026"
+    },
+    {
+      "id": "today-nick-cave-manchester-vhs-1986",
+      "category": "music",
+      "included_story_id": "nick-cave-manchester-vhs-1986"
+    },
+    {
+      "id": "today-u2-carnaval-de-luz-north-america-2027",
+      "category": "music",
+      "included_story_id": "u2-carnaval-de-luz-north-america-2027"
+    },
+    {
+      "id": "today-design-miami-mailboxes-2026",
+      "category": "objects",
+      "included_story_id": "design-miami-mailboxes-2026"
+    },
+    {
+      "id": "today-design-at-hkg-soft-reset-2026",
+      "category": "city",
+      "included_story_id": "design-at-hkg-soft-reset-2026"
+    },
+    {
+      "id": "four-tet-ica-five-nights-2027",
+      "category": "music",
+      "title": "Four Tet 将在伦敦 ICA 连演五晚",
+      "deck": "ICA 公布五夜驻演，2027 年 1 月 19 日至 23 日演出。节目页列出各晚时间与票务状态。",
+      "publisher": "Institute of Contemporary Arts",
+      "official_url": "https://www.ica.art/live/four-tet",
+      "published_date": null,
+      "event_date": "2027-01-19 to 2027-01-23",
+      "media": {
+        "kind": "image",
+        "url": "https://www.ica.art/media/14487.jpg",
+        "alt": "伦敦 ICA 的 Four Tet 五夜驻演节目配图。",
+        "credit": "Institute of Contemporary Arts official event image.",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "ys-hiroshima-discharge-dye-2026",
+      "category": "fashion",
+      "title": "Y’s 的拔染系列在广岛三越开出快闪",
+      "deck": "11 月 25 日至 12 月 8 日，Y’s 在广岛三越展示拔染胶囊系列。羊毛华达呢上的圆点由去除织物颜色形成。",
+      "publisher": "Yohji Yamamoto via PR Times",
+      "official_url": "https://prtimes.jp/main/html/rd/p/000001135.000034350.html",
+      "published_date": null,
+      "event_date": "2026-11-25 to 2026-12-08",
+      "media": {
+        "kind": "image",
+        "url": "https://prcdn.freetls.fastly.net/release_image/34350/1135/34350-1135-c43eca3535ccb60d5b9f4d748cd9c402-1800x2700.jpg?format=jpeg&auto=webp&fit=bounds&width=2400&height=1260",
+        "alt": "Y’s 在广岛三越展售的拔染胶囊系列官方图。",
+        "credit": "Yohji Yamamoto official campaign / PR Times.",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ]
+}
