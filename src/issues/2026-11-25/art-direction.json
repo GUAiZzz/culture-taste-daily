@@ -1,0 +1,27 @@
+{
+  "dominant_mood": "梅褐、暖纸与浅灰绿。官方照片、海报和图像维持自身色彩。",
+  "background_logic": "沿用已批准的共享阅读系统与 Living Edition B；日期内容不改共享界面。",
+  "palette_logic": "暖纸色正文保持清楚，灰绿只放在封面圆环和收束段的小面积标记。",
+  "type_scale_logic": "沿用共享中英文字级与阅读行高，不以日期样式覆盖控件。",
+  "image_behavior": "区分真实商品、专辑封面、历史作品与现场图；官方外链失败显示明确标注的非纪实回退图。",
+  "page_density_and_tempo": "从市场大厅和美术馆中庭，逐步靠近海报、腕表刻痕与靴面，再转到旧录像与新场次。",
+  "core_visual_action": "用右侧越出纸边的空心圆重复取景，圆环隔开标题与收束文字。",
+  "cover_composition": "梅褐底与暖纸标题，浅灰绿色偏心圆环。原创编辑封面。",
+  "desktop_interaction_mechanic": "继承共享首页、整期、单篇与返回位置的浏览结构。",
+  "behance_viewing_arc": "从实际物件与声画进入，再回到场地、公众和阅读距离；不增加未经维护的界面。",
+  "mobile_translation": "继承自然滚动、完整双语、图片自然比例和44px交互控件。",
+  "mobbin_usability_constraint": "键盘、无脚本、减弱动态及九种风格外观组合沿用共享阅读合同。",
+  "quiet_ending": "用海报与录像各留一个继续阅读的动作。",
+  "closing_quotation": {
+    "id": "ct-en-001",
+    "language": "en",
+    "text": "The last support stays in place. Method is still carrying the result.",
+    "credit": "Culture & Taste Editorial"
+  },
+  "closing_palette": {
+    "background": "#372831",
+    "foreground": "#FAF0DF",
+    "accent": "#BDD2B5",
+    "rationale": "梅褐在深处留出空间。暖纸正文保持清晰，灰绿圈出视线停留的位置。"
+  }
+}

@@ -1,0 +1,1268 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-11-25",
+  "publication_date": "2026-11-25",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-11-25T10:58:32.391+08:00",
+  "research_locked_at": "2026-11-25T15:57:53.222+08:00",
+  "content_locked_at": "2026-11-25T15:57:53.222+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "f4c503381d940af0849466635b6a21c48d76a10fadd6865b379e6cd76afffd63",
+    "locked_at": "2026-11-25T15:57:53.222+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "f4c503381d940af0849466635b6a21c48d76a10fadd6865b379e6cd76afffd63",
+    "art_direction_sha256": "8757abbd32490788e4522f66d71a1f7b92869f8d61fc620aa18b236249746bac",
+    "issue_style_sha256": "ed089ec9e2877dd687df534ec0249bd1a97e4c9c8a0885b2292bc548aad653e1"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-11-25T15:44:32.519+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "从远处能看见建筑和轮廓，走近一点，才看见把作品撑起来的材料、手艺和劳动。",
+  "art_direction": {
+    "dominant_mood": "梅褐、暖纸与浅灰绿。官方照片、海报和图像维持自身色彩。",
+    "background_logic": "沿用已批准的共享阅读系统与 Living Edition B；日期内容不改共享界面。",
+    "palette_logic": "暖纸色正文保持清楚，灰绿只放在封面圆环和收束段的小面积标记。",
+    "type_scale_logic": "沿用共享中英文字级与阅读行高，不以日期样式覆盖控件。",
+    "image_behavior": "区分真实商品、专辑封面、历史作品与现场图；官方外链失败显示明确标注的非纪实回退图。",
+    "page_density_and_tempo": "从市场大厅和美术馆中庭，逐步靠近海报、腕表刻痕与靴面，再转到旧录像与新场次。",
+    "core_visual_action": "用右侧越出纸边的空心圆重复取景，圆环隔开标题与收束文字。",
+    "cover_composition": "梅褐底与暖纸标题，浅灰绿色偏心圆环。原创编辑封面。",
+    "desktop_interaction_mechanic": "继承共享首页、整期、单篇与返回位置的浏览结构。",
+    "behance_viewing_arc": "从实际物件与声画进入，再回到场地、公众和阅读距离；不增加未经维护的界面。",
+    "mobile_translation": "继承自然滚动、完整双语、图片自然比例和44px交互控件。",
+    "mobbin_usability_constraint": "键盘、无脚本、减弱动态及九种风格外观组合沿用共享阅读合同。",
+    "quiet_ending": "用海报与录像各留一个继续阅读的动作。",
+    "closing_quotation": {
+      "id": "ct-en-001",
+      "language": "en",
+      "text": "The last support stays in place. Method is still carrying the result.",
+      "credit": "Culture & Taste Editorial"
+    },
+    "closing_palette": {
+      "background": "#372831",
+      "foreground": "#FAF0DF",
+      "accent": "#BDD2B5",
+      "rationale": "梅褐在深处留出空间。暖纸正文保持清晰，灰绿圈出视线停留的位置。"
+    }
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": [
+      "2026-11-24",
+      "2026-11-22",
+      "2026-11-18",
+      "2026-11-17",
+      "2026-11-16",
+      "2026-11-15",
+      "2026-11-03"
+    ],
+    "repeated_mechanisms": [
+      "Owner-approved shared reading system",
+      "Official-origin links and accessible image fallbacks"
+    ],
+    "exception_reason": "偏心圆环给出不同于前两期折线的封面。段落从建筑尺度逐步接近物件与录音。已核对前两期的事件和图片。"
+  },
+  "rights_summary": {
+    "required_assets": 11,
+    "unknown_required_assets": 11,
+    "status": "blocked"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": null
+  },
+  "evidence_refs": {
+    "technical": [],
+    "editorial_visual": [],
+    "gate": []
+  },
+  "qa": {
+    "html_parse": "unavailable",
+    "assets": "unavailable",
+    "internal_links": "unavailable",
+    "no_js_reading": "unavailable",
+    "desktop_render": "unavailable",
+    "mobile_render": "unavailable",
+    "reduced_motion": "unavailable"
+  },
+  "limitations": [
+    "Preview edition. Official external images open their verified origin pages.",
+    "The edition preserves each underlying event date and identifies contextual or preview images in their captions."
+  ],
+  "stories": [
+    {
+      "id": "london-museum-smithfield-2026",
+      "title": "在史密斯菲尔德老市场，伦敦博物馆公布新馆",
+      "level": "cover",
+      "english": {
+        "title": "London Museum unveils its Smithfield home",
+        "deck": "The former General Market reopens on November 28. Its glass-roofed hall becomes the first room in a museum about London.",
+        "abstract": "The former General Market reopens on November 28. Its glass-roofed hall becomes the first room in a museum about London."
+      },
+      "sources": [
+        {
+          "title": "London Museum unveils new home in Smithfield",
+          "publisher": "London Museum",
+          "url": "https://www.londonmuseum.org.uk/about/press/press-releases/london-museum-unveils-new-home-smithfield/",
+          "published_date": null,
+          "event_date": "2026-11-28",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "London Museum buildings",
+          "publisher": "London Museum",
+          "url": "https://www.londonmuseum.org.uk/smithfield/buildings/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "london museum opens new home in smithfield’s historic general market",
+          "publisher": "designboom",
+          "url": "https://www.designboom.com/architecture/london-museum-new-home-smithfield-historic-general-market-stanton-williams-asif-khan-julian-harrap/",
+          "published_date": "2026-11-24",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The history of Smithfield Market",
+          "publisher": "London Museum",
+          "url": "https://www.londonmuseum.org.uk/collections/london-stories/history-smithfield-market/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Smithfield Market: The iron legacy of Sir Horace Jones",
+          "publisher": "London Museum",
+          "url": "https://www.londonmuseum.org.uk/blog/smithfield-market-the-iron-legacy-of-sir-horace-jones/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "London Museum names design team for subterranean Deep Time gallery",
+          "publisher": "The Architects’ Journal",
+          "url": "https://www.architectsjournal.co.uk/news/london-museum-names-design-team-for-subterranean-deep-time-gallery",
+          "published_date": "2026-03-04",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "General admission – London Museum",
+          "publisher": "London Museum",
+          "url": "https://www.londonmuseum.org.uk/whats-on/smithfield-general-admission/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "‘The lack of fun is as noticeable as the lack of content’: the reborn Museum of London is all piazza, no punch",
+          "publisher": "The Guardian · Jonathan Jones",
+          "url": "https://www.theguardian.com/artanddesign/2026/nov/24/museum-of-london-smithfield-review",
+          "published_date": "2026-11-24",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Take me to the fatberg! The £437m new Museum of London is an astonishing sight",
+          "publisher": "The Guardian · Oliver Wainwright",
+          "url": "https://www.theguardian.com/artanddesign/2026/nov/24/fatberg-museum-of-london-astonishing-smithfields-architecture",
+          "published_date": "2026-11-24",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Smithfield Area Public Realm and Transportation Project",
+          "publisher": "City of London Corporation",
+          "url": "https://www.cityoflondon.gov.uk/services/streets/projects-and-proposals/smithfield-area-public-realm-and-transportation-project",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Discover the ‘soft power’ of the London Museum in its striking new home",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/architecture/public-buildings/london-museum-opens-uk",
+          "published_date": "2026-11-24",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Hufton+Crow / London Museum.",
+      "media": {
+        "asset": "assets/london-museum-smithfield-2026-fallback.svg",
+        "origin_url": "https://www.londonmuseum.org.uk/about/press/press-releases/london-museum-unveils-new-home-smithfield/",
+        "external_image_url": "https://media.londonmuseum.org.uk/images/London-Museum-Smithfield-Novembe.width-1120.format-webp.webp",
+        "alt": "伦敦博物馆史密斯菲尔德新馆的玻璃顶大厅与长椅。",
+        "caption": "伦敦博物馆史密斯菲尔德新馆的玻璃顶大厅与长椅。",
+        "credit": "Hufton+Crow / London Museum.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "ilmin-museum-mana-2026",
+      "title": "首尔《MANA》把维持一件作品的力留在现场",
+      "level": "major",
+      "english": {
+        "title": "MANA makes the forces holding a work together visible",
+        "deck": "At Ilmin Museum of Art, six artists use wire, machines and everyday objects to examine what keeps things moving.",
+        "abstract": "At Ilmin Museum of Art, six artists use wire, machines and everyday objects to examine what keeps things moving."
+      },
+      "sources": [
+        {
+          "title": "《마나》 - 일민미술관",
+          "publisher": "Ilmin Museum of Art",
+          "url": "https://ilmin.org/exhibition/exhibition-2026_mana/",
+          "published_date": null,
+          "event_date": "2026-11-25 to 2027-01-24",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "일민미술관 - 일민미술관",
+          "publisher": "Ilmin Museum of Art",
+          "url": "https://ilmin.org/about/ilmin-museum-of-art/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "컨트롤러로 모는 ‘조종 조각’, 얼기설기 다시 짠 ‘뒤샹 누드’",
+          "publisher": "Financial Today",
+          "url": "https://www.ftoday.co.kr/news/articleView.html?idxno=370395",
+          "published_date": "2026-11-24",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "신체와 사물 사이에 작동하는 힘…일민미술관 '마나'전",
+          "publisher": "News1 via Financial News",
+          "url": "https://www.fnnews.com/news/202611050630580138",
+          "published_date": "2026-11-05",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "보이지 않는 힘, 일민미술관 기획전 '마나'",
+          "publisher": "Marie Claire Korea",
+          "url": "https://www.marieclairekorea.com/culture/2026/11/art-7/",
+          "published_date": "2026-11-05",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "ICA | Geumhyung Jeong: Under Construction",
+          "publisher": "Institute of Contemporary Arts",
+          "url": "https://ica.art/exhibitions/geumhyung-jeong-under-construction",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "티파니앤코, 건축 100주년 일민미술관과 문화예술 파트너십",
+          "publisher": "Hankyung Money",
+          "url": "https://magazine.hankyung.com/money/article/202611235300c",
+          "published_date": "2026-11-24",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "National Museum of Modern and Contemporary Art, Korea",
+          "publisher": "National Museum of Modern and Contemporary Art, Korea",
+          "url": "https://www.mmca.go.kr/eng/events/eventsDetail.do?eduId=202102030002212",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Biennale Arte 2022 | Geumhyung Jeong",
+          "publisher": "La Biennale di Venezia",
+          "url": "https://www.labiennale.org/en/art/2022/milk-dreams/geumhyung-jeong",
+          "published_date": "2022-03-30",
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "《오프 더 화이트: 무늬와 정보》 - 일민미술관",
+          "publisher": "Ilmin Museum of Art",
+          "url": "https://ilmin.org/exhibition/2026_off-the-white-2/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "일민미술관 갔더니 마네킹이 누워있었습니다 - MMM Mag : 엠엠엠 매거진",
+          "publisher": "MMM Magazine",
+          "url": "https://mmm-mag.co.kr/%EC%9D%BC%EB%AF%BC%EB%AF%B8%EC%88%A0%EA%B4%80-%EA%B0%94%EB%8D%94%EB%8B%88-%EB%A7%88%EB%84%A4%ED%82%B9%EC%9D%B4-%EB%88%84%EC%9B%8C%EC%9E%88%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4/",
+          "published_date": "2026-11-24",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Ilmin Museum of Art exhibition photography.",
+      "media": {
+        "asset": "assets/ilmin-museum-mana-2026-fallback.svg",
+        "origin_url": "https://ilmin.org/exhibition/exhibition-2026_mana/",
+        "external_image_url": "https://ilmin.org/wp-content/uploads/2026/11/20261123_083638-scaled.jpg",
+        "alt": "首尔一民美术馆《MANA》官方展览现场。",
+        "caption": "首尔一民美术馆《MANA》官方展览现场。",
+        "credit": "Ilmin Museum of Art exhibition photography.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "jagda-harmony-posters-tokyo-2026",
+      "title": "东京今天挂起 260 张关于「Harmony」的海报",
+      "level": "major",
+      "english": {
+        "title": "Tokyo hangs 260 student posters on Harmony",
+        "deck": "A single word and a B1 sheet set a shared problem for the JAGDA International Student Poster Award.",
+        "abstract": "A single word and a B1 sheet set a shared problem for the JAGDA International Student Poster Award."
+      },
+      "sources": [
+        {
+          "title": "展覧会「JAGDA国際学生ポスターアワード2026」｜NEWS｜公益社団法人日本グラフィックデザイン協会（JAGDA）",
+          "publisher": "Japan Graphic Design Association",
+          "url": "https://www.jagda.or.jp/news/10893/",
+          "published_date": null,
+          "event_date": "2026-11-25 to 2026-12-07",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "入賞作品発表",
+          "publisher": "JAGDA Student Poster Award",
+          "url": "https://jagda-gakusei.jp/2026/10/08/%E5%85%A5%E8%B3%9E%E4%BD%9C%E5%93%81%E7%99%BA%E8%A1%A8-2026/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "JAGDA International Student Poster Award 2026",
+          "publisher": "JAGDA Student Poster Award",
+          "url": "https://jagda-gakusei.jp/2026/03/03/jagda-international-student-poster-award-2026/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "「JAGDA国際学生ポスターアワード2026」作品展が、国立新美術館で11月25日から開催 - デザイン情報サイト[JDN]",
+          "publisher": "JDN",
+          "url": "https://www.japandesign.ne.jp/news/2026/11/91172/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "【受賞情報】入賞＆入選／JAGDA国際学生ポスターアワード2026 【専門学校日本デザイナー学院】デザイナー・イラストレーター・漫画(マンガ)家・アニメーターを目指せる専門学校",
+          "publisher": "Nippon Designers School",
+          "url": "https://ndg.ac.jp/topics/2026/10/09/28932",
+          "published_date": "2026-10-09",
+          "event_date": null
+        },
+        {
+          "title": "JAGDA国際学生ポスターアワード2026発表、グランプリは多摩美術大学の学生",
+          "publisher": "Artful Japan",
+          "url": "https://www.advertimes.com/20261109/article563435/",
+          "published_date": "2026-11-09",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "JAGDA International Student Poster Award 2026 | International Council of Design",
+          "publisher": "International Council of Design",
+          "url": "https://www.theicod.org/activities/member-events/jagda-international-student-poster-award-2026",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "JAGDA国際学生ポスターアワード2025で銀賞と協賛企業特別賞を在学生複数名が受賞",
+          "publisher": "Tama Art University",
+          "url": "https://www.tamabi.ac.jp/news/106475/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "JAGDA国際学生ポスター アワード2026にて本学学生が銅賞はじめ多数の賞を受賞しました | 女子美術大学・短期大学部・大学院",
+          "publisher": "Joshibi University of Art and Design",
+          "url": "https://www.joshibi.ac.jp/joshibi-news/news/4273",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "JAGDA国際学生ポスターアワード2026 受賞 / 専門学校桑沢デザイン研究所",
+          "publisher": "Kuwasawa Design School",
+          "url": "https://www.kds.ac.jp/designnews/id1940/",
+          "published_date": "2026-11-01",
+          "event_date": null
+        },
+        {
+          "title": "【受賞】JAGDA国際学生ポスターアワード2026で、メディアデザインコース4年の矢野瑞己さんが銀賞および審査員賞を受賞",
+          "publisher": "Kyushu University School of Design",
+          "url": "https://www.design.kyushu-u.ac.jp/topics/32544/",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Koji Iyama / Japan Graphic Design Association.",
+      "media": {
+        "asset": "assets/jagda-harmony-posters-tokyo-2026-fallback.svg",
+        "origin_url": "https://www.jagda.or.jp/news/10893/",
+        "external_image_url": "https://www.jagda.or.jp/wp/wp-content/uploads/2026/11/jispa2026exh_poster_rgb.jpg",
+        "alt": "居山浩二设计的 JAGDA 国际学生海报奖 2026 入选展官方海报。",
+        "caption": "居山浩二设计的 JAGDA 国际学生海报奖 2026 入选展官方海报。",
+        "credit": "Koji Iyama / Japan Graphic Design Association.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "gerhard-richter-doha-pavilion-2026",
+      "title": "Richter 把从画布上分出来的纹样放上了墙",
+      "level": "major",
+      "english": {
+        "title": "Gerhard Richter gives a painting’s patterns a building",
+        "deck": "A six-sided pavilion in Doha translates one of Richter’s painted surfaces into a space to walk around.",
+        "abstract": "A six-sided pavilion in Doha translates one of Richter’s painted surfaces into a space to walk around."
+      },
+      "sources": [
+        {
+          "title": "Doha Pavilion: Gerhard Richter Opens - Selldorf Architects - New York",
+          "publisher": "Selldorf Architects",
+          "url": "https://www.selldorf.com/news/doha-pavilion-gerhard-richter-opens",
+          "published_date": null,
+          "event_date": "2026-11-20",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Design Unveiled for Doha Pavilion: Gerhard Richter - Selldorf Architects - New York",
+          "publisher": "Selldorf Architects",
+          "url": "https://www.selldorf.com/news/design-unveiled-for-doha-pavilion-gerhard-richter",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Richter pavilion to light up Doha’s art scene",
+          "publisher": "Gulf Times",
+          "url": "https://www.gulf-times.com/article/733012/qatar/richter-pavilion-to-light-up-dohas-art-scene",
+          "published_date": "2026-09-10",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Gerhard Richter just revealed a dizzying pavilion in Doha. Step inside",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/architecture/gerhard-richter-doha-pavilion",
+          "published_date": "2026-11-23",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Gerhard Richter's mosaic-like Doha pavilion will open in November - The Art Newspaper - International art news and events",
+          "publisher": "The Art Newspaper",
+          "url": "https://www.theartnewspaper.com/2026/09/11/gerhard-richters-mosaic-like-doha-pavilion-will-open-in-november",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "ILoveQatar.net | New artwork by Gerhard Richter to be unveiled at MIA Park on 20 November 2026",
+          "publisher": "ILoveQatar",
+          "url": "https://www.iloveqatar.net/news/artsCulture/new-artwork-gerhard-richter-unveiled-mia-park-20-november-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Qatar Museums to Build Dedicated Pavilion to Gerhard Richter | The Art Journal",
+          "publisher": "The Art Journal",
+          "url": "https://www.theartjournal.com/articles/qatar-museums-to-build-dedicated-pavilion-to-gerhard-richter",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Gerhard Richter: STRIP-TOWER - Serpentine Galleries",
+          "publisher": "Serpentine Galleries",
+          "url": "https://www.serpentinegalleries.org/whats-on/gerhard-richter-strip-tower/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Fall 2026 Exhibitions: Your Culture Calendar Starts Here - Qatar Museums",
+          "publisher": "Qatar Museums",
+          "url": "https://qm.org.qa/en/stories/all-stories/fall-2026-exhibitions/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Gerhard Richter's Doha Pavilion opens in MIA Park · Doha Minute",
+          "publisher": "Doha Minute",
+          "url": "https://dohaminute.com/news/richter-pavilion/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Selldorf Architects project page / Qatar Museums. Artwork © Gerhard Richter.",
+      "media": {
+        "asset": "assets/gerhard-richter-doha-pavilion-2026-fallback.svg",
+        "origin_url": "https://www.selldorf.com/news/doha-pavilion-gerhard-richter-opens",
+        "external_image_url": "https://www.selldorf.com/wp-content/uploads/2026/11/doha-pavilion-gerhard-richter-selldorf-02.jpg",
+        "alt": "多哈 MIA Park 的 Gerhard Richter 展亭官方项目图。",
+        "caption": "多哈 MIA Park 的 Gerhard Richter 展亭官方项目图。",
+        "credit": "Selldorf Architects project page / Qatar Museums. Artwork © Gerhard Richter.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "gshock-hidden-metal-watch-2026",
+      "title": "G-SHOCK 把自由女神像刻在腕表背面",
+      "level": "signal",
+      "english": {
+        "title": "G-SHOCK and HIDDEN put Lady Liberty on the wrist side",
+        "deck": "Four green markers sit on the dial. The American release hides the collaboration’s most literal New York reference in its clasp and case back.",
+        "abstract": "Four green markers sit on the dial. The American release hides the collaboration’s most literal New York reference in its clasp and case back."
+      },
+      "sources": [
+        {
+          "title": "GM2110HDN-8A | G-SHOCK ANALOG-DIGITAL Silver | CASIO",
+          "publisher": "Casio America",
+          "url": "https://www.casio.com/us/watches/gshock/product.GM-2110HDN-8A/",
+          "published_date": null,
+          "event_date": "2026-11-25",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "CASIO RELEASES G-SHOCK COLLABORATION WATCH WITH HIDDEN®",
+          "publisher": "Casio America via PR Newswire",
+          "url": "https://www.prnewswire.com/news-releases/casio-releases-g-shock-collaboration-watch-with-hidden-302944465.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "HIDDEN Collaboration | G-SHOCK | CASIO",
+          "publisher": "G-SHOCK",
+          "url": "https://gshock.casio.com/intl/products/collection/limited/hidden-collab/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Hidden x G-Shock GM2110HDN-8A celebrates New York City street culture - G-Central G-Shock Fan Site",
+          "publisher": "G-Central",
+          "url": "https://www.g-central.com/hidden-x-g-shock-gm2110hdn-8a-celebrates-new-york-city-street-culture/",
+          "published_date": "2026-11-19",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Casio's new G-Shock collaboration with HIDDEN puts New York green on a metal octagon - The Gadgeteer",
+          "publisher": "The Gadgeteer",
+          "url": "https://the-gadgeteer.com/2026/11/21/casio-g-shock-gm2110hdn-8a-hidden/",
+          "published_date": "2026-11-21",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Time Passes In the Blink of An Eye - HIDDEN.RSRCH",
+          "publisher": "HIDDEN.RSRCH",
+          "url": "https://www.hiddenrsrch.com/p/time-passes-in-the-blink-of-an-eye",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Introducing: The HIDDEN NY x G-Shock DW5600HDN257 (Live Pics)",
+          "publisher": "Hodinkee",
+          "url": "https://www.hodinkee.com/articles/the-hidden-ny-x-g-shock-dw5600hdn257-live-pics",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "DW-5600HDN25-7 - HIDDEN® Collaboration Model | CASIO",
+          "publisher": "Casio",
+          "url": "https://gshock.casio.com/us/products/collection/limited/dw5600hdn257/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Hidden NY x G-Shock DW5600HDN227 collaboration - G-Central G-Shock Fan Site",
+          "publisher": "G-Central",
+          "url": "https://www.g-central.com/hidden-ny-x-g-shock-dw5600hdn227-collaboration-will-offer-early-access-on-august-18/",
+          "published_date": "2023-08-18",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "G-Shock’s Latest CasiOak Watch Channels the Golden Age of Streetwear | Gear Patrol",
+          "publisher": "Gear Patrol",
+          "url": "https://www.gearpatrol.com/watches/g-shock-hidden-ny-gm-2110hdn-8a/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Casio America / G-SHOCK official product photography.",
+      "media": {
+        "asset": "assets/gshock-hidden-metal-watch-2026-fallback.svg",
+        "origin_url": "https://www.casio.com/us/watches/gshock/product.GM-2110HDN-8A/",
+        "external_image_url": "https://www.casio.com/content/dam/casio/product-info/locales/us/en/timepiece/product/watch/G/GM/gm2/gm-2110hdn-8a/assets/GM-2110HDN-8A.png.transform/main-visual-sp/image.png",
+        "alt": "G-SHOCK GM2110HDN-8A 银色金属腕表正面。",
+        "caption": "G-SHOCK GM2110HDN-8A 银色金属腕表正面。",
+        "credit": "Casio America / G-SHOCK official product photography.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "victor-solomon-red-trophies-nike-2026",
+      "title": "Victor Solomon 把奖杯的金属件带到三双鞋上",
+      "level": "signal",
+      "english": {
+        "title": "Victor Solomon brings trophy hardware to three Nike shoes",
+        "deck": "Red Trophies gives a chain and a different surface to each of the Air Force 1, Air Max 90 and Air Foamposite One.",
+        "abstract": "Red Trophies gives a chain and a different surface to each of the Air Force 1, Air Max 90 and Air Foamposite One."
+      },
+      "sources": [
+        {
+          "title": "Air Force 1 '07 x Victor Solomon 'Gym Red and White' (IR2076-600) Release Date",
+          "publisher": "Nike SNKRS",
+          "url": "https://www.nike.com/launch/t/air-force-1-07-victor-solomon-gym-red-and-white",
+          "published_date": null,
+          "event_date": "2026-11-25",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Air Max 90 x Victor Solomon 'Gym Red and White' (IR2074-600) Release Date",
+          "publisher": "Nike SNKRS",
+          "url": "https://www.nike.com/launch/t/air-max-90-victor-solomon-gym-red-and-white",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Air Foamposite One x Victor Solomon 'Gym Red and Black' (IR2077-600) Release Date",
+          "publisher": "Nike SNKRS",
+          "url": "https://www.nike.com/launch/t/air-foamposite-one-victor-solomon-gym-red-and-black",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "The Victor Solomon x Nike 'Red Trophies' Three-Stack Is Off the Chain - Releases",
+          "publisher": "Sneaker Freaker",
+          "url": "https://www.sneakerfreaker.com/releases/the-victor-solomon-x-nike-red-trophies-three-stack-is-off-the-chain",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Victor Solomon Nike \"Trophies\" Collection Red | SneakerNews.com",
+          "publisher": "Sneaker News",
+          "url": "https://sneakernews.com/2026/11/24/victor-solomon-nike-red-trophies/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Victor Solomon x Nike “Gym Red” Trophies Collection Releases November 25",
+          "publisher": "House of Heat",
+          "url": "https://houseofheat.co/nike/victor-solomon-nike-gym-red-collection-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "NBA Introduces New Lineup of Postseason Hardware Featuring an Evolution of The Larry O’Brien Trophy",
+          "publisher": "NBA",
+          "url": "https://press.tiffany.com/nba-introduces-new-lineup-of-postseason-hardware-featuring-an-evolution-of-the-larry-obrien-trophy/?pdf=30464",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Building Beauty: Victor Solomon’s ‘NBA 2K’ Kintsugi Basketball",
+          "publisher": "Complex",
+          "url": "https://www.complex.com/pop-culture/a/brandon-constantine/nba2k-victor-solomon-kintsugi-basketball",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Literally Balling Turns Backboards Into Stained Glass Masterpieces",
+          "publisher": "Hypebeast",
+          "url": "https://www.complex.com/style/a/gregory-babcock/literally-balling-stained-glass-backboards",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "DNA Artefacts – Air Foamposite One",
+          "publisher": "Nike SNKRS",
+          "url": "https://www.nike.com/lu/en/launch/t/dna-artifacts-nike-air-foamposite-one",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Nike SNKRS official product photography.",
+      "media": {
+        "asset": "assets/victor-solomon-red-trophies-nike-2026-fallback.svg",
+        "origin_url": "https://www.nike.com/launch/t/air-force-1-07-victor-solomon-gym-red-and-white",
+        "external_image_url": "https://static.nike.com/a/images/w_320%2Cq_auto%2Cf_auto/c10d2f04-2136-40a0-bf6b-1b98c4523065/air-force-1-07-x-victor-solomon-gym-red-and-white-ir2076-600-release-date.jpg",
+        "alt": "Nike SNKRS 的 Victor Solomon 红色 Air Force 1 官方产品图。",
+        "caption": "Nike SNKRS 的 Victor Solomon 红色 Air Force 1 官方产品图。",
+        "credit": "Nike SNKRS official product photography.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "timberland-peanuts-joe-cool-japan-2026",
+      "title": "Joe Cool 从漫画格走到 Timberland 的靴面",
+      "level": "signal",
+      "english": {
+        "title": "Joe Cool goes from the comic strip to a Timberland boot",
+        "deck": "The Japan release moves from Shibuya PARCO to the national store network on November 24, with a Snoopy graphic adapted to the boot’s seams.",
+        "abstract": "The Japan release moves from Shibuya PARCO to the national store network on November 24, with a Snoopy graphic adapted to the boot’s seams."
+      },
+      "sources": [
+        {
+          "title": "Timberland®とPEANUTS®が贈る、ホリデーシーズンを“クール”に楽しむコラボレーション",
+          "publisher": "VF Japan via PR Times",
+          "url": "https://prtimes.jp/main/html/rd/p/000000227.000011659.html",
+          "published_date": null,
+          "event_date": "2026-11-24",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Timberland x スヌーピー この冬だけのスペシャルコレクション｜ティンバーランド（Timberland）公式オンラインショップ | Timberland Japan",
+          "publisher": "Timberland Japan",
+          "url": "https://www.timberland.co.jp/news-261116_snoopy.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "「ティンバーランド」がスヌーピーの「ピーナッツ」とコラボ ホリデーシーズンに向けたアイテムを発売 - WWDJAPAN ‐ 最新ファッション＆ビューティニュース情報",
+          "publisher": "WWD Japan",
+          "url": "https://www.wwdjapan.com/articles/2553712",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Timberland and Peanuts Team Up to Celebrate the Art of Staying Cool this Holiday Season",
+          "publisher": "Timberland Global",
+          "url": "https://newsroom.timberland.com/latest-news/timberland-and-peanuts-team-up-to-celebrate-the--art-of-staying-cool-this-holiday-season/s/6b3d8dc0-b743-45c5-be97-c501a7dbb9e1",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Timberland x PEANUTS Snoopy Collection: Nov 20 Release",
+          "publisher": "JustFresh",
+          "url": "https://www.justfresh.co/fashion/timberland-peanuts-snoopy-collection-shibuya-parco-november-20",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "THE STYLE REGISTER VOL. 08: FRAGMENT OUTERWEAR, NORMSKI’S ARCHIVE AND JOE COOL TIMBS - Viper Mag",
+          "publisher": "Viper Magazine",
+          "url": "https://www.vipermag.com/2026/11/05/the-style-register-vol-08/",
+          "published_date": "2026-11-05",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Joe Cool | Peanuts",
+          "publisher": "Peanuts",
+          "url": "https://www.peanuts.com/about/joe-cool",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Six Culture-Defining Designers Take on Timberland’s 6-Inch Boot",
+          "publisher": "Hypebeast",
+          "url": "https://www.highsnobiety.com/p/timberland-future73-boot/",
+          "published_date": "2023-02-08",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Trend-ology - Trend-ology",
+          "publisher": "The Museum at FIT",
+          "url": "https://exhibitions.fitnyc.edu/trend-ology/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Timberland: 40 years of the yellow boot | Men's fashion | The Guardian",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/fashion/2013/apr/16/timberland-40-years-yellow-boot",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "VF Japan / Timberland and Peanuts official campaign.",
+      "media": {
+        "asset": "assets/timberland-peanuts-joe-cool-japan-2026-fallback.svg",
+        "origin_url": "https://prtimes.jp/main/html/rd/p/000000227.000011659.html",
+        "external_image_url": "https://prcdn.freetls.fastly.net/release_image/11659/227/11659-227-06a757f8d4eaefad0294dac3c1b94398-1080x1350.jpg?format=jpeg&auto=webp&fit=bounds&width=2400&height=1260",
+        "alt": "Timberland 与 Peanuts 联名的官方 Joe Cool 系列宣传图。",
+        "caption": "Timberland 与 Peanuts 联名的官方 Joe Cool 系列宣传图。",
+        "credit": "VF Japan / Timberland and Peanuts official campaign.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "nick-cave-manchester-vhs-1986",
+      "title": "Nick Cave 拿出曼彻斯特的 1986 年现场录像",
+      "level": "signal",
+      "english": {
+        "title": "Nick Cave reopens the 1986 Manchester tape",
+        "deck": "The band’s VHS archive supplies a way to hear Your Funeral… My Trial at the scale of a room.",
+        "abstract": "The band’s VHS archive supplies a way to hear Your Funeral… My Trial at the scale of a room."
+      },
+      "sources": [
+        {
+          "title": "Nick Cave & The Bad Seeds - Live in Manchester 1986 - Nick Cave",
+          "publisher": "Nick Cave & The Bad Seeds",
+          "url": "https://www.nickcave.com/news/nick-cave-the-bad-seeds-live-in-manchester-1986/",
+          "published_date": "2026-11-23",
+          "event_date": "2026-11-23",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Nick Cave and The Bad Seeds share unseen live footage from 1986 | The Line of Best Fit",
+          "publisher": "The Line of Best Fit",
+          "url": "https://www.thelineofbestfit.com/news/nick-cave-and-the-bad-seeds-share-unseen-live-footage-from-1986",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Nick Cave & The Bad Seeds unveil lost Manchester footage from 1986 - Punkinfocus",
+          "publisher": "Punkinfocus",
+          "url": "https://punkinfocus.com/nick-cave-the-bad-seeds-manchester-1986-live-footage/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Nick Cave Opens the Vault on a Wild 1986 Bad Seeds Performance",
+          "publisher": "Blunt Magazine",
+          "url": "https://bluntmag.com.au/news/nick-cave-opens-the-vault-on-a-wild-1986-bad-seeds-performance/",
+          "published_date": "2026-11-24",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "From The Archives -Nick Cave and the Bad Seeds- Chronology I/Gigography I",
+          "publisher": "From the Archives",
+          "url": "https://www.fromthearchives.com/nc/chronology1.html",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Nick Cave and the Bad Seeds Announce Reissue Details",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/news/34713-nick-cave-and-the-bad-seeds-announce-reissue-details/",
+          "published_date": "2009-03-02",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Nick Cave & the Bad Seeds: From Her to Eternity / The First Born Is Dead / Kicking Against the Pricks / Your Funeral... My Trial",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/reviews/albums/12949-from-her-to-eternity-the-first-born-is-dead-kicking-against-the-pricks-your-funeral-my-trial/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Nick Cave & The Bad Seeds: unseen 1986 live recordings",
+          "publisher": "Karlobag.eu",
+          "url": "https://karlobag.eu/en/music/nick-cave-the-bad-seeds-release-ten-unseen-manchester-concert-recordings-from-19-eddyc/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Beyond The Hits: Nick Cave And The Bad Seeds | The Quietus",
+          "publisher": "The Quietus",
+          "url": "https://thequietus.com/opinion-and-essays/beyond-the-hits/nick-cave-the-bad-seeds-beyond-the-hits/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "From The Archives -Nick Cave and the Bad Seeds- Discography",
+          "publisher": "From the Archives",
+          "url": "https://fromthearchives.com/nc/discography1.html",
+          "published_date": null,
+          "event_date": null
+        }
+      ],
+      "image_credit": "Nick Cave & The Bad Seeds official release artwork.",
+      "media": {
+        "asset": "assets/nick-cave-manchester-vhs-1986-fallback.svg",
+        "origin_url": "https://www.nickcave.com/news/nick-cave-the-bad-seeds-live-in-manchester-1986/",
+        "external_image_url": "https://www.nickcave.com/wp-content/uploads/2026/11/NickCaveTheBadSeeds_LiveInManchester1986_4X5.jpg",
+        "alt": "Nick Cave & The Bad Seeds《Live in Manchester 1986》官方发布图。",
+        "caption": "Nick Cave & The Bad Seeds《Live in Manchester 1986》官方发布图。",
+        "credit": "Nick Cave & The Bad Seeds official release artwork.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "u2-carnaval-de-luz-north-america-2027",
+      "title": "U2 给《Carnaval De Luz》补上北美场",
+      "level": "signal",
+      "english": {
+        "title": "U2 adds a North American leg to the Carnaval De Luz tour",
+        "deck": "The band adds dates from Miami to Vancouver. The new record’s collaborators raise a question about how those songs will work in a stadium.",
+        "abstract": "The band adds dates from Miami to Vancouver. The new record’s collaborators raise a question about how those songs will work in a stadium."
+      },
+      "sources": [
+        {
+          "title": "The Greatest Show on Earth set for North America",
+          "publisher": "U2",
+          "url": "https://www.u2.com/blogs/news/the-greatest-show-on-earth-set-for-north-america",
+          "published_date": null,
+          "event_date": "2026-11-24",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Out Now!",
+          "publisher": "U2",
+          "url": "https://www.u2.com/blogs/news/out-now-1",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "U2 announce 2027 North American ‘Carnaval De Luz’ stadium tour",
+          "publisher": "NME",
+          "url": "https://www.nme.com/news/music/u2-announce-2027-north-american-carnaval-de-luz-stadium-tour-3976883",
+          "published_date": "2026-11-24",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "U2 Announces North American Stadium Dates For Carnaval De Luz Presents: The Greatest Show On Earth World Tour 2027 | SoFi Stadium",
+          "publisher": "SoFi Stadium",
+          "url": "https://www.sofistadium.com/news/detail/u2-announces-north-american-stadium-dates-for-carnaval-de-luz-presents-the-greatest-show-on-earth-world-tour-2027",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "U2's new album is about 'defiant joy.' They'll tour it in North America next summer",
+          "publisher": "Associated Press",
+          "url": "https://apnews.com/article/8563c3bd32d6d2d649fa6112facd8f33",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "CARNAVAL DE LUZ PRESENTS: THE GREATEST SHOW ON EARTH",
+          "publisher": "U2",
+          "url": "https://www.u2.com/blogs/news/carnaval-de-luz-presents-the-greatest-show-on-earth",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "U2: Carnaval De Luz",
+          "publisher": "Pitchfork",
+          "url": "https://pitchfork.com/reviews/albums/u2-carnaval-de-luz/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "U2: Carnaval de Luz review – rousing, restorative rock from a band ready to take on the world again",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/music/2026/nov/09/u2-carnaval-de-luz-review",
+          "published_date": "2026-11-09",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Review: U2 is a rock ’n’ roll band at the end of history",
+          "publisher": "Los Angeles Times",
+          "url": "https://www.latimes.com/entertainment-arts/music/story/2026-11-13/u2-carnaval-de-luz-review",
+          "published_date": "2026-11-13",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "U2's Carnaval de Luz: Bono gets his mojo back",
+          "publisher": "RTÉ",
+          "url": "https://www.rte.ie/entertainment/2026/1113/1599084-u2-carnaval-de-luz-get-ready-for-the-masquerade/",
+          "published_date": "2026-11-13",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "U2 official tour announcement artwork.",
+      "media": {
+        "asset": "assets/u2-carnaval-de-luz-north-america-2027-fallback.svg",
+        "origin_url": "https://www.u2.com/blogs/news/the-greatest-show-on-earth-set-for-north-america",
+        "external_image_url": "https://www.u2.com/cdn/shop/articles/tgsoe_news_5nov26_fb724bfe-64da-447b-87b9-ebaff3ac1c18.jpg?v=1795452269&width=1100",
+        "alt": "U2 官网发布北美巡演场次时所用的官方海报。",
+        "caption": "U2 官网发布北美巡演场次时所用的官方海报。",
+        "credit": "U2 official tour announcement artwork.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "design-miami-mailboxes-2026",
+      "title": "Design Miami 先请你看一只邮箱",
+      "level": "signal",
+      "english": {
+        "title": "Design Miami starts with a mailbox",
+        "deck": "Eight familiar objects provide a way into a fair where Brazilian furniture and modern tapestries also ask for a second look.",
+        "abstract": "Eight familiar objects provide a way into a fair where Brazilian furniture and modern tapestries also ask for a second look."
+      },
+      "sources": [
+        {
+          "title": "Design Miami 2026 · Design Miami",
+          "publisher": "Design Miami",
+          "url": "https://designmiami.com/fair/miami-2026",
+          "published_date": null,
+          "event_date": "2026-12-01 to 2026-12-06",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Design Miami 2026 Special Projects · Design Miami",
+          "publisher": "Design Miami",
+          "url": "https://designmiami.com/miami-2026-special-projects",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Design Miami 2026 Galleries · Design Miami",
+          "publisher": "Design Miami",
+          "url": "https://designmiami.com/miami-2026-galleries",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Here's what to catch during Design Miami this year",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design-interiors/design-miami-2026-things-to-see",
+          "published_date": "2026-11-21",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Design Miami 2026 Curios · Design Miami",
+          "publisher": "Design Miami",
+          "url": "https://designmiami.com/miami-2026-curios",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Design Miami 2026 asks for a second look, and puts the hand of the maker on display | Art to See",
+          "publisher": "Art to See",
+          "url": "https://arttosee.art/articles/design-miami-2026-unveiling-preview",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Lina Bo Bardi. Bowl chair. 1951 | MoMA",
+          "publisher": "Museum of Modern Art",
+          "url": "https://www.moma.org/collection/works/198784?page=1",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "ESPASSO | Lina Bo Bardi",
+          "publisher": "ESPASSO",
+          "url": "https://www.espasso.com/designers/14/lina-bo-bardi",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Instituto Bardi | Casa de Vidro – 15_EDIÇÕES",
+          "publisher": "Instituto Bardi",
+          "url": "https://institutobardi.org.br/edicoes/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Bardi's Bowl Chair | The Original Prototype",
+          "publisher": "Arper",
+          "url": "https://bardisbowlchair.arper.com/about/prototype/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Design Miami official fair artwork.",
+      "media": {
+        "asset": "assets/design-miami-mailboxes-2026-fallback.svg",
+        "origin_url": "https://designmiami.com/fair/miami-2026",
+        "external_image_url": "https://cdn.sanity.io/images/v2n4gj8r/production/a4b5e68a55b6402af91585508addac1684df214e-1920x1080.jpg",
+        "alt": "Design Miami 2026 主办方公示的展会视觉。",
+        "caption": "Design Miami 2026 主办方公示的展会视觉。",
+        "credit": "Design Miami official fair artwork.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "design-at-hkg-soft-reset-2026",
+      "title": "香港山顶广场里，留了一间可以停一会的房间",
+      "level": "signal",
+      "english": {
+        "title": "A room to pause in at Hong Kong’s Peak Galleria",
+        "deck": "As DESIGN@HKG closes, Annabelle Schneider’s installation shows how a pause can be built into a place people already pass.",
+        "abstract": "As DESIGN@HKG closes, Annabelle Schneider’s installation shows how a pause can be built into a place people already pass."
+      },
+      "sources": [
+        {
+          "title": "BREATHE WITH ME—SOFT RESET A Multi-sensory Installation by Annabelle Schneider | DESIGN@HKG",
+          "publisher": "DESIGN@HKG",
+          "url": "https://www.designathkg.com/programme/breathe-with-me-by-annabelle-schneider",
+          "published_date": null,
+          "event_date": "2026-11-10 to 2026-11-24",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Breathe With Me | Hong Kong 2026 — annabelleschneider",
+          "publisher": "Studio Annabelle Schneider",
+          "url": "https://annabelleschneider.com/Breathe-With-Me-Hong-Kong-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "BREATHE WITH ME - Hong Kong Design Centre (HKDC)",
+          "publisher": "Hong Kong Design Centre",
+          "url": "https://www.hkdesigncentre.org/en/whats-on/breathe-with-me/1371",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "香港设计中心揭幕“设计@HKG” 2026 启动全城两周设计盛会|界面新闻",
+          "publisher": "Jiemian News",
+          "url": "https://www.jiemian.com/article/15346686.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "What's On | DESIGN@HKG",
+          "publisher": "DESIGN@HKG",
+          "url": "https://designathkg.com/programme---whats-on",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Breathe With Me | New York (2024) — annabelleschneider",
+          "publisher": "Studio Annabelle Schneider",
+          "url": "https://annabelleschneider.com/Breathe-With-Me-New-York-2024",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "DESIGN@HKG 2026 sponsored by CCIDA launches today (with photos)",
+          "publisher": "Hong Kong Government",
+          "url": "https://www.info.gov.hk/gia/general/202611/10/P2026111000441.htm",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "A Swiss Space at New York's Design Week - Swissnex in Boston and New York",
+          "publisher": "Swissnex",
+          "url": "https://swissnex.org/boston/news/well-being-oasis-at-new-york-design-week/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Breathe with Me - German Design Award",
+          "publisher": "German Design Award",
+          "url": "https://www.german-design-award.com/en/gallery/detail/fair-and-exhibition/breathe-with-me",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "〖專訪〗跨界 跨區 跨媒體 「設計@HKG」重新認識設計邊界 ｜2026",
+          "publisher": "The Culturist",
+          "url": "https://theculturist.hk/2026/11/%E8%97%9D%E8%A1%93/%E3%80%90%E5%B0%88%E8%A8%AA%E3%80%91%E8%B7%A8%E7%95%8C-%E8%B7%A8%E5%8D%80-%E8%B7%A8%E5%AA%92%E9%AB%94-%E3%80%8C%E8%A8%AD%E8%A8%88hkg%E3%80%8D%E9%87%8D%E6%96%B0%E8%AA%8D%E8%AD%98%E8%A8%AD%E8%A8%88/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Annabelle Schneider / DESIGN@HKG. Preview rendering.",
+      "media": {
+        "asset": "assets/design-at-hkg-soft-reset-2026-fallback.svg",
+        "origin_url": "https://www.designathkg.com/programme/breathe-with-me-by-annabelle-schneider",
+        "external_image_url": "https://cdn.prod.website-files.com/6a7c268b7f04d90c7b24a170/6adf5c110e0964120a820bb4_PreviewRendering_BreatheWithMe_AnnabelleSchneider_03.jpeg",
+        "alt": "Annabelle Schneider 为香港《BREATHE WITH ME—SOFT RESET》制作的官方预览效果图。",
+        "caption": "Annabelle Schneider 为香港《BREATHE WITH ME—SOFT RESET》制作的官方预览效果图。",
+        "credit": "Annabelle Schneider / DESIGN@HKG. Preview rendering.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ]
+}
