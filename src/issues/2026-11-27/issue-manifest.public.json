@@ -5,8 +5,8 @@
   "visibility": "published_preview",
   "timezone": "Asia/Shanghai",
   "candidate_created_at": "2026-11-27T11:06:36.802+08:00",
-  "research_locked_at": "2026-11-27T11:24:59.724+08:00",
-  "content_locked_at": "2026-11-27T11:24:59.724+08:00",
+  "research_locked_at": "2026-11-27T12:11:15.903+08:00",
+  "content_locked_at": "2026-11-27T12:11:15.903+08:00",
   "status": "BLOCKED",
   "media_required": true,
   "contract": {
@@ -18,11 +18,11 @@
   "core_version": "v2",
   "content_lock": {
     "status": "locked",
-    "sha256": "3117b86c9b9c40c5215ecd5ca662593bac8a0ccecddc3bd0ae8e858a6e55638e",
-    "locked_at": "2026-11-27T11:24:59.724+08:00"
+    "sha256": "80021da8e17f517bf85e40268e702893d69630b9b15dcdcf95cf310c2f296975",
+    "locked_at": "2026-11-27T12:11:15.903+08:00"
   },
   "source_hashes": {
-    "content_sha256": "3117b86c9b9c40c5215ecd5ca662593bac8a0ccecddc3bd0ae8e858a6e55638e",
+    "content_sha256": "80021da8e17f517bf85e40268e702893d69630b9b15dcdcf95cf310c2f296975",
     "art_direction_sha256": "b10da50f3a5c7766e9eacd4678ca137a5f8280be414c5d4757f8d932a9b6ca65",
     "issue_style_sha256": "ed089ec9e2877dd687df534ec0249bd1a97e4c9c8a0885b2292bc548aad653e1"
   },
@@ -30,7 +30,7 @@
     "repository": "GUAiZzz/harry-tone",
     "branch": "main",
     "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
-    "loaded_at": "2026-11-27T11:21:12.939+08:00"
+    "loaded_at": "2026-11-27T12:10:59.961+08:00"
   },
   "language_mode": "zh-CN_full__en_title_deck_abstract",
   "editorial_position": "车库、漆器、针织样布和旧录音带，都留着做它的人当时的选择。这一期从这些细节进去。",
@@ -79,8 +79,8 @@
     "exception_reason": "以斜线交织并从右下越界呈现材料的关系。已核对前两期的事件和图像。"
   },
   "rights_summary": {
-    "required_assets": 11,
-    "unknown_required_assets": 11,
+    "required_assets": 14,
+    "unknown_required_assets": 14,
     "status": "blocked"
   },
   "artifact_digests": {
@@ -1255,6 +1255,323 @@
         "alt": "Objects of Common Interest 迈阿密设计区年度委托官方项目配图。",
         "caption": "Objects of Common Interest 迈阿密设计区年度委托官方项目配图。",
         "credit": "Objects of Common Interest / Miami Design District.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "maruyama-okyo-edo-tokyo-peacock-room-2026",
+      "title": "圆山应举把松枝画过一扇扇门",
+      "level": "signal",
+      "english": {
+        "title": "Maruyama Ōkyo carries pine branches across a room",
+        "deck": "The Edo-Tokyo Museum brings the paintings and room layouts of Daijōji Temple into its Ōkyo retrospective.",
+        "abstract": "The Edo-Tokyo Museum brings the paintings and room layouts of Daijōji Temple into its Ōkyo retrospective."
+      },
+      "sources": [
+        {
+          "title": "Museum exhibition announcement and programme",
+          "publisher": "Edo-Tokyo Museum",
+          "url": "https://edo-tokyo-museum.or.jp/s-exhibition/okyo/",
+          "published_date": null,
+          "event_date": "2026-11-28",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Exhibition highlights",
+          "publisher": "Maruyama Ōkyo organising committee",
+          "url": "https://okyo2026-27.jp/highlight.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Peacock Room south wall",
+          "publisher": "Daijōji Temple",
+          "url": "https://museum.daijyoji.or.jp/02kyaku/02_01/02_01_01d.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Notes on Pines and Peacocks",
+          "publisher": "Daijōji Temple",
+          "url": "https://museum.daijyoji.or.jp/04sakka/04kai/04_01_01k.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Chronology of Maruyama Ōkyo and Daijōji",
+          "publisher": "Daijōji Temple",
+          "url": "https://museum.daijyoji.or.jp/07history/07_01.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Why Ōkyo painted the Peacocks twice",
+          "publisher": "Daijōji Temple",
+          "url": "https://museum.daijyoji.or.jp/06story/06_06.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Daijōji visitor and collection guide",
+          "publisher": "Daijōji Temple",
+          "url": "https://www.daijyoji.or.jp/index.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Tokyo museums exhibition plan",
+          "publisher": "Tokyo Metropolitan Government",
+          "url": "https://www.metro.tokyo.lg.jp/documents/d/tosei/20260130_12_01a",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "November programme in Tokyo and environs",
+          "publisher": "Tokyo Art Sphere",
+          "url": "https://www.tokyoartsphere.com/article/art-events-november-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Maruyama Parlour Scene collection record",
+          "publisher": "Cultural Heritage Online",
+          "url": "https://online.bunka.go.jp/heritages/detail/378904",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Study of optical pictures around Ōkyo",
+          "publisher": "Hiroko Hashimoto / Kobe University repository",
+          "url": "https://da.lib.kobe-u.ac.jp/da/kernel/E0042031/E0042031.pdf",
+          "published_date": "2020-02-18",
+          "event_date": null
+        }
+      ],
+      "image_credit": "Maruyama Ōkyo / Daijōji Temple / Edo-Tokyo Museum.",
+      "media": {
+        "asset": "assets/maruyama-okyo-edo-tokyo-peacock-room-2026-fallback.svg",
+        "origin_url": "https://edo-tokyo-museum.or.jp/s-exhibition/okyo/",
+        "external_image_url": "https://www.fondationcartier.com/img/fedf0035-ba2f-4b10-bb70-a85223ca210b/20250115-zh7612-stephan-crasneanscki-and-patti-smith-pasolini-x7c-medea-courtesy-of-kurimanzutto.jpg?crop=4800%2C3200%2C0%2C0&fit=max&fm=jpg&q=80&w=1000",
+        "alt": "江户东京博物馆特展海报，采用圆山应举《松与孔雀图》局部。",
+        "caption": "江户东京博物馆特展海报，采用圆山应举《松与孔雀图》局部。",
+        "credit": "Maruyama Ōkyo / Daijōji Temple / Edo-Tokyo Museum.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "patti-smith-soundwalk-correspondences-milan-2026",
+      "title": "Patti Smith 把野外录音带到米兰的展厅和剧院",
+      "level": "signal",
+      "english": {
+        "title": "Patti Smith brings field recordings to a gallery and a theatre in Milan",
+        "deck": "Correspondences pairs films with field recordings, objects and words at Triennale Milano, with two performances across town.",
+        "abstract": "Correspondences pairs films with field recordings, objects and words at Triennale Milano, with two performances across town."
+      },
+      "sources": [
+        {
+          "title": "Correspondences in Milan",
+          "publisher": "Fondation Cartier pour l’art contemporain",
+          "url": "https://www.fondationcartier.com/en/program/exhibition/soundwalk-collective-and-patti-smith-correspondences",
+          "published_date": null,
+          "event_date": "2026-11-26",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Correspondences at Triennale Milano",
+          "publisher": "Triennale Milano",
+          "url": "https://triennale.org/en/events/correspondences-soundwalk-patti-smith",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Correspondences Live",
+          "publisher": "Fondation Cartier pour l’art contemporain",
+          "url": "https://www.fondationcartier.com/en/program/events/performance/soundwalk-collective-and-patti-smith",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Correspondences Live at Teatro Lirico",
+          "publisher": "Teatro Lirico Giorgio Gaber",
+          "url": "https://teatroliricogiorgiogaber.it/produzione/correspondences-live-by-soundwalk-collective-patti-smith/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Correspondences listing and exhibition route",
+          "publisher": "Abbonamento Musei",
+          "url": "https://abbonamentomusei.it/en/mostra/correspondences-soundwalk-collective-patti-smith/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Soundwalk Collective and Patti Smith at Terraforma EXO",
+          "publisher": "Sintesi Aurea",
+          "url": "https://www.sintesiaurea.it/eventi/patti-smith-soundwalk-collective-terraforma-exo-milano",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Correspondences Live in Arles",
+          "publisher": "LUMA Arles",
+          "url": "https://luma.org/en/arles/whats-on/correspondences-live",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Correspondences exhibition in Arles",
+          "publisher": "LUMA Arles",
+          "url": "https://luma.org/arles/programmation/correspondences",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Review of the Lisbon Architecture Triennale",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/architecture/architecture-events/2025-lisbon-architecture-triennale-review",
+          "published_date": "2025-10-12",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Earlier Correspondences programme and artist conversation",
+          "publisher": "Onassis Foundation",
+          "url": "https://www.onassis.org/whats-on/correspondences-soundwalk-collective-patti-smith",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Stephan Crasneanscki and Patti Smith, courtesy of kurimanzutto / Fondation Cartier pour l’art contemporain.",
+      "media": {
+        "asset": "assets/patti-smith-soundwalk-correspondences-milan-2026-fallback.svg",
+        "origin_url": "https://www.fondationcartier.com/en/program/exhibition/soundwalk-collective-and-patti-smith-correspondences",
+        "external_image_url": "https://edo-tokyo-museum.or.jp/asset/2026/10/pst_okyo.jpg",
+        "alt": "卡地亚当代艺术基金会发布的《Pasolini | Medea》项目影像。",
+        "caption": "卡地亚当代艺术基金会发布的《Pasolini | Medea》项目影像。",
+        "credit": "Stephan Crasneanscki and Patti Smith, courtesy of kurimanzutto / Fondation Cartier pour l’art contemporain.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "dime-asics-gel-sd-lyte-japan-2026",
+      "title": "Dime 给 ASICS 的蛋壳鞋加了跑车涂装",
+      "level": "signal",
+      "english": {
+        "title": "Dime gives ASICS’ shell-shaped shoe a sports-car finish",
+        "deck": "As the GEL-SD-LYTE collaboration reaches Japanese retailers, its metallic accents give an older shell construction a new finish.",
+        "abstract": "As the GEL-SD-LYTE collaboration reaches Japanese retailers, its metallic accents give an older shell construction a new finish."
+      },
+      "sources": [
+        {
+          "title": "Black/Carbon GEL-SD-LYTE product record",
+          "publisher": "Dime",
+          "url": "https://dimemtl.com/products/dime-x-asics-gel-sd-lyte-black-carbon",
+          "published_date": null,
+          "event_date": "2026-11-21",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "GEL-SD-LYTE project",
+          "publisher": "Dime",
+          "url": "https://dimemtl.com/blogs/projects/dime-asics-gel-sd-lyte",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Japan draw schedule",
+          "publisher": "atmos Tokyo",
+          "url": "https://www.atmos-tokyo.com/lp/asics-gel-sd-lyte-dime",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Japan release and product construction",
+          "publisher": "BILLY’S ENT",
+          "url": "https://www.billys-tokyo.net/shop/g/g7197170001051/?slide=modal",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Dime and ASICS collection report",
+          "publisher": "Hypebeast",
+          "url": "https://hypebeast.com/2026/11/dime-asics-gel-sd-lyte-footwear-apparel-collection-release-info",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Detail report and product photographs",
+          "publisher": "Sole Retriever",
+          "url": "https://www.soleretriever.com/news/articles/dime-asics-gel-sd-lyte-release-date-november-2026",
+          "published_date": "2026-11-19",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Japanese draw opens at atmos",
+          "publisher": "Footwear Magazine",
+          "url": "https://footwearmagazine.com/asics-dime-gel-sd-lyte-atmos-draw-november-2026/",
+          "published_date": "2026-11-25",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Collaboration history and release report",
+          "publisher": "Sneaker News",
+          "url": "https://sneakernews.com/2026/11/18/dime-asics-gel-sd-lyte-release-date/",
+          "published_date": "2026-11-18",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "November 28 Japan release guide",
+          "publisher": "SNKRDUNK",
+          "url": "https://snkrdunk.com/articles/33833/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Classic Track Jacket",
+          "publisher": "Dime",
+          "url": "https://dimemtl.com/products/dime-x-asics-classic-track-jacket-black",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Dime / ASICS.",
+      "media": {
+        "asset": "assets/dime-asics-gel-sd-lyte-japan-2026-fallback.svg",
+        "origin_url": "https://dimemtl.com/products/dime-x-asics-gel-sd-lyte-black-carbon",
+        "external_image_url": "https://dimemtl.com/cdn/shop/files/SHOES_ASICS26_SPORTS_BLACK_PRODUCT_01.jpg?crop=center&height=1260&v=1794945658&width=1260",
+        "alt": "Dime 官网展示的 GEL-SD-LYTE 黑色款，鞋头和后跟带有渐变色。",
+        "caption": "Dime 官网展示的 GEL-SD-LYTE 黑色款，鞋头和后跟带有渐变色。",
+        "credit": "Dime / ASICS.",
         "kind": "source_image",
         "origin_authority": "first_party_official",
         "rights_basis": "preview_user_authorized_external"

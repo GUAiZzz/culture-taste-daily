@@ -202,6 +202,60 @@ Designers Eleni Petaloti and Leonidas Trampoukis set no prescribed route. Wallpa
 
 Each work asks for a different kind of approach. Mist takes a moment to change. Sound has to be located. A reflection takes people and nearby buildings into the image. What I want to see is whether those small acts of attention change how someone recognises a familiar route.
 
+## 圆山应举把松枝画过一扇扇门
+
+### 中文
+
+大乘寺的孔雀间有三面装着推拉隔扇，第四面向前庭敞开。圆山应举用墨在金箔地上画松和孔雀，把枝条接过一扇又一扇隔门。通向佛间的门开着，松枝在视线上还能接起来。人走过去，画也跟着换了一次构图。
+
+11 月 28 日，江户东京博物馆开始展出圆山应举的作品。策展方会展出大乘寺的原作，同时重现孔雀间、芭蕉间和山水间。《松与孔雀图》贯穿东京展全期，其他作品分期轮换。在前段展陈，还能看到神户市立博物馆出借的直视式窥镜，以及一幅馆方展览页面列出的《圆山座敷图》。文化遗产档案将后者记为传圆山应举所作，并注明画本来配有专用的窥镜。
+
+把这两种作品放在一起，会发现画家可以在两个尺度上安排观众。窥镜框定眼睛的位置，让一张纸显出纵深。孔雀间把人放进画的尺寸里，转身就看见枝条往另一面延伸。到了展厅，可以顺着一截松枝移动视线，看看门框在哪里截断它，画又在哪里把它接回来。
+
+### English
+
+Three sides of the Peacock Room at Daijōji Temple are fitted with sliding panels. The fourth opens onto the front garden. Maruyama Ōkyo painted pines and peacocks in ink on gold leaf, carrying the branches across panel after panel. The temple notes that the branches still align when the doors to the adjoining altar room are open. A person moving through the room sees the composition change.
+
+The Edo-Tokyo Museum opens its Ōkyo exhibition on November 28. It will show original panels from Daijōji alongside recreations of the Peacock, Banana Plant and Landscape rooms. Pines and Peacocks stays on view throughout the Tokyo run, while other works rotate. Early in the exhibition visitors can also see a direct-view lens device from the Kobe City Museum and a picture listed as Maruyama Parlour Scene. The cultural heritage catalogue attributes the latter to Ōkyo and records the special viewer that accompanied it.
+
+These works arrange the viewer at two scales. The lens fixes the position of the eye and gives a sheet of paper depth. The Peacock Room puts the viewer inside the image’s dimensions, where turning brings another run of branches into view. In the exhibition, follow one branch and see where a frame interrupts it and where the painting picks it up again.
+
+## Patti Smith 把野外录音带到米兰的展厅和剧院
+
+### 中文
+
+11 月 26 日，Patti Smith 和 Soundwalk Collective 的《Correspondences》在米兰三年展馆开幕。乔治·加贝尔抒情剧院排了 26、27 日两场演出，美术馆里的展览持续到明年 3 月 7 日。
+
+作品从野外录音开始。Soundwalk Collective 在不同地点采集声音，在工作室把 Patti Smith 的声音叠进录音和新写的声响里。米兰这站把影像两两并置，也摆出从录音地点带回的物件和档案材料。展览没有按年份排作品。听到某段录音以后，观众可以看向相邻的影像，也可以从一件实物回去找声音原来的地方。
+
+今年夏天，法国阿尔勒那一站加入与卡马格湿地有关的新委托。到了米兰，艺术家又从达·芬奇《大西洋古抄本》取材。这两次变化都发生在同一个持续多年的项目里。地方留下来的东西具体到一份录音、一张纸或一个影像片段，换一座城，还能多出一种把它们放在一起的方法。
+
+### English
+
+Correspondences, by Patti Smith and Soundwalk Collective, opened at Triennale Milano on November 26. Teatro Lirico Giorgio Gaber scheduled two performances for November 26 and 27, while the exhibition runs through March 7, 2027.
+
+The work begins with field recordings. Soundwalk Collective gathers sound on location and layers Smith’s voice with those recordings and new compositions in the studio. The Milan exhibition pairs films and shows physical traces and archival material brought back from recording sites. The works are arranged without a chronology. After hearing one recording, a visitor can turn to a neighbouring film or follow an object back towards the place a sound came from.
+
+In Arles this summer the artists added commissions connected to the Camargue wetlands. For Milan they made new work inspired by Leonardo da Vinci’s Codex Atlanticus. Both changes belong to a project that has been growing for years. A place can leave behind something as specific as a recording, a sheet of paper or a film fragment, and the next city offers another way to put those pieces together.
+
+## Dime 给 ASICS 的蛋壳鞋加了跑车涂装
+
+### 中文
+
+Dime 先在 11 月 21 日发售它与 ASICS 做的 GEL-SD-LYTE 系列。日本这一轮在 25 日开始，atmos 的抽签 27 日早上截止，28 日公布结果。BILLY’S 也把其中银灰色一双的发售安排在 28 日。不同渠道的日期相差一周。
+
+这双鞋可以从包住脚侧的那层外壳看起。日本零售商 BILLY’S 的资料把老款结构追到 2010 年，提到设计师从蛋壳与内膜的关系取形，并通过注塑把一部分鞋面与鞋底接在一起。Dime 在这层结构上加了碳纤维纹理、带光泽的金属色细节和双层网面。黑色一双的橙色从鞋头、后跟向中段淡去。银灰一双则带一点淡蓝。
+
+系列还有同色的运动夹克、长裤和帽子。夹克沿用 ASICS 旧训练服的宽松版型，胸前保留旧式标记。鞋侧的亮面、外壳的轮廓和鞋头的一点渐变，把合作方所说的跑车灵感拆成了几处具体做法。细节都挤在同一双鞋上，最容易看清楚的是鞋侧。那里还留着老鞋原来用来包脚的那一层结构。
+
+### English
+
+Dime launched its GEL-SD-LYTE collection with ASICS on November 21. The Japanese rollout followed, with the atmos draw opening on November 25, closing on the morning of November 27 and announcing results on November 28. BILLY’S also scheduled the silver-grey pair for November 28. The dates across the different channels span a week.
+
+Start with the shell along the side of the foot. Japanese retailer BILLY’S traces the earlier structure to 2010, when the relationship between an eggshell and its inner membrane informed the design, and parts of the upper and sole were joined by injection moulding. Dime adds a carbon-fibre pattern, glossy metallic details and layered mesh. On the black pair, orange at the toe and heel fades towards the middle. The silver-grey pair picks up an icy blue tint.
+
+The collection includes matching track jackets, trousers and caps. The jacket takes its relaxed fit from archived ASICS training wear and puts an older logo on the chest. The metallic finish, the shell profile and the small gradient on the toe give a concrete form to the collaborators’ sports-car reference. The side of the shoe is where those choices are easiest to see. It still carries the structure that originally helped enclose the foot.
+
 ## 继续看
 
 逛展可以顺着房间走，也可以跟着一种材料走。回到唱片，选同一首歌的两个版本，听听声音是怎么重新靠近的。
