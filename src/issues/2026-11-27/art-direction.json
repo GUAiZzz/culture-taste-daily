@@ -1,0 +1,27 @@
+{
+  "dominant_mood": "深松绿、浅米和铜粉色。把图像留给不同材料自己的光泽。",
+  "background_logic": "沿用已批准的共享阅读系统与 Living Edition B；日期内容不改共享界面。",
+  "palette_logic": "浅米色保证正文对比。铜粉色留给画面中几处手工转折。",
+  "type_scale_logic": "沿用共享中英文字级与阅读行高，不以日期样式覆盖控件。",
+  "image_behavior": "区分真实商品、专辑封面、历史作品与现场图；官方外链失败显示明确标注的非纪实回退图。",
+  "page_density_and_tempo": "从车库和美术馆读到漆器、针织与鞋面，随后转到不同版本的声音。",
+  "core_visual_action": "偏右的两列斜线交织，给标题和收束留出各自的空隙。",
+  "cover_composition": "深松绿底与浅米色标题，右下放两组交织的铜粉色线段。",
+  "desktop_interaction_mechanic": "继承共享首页、整期、单篇与返回位置的浏览结构。",
+  "behance_viewing_arc": "从实际物件与声画进入，再回到场地、公众和阅读距离；不增加未经维护的界面。",
+  "mobile_translation": "继承自然滚动、完整双语、图片自然比例和44px交互控件。",
+  "mobbin_usability_constraint": "键盘、无脚本、减弱动态及九种风格外观组合沿用共享阅读合同。",
+  "quiet_ending": "留下材料与录音版本两个继续看和听的入口。",
+  "closing_quotation": {
+    "id": "ct-en-002",
+    "language": "en",
+    "text": "What remains after the spectacle is the method that carried it.",
+    "credit": "Culture & Taste Editorial"
+  },
+  "closing_palette": {
+    "background": "#1C3330",
+    "foreground": "#FFF1DB",
+    "accent": "#F2AD97",
+    "rationale": "浅米字向读者交代信息，铜粉线段像针织上的交错点。"
+  }
+}
