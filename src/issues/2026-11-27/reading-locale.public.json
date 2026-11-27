@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "issueId": "2026-11-27",
-  "sourceContentSha256": "3117b86c9b9c40c5215ecd5ca662593bac8a0ccecddc3bd0ae8e858a6e55638e",
+  "sourceContentSha256": "80021da8e17f517bf85e40268e702893d69630b9b15dcdcf95cf310c2f296975",
   "issue": {
     "titleEn": "What Materials Keep",
     "positionEn": "A garage, a lacquer object, a knitted sample and an old recording each preserve choices made in their making. This edition begins with those details.",
@@ -95,6 +95,30 @@
       "altEn": "Official project image for the Objects of Common Interest commission in Miami Design District.",
       "captionEn": "Official project image for the Objects of Common Interest commission in Miami Design District.",
       "summaryEn": "Objects of Common Interest previews the distinct encounter points of a public commission opening December 1.",
+      "englishKind": "full"
+    },
+    "maruyama-okyo-edo-tokyo-peacock-room-2026": {
+      "category": "objects",
+      "altZh": "江户东京博物馆特展海报，采用圆山应举《松与孔雀图》局部。",
+      "altEn": "Edo-Tokyo Museum exhibition poster with a detail of Maruyama Ōkyo’s Pines and Peacocks.",
+      "captionEn": "Edo-Tokyo Museum exhibition poster with a detail of Maruyama Ōkyo’s Pines and Peacocks.",
+      "summaryEn": "The Edo-Tokyo Museum brings the paintings and room layouts of Daijōji Temple into its Ōkyo retrospective.",
+      "englishKind": "full"
+    },
+    "patti-smith-soundwalk-correspondences-milan-2026": {
+      "category": "music",
+      "altZh": "卡地亚当代艺术基金会发布的《Pasolini | Medea》项目影像。",
+      "altEn": "Project still from Pasolini | Medea, published by the Fondation Cartier pour l’art contemporain.",
+      "captionEn": "Project still from Pasolini | Medea, published by the Fondation Cartier pour l’art contemporain.",
+      "summaryEn": "Correspondences pairs films with field recordings, objects and words at Triennale Milano, with two performances across town.",
+      "englishKind": "full"
+    },
+    "dime-asics-gel-sd-lyte-japan-2026": {
+      "category": "fashion",
+      "altZh": "Dime 官网展示的 GEL-SD-LYTE 黑色款，鞋头和后跟带有渐变色。",
+      "altEn": "Official Dime product photograph of the Black/Carbon GEL-SD-LYTE.",
+      "captionEn": "Official Dime product photograph of the Black/Carbon GEL-SD-LYTE.",
+      "summaryEn": "As the GEL-SD-LYTE collaboration reaches Japanese retailers, its metallic accents give an older shell construction a new finish.",
       "englishKind": "full"
     }
   },
@@ -210,7 +234,38 @@
     "https://hauteliving.com/2026/11/miami-design-district-art-week/803175/": "Haute Living — The Miami Design District’s Art Week, Mapped: Interactive Totems, Real Shadows and a First U.S. Museum Solo - Haute Living",
     "https://www.theinteriorreview.com/story/2026/11/23/your-miami-art-week-2026-shortlist": "The Interior Review — Miami Art Week 2026: Our Curated List of Exhibitions & Events to See — The Interior Review",
     "https://www.designboom.com/art/designboom-guide-design-miami-art-basel-2026/": "designboom — designboom’s guide to miami art week 2026: what to see in and out of the fairs",
-    "https://www.elledecoration.co.uk/lifestyle-culture/a74529556/countdown-to-this-years-design-miami-our-pick-of-the-best-shows/": "ELLE Decoration — Countdown to this year’s Design Miami: our pick of the best shows"
+    "https://www.elledecoration.co.uk/lifestyle-culture/a74529556/countdown-to-this-years-design-miami-our-pick-of-the-best-shows/": "ELLE Decoration — Countdown to this year’s Design Miami: our pick of the best shows",
+    "https://edo-tokyo-museum.or.jp/s-exhibition/okyo/": "Edo-Tokyo Museum — Museum exhibition announcement and programme",
+    "https://okyo2026-27.jp/highlight.html": "Maruyama Ōkyo organising committee — Exhibition highlights",
+    "https://museum.daijyoji.or.jp/02kyaku/02_01/02_01_01d.html": "Daijōji Temple — Peacock Room south wall",
+    "https://museum.daijyoji.or.jp/04sakka/04kai/04_01_01k.html": "Daijōji Temple — Notes on Pines and Peacocks",
+    "https://museum.daijyoji.or.jp/07history/07_01.html": "Daijōji Temple — Chronology of Maruyama Ōkyo and Daijōji",
+    "https://museum.daijyoji.or.jp/06story/06_06.html": "Daijōji Temple — Why Ōkyo painted the Peacocks twice",
+    "https://www.daijyoji.or.jp/index.html": "Daijōji Temple — Daijōji visitor and collection guide",
+    "https://www.metro.tokyo.lg.jp/documents/d/tosei/20260130_12_01a": "Tokyo Metropolitan Government — Tokyo museums exhibition plan",
+    "https://www.tokyoartsphere.com/article/art-events-november-2026": "Tokyo Art Sphere — November programme in Tokyo and environs",
+    "https://online.bunka.go.jp/heritages/detail/378904": "Cultural Heritage Online — Maruyama Parlour Scene collection record",
+    "https://da.lib.kobe-u.ac.jp/da/kernel/E0042031/E0042031.pdf": "Hiroko Hashimoto / Kobe University repository — Study of optical pictures around Ōkyo",
+    "https://www.fondationcartier.com/en/program/exhibition/soundwalk-collective-and-patti-smith-correspondences": "Fondation Cartier pour l’art contemporain — Correspondences in Milan",
+    "https://triennale.org/en/events/correspondences-soundwalk-patti-smith": "Triennale Milano — Correspondences at Triennale Milano",
+    "https://www.fondationcartier.com/en/program/events/performance/soundwalk-collective-and-patti-smith": "Fondation Cartier pour l’art contemporain — Correspondences Live",
+    "https://teatroliricogiorgiogaber.it/produzione/correspondences-live-by-soundwalk-collective-patti-smith/": "Teatro Lirico Giorgio Gaber — Correspondences Live at Teatro Lirico",
+    "https://abbonamentomusei.it/en/mostra/correspondences-soundwalk-collective-patti-smith/": "Abbonamento Musei — Correspondences listing and exhibition route",
+    "https://www.sintesiaurea.it/eventi/patti-smith-soundwalk-collective-terraforma-exo-milano": "Sintesi Aurea — Soundwalk Collective and Patti Smith at Terraforma EXO",
+    "https://luma.org/en/arles/whats-on/correspondences-live": "LUMA Arles — Correspondences Live in Arles",
+    "https://luma.org/arles/programmation/correspondences": "LUMA Arles — Correspondences exhibition in Arles",
+    "https://www.wallpaper.com/architecture/architecture-events/2025-lisbon-architecture-triennale-review": "Wallpaper* — Review of the Lisbon Architecture Triennale",
+    "https://www.onassis.org/whats-on/correspondences-soundwalk-collective-patti-smith": "Onassis Foundation — Earlier Correspondences programme and artist conversation",
+    "https://dimemtl.com/products/dime-x-asics-gel-sd-lyte-black-carbon": "Dime — Black/Carbon GEL-SD-LYTE product record",
+    "https://dimemtl.com/blogs/projects/dime-asics-gel-sd-lyte": "Dime — GEL-SD-LYTE project",
+    "https://www.atmos-tokyo.com/lp/asics-gel-sd-lyte-dime": "atmos Tokyo — Japan draw schedule",
+    "https://www.billys-tokyo.net/shop/g/g7197170001051/?slide=modal": "BILLY’S ENT — Japan release and product construction",
+    "https://hypebeast.com/2026/11/dime-asics-gel-sd-lyte-footwear-apparel-collection-release-info": "Hypebeast — Dime and ASICS collection report",
+    "https://www.soleretriever.com/news/articles/dime-asics-gel-sd-lyte-release-date-november-2026": "Sole Retriever — Detail report and product photographs",
+    "https://footwearmagazine.com/asics-dime-gel-sd-lyte-atmos-draw-november-2026/": "Footwear Magazine — Japanese draw opens at atmos",
+    "https://sneakernews.com/2026/11/18/dime-asics-gel-sd-lyte-release-date/": "Sneaker News — Collaboration history and release report",
+    "https://snkrdunk.com/articles/33833/": "SNKRDUNK — November 28 Japan release guide",
+    "https://dimemtl.com/products/dime-x-asics-classic-track-jacket-black": "Dime — Classic Track Jacket"
   },
   "inlineMedia": {},
   "sourceOriginalLanguageExceptions": [
