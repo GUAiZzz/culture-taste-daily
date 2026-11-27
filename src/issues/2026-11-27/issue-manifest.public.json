@@ -1,0 +1,1264 @@
+{
+  "schema_version": 2,
+  "issue_id": "2026-11-27",
+  "publication_date": "2026-11-27",
+  "visibility": "published_preview",
+  "timezone": "Asia/Shanghai",
+  "candidate_created_at": "2026-11-27T11:06:36.802+08:00",
+  "research_locked_at": "2026-11-27T11:24:59.724+08:00",
+  "content_locked_at": "2026-11-27T11:24:59.724+08:00",
+  "status": "BLOCKED",
+  "media_required": true,
+  "contract": {
+    "repository": "GUAiZzz/culture-taste-daily",
+    "path": "docs/PRODUCTION_CONTRACT_V3.md",
+    "commit": "83982d543bb845819b3412cd5b10b273ec3fcf25",
+    "activation_commit": "da3842bcd72b6966a35826a38b737f12c9042667"
+  },
+  "core_version": "v2",
+  "content_lock": {
+    "status": "locked",
+    "sha256": "3117b86c9b9c40c5215ecd5ca662593bac8a0ccecddc3bd0ae8e858a6e55638e",
+    "locked_at": "2026-11-27T11:24:59.724+08:00"
+  },
+  "source_hashes": {
+    "content_sha256": "3117b86c9b9c40c5215ecd5ca662593bac8a0ccecddc3bd0ae8e858a6e55638e",
+    "art_direction_sha256": "b10da50f3a5c7766e9eacd4678ca137a5f8280be414c5d4757f8d932a9b6ca65",
+    "issue_style_sha256": "ed089ec9e2877dd687df534ec0249bd1a97e4c9c8a0885b2292bc548aad653e1"
+  },
+  "harrytone": {
+    "repository": "GUAiZzz/harry-tone",
+    "branch": "main",
+    "commit": "13cd6b7046bd81be396810d2923f3a5dc818e93f",
+    "loaded_at": "2026-11-27T11:21:12.939+08:00"
+  },
+  "language_mode": "zh-CN_full__en_title_deck_abstract",
+  "editorial_position": "车库、漆器、针织样布和旧录音带，都留着做它的人当时的选择。这一期从这些细节进去。",
+  "art_direction": {
+    "dominant_mood": "深松绿、浅米和铜粉色。把图像留给不同材料自己的光泽。",
+    "background_logic": "沿用已批准的共享阅读系统与 Living Edition B；日期内容不改共享界面。",
+    "palette_logic": "浅米色保证正文对比。铜粉色留给画面中几处手工转折。",
+    "type_scale_logic": "沿用共享中英文字级与阅读行高，不以日期样式覆盖控件。",
+    "image_behavior": "区分真实商品、专辑封面、历史作品与现场图；官方外链失败显示明确标注的非纪实回退图。",
+    "page_density_and_tempo": "从车库和美术馆读到漆器、针织与鞋面，随后转到不同版本的声音。",
+    "core_visual_action": "偏右的两列斜线交织，给标题和收束留出各自的空隙。",
+    "cover_composition": "深松绿底与浅米色标题，右下放两组交织的铜粉色线段。",
+    "desktop_interaction_mechanic": "继承共享首页、整期、单篇与返回位置的浏览结构。",
+    "behance_viewing_arc": "从实际物件与声画进入，再回到场地、公众和阅读距离；不增加未经维护的界面。",
+    "mobile_translation": "继承自然滚动、完整双语、图片自然比例和44px交互控件。",
+    "mobbin_usability_constraint": "键盘、无脚本、减弱动态及九种风格外观组合沿用共享阅读合同。",
+    "quiet_ending": "留下材料与录音版本两个继续看和听的入口。",
+    "closing_quotation": {
+      "id": "ct-en-002",
+      "language": "en",
+      "text": "What remains after the spectacle is the method that carried it.",
+      "credit": "Culture & Taste Editorial"
+    },
+    "closing_palette": {
+      "background": "#1C3330",
+      "foreground": "#FFF1DB",
+      "accent": "#F2AD97",
+      "rationale": "浅米字向读者交代信息，铜粉线段像针织上的交错点。"
+    }
+  },
+  "variation_review": {
+    "comparison_mode": "prior_issues",
+    "compared_issue_dates": [
+      "2026-11-25",
+      "2026-11-24",
+      "2026-11-22",
+      "2026-11-18",
+      "2026-11-17",
+      "2026-11-16",
+      "2026-11-15"
+    ],
+    "repeated_mechanisms": [
+      "Owner-approved shared reading system",
+      "Official-origin links and accessible image fallbacks"
+    ],
+    "exception_reason": "以斜线交织并从右下越界呈现材料的关系。已核对前两期的事件和图像。"
+  },
+  "rights_summary": {
+    "required_assets": 11,
+    "unknown_required_assets": 11,
+    "status": "blocked"
+  },
+  "artifact_digests": {
+    "issue_payload_sha256": null
+  },
+  "evidence_refs": {
+    "technical": [],
+    "editorial_visual": [],
+    "gate": []
+  },
+  "qa": {
+    "html_parse": "unavailable",
+    "assets": "unavailable",
+    "internal_links": "unavailable",
+    "no_js_reading": "unavailable",
+    "desktop_render": "unavailable",
+    "mobile_render": "unavailable",
+    "reduced_motion": "unavailable"
+  },
+  "limitations": [
+    "Preview edition. Official external images open their verified origin pages.",
+    "The edition preserves each underlying event date and identifies contextual or preview images in their captions."
+  ],
+  "stories": [
+    {
+      "id": "kanal-citroen-garage-brussels-2026",
+      "title": "布鲁塞尔把雪铁龙车库打开给观众",
+      "level": "cover",
+      "english": {
+        "title": "Brussels opens the Citroën garage to museum visitors",
+        "deck": "KANAL opens on November 28, giving an industrial showroom a new public use beside the canal.",
+        "abstract": "KANAL opens on November 28, giving an industrial showroom a new public use beside the canal."
+      },
+      "sources": [
+        {
+          "title": "Kanal opens on 28 November with a free inaugural weekend for all | Kanal Brussels",
+          "publisher": "KANAL–Centre Pompidou",
+          "url": "https://kanal.brussels/en/press/kanal-opens-28-november-free-inaugural-weekend-all",
+          "published_date": null,
+          "event_date": "2026-11-28",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Kanal opens in Brussels | Kanal Brussels",
+          "publisher": "KANAL–Centre Pompidou",
+          "url": "https://kanal.brussels/en/press/kanal-opens-brussels",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Kanal's opening weekend | City of Brussels",
+          "publisher": "City of Brussels",
+          "url": "https://www.brussels.be/kanals-opening-weekend",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Kanal–Centre Pompidou - Centre Pompidou",
+          "publisher": "Centre Pompidou",
+          "url": "https://www.centrepompidou.fr/en/lieu/kanal-centre-pompidou",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Kanal-Centre Pompidou - Centre Pompidou",
+          "publisher": "Centre Pompidou",
+          "url": "https://www.centrepompidou.fr/en/centre-pompidou/international/kanal-centre-pompidou",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Opening exhibitions | Kanal Brussels",
+          "publisher": "KANAL–Centre Pompidou",
+          "url": "https://kanal.brussels/en/opening-exhibitions",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Kanal - Centre Pompidou | Visit Brussels",
+          "publisher": "Visit Brussels",
+          "url": "https://www.visit.brussels/en/visitors/venue-details.Kanal-Centre-Pompidou.271094",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Opening of Kanal Centre Pompidou",
+          "publisher": "Bureau Bouwtechniek",
+          "url": "https://b-b.be/en/news/opening-of-kanal-centre-pompidou",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Opening weekend | Kanal Brussels",
+          "publisher": "KANAL–Centre Pompidou",
+          "url": "https://kanal.brussels/en/calendar/opening-weekend",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Europe’s ‘largest museum development’ is about to open in Brussels – welcome to Kanal",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/architecture/public-buildings/kanal-brussels-opens-belgium",
+          "published_date": "2026-11-24",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "KANAL–Centre Pompidou official press photograph.",
+      "media": {
+        "asset": "assets/kanal-citroen-garage-brussels-2026-fallback.svg",
+        "origin_url": "https://kanal.brussels/en/press/kanal-opens-28-november-free-inaugural-weekend-all",
+        "external_image_url": "https://kanal.b-cdn.net/sites/default/files/sparklink/a0wSm000005GFzVIAW.jpg?width=500",
+        "alt": "从空中拍摄的布鲁塞尔 KANAL 与原雪铁龙车库。",
+        "caption": "从空中拍摄的布鲁塞尔 KANAL 与原雪铁龙车库。",
+        "credit": "KANAL–Centre Pompidou official press photograph.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "fine-art-asia-shenzhen-lacquer-2026",
+      "title": "典亚艺博深圳首展，可以沿着漆器看",
+      "level": "major",
+      "english": {
+        "title": "Follow the lacquer at Fine Art Asia’s first Shenzhen edition",
+        "deck": "The Shenzhen fair brings historic lacquer and work by contemporary makers to the same floor.",
+        "abstract": "The Shenzhen fair brings historic lacquer and work by contemporary makers to the same floor."
+      },
+      "sources": [
+        {
+          "title": "The Gallery by SOIL presents the Diversity of Contemporary Lacquer Art at Fine Art Asia 2026 in Shenzhen. 典亞藝博 深圳",
+          "publisher": "The Gallery by SOIL",
+          "url": "https://www.lacquerartbysoil.com/post/the-beauty-of-lacquer-art-in-shenzhen",
+          "published_date": "2026-11-21",
+          "event_date": "2026-11-27 to 2026-11-29",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "逾30家海内外艺廊携众多展品亮相鹏城-中新网",
+          "publisher": "China News Service",
+          "url": "https://www.chinanews.com/cul/2026/11-26/10738190.shtml",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "藝博會預告 | 首屆典亞藝博·深圳 11月26日揭幕 2026亮點搶先看",
+          "publisher": "ArtPro",
+          "url": "https://share.artpro.com/explore_share/b3/bf/b3bf5190011c07b88e1c30052b0623c5.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "首届“典亚艺博·深圳2026”开幕，逾30家海内外展商齐聚鹏城",
+          "publisher": "Sohu · Shenzhen coverage",
+          "url": "https://m.sohu.com/a/1106962942_100116740",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Nan Wei, Knot-Lovely II — KOGEI Art Fair Kanazawa",
+          "publisher": "KOGEI Art Fair Kanazawa",
+          "url": "https://kogei-artfair.jp/artists/191/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Why Hong Kong’s Fine Art Asia fair has moved to Shenzhen after 20 years | South China Morning Post",
+          "publisher": "South China Morning Post",
+          "url": "https://www.scmp.com/lifestyle/arts/article/3375426/why-hong-kongs-fine-art-asia-fair-has-moved-shenzhen-after-20-years?module=latest&pgtype=homepage",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "典亞藝博．深圳 2026 | art-mate.net",
+          "publisher": "Art-mate",
+          "url": "https://www.art-mate.net/doc/102166",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Fine Art Asia Shenzhen 2026 — Orientations",
+          "publisher": "Orientations",
+          "url": "https://orientations.squarespace.com/other-events/fine-art-asia-shenzhen-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Inaugural Shenzhen Edition: Fine Art Asia 2026 | Asia Society Hong Kong on Glue Up",
+          "publisher": "Asia Society Hong Kong",
+          "url": "https://asiasocietyhk.glueup.com/en/event/inaugural-shenzhen-edition-fine-art-asia-2026-201857/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Craft Prize 2026 Finalists | 30 Shortlisted Works - LOEWE",
+          "publisher": "Loewe Foundation",
+          "url": "https://www.loewe.com/int/en/pd/stories-loewe-foundation/craft-prize-finalists.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Wei Nan / The Gallery by SOIL.",
+      "media": {
+        "asset": "assets/fine-art-asia-shenzhen-lacquer-2026-fallback.svg",
+        "origin_url": "https://www.lacquerartbysoil.com/post/the-beauty-of-lacquer-art-in-shenzhen",
+        "external_image_url": "https://static.wixstatic.com/media/82e0bd_bd213646ae8949b1937cac344079bfce~mv2.jpg/v1/fill/w_980%2Ch_653%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/82e0bd_bd213646ae8949b1937cac344079bfce~mv2.jpg",
+        "alt": "土壤文创展会页面所载隗楠《结·飒》。",
+        "caption": "土壤文创展会页面所载隗楠《结·飒》。",
+        "credit": "Wei Nan / The Gallery by SOIL.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "kogei-kanazawa-craft-guest-rooms-2026",
+      "title": "金泽把工艺展放进酒店客房",
+      "level": "major",
+      "english": {
+        "title": "Kanazawa gives craft its own hotel rooms",
+        "deck": "Guest rooms become gallery spaces at the tenth edition of KOGEI Art Fair Kanazawa.",
+        "abstract": "Guest rooms become gallery spaces at the tenth edition of KOGEI Art Fair Kanazawa."
+      },
+      "sources": [
+        {
+          "title": "about | KOGEI Art Fair Kanazawa",
+          "publisher": "KOGEI Art Fair Kanazawa",
+          "url": "https://kogei-artfair.jp/about/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "exhibitors | KOGEI Art Fair Kanazawa",
+          "publisher": "KOGEI Art Fair Kanazawa",
+          "url": "https://kogei-artfair.jp/exhibitors/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "KOGEI Art Fair Kanazawa 2026、金沢で11月28・29日。工芸のフェアに過去最多49ギャラリー | UTSUTSU",
+          "publisher": "UTSUTSU",
+          "url": "https://utsutsu.art/news/ja/kogei-art-fair-kanazawa-2026/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "工芸に特化したアートフェア『KOGEI Art Fair Kanazawa 2026』開催。10周年の節目に過去最多の49ギャラリーが出展 | 注目の展覧会・イベント | インサイト | KOGEI STANDARD | 日本工芸のオンラインメディア",
+          "publisher": "KOGEI STANDARD",
+          "url": "https://www.kogeistandard.com/jp/insight/serial/featured-exhibitions-events/2026-11-9/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "KOGEI Art Fair Kanazawa 2026 – 春風洞画廊",
+          "publisher": "Shunpudo Gallery",
+          "url": "https://shunpudo.co.jp/exhibition/kogei-art-fair-kanazawa-2026/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "縁煌-enishira-",
+          "publisher": "Gallery enishira",
+          "url": "https://www.enishira.co.jp/exhibition/kogeiartfairkanazawa2026/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "KOGEI Art Fair Kanazawa 2026｜工芸アートフェア金沢2026｜現代美術企画アートギャラリー｜BrainBrunnGALLERY｜ブレインブルンギャラリー",
+          "publisher": "BrainBrunn Gallery",
+          "url": "https://www.brain-brunn.com/exhibitions/artfair/kogei2026.php",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "KOGEI Art Fair Kanazawa 2026 | KAWATA GALLERY",
+          "publisher": "Kawata Gallery",
+          "url": "https://kawata-gallery.com/artfair/2533/",
+          "published_date": "2026-10-06",
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "第10回「KOGEI Art Fair Kanazawa 2026」過去最多49ギャラリーから約215名の出展が決定！10周年記念シンポジウム等の特別プログラムも公開。",
+          "publisher": "KOGEI Art Fair Kanazawa committee",
+          "url": "https://prtimes.jp/main/html/rd/p/000000022.000063671.html",
+          "published_date": null,
+          "event_date": "2026-11-27 to 2026-11-29",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Exhibition | 白白庵 PAKUPAKUAN",
+          "publisher": "Pakupakuan",
+          "url": "https://www.pakupakuan.jp/exhibition/kogeiartfairkanazawa2026.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "KOGEI Art Fair Kanazawa organising committee / PR Times.",
+      "media": {
+        "asset": "assets/kogei-kanazawa-craft-guest-rooms-2026-fallback.svg",
+        "origin_url": "https://prtimes.jp/main/html/rd/p/000000022.000063671.html",
+        "external_image_url": "https://prcdn.freetls.fastly.net/release_image/63671/22/63671-22-94d16c82a648cf379c29fd7c3fed81fc-1366x768.jpg?format=jpeg&auto=webp&fit=bounds&width=2400&height=1260",
+        "alt": "金泽工艺艺博会 2026 年主办方发布的展会视觉。",
+        "caption": "金泽工艺艺博会 2026 年主办方发布的展会视觉。",
+        "credit": "KOGEI Art Fair Kanazawa organising committee / PR Times.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "new-jewelry-tokyo-spiral-2026",
+      "title": "在青山，珠宝从一块没磨过的石头讲起",
+      "level": "major",
+      "english": {
+        "title": "Aoyama’s jewellery fair starts with an unpolished stone",
+        "deck": "New Jewelry TOKYO adds a hands-on stone workshop to an edition with about 130 exhibitors.",
+        "abstract": "New Jewelry TOKYO adds a hands-on stone workshop to an edition with about 130 exhibitors."
+      },
+      "sources": [
+        {
+          "title": "New Jewelry TOKYO 2026",
+          "publisher": "New Jewelry TOKYO",
+          "url": "https://newjewelry.jp/nj2026/",
+          "published_date": null,
+          "event_date": "2026-11-27 to 2026-11-29",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "New Jewelry TOKYO 2026 | What‘s On | スパイラル SPIRAL",
+          "publisher": "Spiral",
+          "url": "https://www.spiral.co.jp/topics/newjewelrytokyo_2026",
+          "published_date": "2026-11-11",
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "ジュエリーの祭典『New Jewelry TOKYO 2026』今年も開催！",
+          "publisher": "New Jewelry LLC via PR Times",
+          "url": "https://prtimes.jp/main/html/rd/p/000000024.000023124.html",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "NJT2026 OPEN CALL English",
+          "publisher": "New Jewelry LLC",
+          "url": "https://newjewelry.co.jp/pages/njt2026-open-call-english",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "【出展のお知らせ】New Jewelry TOKYO 2026 – 【 i nodo – アイノード公式サイト 】「不完全な美しさ」を表現したエシカルジュエリーブランド。Silver925 × Upcycle Stone / Pearl.",
+          "publisher": "i nodo",
+          "url": "https://i-nodo.com/index.php/2026/10/07/news_newjewelry2026-2/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "EVENT 11/27-11/29 New Jewelry TOKYO 2026",
+          "publisher": "Chikako Yajima",
+          "url": "https://chikakoyajima.com/blogs/news/nj2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "日本最大規模のデザイナーズジュエリーイベント「New Jewelry TOKYO 2026」が南青山で開催！",
+          "publisher": "ELLE Japan",
+          "url": "https://www.elle.com/jp/fashion/a74537362/new-jewelry-tokyo-2026/",
+          "published_date": "2026-11-26",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Infiora™ Jewelry Glass to Debut at New Jewelry TOKYO 2026",
+          "publisher": "Nippon Electric Glass",
+          "url": "https://www.japaninvest.jp/contents/tdnetPdf.ashx?pkey=1559490",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "NJT NEXT",
+          "publisher": "New Jewelry LLC",
+          "url": "https://newjewelry.co.jp/pages/njt-next",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "約130組が集う「ジュエリーの祭典」が青山で、天然石ジュエリーやパパブブレの”食べられる指輪”",
+          "publisher": "Fashion Press",
+          "url": "https://www.fashion-press.net/news/153493",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "New Jewelry LLC.",
+      "media": {
+        "asset": "assets/new-jewelry-tokyo-spiral-2026-fallback.svg",
+        "origin_url": "https://newjewelry.jp/nj2026/",
+        "external_image_url": "https://newjewelry.jp/nj2026/index/newjewelry_0A.jpg?20260920=",
+        "alt": "New Jewelry TOKYO 2026 展会官网视觉。",
+        "caption": "New Jewelry TOKYO 2026 展会官网视觉。",
+        "credit": "New Jewelry LLC.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "atelier-muji-natural-colour-ginza-2026",
+      "title": "无印良品在银座展出 180 色针织样布",
+      "level": "signal",
+      "english": {
+        "title": "MUJI puts 180 knitted colour samples on view",
+        "deck": "Atelier MUJI follows colour from plants and wool to yarn and finished clothes.",
+        "abstract": "Atelier MUJI follows colour from plants and wool to yarn and finished clothes."
+      },
+      "sources": [
+        {
+          "title": "ATELIER MUJI 企画展 『無印良品のきほん服 展 〈そのままの色・いただく色 編〉』 | ニュース | 株式会社良品計画",
+          "publisher": "Ryohin Keikaku",
+          "url": "https://www.ryohin-keikaku.jp/news/articles/2026_1022_01",
+          "published_date": null,
+          "event_date": "2026-11-28 to 2027-01-11",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "「無印良品のきほん服 展 〈そのままの色・いただく色 編〉」ATELIER MUJI GINZAで開催、自然の色から生まれる衣服づくりを紹介 │ QUI - Fashion & Culture media",
+          "publisher": "QUI",
+          "url": "https://qui.tokyo/news/2611-atelier-muji-ginza",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "無印良品のきほん服 展 | ATELIER MUJI | 無印良品",
+          "publisher": "ATELIER MUJI GINZA",
+          "url": "https://atelier.muji.com/jp-ja/exhibition/240906/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "ATELIER MUJI GINZAで「無印良品のきほん服 展」11月28日から",
+          "publisher": "Ginza Produce 24",
+          "url": "https://ginzaproduce24.com/atelier-muji-kihonfuku-color-2026/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "MUJI Clothing Basics: Natural Colours — A Blessing from Nature — Atelier Muji Ginza, Tokyo — What's On",
+          "publisher": "Tokyo Dispatch",
+          "url": "https://tokyodispatch.com/events/muji-clothing-basics-natural-colours",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "W'UP★11月28日～1月11日 無印良品のきほん服 展 〈そのままの色・いただく色 編〉ATELIER MUJI GINZA（中央区銀座）",
+          "publisher": "Tokyo Live & Exhibits",
+          "url": "https://tokyo-live-exhibits.com/pug_tkchu_ateliermujiginza/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Exhibition MUJI Clothing BasicsNatural Colours — A Blessing from Nature | ATELIER MUJI | MUJI",
+          "publisher": "ATELIER MUJI",
+          "url": "https://atelier.muji.com/jp-en/exhibition/261128/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "蘇芳 ｜ Sappanwood ｜ 正倉院展用語解説 ｜ The Exhibition of Shōsō-in Treasures Glossary",
+          "publisher": "Nara National Museum · Shōsō-in exhibition",
+          "url": "https://shosointen-glossary.narahaku.go.jp/suo/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "黄蘗 ｜ Amur Cork tree ｜ 正倉院展用語解説 ｜ The Exhibition of Shōsō-in Treasures Glossary",
+          "publisher": "Nara National Museum · Shōsō-in exhibition",
+          "url": "https://shosointen-glossary.narahaku.go.jp/kihada/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "＜測色資料＞草木染めの色目 | 一般財団法人日本色彩研究所",
+          "publisher": "Japan Color Research Institute",
+          "url": "https://www.jcri.jp/square/journal/colorimetry_natural_dyeing",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Atelier MUJI / Ryohin Keikaku.",
+      "media": {
+        "asset": "assets/atelier-muji-natural-colour-ginza-2026-fallback.svg",
+        "origin_url": "https://www.ryohin-keikaku.jp/news/articles/2026_1022_01",
+        "external_image_url": "https://images.microcms-assets.io/assets/1abbce69114443b0af3672230990db72/412be377a95f4bdca6f89f048287c0cb/ATELIER_kihonfuku_04_web.jpg",
+        "alt": "以藍、苏芳、黄檗三种染材为起点的羊毛色样。",
+        "caption": "以藍、苏芳、黄檗三种染材为起点的羊毛色样。",
+        "credit": "Atelier MUJI / Ryohin Keikaku.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "wtaps-hoka-speedgoat-ts-2026",
+      "title": "WTAPS 把早期 Speedgoat 和跑步背心配成一组",
+      "level": "signal",
+      "english": {
+        "title": "WTAPS pairs an early Speedgoat shape with a running vest",
+        "deck": "The second WTAPS and HOKA collaboration gives the trail silhouette two colours alongside an eight-litre vest.",
+        "abstract": "The second WTAPS and HOKA collaboration gives the trail silhouette two colours alongside an eight-litre vest."
+      },
+      "sources": [
+        {
+          "title": "WTAPS | HOKA",
+          "publisher": "WTAPS",
+          "url": "https://wtaps.com/en/blogs/feature/57",
+          "published_date": null,
+          "event_date": "2026-11-27",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "WTAPS Hoka Speedgoat TS | SneakerNews.com",
+          "publisher": "Sneaker News",
+          "url": "https://sneakernews.com/2026/11/14/wtaps-hoka-speedgoat-ts/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "HOKA and WTAPS Set November 27 Release for Speedgoat TS Collection",
+          "publisher": "Footwear Magazine",
+          "url": "https://footwearmagazine.com/hoka-wtaps-speedgoat-ts-november-27-2026/",
+          "published_date": "2026-11-24",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "WTAPS x HOKA Speedgoat TS Drops November 27 for $175 in Two Colorways - STATION",
+          "publisher": "STATION",
+          "url": "https://stationdaily.com/2026/11/26/wtaps-hoka-speedgoat-ts-november-27-175/",
+          "published_date": "2026-11-26",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "HOKA と WTAPS のコラボレーション第2弾が登場 | WTS MAGAZINE",
+          "publisher": "WTS Magazine",
+          "url": "https://wts-magazine.com/39225/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Better Weekend - HOKA × WTAPS Speedgoat TS",
+          "publisher": "Better Weekend",
+          "url": "https://betterweekend.co.kr/news/98349?l=en",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "WTAPS and HOKA Drop the Speedgoat TS in Tokyo, Hong Kong, and Shanghai Nov. 27 | FindKizashi",
+          "publisher": "FindKizashi",
+          "url": "https://findkizashi.com/articles/wtaps-hoka-speedgoat-ts/",
+          "published_date": "2026-11-25",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "WTAPS Announces its Debut Collaboration with HOKA — eye_C",
+          "publisher": "eye_C",
+          "url": "https://www.eyecmag.com/news/2024/5/22/wtaps-announces-its-debut-collaboration-with-hoka",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "WTAPS and HOKA Collaborate For the First Time - Releases",
+          "publisher": "Sneaker Freaker",
+          "url": "https://www.sneakerfreaker.com/releases/wtaps-hoka-anacapa-low-gtx-ora-lux-price-buy-release-date",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Hoka Revamps Its Trail Icon with a Military-Coded Japanese Streetwear Brand | Gear Patrol",
+          "publisher": "Gear Patrol",
+          "url": "https://www.gearpatrol.com/footwear/hoka-speedgoat-ts-wtaps-trail-running-shoe/",
+          "published_date": "2026-11-20",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "WTAPS / HOKA official collection photography.",
+      "media": {
+        "asset": "assets/wtaps-hoka-speedgoat-ts-2026-fallback.svg",
+        "origin_url": "https://wtaps.com/en/blogs/feature/57",
+        "external_image_url": "https://cdn.shopify.com/s/files/1/0746/1663/5582/files/feature-57-fea_sli1_img_2.jpg?v=1794562266",
+        "alt": "WTAPS 与 HOKA 第二次合作系列的官方配图。",
+        "caption": "WTAPS 与 HOKA 第二次合作系列的官方配图。",
+        "credit": "WTAPS / HOKA official collection photography.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "air-jordan-4-bred-nubuck-2026",
+      "title": "Air Jordan 4「Bred」回到黑色磨砂鞋面",
+      "level": "signal",
+      "english": {
+        "title": "The Air Jordan 4 Bred returns to black nubuck",
+        "deck": "The November 27 US release remasters the 1989 shape. Its details make the strongest case for looking across editions.",
+        "abstract": "The November 27 US release remasters the 1989 shape. Its details make the strongest case for looking across editions."
+      },
+      "sources": [
+        {
+          "title": "Air Jordan 4 Retro OG \"Bred\" Men's Shoes",
+          "publisher": "Nike US",
+          "url": "https://www.nike.com/t/air-jordan-4-retro-og-bred-mens-shoes-Xv1bpSUx/IX8180-001",
+          "published_date": null,
+          "event_date": "2026-11-27",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Air Jordan 4 'Bred' (IX8180-001) Release Date",
+          "publisher": "Nike SNKRS",
+          "url": "https://www.nike.com/ca/launch/t/air-jordan-4-bred",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "The Air Jordan 4 Retro Bred OG is Coming Back November 2026",
+          "publisher": "Sole Retriever",
+          "url": "https://www.soleretriever.com/sneaker-release-dates/jordan/nike-air-jordan-4/air-jordan-4-retro-bred-og-ix8180-001",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Air Jordan 4 'Bred' Returns in Its Original 1989 Form for Black Friday | Previously",
+          "publisher": "Previously",
+          "url": "https://www.watchpreviously.com/news/air-jordan-4-bred-black-friday-2026/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Every Air Jordan 4 'Bred', From 1989 to the 2026 OG",
+          "publisher": "KLEKT",
+          "url": "https://blog.klekt.com/features/every-version-of-the-air-jordan-4-bred/",
+          "published_date": null,
+          "event_date": null
+        },
+        {
+          "title": "Where to Buy the Air Jordan 4 \"Bred\" on Black Friday 2026",
+          "publisher": "Sports Illustrated",
+          "url": "https://www.si.com/fannation/sneakers/news/where-to-buy-air-jordan-4-bred-black-friday-2026",
+          "published_date": "2026-11-26",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The Air Jordan 4 Retro",
+          "publisher": "DTLR",
+          "url": "https://www.dtlr.com/blogs/the-lifestyle/the-air-jordan-4-retro-bred-is-back-in-og-form",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Jordan 4 Bred 2026: release date and history",
+          "publisher": "Urbanstaroma",
+          "url": "https://www.urbanstaroma.com/en/blogs/editorial/air-jordan-4-bred-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Air Jordan 4 'Bred' 2026: Everything You Need to Know",
+          "publisher": "Complex",
+          "url": "https://www.complex.com/sneakers/a/victor-deng/air-jordan-4-bred-2026-retro-everything-you-need-to-know",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Air Jordan 4 \"Bred\" Release Date 2026 | SneakerNews.com",
+          "publisher": "Sneaker News",
+          "url": "https://sneakernews.com/2026/11/09/air-jordan-4-bred-release-date/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Air Jordan 4 Bred - 2019 Release Guide + Store List | SneakerNews.com",
+          "publisher": "Sneaker News",
+          "url": "https://sneakernews.com/2019/04/11/air-jordan-4-bred-2019-release-date/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Nike official product photography.",
+      "media": {
+        "asset": "assets/air-jordan-4-bred-nubuck-2026-fallback.svg",
+        "origin_url": "https://www.nike.com/t/air-jordan-4-retro-og-bred-mens-shoes-Xv1bpSUx/IX8180-001",
+        "external_image_url": "https://static.nike.com/a/images/t_default/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/15c382eb-cee4-4d1c-b7d9-9ad96a3bf513/AIR+JORDAN+4+RETRO+OG.png",
+        "alt": "Nike 官方的 Air Jordan 4「Bred」复刻产品图。",
+        "caption": "Nike 官方的 Air Jordan 4「Bred」复刻产品图。",
+        "credit": "Nike official product photography.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "peter-gabriel-oi-two-mixes-2026",
+      "title": "Peter Gabriel 为《o\\i》留下两套混音",
+      "level": "signal",
+      "english": {
+        "title": "Peter Gabriel releases two mixes of o\\i",
+        "deck": "The full album arrives November 27, completing a run of singles timed to the phases of the moon.",
+        "abstract": "The full album arrives November 27, completing a run of singles timed to the phases of the moon."
+      },
+      "sources": [
+        {
+          "title": "Yes, It Will Go - the penultimate song from o\\i - PeterGabriel.com",
+          "publisher": "Peter Gabriel",
+          "url": "https://petergabriel.com/news/yes-it-will-go-the-penultimate-song-from-oi/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "o\\i, by Peter Gabriel",
+          "publisher": "Peter Gabriel · Bandcamp",
+          "url": "https://petergabriel.bandcamp.com/album/o-i?t=1",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "i/o - PeterGabriel.com",
+          "publisher": "Peter Gabriel",
+          "url": "https://petergabriel.com/release/i-o/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Been Undone - PeterGabriel.com",
+          "publisher": "Peter Gabriel",
+          "url": "https://petergabriel.com/release/been-undone/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Peter Gabriel Shares New Song \"Yes, It Will Go\": Listen",
+          "publisher": "Stereogum",
+          "url": "https://stereogum.com/2521187/peter-gabriel-yes-it-will-go/music",
+          "published_date": "2026-11-24",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Music Review: Peter Gabriel contends with AI's impact on being human in 'o\\i'",
+          "publisher": "Associated Press",
+          "url": "https://apnews.com/article/85af76f72e2747f516f9031906c21270",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "\"It's a personal song for me...\" Peter Gabriel shares Yes It Will Go, the penultimate single release ahead of new album o\\i",
+          "publisher": "Prog · Louder",
+          "url": "https://www.loudersound.com/music/tracks-singles/its-a-personal-song-for-me-peter-gabriel-shares-yes-it-will-the-penultimate-single-release-ahead-of-new-album-o-i",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "o\\i release details revealed - PeterGabriel.com",
+          "publisher": "Peter Gabriel",
+          "url": "https://petergabriel.com/news/oi-release-details-revealed/",
+          "published_date": null,
+          "event_date": "2026-11-27",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Peter Gabriel's 'oi' Proves His 2023 Comeback LP Was No Fluke: Review",
+          "publisher": "Ultimate Classic Rock",
+          "url": "https://ultimateclassicrock.com/peter-gabriel-oi-album-review/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "‘We’re the most arrogant of all apes!’ A delightfully mind-expanding encounter with Peter Gabriel",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/music/2026/nov/20/peter-gabriel-interview-ai-music-bonobo-ape-duets-jurassic-park-plants",
+          "published_date": "2026-11-20",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Peter Gabriel official album artwork.",
+      "media": {
+        "asset": "assets/peter-gabriel-oi-two-mixes-2026-fallback.svg",
+        "origin_url": "https://petergabriel.com/news/oi-release-details-revealed/",
+        "external_image_url": "https://petergabriel.com/wp-content/uploads/2026/10/PG24_PeterGabriel_OI_@3000pxls-scaled.jpg",
+        "alt": "Peter Gabriel《o\\i》官方专辑封面。",
+        "caption": "Peter Gabriel《o\\i》官方专辑封面。",
+        "credit": "Peter Gabriel official album artwork.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "record-store-day-black-friday-listening-2026",
+      "title": "黑五这一天，独立唱片店把旧现场带回来",
+      "level": "signal",
+      "english": {
+        "title": "Independent record shops bring back live recordings on Black Friday",
+        "deck": "Record Store Day puts distinct recordings, release runs and shop rules on the calendar for November 27.",
+        "abstract": "Record Store Day puts distinct recordings, release runs and shop rules on the calendar for November 27."
+      },
+      "sources": [
+        {
+          "title": "RECORD STORE DAY BLACK FRIDAY: 2026 EXCLUSIVE RELEASES ANNOUNCED | Record Store Day",
+          "publisher": "Record Store Day UK",
+          "url": "https://www.recordstoreday.co.uk/news/record-store-day-black-friday-2026-exclusive-releases-announced",
+          "published_date": null,
+          "event_date": "2026-11-27",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "RSD Black Friday 2026 | RECORD STORE DAY",
+          "publisher": "Factory Records via Record Store Day",
+          "url": "https://recordstoreday.com/Event/71218",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Record Store Day Black Friday 2026 | Rhino Media",
+          "publisher": "Rhino Media",
+          "url": "https://media.rhino.com/press-release/record-store-day-black-friday-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "RSD BLACK FRIDAY 2026 | RECORD STORE DAY",
+          "publisher": "Record Store Day US",
+          "url": "https://recordstoreday.com/NewsItem/12610",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Record Store Day Reveals Black Friday 2026 Exclusives",
+          "publisher": "Stereogum",
+          "url": "https://stereogum.com/2513775/record-store-day-reveals-black-friday-2026-exclusives/news",
+          "published_date": "2026-10-06",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "RSD Black Friday Releases Include Jazz & Blues Gems",
+          "publisher": "DownBeat",
+          "url": "https://downbeat.com/news/detail/rsd-black-friday-releases-include-jazz-blues-gems",
+          "published_date": "2026-11-24",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Sick of Black Friday? Support your local independent with our pick of these Record Store Day gems",
+          "publisher": "What Hi-Fi?",
+          "url": "https://www.whathifi.com/hi-fi/vinyl/sick-of-black-friday-support-your-local-independent-with-our-pick-of-these-record-store-day-releases",
+          "published_date": "2026-11-25",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "RSD Black Friday 2026 Information | Bondi Records",
+          "publisher": "Bondi Records",
+          "url": "https://bondirecords.com/pages/record-store-day-black-friday-2026-information",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "RSD Black Friday 2026",
+          "publisher": "Newbury Comics",
+          "url": "https://www.newburycomics.com/blogs/events/rsd-black-friday-2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Record Store Day (RSD) Black Friday 2026 List | Plaid Room",
+          "publisher": "Plaid Room Records",
+          "url": "https://www.plaidroomrecords.com/collections/bf2026",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Miles Davis — Copenhagen Live 1969",
+          "publisher": "Record Store Day",
+          "url": "https://recordstoreday.com/SpecialRelease/20332",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Record Store Day UK.",
+      "media": {
+        "asset": "assets/record-store-day-black-friday-listening-2026-fallback.svg",
+        "origin_url": "https://www.recordstoreday.co.uk/news/record-store-day-black-friday-2026-exclusive-releases-announced",
+        "external_image_url": "https://media.recordstoreday.co.uk/storage/v1/object/public/content-images/hero/ace516c9-cac1-4c48-9bec-3db4f389e298.webp",
+        "alt": "Record Store Day 黑色星期五 2026 官方活动图。",
+        "caption": "Record Store Day 黑色星期五 2026 官方活动图。",
+        "credit": "Record Store Day UK.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "tina-freeman-confluence-noma-2026",
+      "title": "新奥尔良把 Tina Freeman 的照片重新排在一起",
+      "level": "signal",
+      "english": {
+        "title": "New Orleans puts Tina Freeman’s photographs in new company",
+        "deck": "Confluence draws nearly a hundred works from Freeman’s collection and arranges them by theme across five galleries.",
+        "abstract": "Confluence draws nearly a hundred works from Freeman’s collection and arranges them by theme across five galleries."
+      },
+      "sources": [
+        {
+          "title": "Confluence: The Tina Freeman Collection of Photographs - New Orleans Museum of Art",
+          "publisher": "New Orleans Museum of Art",
+          "url": "https://noma.org/exhibitions/confluence-the-tina-freeman-collection-of-photographs/",
+          "published_date": null,
+          "event_date": "2026-11-20 to 2027-07-04",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Confluence: The Tina Freeman Collection of Photographs",
+          "publisher": "PhotoNOLA",
+          "url": "https://photonola.org/event/confluence-the-tina-freeman-collection-of-photographs/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Confluence: The Tina Freeman Collection of…",
+          "publisher": "All About Photo",
+          "url": "https://www.all-about-photo.com/photography-exhibition/4696/confluence-the-tina-freeman-collection-of-photographs",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Confluence: The Tina Freeman Collection of Photographs – New Orleans Museum of Art Shop",
+          "publisher": "NOMA Museum Shop",
+          "url": "https://shop.noma.org/products/confluence-the-tina-freeman-collection-of-photographs",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Letter from the Director: NOMA Magazine, Fall 2026 - New Orleans Museum of Art",
+          "publisher": "New Orleans Museum of Art",
+          "url": "https://noma.org/letter-from-the-director-noma-magazine-fall-2026/",
+          "published_date": "2026-10-23",
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "NOMA gets largest photo gift in its history",
+          "publisher": "Axios New Orleans",
+          "url": "https://www.axios.com/local/new-orleans/2026/11/23/noma-art-museum-photos-marie-antoinette",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "How Tina Freeman built one of America’s great private photo collections",
+          "publisher": "Digital Camera World",
+          "url": "https://www.digitalcameraworld.com/photography/galleries-and-exhibitions/from-a-bookshop-print-to-julia-margaret-cameron-how-tina-freeman-built-one-of-americas-great-private-photo-collections",
+          "published_date": "2026-11-21",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Exceptional gift of photography on view at New Orleans Museum of Art",
+          "publisher": "See Great Art",
+          "url": "https://www.seegreatart.art/exceptional-gift-of-photography-on-view-at-new-orleans-museum-of-art/",
+          "published_date": "2026-11-19",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "NOMA x PhotoNOLA: Gallery Talk, Panel Discussion, and Book Signing Celebrating Confluence - New Orleans Museum of Art",
+          "publisher": "New Orleans Museum of Art",
+          "url": "https://noma.org/event/noma-x-photonola-gallery-talk-panel-discussion-and-book-signing-celebrating-confluence/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "Tina Freeman: Lamentations | Considering Sea-Level Rise Through Wetlands and Glacial Landscape Photography - New Orleans Museum of Art",
+          "publisher": "New Orleans Museum of Art",
+          "url": "https://noma.org/tina-freeman-lamentations-considering-sea-level-rise-through-wetlands-and-glacial-landscape-photography/",
+          "published_date": "2019-09-10",
+          "event_date": null,
+          "relationship": "first_party_official"
+        }
+      ],
+      "image_credit": "Julia Margaret Cameron / New Orleans Museum of Art, gift of Tina Freeman.",
+      "media": {
+        "asset": "assets/tina-freeman-confluence-noma-2026-fallback.svg",
+        "origin_url": "https://noma.org/exhibitions/confluence-the-tina-freeman-collection-of-photographs/",
+        "external_image_url": "https://noma.org/wp-content/uploads/2026/08/2017-204-8-17-edit-1024x830.jpg",
+        "alt": "Julia Margaret Cameron 的蛋白相纸照片《My Grandchildren》，1868 年。",
+        "caption": "Julia Margaret Cameron 的蛋白相纸照片《My Grandchildren》，1868 年。",
+        "credit": "Julia Margaret Cameron / New Orleans Museum of Art, gift of Tina Freeman.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "objects-common-interest-miami-district-2026",
+      "title": "迈阿密设计区把雾和反光放进街区",
+      "level": "signal",
+      "english": {
+        "title": "Miami Design District puts mist and reflections on its streets",
+        "deck": "Objects of Common Interest previews the distinct encounter points of a public commission opening December 1.",
+        "abstract": "Objects of Common Interest previews the distinct encounter points of a public commission opening December 1."
+      },
+      "sources": [
+        {
+          "title": "Objects of Common Interest: Out of this World, a Field of Conditions – Miami Design District",
+          "publisher": "Miami Design District",
+          "url": "https://www.miamidesigndistrict.com/listing/objects-of-common-interest-out-of-this-world-a-field-of-conditions/",
+          "published_date": null,
+          "event_date": "2026-12-01",
+          "relationship": "first_party_official"
+        },
+        {
+          "title": "The Miami Design District's 11th Annual Design Commission Welcomes Out of This World – A Field of Conditions",
+          "publisher": "Modern Luxury",
+          "url": "https://www.modernluxury.com/out-of-this-world-a-field-of-conditions/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "These sculptures don't just sit – they sing and breathe, too",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design-interiors/design-events/miami-design-district-commission-2026-objects-of-common-interest",
+          "published_date": "2026-11-25",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "MIAMI DESIGN DISTRICT ANNOUNCES OBJECTS OF COMMON INTEREST AS2026 ANNUAL DESIGN COMMISSION",
+          "publisher": "Art Miami Magazine",
+          "url": "https://artmiamimagazine.com/miami-design-district-announces-objects-of-common-interest-as2026-annual-design-commission/",
+          "published_date": "2026-11-20",
+          "event_date": null
+        },
+        {
+          "title": "Here's what to catch during Design Miami this year",
+          "publisher": "Wallpaper*",
+          "url": "https://www.wallpaper.com/design-interiors/design-miami-2026-things-to-see",
+          "published_date": "2026-11-21",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Objects of Common Interest Miami Public Art Commission",
+          "publisher": "Built Current",
+          "url": "https://builtcurrent.com/articles/objects-of-common-interest-unveil-seven-part-miami-design-district-commission",
+          "published_date": "2026-11-25",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "The Miami Design District’s Art Week, Mapped: Interactive Totems, Real Shadows and a First U.S. Museum Solo - Haute Living",
+          "publisher": "Haute Living",
+          "url": "https://hauteliving.com/2026/11/miami-design-district-art-week/803175/",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Miami Art Week 2026: Our Curated List of Exhibitions & Events to See — The Interior Review",
+          "publisher": "The Interior Review",
+          "url": "https://www.theinteriorreview.com/story/2026/11/23/your-miami-art-week-2026-shortlist",
+          "published_date": null,
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "designboom’s guide to miami art week 2026: what to see in and out of the fairs",
+          "publisher": "designboom",
+          "url": "https://www.designboom.com/art/designboom-guide-design-miami-art-basel-2026/",
+          "published_date": "2026-11-25",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        },
+        {
+          "title": "Countdown to this year’s Design Miami: our pick of the best shows",
+          "publisher": "ELLE Decoration",
+          "url": "https://www.elledecoration.co.uk/lifestyle-culture/a74529556/countdown-to-this-years-design-miami-our-pick-of-the-best-shows/",
+          "published_date": "2026-11-26",
+          "event_date": null,
+          "relationship": "independent_reporting"
+        }
+      ],
+      "image_credit": "Objects of Common Interest / Miami Design District.",
+      "media": {
+        "asset": "assets/objects-common-interest-miami-district-2026-fallback.svg",
+        "origin_url": "https://www.miamidesigndistrict.com/listing/objects-of-common-interest-out-of-this-world-a-field-of-conditions/",
+        "external_image_url": "https://www.miamidesigndistrict.com/wp-content/uploads/2026/11/phenomenon_iii_press_print_7200px-scaled.jpg",
+        "alt": "Objects of Common Interest 迈阿密设计区年度委托官方项目配图。",
+        "caption": "Objects of Common Interest 迈阿密设计区年度委托官方项目配图。",
+        "credit": "Objects of Common Interest / Miami Design District.",
+        "kind": "source_image",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ]
+}

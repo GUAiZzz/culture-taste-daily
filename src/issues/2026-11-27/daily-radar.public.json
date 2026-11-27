@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-27",
+  "coverage": {
+    "verified_at": "2026-11-27T11:24:59.724+08:00",
+    "regional_lanes_checked": [
+      "mainland_china_plus_hong_kong_or_taiwan",
+      "japan_or_korea",
+      "continental_europe_or_united_kingdom",
+      "united_states_or_canada",
+      "rotating_global_lane"
+    ],
+    "full_registry_daily_quick_scan": true,
+    "registry_subject_count": 99,
+    "registry_digest": "a87ba7eee008efdc8576da78c46d1cb663663d43cf7c4164c544cdae1311fc53",
+    "focus_cohort_id": "luxury_runway",
+    "focus_subjects_checked": [
+      "Balenciaga",
+      "Bode",
+      "Cartier",
+      "Casablanca",
+      "Chanel",
+      "Chrome Hearts",
+      "Givenchy",
+      "Goyard",
+      "Kenzo",
+      "Loro Piana",
+      "Marni",
+      "Bottega Veneta",
+      "Prada",
+      "Tiffany & Co.",
+      "Loewe",
+      "Miu Miu",
+      "Rick Owens",
+      "SKIMS",
+      "HOMME PLISSÉ ISSEY MIYAKE",
+      "Entire Studios"
+    ],
+    "standing_beats_checked": [
+      "stussy-release-radar",
+      "luxury-runway-calendar",
+      "exhibition-and-cultural-programme-radar",
+      "small-breakout-object-radar"
+    ],
+    "deduplication_lookback_days": 2
+  },
+  "items": [
+    {
+      "id": "today-kanal-citroen-garage-brussels-2026",
+      "category": "city",
+      "included_story_id": "kanal-citroen-garage-brussels-2026"
+    },
+    {
+      "id": "today-fine-art-asia-shenzhen-lacquer-2026",
+      "category": "city",
+      "included_story_id": "fine-art-asia-shenzhen-lacquer-2026"
+    },
+    {
+      "id": "today-kogei-kanazawa-craft-guest-rooms-2026",
+      "category": "objects",
+      "included_story_id": "kogei-kanazawa-craft-guest-rooms-2026"
+    },
+    {
+      "id": "today-new-jewelry-tokyo-spiral-2026",
+      "category": "objects",
+      "included_story_id": "new-jewelry-tokyo-spiral-2026"
+    },
+    {
+      "id": "today-atelier-muji-natural-colour-ginza-2026",
+      "category": "fashion",
+      "included_story_id": "atelier-muji-natural-colour-ginza-2026"
+    },
+    {
+      "id": "today-wtaps-hoka-speedgoat-ts-2026",
+      "category": "fashion",
+      "included_story_id": "wtaps-hoka-speedgoat-ts-2026"
+    },
+    {
+      "id": "today-air-jordan-4-bred-nubuck-2026",
+      "category": "fashion",
+      "included_story_id": "air-jordan-4-bred-nubuck-2026"
+    },
+    {
+      "id": "today-peter-gabriel-oi-two-mixes-2026",
+      "category": "music",
+      "included_story_id": "peter-gabriel-oi-two-mixes-2026"
+    },
+    {
+      "id": "today-record-store-day-black-friday-listening-2026",
+      "category": "music",
+      "included_story_id": "record-store-day-black-friday-listening-2026"
+    },
+    {
+      "id": "today-tina-freeman-confluence-noma-2026",
+      "category": "city",
+      "included_story_id": "tina-freeman-confluence-noma-2026"
+    },
+    {
+      "id": "today-objects-common-interest-miami-district-2026",
+      "category": "city",
+      "included_story_id": "objects-common-interest-miami-district-2026"
+    },
+    {
+      "id": "ys-tailor-toyo-velvet-sukajan-2026",
+      "category": "fashion",
+      "title": "Y’s 和 Tailor Toyo 做了一件别珍横须贺夹克",
+      "deck": "11 月 26 日起，Y’s 与 Tailor Toyo 的新夹克在日本发售。品牌用了横振刺绣，拉链也按旧件的做法制作。",
+      "publisher": "Yohji Yamamoto via PR Times",
+      "official_url": "https://prtimes.jp/main/html/rd/p/000001156.000034350.html",
+      "published_date": "2026-11-20",
+      "event_date": "2026-11-26",
+      "media": {
+        "kind": "image",
+        "url": "https://prcdn.freetls.fastly.net/release_image/34350/1156/34350-1156-5de31331d867fe09665d6323fba21491-1929x2700.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950",
+        "alt": "Y’s 与 Tailor Toyo 横须贺夹克官方宣传照。",
+        "credit": "Yohji Yamamoto official campaign / PR Times.",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    },
+    {
+      "id": "cologne-design-prize-makk-2026",
+      "category": "objects",
+      "title": "科隆设计奖在 MAKK 展出五所院校的毕业作品",
+      "deck": "11 月 27 日至 12 月 6 日，科隆应用艺术博物馆集中展出本届设计奖的入围毕业作品。",
+      "publisher": "Köln International School of Design",
+      "official_url": "https://kisd.de/en/termine/koelner-design-preis-2026-preisverleihung-und-ausstellung-im-makk/",
+      "published_date": null,
+      "event_date": "2026-11-27 to 2026-12-06",
+      "media": {
+        "kind": "image",
+        "url": "https://kisd.de/app/uploads/2026/11/WebsiteKDP2026-1024x768.jpeg",
+        "alt": "第 20 届科隆设计奖官方活动图。",
+        "credit": "Köln International School of Design.",
+        "origin_authority": "first_party_official",
+        "rights_basis": "preview_user_authorized_external"
+      }
+    }
+  ]
+}
